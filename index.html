@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SiteSprint Studio — Fixed-price website builds and fixes for small businesses.">
+  <title>SiteSprint Studio — Fixed-price websites for small businesses</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #52606d;
+      --paper: #ffffff;
+      --wash: #f3f7f6;
+      --line: #d9e2df;
+      --teal: #087f6d;
+      --teal-dark: #056554;
+      --navy: #102a43;
+      --amber: #fff4d6;
+      --shadow: 0 18px 45px rgba(16, 42, 67, 0.10);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    a { color: var(--teal-dark); }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -10rem;
+      z-index: 20;
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner,
+    .wrap {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 0;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-weight: 850;
+      font-size: 1.12rem;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+    }
+
+    .brand span { color: var(--teal); }
+
+    nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; }
+    nav a { color: var(--muted); font-size: 0.94rem; font-weight: 650; text-decoration: none; }
+    nav a:hover, nav a:focus { color: var(--navy); }
+
+    .hero {
+      background:
+        radial-gradient(circle at 85% 15%, rgba(8, 127, 109, 0.16), transparent 30rem),
+        linear-gradient(145deg, #fbfdfc 0%, var(--wash) 58%, #eaf4f1 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner { padding: clamp(4rem, 9vw, 7.5rem) 0 4.5rem; max-width: 850px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 1rem;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid rgba(8, 127, 109, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--teal-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { color: var(--navy); line-height: 1.12; letter-spacing: -0.035em; }
+    h1 { margin: 0; font-size: clamp(2.7rem, 7vw, 5.4rem); max-width: 780px; }
+    h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 3.15rem); }
+    h3 { font-size: 1.35rem; }
+
+    .lede { max-width: 720px; margin: 1.35rem 0 0; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.3rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0.78rem 1.15rem;
+      border: 1px solid var(--teal);
+      border-radius: 999px;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 800;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(8, 127, 109, 0.18);
+    }
+
+    .button:hover, .button:focus { background: var(--teal-dark); border-color: var(--teal-dark); }
+    .button.secondary { background: #fff; color: var(--teal-dark); box-shadow: none; }
+
+    section { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+    .section-wash { background: var(--wash); }
+    .narrow { max-width: 820px; }
+    .muted { color: var(--muted); }
+    .section-intro { max-width: 770px; color: var(--muted); font-size: 1.06rem; }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .principle, .step, .offer, .retainer, .note {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .principle { padding: 1.25rem; }
+    .principle strong { color: var(--navy); }
+    .principle p { margin-bottom: 0; color: var(--muted); }
+
+    .payment-note {
+      border-left: 5px solid var(--teal);
+      background: #eef8f5;
+      padding: 1rem 1.15rem;
+      border-radius: 0 16px 16px 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 2rem;
+      counter-reset: steps;
+    }
+
+    .step { padding: 1.1rem; }
+    .step::before {
+      counter-increment: steps;
+      content: counter(steps);
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.8rem;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 850;
+    }
+    .step h3 { margin: 0 0 0.45rem; font-size: 1.05rem; letter-spacing: -0.015em; }
+    .step p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+    .exclusions { margin-top: 1.5rem; padding: 1rem 1.15rem; }
+
+    .offers { display: grid; gap: 2rem; margin-top: 2.25rem; }
+    .offer { overflow: hidden; box-shadow: var(--shadow); }
+    .offer-main { padding: clamp(1.5rem, 4vw, 2.5rem); }
+    .offer-kicker { margin: 0 0 0.55rem; color: var(--teal-dark); font-size: 0.83rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+    .offer h3 { margin: 0; font-size: clamp(1.75rem, 3.5vw, 2.55rem); }
+    .offer-subhead { max-width: 760px; color: var(--muted); font-size: 1.06rem; }
+    .offer-meta { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 1.2rem 0; }
+    .pill { padding: 0.35rem 0.65rem; border-radius: 999px; background: var(--wash); color: var(--navy); font-size: 0.9rem; font-weight: 700; }
+    .price-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1rem; margin: 1.25rem 0; }
+    .price { color: var(--navy); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.05em; }
+    .price-detail { color: var(--muted); font-weight: 650; }
+    .included { columns: 2; column-gap: 2rem; padding-left: 1.2rem; }
+    .included li { break-inside: avoid; margin-bottom: 0.55rem; }
+    .offer-actions { margin-top: 1.5rem; }
+
+    details {
+      border-top: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+    details:first-of-type { border-top: 0; }
+    summary { cursor: pointer; color: var(--navy); font-weight: 800; }
+    details p { color: var(--muted); }
+
+    .faq { margin-top: 1.5rem; }
+    .retainer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+    .retainer h3, .retainer .price { color: #fff; }
+    .retainer p { color: #dbe7f3; }
+    .retainer .button { background: #fff; border-color: #fff; color: var(--navy); box-shadow: none; white-space: nowrap; }
+
+    .final-cta { text-align: center; }
+    .final-cta p { max-width: 680px; margin-left: auto; margin-right: auto; }
+
+    footer { padding: 2rem 0; border-top: 1px solid var(--line); color: var(--muted); }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 2rem; }
+    footer strong { color: var(--navy); }
+
+    @media (max-width: 900px) {
+      .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .included { columns: 1; }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner { align-items: flex-start; flex-direction: column; }
+      .principles, .steps, .retainer { grid-template-columns: 1fr; }
+      .retainer .button { white-space: normal; }
+      .hero-inner { padding-top: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#offers">Skip to offers</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="SiteSprint Studio home">SiteSprint <span>Studio</span></a>
+      <nav aria-label="Page sections">
+        <a href="#about">Who we are</a>
+        <a href="#process">How it works</a>
+        <a href="#offers">Offers</a>
+        <a href="#care">Care retainer</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap hero-inner">
+        <p class="eyebrow">SiteSprint Studio</p>
+        <h1 id="page-title">Fixed-price websites for small businesses.</h1>
+        <p class="lede">Built, fixed, and launched in sprints — one written price before any work starts.</p>
+        <div class="hero-actions">
+          <!-- INTAKE FORM LINK PLACEHOLDER: Replace this mailto href with the published Google intake form URL when the form exists. -->
+          <a class="button" href="mailto:getsitesprintstudio@gmail.com?subject=Fixed%20quote%20request">Get a fixed quote</a>
+          <a class="button secondary" href="#offers">See the offers</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="wrap narrow">
+        <p class="eyebrow">Who we are</p>
+        <h2 id="about-title">A new studio, earning trust before payment.</h2>
+        <p>SiteSprint Studio is a new web studio, started in 2026. We're not going to dress that up: no padded portfolio, no invented history, no borrowed testimonials.</p>
+        <p>Here's how a new studio earns a job instead — judge the work before you pay for it:</p>
+
+        <div class="principles" aria-label="How SiteSprint Studio earns a job">
+          <article class="principle">
+            <strong>Free mini-audit first.</strong>
+            <p>A short, specific written list of what we'd fix or build on your site, in priority order. No obligation.</p>
+          </article>
+          <article class="principle">
+            <strong>Fixed price in writing.</strong>
+            <p>The full scope and the full price, in a written quote, before any money moves.</p>
+          </article>
+          <article class="principle">
+            <strong>A deposit books the job</strong>
+            <p>Credited in full toward the price, and refundable until the build start date confirmed in writing.</p>
+          </article>
+          <article class="principle">
+            <strong>Balance only before launch.</strong>
+            <p>You see the finished work first. The site, domain, and content are yours outright.</p>
+          </article>
+        </div>
+
+        <p>The studio's work so far is public build work — software built and shipped in the open (an agent research app, open-source escrow software, a payments-guard product, and a submitted research paper). We offer it as exactly what it is: evidence that we build things and finish them. It is not a client portfolio, and we won't pretend otherwise.</p>
+
+        <p class="payment-note"><strong>About payment:</strong> SiteSprint Studio is the studio name. Payments are invoiced through PayPal by the studio's operator, Peter Martinez — that's the name you'll see as payee on the invoice.</p>
+      </div>
+    </section>
+
+    <section id="process" class="section-wash" aria-labelledby="process-title">
+      <div class="wrap">
+        <p class="eyebrow">How every job works</p>
+        <h2 id="process-title">One clear process, in writing.</h2>
+        <div class="steps">
+          <article class="step">
+            <h3>Intake</h3>
+            <p>Answer 8 questions on one short form. No call required — everything runs in writing.</p>
+          </article>
+          <article class="step">
+            <h3>Fixed quote</h3>
+            <p>You get a written quote restating the exact scope, exclusions, delivery window, and revision limit at one fixed price.</p>
+          </article>
+          <article class="step">
+            <h3>Deposit books the job</h3>
+            <p>The deposit is credited in full toward the package price and is refundable until the build start date confirmed in writing; after build start it covers the work already scheduled.</p>
+          </article>
+          <article class="step">
+            <h3>Build</h3>
+            <p>The work is built in a preview environment and checked on phone, tablet, and desktop sizes. Revision rounds are included per package.</p>
+          </article>
+          <article class="step">
+            <h3>Balance before launch</h3>
+            <p>The remaining balance is due only before the work goes live on your domain. You own the site outright.</p>
+          </article>
+        </div>
+        <p class="note exclusions"><strong>Standard exclusions (all packages):</strong> no e-commerce builds, no custom web apps, no logo/brand design, no copywriting from scratch (we clean up and structure text you supply — facts come from you, nothing is invented), no hosting or domain purchases on your behalf, no work that requires live calls or meetings.</p>
+      </div>
+    </section>
+
+    <section id="offers" aria-labelledby="offers-title">
+      <div class="wrap">
+        <p class="eyebrow">Fixed-price offers</p>
+        <h2 id="offers-title">Choose the sprint that fits.</h2>
+        <p class="section-intro">Every package has a fixed scope, a fixed price, and a written quote before anything starts.</p>
+
+        <div class="offers">
+          <article class="offer" aria-labelledby="launch-title">
+            <div class="offer-main">
+              <p class="offer-kicker">Offer 1</p>
+              <h3 id="launch-title">Website Launch Package</h3>
+              <div class="price-row">
+                <span class="price">$2,000</span>
+                <span class="price-detail">fixed — $500 deposit books the build, $1,500 due before launch</span>
+              </div>
+              <p><strong>Headline:</strong> A real website for your business — live in 10 business days, one fixed price.</p>
+              <p class="offer-subhead">No hourly billing. No endless meetings. You answer one intake form, approve the draft, and your site goes live.</p>
+              <div class="offer-meta" aria-label="Website Launch Package terms">
+                <span class="pill">Live in 10 business days from deposit + assets received</span>
+                <span class="pill">Up to 5 pages</span>
+                <span class="pill">Two revision rounds</span>
+              </div>
+              <h4>What's included:</h4>
+              <ul class="included">
+                <li>Up to 5 pages (typical: Home, Services, About, Gallery/Work, Contact), built from a proven template structure customized to your business</li>
+                <li>Copy cleanup: your supplied text edited for clarity, headings, and calls to action — facts come from you; nothing is invented</li>
+                <li>Mobile-responsive build, checked on phone, tablet, and desktop sizes</li>
+                <li>Contact form or booking link wired to your email, so inquiries actually reach you</li>
+                <li>Basics covered: page titles/descriptions, favicon, social-share image, accessibility basics (contrast, alt text, keyboard navigation)</li>
+                <li>Analytics setup instructions (you create your own analytics account; we connect it)</li>
+                <li>Launch checklist and a short handover document: how to request changes, and what the care retainer covers</li>
+              </ul>
+              <div class="offer-actions">
+                <!-- INTAKE FORM LINK PLACEHOLDER: Replace this mailto href with the published Google intake form URL when the form exists. -->
+                <a class="button" href="mailto:getsitesprintstudio@gmail.com?subject=Website%20Launch%20Package%20quote">Get a fixed quote</a>
+              </div>
+              <p>Answer 8 questions, get a written quote with the full scope and price. No obligation.</p>
+              <div class="faq" aria-label="Website Launch Package frequently asked questions">
+                <details>
+                  <summary>How do we start?</summary>
+                  <p>Fill the intake form. You get a fixed quote restating exactly what's included. If you approve it, a $500 deposit books the build. Nothing starts — and nothing else is owed — until then.</p>
+                </details>
+                <details>
+                  <summary>What do you need from me?</summary>
+                  <p>Your business facts: services, prices you want shown, photos if you have them, and your logo file if one exists. One form, one time.</p>
+                </details>
+                <details>
+                  <summary>What if I don't like the draft?</summary>
+                  <p>You get two revision rounds. If after the first draft you decide not to continue, you can stop before build-out and the deposit covers only the work already done — the balance is never invoiced.</p>
+                </details>
+                <details>
+                  <summary>Do you write everything for me?</summary>
+                  <p>We edit and structure what you provide. We won't invent testimonials, reviews, or claims about your business.</p>
+                </details>
+                <details>
+                  <summary>Who owns the site?</summary>
+                  <p>You do. Domain, site, and content are yours.</p>
+                </details>
+                <details>
+                  <summary>What happens after launch?</summary>
+                  <p>An optional care retainer ($399/month) covers updates, checks, and one small improvement sprint a month. No contract lock-in.</p>
+                </details>
+              </div>
+            </div>
+          </article>
+
+          <article class="offer" aria-labelledby="rescue-title">
+            <div class="offer-main">
+              <p class="offer-kicker">Offer 2</p>
+              <h3 id="rescue-title">Website Rescue: Audit + Fix Sprint</h3>
+              <div class="price-row">
+                <span class="price">$995</span>
+                <span class="price-detail">fixed — $250 deposit books the sprint, $745 due on delivery of the fix report</span>
+              </div>
+              <p><strong>Headline:</strong> Your website is losing customers quietly. We find out where — and fix the top problems.</p>
+              <p class="offer-subhead">A 5-day audit + fix sprint: a ranked list of what's hurting your site, the top fixes done for you, and a before/after report proving it.</p>
+              <div class="offer-meta" aria-label="Website Rescue terms">
+                <span class="pill">5 business days from deposit + site access</span>
+                <span class="pill">Up to 10 agreed fixes</span>
+                <span class="pill">One revision round on the implemented fixes</span>
+              </div>
+              <h4>What's included:</h4>
+              <ul class="included">
+                <li>Full audit across five areas: technical health, page speed, mobile behavior, SEO basics (titles, headings, indexing basics), and trust/conversion (contact paths, forms, calls to action)</li>
+                <li>A prioritized fix list: every issue ranked by impact, in plain language — what's wrong and what fixing it involves</li>
+                <li>Up to 10 fixes from the list implemented inside the package, agreed in writing before work starts (fixes needing a rebuild, new pages, or a platform migration are quoted separately)</li>
+                <li>Before/after report: screenshots and re-run checks showing what changed</li>
+              </ul>
+              <div class="offer-actions">
+                <!-- INTAKE FORM LINK PLACEHOLDER: Replace this mailto href with the published Google intake form URL when the form exists. -->
+                <a class="button" href="mailto:getsitesprintstudio@gmail.com?subject=Website%20Rescue%20Sprint">Book a Rescue Sprint</a>
+              </div>
+              <p>Send your site address; the audit starts with a written scope before any balance is due.</p>
+              <div class="faq" aria-label="Website Rescue frequently asked questions">
+                <details>
+                  <summary>What do you need from me?</summary>
+                  <p>Your site address and, for fixes, login access to your site platform. Access is used only for the agreed work.</p>
+                </details>
+                <details>
+                  <summary>What if you find something big?</summary>
+                  <p>It goes on the list with an honest quote. Nothing extra is done — or charged — without your written approval.</p>
+                </details>
+                <details>
+                  <summary>Which fixes are included?</summary>
+                  <p>We agree the fix list in writing before starting, up to 10 fixes. Typical included fixes: broken mobile layouts, slow-loading images, missing page titles/descriptions, dead contact forms, unclear contact paths, outdated plugin/theme updates where safe.</p>
+                </details>
+                <details>
+                  <summary>Will this get me more customers?</summary>
+                  <p>We fix the problems that stop visitors from contacting you. We don't promise rankings or sales — anyone who does is guessing.</p>
+                </details>
+                <details>
+                  <summary>What if my site is on Wix/Squarespace/WordPress?</summary>
+                  <p>The audit works on any platform. Fix implementation depends on what the platform allows — that's confirmed in the quote before you pay the balance.</p>
+                </details>
+                <details>
+                  <summary>My site needs a rebuild instead?</summary>
+                  <p>Then the audit tells you that honestly — and the $250 deposit applies toward a Launch Package quote.</p>
+                </details>
+              </div>
+            </div>
+          </article>
+
+          <article class="offer" aria-labelledby="landing-title">
+            <div class="offer-main">
+              <p class="offer-kicker">Offer 3</p>
+              <h3 id="landing-title">Landing Page + Lead Capture Sprint</h3>
+              <div class="price-row">
+                <span class="price">$1,250</span>
+                <span class="price-detail">fixed — $300 deposit books the build, $950 due before launch</span>
+              </div>
+              <p><strong>Headline:</strong> One page. One offer. Built to turn clicks into inquiries.</p>
+              <p class="offer-subhead">A landing page + lead capture sprint for a single campaign or service — live in 7 business days, fixed price, no retainer required.</p>
+              <div class="offer-meta" aria-label="Landing Page Sprint terms">
+                <span class="pill">Live in 7 business days from deposit + assets received</span>
+                <span class="pill">Two revision rounds</span>
+              </div>
+              <h4>What's included:</h4>
+              <ul class="included">
+                <li>One landing page built around a single offer and a single action (call, form, or booking)</li>
+                <li>Page copy structured from your supplied facts: headline, problem/offer sections, what's included, FAQ, call to action</li>
+                <li>Lead capture form wired to your email or the CRM you already use, plus a thank-you page/flow after submission</li>
+                <li>Basic follow-up email copy: one confirmation email and one follow-up draft you can send, so leads don't go cold</li>
+                <li>Tracking checklist: how to see visits and submissions with your own analytics</li>
+                <li>Mobile-responsive, speed-checked, accessibility basics</li>
+              </ul>
+              <div class="offer-actions">
+                <!-- INTAKE FORM LINK PLACEHOLDER: Replace this mailto href with the published Google intake form URL when the form exists. -->
+                <a class="button" href="mailto:getsitesprintstudio@gmail.com?subject=Landing%20Page%20Sprint%20quote">Get a fixed quote</a>
+              </div>
+              <p>Describe the offer in a few lines; get the full scope and price in writing before anything starts.</p>
+              <div class="faq" aria-label="Landing Page Sprint frequently asked questions">
+                <details>
+                  <summary>How is this different from a full website?</summary>
+                  <p>A website covers your whole business. This page covers one offer and one action — it's the page you link from an ad, a post, or an email.</p>
+                </details>
+                <details>
+                  <summary>I don't have an ad running. Is this useful?</summary>
+                  <p>Yes, if you have one service or promotion you want to push — the page works for social posts, email, and referrals too.</p>
+                </details>
+                <details>
+                  <summary>What do you need from me?</summary>
+                  <p>The offer details: what it is, who it's for, price if you show one, and how you want people to reach you. One intake form.</p>
+                </details>
+                <details>
+                  <summary>Do you run the ads?</summary>
+                  <p>No. We build the page the ads point to. Ad management isn't included.</p>
+                </details>
+                <details>
+                  <summary>What if I need changes later?</summary>
+                  <p>Two revision rounds are included before launch. After launch, changes are covered by the care retainer or a new fixed quote.</p>
+                </details>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article id="care" class="retainer" aria-labelledby="care-title">
+          <div>
+            <p class="offer-kicker" style="color:#9fe8d8">After any delivery</p>
+            <h3 id="care-title">Monthly Website Care + Improvement Retainer</h3>
+            <p><strong>$399/month, no contract lock-in.</strong> Offered after every delivery: updates and checks on your site, plus one small improvement sprint a month. Cancel any time.</p>
+          </div>
+          <div>
+            <div class="price">$399/mo</div>
+            <!-- INTAKE FORM LINK PLACEHOLDER: Replace this mailto href with the published Google intake form URL when the form exists. -->
+            <a class="button" href="mailto:getsitesprintstudio@gmail.com?subject=Website%20care%20retainer">Ask about care</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section-wash final-cta" aria-labelledby="contact-title">
+      <div class="wrap narrow">
+        <p class="eyebrow">Start in writing</p>
+        <h2 id="contact-title">Start with the intake form.</h2>
+        <p class="section-intro">Everything runs in writing — start with the intake form.</p>
+        <!-- INTAKE FORM LINK PLACEHOLDER: Replace this mailto href with the published Google intake form URL when the form exists. -->
+        <p><a class="button" href="mailto:getsitesprintstudio@gmail.com?subject=SiteSprint%20Studio%20intake">Email SiteSprint Studio</a></p>
+        <p class="muted">getsitesprintstudio@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span><strong>SiteSprint Studio</strong> · getsitesprintstudio@gmail.com</span>
+      <span>Everything runs in writing — start with the intake form.</span>
+    </div>
+  </footer>
+</body>
+</html>
