@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Holiday Parties &amp; Catering — Carmelita's, Dana Point</title>
-<meta name="description" content="Book your holiday party at Carmelita's in Dana Point. Real food, family recipes, and a sharing platter built for the whole table. Thanksgiving, Christmas, office parties and family celebrations.">
+<title>Holiday Catering &amp; Parties — Carmelita's, Dana Point</title>
+<meta name="description" content="Holiday parties and catering at Carmelita's in Dana Point. Real food, family style — Thanksgiving, Christmas, office parties and fiestas. Call (949) 503-4107.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,289 +15,219 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;padding-bottom:76px}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif}
   img{display:block;max-width:100%}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
 
   /* HERO */
-  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff}
-  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,15,5,.25) 0%,rgba(30,15,5,.05) 35%,rgba(30,15,5,.82) 100%)}
-  .hero-in{position:relative;z-index:2;width:100%;padding:110px 0 54px}
-  .badge{display:inline-block;background:var(--gold);color:#3A2703;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:16px}
-  .hero h1{font-size:clamp(2.5rem,7vw,4.4rem);font-weight:800;text-shadow:0 2px 24px rgba(0,0,0,.35);max-width:12em}
-  .hero p.lede{font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:34em;margin:16px 0 26px;color:#FDEFE2}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;padding:15px 26px;border-radius:12px;font-weight:700;text-decoration:none;font-size:1rem}
-  .btn-call{background:var(--terra);color:#fff}
-  .btn-call:hover{background:var(--terra-dark)}
-  .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.75);backdrop-filter:blur(4px)}
-  .hero-meta{margin-top:20px;font-size:.95rem;color:#F3E2CE}
+  .hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;color:#fff;
+    background:linear-gradient(to top, rgba(28,13,5,.9) 0%, rgba(28,13,5,.38) 46%, rgba(28,13,5,.06) 76%), url('photos/enchiladas-closeup.jpg') center/cover no-repeat}
+  .hero-inner{padding:120px 0 56px;width:100%}
+  .kicker{letter-spacing:.3em;text-transform:uppercase;font-size:.76rem;color:var(--gold);font-weight:700}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,4.6rem);line-height:1.03;margin:.22em 0 .3em;text-shadow:0 2px 24px rgba(0,0,0,.5);font-weight:800}
+  .hero p.lede{font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:640px;color:#F7E9D7}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:999px;font-size:1.02rem;font-weight:600;
+    text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:'Inter',sans-serif}
+  .btn-solid{background:var(--terra);color:#fff}
+  .btn-solid:hover{background:var(--terra-dark)}
+  .btn-ghost{border-color:#F1DDBE;color:#FFF3E2;background:rgba(0,0,0,.2)}
+  .hero-meta{margin-top:24px;font-size:.94rem;color:#EBD9BE}
 
-  /* SECTIONS */
-  section{padding:64px 0}
-  .kicker{color:var(--terra);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;text-align:center}
-  h2.title{font-size:clamp(1.8rem,4.5vw,2.6rem);text-align:center;margin:10px 0 12px}
-  .sub{color:var(--muted);text-align:center;max-width:40em;margin:0 auto 38px}
+  section{padding:66px 0}
+  h2{font-size:clamp(1.8rem,4.4vw,2.6rem);line-height:1.14;margin-bottom:10px;font-weight:800}
+  .sub{color:var(--muted);max-width:660px;font-size:1.06rem}
+  .rule{width:64px;height:4px;background:var(--gold);border-radius:2px;margin:16px 0 28px}
 
-  .welcome{background:var(--paper);border-bottom:1px solid var(--line)}
-  .welcome .card{max-width:760px;margin:0 auto;text-align:center}
-  .welcome p{font-size:1.08rem;color:#4c3827}
-  .welcome .sig{margin-top:14px;font-family:'Fraunces',serif;font-size:1.2rem;color:var(--terra-dark)}
-
-  .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
-  .chip{background:#F6E8D4;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.92rem}
-
-  /* FEATURE CARDS */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-  .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 24px rgba(90,50,20,.06)}
-  .card img{width:100%;height:220px;object-fit:cover}
-  .card .body{padding:20px 22px 24px}
-  .card h3{font-size:1.3rem;margin-bottom:6px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .card .ico{font-size:1.7rem}
+  .card h3{margin:8px 0 6px;font-size:1.18rem}
   .card p{color:var(--muted);font-size:.97rem}
-  .price{display:inline-block;margin-top:12px;background:var(--green);color:#fff;font-weight:700;padding:5px 12px;border-radius:8px;font-size:.95rem}
 
-  /* GALLERY */
-  .gallery-sec{background:#2B1B10;color:#F7E9D7}
-  .gallery-sec .kicker{color:var(--gold)}
-  .gallery-sec .sub{color:#D8BFA3}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-  .gallery figure{border-radius:14px;overflow:hidden;position:relative}
-  .gallery img{width:100%;height:230px;object-fit:cover;transition:transform .4s}
-  .gallery figure:hover img{transform:scale(1.05)}
-  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-size:.9rem;font-weight:600;background:linear-gradient(180deg,transparent,rgba(20,10,2,.78))}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  figure{border-radius:16px;overflow:hidden;background:#1d110a;position:relative}
+  figure img{width:100%;height:262px;object-fit:cover;transition:transform .5s ease}
+  figure:hover img{transform:scale(1.045)}
+  figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 11px;color:#FFF6E8;font-size:.93rem;font-weight:500;
+    background:linear-gradient(to top, rgba(22,9,3,.8), rgba(22,9,3,0))}
 
-  /* MENU */
-  .menu-list{max-width:720px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:10px 28px}
-  .menu-list li{list-style:none;display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px dashed var(--line)}
-  .menu-list li:last-child{border-bottom:none}
-  .menu-list .dish{font-weight:600}
-  .menu-list .desc{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
-  .menu-list .pr{font-weight:700;color:var(--terra-dark);white-space:nowrap}
-  .star{color:var(--gold)}
+  .menu-band{background:#2B1B10;color:#F4E7D3}
+  .menu-band .sub{color:#CBB493}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:6px 46px;margin-top:8px}
+  .dish{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed #5A4632}
+  .dish .price{color:var(--gold);white-space:nowrap;font-weight:600}
+  .dish small{display:block;color:#B99F7E}
+  .star{background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.5);border-radius:16px;padding:22px 24px;margin-bottom:28px}
+  .star .price{color:var(--gold);font-size:1.3rem;font-weight:700}
+  .star p{color:#D8C3A2;margin-top:6px}
 
-  /* STEPS */
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:920px;margin:0 auto}
-  .step{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 24px;text-align:center}
-  .step .num{width:46px;height:46px;border-radius:50%;background:var(--terra);color:#fff;font-family:'Fraunces',serif;font-weight:800;font-size:1.3rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
-  .step h3{font-size:1.15rem;margin-bottom:6px}
-  .step p{color:var(--muted);font-size:.95rem}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .step .n{font-family:'Fraunces',serif;font-size:2rem;color:var(--terra);font-weight:800}
+  .step h3{margin:4px 0 6px}
+  .step p{color:var(--muted);font-size:.97rem}
+  .owner{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--green);border-radius:16px;padding:28px}
+  .owner p{color:var(--muted);margin-top:6px}
 
-  /* FORM */
-  .form-sec{background:var(--green);color:#EFF5EC}
-  .form-sec .kicker{color:var(--gold)}
-  .form-sec .sub{color:#C9DCC4}
-  form{max-width:640px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:18px;padding:28px}
-  label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 6px}
-  label:first-child{margin-top:0}
-  input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:#FFF}
-  textarea{min-height:96px;resize:vertical}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  @media(max-width:560px){.row{grid-template-columns:1fr}}
-  button.submit{width:100%;margin-top:20px;background:var(--terra);color:#fff;border:none;padding:16px;border-radius:12px;font:inherit;font-weight:700;font-size:1.05rem;cursor:pointer}
-  button.submit:hover{background:var(--terra-dark)}
-  .thanks{display:none;background:#EAF4E4;border:1.5px solid var(--green);border-radius:12px;padding:18px;margin-top:18px;text-align:center;font-weight:600}
-  .form-alt{text-align:center;margin-top:16px;color:#C9DCC4;font-size:.95rem}
+  form{display:grid;gap:12px;max-width:640px}
+  label{font-size:.92rem;color:var(--muted);font-weight:500}
+  input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;
+    font-family:'Inter',sans-serif;font-size:1rem;background:#fff;margin-top:5px;color:var(--ink)}
+  textarea{min-height:110px;resize:vertical}
+  .thanks{display:none;background:#EFF6E9;border:1px solid #BCD3AC;border-radius:12px;padding:18px 20px;max-width:640px}
+  .fineprint{color:var(--muted);font-size:.9rem;max-width:640px}
 
-  /* VISIT + FOOTER */
-  .visit{text-align:center}
-  .visit .addr{font-size:1.15rem;font-weight:600}
-  .visit p{color:var(--muted)}
-  footer{border-top:1px solid var(--line);padding:28px 0 8px;text-align:center;color:var(--muted);font-size:.88rem}
-  footer .gift{color:var(--terra-dark);font-weight:600}
-
-  .sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,253,249,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
-  .sticky-call a{flex:1;text-align:center;padding:14px;border-radius:12px;font-weight:700;text-decoration:none}
-  .sticky-call .c1{background:var(--terra);color:#fff}
-  .sticky-call .c2{background:#F1E3CC;color:var(--ink)}
-  @media(min-width:760px){.sticky-call{display:none}body{padding-bottom:0}}
+  footer{background:#211409;color:#CBB493;padding:40px 0 118px;text-align:center}
+  footer b{color:#F4E7D3;font-family:'Fraunces',serif;font-size:1.15rem}
+  .sticky-call{position:fixed;left:0;right:0;bottom:0;background:rgba(33,20,9,.97);padding:12px 16px;
+    display:flex;justify-content:center;gap:12px;z-index:50}
+  .sticky-call a{color:#fff;text-decoration:none;background:var(--terra);padding:12px 26px;border-radius:999px;font-size:1rem;font-weight:600}
+  .sticky-call a.alt{background:transparent;border:1.5px solid #8A6D4E;color:#F4E7D3}
+  @media (min-width:760px){ .sticky-call{display:none} footer{padding-bottom:40px} }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <header class="hero">
-  <img class="bg" src="photos/enchiladas-closeup.jpg" alt="Carmelita's green enchiladas with crema, avocado and rice — a real dish from the kitchen" fetchpriority="high">
-  <div class="wrap hero-in">
-    <span class="badge">Now booking holiday parties</span>
-    <h1>Holiday Parties &amp; Catering at Carmelita's</h1>
-    <p class="lede">Real food, family recipes, and a table built for celebrating — in the heart of Dana Point. Thanksgiving, Christmas, office parties, and every family gathering in between.</p>
+  <div class="wrap hero-inner">
+    <div class="kicker">Carmelita's · Dana Point</div>
+    <h1>Holiday Catering,<br>Carmelita's Style</h1>
+    <p class="lede">Real food, generous platters, zero stress. Thanksgiving, Christmas, office parties and family fiestas — cooked by our kitchen, hosted by our family.</p>
     <div class="cta-row">
-      <a class="btn btn-call" href="tel:+19495034107">📞 Call (949) 503-4107</a>
-      <a class="btn btn-ghost" href="#plan">Plan your party ↓</a>
+      <a class="btn btn-solid" href="tel:+19495034107">Call (949) 503-4107</a>
+      <a class="btn btn-ghost" href="#inquire">Plan My Party</a>
     </div>
-    <p class="hero-meta">34255 Pacific Coast Hwy, Unit 109 · Dana Point, CA</p>
+    <div class="hero-meta">34255 Pacific Coast Hwy, Unit 109, Dana Point · Every photo on this page is our actual food</div>
   </div>
 </header>
 
-<!-- WELCOME -->
-<section class="welcome">
-  <div class="wrap">
-    <div class="card">
-      <p class="kicker">A note from the owner</p>
-      <p style="margin-top:12px">I'm Silvia, the new owner of Carmelita's. This kitchen has been feeding Dana Point families for years, and this holiday season I want our table to be part of your celebration. Big party or small, we'll build the menu with you — and we'll make it feel like family.</p>
-      <p class="sig">— Silvia Garcia, Owner</p>
-      <div class="chips">
-        <span class="chip">🦃 Thanksgiving</span>
-        <span class="chip">🎄 Christmas &amp; Posadas</span>
-        <span class="chip">🏢 Office parties</span>
-        <span class="chip">🎂 Birthdays</span>
-        <span class="chip">👨‍👩‍👧‍👦 Family gatherings</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
 <section>
   <div class="wrap">
-    <p class="kicker">Party favorites</p>
-    <h2 class="title">Made to share, made from scratch</h2>
-    <p class="sub">Every photo on this page is a real dish from Carmelita's own kitchen — the same food your guests will get.</p>
+    <h2>Every kind of holiday party</h2>
+    <div class="rule"></div>
     <div class="cards">
-      <article class="card">
-        <img src="photos/shrimp-rice-black-beans.jpg" alt="Grilled shrimp plate with rice, black beans and charred lemon at Carmelita's" loading="lazy">
-        <div class="body">
-          <h3>From the grill</h3>
-          <p>Grilled shrimp with rice, black beans, sweet peppers and charred lemon. The seafood trio and jumbo prawns travel beautifully to a party table, too.</p>
-          <span class="price">Seafood trio · $41</span>
-        </div>
-      </article>
-      <article class="card">
-        <img src="photos/enchiladas.jpg" alt="Green enchiladas with avocado, rice and refried beans at Carmelita's" loading="lazy">
-        <div class="body">
-          <h3>Enchiladas, every way</h3>
-          <p>Green enchiladas, short rib enchiladas, shrimp &amp; crab enchiladas — the trays that disappear first at every party we cater.</p>
-          <span class="price">Short rib enchiladas · $28</span>
-        </div>
-      </article>
-      <article class="card">
-        <img src="photos/big-burrito.jpg" alt="Carmelita's Big Burrito with red sauce, avocado, sour cream, rice and beans" loading="lazy">
-        <div class="body">
-          <h3>The Big Burrito</h3>
-          <p>Smothered in red sauce with avocado, sour cream, rice and beans. Ask about burrito trays and chimichangas for the whole crew.</p>
-          <span class="price">Chimichanga · $25</span>
-        </div>
-      </article>
+      <div class="card"><div class="ico">🦃</div><h3>Thanksgiving</h3><p>Skip the kitchen marathon. Family-style spreads your whole table will fight over — in the good way.</p></div>
+      <div class="card"><div class="ico">🎄</div><h3>Christmas &amp; Posadas</h3><p>From office posadas to Christmas Eve with the whole familia — warm, festive, and plenty of it.</p></div>
+      <div class="card"><div class="ico">💼</div><h3>Office Parties</h3><p>The end-of-year party your team actually wants to attend. Tell us the headcount, we handle the rest.</p></div>
+      <div class="card"><div class="ico">🎉</div><h3>Family Fiestas</h3><p>Birthdays, anniversaries, "just because." Big platters, cold margaritas, everybody fed.</p></div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery-sec">
-  <div class="wrap">
-    <p class="kicker">From our kitchen</p>
-    <h2 class="title">This is the real thing</h2>
-    <p class="sub">No stock photos. This is Carmelita's food, photographed by the people who came to eat it.</p>
-    <div class="gallery">
-      <figure><img src="photos/enchiladas-closeup.jpg" alt="Green enchiladas close-up with crema drizzle and avocado" loading="lazy"><figcaption>Green enchiladas, house crema</figcaption></figure>
-      <figure><img src="photos/chimichanga.jpg" alt="Crispy chimichanga with guacamole, sour cream and pico de gallo" loading="lazy"><figcaption>Crispy chimichanga</figcaption></figure>
-      <figure><img src="photos/ceviche-tostada.jpg" alt="A fresh bowl from Carmelita's kitchen with avocado and pickled onion" loading="lazy"><figcaption>Fresh from the kitchen</figcaption></figure>
-      <figure><img src="photos/corn-queso-bowl.png" alt="Bowl topped with roasted corn, queso fresco and cilantro" loading="lazy"><figcaption>Roasted corn &amp; queso</figcaption></figure>
-      <figure><img src="photos/wild-blackberry-margarita.jpg" alt="Wild blackberry margarita with a chile and salt rim" loading="lazy"><figcaption>Wild blackberry margarita</figcaption></figure>
-      <figure><img src="photos/frozen-margarita.jpg" alt="Frozen margarita with a lime wedge" loading="lazy"><figcaption>Frozen margarita</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- MENU -->
-<section>
-  <div class="wrap">
-    <p class="kicker">Catering menu highlights</p>
-    <h2 class="title">Start with the favorites</h2>
-    <p class="sub">Full catering menus are built with you, around your party and your budget. These are the dishes everyone asks for first.</p>
-    <ul class="menu-list">
-      <li><span class="dish">The Sharing Platter <span class="star">★ party favorite</span><span class="desc">Grilled skirt steak, chicken, crispy carnitas, garlic butter shrimp, roasted street corn, queso fundido, tortillas, salsa, rice &amp; beans — served sizzling, tableside</span></span><span class="pr">$79</span></li>
-      <li><span class="dish">Taquito Sampler</span><span class="pr">$36</span></li>
-      <li><span class="dish">Grilled Stacked Nachos</span><span class="pr">$27</span></li>
-      <li><span class="dish">Seafood Trio<span class="desc">Shrimp taco, crab chile relleno, shrimp &amp; crab enchilada</span></span><span class="pr">$41</span></li>
-      <li><span class="dish">Shrimp &amp; Crab Enchiladas</span><span class="pr">$35</span></li>
-      <li><span class="dish">Jumbo Prawns in Garlic Butter</span><span class="pr">$35</span></li>
-      <li><span class="dish">Blackened Salmon</span><span class="pr">$34</span></li>
-      <li><span class="dish">Fajitas<span class="desc">Chicken or steak, sizzling with peppers and onions</span></span><span class="pr">$31 / $44</span></li>
-      <li><span class="dish">Carnitas</span><span class="pr">$30</span></li>
-      <li><span class="dish">Short Rib Enchiladas</span><span class="pr">$28</span></li>
-      <li><span class="dish">Braised Short Rib with Consommé</span><span class="pr">$26</span></li>
-      <li><span class="dish">Chimichanga</span><span class="pr">$25</span></li>
-      <li><span class="dish">Chicken Tortilla Soup</span><span class="pr">$18</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
 <section style="padding-top:0">
   <div class="wrap">
-    <p class="kicker">How it works</p>
-    <h2 class="title">Three steps to the party</h2>
-    <p class="sub"></p>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h3>Tell us the date</h3><p>Send the form below or call us with your date and roughly how many guests.</p></div>
-      <div class="step"><div class="num">2</div><h3>We build your menu</h3><p>Silvia's team helps you pick dishes and quantities that fit your party and budget.</p></div>
-      <div class="step"><div class="num">3</div><h3>You celebrate</h3><p>We handle the food — you take the credit. Dine in with us or take the party home.</p></div>
+    <h2>From our kitchen, really</h2>
+    <p class="sub">No stock photos, no stand-ins — this is the food, photographed at Carmelita's Dana Point.</p>
+    <div class="rule"></div>
+    <div class="gallery">
+      <figure><img src="photos/shrimp-rice-black-beans.jpg" alt="Grilled shrimp plate with rice and black beans" loading="lazy"><figcaption>Grilled shrimp, house rice &amp; black beans</figcaption></figure>
+      <figure><img src="photos/enchiladas.jpg" alt="Green enchiladas with avocado, rice and beans" loading="lazy"><figcaption>Green enchiladas with avocado</figcaption></figure>
+      <figure><img src="photos/big-burrito.jpg" alt="Big wet burrito with red sauce" loading="lazy"><figcaption>The Big Burrito, wet style</figcaption></figure>
+      <figure><img src="photos/chimichanga.jpg" alt="Crispy chimichanga with guacamole and pico de gallo" loading="lazy"><figcaption>Crispy chimichanga, guacamole &amp; pico</figcaption></figure>
+      <figure><img src="photos/ceviche-tostada.jpg" alt="House bowl with avocado, egg and queso fresco" loading="lazy"><figcaption>Fresh avocado, egg &amp; queso fresco</figcaption></figure>
+      <figure><img src="photos/corn-queso-bowl.png" alt="Corn bowl with queso fresco and cilantro" loading="lazy"><figcaption>Street-corn bowl, queso fresco &amp; cilantro</figcaption></figure>
+      <figure><img src="photos/shrimp-fajitas.jpg" alt="Shrimp, sizzling hot off the grill" loading="lazy"><figcaption>Shrimp, hot off the grill</figcaption></figure>
+      <figure><img src="photos/wild-blackberry-margarita.jpg" alt="Wild Blackberry Margarita" loading="lazy"><figcaption>Wild Blackberry Margarita</figcaption></figure>
+      <figure><img src="photos/frozen-margarita.jpg" alt="Frozen margarita with lime" loading="lazy"><figcaption>Frozen margarita, always</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- FORM -->
-<section class="form-sec" id="plan">
+<section class="menu-band">
   <div class="wrap">
-    <p class="kicker">Plan your party</p>
-    <h2 class="title" style="color:#fff">Tell us about your celebration</h2>
-    <p class="sub">Send this in and Carmelita's will get back to you to plan the menu. Prefer to talk? Call <a href="tel:+19495034107" style="color:#fff;font-weight:700">(949) 503-4107</a>.</p>
-    <form id="partyForm" novalidate>
-      <div class="row">
-        <div><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="e.g. Maria Lopez" required></div>
-        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="(949) 555-0123" required></div>
+    <h2>Party menu favorites</h2>
+    <p class="sub">Build your spread from the dishes Dana Point already loves. Prices from our current menu — final catering quotes are built per party.</p>
+    <div class="rule"></div>
+    <div class="star">
+      <div style="display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+        <b style="font-size:1.22rem;font-family:'Fraunces',serif">⭐ The Signature Sharing Platter</b><span class="price">$79</span>
       </div>
-      <div class="row">
-        <div><label for="date">Party date</label><input id="date" name="date" type="date"></div>
-        <div><label for="guests">How many guests?</label>
-          <select id="guests" name="guests">
-            <option>10–20</option><option>20–40</option><option>40–75</option><option>75+</option><option>Not sure yet</option>
-          </select>
-        </div>
-      </div>
-      <label for="notes">Anything we should know?</label>
-      <textarea id="notes" name="notes" placeholder="Occasion, favorite dishes, pickup or dine-in, budget — anything helps"></textarea>
-      <button class="submit" type="submit">Send my party request 🎉</button>
-      <div class="thanks" id="thanks">Thank you! Your request is in. To lock in your date right away, call us at <a href="tel:+19495034107">(949) 503-4107</a> — holiday dates go fast.</div>
-    </form>
-    <p class="form-alt">Holiday dates fill quickly — the earlier you ask, the better the menu we can build.</p>
+      <p>Grilled skirt steak, chicken, crispy carnitas, garlic butter shrimp, roasted street corn, queso fundido, warm tortillas, salsa, rice &amp; beans — finished sizzling at your table. The centerpiece of every Carmelita's party.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="dish"><span>Seafood Trio<small>Shrimp taco, crab chile relleno, shrimp &amp; crab enchilada</small></span><span class="price">$41</span></div>
+      <div class="dish"><span>Shrimp &amp; Crab Enchiladas</span><span class="price">$35</span></div>
+      <div class="dish"><span>Jumbo Prawns, Garlic Butter</span><span class="price">$35</span></div>
+      <div class="dish"><span>Taquito Sampler<small>Made to share — and to start the party</small></span><span class="price">$36</span></div>
+      <div class="dish"><span>Fajitas — Steak</span><span class="price">$44</span></div>
+      <div class="dish"><span>Fajitas — Chicken</span><span class="price">$31</span></div>
+      <div class="dish"><span>Blackened Salmon</span><span class="price">$34</span></div>
+      <div class="dish"><span>Carnitas</span><span class="price">$30</span></div>
+      <div class="dish"><span>Short Rib Enchiladas</span><span class="price">$28</span></div>
+      <div class="dish"><span>Grilled Stacked Nachos</span><span class="price">$27</span></div>
+    </div>
   </div>
 </section>
 
-<!-- VISIT -->
-<section class="visit">
+<section>
   <div class="wrap">
-    <p class="kicker">Visit us</p>
-    <h2 class="title">Carmelita's · Dana Point</h2>
-    <p class="addr">34255 Pacific Coast Hwy, Unit 109, Dana Point, CA 92629</p>
-    <p style="margin-top:8px">📞 <a href="tel:+19495034107" style="color:var(--terra-dark);font-weight:700;text-decoration:none">(949) 503-4107</a> · Call for holiday hours</p>
+    <h2>How it works</h2>
+    <div class="rule"></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Tell us about the party</h3><p>Call or send the form below — date, headcount, and the vibe. Two minutes, tops.</p></div>
+      <div class="step"><div class="n">2</div><h3>We build your spread</h3><p>Silvia's team puts together a menu and a straight price. No surprises, no pressure.</p></div>
+      <div class="step"><div class="n">3</div><h3>You just show up hungry</h3><p>Host it here with us, or take the feast to your place. Either way, we handle the food.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="owner">
+      <h2 style="font-size:1.55rem">From Silvia, our owner</h2>
+      <p>Carmelita's Dana Point is under new ownership — Silvia Garcia and her family. Same kitchen you love, new energy: holiday parties and catering are how we're saying hello to the neighborhood. Tell us what you're celebrating, and we'll make it delicious.</p>
+    </div>
+  </div>
+</section>
+
+<section id="inquire" style="padding-top:0">
+  <div class="wrap">
+    <h2>Plan my party</h2>
+    <p class="sub">Tell us the basics and we'll come back with a menu and a price. Prefer to talk? Call <a href="tel:+19495034107" style="color:var(--terra);font-weight:600">(949) 503-4107</a>.</p>
+    <div class="rule"></div>
+    <form id="inquiryForm">
+      <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Phone or email<input type="text" name="contact" required></label>
+      <label>What's the occasion?
+        <select name="occasion">
+          <option>Thanksgiving</option><option>Christmas / Posada</option>
+          <option>Office party</option><option>Birthday / family fiesta</option><option>Other celebration</option>
+        </select>
+      </label>
+      <label>Party date<input type="date" name="date"></label>
+      <label>How many guests?<input type="number" name="guests" min="1" placeholder="e.g. 25"></label>
+      <label>Anything we should know?<textarea name="notes" placeholder="Favorites, dietary needs, pickup or dine-in…"></textarea></label>
+      <button class="btn btn-solid" type="submit" style="justify-self:start">Send My Party Request</button>
+    </form>
+    <div class="thanks" id="thanksBox">
+      <b>¡Gracias!</b> Your request is in. For anything urgent, call us at (949) 503-4107 — we can't wait to feed your crew.
+    </div>
+    <p class="fineprint" style="margin-top:14px">On the restaurant's live site, this form delivers straight to Carmelita's inbox. Holiday dates fill fast — the earlier you ask, the better your date.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p class="gift">This page was made with love as a gift for Carmelita's.</p>
-    <p style="margin-top:6px">Menu prices from Carmelita's current menu; photos are real dishes from Carmelita's kitchen, shared by its guests. On the live site, the party form delivers straight to Carmelita's inbox.</p>
-    <p style="margin-top:6px">Built by Peter Martinez · SiteSprint Studio</p>
+    <b>Carmelita's — Dana Point</b><br>
+    34255 Pacific Coast Hwy, Unit 109, Dana Point, CA 92629<br>
+    (949) 503-4107 · Call for holiday hours
   </div>
 </footer>
 
 <div class="sticky-call">
-  <a class="c1" href="tel:+19495034107">📞 Call to book</a>
-  <a class="c2" href="#plan">Plan your party</a>
+  <a href="tel:+19495034107">📞 Call to Book</a>
+  <a class="alt" href="#inquire">Plan My Party</a>
 </div>
 
 <script>
-  document.getElementById('partyForm').addEventListener('submit', function(e){
+  document.getElementById('inquiryForm').addEventListener('submit', function(e){
     e.preventDefault();
-    var name = document.getElementById('name').value.trim();
-    var phone = document.getElementById('phone').value.trim();
-    if(!name || !phone){ alert('Please add your name and phone so Carmelita\'s can reach you.'); return; }
-    document.getElementById('thanks').style.display = 'block';
-    document.getElementById('thanks').scrollIntoView({behavior:'smooth', block:'center'});
+    this.style.display='none';
+    var t=document.getElementById('thanksBox');
+    t.style.display='block';
+    t.scrollIntoView({behavior:'smooth', block:'center'});
   });
 </script>
 </body>
