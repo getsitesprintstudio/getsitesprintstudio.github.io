@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On Point HIS LLC — Home Inspections in Clarksville, TN</title>
+<meta name="description" content="On Point HIS LLC — licensed home inspections in Clarksville, TN. Inspector Philip Martinez, TN License 2737. Rated 5.0 stars from 83 reviews. Book online in minutes.">
+<style>
+  :root{
+    --navy:#12263a; --navy2:#1b3a57; --ink:#1c2733; --muted:#5b6b7a;
+    --accent:#e8862e; --accent-dark:#c96f1d; --paper:#ffffff; --wash:#f2f5f8;
+    --line:#dde5ec; --gold:#f2b01e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px}
+  a{color:var(--navy2)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* Preview banner */
+  .preview-banner{background:#fff4e0;border-bottom:1px solid #ecd9ae;color:#7a5410;text-align:center;font-size:14px;padding:9px 16px}
+  .preview-banner strong{font-weight:700}
+
+  /* Header */
+  header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:10}
+  .header-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+  .brand-mark{width:44px;height:44px;border-radius:10px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;letter-spacing:.5px;flex:none}
+  .brand-name{font-weight:800;font-size:19px;line-height:1.15;color:var(--navy)}
+  .brand-sub{font-size:13px;color:var(--muted)}
+  .header-actions{display:flex;align-items:center;gap:14px;flex:none}
+  .header-phone{font-weight:700;color:var(--navy);text-decoration:none;font-size:16px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:8px;font-size:16px;border:0;cursor:pointer}
+  .btn:hover{background:var(--accent-dark)}
+  .btn.big{padding:16px 30px;font-size:18px;border-radius:10px}
+  .btn.ghost{background:transparent;color:var(--navy);border:2px solid var(--navy);padding:14px 26px}
+  .btn.ghost:hover{background:var(--navy);color:#fff}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff}
+  .hero-in{padding:64px 0 56px;max-width:760px}
+  .hero h1{font-size:44px;line-height:1.12;font-weight:800;letter-spacing:-.5px}
+  .hero h1 .thin{display:block;font-size:22px;font-weight:600;color:#c9d8e6;margin-top:10px;letter-spacing:0}
+  .hero p.lede{margin-top:18px;font-size:19px;color:#e3ecf4;max-width:620px}
+  .rating-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 16px;margin-top:24px;font-size:15px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:16px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .hero .btn.ghost{color:#fff;border-color:#fff}
+  .hero .btn.ghost:hover{background:#fff;color:var(--navy)}
+  .license-line{margin-top:22px;font-size:14.5px;color:#b9cbdd}
+
+  /* Trust strip */
+  .trust{border-bottom:1px solid var(--line);background:var(--wash)}
+  .trust-in{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:20px 0;text-align:center}
+  .trust b{display:block;font-size:19px;color:var(--navy)}
+  .trust span{font-size:13.5px;color:var(--muted)}
+
+  section{padding:56px 0}
+  section.alt{background:var(--wash)}
+  h2{font-size:30px;font-weight:800;color:var(--navy);letter-spacing:-.3px}
+  .section-sub{color:var(--muted);margin-top:8px;max-width:640px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  section.alt .card{background:#fff}
+  .card h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+  .card p{font-size:15.5px;color:#3c4a58}
+  .card .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent-dark);background:#fdf0e1;border-radius:999px;padding:3px 10px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.4px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  .step .num{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .step h3{font-size:18px;color:var(--navy);margin-bottom:6px}
+  .step p{font-size:15.5px;color:#3c4a58}
+
+  .why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-top:28px}
+  .why-item{display:flex;gap:12px;align-items:flex-start}
+  .why-item .check{color:var(--accent-dark);font-weight:800;flex:none;font-size:19px;line-height:1.4}
+  .why-item p{font-size:16px}
+  .why-item b{color:var(--navy)}
+
+  .area-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;margin-top:28px}
+  .area-box p{font-size:16.5px;color:#3c4a58}
+  .area-box b{color:var(--navy)}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  .contact-card h3{font-size:16px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:12px}
+  .contact-card p{font-size:17px;margin-bottom:6px}
+  .contact-card a{font-weight:700;text-decoration:none}
+  .contact-card a:hover{text-decoration:underline}
+
+  .final-cta{background:var(--navy);color:#fff;text-align:center}
+  .final-cta h2{color:#fff}
+  .final-cta p{color:#c9d8e6;margin:10px auto 26px;max-width:520px}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 34px;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
+
+  @media (max-width:820px){
+    .trust-in{grid-template-columns:repeat(2,1fr)}
+    .cards,.steps{grid-template-columns:1fr}
+    .why-list,.contact-grid{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    .header-phone{display:none}
+    .hero-in{padding:44px 0 40px}
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-banner"><strong>Preview</strong> — built by SiteSprint Studio for On Point HIS. This is not the live site.</div>
+
+<header>
+  <div class="wrap header-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark">OP</span>
+      <span>
+        <span class="brand-name">On Point HIS LLC</span><br>
+        <span class="brand-sub">Home Inspection Services · Clarksville, TN</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+19312062952">(931) 206-2952</a>
+      <a class="btn" href="https://app.spectora.com/home-inspectors/my-inspection-company-7b338ee491/schedule">Book an Inspection</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-in">
+    <h1>Home Inspections in Clarksville, TN
+      <span class="thin">Thorough inspections. Clear reports. No surprises after closing.</span>
+    </h1>
+    <p class="lede">On Point HIS LLC is owned and operated by inspector <strong>Philip Martinez</strong> — licensed in Tennessee and trusted by buyers, sellers, and agents across the Clarksville area.</p>
+    <div class="rating-badge">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span><strong>5.0 rating</strong> · 83 reviews</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn big" href="https://app.spectora.com/home-inspectors/my-inspection-company-7b338ee491/schedule">Book an Inspection</a>
+      <a class="btn big ghost" href="tel:+19312062952">Call (931) 206-2952</a>
+    </div>
+    <p class="license-line">Philip Martinez · TN License #2737 · On Point HIS LLC</p>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap trust-in">
+    <div><b>TN License 2737</b><span>Licensed Tennessee inspector</span></div>
+    <div><b>5.0 ★ rating</b><span>From verified client reviews</span></div>
+    <div><b>83 reviews</b><span>And counting</span></div>
+    <div><b>Clarksville local</b><span>Based at 105 Ussery Rd</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Inspection services</h2>
+    <p class="section-sub">Choose your inspection when you book — add-on services are available for specific primary services and can be selected right on the booking page.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">For buyers</span>
+        <h3>Buyer's Home Inspection</h3>
+        <p>A full inspection of the home you're about to buy — structure, roof, electrical, plumbing, HVAC, and more — so you know exactly what you're getting before you close.</p>
+      </div>
+      <div class="card">
+        <span class="tag">For sellers</span>
+        <h3>Pre-Listing Inspection</h3>
+        <p>Find and fix issues before your home hits the market. A pre-listing inspection helps you price with confidence and keeps surprises from slowing down your sale.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Add-ons</span>
+        <h3>Add-On Services</h3>
+        <p>Need a closer look at something specific? Add-on services are available for specific primary services — just choose them when you book your inspection online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="why">
+  <div class="wrap">
+    <h2>Why agents &amp; buyers choose On Point</h2>
+    <p class="section-sub">In a town full of inspectors, the record speaks plainly:</p>
+    <div class="why-list">
+      <div class="why-item"><span class="check">✓</span><p><b>A perfect 5.0-star record.</b> 83 reviews on his booking page — and a five-star average across every one of them.</p></div>
+      <div class="why-item"><span class="check">✓</span><p><b>Licensed and accountable.</b> Philip Martinez holds TN License #2737 — a state-licensed inspector, not a franchise call center.</p></div>
+      <div class="why-item"><span class="check">✓</span><p><b>You deal with the inspector himself.</b> The person who answers the phone is the person who walks your roof and writes your report.</p></div>
+      <div class="why-item"><span class="check">✓</span><p><b>Local to Clarksville.</b> Based right here at 105 Ussery Rd — he knows Montgomery County homes, from new builds to older Clarksville neighborhoods.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How booking works</h2>
+    <p class="section-sub">Three steps, all online — the same booking and reporting system On Point HIS already uses.</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Book</h3><p>Pick your inspection and a time that works on the online scheduler — or call <a href="tel:+19312062952">(931) 206-2952</a>. Add any add-on services while you book.</p></div>
+      <div class="step"><div class="num">2</div><h3>Inspect</h3><p>Philip inspects the property top to bottom — roof to foundation, inside and out — and documents everything he finds.</p></div>
+      <div class="step"><div class="num">3</div><h3>Report</h3><p>You get a clear, photo-rich digital report you can actually use — for negotiations, repairs, or peace of mind.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="area">
+  <div class="wrap">
+    <h2>Service area</h2>
+    <div class="area-box">
+      <p><b>Based in Clarksville, Tennessee</b> — On Point HIS serves home buyers, sellers, and agents throughout Clarksville and the surrounding Montgomery County area. Not sure if your property is in range? Call <a href="tel:+19312062952">(931) 206-2952</a> and ask.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact On Point HIS</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Get in touch</h3>
+        <p><a href="tel:+19312062952">(931) 206-2952</a></p>
+        <p><a href="mailto:onpointhis@gmail.com">onpointhis@gmail.com</a></p>
+        <p>105 Ussery Rd<br>Clarksville, TN 37043</p>
+      </div>
+      <div class="contact-card">
+        <h3>Hours</h3>
+        <p>Monday – Friday<br>8:00 AM – 5:00 PM</p>
+        <p style="margin-top:14px"><a class="btn" href="https://app.spectora.com/home-inspectors/my-inspection-company-7b338ee491/schedule">Book an Inspection</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Buying or selling in Clarksville?</h2>
+    <p>Get a licensed, five-star inspection on the books before your deadline does. Booking takes two minutes.</p>
+    <a class="btn big" href="https://app.spectora.com/home-inspectors/my-inspection-company-7b338ee491/schedule">Book an Inspection</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© On Point HIS LLC · Philip Martinez · TN License #2737</span>
+    <span>Preview built by SiteSprint Studio — not the live site.</span>
+  </div>
+</footer>
+
+</body>
+</html>
