@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thank you — your project details are on their way to SiteSprint Studio. We reply by email, usually the same day, with your deposit invoice.">
+  <title>Thank you — SiteSprint Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --navy: #0A1226;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-strong: rgba(255, 255, 255, 0.14);
+      --ink: #EDF1F8;
+      --muted: #A7B2C8;
+      --faint: #77839C;
+      --gold: #FFC440;
+      --gold-ink: #201503;
+      --cyan: #38D1FF;
+      --cyan-ink: #04222E;
+      --radius: 20px;
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+      background:
+        radial-gradient(1100px 620px at 85% -8%, rgba(56, 209, 255, 0.10), transparent 60%),
+        radial-gradient(900px 560px at -10% 30%, rgba(255, 196, 64, 0.055), transparent 55%),
+        var(--navy);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px; line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection { background: rgba(255, 196, 64, 0.35); }
+
+    .wrap { width: min(1160px, calc(100% - 3rem)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10, 18, 38, 0.72);
+      -webkit-backdrop-filter: blur(16px) saturate(1.4);
+      backdrop-filter: blur(16px) saturate(1.4);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 0.9rem 0; }
+    .wordmark {
+      font-family: var(--serif); font-weight: 600; font-size: 1.32rem; letter-spacing: 0.01em;
+      color: var(--ink); text-decoration: none; white-space: nowrap;
+    }
+    .wordmark em { font-style: normal; color: var(--gold); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      min-height: 3.25rem; padding: 0.85rem 1.6rem; border-radius: 999px;
+      font-family: var(--sans); font-size: 1rem; font-weight: 700; line-height: 1.2;
+      text-decoration: none; border: 1px solid transparent; cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .btn-gold {
+      background: linear-gradient(180deg, #FFD25E, var(--gold)); color: var(--gold-ink);
+      box-shadow: 0 10px 30px rgba(255, 196, 64, 0.22);
+    }
+    .btn-gold:hover, .btn-gold:focus { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(255, 196, 64, 0.30); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+    .btn-ghost:hover, .btn-ghost:focus { border-color: rgba(255,255,255,0.35); transform: translateY(-2px); }
+
+    main { flex: 1; display: flex; align-items: center; padding: clamp(3.5rem, 8vw, 6rem) 0; }
+    .thanks { max-width: 760px; }
+    .seal {
+      display: grid; place-items: center; width: 4.4rem; height: 4.4rem; border-radius: 50%;
+      border: 1px solid rgba(255, 196, 64, 0.5);
+      background: radial-gradient(circle at 35% 30%, rgba(255, 196, 64, 0.22), rgba(255, 196, 64, 0.06));
+      margin-bottom: 2rem;
+    }
+    .label {
+      display: inline-block; margin: 0 0 1.1rem;
+      color: var(--gold); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+    }
+    h1 {
+      font-family: var(--serif); font-weight: 600; line-height: 1.12; letter-spacing: -0.01em;
+      font-size: clamp(2.4rem, 5.6vw, 3.8rem); margin: 0;
+    }
+    h1 .accent { color: var(--gold); }
+    .lede { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.22rem); max-width: 58ch; margin: 1.3rem 0 0; }
+
+    .next {
+      margin-top: 2.8rem; border: 1px solid var(--line); border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
+      padding: 1.9rem 2rem; display: grid; gap: 1.3rem;
+    }
+    .next-item { display: flex; gap: 1rem; }
+    .next-item .n {
+      flex: none; display: grid; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: 50%;
+      border: 1px solid rgba(255, 196, 64, 0.55); color: var(--gold);
+      font-family: var(--serif); font-weight: 700; font-size: 1.02rem; margin-top: 0.1rem;
+    }
+    .next-item p { margin: 0; color: var(--muted); font-size: 1rem; }
+    .next-item p strong { color: var(--ink); font-weight: 600; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.6rem; }
+    .fine { color: var(--faint); font-size: 0.93rem; margin-top: 1.6rem; max-width: 56ch; }
+    .fine a { color: var(--cyan); }
+
+    footer { border-top: 1px solid var(--line); padding: 2.4rem 0 2.8rem; }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2.5rem; }
+    footer .wordmark { font-size: 1.15rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .footer-links a:hover, .footer-links a:focus { color: var(--cyan); }
+
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      .wrap { width: calc(100% - 2.2rem); }
+      .next { padding: 1.5rem 1.4rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="https://getsitesprintstudio.github.io/">SiteSprint <em>Studio</em></a>
+      <a href="https://getsitesprintstudio.github.io/" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:0.95rem">Back to home</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="thanks">
+        <div class="seal" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 18 18" fill="none"><path d="M2.5 9.5l4 4 9-10" stroke="#FFC440" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p class="label">Details received</p>
+        <h1>Thank you — <span class="accent">we have your project.</span></h1>
+        <p class="lede">Your details just landed in the SiteSprint Studio inbox. Here is exactly what happens next — no surprises, nothing owed today.</p>
+
+        <div class="next" aria-label="What happens next">
+          <div class="next-item">
+            <span class="n" aria-hidden="true">1</span>
+            <p><strong>Check your email.</strong> We reply, usually the same day, confirming your fixed price in writing and attaching your deposit invoice.</p>
+          </div>
+          <div class="next-item">
+            <span class="n" aria-hidden="true">2</span>
+            <p><strong>Pay the deposit when you are ready.</strong> Card or PayPal. It is refundable until work starts — and work starts the moment it lands.</p>
+          </div>
+          <div class="next-item">
+            <span class="n" aria-hidden="true">3</span>
+            <p><strong>Approve the finished site.</strong> The balance is due only when the site is live and you approve it. Never before.</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-gold" href="https://getsitesprintstudio.github.io/#work">See recent work</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/sitesprintstudio" target="_blank" rel="noopener">Follow us on Instagram</a>
+        </div>
+
+        <p class="fine">Nothing arrived after a few hours? Check your spam folder, or write to us directly at <a href="mailto:getsitesprintstudio@gmail.com">getsitesprintstudio@gmail.com</a> and we will pick it up from there.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="wordmark" href="https://getsitesprintstudio.github.io/">SiteSprint <em>Studio</em></a>
+      <div class="footer-links">
+        <a href="mailto:getsitesprintstudio@gmail.com">getsitesprintstudio@gmail.com</a>
+        <a href="https://www.instagram.com/sitesprintstudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://getsitesprintstudio.github.io/#packages">Packages</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
