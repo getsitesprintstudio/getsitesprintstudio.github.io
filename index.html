@@ -634,7 +634,7 @@
         </div>
 
         <div class="form-panel reveal">
-          <form id="intakeForm" action="https://formsubmit.co/getsitesprintstudio@gmail.com" method="POST">
+          <form id="intakeForm" action="https://api.web3forms.com/submit" method="POST">
             <div class="field-row">
               <div class="field">
                 <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
@@ -674,11 +674,11 @@
               <textarea id="f-message" name="message" placeholder="What does your business do, and what should the site do for you?"></textarea>
             </div>
 
-            <input type="hidden" name="_subject" value="New SiteSprint intake">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://getsitesprintstudio.github.io/thanks.html">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="access_key" value="d47bc170-db48-45dc-b666-17d5d49061ac">
+            <input type="hidden" name="subject" value="New SiteSprint intake">
+            <input type="hidden" name="from_name" value="SiteSprint website">
+            <input type="hidden" name="redirect" value="https://getsitesprintstudio.github.io/thanks.html">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
             <button class="btn btn-gold" type="submit" id="intakeSubmit">Send my project details</button>
             <p class="reassure"><strong>No payment now.</strong> We reply by email with your deposit invoice — pay by card or PayPal, and work starts the moment it lands.</p>
@@ -737,8 +737,20 @@
           ev.preventDefault();
           var btn = document.getElementById('intakeSubmit');
           var status = document.getElementById('formStatus');
-          var data = {};
-          new FormData(form).forEach(function (v, k) { data[k] = v; });
+          var raw = {};
+          new FormData(form).forEach(function (v, k) { raw[k] = v; });
+          var data = {
+            access_key: 'd47bc170-db48-45dc-b666-17d5d49061ac',
+            subject: 'New SiteSprint intake',
+            from_name: 'SiteSprint website',
+            name: raw.name || '',
+            business: raw.business || '',
+            email: raw.email || '',
+            phone: raw.phone || '',
+            package: raw.package || '',
+            message: raw.message || '',
+            botcheck: ''
+          };
           function showFallback() {
             var lines = [
               'Name: ' + (data.name || ''),
@@ -760,14 +772,13 @@
           }
           btn.disabled = true;
           btn.textContent = 'Sending...';
-          fetch('https://formsubmit.co/ajax/getsitesprintstudio@gmail.com', {
+          fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify(data)
           }).then(function (resp) {
             return resp.json().catch(function () { return {}; }).then(function (json) {
-              var msg = (json && json.message) ? String(json.message) : '';
-              if (resp.ok && (json.success === 'true' || json.success === true || /activ/i.test(msg))) {
+              if (resp.ok && json && json.success === true) {
                 window.location.href = 'https://getsitesprintstudio.github.io/thanks.html';
               } else {
                 showFallback();
