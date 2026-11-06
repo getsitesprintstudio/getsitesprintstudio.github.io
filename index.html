@@ -634,7 +634,7 @@
         </div>
 
         <div class="form-panel reveal">
-          <form action="https://formsubmit.co/getsitesprintstudio@gmail.com" method="POST">
+          <form id="intakeForm" action="https://formsubmit.co/getsitesprintstudio@gmail.com" method="POST">
             <div class="field-row">
               <div class="field">
                 <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
@@ -677,11 +677,17 @@
             <input type="hidden" name="_subject" value="New SiteSprint intake">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://getsitesprintstudio.github.io/thanks.html">
-            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-            <button class="btn btn-gold" type="submit">Send my project details</button>
+            <button class="btn btn-gold" type="submit" id="intakeSubmit">Send my project details</button>
             <p class="reassure"><strong>No payment now.</strong> We reply by email with your deposit invoice — pay by card or PayPal, and work starts the moment it lands.</p>
+            <p id="formStatus" class="reassure" style="display:none"></p>
           </form>
+          <div id="formFallback" style="display:none; margin-top:18px; padding:18px; border:1px solid rgba(255,196,64,.45); border-radius:14px;">
+            <p style="margin:0 0 12px;"><strong>The form service is having a moment.</strong> Your details are not lost — send them by email instead and we will pick it up from there, same day.</p>
+            <a id="fallbackMailto" class="btn btn-gold" href="mailto:getsitesprintstudio@gmail.com">Email my project details</a>
+          </div>
         </div>
       </div>
     </section>
@@ -721,6 +727,55 @@
           }, 650);
         });
       });
+
+      // Intake form: send via the form service's AJAX endpoint so a service
+      // hiccup never strands a visitor on an error page. On any failure we
+      // offer a prefilled email with everything they typed.
+      var form = document.getElementById('intakeForm');
+      if (form) {
+        form.addEventListener('submit', function (ev) {
+          ev.preventDefault();
+          var btn = document.getElementById('intakeSubmit');
+          var status = document.getElementById('formStatus');
+          var data = {};
+          new FormData(form).forEach(function (v, k) { data[k] = v; });
+          function showFallback() {
+            var lines = [
+              'Name: ' + (data.name || ''),
+              'Business: ' + (data.business || ''),
+              'Email: ' + (data.email || ''),
+              'Phone: ' + (data.phone || ''),
+              'Package: ' + (data.package || ''),
+              '',
+              data.message || ''
+            ].join('\n');
+            document.getElementById('fallbackMailto').href =
+              'mailto:getsitesprintstudio@gmail.com?subject=' +
+              encodeURIComponent('New SiteSprint intake') + '&body=' + encodeURIComponent(lines);
+            document.getElementById('formFallback').style.display = 'block';
+            status.style.display = 'block';
+            status.textContent = 'The send did not go through. Use the email button below — it has everything you typed.';
+            btn.disabled = false;
+            btn.textContent = 'Send my project details';
+          }
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+          fetch('https://formsubmit.co/ajax/getsitesprintstudio@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data)
+          }).then(function (resp) {
+            return resp.json().catch(function () { return {}; }).then(function (json) {
+              var msg = (json && json.message) ? String(json.message) : '';
+              if (resp.ok && (json.success === 'true' || json.success === true || /activ/i.test(msg))) {
+                window.location.href = 'https://getsitesprintstudio.github.io/thanks.html';
+              } else {
+                showFallback();
+              }
+            });
+          }).catch(showFallback);
+        });
+      }
 
       // Subtle reveal on scroll.
       var items = document.querySelectorAll('.reveal');
