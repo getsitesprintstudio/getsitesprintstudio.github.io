@@ -14,331 +14,514 @@
   <meta name="twitter:title" content="SiteSprint Studio — Websites that bring local businesses more calls">
   <meta name="twitter:description" content="Websites for local businesses, built to turn searches into calls. Launch $1,000 · Rescue $495 · small deposit to start, balance on delivery.">
   <meta name="twitter:image" content="https://getsitesprintstudio.github.io/og-card.jpg">
-  <title>SiteSprint Studio — Websites that bring local businesses more calls</title>
+  <title>SiteSprint Studio — The Front Page Edition</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: dark;
-      --navy: #0A1226;
-      --navy-2: #0D1730;
-      --panel: rgba(255, 255, 255, 0.03);
-      --panel-strong: rgba(255, 255, 255, 0.05);
-      --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(255, 255, 255, 0.14);
-      --ink: #EDF1F8;
-      --muted: #A7B2C8;
-      --faint: #77839C;
-      --gold: #FFC440;
-      --gold-ink: #201503;
-      --cyan: #38D1FF;
-      --cyan-ink: #04222E;
-      --radius: 20px;
+      color-scheme: light;
+      --paper: #FAF5EA;
+      --paper-2: #F3ECDA;
+      --card: #FFFDF6;
+      --ink: #17130C;
+      --ink-soft: #4C4433;
+      --faint: #8B8069;
+      --red: #AE241C;
+      --red-dark: #8C1B14;
+      --rule: #17130C;
+      --hair: rgba(23, 19, 12, 0.28);
+      --hair-soft: rgba(23, 19, 12, 0.16);
       --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --body-serif: Georgia, "Times New Roman", serif;
       --sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
 
     body {
       margin: 0;
       background:
-        radial-gradient(1100px 620px at 85% -8%, rgba(56, 209, 255, 0.10), transparent 60%),
-        radial-gradient(900px 560px at -10% 22%, rgba(255, 196, 64, 0.055), transparent 55%),
-        radial-gradient(1000px 700px at 110% 78%, rgba(56, 209, 255, 0.05), transparent 60%),
-        var(--navy);
+        radial-gradient(1000px 500px at 50% -5%, rgba(174, 36, 28, 0.045), transparent 60%),
+        var(--paper);
       color: var(--ink);
-      font-family: var(--sans);
+      font-family: var(--body-serif);
       font-size: 17px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
     }
 
-    ::selection { background: rgba(255, 196, 64, 0.35); }
+    ::selection { background: rgba(174, 36, 28, 0.22); }
 
-    a { color: var(--cyan); }
+    a { color: var(--red-dark); }
 
     .wrap { width: min(1160px, calc(100% - 3rem)); margin: 0 auto; }
 
     .skip-link {
-      position: absolute; left: 1rem; top: -10rem; z-index: 60;
-      background: var(--gold); color: var(--gold-ink);
-      padding: 0.7rem 1.1rem; border-radius: 999px; font-weight: 700; text-decoration: none;
+      position: absolute; left: 1rem; top: -10rem; z-index: 80;
+      background: var(--ink); color: var(--paper);
+      padding: 0.7rem 1.1rem; font-family: var(--sans); font-weight: 700; text-decoration: none;
     }
     .skip-link:focus { top: 1rem; }
 
+    /* ---------- rules & labels ---------- */
+    .rule-double { border-top: 4px solid var(--rule); position: relative; }
+    .rule-double::after { content: ""; position: absolute; left: 0; right: 0; top: 2px; border-top: 1.5px solid var(--rule); }
+    .rule-thick { border-top: 3px solid var(--rule); }
+    .rule-hair { border-top: 1px solid var(--hair); }
+
+    .kicker {
+      font-family: var(--sans); font-size: 0.76rem; font-weight: 800;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--red);
+      margin: 0 0 0.9rem;
+    }
+    .kicker.ink { color: var(--ink); }
+    .folio {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
+    }
+
+    h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; letter-spacing: -0.01em; margin: 0; color: var(--ink); }
+    h2 { font-size: clamp(2rem, 4.4vw, 3.1rem); font-weight: 900; max-width: 24ch; }
+    h3 { font-size: 1.45rem; }
+
     /* ---------- header ---------- */
     .site-header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(10, 18, 38, 0.72);
-      -webkit-backdrop-filter: blur(16px) saturate(1.4);
-      backdrop-filter: blur(16px) saturate(1.4);
-      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 60;
+      background: rgba(250, 245, 234, 0.94);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border-bottom: 3px double var(--rule);
     }
-    .header-inner {
-      display: flex; align-items: center; justify-content: space-between; gap: 1.25rem;
-      padding: 0.9rem 0;
-    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 0.65rem 0; }
     .wordmark {
-      font-family: var(--serif); font-weight: 600; font-size: 1.32rem; letter-spacing: 0.01em;
+      font-family: var(--serif); font-weight: 900; font-size: 1.28rem; letter-spacing: 0.005em;
       color: var(--ink); text-decoration: none; white-space: nowrap;
     }
-    .wordmark em { font-style: normal; color: var(--gold); }
-    .main-nav { display: flex; align-items: center; gap: 1.9rem; }
-    .main-nav a {
-      color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    .main-nav a:hover, .main-nav a:focus { color: var(--ink); }
-    .main-nav a.nav-cta { color: var(--cyan-ink); }
+    .wordmark em { font-style: italic; font-weight: 600; }
+    .main-nav { display: flex; align-items: center; gap: 1.8rem; font-family: var(--sans); }
+    .main-nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    .main-nav a:hover, .main-nav a:focus { color: var(--red); }
 
     /* ---------- buttons ---------- */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-      min-height: 3.25rem; padding: 0.85rem 1.6rem; border-radius: 999px;
-      font-family: var(--sans); font-size: 1rem; font-weight: 700; line-height: 1.2;
-      text-decoration: none; border: 1px solid transparent; cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      min-height: 3.2rem; padding: 0.85rem 1.7rem;
+      font-family: var(--sans); font-size: 0.98rem; font-weight: 700; line-height: 1.2;
+      text-decoration: none; border: 2px solid var(--ink); cursor: pointer; border-radius: 2px;
+      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
     }
-    .btn-gold {
-      background: linear-gradient(180deg, #FFD25E, var(--gold));
-      color: var(--gold-ink);
-      box-shadow: 0 10px 30px rgba(255, 196, 64, 0.22);
-    }
-    .btn-gold:hover, .btn-gold:focus { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(255, 196, 64, 0.30); }
-    .btn-ghost {
-      background: transparent; color: var(--ink); border-color: var(--line-strong);
-    }
-    .btn-ghost:hover, .btn-ghost:focus { border-color: rgba(255,255,255,0.35); transform: translateY(-2px); }
-    .btn-cyan {
-      background: var(--cyan); color: var(--cyan-ink);
-      box-shadow: 0 10px 30px rgba(56, 209, 255, 0.18);
-    }
-    .btn-cyan:hover, .btn-cyan:focus { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(56, 209, 255, 0.26); }
-    .btn-sm { min-height: 2.9rem; padding: 0.65rem 1.3rem; font-size: 0.95rem; }
-
-    /* ---------- type helpers ---------- */
-    .label {
-      display: inline-block; margin: 0 0 1.1rem;
-      color: var(--gold); font-size: 0.78rem; font-weight: 700;
-      letter-spacing: 0.22em; text-transform: uppercase;
-    }
-    h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.12; letter-spacing: -0.01em; margin: 0; }
-    h1 { font-size: clamp(2.6rem, 6.2vw, 4.4rem); max-width: 15ch; }
-    h1 .accent { color: var(--gold); }
-    h2 { font-size: clamp(2rem, 4.2vw, 3rem); max-width: 22ch; }
-    h3 { font-size: 1.45rem; }
-    .lede { color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.28rem); max-width: 620px; margin: 1.4rem 0 0; }
-    .section-intro { color: var(--muted); max-width: 640px; margin: 1rem 0 0; font-size: 1.06rem; }
-
-    section { padding: clamp(4.2rem, 8vw, 6.5rem) 0; scroll-margin-top: 5.5rem; }
-    .hairline { border-top: 1px solid var(--line); }
+    .btn-gold { background: var(--ink); color: var(--paper); box-shadow: 4px 4px 0 rgba(23,19,12,0.22); }
+    .btn-gold:hover, .btn-gold:focus { transform: translate(-1px,-1px); box-shadow: 6px 6px 0 rgba(23,19,12,0.22); background: var(--red-dark); border-color: var(--red-dark); }
+    .btn-cyan { background: var(--red); border-color: var(--red-dark); color: #FFF6E8; box-shadow: 4px 4px 0 rgba(23,19,12,0.22); }
+    .btn-cyan:hover, .btn-cyan:focus { transform: translate(-1px,-1px); background: var(--red-dark); }
+    .btn-ghost { background: transparent; color: var(--ink); }
+    .btn-ghost:hover, .btn-ghost:focus { background: var(--ink); color: var(--paper); }
+    .btn-sm { min-height: 2.8rem; padding: 0.6rem 1.25rem; font-size: 0.92rem; }
+    .main-nav a.nav-cta { color: var(--paper); }
+    .main-nav a.nav-cta:hover { color: #FFF6E8; }
 
     /* ---------- reveal ---------- */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .btn { transition: none; }
-    }
 
-    /* ---------- hero ---------- */
-    .hero { padding: clamp(4.5rem, 9vw, 7.5rem) 0 clamp(3.5rem, 6vw, 5rem); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.4rem; }
-    .hero-note { margin-top: 1.3rem; color: var(--faint); font-size: 0.95rem; }
-    .hero-note strong { color: var(--muted); font-weight: 600; }
+    /* ---------- masthead ---------- */
+    .masthead { padding: 1.1rem 0 0; text-align: center; }
+    .mast-top {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+      padding: 0.45rem 0; border-top: 1.5px solid var(--rule); border-bottom: 1px solid var(--hair);
+    }
+    .mast-top .folio:last-child { text-align: right; }
+    .nameplate {
+      font-family: var(--serif); font-weight: 900; letter-spacing: -0.015em;
+      font-size: clamp(2.9rem, 9.5vw, 6.4rem); line-height: 1.02; margin: 1.4rem 0 0.4rem;
+    }
+    .nameplate em { font-style: italic; font-weight: 600; }
+    .mast-tag { font-family: var(--serif); font-style: italic; font-size: clamp(1.05rem, 2.4vw, 1.4rem); color: var(--ink-soft); margin: 0 0 1.3rem; }
+    .mast-strip {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 2.2rem;
+      padding: 0.55rem 0; border-top: 1px solid var(--hair); border-bottom: 4px solid var(--rule);
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    }
+    .mast-strip span b { color: var(--red); font-weight: 800; }
+
+    /* ---------- lead story ---------- */
+    .lead { padding: clamp(2.6rem, 6vw, 4.2rem) 0 clamp(2.8rem, 6vw, 4rem); }
+    .lead h1 { font-size: clamp(2.7rem, 6.8vw, 5rem); font-weight: 900; max-width: 16ch; }
+    .lead h1 .accent { font-style: italic; font-weight: 600; color: var(--red-dark); }
+    .byline-row {
+      display: flex; flex-wrap: wrap; gap: 0.4rem 2rem; align-items: baseline;
+      margin: 1.5rem 0 1.6rem; padding: 0.6rem 0;
+      border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
+    }
+    .byline-row .folio b { color: var(--ink); }
+    .lead-cols { columns: 2; column-gap: 3rem; column-rule: 1px solid var(--hair); max-width: 980px; }
+    .lead-cols p { margin: 0 0 1rem; font-size: 1.06rem; color: #2A251A; }
+    .lead-cols p:first-child::first-letter {
+      font-family: var(--serif); font-weight: 900; float: left;
+      font-size: 3.4em; line-height: 0.82; padding: 0.06em 0.12em 0 0; color: var(--ink);
+    }
+    .dateline { font-family: var(--sans); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
+    .hero-note { margin-top: 1.2rem; color: var(--ink-soft); font-size: 0.98rem; font-family: var(--sans); }
+    .hero-note strong { color: var(--ink); }
+
+    .pull-quote {
+      font-family: var(--serif); font-style: italic; font-weight: 600;
+      font-size: clamp(1.35rem, 2.8vw, 1.8rem); line-height: 1.3;
+      border-top: 3px solid var(--rule); border-bottom: 1px solid var(--hair);
+      padding: 1.2rem 0.4rem; margin: 2.4rem 0 0; max-width: 700px;
+    }
+    .pull-quote::before { content: "“"; color: var(--red); }
 
     /* ---------- trust strip ---------- */
-    .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.015); }
+    .trust { border-top: 4px solid var(--rule); border-bottom: 1px solid var(--hair); background: var(--paper-2); }
     .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .trust-item { padding: 1.7rem 1.8rem; }
-    .trust-item + .trust-item { border-left: 1px solid var(--line); }
-    .trust-item .t-title {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-weight: 700; font-size: 1.02rem; color: var(--ink); margin: 0 0 0.35rem;
-    }
+    .trust-item { padding: 1.6rem 1.8rem; }
+    .trust-item + .trust-item { border-left: 1px solid var(--hair); }
+    .trust-item .t-title { display: flex; align-items: center; gap: 0.6rem; font-family: var(--serif); font-weight: 700; font-size: 1.08rem; margin: 0 0 0.35rem; }
     .trust-item .t-title svg { flex: none; }
-    .trust-item p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .trust-item p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
 
-    /* ---------- package cards ---------- */
-    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 3rem; }
+    /* ---------- scroll stories ---------- */
+    .story { position: relative; }
+    .story-search { height: 300vh; }
+    .story-build { height: 320vh; }
+    .story-call { height: 260vh; }
+    .stage {
+      position: sticky; top: 0; height: 100vh; height: 100svh;
+      display: flex; align-items: center; overflow: hidden;
+      padding-top: 3.4rem;
+    }
+    .stage-inner { width: min(1160px, calc(100% - 3rem)); margin: 0 auto; }
+    .stage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+    .stage-head h2 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); }
+    .stage-head .standfirst { font-size: 1.08rem; color: var(--ink-soft); margin: 1.1rem 0 0; max-width: 46ch; }
+    .stage-head .standfirst .dateline { color: var(--ink); }
+    .continued {
+      display: flex; align-items: center; gap: 1rem; margin-top: 2.2rem;
+    }
+    .continued .line { flex: 1; height: 2px; background: var(--ink); transform-origin: left center; }
+    .continued .folio { white-space: nowrap; }
+
+    /* classifieds / listings box */
+    .listings {
+      background: var(--card); border: 2.5px solid var(--ink);
+      box-shadow: 8px 8px 0 rgba(23,19,12,0.14);
+      padding: 1.4rem 1.5rem 1.2rem; position: relative;
+    }
+    .listings-head {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+      border-bottom: 3px double var(--ink); padding-bottom: 0.6rem; margin-bottom: 0.4rem;
+    }
+    .listings-head .lh-title { font-family: var(--serif); font-weight: 900; font-size: 1.15rem; letter-spacing: 0.02em; }
+    .listing { padding: 0.95rem 0.2rem; border-bottom: 1px solid var(--hair); }
+    .listing:last-of-type { border-bottom: none; }
+    .listing .l-name { font-family: var(--serif); font-weight: 700; font-size: 1.18rem; margin: 0; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .listing .l-name .l-rank { font-family: var(--sans); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.18em; color: var(--faint); }
+    .listing .l-meta { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 0.3rem 0 0; }
+    .listing .l-meta b { color: var(--red-dark); }
+    .listing-missing { border: 2px dashed var(--ink-soft); margin-top: 1rem; padding: 1.1rem 1.1rem 1rem; position: relative; background: repeating-linear-gradient(-45deg, transparent 0 14px, rgba(23,19,12,0.025) 14px 28px); }
+    .listing-missing .l-name { font-family: var(--serif); font-weight: 700; font-size: 1.18rem; margin: 0; }
+    .listing-missing p { margin: 0.35rem 0 0; font-style: italic; color: var(--ink-soft); font-size: 0.98rem; }
+    .stamp {
+      position: absolute; right: 0.9rem; top: 0.7rem;
+      font-family: var(--sans); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.2em;
+      color: var(--red); border: 2.5px solid var(--red); padding: 0.28rem 0.6rem; border-radius: 2px;
+      background: rgba(250,245,234,0.85);
+    }
+    .missing-note {
+      margin-top: 1.1rem; border: 1.5px solid var(--ink); padding: 0.85rem 1rem;
+      font-size: 0.94rem; color: var(--ink-soft); background: var(--paper-2);
+    }
+    .missing-note b { font-family: var(--sans); font-size: 0.74rem; letter-spacing: 0.2em; color: var(--ink); display: block; margin-bottom: 0.25rem; }
+
+    /* plate / diagram */
+    .plate-wrap { position: relative; }
+    .plate {
+      background: var(--card); border: 2.5px solid var(--ink);
+      box-shadow: 8px 8px 0 rgba(23,19,12,0.14);
+    }
+    .plate-bar {
+      display: flex; align-items: center; gap: 0.5rem;
+      border-bottom: 2px solid var(--ink); padding: 0.55rem 0.9rem; background: var(--paper-2);
+    }
+    .plate-bar .dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--ink); }
+    .plate-bar .url {
+      margin-left: 0.6rem; font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+      border: 1.5px solid var(--hair); background: var(--card); padding: 0.18rem 0.7rem; border-radius: 999px; color: var(--ink-soft);
+    }
+    .plate-body { padding: 1.2rem 1.3rem 1.3rem; position: relative; }
+    .mock-head { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--hair); padding-bottom: 0.7rem; }
+    .mock-logo { font-family: var(--serif); font-weight: 900; font-size: 1.05rem; }
+    .mock-phone { font-family: var(--sans); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.06em; border: 1.5px solid var(--ink); padding: 0.22rem 0.6rem; }
+    .mock-hero { padding: 1rem 0 0.4rem; }
+    .mock-hero .mh-title { font-family: var(--serif); font-weight: 900; font-size: clamp(1.3rem, 2.6vw, 1.7rem); line-height: 1.15; }
+    .mock-hero .mh-lines { margin-top: 0.6rem; display: grid; gap: 0.35rem; }
+    .mock-hero .mh-lines i { display: block; height: 7px; background: var(--hair); }
+    .mock-hero .mh-lines i:nth-child(1) { width: 88%; } .mock-hero .mh-lines i:nth-child(2) { width: 64%; }
+    .mock-services { list-style: none; margin: 0.9rem 0 0; padding: 0.9rem 0 0; border-top: 1px solid var(--hair); display: grid; gap: 0.45rem; font-family: var(--sans); font-size: 0.86rem; font-weight: 600; color: var(--ink-soft); }
+    .mock-services li { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--hair); padding-bottom: 0.4rem; }
+    .mock-services li b { color: var(--ink); }
+    .mock-stars { display: flex; gap: 0.3rem; align-items: center; margin-top: 0.95rem; font-family: var(--sans); font-size: 0.8rem; font-weight: 700; color: var(--ink-soft); }
+    .mock-stars .star { color: var(--hair); font-size: 1.05rem; line-height: 1; }
+    .mock-call {
+      margin-top: 1rem; text-align: center; font-family: var(--sans); font-weight: 800; letter-spacing: 0.14em;
+      font-size: 0.9rem; border: 2px solid var(--ink); padding: 0.7rem; color: var(--ink); background: var(--paper-2);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .mock-call.lit { background: var(--red); border-color: var(--red-dark); color: #FFF6E8; }
+    .callout {
+      position: absolute; width: 26px; height: 26px; border-radius: 50%;
+      background: var(--ink); color: var(--paper);
+      font-family: var(--sans); font-size: 0.8rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; z-index: 3;
+      box-shadow: 0 0 0 3px var(--paper);
+    }
+    .callout::after { content: ""; position: absolute; top: 50%; width: 30px; border-top: 1.5px solid var(--ink); }
+    .callout.left::after { right: 100%; } .callout.right::after { left: 100%; }
+    .plate-cap { font-family: var(--sans); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 0.8rem; text-align: center; }
+    .annotations { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.15rem; }
+    .annotations li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.8rem; opacity: 0.32; }
+    .annotations .a-num {
+      width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--ink);
+      font-family: var(--sans); font-size: 0.8rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; margin-top: 0.15rem;
+    }
+    .annotations li.on { opacity: 1; }
+    .annotations li.on .a-num { background: var(--red); border-color: var(--red-dark); color: #FFF6E8; }
+    .annotations .a-title { font-family: var(--serif); font-weight: 700; font-size: 1.08rem; margin: 0; }
+    .annotations p { margin: 0.2rem 0 0; color: var(--ink-soft); font-size: 0.97rem; }
+
+    /* late edition / phone */
+    .breaking {
+      background: var(--red); color: #FFF6E8; border: 2.5px solid var(--red-dark);
+      display: flex; align-items: center; gap: 1rem; padding: 0.65rem 1.1rem;
+      font-family: var(--sans); font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.85rem;
+      box-shadow: 6px 6px 0 rgba(23,19,12,0.18); margin-bottom: 2rem;
+    }
+    .breaking .blip { width: 11px; height: 11px; border-radius: 50%; background: #FFF6E8; flex: none; }
+    .phone-wrap { display: flex; justify-content: center; }
+    .phone {
+      width: min(300px, 80vw); border: 3px solid var(--ink); border-radius: 36px;
+      background: var(--card); box-shadow: 10px 10px 0 rgba(23,19,12,0.15);
+      padding: 1rem 1rem 1.3rem; position: relative;
+    }
+    .phone .notch { width: 86px; height: 6px; border-radius: 3px; background: var(--hair); margin: 0 auto 1rem; }
+    .phone .p-time { text-align: center; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; color: var(--faint); text-transform: uppercase; }
+    .call-card { text-align: center; padding: 1.4rem 0.4rem 0.4rem; position: relative; }
+    .call-card .c-label { font-family: var(--sans); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin: 0; }
+    .call-card .c-name { font-family: var(--serif); font-weight: 900; font-size: 1.65rem; margin: 0.5rem 0 0.2rem; }
+    .call-card .c-sub { font-style: italic; color: var(--ink-soft); margin: 0; font-size: 0.98rem; }
+    .call-actions { display: flex; justify-content: space-around; margin-top: 1.8rem; position: relative; }
+    .call-btn { width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+    .call-btn.decline { background: var(--paper-2); border: 2px solid var(--ink); }
+    .call-btn.accept { background: var(--red); border: 2px solid var(--red-dark); }
+    .ring { position: absolute; inset: 0; border-radius: 50%; border: 2.5px solid var(--red); pointer-events: none; }
+    .call-caption { text-align: center; font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); margin-top: 0.5rem; }
+    .msg-bubble {
+      margin: 1.2rem 0.2rem 0; border: 1.5px solid var(--ink); background: var(--paper-2);
+      padding: 0.75rem 0.9rem; font-size: 0.92rem; position: relative;
+    }
+    .msg-bubble .m-from { font-family: var(--sans); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); display: block; margin-bottom: 0.2rem; }
+
+    /* ---------- sections below the fold ---------- */
+    section { padding: clamp(3.8rem, 7vw, 5.8rem) 0; scroll-margin-top: 5rem; }
+    .hairline { border-top: 1px solid var(--hair); }
+    .section-intro { color: var(--ink-soft); max-width: 640px; margin: 1rem 0 0; font-size: 1.05rem; }
+
+    /* rate card */
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; margin-top: 3rem; }
     .card {
       position: relative; display: flex; flex-direction: column;
-      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
-      border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 2.1rem 2.1rem 2rem;
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      background: var(--card); border: 2px solid var(--ink);
+      padding: 2rem 2rem 1.9rem; box-shadow: 6px 6px 0 rgba(23,19,12,0.10);
     }
-    .card:hover { transform: translateY(-5px); border-color: var(--line-strong); box-shadow: 0 24px 50px rgba(0,0,0,0.35); }
-    .card .pkg-label { color: var(--gold); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.9rem; }
-    .card h3 { font-size: 1.7rem; }
-    .card .desc { color: var(--muted); margin: 0.8rem 0 0; font-size: 1rem; }
-    .price-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 1.5rem 0 0.2rem; }
-    .price { font-family: var(--serif); font-size: 2.6rem; font-weight: 700; line-height: 1; }
-    .price .per { font-size: 1.15rem; color: var(--muted); font-weight: 500; }
+    .card .pkg-label { font-family: var(--sans); color: var(--red); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.8rem; }
+    .card h3 { font-size: 1.65rem; font-weight: 900; }
+    .card .desc { color: var(--ink-soft); margin: 0.75rem 0 0; font-size: 0.99rem; }
+    .price-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 1.4rem 0 0.2rem; }
+    .price { font-family: var(--serif); font-size: 2.55rem; font-weight: 900; line-height: 1; }
+    .price .per { font-size: 1.1rem; color: var(--ink-soft); font-weight: 600; }
     .start-chip {
-      display: inline-flex; align-items: center; padding: 0.32rem 0.8rem; border-radius: 999px;
-      border: 1px solid rgba(255, 196, 64, 0.45); color: var(--gold);
-      font-size: 0.86rem; font-weight: 700; white-space: nowrap;
+      display: inline-flex; align-items: center; padding: 0.3rem 0.75rem;
+      border: 1.5px solid var(--ink); color: var(--ink);
+      font-family: var(--sans); font-size: 0.84rem; font-weight: 700; white-space: nowrap;
     }
-    .feat { list-style: none; margin: 1.4rem 0 1.9rem; padding: 1.4rem 0 0; border-top: 1px solid var(--line); display: grid; gap: 0.6rem; }
-    .feat li { display: flex; gap: 0.65rem; color: var(--muted); font-size: 0.98rem; }
+    .feat { list-style: none; margin: 1.3rem 0 1.8rem; padding: 1.3rem 0 0; border-top: 1px solid var(--hair); display: grid; gap: 0.55rem; }
+    .feat li { display: flex; gap: 0.6rem; color: var(--ink-soft); font-size: 0.97rem; }
     .feat li svg { flex: none; margin-top: 0.32rem; }
     .card .btn { margin-top: auto; align-self: flex-start; }
-    .card.featured {
-      border-color: rgba(255, 196, 64, 0.45);
-      background:
-        radial-gradient(600px 300px at 80% -10%, rgba(255, 196, 64, 0.10), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-    }
+    .card.featured { border-width: 2.5px; box-shadow: 8px 8px 0 rgba(174,36,28,0.20); }
     .featured-tag {
-      position: absolute; top: -0.85rem; right: 1.6rem;
-      background: var(--gold); color: var(--gold-ink);
-      font-size: 0.74rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
-      padding: 0.4rem 0.85rem; border-radius: 999px;
+      position: absolute; top: -0.8rem; right: 1.4rem; transform: rotate(2deg);
+      background: var(--red); color: #FFF6E8; border: 1.5px solid var(--red-dark);
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+      padding: 0.38rem 0.8rem;
     }
-
-    /* founding extras */
     .extras-head { margin-top: 4rem; }
-    .extras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; }
-    .extra { padding: 1.7rem 1.8rem; }
-    .extra h3 { font-size: 1.28rem; }
-    .extra .price { font-size: 2rem; }
-    .extra .desc { font-size: 0.95rem; }
-    .extra .feat { margin-bottom: 1.5rem; }
+    .extras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 2rem; }
+    .extra { padding: 1.6rem 1.7rem; }
+    .extra h3 { font-size: 1.24rem; }
+    .extra .price { font-size: 1.95rem; }
+    .extra .desc { font-size: 0.94rem; }
+    .extra .feat { margin-bottom: 1.4rem; }
 
-    /* ---------- bundle ---------- */
     .bundle {
-      margin-top: 3.5rem; border-radius: calc(var(--radius) + 6px);
-      border: 1px solid rgba(56, 209, 255, 0.35);
-      background:
-        radial-gradient(700px 320px at 12% -20%, rgba(56, 209, 255, 0.13), transparent 60%),
-        radial-gradient(600px 300px at 95% 120%, rgba(255, 196, 64, 0.09), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      padding: clamp(2rem, 4.5vw, 3.2rem);
+      margin-top: 3.5rem; border: 3px double var(--ink); background: var(--card);
+      padding: clamp(1.9rem, 4.5vw, 3rem);
       display: grid; grid-template-columns: 1.5fr auto; gap: 2rem; align-items: center;
+      box-shadow: 8px 8px 0 rgba(23,19,12,0.12);
     }
-    .bundle .pkg-label { color: var(--cyan); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.8rem; }
-    .bundle h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
-    .bundle p { color: var(--muted); margin: 0.7rem 0 0; max-width: 52ch; }
+    .bundle .pkg-label { font-family: var(--sans); color: var(--red); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.7rem; }
+    .bundle h3 { font-size: clamp(1.55rem, 3vw, 2.05rem); font-weight: 900; }
+    .bundle p { color: var(--ink-soft); margin: 0.65rem 0 0; max-width: 52ch; }
     .bundle-side { text-align: right; }
-    .bundle-side .price { font-size: 3rem; }
-    .bundle-side .save { display: block; color: var(--gold); font-weight: 700; margin: 0.35rem 0 1.2rem; }
+    .bundle-side .price { font-size: 2.9rem; }
+    .bundle-side .save { display: block; color: var(--red-dark); font-weight: 700; font-style: italic; margin: 0.3rem 0 1.1rem; }
 
-    /* ---------- steps ---------- */
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 3rem; counter-reset: step; }
-    .step {
-      border: 1px solid var(--line); border-radius: var(--radius);
-      background: var(--panel); padding: 2rem 1.9rem;
-    }
+    /* steps */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 3rem; border: 2px solid var(--ink); background: var(--card); }
+    .step { padding: 2rem 1.9rem; }
+    .step + .step { border-left: 1px solid var(--hair); }
     .step .num {
-      font-family: var(--serif); font-size: 2.6rem; font-weight: 700; line-height: 1;
-      color: transparent; -webkit-text-stroke: 1.5px rgba(255, 196, 64, 0.75);
+      font-family: var(--serif); font-size: 2.7rem; font-weight: 900; line-height: 1;
+      color: transparent; -webkit-text-stroke: 1.5px var(--ink);
     }
-    .step h3 { margin: 1.1rem 0 0.6rem; font-size: 1.3rem; }
-    .step p { margin: 0; color: var(--muted); font-size: 0.98rem; }
-    .step p strong { color: var(--ink); font-weight: 600; }
+    .step h3 { margin: 1rem 0 0.55rem; font-size: 1.28rem; }
+    .step p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+    .step p strong { color: var(--ink); }
 
-    /* ---------- work ---------- */
-    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 3rem; }
+    /* work */
+    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; margin-top: 3rem; }
     .work-card {
       display: block; text-decoration: none; color: var(--ink);
-      border: 1px solid var(--line); border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
-      padding: 2rem 2rem 1.8rem;
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      border: 2px solid var(--ink); background: var(--card);
+      padding: 1.9rem 1.9rem 1.7rem; box-shadow: 6px 6px 0 rgba(23,19,12,0.10);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
-    .work-card:hover { transform: translateY(-5px); border-color: var(--line-strong); box-shadow: 0 24px 50px rgba(0,0,0,0.35); }
-    .work-card .w-label { color: var(--gold); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.9rem; }
-    .work-card h3 { font-size: 1.55rem; }
-    .work-card p { color: var(--muted); margin: 0.7rem 0 1.4rem; font-size: 0.98rem; }
-    .work-link { color: var(--cyan); font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.45rem; }
+    .work-card:hover { transform: translate(-2px,-2px); box-shadow: 9px 9px 0 rgba(23,19,12,0.14); }
+    .work-card .w-label { font-family: var(--sans); color: var(--red); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.8rem; }
+    .work-card h3 { font-size: 1.5rem; font-weight: 900; }
+    .work-card p { color: var(--ink-soft); margin: 0.65rem 0 1.3rem; font-size: 0.97rem; }
+    .work-link { color: var(--red-dark); font-family: var(--sans); font-weight: 700; font-size: 0.94rem; display: inline-flex; align-items: center; gap: 0.45rem; }
 
-    /* ---------- faq ---------- */
-    .faq-list { margin-top: 2.5rem; border-top: 1px solid var(--line); max-width: 860px; }
-    details { border-bottom: 1px solid var(--line); }
+    /* faq */
+    .faq-list { margin-top: 2.4rem; border-top: 3px solid var(--rule); max-width: 860px; }
+    details { border-bottom: 1px solid var(--hair); }
     summary {
       cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-      padding: 1.35rem 0.2rem; font-weight: 700; font-size: 1.08rem; color: var(--ink);
+      padding: 1.3rem 0.2rem; font-family: var(--serif); font-weight: 700; font-size: 1.12rem; color: var(--ink);
     }
     summary::-webkit-details-marker { display: none; }
-    summary .plus { color: var(--gold); font-size: 1.5rem; font-weight: 400; line-height: 1; transition: transform 0.25s ease; flex: none; }
+    summary .plus { color: var(--red); font-size: 1.5rem; font-weight: 400; line-height: 1; transition: transform 0.25s ease; flex: none; }
     details[open ] summary .plus { transform: rotate(45deg); }
-    details p { color: var(--muted); margin: 0; padding: 0 0.2rem 1.5rem; max-width: 68ch; }
+    details p { color: var(--ink-soft); margin: 0; padding: 0 0.2rem 1.5rem; max-width: 68ch; }
 
-    /* ---------- intake / form ---------- */
+    /* intake / printed form */
     .intake-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3.5rem; align-items: start; }
-    .intake-copy p { color: var(--muted); margin: 1rem 0 0; max-width: 44ch; }
+    .intake-copy p { color: var(--ink-soft); margin: 1rem 0 0; max-width: 44ch; }
     .intake-points { list-style: none; margin: 1.8rem 0 0; padding: 0; display: grid; gap: 0.85rem; }
-    .intake-points li { display: flex; gap: 0.65rem; color: var(--muted); font-size: 0.98rem; }
+    .intake-points li { display: flex; gap: 0.65rem; color: var(--ink-soft); font-size: 0.98rem; }
     .intake-points li svg { flex: none; margin-top: 0.32rem; }
-    .intake-points strong { color: var(--ink); font-weight: 600; }
+    .intake-points strong { color: var(--ink); }
     .form-panel {
-      border: 1px solid var(--line-strong); border-radius: calc(var(--radius) + 6px);
-      background:
-        radial-gradient(560px 260px at 85% -10%, rgba(56, 209, 255, 0.08), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      border: 2.5px solid var(--ink); background: var(--card);
       padding: clamp(1.8rem, 4vw, 2.6rem);
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 10px 0 rgba(23,19,12,0.13);
+    }
+    .form-panel::before {
+      content: "Form SS-1 · Please print clearly · One per business";
+      display: block; font-family: var(--sans); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
+      border-bottom: 3px double var(--ink); padding-bottom: 0.8rem; margin-bottom: 1.6rem;
     }
     .field { margin-bottom: 1.25rem; }
-    .field label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
-    .field label .req { color: var(--gold); }
+    .field label { display: block; font-family: var(--sans); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.45rem; }
+    .field label .req { color: var(--red); }
     .field input, .field select, .field textarea {
-      width: 100%; min-height: 3.4rem; padding: 0.85rem 1rem;
-      background: rgba(10, 18, 38, 0.65); color: var(--ink);
-      border: 1px solid var(--line-strong); border-radius: 12px;
-      font-family: var(--sans); font-size: 1rem; line-height: 1.4;
+      width: 100%; min-height: 3.3rem; padding: 0.8rem 0.9rem;
+      background: var(--paper); color: var(--ink);
+      border: 1.5px solid var(--ink-soft); border-radius: 2px;
+      font-family: var(--body-serif); font-size: 1rem; line-height: 1.4;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
       appearance: none;
     }
     .field textarea { min-height: 7.5rem; resize: vertical; }
     .field select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23FFC440' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23AE241C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.8rem;
     }
-    .field select option { background: var(--navy-2); color: var(--ink); }
+    .field select option { background: var(--card); color: var(--ink); }
     .field input:focus, .field select:focus, .field textarea:focus {
-      outline: none; border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(255, 196, 64, 0.28);
+      outline: none; border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(174, 36, 28, 0.22);
     }
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
     .form-panel .btn { width: 100%; margin-top: 0.4rem; }
-    .reassure { color: var(--muted); font-size: 0.93rem; text-align: center; margin: 1.1rem 0 0; }
-    .reassure strong { color: var(--ink); font-weight: 600; }
+    .reassure { color: var(--ink-soft); font-size: 0.93rem; text-align: center; margin: 1.1rem 0 0; font-family: var(--sans); }
+    .reassure strong { color: var(--ink); }
 
-    /* ---------- footer ---------- */
-    footer { border-top: 1px solid var(--line); padding: 2.6rem 0 3rem; }
+    /* ---------- footer / colophon ---------- */
+    footer { border-top: 4px solid var(--rule); padding: 2.4rem 0 3rem; background: var(--paper-2); }
     .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2.5rem; }
     footer .wordmark { font-size: 1.15rem; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
-    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-    .footer-links a:hover, .footer-links a:focus { color: var(--cyan); }
-    .footer-fine { color: var(--faint); font-size: 0.88rem; margin-top: 1.4rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; font-family: var(--sans); }
+    .footer-links a { color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: 0.94rem; }
+    .footer-links a:hover, .footer-links a:focus { color: var(--red); }
+    .footer-fine { color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.3rem; font-style: italic; }
+    .colophon { font-family: var(--sans); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); margin-top: 0.5rem; }
 
     /* ---------- responsive ---------- */
     @media (max-width: 960px) {
       .cards, .work-grid { grid-template-columns: 1fr; }
       .extras { grid-template-columns: 1fr; }
       .steps { grid-template-columns: 1fr; }
+      .step + .step { border-left: 0; border-top: 1px solid var(--hair); }
       .trust-grid { grid-template-columns: 1fr; }
-      .trust-item + .trust-item { border-left: 0; border-top: 1px solid var(--line); }
+      .trust-item + .trust-item { border-left: 0; border-top: 1px solid var(--hair); }
       .bundle { grid-template-columns: 1fr; }
       .bundle-side { text-align: left; }
       .intake-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+      .stage-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+      /* Mobile: no pinning — a pinned stage taller than the phone screen would
+         clip its lower half for good. Stages flow normally and the scrub
+         engine drives the same beats from the story's travel instead. */
+      .stage { position: static; height: auto; overflow: visible; padding: 3.2rem 0; }
+      .story { height: auto; }
+      .story-search { min-height: 150vh; }
+      .story-build { min-height: 195vh; }
+      .story-call { min-height: 175vh; }
+      .stage-head h2 { font-size: clamp(1.7rem, 6.4vw, 2.3rem); }
+      .stage-head .standfirst { font-size: 0.97rem; margin-top: 0.7rem; }
+      .continued { margin-top: 1.2rem; }
+      .annotations { gap: 0.8rem; }
+      .annotations p { font-size: 0.9rem; }
+      .lead-cols { columns: 1; }
+      .breaking { margin-bottom: 1.2rem; font-size: 0.76rem; }
     }
     @media (max-width: 720px) {
       body { font-size: 16px; }
       .main-nav a:not(.nav-cta) { display: none; }
       .field-row { grid-template-columns: 1fr; }
       .wrap { width: calc(100% - 2.2rem); }
+      .stage-inner { width: calc(100% - 2.2rem); }
+      .mast-top .folio.mid { display: none; }
+      .phone { width: min(270px, 82vw); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn, .work-card { transition: none; }
+      .story { height: auto; }
+      .stage { position: static; height: auto; overflow: visible; padding: 3.5rem 0; }
     }
   </style>
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
   <a class="skip-link" href="#intake">Skip to the intake form</a>
@@ -348,7 +531,6 @@
       <a class="wordmark" href="#top" aria-label="SiteSprint Studio — home">SiteSprint <em>Studio</em></a>
       <nav class="main-nav" aria-label="Page sections">
         <a href="#packages">Packages</a>
-        <a href="/products/">Products</a>
         <a href="/products/">Products</a>
         <a href="#how">How it works</a>
         <a href="#work">Work</a>
@@ -360,17 +542,43 @@
 
   <main id="top">
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="page-title">
+    <!-- MASTHEAD -->
+    <div class="masthead wrap" role="banner" aria-label="SiteSprint Studio newspaper masthead">
+      <div class="mast-top">
+        <span class="folio">Vol. I · No. 1</span>
+        <span class="folio mid">For Local Business · Clarksville, Tennessee</span>
+        <span class="folio">Morning Edition</span>
+      </div>
+      <p class="nameplate">SiteSprint <em>Studio</em></p>
+      <p class="mast-tag">“Websites that bring local businesses more calls.”</p>
+      <div class="mast-strip" aria-hidden="true">
+        <span>Fixed prices <b>·</b> in writing</span>
+        <span>Small deposit to start</span>
+        <span>Balance only on delivery</span>
+      </div>
+    </div>
+
+    <!-- LEAD STORY -->
+    <section class="lead" aria-labelledby="page-title">
       <div class="wrap">
-        <p class="label">SiteSprint Studio</p>
-        <h1 id="page-title">A website that brings your business <span class="accent">more calls.</span></h1>
-        <p class="lede">We design and build websites for local businesses — one fixed price in writing, a small deposit to start, and the balance only when your site is live and you approve it.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="#intake">Start your project</a>
-          <a class="btn btn-ghost" href="#packages">See packages</a>
+        <p class="kicker reveal">Lead Story · The Search</p>
+        <h1 id="page-title" class="reveal">Locals are searching. Most businesses <span class="accent">aren’t showing up.</span></h1>
+        <div class="byline-row reveal">
+          <span class="folio">By <b>SiteSprint Studio</b> · Staff Report</span>
+          <span class="folio">Reading time: one scroll</span>
+          <span class="folio">Filed under: <b>Websites · Calls · Fixed Prices</b></span>
         </div>
-        <p class="hero-note"><strong>No payment today.</strong> Send the form, and we reply by email with everything in writing.</p>
+        <div class="lead-cols reveal">
+          <p><span class="dateline">Your town —</span> Every day, people nearby pick up their phones and search for exactly what your business does. A roofer, a plumber, a salon, a caterer — the search happens whether or not your business is anywhere to be found in it. What they find decides who gets the call.</p>
+          <p>We design and build websites for local businesses — one fixed price in writing, a small deposit to start, and the balance only when your site is live and you approve it. No hourly billing, no open-ended project, no surprises in the second paragraph.</p>
+          <p>This front page is the whole story in three reports: what the search looks like today, how a proper site gets built, and what happens after it goes live. Read on — the ending is a ringing phone.</p>
+        </div>
+        <p class="pull-quote reveal">One fixed price in writing, a small deposit to start, and the balance only when your site is live and you approve it.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-gold" href="#intake">Start your project</a>
+          <a class="btn btn-ghost" href="#packages">See the rate card</a>
+        </div>
+        <p class="hero-note reveal"><strong>No payment today.</strong> Send the form, and we reply by email with everything in writing.</p>
       </div>
     </section>
 
@@ -379,21 +587,21 @@
       <div class="wrap trust-grid">
         <div class="trust-item">
           <p class="t-title">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#FFC440" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Built in days, not months
           </p>
           <p>A focused build with a fixed scope — not an open-ended project that drags on.</p>
         </div>
         <div class="trust-item">
           <p class="t-title">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#FFC440" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Deposit refundable until work starts
           </p>
           <p>Your deposit books the job and is credited in full toward the price.</p>
         </div>
         <div class="trust-item">
           <p class="t-title">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#FFC440" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Balance only on delivery
           </p>
           <p>The rest is due only when the site is live and you have approved it.</p>
@@ -401,10 +609,196 @@
       </div>
     </div>
 
-    <!-- PACKAGES -->
-    <section id="packages" aria-labelledby="packages-title">
+    <!-- STORY 1 · THE SEARCH -->
+    <div class="story story-search" data-story>
+      <div class="stage">
+        <div class="stage-inner">
+          <div class="stage-grid">
+            <div class="stage-head">
+              <p class="kicker" data-scrub data-fx="up" data-start="0" data-end="0.12">Story No. 1 · The Search</p>
+              <h2 data-scrub data-fx="up" data-start="0.02" data-end="0.16">The listing where your business should be.</h2>
+              <p class="standfirst" data-scrub data-fx="up" data-start="0.06" data-end="0.2"><span class="dateline">The results page —</span> Someone nearby searched for what you do this morning. The businesses with real websites got full listings: a name, reviews, a button to call. And then there is the business with no website at all — filed, as ever, under missing.</p>
+              <div class="continued" aria-hidden="true">
+                <span class="folio">Continued below</span>
+                <span class="line" data-progress-line></span>
+                <span class="folio">Story 1 of 3</span>
+              </div>
+            </div>
+            <div class="listings" role="img" aria-label="A search results listing: two competitors appear with full entries and tap-to-call buttons, while the reader's business appears as an empty, missing entry with no website.">
+              <div class="listings-head">
+                <span class="lh-title">Local Listings</span>
+                <span class="folio">Results · Today</span>
+              </div>
+              <div class="listing" data-scrub data-fx="up" data-start="0.18" data-end="0.38">
+                <p class="l-name">The Other Roofer in Town <span class="l-rank">No. 1</span></p>
+                <p class="l-meta">Full website · Reviews on file · <b>Tap to call</b></p>
+              </div>
+              <div class="listing" data-scrub data-fx="up" data-start="0.34" data-end="0.54">
+                <p class="l-name">The Other Plumber in Town <span class="l-rank">No. 2</span></p>
+                <p class="l-meta">Full website · Services listed · <b>Tap to call</b></p>
+              </div>
+              <div class="listing-missing" data-scrub data-fx="up" data-start="0.52" data-end="0.72">
+                <p class="l-name">Your Business</p>
+                <p>No website listed. Nothing to tap. Nothing to call.</p>
+                <span class="stamp" data-scrub data-fx="stamp" data-start="0.68" data-end="0.88">Still Missing</span>
+              </div>
+              <div class="missing-note" data-scrub data-fx="fade" data-start="0.78" data-end="0.97">
+                <b>Notice · Missing</b>
+                One local business, searched for daily and nowhere to be found. Last seen: somewhere past the first page. If found, customers will call.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY 2 · THE BUILD -->
+    <div class="story story-build hairline" data-story>
+      <div class="stage">
+        <div class="stage-inner">
+          <div class="stage-grid">
+            <div>
+              <div class="plate-wrap">
+                <div class="plate" role="img" aria-label="An annotated diagram of a finished business website: name and phone number at the top, a clear headline, services listed plainly, reviews, and a tap-to-call button.">
+                  <div class="plate-bar" aria-hidden="true">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="url">yourbusiness.com</span>
+                  </div>
+                  <div class="plate-body">
+                    <div class="mock-head" data-scrub data-fx="up" data-start="0.1" data-end="0.26">
+                      <span class="mock-logo">Your Business</span>
+                      <span class="mock-phone">☎ Call Now</span>
+                    </div>
+                    <span class="callout left" style="left:-13px; top:64px" data-scrub data-fx="pop" data-start="0.16" data-end="0.28" data-mark="1">1</span>
+                    <div class="mock-hero" data-scrub data-fx="up" data-start="0.24" data-end="0.4">
+                      <p class="mh-title">The work you do, said plainly.</p>
+                      <div class="mh-lines" aria-hidden="true"><i></i><i></i></div>
+                    </div>
+                    <span class="callout right" style="right:-13px; top:128px" data-scrub data-fx="pop" data-start="0.34" data-end="0.46" data-mark="2">2</span>
+                    <ul class="mock-services" data-scrub data-fx="up" data-start="0.4" data-end="0.56">
+                      <li><span><b>Service One</b> — what it is</span><span>Listed</span></li>
+                      <li><span><b>Service Two</b> — what it costs to ask</span><span>Listed</span></li>
+                      <li><span><b>Service Three</b> — where you work</span><span>Listed</span></li>
+                    </ul>
+                    <span class="callout left" style="left:-13px; top:238px" data-scrub data-fx="pop" data-start="0.52" data-end="0.64" data-mark="3">3</span>
+                    <div class="mock-stars" data-scrub data-fx="up" data-start="0.58" data-end="0.72">
+                      <span class="star" data-star>★</span><span class="star" data-star>★</span><span class="star" data-star>★</span><span class="star" data-star>★</span><span class="star" data-star>★</span>
+                      <span>· Reviews where callers can see them</span>
+                    </div>
+                    <div class="mock-call" data-callbtn data-scrub data-fx="up" data-start="0.7" data-end="0.84">Tap to Call</div>
+                    <span class="callout right" style="right:-13px; bottom:52px" data-scrub data-fx="pop" data-start="0.76" data-end="0.88" data-mark="4">4</span>
+                  </div>
+                </div>
+                <p class="plate-cap">Plate No. 1 · The finished article, annotated</p>
+              </div>
+            </div>
+            <div class="stage-head">
+              <p class="kicker" data-scrub data-fx="up" data-start="0" data-end="0.1">Story No. 2 · Inside the Workshop</p>
+              <h2 data-scrub data-fx="up" data-start="0.02" data-end="0.14">How a proper site gets built.</h2>
+              <p class="standfirst" data-scrub data-fx="up" data-start="0.05" data-end="0.18"><span class="dateline">The workshop —</span> No mystery and no magic. A good site is a short list of things done properly, in the right order. Here is the diagram our builds follow, part by part.</p>
+              <ol class="annotations" style="margin-top:1.8rem">
+                <li data-anno="1">
+                  <span class="a-num">1</span>
+                  <div>
+                    <p class="a-title">Name and number, up top</p>
+                    <p>Your name and phone number sit at the top of the page, where callers look first.</p>
+                  </div>
+                </li>
+                <li data-anno="2">
+                  <span class="a-num">2</span>
+                  <div>
+                    <p class="a-title">Services, said plainly</p>
+                    <p>What you do, written out in the open — the words your customers actually search for.</p>
+                  </div>
+                </li>
+                <li data-anno="3">
+                  <span class="a-num">3</span>
+                  <div>
+                    <p class="a-title">Built for phones first</p>
+                    <p>Where your customers find you — designed for the small screen before the big one.</p>
+                  </div>
+                </li>
+                <li data-anno="4">
+                  <span class="a-num">4</span>
+                  <div>
+                    <p class="a-title">One tap to call</p>
+                    <p>A contact form or booking link wired to reach you, and a call button that is the point of the page.</p>
+                  </div>
+                </li>
+              </ol>
+              <div class="continued" aria-hidden="true">
+                <span class="folio">Continued below</span>
+                <span class="line" data-progress-line></span>
+                <span class="folio">Story 2 of 3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY 3 · THE CALL -->
+    <div class="story story-call hairline" data-story>
+      <div class="stage">
+        <div class="stage-inner">
+          <div class="breaking" data-scrub data-fx="up" data-start="0" data-end="0.12">
+            <span class="blip" aria-hidden="true"></span>
+            <span>Late Edition · Extra · Extra</span>
+          </div>
+          <div class="stage-grid">
+            <div class="stage-head">
+              <p class="kicker" data-scrub data-fx="up" data-start="0.03" data-end="0.15">Story No. 3 · The Call</p>
+              <h2 data-scrub data-fx="up" data-start="0.05" data-end="0.19">Then, one morning, the phone rings.</h2>
+              <p class="standfirst" data-scrub data-fx="up" data-start="0.09" data-end="0.23"><span class="dateline">The front counter —</span> The site is live. The listing is no longer missing. And the search that used to end at a competitor now ends the way it should: with your phone in your hand and a customer on the line. That is the whole point of the paper.</p>
+              <div class="hero-actions" data-scrub data-fx="up" data-start="0.6" data-end="0.78">
+                <a class="btn btn-gold" href="#intake">Start your project</a>
+                <a class="btn btn-ghost" href="#packages">See the rate card</a>
+              </div>
+              <div class="continued" aria-hidden="true">
+                <span class="folio">The rate card follows</span>
+                <span class="line" data-progress-line></span>
+                <span class="folio">Story 3 of 3</span>
+              </div>
+            </div>
+            <div class="phone-wrap">
+              <div class="phone" role="img" aria-label="A phone showing an incoming call from a new customer who found the business on its website, followed by an estimate request message.">
+                <div class="notch" aria-hidden="true"></div>
+                <p class="p-time">Incoming · From your website</p>
+                <div class="call-card" data-scrub data-fx="up" data-start="0.2" data-end="0.42">
+                  <p class="c-label">Incoming Call</p>
+                  <p class="c-name">New Customer</p>
+                  <p class="c-sub">Found you on your website</p>
+                  <div class="call-actions">
+                    <div>
+                      <span class="call-btn decline" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13c4.5 3.8 9.5 3.8 14 0l-2-3.2c-.4-.6-1.2-.8-1.9-.4L13.4 10a12.6 12.6 0 0 1-2.8 0L8.9 9.4c-.7-.4-1.5-.2-1.9.4L5 13Z" fill="#17130C" transform="rotate(135 12 12)"/></svg>
+                      </span>
+                      <p class="call-caption">Decline</p>
+                    </div>
+                    <div>
+                      <span class="call-btn accept" aria-hidden="true">
+                        <span class="ring" data-scrub data-fx="ring" data-start="0.42" data-end="0.95"></span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.6 3.8c.5-.5 1.3-.5 1.8 0l1.9 2c.5.5.5 1.2.1 1.8L9.2 9.1a13.6 13.6 0 0 0 5.7 5.7l1.5-1.2c.6-.4 1.3-.4 1.8.1l2 1.9c.5.5.5 1.3 0 1.8l-1.1 1.1c-.6.6-1.4.8-2.2.6C10.6 17.9 6.1 13.4 4.9 7.1c-.2-.8 0-1.6.6-2.2l1.1-1.1Z" fill="#FFF6E8"/></svg>
+                      </span>
+                      <p class="call-caption">Accept</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="msg-bubble" data-scrub data-fx="up" data-start="0.55" data-end="0.75">
+                  <span class="m-from">New Message · Estimate Request</span>
+                  “Can you come by Thursday for an estimate?”
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKAGES · THE RATE CARD -->
+    <section id="packages" class="hairline" aria-labelledby="packages-title">
       <div class="wrap">
-        <p class="label reveal">Packages</p>
+        <p class="kicker reveal">The Rate Card · Packages</p>
         <h2 id="packages-title" class="reveal">One fixed price. No hourly billing, no surprises.</h2>
         <p class="section-intro reveal">Pick the package that fits, reserve it, and we reply by email with your deposit invoice. Work starts the moment the deposit lands.</p>
 
@@ -419,10 +813,10 @@
               <span class="start-chip">$250 to start</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Up to 5 pages: Home, Services, About, Gallery, Contact</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Built for phones first — where your customers find you</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Contact form or booking link wired to reach you</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Your words cleaned up and structured — facts from you, nothing invented</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Up to 5 pages: Home, Services, About, Gallery, Contact</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Built for phones first — where your customers find you</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Contact form or booking link wired to reach you</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Your words cleaned up and structured — facts from you, nothing invented</li>
             </ul>
             <button class="btn btn-gold" type="button" data-package="Website Launch $1,000">Reserve Website Launch</button>
           </article>
@@ -436,10 +830,10 @@
               <span class="start-chip">$125 to start</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full audit: speed, mobile, search basics, contact paths</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Every issue ranked by impact, in plain language</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Top fixes implemented for you, agreed in writing first</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Before-and-after report showing what changed</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full audit: speed, mobile, search basics, contact paths</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Every issue ranked by impact, in plain language</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Top fixes implemented for you, agreed in writing first</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Before-and-after report showing what changed</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-package="Website Rescue $495">Reserve Website Rescue</button>
           </article>
@@ -453,10 +847,10 @@
               <span class="start-chip">$150 to start</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>One landing page built around one action: call, form, or booking</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead-capture form wired to your email</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Thank-you page after someone submits</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fast and mobile-checked, like everything we ship</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>One landing page built around one action: call, form, or booking</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead-capture form wired to your email</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Thank-you page after someone submits</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fast and mobile-checked, like everything we ship</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-package="Landing Page Sprint $625">Reserve Landing Page Sprint</button>
           </article>
@@ -470,17 +864,17 @@
               <span class="start-chip">No contract lock-in</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hosting care and regular site checks</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Content updates: hours, prices, photos, services</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Small changes handled for you each month</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancel any time — no contract lock-in</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hosting care and regular site checks</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Content updates: hours, prices, photos, services</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Small changes handled for you each month</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancel any time — no contract lock-in</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-package="Care Plan $199 a month">Reserve the Care Plan</button>
           </article>
         </div>
 
         <div class="extras-head">
-          <p class="label reveal">Founding extras</p>
+          <p class="kicker reveal">Founding extras · Small print, small prices</p>
           <h2 class="reveal" style="font-size:clamp(1.6rem,3.2vw,2.2rem)">Smaller fixes, founding prices.</h2>
         </div>
         <div class="extras">
@@ -493,8 +887,8 @@
             </div>
             <p class="desc">Your Google listing is often the first thing customers see. We clean it up so it sends people to you, not past you.</p>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hours, contact details, and links checked and fixed</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Categories and services set so the right searches find you</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hours, contact details, and links checked and fixed</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Categories and services set so the right searches find you</li>
             </ul>
             <button class="btn btn-ghost btn-sm" type="button" data-package="Google Listing Rescue $149">Reserve</button>
           </article>
@@ -508,8 +902,8 @@
             </div>
             <p class="desc">Ten ready-to-post social posts designed for your business, so your pages stop sitting quiet.</p>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>10 designed posts with captions written for you</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Made to match your business and your offers</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>10 designed posts with captions written for you</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Made to match your business and your offers</li>
             </ul>
             <button class="btn btn-ghost btn-sm" type="button" data-package="10-Post Content Pack $149">Reserve</button>
           </article>
@@ -523,8 +917,8 @@
             </div>
             <p class="desc">A simple kit for asking happy customers for reviews — and making it easy for them to leave one.</p>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ready-to-send review request wording</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A direct review link set up for your business</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ready-to-send review request wording</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A direct review link set up for your business</li>
             </ul>
             <button class="btn btn-ghost btn-sm" type="button" data-package="Review Kit $99">Reserve</button>
           </article>
@@ -532,7 +926,7 @@
 
         <div class="bundle reveal" aria-labelledby="bundle-title">
           <div>
-            <p class="pkg-label">The bundle</p>
+            <p class="pkg-label">Special notice · The bundle</p>
             <h3 id="bundle-title">Website Launch + Content Pack, together.</h3>
             <p>Book the Website Launch and the 10-Post Content Pack is included free — your new site launches with a month of posts ready to go with it.</p>
           </div>
@@ -548,7 +942,7 @@
     <!-- PRODUCTS STRIP -->
     <section class="hairline" aria-labelledby="shelf-strip-title">
       <div class="wrap">
-        <p class="label reveal">Products</p>
+        <p class="kicker reveal">From the back page · Products</p>
         <h2 id="shelf-strip-title" class="reveal">Prefer to build it yourself? Take our tools.</h2>
         <p class="section-intro reveal">Working starter kits and systems from our own operation — agent payment guardrails, escrow settlement, freelancer obligation tracking, and our hackathon filing system. From $29, delivered by email.</p>
         <p class="reveal"><a class="btn btn-ghost" href="/products/">See the product shelf</a></p>
@@ -558,7 +952,7 @@
     <!-- HOW IT WORKS -->
     <section id="how" class="hairline" aria-labelledby="how-title">
       <div class="wrap">
-        <p class="label reveal">How it works</p>
+        <p class="kicker reveal">How an order proceeds · How it works</p>
         <h2 id="how-title" class="reveal">Three steps. Everything in writing.</h2>
         <div class="steps">
           <article class="step reveal">
@@ -583,7 +977,7 @@
     <!-- WORK -->
     <section id="work" class="hairline" aria-labelledby="work-title">
       <div class="wrap">
-        <p class="label reveal">Recent work</p>
+        <p class="kicker reveal">Recent dispatches · Work</p>
         <h2 id="work-title" class="reveal">Real builds, live now.</h2>
         <p class="section-intro reveal">Two recent SiteSprint builds you can open and look at — exactly as their customers see them.</p>
         <div class="work-grid">
@@ -592,7 +986,7 @@
             <h3>On Point HIS</h3>
             <p>A full website for a Clarksville home inspector — services, reviews, and online booking, replacing a booking page that was never really his.</p>
             <span class="work-link">View the site
-              <svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 3.5L15.5 9 10 14.5" stroke="#38D1FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 3.5L15.5 9 10 14.5" stroke="#AE241C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
           <a class="work-card reveal" href="https://getsitesprintstudio.github.io/carmelitas-catering/">
@@ -600,7 +994,7 @@
             <h3>Carmelita's Holiday Catering</h3>
             <p>A holiday catering page for a Dana Point restaurant — the menu packages, the details guests ask about, and a clear way to book the date.</p>
             <span class="work-link">View the page
-              <svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 3.5L15.5 9 10 14.5" stroke="#38D1FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 3.5L15.5 9 10 14.5" stroke="#AE241C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
         </div>
@@ -610,7 +1004,7 @@
     <!-- FAQ -->
     <section id="faq" class="hairline" aria-labelledby="faq-title">
       <div class="wrap">
-        <p class="label reveal">FAQ</p>
+        <p class="kicker reveal">Questions from readers · FAQ</p>
         <h2 id="faq-title" class="reveal">Straight answers, before you commit to anything.</h2>
         <div class="faq-list reveal">
           <details>
@@ -645,13 +1039,13 @@
     <section id="intake" class="hairline" aria-labelledby="intake-title">
       <div class="wrap intake-grid">
         <div class="intake-copy reveal">
-          <p class="label">Start a project</p>
+          <p class="kicker">The application form · Start a project</p>
           <h2 id="intake-title">Tell us about the project.</h2>
           <p>Two minutes on this form is the whole first step. No call to schedule, no payment to make — just your details in writing.</p>
           <ul class="intake-points">
-            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#FFC440" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Reply the same day, usually.</strong> By email, with your price confirmed in writing.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#FFC440" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Deposit invoice attached.</strong> Pay by card or PayPal, only when you are ready.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#FFC440" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Refundable until work starts.</strong> The deposit is safe while you decide.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Reply the same day, usually.</strong> By email, with your price confirmed in writing.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Deposit invoice attached.</strong> Pay by card or PayPal, only when you are ready.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Refundable until work starts.</strong> The deposit is safe while you decide.</span></li>
           </ul>
         </div>
 
@@ -726,6 +1120,7 @@
         </div>
       </div>
       <p class="footer-fine">Fixed prices, in writing. Deposit refundable until work starts — balance only when your site is live and you approve it.</p>
+      <p class="colophon">Set in Fraunces &amp; Inter · Printed on pixels · © SiteSprint Studio</p>
     </div>
   </footer>
 
@@ -825,6 +1220,111 @@
       } else {
         items.forEach(function (el) { el.classList.add('in'); });
       }
+    })();
+  </script>
+
+  <script>
+    // Scroll-story engine: progress-scrubbed beats inside pinned stages.
+    // Elements opt in with data-scrub + data-fx + data-start/data-end (0..1 of
+    // the story's scroll travel). With JS off or reduced motion requested,
+    // nothing here runs and every element stays in its natural, visible state.
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) return;
+      var stories = Array.prototype.slice.call(document.querySelectorAll('[data-story]'));
+      if (!stories.length) return;
+
+      function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+      function ease(t) { return t * t * (3 - 2 * t); }
+
+      var prepared = stories.map(function (story) {
+        return {
+          el: story,
+          items: Array.prototype.slice.call(story.querySelectorAll('[data-scrub]')).map(function (node) {
+            return {
+              node: node,
+              fx: node.getAttribute('data-fx') || 'fade',
+              start: parseFloat(node.getAttribute('data-start') || '0'),
+              end: parseFloat(node.getAttribute('data-end') || '1'),
+              mark: node.getAttribute('data-mark')
+            };
+          }),
+          lines: Array.prototype.slice.call(story.querySelectorAll('[data-progress-line]')),
+          annos: Array.prototype.slice.call(story.querySelectorAll('[data-anno]')),
+          stars: Array.prototype.slice.call(story.querySelectorAll('[data-star]')),
+          callBtn: story.querySelector('[data-callbtn]')
+        };
+      });
+
+      function applyFx(item, t) {
+        var node = item.node, e = ease(t);
+        switch (item.fx) {
+          case 'up':
+            node.style.opacity = e.toFixed(3);
+            node.style.transform = 'translateY(' + ((1 - e) * 34).toFixed(1) + 'px)';
+            break;
+          case 'left':
+            node.style.opacity = e.toFixed(3);
+            node.style.transform = 'translateX(' + ((1 - e) * -34).toFixed(1) + 'px)';
+            break;
+          case 'right':
+            node.style.opacity = e.toFixed(3);
+            node.style.transform = 'translateX(' + ((1 - e) * 34).toFixed(1) + 'px)';
+            break;
+          case 'pop':
+            node.style.opacity = Math.min(1, t * 2).toFixed(3);
+            node.style.transform = 'scale(' + (0.4 + 0.6 * e).toFixed(3) + ')';
+            break;
+          case 'stamp':
+            node.style.opacity = Math.min(1, t * 2.5).toFixed(3);
+            node.style.transform = 'rotate(-11deg) scale(' + (1.65 - 0.65 * e).toFixed(3) + ')';
+            break;
+          case 'ring':
+            node.style.opacity = (0.6 * (1 - t)).toFixed(3);
+            node.style.transform = 'scale(' + (1 + t * 1.1).toFixed(3) + ')';
+            break;
+          case 'fade':
+          default:
+            node.style.opacity = e.toFixed(3);
+            node.style.transform = '';
+            break;
+        }
+      }
+
+      function update() {
+        var vh = window.innerHeight;
+        prepared.forEach(function (p) {
+          var rect = p.el.getBoundingClientRect();
+          var total = p.el.offsetHeight - vh;
+          var prog = total > 0 ? clamp01(-rect.top / total) : 0;
+          p.items.forEach(function (item) {
+            var span = item.end - item.start;
+            var t = span > 0 ? clamp01((prog - item.start) / span) : (prog >= item.start ? 1 : 0);
+            applyFx(item, t);
+            if (item.mark) {
+              var anno = p.annos.filter(function (a) { return a.getAttribute('data-anno') === item.mark; })[0];
+              if (anno) anno.classList.toggle('on', t > 0.6);
+            }
+          });
+          p.lines.forEach(function (line) { line.style.transform = 'scaleX(' + prog.toFixed(3) + ')'; });
+          p.stars.forEach(function (star, i) {
+            var t = clamp01((prog - (0.60 + i * 0.025)) / 0.05);
+            star.style.color = t > 0.5 ? '#AE241C' : '';
+          });
+          if (p.callBtn) p.callBtn.classList.toggle('lit', prog > 0.9);
+        });
+      }
+
+      var ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(function () { update(); ticking = false; });
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
     })();
   </script>
 </body>
