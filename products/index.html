@@ -14,319 +14,235 @@
   <title>Products — SiteSprint Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: dark;
-      --navy: #0A1226;
-      --navy-2: #0D1730;
-      --panel: rgba(255, 255, 255, 0.03);
-      --panel-strong: rgba(255, 255, 255, 0.05);
-      --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(255, 255, 255, 0.14);
-      --ink: #EDF1F8;
-      --muted: #A7B2C8;
-      --faint: #77839C;
-      --gold: #FFC440;
-      --gold-ink: #201503;
-      --cyan: #38D1FF;
-      --cyan-ink: #04222E;
-      --radius: 20px;
+      color-scheme: light;
+      --paper: #FAF5EA;
+      --paper-2: #F3ECDA;
+      --card: #FFFDF6;
+      --ink: #17130C;
+      --ink-soft: #4C4433;
+      --faint: #8B8069;
+      --red: #AE241C;
+      --red-dark: #8C1B14;
+      --rule: #17130C;
+      --hair: rgba(23, 19, 12, 0.28);
+      --hair-soft: rgba(23, 19, 12, 0.16);
       --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --body-serif: Georgia, "Times New Roman", serif;
       --sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
 
     body {
       margin: 0;
       background:
-        radial-gradient(1100px 620px at 85% -8%, rgba(56, 209, 255, 0.10), transparent 60%),
-        radial-gradient(900px 560px at -10% 22%, rgba(255, 196, 64, 0.055), transparent 55%),
-        radial-gradient(1000px 700px at 110% 78%, rgba(56, 209, 255, 0.05), transparent 60%),
-        var(--navy);
+        radial-gradient(1000px 500px at 50% -5%, rgba(174, 36, 28, 0.045), transparent 60%),
+        var(--paper);
       color: var(--ink);
-      font-family: var(--sans);
+      font-family: var(--body-serif);
       font-size: 17px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
     }
 
-    ::selection { background: rgba(255, 196, 64, 0.35); }
+    ::selection { background: rgba(174, 36, 28, 0.22); }
 
-    a { color: var(--cyan); }
+    a { color: var(--red-dark); }
 
     .wrap { width: min(1160px, calc(100% - 3rem)); margin: 0 auto; }
 
     .skip-link {
-      position: absolute; left: 1rem; top: -10rem; z-index: 60;
-      background: var(--gold); color: var(--gold-ink);
-      padding: 0.7rem 1.1rem; border-radius: 999px; font-weight: 700; text-decoration: none;
+      position: absolute; left: 1rem; top: -10rem; z-index: 80;
+      background: var(--ink); color: var(--paper);
+      padding: 0.7rem 1.1rem; font-family: var(--sans); font-weight: 700; text-decoration: none;
     }
     .skip-link:focus { top: 1rem; }
 
+    /* ---------- rules & labels ---------- */
+    .kicker {
+      font-family: var(--sans); font-size: 0.76rem; font-weight: 800;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--red);
+      margin: 0 0 0.9rem;
+    }
+    .folio {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
+    }
+
+    h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; letter-spacing: -0.01em; margin: 0; color: var(--ink); }
+    h1 { font-size: clamp(2.6rem, 6.2vw, 4.4rem); font-weight: 900; max-width: 15ch; }
+    h1 .accent { font-style: italic; font-weight: 600; color: var(--red-dark); }
+    h2 { font-size: clamp(2rem, 4.4vw, 3.1rem); font-weight: 900; max-width: 22ch; }
+    h3 { font-size: 1.45rem; }
+
     /* ---------- header ---------- */
     .site-header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(10, 18, 38, 0.72);
-      -webkit-backdrop-filter: blur(16px) saturate(1.4);
-      backdrop-filter: blur(16px) saturate(1.4);
-      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 60;
+      background: rgba(250, 245, 234, 0.94);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border-bottom: 3px double var(--rule);
     }
-    .header-inner {
-      display: flex; align-items: center; justify-content: space-between; gap: 1.25rem;
-      padding: 0.9rem 0;
-    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 0.65rem 0; }
     .wordmark {
-      font-family: var(--serif); font-weight: 600; font-size: 1.32rem; letter-spacing: 0.01em;
+      font-family: var(--serif); font-weight: 900; font-size: 1.28rem; letter-spacing: 0.005em;
       color: var(--ink); text-decoration: none; white-space: nowrap;
     }
-    .wordmark em { font-style: normal; color: var(--gold); }
-    .main-nav { display: flex; align-items: center; gap: 1.9rem; }
-    .main-nav a {
-      color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    .main-nav a:hover, .main-nav a:focus { color: var(--ink); }
-    .main-nav a.nav-cta { color: var(--cyan-ink); }
+    .wordmark em { font-style: italic; font-weight: 600; }
+    .main-nav { display: flex; align-items: center; gap: 1.8rem; font-family: var(--sans); }
+    .main-nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    .main-nav a:hover, .main-nav a:focus { color: var(--red); }
 
     /* ---------- buttons ---------- */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-      min-height: 3.25rem; padding: 0.85rem 1.6rem; border-radius: 999px;
-      font-family: var(--sans); font-size: 1rem; font-weight: 700; line-height: 1.2;
-      text-decoration: none; border: 1px solid transparent; cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      min-height: 3.2rem; padding: 0.85rem 1.7rem;
+      font-family: var(--sans); font-size: 0.98rem; font-weight: 700; line-height: 1.2;
+      text-decoration: none; border: 2px solid var(--ink); cursor: pointer; border-radius: 2px;
+      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
     }
-    .btn-gold {
-      background: linear-gradient(180deg, #FFD25E, var(--gold));
-      color: var(--gold-ink);
-      box-shadow: 0 10px 30px rgba(255, 196, 64, 0.22);
-    }
-    .btn-gold:hover, .btn-gold:focus { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(255, 196, 64, 0.30); }
-    .btn-ghost {
-      background: transparent; color: var(--ink); border-color: var(--line-strong);
-    }
-    .btn-ghost:hover, .btn-ghost:focus { border-color: rgba(255,255,255,0.35); transform: translateY(-2px); }
-    .btn-cyan {
-      background: var(--cyan); color: var(--cyan-ink);
-      box-shadow: 0 10px 30px rgba(56, 209, 255, 0.18);
-    }
-    .btn-cyan:hover, .btn-cyan:focus { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(56, 209, 255, 0.26); }
-    .btn-sm { min-height: 2.9rem; padding: 0.65rem 1.3rem; font-size: 0.95rem; }
-
-    /* ---------- type helpers ---------- */
-    .label {
-      display: inline-block; margin: 0 0 1.1rem;
-      color: var(--gold); font-size: 0.78rem; font-weight: 700;
-      letter-spacing: 0.22em; text-transform: uppercase;
-    }
-    h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.12; letter-spacing: -0.01em; margin: 0; }
-    h1 { font-size: clamp(2.6rem, 6.2vw, 4.4rem); max-width: 15ch; }
-    h1 .accent { color: var(--gold); }
-    h2 { font-size: clamp(2rem, 4.2vw, 3rem); max-width: 22ch; }
-    h3 { font-size: 1.45rem; }
-    .lede { color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.28rem); max-width: 620px; margin: 1.4rem 0 0; }
-    .section-intro { color: var(--muted); max-width: 640px; margin: 1rem 0 0; font-size: 1.06rem; }
-
-    section { padding: clamp(4.2rem, 8vw, 6.5rem) 0; scroll-margin-top: 5.5rem; }
-    .hairline { border-top: 1px solid var(--line); }
+    .btn-gold { background: var(--ink); color: var(--paper); box-shadow: 4px 4px 0 rgba(23,19,12,0.22); }
+    .btn-gold:hover, .btn-gold:focus { transform: translate(-1px,-1px); box-shadow: 6px 6px 0 rgba(23,19,12,0.22); background: var(--red-dark); border-color: var(--red-dark); }
+    .btn-ghost { background: transparent; color: var(--ink); }
+    .btn-ghost:hover, .btn-ghost:focus { background: var(--ink); color: var(--paper); }
+    .btn-sm { min-height: 2.8rem; padding: 0.6rem 1.25rem; font-size: 0.92rem; }
+    .main-nav a.nav-cta { color: var(--paper); }
+    .main-nav a.nav-cta:hover { color: #FFF6E8; }
 
     /* ---------- reveal ---------- */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .btn { transition: none; }
+
+    /* ---------- masthead (lite) ---------- */
+    .masthead { padding: 1.1rem 0 0; text-align: center; }
+    .mast-top {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+      padding: 0.45rem 0; border-top: 1.5px solid var(--rule); border-bottom: 1px solid var(--hair);
     }
-
-    /* ---------- hero ---------- */
-    .hero { padding: clamp(4.5rem, 9vw, 7.5rem) 0 clamp(3.5rem, 6vw, 5rem); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.4rem; }
-    .hero-note { margin-top: 1.3rem; color: var(--faint); font-size: 0.95rem; }
-    .hero-note strong { color: var(--muted); font-weight: 600; }
-
-    /* ---------- trust strip ---------- */
-    .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.015); }
-    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .trust-item { padding: 1.7rem 1.8rem; }
-    .trust-item + .trust-item { border-left: 1px solid var(--line); }
-    .trust-item .t-title {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-weight: 700; font-size: 1.02rem; color: var(--ink); margin: 0 0 0.35rem;
+    .mast-top .folio:last-child { text-align: right; }
+    .nameplate {
+      font-family: var(--serif); font-weight: 900; letter-spacing: -0.015em;
+      font-size: clamp(2.1rem, 6vw, 3.6rem); line-height: 1.02; margin: 1.1rem 0 0.3rem;
     }
-    .trust-item .t-title svg { flex: none; }
-    .trust-item p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .nameplate em { font-style: italic; font-weight: 600; }
+    .mast-tag { font-family: var(--serif); font-style: italic; font-size: clamp(1rem, 2.2vw, 1.25rem); color: var(--ink-soft); margin: 0 0 1.15rem; }
+    .mast-strip {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 2.2rem;
+      padding: 0.55rem 0; border-top: 1px solid var(--hair); border-bottom: 4px solid var(--rule);
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    }
+    .mast-strip span b { color: var(--red); font-weight: 800; }
 
-    /* ---------- package cards ---------- */
-    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 3rem; }
+    /* ---------- hero / catalog lead ---------- */
+    section { padding: clamp(3.8rem, 7vw, 5.8rem) 0; scroll-margin-top: 5rem; }
+    .hairline { border-top: 1px solid var(--hair); }
+    .hero { padding: clamp(2.8rem, 6vw, 4.4rem) 0 clamp(2.6rem, 5vw, 3.8rem); }
+    .lede { color: var(--ink-soft); font-size: clamp(1.08rem, 2vw, 1.26rem); max-width: 640px; margin: 1.4rem 0 0; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.2rem; }
+
+    /* ---------- rate-card catalog ---------- */
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; margin-top: 3rem; }
     .card {
       position: relative; display: flex; flex-direction: column;
-      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
-      border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 2.1rem 2.1rem 2rem;
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      background: var(--card); border: 2px solid var(--ink);
+      padding: 2rem 2rem 1.9rem; box-shadow: 6px 6px 0 rgba(23,19,12,0.10);
     }
-    .card:hover { transform: translateY(-5px); border-color: var(--line-strong); box-shadow: 0 24px 50px rgba(0,0,0,0.35); }
-    .card .pkg-label { color: var(--gold); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.9rem; }
-    .card h3 { font-size: 1.7rem; }
-    .card .desc { color: var(--muted); margin: 0.8rem 0 0; font-size: 1rem; }
-    .price-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 1.5rem 0 0.2rem; }
-    .price { font-family: var(--serif); font-size: 2.6rem; font-weight: 700; line-height: 1; }
-    .price .per { font-size: 1.15rem; color: var(--muted); font-weight: 500; }
+    .card .pkg-label { font-family: var(--sans); color: var(--red); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.8rem; }
+    .card h3 { font-size: 1.65rem; font-weight: 900; }
+    .card .desc { color: var(--ink-soft); margin: 0.75rem 0 0; font-size: 0.99rem; }
+    .price-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 1.4rem 0 0.2rem; }
+    .price { font-family: var(--serif); font-size: 2.55rem; font-weight: 900; line-height: 1; }
     .start-chip {
-      display: inline-flex; align-items: center; padding: 0.32rem 0.8rem; border-radius: 999px;
-      border: 1px solid rgba(255, 196, 64, 0.45); color: var(--gold);
-      font-size: 0.86rem; font-weight: 700; white-space: nowrap;
+      display: inline-flex; align-items: center; padding: 0.3rem 0.75rem;
+      border: 1.5px solid var(--ink); color: var(--ink);
+      font-family: var(--sans); font-size: 0.84rem; font-weight: 700; white-space: nowrap;
     }
-    .feat { list-style: none; margin: 1.4rem 0 1.9rem; padding: 1.4rem 0 0; border-top: 1px solid var(--line); display: grid; gap: 0.6rem; }
-    .feat li { display: flex; gap: 0.65rem; color: var(--muted); font-size: 0.98rem; }
+    .feat { list-style: none; margin: 1.3rem 0 1.8rem; padding: 1.3rem 0 0; border-top: 1px solid var(--hair); display: grid; gap: 0.55rem; }
+    .feat li { display: flex; gap: 0.6rem; color: var(--ink-soft); font-size: 0.97rem; }
     .feat li svg { flex: none; margin-top: 0.32rem; }
     .card .btn { margin-top: auto; align-self: flex-start; }
-    .card.featured {
-      border-color: rgba(255, 196, 64, 0.45);
-      background:
-        radial-gradient(600px 300px at 80% -10%, rgba(255, 196, 64, 0.10), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-    }
+    .card.featured { border-width: 2.5px; box-shadow: 8px 8px 0 rgba(174,36,28,0.20); }
     .featured-tag {
-      position: absolute; top: -0.85rem; right: 1.6rem;
-      background: var(--gold); color: var(--gold-ink);
-      font-size: 0.74rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
-      padding: 0.4rem 0.85rem; border-radius: 999px;
+      position: absolute; top: -0.8rem; right: 1.4rem; transform: rotate(2deg);
+      background: var(--red); color: #FFF6E8; border: 1.5px solid var(--red-dark);
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+      padding: 0.38rem 0.8rem;
     }
 
-    /* founding extras */
-    .extras-head { margin-top: 4rem; }
-    .extras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; }
-    .extra { padding: 1.7rem 1.8rem; }
-    .extra h3 { font-size: 1.28rem; }
-    .extra .price { font-size: 2rem; }
-    .extra .desc { font-size: 0.95rem; }
-    .extra .feat { margin-bottom: 1.5rem; }
+    /* ---------- ordering steps ---------- */
+    .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 3rem; border: 2px solid var(--ink); background: var(--card); }
+    .flow-step { padding: 2rem 1.9rem; }
+    .flow-step + .flow-step { border-left: 1px solid var(--hair); }
+    .flow-step .num { font-family: var(--sans); color: var(--red); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; margin: 0; }
+    .flow-step h3 { font-size: 1.28rem; margin: 0.9rem 0 0.55rem; }
+    .flow-step p { color: var(--ink-soft); margin: 0; font-size: 0.97rem; }
 
-    /* ---------- bundle ---------- */
-    .bundle {
-      margin-top: 3.5rem; border-radius: calc(var(--radius) + 6px);
-      border: 1px solid rgba(56, 209, 255, 0.35);
-      background:
-        radial-gradient(700px 320px at 12% -20%, rgba(56, 209, 255, 0.13), transparent 60%),
-        radial-gradient(600px 300px at 95% 120%, rgba(255, 196, 64, 0.09), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      padding: clamp(2rem, 4.5vw, 3.2rem);
-      display: grid; grid-template-columns: 1.5fr auto; gap: 2rem; align-items: center;
-    }
-    .bundle .pkg-label { color: var(--cyan); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.8rem; }
-    .bundle h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
-    .bundle p { color: var(--muted); margin: 0.7rem 0 0; max-width: 52ch; }
-    .bundle-side { text-align: right; }
-    .bundle-side .price { font-size: 3rem; }
-    .bundle-side .save { display: block; color: var(--gold); font-weight: 700; margin: 0.35rem 0 1.2rem; }
-
-    /* ---------- steps ---------- */
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 3rem; counter-reset: step; }
-    .step {
-      border: 1px solid var(--line); border-radius: var(--radius);
-      background: var(--panel); padding: 2rem 1.9rem;
-    }
-    .step .num {
-      font-family: var(--serif); font-size: 2.6rem; font-weight: 700; line-height: 1;
-      color: transparent; -webkit-text-stroke: 1.5px rgba(255, 196, 64, 0.75);
-    }
-    .step h3 { margin: 1.1rem 0 0.6rem; font-size: 1.3rem; }
-    .step p { margin: 0; color: var(--muted); font-size: 0.98rem; }
-    .step p strong { color: var(--ink); font-weight: 600; }
-
-    /* ---------- work ---------- */
-    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 3rem; }
-    .work-card {
-      display: block; text-decoration: none; color: var(--ink);
-      border: 1px solid var(--line); border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
-      padding: 2rem 2rem 1.8rem;
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-    .work-card:hover { transform: translateY(-5px); border-color: var(--line-strong); box-shadow: 0 24px 50px rgba(0,0,0,0.35); }
-    .work-card .w-label { color: var(--gold); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 0.9rem; }
-    .work-card h3 { font-size: 1.55rem; }
-    .work-card p { color: var(--muted); margin: 0.7rem 0 1.4rem; font-size: 0.98rem; }
-    .work-link { color: var(--cyan); font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.45rem; }
-
-    /* ---------- faq ---------- */
-    .faq-list { margin-top: 2.5rem; border-top: 1px solid var(--line); max-width: 860px; }
-    details { border-bottom: 1px solid var(--line); }
-    summary {
-      cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-      padding: 1.35rem 0.2rem; font-weight: 700; font-size: 1.08rem; color: var(--ink);
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary .plus { color: var(--gold); font-size: 1.5rem; font-weight: 400; line-height: 1; transition: transform 0.25s ease; flex: none; }
-    details[open ] summary .plus { transform: rotate(45deg); }
-    details p { color: var(--muted); margin: 0; padding: 0 0.2rem 1.5rem; max-width: 68ch; }
-
-    /* ---------- intake / form ---------- */
+    /* ---------- order / printed form ---------- */
     .intake-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3.5rem; align-items: start; }
-    .intake-copy p { color: var(--muted); margin: 1rem 0 0; max-width: 44ch; }
+    .intake-copy p { color: var(--ink-soft); margin: 1rem 0 0; max-width: 44ch; }
     .intake-points { list-style: none; margin: 1.8rem 0 0; padding: 0; display: grid; gap: 0.85rem; }
-    .intake-points li { display: flex; gap: 0.65rem; color: var(--muted); font-size: 0.98rem; }
+    .intake-points li { display: flex; gap: 0.65rem; color: var(--ink-soft); font-size: 0.98rem; }
     .intake-points li svg { flex: none; margin-top: 0.32rem; }
-    .intake-points strong { color: var(--ink); font-weight: 600; }
+    .intake-points strong { color: var(--ink); }
     .form-panel {
-      border: 1px solid var(--line-strong); border-radius: calc(var(--radius) + 6px);
-      background:
-        radial-gradient(560px 260px at 85% -10%, rgba(56, 209, 255, 0.08), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      border: 2.5px solid var(--ink); background: var(--card);
       padding: clamp(1.8rem, 4vw, 2.6rem);
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 10px 0 rgba(23,19,12,0.13);
+    }
+    .form-panel::before {
+      content: "Form P-1 · Product Orders · No payment with this form";
+      display: block; font-family: var(--sans); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
+      border-bottom: 3px double var(--ink); padding-bottom: 0.8rem; margin-bottom: 1.6rem;
     }
     .field { margin-bottom: 1.25rem; }
-    .field label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
-    .field label .req { color: var(--gold); }
+    .field label { display: block; font-family: var(--sans); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.45rem; }
+    .field label .req { color: var(--red); }
     .field input, .field select, .field textarea {
-      width: 100%; min-height: 3.4rem; padding: 0.85rem 1rem;
-      background: rgba(10, 18, 38, 0.65); color: var(--ink);
-      border: 1px solid var(--line-strong); border-radius: 12px;
-      font-family: var(--sans); font-size: 1rem; line-height: 1.4;
+      width: 100%; min-height: 3.3rem; padding: 0.8rem 0.9rem;
+      background: var(--paper); color: var(--ink);
+      border: 1.5px solid var(--ink-soft); border-radius: 2px;
+      font-family: var(--body-serif); font-size: 1rem; line-height: 1.4;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
       appearance: none;
     }
     .field textarea { min-height: 7.5rem; resize: vertical; }
     .field select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23FFC440' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23AE241C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.8rem;
     }
-    .field select option { background: var(--navy-2); color: var(--ink); }
+    .field select option { background: var(--card); color: var(--ink); }
     .field input:focus, .field select:focus, .field textarea:focus {
-      outline: none; border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(255, 196, 64, 0.28);
+      outline: none; border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(174, 36, 28, 0.22);
     }
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
     .form-panel .btn { width: 100%; margin-top: 0.4rem; }
-    .reassure { color: var(--muted); font-size: 0.93rem; text-align: center; margin: 1.1rem 0 0; }
-    .reassure strong { color: var(--ink); font-weight: 600; }
+    .form-panel #formFallback { border-color: rgba(174, 36, 28, 0.55) !important; }
+    .reassure { color: var(--ink-soft); font-size: 0.93rem; text-align: center; margin: 1.1rem 0 0; font-family: var(--sans); }
+    .reassure strong { color: var(--ink); }
 
-    /* ---------- footer ---------- */
-    footer { border-top: 1px solid var(--line); padding: 2.6rem 0 3rem; }
+    /* ---------- footer / colophon ---------- */
+    footer { border-top: 4px solid var(--rule); padding: 2.4rem 0 3rem; background: var(--paper-2); }
     .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2.5rem; }
     footer .wordmark { font-size: 1.15rem; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
-    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-    .footer-links a:hover, .footer-links a:focus { color: var(--cyan); }
-    .footer-fine { color: var(--faint); font-size: 0.88rem; margin-top: 1.4rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; font-family: var(--sans); }
+    .footer-links a { color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: 0.94rem; }
+    .footer-links a:hover, .footer-links a:focus { color: var(--red); }
+    .footer-fine { color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.3rem; font-style: italic; }
+    .colophon { font-family: var(--sans); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); margin-top: 0.5rem; }
 
     /* ---------- responsive ---------- */
     @media (max-width: 960px) {
-      .cards, .work-grid { grid-template-columns: 1fr; }
-      .extras { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr; }
-      .trust-grid { grid-template-columns: 1fr; }
-      .trust-item + .trust-item { border-left: 0; border-top: 1px solid var(--line); }
-      .bundle { grid-template-columns: 1fr; }
-      .bundle-side { text-align: left; }
+      .cards { grid-template-columns: 1fr; }
+      .flow-grid { grid-template-columns: 1fr; }
+      .flow-step + .flow-step { border-left: 0; border-top: 1px solid var(--hair); }
       .intake-grid { grid-template-columns: 1fr; gap: 2.2rem; }
     }
     @media (max-width: 720px) {
@@ -334,15 +250,16 @@
       .main-nav a:not(.nav-cta) { display: none; }
       .field-row { grid-template-columns: 1fr; }
       .wrap { width: calc(100% - 2.2rem); }
+      .mast-top .folio.mid { display: none; }
     }
-  
-    .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2.6rem; }
-    .flow-step { border: 1px solid var(--line); border-radius: 18px; padding: 1.6rem; background: var(--navy-2); }
-    .flow-step .num { color: var(--gold); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase; }
-    .flow-step h3 { font-size: 1.25rem; margin: 0.6rem 0 0.5rem; }
-    .flow-step p { color: var(--muted); margin: 0; font-size: 0.98rem; }
-    @media (max-width: 760px) { .flow-grid { grid-template-columns: 1fr; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn { transition: none; }
+    }
   </style>
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
   <a class="skip-link" href="#order">Skip to the order form</a>
@@ -362,9 +279,25 @@
   </header>
 
   <main id="top">
+    <!-- MASTHEAD (LITE) -->
+    <div class="masthead wrap" role="banner" aria-label="SiteSprint Studio newspaper masthead">
+      <div class="mast-top">
+        <span class="folio">Vol. I · No. 2</span>
+        <span class="folio mid">The Studio Catalog · Clarksville, Tennessee</span>
+        <span class="folio">Products Edition</span>
+      </div>
+      <p class="nameplate">SiteSprint <em>Studio</em></p>
+      <p class="mast-tag">“Websites that bring local businesses more calls.”</p>
+      <div class="mast-strip" aria-hidden="true">
+        <span>Working code <b>·</b> Real products</span>
+        <span>One-time prices</span>
+        <span>Delivered by email</span>
+      </div>
+    </div>
+
     <section class="hero" aria-labelledby="page-title">
       <div class="wrap">
-        <p class="label">SiteSprint Studio · Products</p>
+        <p class="kicker">SiteSprint Studio · Products</p>
         <h1 id="page-title">Tools we built, <span class="accent">ready to run.</span></h1>
         <p class="lede">Working starter kits and systems from our own operation — the same code and playbooks we use every day, packaged so you can use them the day they arrive. No subscriptions, no vapor: every product below exists, is tested, and ships as a ZIP by email.</p>
         <div class="hero-actions">
@@ -374,9 +307,9 @@
       </div>
     </section>
 
-    <section id="shelf" aria-labelledby="shelf-title">
+    <section id="shelf" class="hairline" aria-labelledby="shelf-title">
       <div class="wrap">
-        <p class="label reveal">The shelf</p>
+        <p class="kicker reveal">The shelf</p>
         <h2 id="shelf-title" class="reveal">Six products. All real, all deliverable today.</h2>
         <div class="cards">
           <article class="card featured reveal" aria-labelledby="agentspend-title">
@@ -389,11 +322,11 @@
               <span class="start-chip">One-time · Full source</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Complete TypeScript source with 30 passing tests</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Policy engine: caps, allowlists, approval queue</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Audit ledger and demo dashboard included</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Architecture and threat-model docs</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Runs offline in mock mode, zero setup</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Complete TypeScript source with 30 passing tests</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Policy engine: caps, allowlists, approval queue</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Audit ledger and demo dashboard included</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Architecture and threat-model docs</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Runs offline in mock mode, zero setup</li>
             </ul>
             <button class="btn btn-gold" type="button" data-product="AgentSpend Guard $89">Order AgentSpend Guard</button>
           </article>
@@ -407,11 +340,11 @@
               <span class="start-chip">One-time · Full source</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Complete working codebase, 13/13 tests passing</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mock mode runs with no account and no keys</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>PayPal Sandbox walkthrough included (approve + capture)</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Approval-queue web UI and audit ledger</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ships with an empty config template — no credentials</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Complete working codebase, 13/13 tests passing</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mock mode runs with no account and no keys</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>PayPal Sandbox walkthrough included (approve + capture)</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Approval-queue web UI and audit ledger</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ships with an empty config template — no credentials</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-product="PayGuard Starter Kit $49">Order PayGuard Starter Kit</button>
           </article>
@@ -425,11 +358,11 @@
               <span class="start-chip">One-time · Full source</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>NEAR smart contract source plus buyer/seller agents</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Policy test suite included</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Settlement dashboard page</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Deploy and funding scripts — generate your own keys</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full demo walkthrough from the live testnet run</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>NEAR smart contract source plus buyer/seller agents</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Policy test suite included</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Settlement dashboard page</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Deploy and funding scripts — generate your own keys</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full demo walkthrough from the live testnet run</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-product="SettleMesh Starter Kit $49">Order SettleMesh Starter Kit</button>
           </article>
@@ -443,11 +376,11 @@
               <span class="start-chip">One-time · Use it today</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Master Obligation Ledger (CSV, imports anywhere)</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The full system explained on two pages</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly review and monthly money checklists</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tax set-aside worksheet with quarterly rhythm</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Invoice reminder ladder plus scope-change reply</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Master Obligation Ledger (CSV, imports anywhere)</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The full system explained on two pages</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly review and monthly money checklists</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tax set-aside worksheet with quarterly rhythm</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Invoice reminder ladder plus scope-change reply</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-product="Freelancer Obligation OS $29">Order Freelancer Obligation OS</button>
           </article>
@@ -461,11 +394,11 @@
               <span class="start-chip">One-time · Use it today</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hour-by-hour 48-hour runbook</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Submission kit checklist — nothing missing on the day</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Demo video shot list: real app, real data, no fakes</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Judging self-score sheet keyed to published rubrics</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Write-up, README, form-answer, and announcement templates</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hour-by-hour 48-hour runbook</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Submission kit checklist — nothing missing on the day</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Demo video shot list: real app, real data, no fakes</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Judging self-score sheet keyed to published rubrics</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Write-up, README, form-answer, and announcement templates</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-product="Hackathon Launch Kit $39">Order Hackathon Launch Kit</button>
           </article>
@@ -479,11 +412,11 @@
               <span class="start-chip">One-time · CSV + cover sheet</span>
             </div>
             <ul class="feat">
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>50 businesses: roofing, plumbing, HVAC, electrical, landscaping, tree service, garage doors</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The specific verified website flaw for every row, in plain language</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Public contact path labeled per row: 35 contact forms · 12 phone · 3 email</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Checked on the rendered live pages, Nov 5–8, 2026 — scraping artifacts deleted, not sold</li>
-              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Not an exclusive list — and we have not contacted any of the 50</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>50 businesses: roofing, plumbing, HVAC, electrical, landscaping, tree service, garage doors</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The specific verified website flaw for every row, in plain language</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Public contact path labeled per row: 35 contact forms · 12 phone · 3 email</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Checked on the rendered live pages, Nov 5–8, 2026 — scraping artifacts deleted, not sold</li>
+              <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Not an exclusive list — and we have not contacted any of the 50</li>
             </ul>
             <button class="btn btn-ghost" type="button" data-product="Verified Local Business Leads — Home Services Pack #1 $79">Order the Lead Pack</button>
           </article>
@@ -493,7 +426,7 @@
 
     <section id="how-order" class="hairline" aria-labelledby="how-title">
       <div class="wrap">
-        <p class="label reveal">How ordering works</p>
+        <p class="kicker reveal">How ordering works</p>
         <h2 id="how-title" class="reveal">Simple, in writing, no instant-download tricks.</h2>
         <div class="flow-grid">
           <div class="flow-step reveal"><p class="num">Step 1</p><h3>Send the order form</h3><p>Pick your product below and send the form. It lands in our studio inbox with the subject line "New product order".</p></div>
@@ -506,13 +439,13 @@
     <section id="order" class="hairline" aria-labelledby="order-title">
       <div class="wrap intake-grid">
         <div class="intake-copy reveal">
-          <p class="label">Order a product</p>
+          <p class="kicker">Order a product</p>
           <h2 id="order-title">Tell us what you want.</h2>
           <p>Two minutes on this form. No payment now — the invoice comes by email, and your product ships the moment it is paid.</p>
           <ul class="intake-points">
-            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Reply the same day, usually.</strong> With your PayPal invoice, price exactly as listed.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Delivered by email.</strong> The full ZIP, sent once payment lands.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#38D1FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Real support.</strong> Reply to the delivery email and a human answers.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Reply the same day, usually.</strong> With your PayPal invoice, price exactly as listed.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Delivered by email.</strong> The full ZIP, sent once payment lands.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 9.5l4 4 9-10" stroke="#AE241C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Real support.</strong> Reply to the delivery email and a human answers.</span></li>
           </ul>
         </div>
 
@@ -575,6 +508,7 @@
         </div>
       </div>
       <p class="footer-fine">Digital products are delivered by email as ZIP files after payment. One purchase covers one business or product of yours — see the license inside each ZIP.</p>
+      <p class="colophon">Set in Fraunces &amp; Inter · Printed on pixels · © SiteSprint Studio</p>
     </div>
   </footer>
 
