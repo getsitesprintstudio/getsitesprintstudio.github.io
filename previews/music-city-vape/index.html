@@ -75,6 +75,14 @@
   .hours-card tr:first-child td{border-top:none}
   .hours-card td:last-child{text-align:right;font-weight:600}
   .hours-card .note{margin-top:14px;font-size:13px;color:var(--faint)}
+  .hero-photo{grid-column:1/-1;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .hero-photo img{width:100%;height:400px;object-fit:cover;object-position:center 62%}
+  .hero-photo figcaption{padding:10px 16px;font-size:13px;color:var(--muted);background:var(--surface)}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .gallery figure{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .gallery figcaption{padding:10px 14px;font-size:13px;color:var(--muted)}
 
   .about{background:var(--accent-soft);border-bottom:1px solid var(--line)}
   .about .wrap{padding-top:38px;padding-bottom:38px;text-align:center}
@@ -98,7 +106,7 @@
   .good-item h3{font-size:16px;font-weight:700;margin-bottom:6px}
   .good-item p{font-size:14.5px;color:var(--muted)}
 
-  .visit{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+  .visit{display:grid;grid-template-columns:1fr;align-items:stretch}
   .visit-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:30px}
   .visit-card h2{font-size:24px;font-weight:800;margin-bottom:16px}
   .visit-row{display:flex;gap:12px;padding:11px 0;border-top:1px solid #efeee9;font-size:15px}
@@ -108,8 +116,6 @@
   .visit-row .v a{color:var(--ink)}
   .visit-row .v a:hover{color:var(--accent)}
   .visit-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-  .visit-photo{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:300px}
-  .visit-photo img{width:100%;height:100%;object-fit:cover}
 
   footer{border-top:1px solid var(--line);background:var(--surface)}
   footer .wrap{padding-top:30px;padding-bottom:40px;text-align:center}
@@ -121,7 +127,8 @@
   @media (max-width:860px){
     .hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:40px;padding-bottom:40px}
     .cards,.good{grid-template-columns:1fr 1fr}
-    .visit{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr 1fr}
+    .hero-photo img{height:260px}
     .hero h1{font-size:34px}
   }
   @media (max-width:560px){
@@ -160,6 +167,10 @@
 
   <div class="hero">
     <div class="wrap">
+      <figure class="hero-photo">
+        <img src="img/storefront.jpg" alt="The Music City Vape and Smoke storefront on Madison Street, with red signage and black awnings">
+        <figcaption>The shop on Madison St — 2535 Madison St, Clarksville</figcaption>
+      </figure>
       <div>
         <div class="eyebrow">Madison Street · Clarksville</div>
         <h1>Music City Vape and Smoke</h1>
@@ -243,6 +254,33 @@
   <section class="block" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head">
+        <h2>Inside the Shop</h2>
+        <p>Photos from the shop's own listing — the counters and shelves inside the Madison Street store.</p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="img/counter-lineup.jpg" alt="Rows of product boxes lined up on a counter inside the shop, with the store interior behind">
+          <figcaption>Stock lined up on the counter</figcaption>
+        </figure>
+        <figure>
+          <img src="img/vape-device-glass-case.jpg" alt="A vape device standing on a glass case inside the shop, with stocked shelves behind it">
+          <figcaption>At the glass case</figcaption>
+        </figure>
+        <figure>
+          <img src="img/products-glass-counter.jpg" alt="Product boxes stacked on the glass counter, with stocked shelves behind">
+          <figcaption>On the glass counter</figcaption>
+        </figure>
+        <figure>
+          <img src="img/product-box-counter.jpg" alt="A product box on the counter, with the shop's shelves behind it">
+          <figcaption>Shelves behind the counter</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
         <h2>Good to Know</h2>
       </div>
       <div class="good">
@@ -275,9 +313,6 @@
             <a class="btn btn-accent btn-sm" href="tel:+19319190268">Tap to Call</a>
             <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
           </div>
-        </div>
-        <div class="visit-photo">
-          <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="An open sign hanging in a shop window">
         </div>
       </div>
     </div>
