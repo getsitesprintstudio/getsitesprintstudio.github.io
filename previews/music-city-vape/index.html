@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Music City Vape and Smoke — Tobacco &amp; E-Cigarette Store in Clarksville, TN</title>
+<title>Music City Vape and Smoke | Tobacco &amp; E-Cigarette Store in Clarksville, TN</title>
 <meta name="description" content="Music City Vape and Smoke, 2535 Madison St, Clarksville, TN. Vape products, CBD products, kratom, THC products, tobacco and smoke accessories. Open seven days a week until midnight. Call (931) 919-0268.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Music City Vape and Smoke | Clarksville, TN">
+<meta property="og:description" content="Vape products, CBD, kratom, THC products, tobacco and smoke accessories at 2535 Madison St, Clarksville. Open seven days a week until midnight.">
+<meta property="og:url" content="https://getsitesprintstudio.github.io/previews/music-city-vape/">
+<meta property="og:image" content="https://getsitesprintstudio.github.io/previews/music-city-vape/img/storefront.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%239a2a1e'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,111 +37,204 @@
 </script>
 <style>
   :root{
-    --bg:#f6f6f3; --surface:#ffffff; --ink:#22262b; --muted:#5b636e; --faint:#8a929c;
-    --line:#e2e0d9; --accent:#1f5fa6; --accent-dark:#17497f; --accent-soft:#ecf3fa;
+    --paper:#f5f1e8; --paper-deep:#efe9db; --surface:#fffdf7; --ink:#211a13; --ink-soft:#3c352b;
+    --muted:#6f6455; --faint:#978a76; --line:#ded4bf; --line-soft:#e7dfcd;
+    --red:#9a2a1e; --red-dark:#7c2015; --red-tint:#f9ece7;
+    --dark:#221c15; --dark-line:#453a2d;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--red);color:#fff}
   img{display:block;max-width:100%}
-  a{text-decoration:none;color:var(--accent)}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:var(--red);text-decoration:none}
+  .stock-note a,.note-item p a{text-decoration:underline;text-underline-offset:3px}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  section{scroll-margin-top:96px}
 
-  .utility{background:#2b2f36;color:#d7dbe0;font-size:13px}
-  .utility .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
-  .utility .sep{color:#5a616b}
-  .utility .agechip{margin-left:auto;border:1px solid #6b7280;color:#e8ebee;border-radius:999px;padding:1px 9px;font-weight:700;font-size:12px;letter-spacing:.06em}
+  /* ---------- utility bar ---------- */
+  .utility{background:var(--dark);color:#cfc6b4;font-size:12.5px;letter-spacing:.01em}
+  .utility .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .utility .sep{color:#5d5240}
+  .utility .age{margin-left:auto;font-weight:700;color:#f0e8d8;letter-spacing:.14em;font-size:12px}
 
-  header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);z-index:20}
-  header .wrap{display:flex;align-items:center;gap:14px;padding-top:14px;padding-bottom:14px}
-  .mark{width:42px;height:42px;border-radius:10px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:.02em;flex:none}
-  .brand-name{font-weight:700;font-size:18px;line-height:1.2;color:var(--ink)}
-  .brand-sub{font-size:12.5px;color:var(--muted)}
-  .header-actions{margin-left:auto;display:flex;align-items:center;gap:18px}
-  .header-actions .dir{font-weight:600;font-size:14.5px}
-  .btn{display:inline-block;font-weight:600;font-size:15px;padding:12px 22px;border-radius:8px;border:1px solid transparent}
-  .btn-accent{background:var(--accent);color:#fff}
-  .btn-accent:hover{background:var(--accent-dark)}
-  .btn-outline{border-color:#c9cdd4;color:var(--ink);background:#fff}
-  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
-  .btn-sm{padding:10px 18px;font-size:14.5px}
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;background:rgba(245,241,232,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:30}
+  header .wrap{display:flex;align-items:center;gap:14px;padding-top:13px;padding-bottom:13px}
+  .mark{width:40px;height:40px;border-radius:8px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:19px;flex:none}
+  .brand-name{font-family:var(--serif);font-weight:600;font-size:18.5px;line-height:1.15;color:var(--ink);letter-spacing:-.01em}
+  .brand-sub{font-size:12px;color:var(--muted);letter-spacing:.02em}
+  nav.main{margin-left:auto;display:flex;align-items:center;gap:26px}
+  nav.main a.navlink{color:var(--ink-soft);font-size:14px;font-weight:500;transition:color .15s ease}
+  nav.main a.navlink:hover{color:var(--red)}
+  .header-phone{font-size:14.5px;font-weight:600;color:var(--ink);white-space:nowrap}
+  .header-phone:hover{color:var(--red)}
 
-  .hero{background:var(--surface);border-bottom:1px solid var(--line)}
-  .hero .wrap{display:grid;grid-template-columns:1.25fr .85fr;gap:44px;padding-top:54px;padding-bottom:54px;align-items:start}
-  .eyebrow{color:var(--accent);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
-  .hero h1{font-size:42px;line-height:1.12;font-weight:800;letter-spacing:-.01em;margin-bottom:16px}
-  .hero p.lede{font-size:17.5px;color:var(--muted);max-width:520px;margin-bottom:26px}
-  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
-  .facts{display:flex;gap:8px;flex-wrap:wrap}
-  .fact{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:600;color:#3c434c}
-  .hours-card{border:1px solid var(--line);border-radius:14px;padding:24px 26px;background:var(--surface);box-shadow:0 1px 3px rgba(20,24,30,.05)}
-  .hours-card h2{font-size:15px;font-weight:700;letter-spacing:.02em;margin-bottom:4px}
-  .hours-card .status{font-size:13.5px;color:var(--accent);font-weight:600;margin-bottom:14px}
+  .btn{display:inline-block;font-weight:600;font-size:15px;line-height:1.2;padding:13px 24px;border-radius:6px;border:1px solid transparent;transition:background .15s ease,color .15s ease,border-color .15s ease;cursor:pointer}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-dark)}
+  .btn-ghost{border-color:#c9bda1;color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
+  .btn-sm{padding:10px 18px;font-size:14px}
+  .btn-light{background:#f5f1e8;color:var(--ink)}
+  .btn-light:hover{background:#ffffff}
+
+  /* ---------- hero ---------- */
+  .hero .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:40px;padding-top:60px;padding-bottom:56px;align-items:start}
+  .hero-copy{grid-column:1/8}
+  .kicker{color:var(--red);font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,5.2vw,62px);line-height:1.04;letter-spacing:-.015em;margin-bottom:20px}
+  .hero p.lede{font-size:17.5px;line-height:1.65;color:var(--ink-soft);max-width:540px;margin-bottom:30px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:38px}
+  .quickfacts{display:grid;grid-template-columns:repeat(3,auto);gap:0 36px;border-top:1px solid var(--line);padding-top:20px;max-width:560px}
+  .quickfacts .qf .k{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:3px}
+  .quickfacts .qf .v{font-size:14.5px;font-weight:600;color:var(--ink)}
+  .quickfacts .qf .v a{color:var(--ink)}
+  .quickfacts .qf .v a:hover{color:var(--red)}
+
+  .hours-card{grid-column:8/13;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px 28px;box-shadow:0 12px 32px -18px rgba(33,26,19,.25)}
+  .hours-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:6px}
+  .hours-head h2{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-.01em}
+  .status{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--ink-soft);white-space:nowrap}
+  .status .dot{width:8px;height:8px;border-radius:50%;background:#b09a72;flex:none}
+  .status.open .dot{background:#2e7d43}
   .hours-card table{width:100%;border-collapse:collapse;font-size:14.5px}
-  .hours-card td{padding:8px 0;border-top:1px solid #efeee9}
-  .hours-card tr:first-child td{border-top:none}
-  .hours-card td:last-child{text-align:right;font-weight:600}
-  .hours-card .note{margin-top:14px;font-size:13px;color:var(--faint)}
-  .hero-photo{grid-column:1/-1;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
-  .hero-photo img{width:100%;height:400px;object-fit:cover;object-position:center 62%}
-  .hero-photo figcaption{padding:10px 16px;font-size:13px;color:var(--muted);background:var(--surface)}
+  .hours-card td{padding:7.5px 10px;border-bottom:1px solid var(--line-soft)}
+  .hours-card tr:last-child td{border-bottom:none}
+  .hours-card td:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+  .hours-card tr.today td{background:var(--red-tint);color:var(--ink);font-weight:600}
+  .hours-card tr.today td:last-child{color:var(--ink)}
+  .hours-card tr.today td:first-child{border-radius:6px 0 0 6px}
+  .hours-card tr.today td:last-child{border-radius:0 6px 6px 0}
+  .hours-card tr.today td:first-child::after{content:"Today";margin-left:9px;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+  .hours-card .note{margin-top:12px;font-size:12.5px;color:var(--faint)}
 
-  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .gallery figure{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-  .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover}
-  .gallery figcaption{padding:10px 14px;font-size:13px;color:var(--muted)}
+  /* ---------- photo band ---------- */
+  .band figure{margin:0}
+  .band img{width:100%;height:520px;object-fit:cover;object-position:center 58%}
+  .band figcaption{max-width:1140px;margin:0 auto;padding:10px 24px 0;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .band figcaption .r{color:var(--faint)}
 
-  .about{background:var(--accent-soft);border-bottom:1px solid var(--line)}
-  .about .wrap{padding-top:38px;padding-bottom:38px;text-align:center}
-  .about blockquote{font-size:21px;font-weight:600;line-height:1.45;max-width:640px;margin:0 auto 8px;color:#1c2733}
-  .about cite{font-style:normal;font-size:13.5px;color:var(--muted)}
+  /* ---------- quote ---------- */
+  .quote .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:40px;padding-top:64px;padding-bottom:8px}
+  .quote .label{grid-column:1/4;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);padding-top:12px}
+  .quote .qtext{grid-column:4/12}
+  .quote blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(24px,3vw,33px);line-height:1.32;letter-spacing:-.01em;color:var(--ink)}
+  .quote cite{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:16px}
 
-  section.block{padding:56px 0}
-  .sec-head{margin-bottom:28px}
-  .sec-head h2{font-size:27px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
-  .sec-head p{color:var(--muted);font-size:16px;max-width:560px}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px 24px}
-  .card .icon{width:42px;height:42px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  .card .icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-  .card h3{font-size:17px;font-weight:700;margin-bottom:6px}
-  .card p{font-size:14.5px;color:var(--muted)}
-  .cards-note{margin-top:16px;font-size:13.5px;color:var(--faint)}
+  /* ---------- sections ---------- */
+  section.block{padding:72px 0}
+  .sec-head{border-top:2px solid var(--ink);padding-top:22px;margin-bottom:38px;display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+  .sec-head .kick{grid-column:1/4;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);padding-bottom:8px}
+  .sec-head h2{grid-column:4/9;font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.4vw,38px);line-height:1.1;letter-spacing:-.015em}
+  .sec-head p{grid-column:9/13;color:var(--muted);font-size:15px;line-height:1.6;padding-bottom:4px}
 
-  .good{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .good-item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
-  .good-item h3{font-size:16px;font-weight:700;margin-bottom:6px}
-  .good-item p{font-size:14.5px;color:var(--muted)}
+  /* carry: feature + index */
+  .feature{display:grid;grid-template-columns:repeat(12,1fr);gap:40px;align-items:center;margin-bottom:48px}
+  .feature figure{grid-column:1/6}
+  .feature figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px}
+  .feature figcaption{font-size:12.5px;color:var(--muted);padding-top:9px}
+  .feature .ftext{grid-column:6/12}
+  .feature .ftext .f-kick{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+  .feature .ftext h3{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3vw,34px);letter-spacing:-.01em;line-height:1.12;margin-bottom:14px}
+  .feature .ftext p{color:var(--ink-soft);font-size:16px;line-height:1.7;max-width:480px}
+  .feature .ftext p + p{margin-top:12px}
+  .index-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;border-top:1px solid var(--line)}
+  .index-row{display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .index-row .num{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--red);padding-top:2px}
+  .index-row h3{font-size:16.5px;font-weight:600;letter-spacing:-.005em}
+  .index-row p{grid-column:2;font-size:14.5px;color:var(--muted);line-height:1.6}
+  .stock-note{margin-top:22px;font-size:13.5px;color:var(--muted)}
+  .stock-note a{font-weight:600}
 
-  .visit{display:grid;grid-template-columns:1fr;align-items:stretch}
-  .visit-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:30px}
-  .visit-card h2{font-size:24px;font-weight:800;margin-bottom:16px}
-  .visit-row{display:flex;gap:12px;padding:11px 0;border-top:1px solid #efeee9;font-size:15px}
-  .visit-row:first-of-type{border-top:none}
-  .visit-row .k{width:86px;flex:none;color:var(--faint);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+  /* gallery mosaic */
+  .mosaic{display:grid;grid-template-columns:7fr 5fr;gap:20px}
+  .mosaic .col{display:grid;gap:20px}
+  .mosaic figure{margin:0}
+  .mosaic img{width:100%;object-fit:cover;border-radius:8px}
+  .mosaic .wide{aspect-ratio:16/10}
+  .mosaic .tall{height:100%;min-height:340px}
+  .mosaic .std{aspect-ratio:16/10}
+  .mosaic figcaption{font-size:12.5px;color:var(--muted);padding-top:9px}
+
+  /* good to know */
+  .notes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+  .note-item{padding:26px 28px 4px 0}
+  .note-item + .note-item{border-left:1px solid var(--line);padding-left:28px}
+  .note-item .n{font-family:var(--serif);font-style:italic;color:var(--red);font-size:14px;display:block;margin-bottom:8px}
+  .note-item h3{font-size:16px;font-weight:600;margin-bottom:6px}
+  .note-item p{font-size:14.5px;color:var(--muted);line-height:1.65}
+
+  /* visit */
+  .visit{display:grid;grid-template-columns:repeat(12,1fr);gap:40px;align-items:start}
+  .visit-info{grid-column:1/8}
+  .visit-info h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.4vw,38px);letter-spacing:-.015em;line-height:1.1;margin-bottom:10px}
+  .visit-info .intro{color:var(--muted);font-size:15.5px;max-width:460px;margin-bottom:26px}
+  .visit-row{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+  .visit-row .k{width:84px;flex:none;color:var(--faint);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding-top:4px}
   .visit-row .v{font-weight:600}
   .visit-row .v a{color:var(--ink)}
-  .visit-row .v a:hover{color:var(--accent)}
-  .visit-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .visit-row .v a:hover{color:var(--red)}
+  .visit-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+  .late-panel{grid-column:8/13;background:var(--dark);color:#ece4d2;border-radius:10px;padding:34px 32px;display:flex;flex-direction:column}
+  .late-panel .lp-kick{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b7a888;margin-bottom:14px}
+  .late-panel h3{font-family:var(--serif);font-weight:600;font-size:clamp(25px,2.6vw,31px);line-height:1.15;letter-spacing:-.01em;margin-bottom:14px}
+  .late-panel p{font-size:14.5px;line-height:1.7;color:#c9bda3}
+  .late-panel .status{color:#ece4d2;margin-bottom:16px}
+  .late-panel .lp-foot{margin-top:auto;padding-top:22px;border-top:1px solid var(--dark-line);font-size:12.5px;letter-spacing:.06em;color:#a08e6d}
 
-  footer{border-top:1px solid var(--line);background:var(--surface)}
-  footer .wrap{padding-top:30px;padding-bottom:40px;text-align:center}
-  .foot-name{font-weight:700;font-size:15.5px}
-  .foot-line{font-size:13.5px;color:var(--muted);margin-top:2px}
-  .concept{display:inline-block;margin-top:16px;border:1px dashed #b9bcc2;border-radius:10px;padding:8px 14px;font-size:13px;color:var(--muted);background:var(--bg)}
-  .age{margin-top:12px;font-size:12.5px;color:var(--faint);letter-spacing:.04em}
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);background:var(--paper-deep);margin-top:8px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding:44px 0 34px}
+  .foot-brand .fname{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:-.01em;margin-bottom:8px}
+  .foot-brand p{font-size:14px;color:var(--muted);line-height:1.7}
+  .foot-col h4{font-size:11.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+  .foot-col p,.foot-col a{font-size:14px;color:var(--ink-soft);line-height:1.9}
+  .foot-col a{display:block;width:fit-content}
+  .foot-col a:hover{color:var(--red)}
+  .foot-bottom{border-top:1px solid var(--line);padding:18px 0 26px;display:flex;gap:14px 40px;flex-wrap:wrap;align-items:baseline}
+  .foot-bottom .concept{font-size:12.5px;color:var(--muted)}
+  .foot-bottom .age{font-size:12.5px;color:var(--faint);letter-spacing:.03em;margin-left:auto}
 
-  @media (max-width:860px){
-    .hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:40px;padding-bottom:40px}
-    .cards,.good{grid-template-columns:1fr 1fr}
-    .gallery{grid-template-columns:1fr 1fr}
-    .hero-photo img{height:260px}
-    .hero h1{font-size:34px}
+  /* ---------- mobile call bar ---------- */
+  .callbar{display:none}
+  @media (max-width:900px){
+    nav.main a.navlink{display:none}
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:44px;padding-bottom:44px}
+    .hero-copy,.hours-card{grid-column:1/-1}
+    .band img{height:340px}
+    .quote .wrap{grid-template-columns:1fr;gap:10px;padding-top:48px}
+    .quote .label,.quote .qtext{grid-column:1/-1}
+    .sec-head{grid-template-columns:1fr;gap:6px}
+    .sec-head .kick,.sec-head h2,.sec-head p{grid-column:1/-1}
+    .feature{grid-template-columns:1fr;gap:22px}
+    .feature figure,.feature .ftext{grid-column:1/-1}
+    .feature figure img{aspect-ratio:16/10}
+    .visit{grid-template-columns:1fr}
+    .visit-info,.late-panel{grid-column:1/-1}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .foot-brand{grid-column:1/-1}
+    .foot-bottom .age{margin-left:0}
   }
-  @media (max-width:560px){
-    .cards,.good{grid-template-columns:1fr}
-    .header-actions .dir{display:none}
-    .utility .agechip{margin-left:0}
+  @media (max-width:640px){
+    .index-list{grid-template-columns:1fr}
+    .mosaic{grid-template-columns:1fr}
+    .mosaic .tall{min-height:0;aspect-ratio:4/3;height:auto}
+    .notes{grid-template-columns:1fr}
+    .note-item{padding:20px 0 4px}
+    .note-item + .note-item{border-left:none;border-top:1px solid var(--line);padding-left:0}
+    .quickfacts{grid-template-columns:1fr 1fr;gap:16px 24px}
+    .header-phone{display:none}
+    .hours-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .hours-card{padding:22px 20px}
+    .hours-card td{font-size:13.5px;padding:7px 6px}
+    .hours-card td:last-child{white-space:nowrap}
+    .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(255,253,247,.97);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+    .callbar a{text-align:center}
+    body{padding-bottom:74px}
   }
 </style>
 </head>
@@ -143,176 +243,204 @@
   <div class="utility">
     <div class="wrap">
       <span>2535 Madison St, Clarksville, TN 37043</span>
-      <span class="sep">•</span>
+      <span class="sep">/</span>
       <span>(931) 919-0268</span>
-      <span class="sep">•</span>
+      <span class="sep">/</span>
       <span>Open 7 days a week until midnight</span>
-      <span class="agechip">21+</span>
+      <span class="age">21+</span>
     </div>
   </div>
 
   <header>
     <div class="wrap">
-      <div class="mark">MC</div>
+      <div class="mark">M</div>
       <div>
         <div class="brand-name">Music City Vape and Smoke</div>
-        <div class="brand-sub">Tobacco Store · E-Cigarette Store · Clarksville, TN</div>
+        <div class="brand-sub">Tobacco &amp; E-Cigarette Store · Clarksville, TN</div>
       </div>
-      <div class="header-actions">
-        <a class="dir" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Directions</a>
-        <a class="btn btn-accent btn-sm" href="tel:+19319190268">Call (931) 919-0268</a>
-      </div>
+      <nav class="main">
+        <a class="navlink" href="#carry">What We Carry</a>
+        <a class="navlink" href="#inside">Inside the Shop</a>
+        <a class="navlink" href="#visit">Visit</a>
+        <a class="header-phone" href="tel:+19319190268">(931) 919-0268</a>
+        <a class="btn btn-red btn-sm" href="tel:+19319190268">Call the Shop</a>
+      </nav>
     </div>
   </header>
 
   <div class="hero">
     <div class="wrap">
-      <figure class="hero-photo">
-        <img src="img/storefront.jpg" alt="The Music City Vape and Smoke storefront on Madison Street, with red signage and black awnings">
-        <figcaption>The shop on Madison St — 2535 Madison St, Clarksville</figcaption>
-      </figure>
-      <div>
-        <div class="eyebrow">Madison Street · Clarksville</div>
+      <div class="hero-copy">
+        <div class="kicker">Madison Street · Clarksville, Tennessee</div>
         <h1>Music City Vape and Smoke</h1>
-        <p class="lede">Vape products, CBD products, kratom, THC products, tobacco and smoke accessories — in one shop on Madison Street, open early and open late, seven days a week.</p>
+        <p class="lede">A tobacco and e-cigarette store at 2535 Madison St. Vape products, CBD, kratom, THC products, tobacco and smoke accessories, all in one shop. Doors open at 6 in the morning and the lights stay on until midnight, seven days a week.</p>
         <div class="hero-ctas">
-          <a class="btn btn-accent" href="tel:+19319190268">Call the Shop</a>
-          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
+          <a class="btn btn-red" href="tel:+19319190268">Call the Shop</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
         </div>
-        <div class="facts">
-          <span class="fact">Open 7 days a week</span>
-          <span class="fact">Open until midnight</span>
-          <span class="fact">2535 Madison St</span>
+        <div class="quickfacts">
+          <div class="qf"><span class="k">Address</span><span class="v">2535 Madison St</span></div>
+          <div class="qf"><span class="k">Phone</span><span class="v"><a href="tel:+19319190268">(931) 919-0268</a></span></div>
+          <div class="qf"><span class="k">Hours</span><span class="v">Open 7 days, until midnight</span></div>
         </div>
       </div>
       <div class="hours-card">
-        <h2>Store Hours</h2>
-        <div class="status" id="open-status">Open today — see hours below</div>
+        <div class="hours-head">
+          <h2>Store Hours</h2>
+          <span class="status js-status"><span class="dot"></span><span class="js-status-text">See hours below</span></span>
+        </div>
         <table>
-          <tr><td>Monday</td><td>6:00 AM – 12:00 AM</td></tr>
-          <tr><td>Tuesday</td><td>6:00 AM – 12:00 AM</td></tr>
-          <tr><td>Wednesday</td><td>6:00 AM – 12:00 AM</td></tr>
-          <tr><td>Thursday</td><td>6:00 AM – 12:00 AM</td></tr>
-          <tr><td>Friday</td><td>6:00 AM – 12:00 AM</td></tr>
-          <tr><td>Saturday</td><td>6:00 AM – 12:00 AM</td></tr>
-          <tr><td>Sunday</td><td>7:00 AM – 12:00 AM</td></tr>
+          <tr data-day="1"><td>Monday</td><td>6:00 AM – 12:00 AM</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>6:00 AM – 12:00 AM</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>6:00 AM – 12:00 AM</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>6:00 AM – 12:00 AM</td></tr>
+          <tr data-day="5"><td>Friday</td><td>6:00 AM – 12:00 AM</td></tr>
+          <tr data-day="6"><td>Saturday</td><td>6:00 AM – 12:00 AM</td></tr>
+          <tr data-day="0"><td>Sunday</td><td>7:00 AM – 12:00 AM</td></tr>
         </table>
         <p class="note">Hours are the shop's published listing hours.</p>
       </div>
     </div>
   </div>
 
-  <div class="about">
+  <div class="band">
+    <figure>
+      <img src="img/storefront.jpg" alt="The Music City Vape and Smoke storefront on Madison Street, with red signage and black awnings">
+      <figcaption><span>The storefront at 2535 Madison St, under the red sign.</span><span class="r">Photo from the shop's Google listing</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="quote">
     <div class="wrap">
-      <blockquote>&ldquo;Roll on up to Music City Vape and Smoke for all of your smoking needs!!&rdquo;</blockquote>
-      <cite>— the shop's own description</cite>
+      <div class="label">In the shop's own words</div>
+      <div class="qtext">
+        <blockquote>Roll on up to Music City Vape and Smoke for all of your smoking needs!!</blockquote>
+        <cite>The shop's own description, from its Google listing</cite>
+      </div>
     </div>
   </div>
 
-  <section class="block">
+  <section class="block" id="carry">
     <div class="wrap">
       <div class="sec-head">
-        <h2>What We Carry</h2>
-        <p>The shop's listing covers five departments. Everything below is in one store, so one trip covers the whole list.</p>
+        <div class="kick">Departments</div>
+        <h2>What we carry</h2>
+        <p>Five departments under one roof, so one trip down Madison Street covers the whole list.</p>
       </div>
-      <div class="cards">
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24"><rect x="9" y="7" width="6" height="13" rx="2"/><path d="M11 7V4h2v3M12 20v.01M5 5c1.5-1.2 3-1.2 4 0M15 3.5c1-1 2.5-1.2 4-.5"/></svg></div>
-          <h3>Vape Products</h3>
-          <p>Vaping devices and vape products — the core department of the shop.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3.5c0 0-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/><path d="M9.5 14.5a2.8 2.8 0 0 0 2 3.4"/></svg></div>
-          <h3>CBD Products</h3>
-          <p>CBD products on the shelf, available to look over in person before you buy.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24"><path d="M5.5 19.5C5.5 11 11.5 5 19.5 4.5c-.5 8.5-6 14-13 14.5"/><path d="M5.5 19.5C8 14 11.5 10 16 7.5"/></svg></div>
-          <h3>Kratom</h3>
-          <p>Kratom stocked in store alongside the rest of the lineup.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 4.6L19 5l-1.2 5.2L22 12l-4.2 1.8L19 19l-4.8-2.6L12 21l-2.2-4.6L5 19l1.2-5.2L2 12l4.2-1.8L5 5l4.8 2.6z"/></svg></div>
-          <h3>THC Products</h3>
-          <p>THC products carried in store. Ask at the counter about the current selection.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12a1.8 1.8 0 0 1-1.8 1.6H8A1.8 1.8 0 0 1 6.2 20L5 8z"/><path d="M8.5 10.5V6.8a3.5 3.5 0 0 1 7 0v3.7"/></svg></div>
-          <h3>Tobacco &amp; Smoke Accessories</h3>
-          <p>Tobacco and the accessories that go with it, under the same roof as everything above.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
-          <h3>Open Late, Every Day</h3>
-          <p>Doors open at 6:00 AM Monday through Saturday and 7:00 AM on Sunday, and the shop stays open until midnight every night.</p>
-        </div>
-      </div>
-      <p class="cards-note">Stock changes from week to week. To check whether something is on the shelf today, call <a href="tel:+19319190268">(931) 919-0268</a>.</p>
-    </div>
-  </section>
-
-  <section class="block" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Inside the Shop</h2>
-        <p>Photos from the shop's own listing — the counters and shelves inside the Madison Street store.</p>
-      </div>
-      <div class="gallery">
-        <figure>
-          <img src="img/counter-lineup.jpg" alt="Rows of product boxes lined up on a counter inside the shop, with the store interior behind">
-          <figcaption>Stock lined up on the counter</figcaption>
-        </figure>
+      <div class="feature">
         <figure>
           <img src="img/vape-device-glass-case.jpg" alt="A vape device standing on a glass case inside the shop, with stocked shelves behind it">
-          <figcaption>At the glass case</figcaption>
+          <figcaption>At the glass case, inside the store</figcaption>
         </figure>
-        <figure>
-          <img src="img/products-glass-counter.jpg" alt="Product boxes stacked on the glass counter, with stocked shelves behind">
-          <figcaption>On the glass counter</figcaption>
-        </figure>
-        <figure>
-          <img src="img/product-box-counter.jpg" alt="A product box on the counter, with the shop's shelves behind it">
-          <figcaption>Shelves behind the counter</figcaption>
-        </figure>
+        <div class="ftext">
+          <div class="f-kick">The main counter</div>
+          <h3>Vape products</h3>
+          <p>Vaping devices and vape products are the core of the shop and the first thing you see at the counter. If you are not sure what fits what you have, ask at the glass case and they will point you to the right shelf.</p>
+          <p>Stock turns over during the week, so the case is worth a look in person even if you came in for something else.</p>
+        </div>
       </div>
+      <div class="index-list">
+        <div class="index-row">
+          <span class="num">02</span>
+          <h3>CBD products</h3>
+          <p>On the shelf in store, where you can look things over in person before you buy.</p>
+        </div>
+        <div class="index-row">
+          <span class="num">03</span>
+          <h3>Kratom</h3>
+          <p>Stocked in store, alongside the rest of the lineup.</p>
+        </div>
+        <div class="index-row">
+          <span class="num">04</span>
+          <h3>THC products</h3>
+          <p>Carried in store. Ask at the counter about what is in stock this week.</p>
+        </div>
+        <div class="index-row">
+          <span class="num">05</span>
+          <h3>Tobacco &amp; smoke accessories</h3>
+          <p>Tobacco, plus the accessories that go with it, under the same roof as everything above.</p>
+        </div>
+      </div>
+      <p class="stock-note">Stock changes from week to week. To check whether something is on the shelf today, call <a href="tel:+19319190268">(931) 919-0268</a>.</p>
     </div>
   </section>
 
-  <section class="block" style="padding-top:0">
+  <section class="block" id="inside" style="padding-top:8px">
     <div class="wrap">
       <div class="sec-head">
-        <h2>Good to Know</h2>
+        <div class="kick">The store</div>
+        <h2>Inside the shop</h2>
+        <p>Photos from the shop's own Google listing. The counters and shelves inside the Madison Street store.</p>
       </div>
-      <div class="good">
-        <div class="good-item">
-          <h3>Seven days a week</h3>
-          <p>The shop is open every day of the week, including Sundays, when it opens at 7:00 AM.</p>
+      <div class="mosaic">
+        <div class="col">
+          <figure>
+            <img class="wide" src="img/counter-lineup.jpg" alt="Rows of product boxes lined up on a counter inside the shop, with the store interior behind">
+            <figcaption>Stock lined up on the counter</figcaption>
+          </figure>
+          <figure>
+            <img class="std" src="img/product-box-counter.jpg" alt="A product box on the counter, with the shop's shelves behind it">
+            <figcaption>Shelves behind the counter</figcaption>
+          </figure>
         </div>
-        <div class="good-item">
-          <h3>Until midnight</h3>
-          <p>Closing time is midnight every night, so an evening stop does not need to be a rush.</p>
-        </div>
-        <div class="good-item">
-          <h3>On Madison Street</h3>
-          <p>2535 Madison St in Clarksville — call ahead on <a href="tel:+19319190268">(931) 919-0268</a> or stop in.</p>
+        <div class="col">
+          <figure style="height:100%;display:flex;flex-direction:column">
+            <img class="tall" style="flex:1" src="img/products-glass-counter.jpg" alt="Product boxes stacked on the glass counter, with stocked shelves behind">
+            <figcaption>On the glass counter</figcaption>
+          </figure>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block" style="padding-top:0">
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kick">Before you go</div>
+        <h2>Good to know</h2>
+        <p></p>
+      </div>
+      <div class="notes">
+        <div class="note-item">
+          <span class="n">One</span>
+          <h3>Seven days a week</h3>
+          <p>The shop is open every day of the week, Sundays included. Sunday hours start an hour later, at 7:00 AM.</p>
+        </div>
+        <div class="note-item">
+          <span class="n">Two</span>
+          <h3>Until midnight</h3>
+          <p>Closing time is midnight every night, so an evening stop on Madison Street does not need to be a rush.</p>
+        </div>
+        <div class="note-item">
+          <span class="n">Three</span>
+          <h3>Call ahead</h3>
+          <p>Stock moves fast. A quick call to <a href="tel:+19319190268">(931) 919-0268</a> confirms the shelf before you make the trip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visit" style="padding-top:8px">
     <div class="wrap">
       <div class="visit">
-        <div class="visit-card">
-          <h2>Visit Us</h2>
+        <div class="visit-info">
+          <h2>Visit the shop</h2>
+          <p class="intro">You will find the store at 2535 Madison St in Clarksville, under the red sign. Walk-ins are the way the shop works.</p>
           <div class="visit-row"><span class="k">Address</span><span class="v">2535 Madison St, Clarksville, TN 37043</span></div>
           <div class="visit-row"><span class="k">Phone</span><span class="v"><a href="tel:+19319190268">(931) 919-0268</a></span></div>
           <div class="visit-row"><span class="k">Hours</span><span class="v">Mon – Sat: 6:00 AM – 12:00 AM<br>Sun: 7:00 AM – 12:00 AM</span></div>
           <div class="visit-row"><span class="k">Online</span><span class="v"><a href="https://www.facebook.com/632286849971870">Find us on Facebook</a></span></div>
           <div class="visit-ctas">
-            <a class="btn btn-accent btn-sm" href="tel:+19319190268">Tap to Call</a>
-            <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
+            <a class="btn btn-red btn-sm" href="tel:+19319190268">Tap to Call</a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
           </div>
+        </div>
+        <div class="late-panel">
+          <div class="lp-kick">Evenings on Madison St</div>
+          <h3>Open late, every night of the week.</h3>
+          <span class="status js-status"><span class="dot"></span><span class="js-status-text">See hours below</span></span>
+          <p>Doors open at 6:00 AM Monday through Saturday and 7:00 AM on Sunday. Closing time is midnight, every night. If the sign is lit, the shop is open.</p>
+          <div class="lp-foot">MUST BE 21+ TO PURCHASE IN STORE</div>
         </div>
       </div>
     </div>
@@ -320,18 +448,39 @@
 
   <footer>
     <div class="wrap">
-      <div class="foot-name">Music City Vape and Smoke</div>
-      <div class="foot-line">2535 Madison St, Clarksville, TN 37043 · (931) 919-0268 · Open 7 days a week until midnight</div>
-      <span class="concept">Concept preview built by SiteSprint Studio — this is not the live website of Music City Vape and Smoke.</span>
-      <div class="age">Must be 21+ to purchase tobacco and vape products.</div>
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="fname">Music City Vape and Smoke</div>
+          <p>2535 Madison St, Clarksville, TN 37043<br>(931) 919-0268</p>
+        </div>
+        <div class="foot-col">
+          <h4>Hours</h4>
+          <p>Mon – Sat: 6:00 AM – 12:00 AM<br>Sun: 7:00 AM – 12:00 AM<br>Open 7 days a week</p>
+        </div>
+        <div class="foot-col">
+          <h4>Find the Shop</h4>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
+          <a href="https://www.facebook.com/632286849971870">Facebook</a>
+          <a href="tel:+19319190268">Call the Shop</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span class="concept">Concept preview built by SiteSprint Studio — this is not the live website of Music City Vape and Smoke.</span>
+        <span class="age">Must be 21+ to purchase tobacco and vape products.</span>
+      </div>
     </div>
   </footer>
+
+  <div class="callbar">
+    <a class="btn btn-red btn-sm" href="tel:+19319190268">Call the Shop</a>
+    <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Directions</a>
+  </div>
 
 <script>
   (function () {
     try {
-      var el = document.getElementById('open-status');
-      if (!el) return;
+      var statuses = document.querySelectorAll('.js-status');
+      if (!statuses.length) return;
       var now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }));
       var day = now.getDay(); // 0 = Sunday
       var mins = now.getHours() * 60 + now.getMinutes();
@@ -342,15 +491,24 @@
         var h12 = h % 12; if (h12 === 0) h12 = 12;
         return h12 + ':' + (mm < 10 ? '0' : '') + mm + ' ' + ap;
       }
+      var text, isOpen = false;
       if (mins >= open && mins < close) {
-        el.textContent = 'Open now · closes 12:00 AM';
+        text = 'Open now · closes 12:00 AM';
+        isOpen = true;
       } else if (mins < open) {
-        el.textContent = 'Currently closed · opens today at ' + fmt(open);
+        text = 'Currently closed · opens today at ' + fmt(open);
       } else {
         var nextDay = (day + 1) % 7;
         var nextOpen = (nextDay === 0) ? 7 * 60 : 6 * 60;
-        el.textContent = 'Currently closed · opens tomorrow at ' + fmt(nextOpen);
+        text = 'Currently closed · opens tomorrow at ' + fmt(nextOpen);
       }
+      statuses.forEach(function (el) {
+        var t = el.querySelector('.js-status-text');
+        if (t) t.textContent = text;
+        if (isOpen) el.classList.add('open');
+      });
+      var row = document.querySelector('.hours-card tr[data-day="' + day + '"]');
+      if (row) row.classList.add('today');
     } catch (e) { /* static text stays */ }
   })();
 </script>
