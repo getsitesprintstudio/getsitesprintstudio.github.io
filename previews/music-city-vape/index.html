@@ -158,25 +158,52 @@
   .btn-sm{padding:12px 20px;font-size:11px}
 
   /* ---------- hero ---------- */
-  .hero .wrap{
-    display:grid;grid-template-columns:repeat(12,1fr);gap:56px;
-    padding-top:104px;padding-bottom:96px;align-items:start;
+  .hero-figure{position:relative;height:min(88vh,840px);min-height:560px;overflow:hidden;background:var(--surface)}
+  .hero-figure>img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 65%;
+    filter:brightness(.94) contrast(1.04) saturate(.86);
+    transition:transform 1.6s cubic-bezier(.19,1,.22,1),filter .6s ease;
   }
-  .hero-copy{grid-column:1/8;padding-top:10px}
+  .hero-figure:hover>img{transform:scale(1.02);filter:brightness(.98) contrast(1.04) saturate(.9)}
+  .hero-scrim{
+    position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(9,9,9,.94) 0%,rgba(9,9,9,.78) 30%,rgba(9,9,9,.38) 56%,rgba(9,9,9,.10) 78%,rgba(9,9,9,.20) 100%);
+  }
+  .hero-content{position:absolute;inset:0;display:flex;align-items:flex-end}
+  .hero-content .wrap{width:100%;padding-bottom:54px}
+  .hero-copy{max-width:760px}
+  .hero-top{display:flex;align-items:center;justify-content:space-between;gap:10px 28px;flex-wrap:wrap}
+  .hero .status{
+    border:1px solid var(--line-strong);background:rgba(9,9,9,.55);
+    backdrop-filter:blur(8px);padding:8px 14px;
+  }
   .hero h1{
     font-family:var(--serif);font-weight:500;
-    font-size:clamp(58px,7.2vw,104px);
+    font-size:clamp(54px,6.6vw,96px);
     line-height:.98;letter-spacing:-.025em;
-    margin:26px 0 30px;color:var(--ink);
+    margin:24px 0 26px;color:var(--ink);
+    text-shadow:0 2px 34px rgba(0,0,0,.5);
   }
   .hero h1 .line{display:block}
   .hero h1 .amp{font-style:italic;font-weight:400;color:var(--gold)}
-  .hero p.lede{font-size:18px;line-height:1.8;color:var(--ink-soft);max-width:520px;font-weight:300}
+  .hero p.lede{font-size:18px;line-height:1.8;color:var(--ink-soft);max-width:520px;font-weight:300;text-shadow:0 1px 22px rgba(0,0,0,.55)}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:42px}
+  .hero-caption{
+    position:absolute;right:40px;bottom:20px;z-index:3;
+    display:block;padding:0;text-align:right;font-size:11.5px;
+  }
+  .hero-caption .credit{display:block;color:#7e7663;margin-top:2px}
+
+  /* ---------- hero meta (quick facts + hours) ---------- */
+  .hero-meta .wrap{
+    display:grid;grid-template-columns:repeat(12,1fr);gap:56px;
+    padding-top:64px;align-items:start;
+  }
+  .hero-meta .quickfacts{grid-column:1/8}
   .quickfacts{
     display:grid;grid-template-columns:repeat(3,1fr);gap:32px;
     border-top:1px solid var(--line);
-    margin-top:64px;padding-top:24px;max-width:600px;
+    padding-top:24px;
   }
   .quickfacts .k{display:block;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
   .quickfacts .v{font-family:var(--serif);font-size:16.5px;color:var(--ink);line-height:1.45}
@@ -206,16 +233,8 @@
   }
   .hours-module .note{margin-top:16px;font-size:12.5px;color:var(--faint);letter-spacing:.02em}
 
-  /* ---------- hero photograph ---------- */
-  .hero-photo{padding:0 24px}
-  .hero-photo figure{max-width:1560px;margin:0 auto}
+  /* ---------- photographs ---------- */
   .photo-frame{overflow:hidden;background:var(--surface)}
-  .hero-photo img{
-    width:100%;height:clamp(460px,80vh,800px);object-fit:cover;object-position:center 58%;
-    filter:brightness(.93) contrast(1.04) saturate(.85);
-    transition:transform 1.4s cubic-bezier(.19,1,.22,1),filter .6s ease;
-  }
-  .hero-photo figure:hover img{transform:scale(1.02);filter:brightness(.97) contrast(1.04) saturate(.9)}
   figcaption{
     display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     padding-top:13px;font-size:12px;line-height:1.6;color:var(--faint);letter-spacing:.03em;
@@ -321,8 +340,10 @@
 
   @media (max-width:1020px){
     nav.main a.navlink{display:none}
-    .hero .wrap{grid-template-columns:1fr;gap:56px;padding-top:80px;padding-bottom:80px}
-    .hero-copy,.hours-module{grid-column:1/-1}
+    .hero-figure{height:min(80vh,660px);min-height:500px}
+    .hero-caption{right:22px}
+    .hero-meta .wrap{grid-template-columns:1fr;gap:48px;padding-top:52px}
+    .hero-meta .quickfacts,.hours-module{grid-column:1/-1}
     .hours-module{max-width:560px}
     .quote .wrap{grid-template-columns:1fr;gap:18px;padding-top:104px;padding-bottom:104px}
     .quote .q-label,.quote .qtext{grid-column:1/-1}
@@ -350,18 +371,22 @@
     nav.main{gap:0}
     .header-phone{display:none}
     header .btn{display:none}
-    .hero .wrap{padding-top:64px;padding-bottom:64px;gap:48px}
-    .hero h1{font-size:clamp(47px,13.5vw,58px);margin:22px 0 24px}
-    .hero p.lede{font-size:16.5px}
-    .hero-ctas{margin-top:34px}
+    .hero-figure{height:68vh;min-height:440px}
+    .hero-figure>img{object-position:center 58%}
+    .hero-content .wrap{padding-bottom:30px}
+    .hero-caption{display:none}
+    .hero-top{gap:10px}
+    .hero .status{padding:7px 12px}
+    .hero h1{font-size:clamp(44px,12.5vw,56px);margin:20px 0 20px}
+    .hero p.lede{font-size:16px;line-height:1.7}
+    .hero-ctas{margin-top:30px}
     .hero-ctas .btn{flex:1;padding-left:12px;padding-right:12px}
-    .quickfacts{grid-template-columns:1fr 1fr;gap:22px 26px;margin-top:48px}
+    .hero-meta .wrap{padding-top:44px}
+    .quickfacts{grid-template-columns:1fr 1fr;gap:22px 26px}
     .hours-head{flex-direction:column;gap:4px}
     .hours-table td{padding:10px 2px}
     .hours-table td:first-child{font-size:12px}
     .hours-table td:last-child{font-size:15px}
-    .hero-photo{padding:0 12px}
-    .hero-photo img{height:380px;object-position:center 55%}
     .quote .wrap{padding-top:84px;padding-bottom:84px}
     .quote blockquote{font-size:29px}
     section.block{padding:88px 0}
@@ -391,7 +416,7 @@
     html{scroll-behavior:auto}
     *,*::before,*::after{transition:none !important;animation:none !important}
     .js .reveal{opacity:1;transform:none}
-    .hero-photo figure:hover img,.feature figure:hover img,.gallery figure:hover img{transform:none}
+    .hero-figure:hover>img,.feature figure:hover img,.gallery figure:hover img{transform:none}
   }
 </style>
 <noscript><style>.js .reveal{opacity:1;transform:none}</style></noscript>
@@ -428,20 +453,35 @@
 
   <main>
   <div class="hero">
+    <figure class="hero-figure">
+      <img src="img/storefront.jpg" alt="The Music City Vape and Smoke storefront on Madison Street, with red signage and black awnings">
+      <div class="hero-scrim"></div>
+      <div class="hero-content">
+        <div class="wrap">
+          <div class="hero-copy">
+            <div class="hero-top">
+              <div class="label">Madison Street, Clarksville, Tennessee</div>
+              <span class="status js-status"><span class="dot"></span><span class="js-status-text">See hours below</span></span>
+            </div>
+            <h1><span class="line">Music City</span><span class="line">Vape <span class="amp">&amp;</span> Smoke</span></h1>
+            <p class="lede">A tobacco and e-cigarette store at 2535 Madison St. Vape products, CBD, kratom, THC products, tobacco and smoke accessories, all in one shop. Doors open at 6 in the morning and the lights stay on until midnight, seven days a week.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-gold" href="tel:+19319190268">Call the Shop</a>
+              <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="hero-caption"><span>The storefront at 2535 Madison St, under the red sign.</span><span class="credit">Photo from the shop's Google listing</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="hero-meta">
     <div class="wrap">
-      <div class="hero-copy reveal">
-        <div class="label">Madison Street, Clarksville, Tennessee</div>
-        <h1><span class="line">Music City</span><span class="line">Vape <span class="amp">&amp;</span> Smoke</span></h1>
-        <p class="lede">A tobacco and e-cigarette store at 2535 Madison St. Vape products, CBD, kratom, THC products, tobacco and smoke accessories, all in one shop. Doors open at 6 in the morning and the lights stay on until midnight, seven days a week.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-gold" href="tel:+19319190268">Call the Shop</a>
-          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Music+City+Vape+and+Smoke+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
-        </div>
-        <div class="quickfacts">
-          <div class="qf"><span class="k">Address</span><span class="v">2535 Madison St</span></div>
-          <div class="qf"><span class="k">Phone</span><span class="v"><a href="tel:+19319190268">(931) 919-0268</a></span></div>
-          <div class="qf"><span class="k">Hours</span><span class="v">Seven days, until midnight</span></div>
-        </div>
+      <div class="quickfacts">
+        <div class="qf"><span class="k">Address</span><span class="v">2535 Madison St</span></div>
+        <div class="qf"><span class="k">Phone</span><span class="v"><a href="tel:+19319190268">(931) 919-0268</a></span></div>
+        <div class="qf"><span class="k">Hours</span><span class="v">Seven days, until midnight</span></div>
       </div>
       <div class="hours-module reveal">
         <div class="hours-head">
@@ -449,7 +489,6 @@
             <div class="label">Hours</div>
             <h2>Store Hours</h2>
           </div>
-          <span class="status js-status"><span class="dot"></span><span class="js-status-text">See hours below</span></span>
         </div>
         <table class="hours-table">
           <tr data-day="1"><td>Monday</td><td>6:00 AM - 12:00 AM</td></tr>
@@ -463,15 +502,6 @@
         <p class="note">Hours are the shop's published listing hours.</p>
       </div>
     </div>
-  </div>
-
-  <div class="hero-photo reveal">
-    <figure>
-      <div class="photo-frame">
-        <img src="img/storefront.jpg" alt="The Music City Vape and Smoke storefront on Madison Street, with red signage and black awnings">
-      </div>
-      <figcaption><span>The storefront at 2535 Madison St, under the red sign.</span><span class="credit">Photo from the shop's Google listing</span></figcaption>
-    </figure>
   </div>
 
   <div class="quote">
