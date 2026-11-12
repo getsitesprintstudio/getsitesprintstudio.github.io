@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icon Beauty Spa — Hair, Nails & Skin in Clarksville, TN</title>
+<meta name="description" content="Icon Beauty Spa in Clarksville, TN. Cuts, color, silk press, braids, wigs, weaves, natural hair styling, nails, facials and waxing — all under one roof at 2535 Madison St.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#221a15; --espresso:#2e211a; --cream:#faf5ee; --sand:#f1e7da;
+    --gold:#c19a3d; --gold-soft:#e8cf9a; --rose:#b76e5a; --line:#e3d5c3;
+    --muted:#6f6156;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Jost",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+  h1,h2,h3,.serif{font-family:"Fraunces",Georgia,serif}
+  img{display:block;max-width:100%}
+  a{text-decoration:none}
+  .topbar{background:var(--espresso);color:var(--gold-soft);font-size:13px;text-align:center;padding:8px 12px;letter-spacing:.08em;text-transform:uppercase}
+  header{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;position:sticky;top:0;background:rgba(250,245,238,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:20}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-badge{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#d9b45f,var(--gold) 60%,#97742a);display:flex;align-items:center;justify-content:center;color:#fff;font-family:"Fraunces",serif;font-weight:700;font-size:19px;box-shadow:0 2px 8px rgba(46,33,26,.25)}
+  .logo-name{font-family:"Fraunces",serif;font-weight:700;font-size:20px;line-height:1.1;color:var(--espresso)}
+  .logo-sub{font-size:11.5px;color:var(--gold);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+  .book-btn{background:var(--espresso);color:#fff;font-weight:600;font-size:14px;padding:11px 20px;border-radius:999px;white-space:nowrap;letter-spacing:.02em}
+  .book-btn:hover{background:#453227}
+  .hero{position:relative;min-height:560px;display:flex;align-items:flex-end;color:#fff;background:#241a13}
+  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,20,13,.18) 0%,rgba(30,20,13,.06) 40%,rgba(30,20,13,.84) 100%)}
+  .hero-inner{position:relative;z-index:2;padding:56px 22px 48px;max-width:1020px;margin:0 auto;width:100%}
+  .kicker{color:var(--gold-soft);font-weight:600;font-size:13px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
+  .hero h1{font-size:52px;line-height:1.05;font-weight:600;max-width:620px;margin-bottom:16px}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero p{font-size:18px;color:#f3e9dc;max-width:540px;margin-bottom:28px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .btn-gold{background:var(--gold);color:#241a04;font-weight:700;padding:15px 28px;border-radius:999px;font-size:16px}
+  .btn-gold:hover{background:#cda94e}
+  .btn-ghost{border:2px solid rgba(255,255,255,.85);color:#fff;font-weight:600;padding:15px 28px;border-radius:999px;font-size:16px}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .strip{background:var(--espresso);color:var(--gold-soft);overflow:hidden;white-space:nowrap;padding:13px 0;font-size:14px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+  .strip span{margin:0 18px}
+  .strip b{color:#fff;font-weight:600}
+  section{padding:58px 22px;max-width:1060px;margin:0 auto}
+  .sec-kicker{text-align:center;color:var(--gold);font-weight:600;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:10px}
+  .sec-title{font-size:34px;font-weight:600;text-align:center;margin-bottom:10px;color:var(--espresso)}
+  .sec-sub{text-align:center;color:var(--muted);margin-bottom:36px;font-size:16.5px;max-width:560px;margin-left:auto;margin-right:auto}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 3px 14px rgba(46,33,26,.05)}
+  .card img{width:100%;height:170px;object-fit:cover}
+  .card-body{padding:22px 20px 24px}
+  .card h3{font-size:20px;margin-bottom:8px;color:var(--espresso)}
+  .card p{font-size:15px;color:var(--muted)}
+  .card ul{list-style:none;margin-top:12px}
+  .card li{font-size:14.5px;padding:5px 0 5px 18px;position:relative;color:#4c4036;border-top:1px dashed var(--line)}
+  .card li:first-child{border-top:none}
+  .card li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .why-item{background:var(--sand);border-radius:18px;padding:28px 24px;text-align:center}
+  .why-item .num{font-family:"Fraunces",serif;font-size:30px;color:var(--gold);font-weight:700;margin-bottom:8px}
+  .why-item h3{font-size:19px;margin-bottom:7px;color:var(--espresso)}
+  .why-item p{font-size:15px;color:var(--muted)}
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+  .visit-photo{border-radius:20px;overflow:hidden;min-height:280px}
+  .visit-photo img{width:100%;height:100%;object-fit:cover}
+  .visit-card{background:var(--espresso);color:#f3e9dc;border-radius:20px;padding:36px 30px;display:flex;flex-direction:column;justify-content:center}
+  .visit-card h2{color:#fff;font-size:28px;margin-bottom:12px}
+  .visit-card p{font-size:16px;margin-bottom:8px}
+  .visit-card .addr{font-size:18px;color:var(--gold-soft);font-weight:600;margin-bottom:20px}
+  .visit-card .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+  .cta-band{background:linear-gradient(140deg,#3a2a1e,var(--espresso) 55%,#241a13);color:#fff;border-radius:22px;padding:46px 26px;text-align:center}
+  .cta-band h2{font-size:31px;margin-bottom:12px;font-weight:600}
+  .cta-band h2 em{font-style:italic;color:var(--gold-soft)}
+  .cta-band p{color:#e8dccb;margin-bottom:26px;font-size:16.5px;max-width:520px;margin-left:auto;margin-right:auto}
+  footer{padding:30px 22px 44px;text-align:center;color:#8a7a6a;font-size:13.5px}
+  footer .fname{font-family:"Fraunces",serif;font-size:16px;color:var(--espresso);font-weight:600}
+  .concept{margin-top:14px;display:inline-block;background:#fff;border:1px dashed #cfc0ab;border-radius:10px;padding:8px 14px;color:#6a675c}
+  @media (max-width:640px){
+    .hero{min-height:500px}
+    .hero h1{font-size:38px}
+    .visit{grid-template-columns:1fr}
+    .sec-title{font-size:28px}
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">2535 Madison St &nbsp;•&nbsp; Clarksville, TN &nbsp;•&nbsp; Hair • Nails • Skin</div>
+
+  <header>
+    <div class="logo">
+      <div class="logo-badge">I</div>
+      <div>
+        <div class="logo-name">Icon Beauty Spa</div>
+        <div class="logo-sub">Clarksville, Tennessee</div>
+      </div>
+    </div>
+    <a class="book-btn" href="https://www.instagram.com/_iconbeautyspa">Book on Instagram</a>
+  </header>
+
+  <div class="hero">
+    <img class="bg" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1600&auto=format&fit=crop" alt="Inside a beauty salon">
+    <div class="hero-inner">
+      <div class="kicker">Beauty Salon • Day Spa • Clarksville</div>
+      <h1>Hair, nails, and skin. <em>One roof.</em></h1>
+      <p>Cuts, color, braids, wigs, and weaves — plus a licensed manicurist and a licensed esthetician on the team. Everything you book, all in one visit.</p>
+      <div class="hero-ctas">
+        <a class="btn-gold" href="https://www.instagram.com/_iconbeautyspa">Book Your Chair</a>
+        <a class="btn-ghost" href="#services">See Services</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip"><span>Silk Press</span><b>•</b><span>Braids</span><b>•</b><span>Wigs &amp; Weaves</span><b>•</b><span>Natural Hair</span><b>•</b><span>Nails</span><b>•</b><span>Facials</span><b>•</b><span>Waxing</span><b>•</b><span>Color</span></div>
+
+  <section id="services">
+    <div class="sec-kicker">What We Do</div>
+    <div class="sec-title">Every service, one address</div>
+    <p class="sec-sub">Most salons make you pick one lane. At Icon you can get your hair done, your nails done, and your skin right without driving across town.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1200&auto=format&fit=crop" alt="Hair styling in a salon">
+        <div class="card-body">
+          <h3>Hair &amp; Silk Press</h3>
+          <p>The full chair menu, from a fresh cut to a full color change.</p>
+          <ul>
+            <li>Haircuts &amp; styling</li>
+            <li>Hair color</li>
+            <li>Silk press</li>
+            <li>Cut and color</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1200&auto=format&fit=crop" alt="Braiding and beauty work">
+        <div class="card-body">
+          <h3>Braids, Wigs &amp; Weaves</h3>
+          <p>Protective styles and installs, done in-house.</p>
+          <ul>
+            <li>Braids</li>
+            <li>Wigs &amp; weaves</li>
+            <li>Quick weaves</li>
+            <li>Sew-ins</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1200&auto=format&fit=crop" alt="Natural beauty look">
+        <div class="card-body">
+          <h3>Natural Hair</h3>
+          <p>Styling that works with your texture, not against it.</p>
+          <ul>
+            <li>Natural hair styling</li>
+            <li>Two and three strand twists</li>
+            <li>Flat twists</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop" alt="Manicure close up">
+        <div class="card-body">
+          <h3>Nails &amp; Skin</h3>
+          <p>A licensed manicurist and a licensed esthetician, right here in the same shop.</p>
+          <ul>
+            <li>Manicures &amp; nail care</li>
+            <li>Facials</li>
+            <li>Waxing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="sec-kicker">Why Icon</div>
+    <div class="sec-title">One stop, done right</div>
+    <p class="sec-sub" style="margin-bottom:30px">Three reasons Clarksville clients keep it all under this roof.</p>
+    <div class="why">
+      <div class="why-item">
+        <div class="num">01</div>
+        <h3>Everything in one visit</h3>
+        <p>Hair, nails, and skin in a single stop on Madison Street. No salon-hopping across town.</p>
+      </div>
+      <div class="why-item">
+        <div class="num">02</div>
+        <h3>Licensed specialists</h3>
+        <p>A licensed manicurist and a licensed esthetician on the team, alongside stylists for every hair type.</p>
+      </div>
+      <div class="why-item">
+        <div class="num">03</div>
+        <h3>Every hair type welcome</h3>
+        <p>From silk presses to sew-ins to natural twists, the chair is set up for your hair, whatever it does.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="visit">
+      <div class="visit-photo">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1200&auto=format&fit=crop" alt="Facial treatment at a spa">
+      </div>
+      <div class="visit-card">
+        <h2>Visit us</h2>
+        <p class="addr">2535 Madison St, Clarksville, TN 37043</p>
+        <p>Booking runs through Instagram. Send a message with the service you want and the day you are looking at, and the team will take it from there.</p>
+        <div class="row">
+          <a class="btn-gold" href="https://www.instagram.com/_iconbeautyspa">Message on Instagram</a>
+          <a class="btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Icon+Beauty+Spa+2535+Madison+St+Clarksville+TN+37043">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="cta-band">
+      <h2>Your next look starts <em>here</em>.</h2>
+      <p>Hair, nails, and skin, all in one Clarksville stop. Message the shop on Instagram to grab your appointment.</p>
+      <a class="btn-gold" href="https://www.instagram.com/_iconbeautyspa">Book on Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <span class="fname">Icon Beauty Spa</span> • 2535 Madison St • Clarksville, TN
+    <br>
+    <span class="concept">Concept preview built by SiteSprint Studio — this is not the live website of Icon Beauty Spa.</span>
+  </footer>
+</body>
+</html>
