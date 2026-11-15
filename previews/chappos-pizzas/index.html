@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chappo's Pizzas VES — Villa El Salvador, Lima | 3 locales y delivery</title>
+<meta name="description" content="Chappo's Pizzas VES en Villa El Salvador, Lima. Tres locales: Óvalo Chama, Av. Separadora Industrial y Av. Talara. Promo Familiar S/36, combos S/29–34 y 3 pizzas familiares S/50. Delivery por WhatsApp +51 970 503 828.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fff8f0;--ink:#1d1410;--mut:#7a6558;--red:#c1272d;--red2:#9e1b20;--tomato:#e94f37;--gold:#f2a81d;--cream:#ffe9c9;--line:#f0dcc4;--card:#fff;--wa:#1faa55;--shadow:0 20px 45px rgba(29,20,16,.16);--radius:20px;--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--red);color:#fff}img{max-width:100%}
+header{position:sticky;top:0;z-index:50;background:rgba(255,248,240,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}header.scrolled{box-shadow:0 10px 30px rgba(29,20,16,.12);border-bottom-color:var(--line)}
+.hdr{max-width:1160px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:clamp(22px,3vw,28px)} .brand span{color:var(--red)} .brand small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.22em;font-weight:800;color:var(--mut)}
+.pill{font-size:12.5px;font-weight:800;color:var(--red2);background:#ffe4e0;padding:9px 14px;border-radius:999px}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700}.odot{width:9px;height:9px;border-radius:50%;background:#bbb}.opennow.open .odot{background:#27ae60;box-shadow:0 0 0 4px rgba(39,174,96,.18)}.opennow.closed .odot{background:#d35450;box-shadow:0 0 0 4px rgba(211,84,80,.15)}
+.hero{position:relative;isolation:isolate;color:#fff;text-align:center;overflow:hidden;background:#140d0a}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,10,8,.72),rgba(158,27,32,.45) 55%,rgba(20,10,8,.92))}
+.hero-in{max-width:900px;margin:0 auto;padding:clamp(90px,14vw,150px) 20px clamp(90px,12vw,140px)}
+.badge{display:inline-block;background:var(--gold);color:#1d1410;font-size:12px;font-weight:900;letter-spacing:1.4px;padding:9px 16px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-size:clamp(42px,7.5vw,74px);line-height:.98;margin:24px auto 16px;max-width:760px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{color:#ffeeda;max-width:580px;margin:0 auto 30px;font-size:clamp(16px,2vw,19px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)} .btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 28px rgba(31,170,85,.3)} .btn.white{background:#fff;color:var(--red2)} .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px} section{padding:clamp(64px,9vw,104px) 0 4px}
+.eyebrow{text-align:center;font-size:12px;font-weight:900;letter-spacing:.32em;color:var(--red);margin-bottom:14px}
+h2{font-family:var(--serif);font-size:clamp(32px,4.6vw,46px);line-height:1.08;text-align:center;margin-bottom:12px} .sub{text-align:center;color:var(--mut);max-width:620px;margin:0 auto 38px}
+.sede-picker{background:#1d1410;color:#fff;border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.sede-picker h3{font-family:var(--serif);font-size:24px;text-align:center;margin-bottom:6px}.sede-picker p{text-align:center;color:#d8c3b2;font-size:14px;margin-bottom:20px}
+.sedes-btns{display:grid;grid-template-columns:1fr;gap:12px}@media(min-width:760px){.sedes-btns{grid-template-columns:repeat(3,1fr)}}
+.sede-btn{border:2px solid #4a3428;background:#2a1c16;color:#fff;border-radius:16px;padding:18px;text-align:left;cursor:pointer;font:inherit;transition:.2s}.sede-btn b{display:block;font-size:16px;margin-bottom:4px}.sede-btn span{font-size:13px;color:#d8c3b2;line-height:1.5;display:block}.sede-btn.active{border-color:var(--gold);background:#3a2418;box-shadow:0 0 0 3px rgba(242,168,29,.25)}
+.picked{text-align:center;margin-top:16px;font-weight:700;color:var(--gold);font-size:14px}
+.promo-grid{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:760px){.promo-grid{grid-template-columns:repeat(3,1fr)}}
+.promo{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(29,20,16,.06);transition:.3s}.promo:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.promo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.promo-in{padding:24px}.promo .tag{font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--red);text-transform:uppercase}.promo h3{font-family:var(--serif);font-size:24px;margin:6px 0 6px}.promo p{font-size:14.5px;color:var(--mut)}
+.price{font-family:var(--serif);font-size:38px;font-weight:700;color:var(--red);margin:14px 0}
+.ord{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px}.ord:hover{background:#178a44}
+.loc-grid{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:860px){.loc-grid{grid-template-columns:repeat(3,1fr)}}
+.loc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:0 6px 20px rgba(29,20,16,.05)}
+.loc .num{width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;margin-bottom:16px}
+.loc h3{font-family:var(--serif);font-size:22px;margin-bottom:8px}.loc p{font-size:14.5px;color:var(--mut);margin-bottom:18px}
+.loc a.maplink{font-weight:800;color:var(--red);text-decoration:none}.loc a.walink{display:flex;margin-top:12px;min-height:48px;align-items:center;justify-content:center;background:#fff1e8;border:1.5px solid var(--red);color:var(--red2);border-radius:999px;text-decoration:none;font-weight:800}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.hours{background:var(--red2);color:#fff;border-radius:24px;padding:clamp(40px,6vw,60px) 26px;text-align:center;margin-top:clamp(56px,8vw,84px);box-shadow:var(--shadow)}
+.hours h2{color:#fff}.hours .row{display:flex;justify-content:space-between;max-width:520px;margin:0 auto;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.22);font-size:15px}.hours .row b{color:var(--cream)}
+.mapframe{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:8px}.mapframe iframe{width:100%;height:360px;border:0;display:block}
+footer{padding:36px 20px 116px;text-align:center;color:var(--mut);font-size:13px;max-width:1160px;margin:56px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1160px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(18px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--red);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--red);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.9;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fff1e8;align-self:flex-start}.msg.user{background:var(--red);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--red);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">Chappo's <span>Pizzas</span><small>VILLA EL SALVADOR · VES</small></div>
+<div class="pill">3 locales en VES</div>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Chappo's Pizzas VES — pizzas y promociones en Villa El Salvador">
+<div class="hero-in rv">
+<div class="badge">🍕 Villa El Salvador · Delivery 970 503 828</div>
+<h1>La noche en VES sabe a <em>Chappo's</em></h1>
+<p>Tres locales en Villa El Salvador, promos para compartir en familia y delivery por WhatsApp. Elige tu sede, elige tu promo y pide en un toque.</p>
+<div class="actions">
+<a class="btn wa" href="#pedir">Pedir por WhatsApp</a>
+<a class="btn white" href="#locales">Ver los 3 locales</a>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="pedir" class="rv">
+<div class="eyebrow">01 · PIDE EN 2 PASOS</div>
+<h2>Primero elige tu sede, luego tu promo</h2>
+<p class="sub">Tu pedido por WhatsApp llega nombrando la sede que elijas, para que te atiendan del local más cercano.</p>
+<div class="sede-picker">
+<h3>Paso 1 — ¿De qué sede pides?</h3>
+<p>Toca tu local. Todas las promos de abajo se pedirán desde esa sede.</p>
+<div class="sedes-btns">
+<button type="button" class="sede-btn active" data-sede="Óvalo Chama"><b>Local 1 · Óvalo Chama</b><span>Óvalo Chama, al lado del Grifo Primax</span></button>
+<button type="button" class="sede-btn" data-sede="Separadora Industrial"><b>Local 2 · Separadora Industrial</b><span>Av. Separadora Industrial con Calle J, al lado de Monking</span></button>
+<button type="button" class="sede-btn" data-sede="Av. Talara"><b>Local 3 · Av. Talara</b><span>Av. Talara, a 1 cuadra del Mercado Túpac Amaru, cruce con Av. Álamos</span></button>
+</div>
+<div class="picked" id="pickedLabel">Sede elegida: Óvalo Chama</div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">02 · PROMOS VERIFICADAS</div>
+<h2>Paso 2 — Elige tu promo</h2>
+<p class="sub">Precios tal como los publica Chappo's Pizzas VES. Toca Pedir y se abre WhatsApp con tu sede y tu promo ya escritas.</p>
+<div class="promo-grid">
+<article class="promo"><img src="img/p4.jpg" alt="Pizza familiar de Chappo's Pizzas VES"><div class="promo-in"><div class="tag">La favorita</div><h3>Promo Familiar</h3><p>La promo familiar de Chappo's Pizzas VES, para compartir en casa.</p><div class="price">S/36</div><a class="ord" data-promo="Promo Familiar (S/36)" href="#">Pedir esta promo →</a></div></article>
+<article class="promo"><img src="img/p2.jpg" alt="Combo de pizzas de Chappo's Pizzas VES"><div class="promo-in"><div class="tag">Combos</div><h3>Combos</h3><p>Combos de Chappo's Pizzas VES en el rango publicado por la casa.</p><div class="price">S/29–34</div><a class="ord" data-promo="Combo (S/29–34)" href="#">Pedir un combo →</a></div></article>
+<article class="promo"><img src="img/p7.jpg" alt="Tres pizzas familiares de Chappo's Pizzas VES"><div class="promo-in"><div class="tag">Para el grupo</div><h3>3 pizzas familiares</h3><p>Tres pizzas familiares al precio de promo publicado por Chappo's.</p><div class="price">S/50</div><a class="ord" data-promo="3 pizzas familiares (S/50)" href="#">Pedir las 3 pizzas →</a></div></article>
+</div>
+<p style="text-align:center;color:var(--mut);font-size:13px;margin-top:18px">Promos y precios tomados de las publicaciones de Chappo's Pizzas VES. Confirma disponibilidad de tu promo al pedir por WhatsApp.</p>
+</section>
+
+<section id="locales" class="rv">
+<div class="eyebrow">03 · NUESTROS LOCALES</div>
+<h2>Tres sedes en Villa El Salvador</h2>
+<p class="sub">Somos Chappo's Pizzas VES. Encuéntranos en estos tres puntos de Villa El Salvador, Lima.</p>
+<div class="loc-grid">
+<div class="loc"><div class="num">1</div><h3>Óvalo Chama</h3><p>Local 1: Óvalo Chama, al lado del Grifo Primax, Villa El Salvador, Lima.</p><a class="maplink" href="https://www.google.com/maps?q=%C3%93valo+Chama,+Villa+El+Salvador,+Lima,+Per%C3%BA" target="_blank" rel="noopener">Cómo llegar →</a><a class="walink" href="https://wa.me/51970503828?text=Hola%20Chappo's%20Pizzas%2C%20quiero%20pedir%20desde%20la%20sede%20%C3%93valo%20Chama">Pedir desde Óvalo Chama</a></div>
+<div class="loc"><div class="num">2</div><h3>Separadora Industrial</h3><p>Local 2: Av. Separadora Industrial con Calle J, al lado de Monking, Villa El Salvador, Lima.</p><a class="maplink" href="https://www.google.com/maps?q=Av.+Separadora+Industrial+con+Calle+J,+Villa+El+Salvador,+Lima,+Per%C3%BA" target="_blank" rel="noopener">Cómo llegar →</a><a class="walink" href="https://wa.me/51970503828?text=Hola%20Chappo's%20Pizzas%2C%20quiero%20pedir%20desde%20la%20sede%20Separadora%20Industrial">Pedir desde Separadora Industrial</a></div>
+<div class="loc"><div class="num">3</div><h3>Av. Talara</h3><p>Local 3: Av. Talara, a 1 cuadra del Mercado Túpac Amaru, cruce con Av. Álamos, Villa El Salvador, Lima.</p><a class="maplink" href="https://www.google.com/maps?q=Av.+Talara+cruce+con+Av.+%C3%81lamos,+Villa+El+Salvador,+Lima,+Per%C3%BA" target="_blank" rel="noopener">Cómo llegar →</a><a class="walink" href="https://wa.me/51970503828?text=Hola%20Chappo's%20Pizzas%2C%20quiero%20pedir%20desde%20la%20sede%20Av.+Talara">Pedir desde Av. Talara</a></div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">04 · GALERÍA</div>
+<h2>Así se ve Chappo's</h2>
+<p class="sub">Fotos reales publicadas por Chappo's Pizzas VES.</p>
+<div class="strip">
+<figure><img src="img/p1.jpg" alt="Pizza de Chappo's Pizzas VES"><figcaption>Recién horneada</figcaption></figure>
+<figure><img src="img/p3.jpg" alt="Pizza familiar de Chappo's Pizzas VES"><figcaption>Para compartir</figcaption></figure>
+<figure><img src="img/p5.jpg" alt="Pizza de Chappo's Pizzas VES"><figcaption>Sabor de la casa</figcaption></figure>
+<figure><img src="img/p6.jpg" alt="Pizza de Chappo's Pizzas VES"><figcaption>Directo del horno</figcaption></figure>
+<figure><img src="img/p8.jpg" alt="Chappo's Pizzas VES en Villa El Salvador"><figcaption>Chappo's VES</figcaption></figure>
+<figure><img src="img/logo.jpg" alt="Logo de Chappo's Pizzas VES"><figcaption>Chappo's Pizzas VES</figcaption></figure>
+<figure><img src="img/p2.jpg" alt="Combo de Chappo's Pizzas VES"><figcaption>Combos S/29–34</figcaption></figure>
+<figure><img src="img/p4.jpg" alt="Promo familiar de Chappo's Pizzas VES"><figcaption>Promo Familiar S/36</figcaption></figure>
+</div>
+</section>
+
+<div class="hours rv">
+<div class="eyebrow" style="color:var(--gold)">05 · HORARIO</div>
+<h2>Horario de atención</h2>
+<div class="row"><span>Lunes</span><b>6:00 p. m. – 11:30 p. m.</b></div>
+<div class="row"><span>Martes</span><b>6:00 p. m. – 11:30 p. m.</b></div>
+<div class="row"><span>Miércoles</span><b>6:00 p. m. – 11:30 p. m.</b></div>
+<div class="row"><span>Jueves</span><b>6:00 p. m. – 11:30 p. m.</b></div>
+<div class="row"><span>Viernes</span><b>6:00 p. m. – 11:30 p. m.</b></div>
+<div class="row"><span>Sábado</span><b>6:00 p. m. – 12:00 a. m.</b></div>
+<div class="row"><span>Domingo</span><b>6:00 p. m. – 11:00 p. m.</b></div>
+<p style="margin-top:18px;color:#ffeeda">🛵 Delivery por WhatsApp: +51 970 503 828</p>
+</div>
+
+<section class="rv">
+<div class="eyebrow">06 · DELIVERY</div>
+<h2>Pide y te lo llevamos</h2>
+<p class="sub">Delivery en Villa El Salvador por WhatsApp al 970 503 828. Elige tu sede arriba y pide tu promo en un toque.</p>
+<div style="text-align:center"><a class="btn wa" href="https://wa.me/51970503828?text=Hola%20Chappo's%20Pizzas%2C%20quiero%20hacer%20un%20pedido%20por%20delivery">Pedir delivery — WhatsApp</a></div>
+</section>
+</div>
+
+<div style="max-width:1160px;margin:0 auto;padding:clamp(48px,7vw,72px) 20px 0">
+<h2>Encuéntranos en VES</h2>
+<div class="mapframe"><iframe title="Mapa — Chappo's Pizzas VES, Villa El Salvador" src="https://www.google.com/maps?q=Chappo's%20Pizzas%20VES%2C%20Villa%20El%20Salvador%2C%20Lima%2C%20Per%C3%BA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
+
+<footer>
+Chappo's Pizzas VES · Villa El Salvador, Lima, Perú · WhatsApp +51 970 503 828<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Chappo's Pizzas VES.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/51970503828?text=Hola%20Chappo's%20Pizzas%2C%20quiero%20hacer%20un%20pedido">🍕 Pedir por WhatsApp — 970 503 828</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Chappo's">
+<div class="chatw-head"><div><b>Asistente Chappo's</b><small>Asistente de demostración · parte de esta vista previa</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>10)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+/* Location picker — order links name the chosen sede */
+var sede='Óvalo Chama';
+function waFor(promo){return 'https://wa.me/51970503828?text='+encodeURIComponent("Hola Chappo's Pizzas, quiero pedir desde la sede "+sede+": "+promo);}
+function refreshOrders(){document.querySelectorAll('.ord').forEach(function(a){a.href=waFor(a.getAttribute('data-promo'));});document.getElementById('pickedLabel').textContent='Sede elegida: '+sede;}
+document.querySelectorAll('.sede-btn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.sede-btn').forEach(function(x){x.classList.remove('active')});b.classList.add('active');sede=b.getAttribute('data-sede');refreshOrders();});});
+refreshOrders();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Escribir por WhatsApp","href":"https://wa.me/51970503828"},"greeting":"¡Hola! Soy el asistente de Chappo's Pizzas VES. Pregúntame por las promos, los 3 locales, el horario o el delivery — o toca una sugerencia.","fallback":"Eso no lo tengo a la mano — escríbenos por WhatsApp al +51 970 503 828 y te ayudamos.","chips":["¿Qué promos hay?","¿Dónde están los locales?","¿Cuál es el horario?","¿Hacen delivery?","Quiero pedir"],"items":[{"k":["promo familiar","familiar"],"a":"Promo Familiar — S/36. Pídela por WhatsApp eligiendo tu sede en esta página.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51970503828"}},{"k":["3 pizzas","tres pizzas"],"a":"3 pizzas familiares — S/50, al precio de promo publicado por Chappo's.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51970503828"}},{"k":["combo"],"a":"Combos — S/29 a S/34, en el rango publicado por Chappo's Pizzas VES.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51970503828"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por las promos, los locales, el horario o el delivery."},{"k":["promo","precio","cuesta","oferta"],"a":"Promos publicadas: Promo Familiar S/36, Combos S/29–34 y 3 pizzas familiares S/50. Confirma disponibilidad al pedir por WhatsApp.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51970503828"}},{"k":["horario","abren","abierto","cierran","hora"],"a":"Horario: lunes a viernes 6:00 p. m. – 11:30 p. m., sábado 6:00 p. m. – 12:00 a. m. y domingo 6:00 p. m. – 11:00 p. m."},{"k":["donde","local","sede","direccion","ubicacion","ovalo","chama","separadora","talara"],"a":"Tenemos 3 locales en Villa El Salvador: 1) Óvalo Chama, al lado del Grifo Primax. 2) Av. Separadora Industrial con Calle J, al lado de Monking. 3) Av. Talara, a 1 cuadra del Mercado Túpac Amaru, cruce con Av. Álamos."},{"k":["delivery","domicilio","llevar"],"a":"Sí, hacemos delivery. Pide por WhatsApp al +51 970 503 828 y elige tu sede: Óvalo Chama, Separadora Industrial o Av. Talara.","link":{"t":"Pedir delivery","href":"https://wa.me/51970503828"}},{"k":["pedir","ordenar","comprar"],"a":"Para pedir: elige tu sede en esta página (Óvalo Chama, Separadora Industrial o Av. Talara), toca Pedir en la promo que quieras y se abre WhatsApp con tu pedido listo.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51970503828"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp y delivery: +51 970 503 828.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/51970503828"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en Chappo's."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+var SCHED={"tz":"America/Lima","days":{"0":[[1080,1380,"6:00 p. m.","11:00 p. m."]],"1":[[1080,1410,"6:00 p. m.","11:30 p. m."]],"2":[[1080,1410,"6:00 p. m.","11:30 p. m."]],"3":[[1080,1410,"6:00 p. m.","11:30 p. m."]],"4":[[1080,1410,"6:00 p. m.","11:30 p. m."]],"5":[[1080,1410,"6:00 p. m.","11:30 p. m."]],"6":[[1080,1440,"6:00 p. m.","12:00 a. m."]]}};
+var OTXT={"open":"Abierto ahora · hasta las {x}","closed":"Cerrado · abre a las {x}","closedTomorrow":"Cerrado · abre mañana a las {x}","closedDay":"Cerrado · abre el {d} a las {x}","days":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"]};
+(function(){var el=document.getElementById('opennow');if(!el)return;function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;})();
+})();
+</script>
+</body>
+</html>

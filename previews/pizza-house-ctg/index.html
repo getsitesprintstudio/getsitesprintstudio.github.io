@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizza House CTG — El Recreo, Cartagena | Pizzas y panzerotti</title>
+<meta name="description" content="Pizza House CTG, pizzería en el barrio El Recreo, Cartagena. Pizzas, panzerotti, bocadillos y vino. Arma tu pedido paso a paso y envíalo por WhatsApp al +57 318 285 8528, sin enredos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#fdf7ec;--panel:#fffdf7;--ink:#2b1a12;--mut:#7d6a58;--red:#b3311f;--red2:#8f2413;--gold:#e2a63d;--line:#ecdcc2;--card:#ffffff;--wa:#1faa55;--shadow:0 20px 45px rgba(43,26,18,.16);--shadow-sm:0 10px 26px rgba(43,26,18,.10);--radius:20px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--red);color:#fff}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  :focus-visible{outline:2px solid var(--red);outline-offset:3px}
+  header{position:sticky;top:0;z-index:50;background:rgba(253,247,236,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:background .3s ease,box-shadow .3s ease,border-color .3s ease}
+  header.scrolled{background:var(--paper);border-bottom-color:var(--line);box-shadow:0 10px 28px rgba(43,26,18,.10)}
+  .header-in{max-width:1120px;margin:0 auto;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(21px,2.6vw,25px);line-height:1.1}
+  .brand img{width:42px;height:42px;border-radius:50%;display:block;box-shadow:0 4px 12px rgba(43,26,18,.25)}
+  .brand span{color:var(--red)}
+  .pill{font-size:12.5px;font-weight:700;color:var(--red2);background:#fbeed3;padding:8px 14px;border-radius:999px;white-space:nowrap;border:1px solid var(--line);min-height:36px;display:inline-flex;align-items:center}
+  .hero{position:relative;overflow:hidden;isolation:isolate;color:#fff;text-align:center;padding:clamp(88px,14vw,150px) 20px clamp(84px,12vw,134px)}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;z-index:-2;display:block}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(30,13,7,.66) 0%,rgba(30,13,7,.58) 46%,rgba(143,36,19,.48) 80%,rgba(30,13,7,.9) 100%)}
+  .hero-in{max-width:860px;margin:0 auto}
+  .badge{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.6px;padding:9px 16px;border-radius:999px;text-transform:uppercase;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+  .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(42px,7.4vw,72px);line-height:1.04;letter-spacing:-.02em;margin:26px auto 18px;max-width:740px;text-wrap:balance}
+  .hero p{color:rgba(255,246,230,.92);max-width:620px;margin:0 auto 32px;font-size:clamp(16px,2.2vw,18px);line-height:1.65}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px;line-height:1.2;border:none;cursor:pointer;font-family:inherit;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;box-shadow:0 8px 22px rgba(43,26,18,.22)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(43,26,18,.28)}
+  .btn.wa{background:var(--wa);color:#fff}
+  .btn.red{background:var(--red);color:#fff}
+  .btn.red:hover{background:var(--red2)}
+  .btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.65);box-shadow:none;backdrop-filter:blur(4px)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:clamp(64px,10vw,110px) 0 0}
+  section:last-child{padding-bottom:clamp(64px,10vw,110px)}
+  .eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;font-size:12px;font-weight:800;letter-spacing:.28em;color:var(--red);margin-bottom:16px}
+  .eyebrow::before,.eyebrow::after{content:"";width:34px;height:1px;background:var(--red);opacity:.5}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(30px,4.6vw,42px);line-height:1.12;letter-spacing:-.015em;text-align:center;margin-bottom:12px;text-wrap:balance}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;line-height:1.65;max-width:620px;margin:0 auto 38px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px;text-align:center;box-shadow:0 2px 10px rgba(43,26,18,.05);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm)}
+  .card .ic{font-size:30px;line-height:1;margin-bottom:14px}
+  .card h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px;line-height:1.25;margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--mut);line-height:1.65}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .strip figure{margin:0}
+  .strip img{width:100%;aspect-ratio:4/5;height:auto;object-fit:cover;border-radius:16px;display:block;box-shadow:var(--shadow-sm);transition:transform .3s ease,box-shadow .3s ease}
+  .strip figure:hover img{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .strip figcaption{font-size:12.5px;font-weight:600;color:var(--mut);text-align:center;margin-top:10px}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:0 2px 10px rgba(43,26,18,.05);transition:transform .3s ease,box-shadow .3s ease}
+  .menu-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+  .menu-card .mic{font-size:30px;line-height:1;margin-bottom:12px}
+  .menu-card h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:22px;line-height:1.25;color:var(--red2);margin-bottom:8px}
+  .menu-card p{font-size:14.5px;color:var(--mut);line-height:1.65;margin-bottom:18px}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:18px auto 0;line-height:1.6}
+
+  /* ---------- Armador de pedidos (centro) ---------- */
+  .builder{background:#241209;color:#fdf3e0;border-radius:26px;padding:clamp(30px,5vw,52px) clamp(20px,4.5vw,48px);box-shadow:var(--shadow);margin-top:6px}
+  .builder h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(24px,3.6vw,32px);line-height:1.2;text-align:center;margin-bottom:8px}
+  .builder .bsub{text-align:center;color:#d8c3a5;font-size:14.5px;max-width:560px;margin:0 auto 30px;line-height:1.6}
+  .steps{display:grid;grid-template-columns:1fr;gap:26px}
+  @media(min-width:900px){.steps{grid-template-columns:1.25fr .95fr;gap:34px}}
+  .step-label{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:11px;display:flex;align-items:center;gap:9px}
+  .step-label b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:12px;letter-spacing:0;flex:none}
+  .type-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+  .type-btn{border:1.5px solid #5a4030;background:transparent;color:#fdf3e0;font:inherit;font-weight:700;font-size:15px;padding:11px 20px;border-radius:999px;cursor:pointer;min-height:48px;transition:background .2s ease,border-color .2s ease,color .2s ease}
+  .type-btn:hover{border-color:var(--gold)}
+  .type-btn.sel{background:var(--red);border-color:var(--red);color:#fff}
+  .size-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+  .size-btn{border:1.5px solid #5a4030;background:transparent;color:#e9dcc4;font:inherit;font-weight:600;font-size:13.5px;padding:8px 15px;border-radius:999px;cursor:pointer;min-height:42px;transition:background .2s ease,border-color .2s ease,color .2s ease}
+  .size-btn:hover{border-color:var(--gold)}
+  .size-btn.sel{background:var(--gold);border-color:var(--gold);color:#241209}
+  .fld{margin-bottom:16px}
+  .fld label{display:block;font-size:13px;font-weight:700;color:#e9dcc4;margin-bottom:7px}
+  .fld input[type=text],.fld textarea{width:100%;border:1.5px solid #5a4030;border-radius:13px;background:#170b04;color:#fdf3e0;font:inherit;font-size:15px;padding:12px 14px}
+  .fld input::placeholder,.fld textarea::placeholder{color:#9a8468}
+  .fld textarea{resize:vertical;min-height:56px}
+  .check{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#e9dcc4;cursor:pointer;margin:2px 0 14px}
+  .check input{width:19px;height:19px;accent-color:var(--red);cursor:pointer}
+  .qty-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .qty-btn{width:46px;height:46px;border-radius:50%;border:1.5px solid #5a4030;background:transparent;color:#fdf3e0;font-size:22px;font-weight:700;cursor:pointer;line-height:1;transition:border-color .2s ease,background .2s ease}
+  .qty-btn:hover{border-color:var(--gold);background:#33200f}
+  .qty-num{font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700;min-width:34px;text-align:center}
+  .add-btn{width:100%;background:var(--red);color:#fff;border:none;font:inherit;font-weight:800;font-size:16px;padding:15px 22px;border-radius:999px;cursor:pointer;min-height:54px;transition:background .2s ease,transform .2s ease}
+  .add-btn:hover{background:var(--red2);transform:translateY(-2px)}
+  .summary{background:#170b04;border:1px solid #5a4030;border-radius:18px;padding:20px}
+  .summary h4{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;margin-bottom:12px;color:#fdf3e0}
+  .order-list{list-style:none;margin-bottom:6px}
+  .order-list li{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px dashed #4a3421;font-size:14px;line-height:1.5}
+  .order-list li:last-child{border-bottom:none}
+  .order-empty{font-size:14px;color:#9a8468;padding:8px 0 14px;line-height:1.55}
+  .rm{background:transparent;border:1px solid #5a4030;color:#e9a48f;border-radius:50%;width:27px;height:27px;flex:none;cursor:pointer;font-size:14px;line-height:1;transition:border-color .2s ease,color .2s ease}
+  .rm:hover{border-color:var(--red);color:#fff;background:var(--red)}
+  .preview{white-space:pre-wrap;word-break:break-word;background:#0f0602;border:1px dashed #4a3421;border-radius:13px;padding:13px 14px;font-size:13px;line-height:1.6;color:#cdbb9c}
+  .send-btn{display:flex;align-items:center;justify-content:center;width:100%;margin-top:16px;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:15px 22px;border-radius:999px;min-height:54px;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 12px 26px rgba(31,170,85,.25)}
+  .send-btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(31,170,85,.32)}
+  .send-note{font-size:12.5px;color:#9a8468;text-align:center;margin-top:11px;line-height:1.55}
+  .hidden{display:none!important}
+
+  .visit{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:clamp(40px,6vw,56px) 26px;text-align:center;box-shadow:var(--shadow-sm)}
+  .visit .big{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(24px,3.8vw,31px);line-height:1.4;margin:10px 0 8px;color:var(--red2)}
+  .visit p{color:var(--mut);font-size:15px;line-height:1.65;max-width:520px;margin:0 auto}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-top:22px}
+  footer{padding:34px 20px 108px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7;border-top:1px solid var(--line);margin-top:clamp(56px,8vw,88px)}
+  footer a{color:var(--red)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(253,247,236,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:60}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;background:var(--red);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;max-width:1120px;margin:0 auto;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;box-shadow:0 10px 24px rgba(179,49,31,.25)}
+  .sticky a:hover{transform:translateY(-2px);background:var(--red2)}
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(max-width:560px){
+    .pill{white-space:normal;text-align:center}
+    .hero-actions .btn{width:100%}
+    .strip{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+    .rv{opacity:1!important;transform:none!important}
+    .btn:hover,.card:hover,.menu-card:hover,.sticky a:hover,.add-btn:hover,.send-btn:hover{transform:none}
+  }
+
+  /* ---------- Asistente IA de demostración ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--red);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:#fbeed3;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--red);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--red);color:var(--red)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--red);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  /* ---------- Pedido rápido por WhatsApp ---------- */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:8px 15px;border:1.5px solid var(--wa);color:#127a3c;white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent;cursor:pointer;font-family:inherit}
+  .ord:hover{background:var(--wa);color:#fff;transform:translateY(-1px)}
+  .ord.red{border-color:var(--red);color:var(--red2)}
+  .ord.red:hover{background:var(--red);color:#fff}
+  .menu-actions{display:flex;flex-wrap:wrap;gap:8px}
+
+  /* ---------- Mapa ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
+  /* ---------- Banda de Instagram ---------- */
+  .igband{max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,72px) 20px 0}
+  .igband-in{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:18px;padding:22px 26px;background:var(--card);box-shadow:0 2px 10px rgba(43,26,18,.05)}
+  .igband .igt{font-size:16px;font-weight:700}
+  .igband .igt span{color:var(--mut);font-weight:500;font-size:14px}
+  .igband .igh{color:var(--red);text-decoration:none;font-weight:700}
+  .igband a.igbtn{display:inline-flex;align-items:center;min-height:44px;background:var(--red);color:#fff;font-weight:700;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:14.5px;transition:transform .22s ease,box-shadow .22s ease}
+  .igband a.igbtn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="siteHeader">
+  <div class="header-in">
+    <div class="brand"><img src="img/logo.jpg" alt="Logo de Pizza House Cartagena">Pizza <span>House</span>&nbsp;CTG</div>
+    <div class="pill">Barrio El Recreo · Cartagena</div>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="img/hero-pizza.jpg" alt="Porción de pizza de Pizza House CTG con el queso estirándose, maíz, salchicha y cebolla">
+  <div class="hero-in rv">
+    <div class="badge">Pizzería · El Recreo, Cartagena</div>
+    <h1>Pizza y panzerotti, pedidos sin enredos</h1>
+    <p>La pizzería del barrio El Recreo que Cartagena sigue en Instagram. Aquí armas tu pedido paso a paso — tipo, tamaño, sabor, cantidad — y llega a WhatsApp escrito completo y claro. Sin caos, sin mensajes cruzados.</p>
+    <div class="hero-actions">
+      <a class="btn red" href="#pedido">Armar mi pedido</a>
+      <a class="btn ghost" href="#carta">Ver qué hay</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="rv">
+    <div class="eyebrow">01</div>
+    <h2>La casa</h2>
+    <p class="sub">Pizza House CTG se describe a sí misma como la pizzería del barrio El Recreo, en Cartagena de Indias. Esto es lo que la hace distinta:</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🍕</div><h3>Masa a tu estilo</h3><p>En sus fotos se ven pizzas de masa delgada y crujiente y otras de borde grueso y quesudo. Tú eliges cómo la quieres en el armador de pedidos.</p></div>
+      <div class="card"><div class="ic">🥟</div><h3>Panzerotti protagonistas</h3><p>El panzerotti es uno de los productos por los que la ficha del negocio lo reconoce — dorado, relleno y con el queso estirando al partirlo.</p></div>
+      <div class="card"><div class="ic">📋</div><h3>Pedido claro, de una vez</h3><p>Nada de diez mensajes sueltos para pedir una pizza. El armador junta todo — sabores, cantidades, dirección y notas — en un solo mensaje ordenado.</p></div>
+      <div class="card"><div class="ic">🌙</div><h3>Terraza para compartir</h3><p>Las noches en Pizza House se viven en su terraza de El Recreo, como se ve en las fotos de su propio Instagram.</p></div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="eyebrow">02</div>
+    <h2>Directo de su Instagram</h2>
+    <p class="sub">Fotos reales publicadas por Pizza House CTG — el queso, la terraza y el equipo.</p>
+    <div class="strip">
+      <figure><img src="img/pizza-mitad.jpg" alt="Pizza mitad y mitad de borde grueso, con tomate de un lado y maíz con salchicha del otro"><figcaption>Mitad y mitad, borde grueso</figcaption></figure>
+      <figure><img src="img/panzerotti.jpg" alt="Panzerotti de Pizza House partido por la mitad, con el relleno a la vista"><figcaption>Panzerotti, recién partido</figcaption></figure>
+      <figure><img src="img/pizza-delgada.jpg" alt="Porción de pizza de masa delgada de Pizza House con el queso estirándose"><figcaption>Masa delgada, queso que estira</figcaption></figure>
+      <figure><img src="img/panzerotti-pull.jpg" alt="Cliente levantando un panzerotti con un hilo largo de queso derretido en la terraza"><figcaption>El queso del panzerotti, en la terraza</figcaption></figure>
+      <figure><img src="img/terraza-noche.jpg" alt="Clienta probando una porción de pizza de noche en la terraza de Pizza House"><figcaption>Noches de terraza en El Recreo</figcaption></figure>
+      <figure><img src="img/terraza-equipo.jpg" alt="El equipo de Pizza House CTG bajo el techo de la terraza del local"><figcaption>El equipo de la casa</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="carta" class="rv">
+    <div class="eyebrow">03</div>
+    <h2>Qué hay en Pizza House</h2>
+    <p class="sub">Las combinaciones de sabores y tamaños son tantas que los precios no se publican aquí: la carta completa, con precios, te la envían por WhatsApp. Elige una categoría y empieza tu pedido:</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="mic">🍕</div>
+        <h3>Pizzas</h3>
+        <p>De masa delgada o de borde grueso, enteras o mitad y mitad. Escribe el sabor o la combinación que quieres y el tamaño que buscas: el equipo te confirma disponibilidad y precio al recibir tu mensaje.</p>
+        <div class="menu-actions">
+          <button class="ord red" type="button" data-goto-builder data-tipo="Pizza">Armar una pizza</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="mic">🥟</div>
+        <h3>Panzerotti</h3>
+        <p>El favorito reconocido de la casa: masa dorada, relleno generoso y queso que estira. Escríbeles el relleno que buscas en el armador y ellos te confirman.</p>
+        <div class="menu-actions">
+          <button class="ord red" type="button" data-goto-builder data-tipo="Panzerotti">Armar un panzerotti</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="mic">🥪</div>
+        <h3>Bocadillos</h3>
+        <p>Bocadillos para acompañar o para picar entre todos. Pídelos directo por WhatsApp o agrégalos a tu pedido en el armador.</p>
+        <div class="menu-actions">
+          <button class="ord red" type="button" data-goto-builder data-tipo="Bocadillos">Agregar bocadillos</button>
+          <a class="ord" href="https://wa.me/573182858528?text=Hola%2C%20Pizza%20House%20CTG.%20Quiero%20pedir%20bocadillos.">Pedir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="mic">🍷</div>
+        <h3>Vino</h3>
+        <p>Vino para acompañar la pizza, según la ficha del negocio. Pregunta por WhatsApp cuál tienen disponible hoy.</p>
+        <div class="menu-actions">
+          <button class="ord red" type="button" data-goto-builder data-tipo="Vino">Agregar vino</button>
+          <a class="ord" href="https://wa.me/573182858528?text=Hola%2C%20Pizza%20House%20CTG.%20Quiero%20preguntar%20por%20el%20vino%20disponible.">Preguntar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <p class="fineprint">Categorías tomadas de la ficha pública de Pizza House CTG y de sus publicaciones en Instagram. Sin precios en esta página, a propósito: se confirman por WhatsApp.</p>
+  </section>
+
+  <section id="pedido" class="rv">
+    <div class="eyebrow">04</div>
+    <h2>Arma tu pedido</h2>
+    <p class="sub">El centro de esta página: un solo mensaje, completo y ordenado, directo al WhatsApp de pedidos +57 318 285 8528.</p>
+    <div class="builder">
+      <h3>Tu pedido, paso a paso</h3>
+      <p class="bsub">Agrega todo lo que quieras, revisa el mensaje tal como va a llegar y envíalo. El equipo te confirma sabores, tamaños, precios y entrega por WhatsApp.</p>
+      <div class="steps">
+        <div>
+          <div class="step-label"><b>1</b> ¿Qué quieres?</div>
+          <div class="type-row" id="typeRow" role="group" aria-label="Tipo de producto">
+            <button class="type-btn sel" type="button" data-tipo="Pizza">🍕 Pizza</button>
+            <button class="type-btn" type="button" data-tipo="Panzerotti">🥟 Panzerotti</button>
+            <button class="type-btn" type="button" data-tipo="Bocadillos">🥪 Bocadillos</button>
+            <button class="type-btn" type="button" data-tipo="Vino">🍷 Vino</button>
+          </div>
+          <div id="sizeBlock">
+            <div class="step-label"><b>2</b> Tamaño que buscas</div>
+            <div class="size-row" id="sizeRow" role="group" aria-label="Tamaño">
+              <button class="size-btn" type="button" data-size="Personal">Personal</button>
+              <button class="size-btn sel" type="button" data-size="Mediana">Mediana</button>
+              <button class="size-btn" type="button" data-size="Grande">Grande</button>
+              <button class="size-btn" type="button" data-size="Familiar">Familiar</button>
+            </div>
+          </div>
+          <div class="step-label"><b>3</b> Sabor y detalles</div>
+          <div class="fld">
+            <label for="flavorInput" id="flavorLabel">Sabor o combinación</label>
+            <input type="text" id="flavorInput" autocomplete="off" placeholder="Escríbelo aquí, como lo pides siempre">
+          </div>
+          <label class="check" id="halfBlock"><input type="checkbox" id="halfCheck"> Mitad y mitad</label>
+          <div class="fld hidden" id="flavor2Block">
+            <label for="flavor2Input">Sabor de la otra mitad</label>
+            <input type="text" id="flavor2Input" autocomplete="off" placeholder="El sabor de la otra mitad">
+          </div>
+          <div class="fld">
+            <label for="itemNotes">Notas de este producto (opcional)</label>
+            <input type="text" id="itemNotes" autocomplete="off" placeholder="Ej.: bien dorada, sin cebolla, término de la masa…">
+          </div>
+          <div class="step-label"><b>4</b> Cantidad</div>
+          <div class="qty-row">
+            <button class="qty-btn" type="button" id="qtyMinus" aria-label="Quitar uno">−</button>
+            <span class="qty-num" id="qtyNum">1</span>
+            <button class="qty-btn" type="button" id="qtyPlus" aria-label="Agregar uno">+</button>
+          </div>
+          <button class="add-btn" type="button" id="addBtn">Agregar al pedido</button>
+        </div>
+        <div>
+          <div class="step-label"><b>5</b> Tus datos y envío</div>
+          <div class="summary">
+            <h4>Tu pedido</h4>
+            <ul class="order-list" id="orderList"></ul>
+            <p class="order-empty" id="orderEmpty">Todavía no agregaste nada. Elige un producto a la izquierda y toca “Agregar al pedido”.</p>
+            <div class="fld">
+              <label for="custName">Tu nombre</label>
+              <input type="text" id="custName" autocomplete="name" placeholder="¿A nombre de quién va el pedido?">
+            </div>
+            <div class="fld">
+              <label for="custAddress">Dirección de entrega</label>
+              <input type="text" id="custAddress" autocomplete="street-address" placeholder="Barrio, calle y referencia">
+            </div>
+            <div class="fld">
+              <label for="custNotes">Notas generales (opcional)</label>
+              <textarea id="custNotes" placeholder="Ej.: hora en que lo necesitas, forma de pago, indicaciones para llegar…"></textarea>
+            </div>
+            <div class="step-label" style="margin-top:20px"><b>✓</b> Así llega tu mensaje</div>
+            <div class="preview" id="msgPreview">Tu mensaje aparecerá aquí cuando agregues el primer producto.</div>
+            <a class="send-btn" id="sendBtn" href="https://wa.me/573182858528" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+            <p class="send-note">Se abre WhatsApp con el mensaje ya escrito al +57 318 285 8528. Tú solo tocas enviar; el equipo confirma todo contigo ahí mismo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="eyebrow">05</div>
+    <h2>Encuéntranos</h2>
+    <p class="sub">Estamos en el barrio El Recreo, Cartagena de Indias, Bolívar. Para pedir, el camino corto es el armador de arriba o el WhatsApp de pedidos.</p>
+    <div class="visit">
+      <div class="big">Barrio El Recreo · Cartagena de Indias</div>
+      <p>Pizzería de barrio, terraza para las noches y una comunidad de más de 13.700 seguidores en Instagram que ya sabe dónde queda.</p>
+      <div class="contact-actions">
+        <a class="btn wa" href="https://wa.me/573182858528">WhatsApp +57 318 285 8528</a>
+        <a class="btn" href="https://www.instagram.com/pizzahousectg">Instagram</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="igband"><div class="igband-in"><div class="igt">Síguenos en Instagram <a class="igh" href="https://www.instagram.com/pizzahousectg">@pizzahousectg</a> <span>· 13.738 seguidores</span></div><a class="igbtn" href="https://www.instagram.com/pizzahousectg">Seguir</a></div></div>
+<div class="mapsec">
+  <h2>Cómo llegar</h2>
+  <div class="mapframe"><iframe title="Mapa — Pizza House CTG, barrio El Recreo, Cartagena" src="https://www.google.com/maps?q=Pizza%20House%20CTG%2C%20Barrio%20El%20Recreo%2C%20Cartagena%2C%20Bol%C3%ADvar%2C%20Colombia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
+<footer>
+  Pizza House CTG · Barrio El Recreo, Cartagena de Indias, Colombia<br><br>
+  Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de Pizza House CTG.
+</footer>
+
+<div class="sticky"><a href="#pedido">Arma tu pedido — sin enredos</a></div>
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Pizza House">
+    <div class="chatw-head"><div><b>Asistente Pizza House</b><small>Asistente de demostración · parte de esta página de demostración</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
+<script>
+(function(){
+  var header=document.getElementById('siteHeader');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>10)}
+  onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  var items=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){io.observe(el)});
+  }
+})();
+</script>
+<script>
+(function(){
+  var WA='573182858528';
+
+  /* ---------- Armador de pedidos ---------- */
+  var state={tipo:'Pizza',size:'Mediana',qty:1,items:[]};
+  var typeRow=document.getElementById('typeRow'),
+      sizeRow=document.getElementById('sizeRow'),
+      sizeBlock=document.getElementById('sizeBlock'),
+      halfBlock=document.getElementById('halfBlock'),
+      halfCheck=document.getElementById('halfCheck'),
+      flavorInput=document.getElementById('flavorInput'),
+      flavorLabel=document.getElementById('flavorLabel'),
+      flavor2Block=document.getElementById('flavor2Block'),
+      flavor2Input=document.getElementById('flavor2Input'),
+      itemNotes=document.getElementById('itemNotes'),
+      qtyNum=document.getElementById('qtyNum'),
+      orderList=document.getElementById('orderList'),
+      orderEmpty=document.getElementById('orderEmpty'),
+      custName=document.getElementById('custName'),
+      custAddress=document.getElementById('custAddress'),
+      custNotes=document.getElementById('custNotes'),
+      msgPreview=document.getElementById('msgPreview'),
+      sendBtn=document.getElementById('sendBtn');
+
+  function flavorLabelFor(tipo){
+    if(tipo==='Panzerotti')return 'Relleno o combinación';
+    if(tipo==='Bocadillos')return '¿De qué los quieres?';
+    if(tipo==='Vino')return '¿Qué vino buscas?';
+    return 'Sabor o combinación';
+  }
+  function selectTipo(tipo){
+    state.tipo=tipo;
+    var btns=typeRow.querySelectorAll('.type-btn');
+    btns.forEach(function(b){b.classList.toggle('sel',b.getAttribute('data-tipo')===tipo);});
+    var hasSize=(tipo==='Pizza'||tipo==='Panzerotti');
+    sizeBlock.classList.toggle('hidden',!hasSize);
+    halfBlock.classList.toggle('hidden',tipo!=='Pizza');
+    if(tipo!=='Pizza'){halfCheck.checked=false;flavor2Block.classList.add('hidden');}
+    flavorLabel.textContent=flavorLabelFor(tipo);
+  }
+  typeRow.addEventListener('click',function(e){
+    var b=e.target.closest('.type-btn');if(!b)return;
+    selectTipo(b.getAttribute('data-tipo'));
+  });
+  sizeRow.addEventListener('click',function(e){
+    var b=e.target.closest('.size-btn');if(!b)return;
+    state.size=b.getAttribute('data-size');
+    sizeRow.querySelectorAll('.size-btn').forEach(function(x){x.classList.toggle('sel',x===b);});
+  });
+  halfCheck.addEventListener('change',function(){
+    flavor2Block.classList.toggle('hidden',!halfCheck.checked);
+    if(halfCheck.checked)flavor2Input.focus();
+  });
+  document.getElementById('qtyMinus').addEventListener('click',function(){
+    if(state.qty>1)state.qty--;
+    qtyNum.textContent=String(state.qty);
+  });
+  document.getElementById('qtyPlus').addEventListener('click',function(){
+    if(state.qty<30)state.qty++;
+    qtyNum.textContent=String(state.qty);
+  });
+
+  function itemLine(it){
+    var s=it.qty+' × '+it.tipo;
+    if(it.size)s+=' — '+it.size;
+    if(it.flavor)s+=' — '+it.flavor;
+    if(it.flavor2)s+=' / '+it.flavor2+' (mitad y mitad)';
+    if(it.notes)s+=' — Nota: '+it.notes;
+    return s;
+  }
+  function buildMessage(){
+    var lines=['Hola, Pizza House CTG. Quiero hacer un pedido:',''];
+    state.items.forEach(function(it){lines.push('• '+itemLine(it));});
+    lines.push('');
+    if(custName.value.trim())lines.push('Nombre: '+custName.value.trim());
+    if(custAddress.value.trim())lines.push('Dirección: '+custAddress.value.trim());
+    if(custNotes.value.trim())lines.push('Notas: '+custNotes.value.trim());
+    lines.push('');
+    lines.push('Quedo atento(a) a la confirmación de sabores, precios y entrega. ¡Gracias!');
+    return lines.join('\n');
+  }
+  function render(){
+    orderList.innerHTML='';
+    state.items.forEach(function(it,idx){
+      var li=document.createElement('li');
+      var span=document.createElement('span');span.textContent=itemLine(it);
+      var rm=document.createElement('button');rm.type='button';rm.className='rm';rm.setAttribute('aria-label','Quitar del pedido');rm.textContent='×';
+      rm.addEventListener('click',function(){state.items.splice(idx,1);render();});
+      li.appendChild(span);li.appendChild(rm);
+      orderList.appendChild(li);
+    });
+    orderEmpty.style.display=state.items.length?'none':'block';
+    if(state.items.length){
+      var msg=buildMessage();
+      msgPreview.textContent=msg;
+      sendBtn.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+    }else{
+      msgPreview.textContent='Tu mensaje aparecerá aquí cuando agregues el primer producto.';
+      sendBtn.href='https://wa.me/'+WA;
+    }
+  }
+  document.getElementById('addBtn').addEventListener('click',function(){
+    var flavor=flavorInput.value.trim();
+    var flavor2=(state.tipo==='Pizza'&&halfCheck.checked)?flavor2Input.value.trim():'';
+    state.items.push({
+      tipo:state.tipo,
+      size:(state.tipo==='Pizza'||state.tipo==='Panzerotti')?state.size:'',
+      flavor:flavor,
+      flavor2:flavor2,
+      notes:itemNotes.value.trim(),
+      qty:state.qty
+    });
+    flavorInput.value='';flavor2Input.value='';itemNotes.value='';
+    halfCheck.checked=false;flavor2Block.classList.add('hidden');
+    state.qty=1;qtyNum.textContent='1';
+    render();
+    document.querySelector('.summary').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+  [custName,custAddress,custNotes].forEach(function(el){
+    el.addEventListener('input',render);
+  });
+  sendBtn.addEventListener('click',function(e){
+    if(!state.items.length){
+      e.preventDefault();
+      document.getElementById('pedido').scrollIntoView({behavior:'smooth'});
+      flavorInput.focus();
+    }
+  });
+  document.querySelectorAll('[data-goto-builder]').forEach(function(b){
+    b.addEventListener('click',function(){
+      selectTipo(b.getAttribute('data-tipo'));
+      document.getElementById('pedido').scrollIntoView({behavior:'smooth'});
+      setTimeout(function(){flavorInput.focus({preventScroll:true});},450);
+    });
+  });
+  render();
+
+  /* ---------- Asistente IA de demostración: responde solo con datos de esta página ---------- */
+  var KB={"waLink": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573182858528"}, "greeting": "¡Hola! Soy el asistente de Pizza House CTG. Pregúntame qué vendemos, cómo armar tu pedido o dónde estamos — o toca una sugerencia.", "fallback": "Eso no lo tengo en esta página — escríbenos por WhatsApp al +57 318 285 8528 y te ayudamos.", "chips": ["¿Qué venden?", "¿Cómo armo mi pedido?", "¿Dónde están?", "¿Por qué no hay precios?", "¿Cuál es el horario?"], "items": [{"k": ["panzerotti", "panserotti", "panseroti"], "a": "El panzerotti es el protagonista de la casa: masa dorada, relleno generoso y queso que estira al partirlo. En el armador de pedidos eliges el tamaño que buscas y escribes el relleno que quieres; el equipo te confirma disponibilidad y precio por WhatsApp."}, {"k": ["bocadillo"], "a": "Sí, hay bocadillos — una de las categorías de la ficha pública de Pizza House CTG. Pídelos directo por WhatsApp o agrégalos en el armador de pedidos."}, {"k": ["vino", "cerveza", "trago", "bebida"], "a": "La ficha del negocio incluye vino entre sus productos. Pregunta por WhatsApp cuál tienen disponible hoy.", "link": {"t": "Preguntar por WhatsApp", "href": "https://wa.me/573182858528"}}, {"k": ["mitad"], "a": "Sí: en las fotos de la casa se ven pizzas mitad y mitad, y en el armador puedes marcar la opción “Mitad y mitad” y escribir el sabor de cada mitad. El equipo te confirma al recibir tu pedido."}, {"k": ["terraza"], "a": "En las fotos publicadas por Pizza House se ve su terraza en el barrio El Recreo: mesas al aire libre bajo techo, plan de noche entre amigos y familia."}, {"k": ["pizza"], "a": "Pizzas de masa delgada y crujiente o de borde grueso y quesudo, como se ven en las fotos de su Instagram. En el armador eliges el tamaño que buscas (personal, mediana, grande o familiar) y escribes el sabor o la combinación; el equipo confirma todo por WhatsApp."}], "intents": [{"k": ["hola", "buenas", "buenos"], "g": 1, "a": "¡Hola! Pregúntame qué vendemos, cómo armar tu pedido o dónde estamos."}, {"k": ["venden", "ofrecen", "carta", "menu", "comer", "hay"], "a": "En Pizza House CTG hay pizzas, panzerotti, bocadillos y vino, según su ficha pública. Los sabores y combinaciones son muchísimos: por eso armas tu pedido escribiendo lo que quieres y el equipo te confirma con la carta completa por WhatsApp."}, {"k": ["precio", "cuesta", "vale", "cuanto", "precios"], "a": "En esta página no publicamos precios a propósito: con tantas combinaciones de sabores y tamaños, la carta completa con precios te la envían por WhatsApp al armar tu pedido.", "link": {"t": "Pedir la carta por WhatsApp", "href": "https://wa.me/573182858528"}}, {"k": ["pedido", "pedir", "armo", "armar", "ordeno", "ordenar", "comprar"], "a": "Fácil: en la sección “Arma tu pedido” eliges tipo (pizza, panzerotti, bocadillos o vino), tamaño y sabor, agregas todo lo que quieras, dejas tu nombre y dirección, y el botón verde envía el pedido completo y ordenado al WhatsApp +57 318 285 8528. Sin mensajes cruzados.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573182858528"}}, {"k": ["domicilio", "delivery", "envio", "envío", "llevar", "casa"], "a": "Los pedidos se hacen por WhatsApp: en el armador dejas tu dirección y tus notas, y el equipo te confirma la entrega y todo lo demás al recibir tu mensaje.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573182858528"}}, {"k": ["donde", "ubicacion", "ubicación", "direccion", "dirección", "llegar", "estan", "están", "barrio"], "a": "Pizza House CTG está en el barrio El Recreo, en Cartagena de Indias, Bolívar. Abajo en esta página tienes el mapa."}, {"k": ["horario", "abren", "abierto", "cierran", "hora"], "a": "El horario no está publicado en esta página, así que no quiero inventártelo: pregúntalo por WhatsApp al +57 318 285 8528 y te confirman al momento.", "link": {"t": "Preguntar por WhatsApp", "href": "https://wa.me/573182858528"}}, {"k": ["instagram", "seguidores", "redes"], "a": "En Instagram son @pizzahousectg, con 13.738 seguidores. Ahí publican sus pizzas, panzerotti y noches de terraza."}, {"k": ["contacto", "telefono", "teléfono", "whatsapp", "numero", "número"], "a": "El WhatsApp de pedidos es +57 318 285 8528. También están en Instagram como @pizzahousectg.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573182858528"}}, {"k": ["gracias"], "a": "¡Con gusto! Arma tu pedido cuando quieras: aquí te esperamos."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bom Bocado Doces e Salgados — Barreiro, Belo Horizonte | Bolos, salgados, buffet e coffee break</title>
+<meta name="description" content="Bom Bocado Doces e Salgados, no Barreiro em Belo Horizonte. Bolos, tortas, doces, salgados, kit festa, buffet para eventos e coffee break corporativo. Orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fff8ef;--ink:#2b1a12;--mut:#7a6558;--org:#e85d04;--org2:#c44e02;--org-deep:#7c2d12;
+    --amber:#f59e0b;--cream:#fdeeda;--line:#f3ddc2;--card:#ffffff;--wa:#1faa55;--wa2:#178a44;
+    --shadow:0 1px 2px rgba(43,26,18,.04),0 12px 32px -12px rgba(232,93,4,.16);
+    --shadow-lg:0 2px 4px rgba(43,26,18,.05),0 24px 48px -16px rgba(232,93,4,.26);
+    --radius:20px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--amber);color:var(--ink)}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  :focus-visible{outline:2px solid var(--org);outline-offset:3px;border-radius:6px}
+  .serif{font-family:'Fraunces',Georgia,'Times New Roman',serif}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(255,248,239,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:padding .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease}
+  .header-in{max-width:1120px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:padding .3s ease;flex-wrap:wrap}
+  header.scrolled{background:rgba(255,248,239,.97);border-bottom-color:var(--line);box-shadow:0 8px 30px -14px rgba(232,93,4,.25)}
+  header.scrolled .header-in{padding-top:11px;padding-bottom:11px}
+  .brand{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(21px,3vw,25px);letter-spacing:-.01em;color:var(--org-deep);line-height:1.1;white-space:nowrap}
+  .brand span{color:var(--org)}
+  .pill{font-size:12.5px;font-weight:700;color:var(--org-deep);background:#fde8d2;padding:9px 15px;border-radius:999px;white-space:nowrap;border:1px solid #f5cf9f;min-height:36px;display:inline-flex;align-items:center}
+
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--org-deep);isolation:isolate}
+  .hero-media{position:absolute;inset:0;z-index:-2}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+      radial-gradient(620px 400px at 84% -6%,rgba(245,158,11,.38),rgba(245,158,11,0) 62%),
+      linear-gradient(180deg,rgba(60,24,4,.84) 0%,rgba(124,45,18,.76) 46%,rgba(43,20,8,.93) 100%)}
+  .hero-in{max-width:1120px;margin:0 auto;padding:clamp(72px,10vw,118px) 24px clamp(80px,10vw,124px);text-align:center;position:relative}
+  .badge{display:inline-block;background:var(--org);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.16em;padding:9px 17px;border-radius:999px;text-transform:uppercase;border:1px solid rgba(255,255,255,.28);box-shadow:0 10px 24px -10px rgba(30,12,2,.7)}
+  .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(38px,6.4vw,66px);line-height:1.06;letter-spacing:-.015em;margin:26px auto 20px;max-width:800px;text-wrap:balance;text-shadow:0 2px 24px rgba(30,12,2,.4)}
+  .hero p{color:#fdeeda;max-width:580px;margin:0 auto 34px;font-size:clamp(16px,2vw,18px);line-height:1.65}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 30px;border-radius:999px;font-size:15.5px;line-height:1.25;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;border:none;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(30,12,2,.55)}
+  .btn:active{transform:translateY(0)}
+  .btn.wa{background:var(--wa)}
+  .btn.wa:hover{background:var(--wa2)}
+  .btn.amber{background:var(--amber);color:#2b1a12}
+  .btn.amber:hover{background:var(--org);color:#fff}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:clamp(64px,10vw,110px) 0 0}
+  section:last-child{padding-bottom:8px}
+  .eyebrow{text-align:center;font-size:12px;font-weight:800;letter-spacing:.34em;color:var(--org);margin-bottom:14px}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(30px,4.4vw,42px);letter-spacing:-.015em;line-height:1.12;text-align:center;margin-bottom:10px;color:var(--org-deep)}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;max-width:580px;margin:0 auto 36px;line-height:1.65}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 26px 30px;text-align:center;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .card .ic{font-size:32px;line-height:1;margin-bottom:16px}
+  .card h3{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:20px;letter-spacing:-.01em;margin-bottom:8px;color:var(--org-deep)}
+  .card p{font-size:14.5px;color:var(--mut);line-height:1.65}
+  .card p a{color:var(--org);font-weight:600;text-decoration:none;border-bottom:1px solid #f5cf9f}
+  .card p a:hover{color:var(--org2);border-bottom-color:var(--org)}
+
+  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px 24px;margin-bottom:18px;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .menu-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .menu-card h3{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:23px;letter-spacing:-.01em;color:var(--org-deep);margin-bottom:5px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .menu-card .note{font-size:13.5px;color:var(--mut);margin:14px 0 8px;line-height:1.6}
+  .mrow{display:flex;align-items:baseline;gap:10px;padding:10px 0;font-size:15px}
+  .mrow + .mrow{border-top:1px solid #fdf0dd}
+  .mrow .dots{flex:1;border-bottom:2px dotted #e8c491;transform:translateY(-4px);min-width:24px}
+  .mrow .pr{font-weight:800;color:var(--org);white-space:nowrap;letter-spacing:-.01em}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:660px;margin:20px auto 0;line-height:1.65}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 22px 28px;text-align:center;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .step:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .step .n{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(150deg,var(--org) 0%,var(--org2) 100%);color:#fff;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:19px;margin-bottom:16px;box-shadow:0 10px 20px -8px rgba(196,78,2,.7)}
+  .step h3{font-size:16.5px;font-weight:700;margin-bottom:7px}
+  .step p{font-size:14px;color:var(--mut);line-height:1.65}
+
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .strip figure{margin:0}
+  .strip img{width:100%;height:260px;object-fit:cover;border-radius:var(--radius);display:block;box-shadow:var(--shadow-lg);background:#fff}
+  .strip figure.logo-fig img{object-fit:contain}
+  .strip figcaption{font-size:13px;color:var(--mut);text-align:center;margin-top:12px}
+
+  /* Quote builder */
+  .quotewrap{background:linear-gradient(158deg,#fff 0%,#fff6ea 100%);border:1px solid var(--line);border-radius:24px;padding:clamp(28px,5vw,48px);box-shadow:var(--shadow-lg)}
+  .qgrid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){.qgrid{grid-template-columns:1fr 1fr}}
+  .qfield label{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:7px;color:var(--org-deep)}
+  .qfield input,.qfield select,.qfield textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+  .qfield textarea{resize:vertical;min-height:74px}
+  .qfield.full{grid-column:1/-1}
+  .qchecks{display:flex;flex-wrap:wrap;gap:9px}
+  .qcheck{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;font-size:14px;font-weight:600;cursor:pointer}
+  .qcheck input{accent-color:var(--org);width:17px;height:17px}
+  .qactions{text-align:center;margin-top:22px}
+  .qhint{font-size:12.5px;color:var(--mut);text-align:center;margin-top:12px}
+
+  /* Reviews */
+  .agg{background:linear-gradient(150deg,var(--org) 0%,var(--org2) 60%,var(--org-deep) 100%);color:#fff;border-radius:24px;padding:clamp(36px,6vw,54px) 28px;text-align:center;box-shadow:var(--shadow-lg)}
+  .agg .stars{font-size:30px;letter-spacing:4px}
+  .agg .score{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(52px,8vw,76px);line-height:1.05}
+  .agg p{color:#fdeeda;font-size:15px}
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px 24px;text-align:left;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .rev:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .rev .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--org);background:#fde8d2;border-radius:999px;padding:5px 11px;margin-bottom:12px}
+  .rev h3{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:19px;color:var(--org-deep);margin-bottom:8px}
+  .rev p{font-size:14.5px;color:var(--mut);line-height:1.65}
+
+  .hours{background:
+      radial-gradient(520px 320px at 88% -10%,rgba(245,158,11,.34),rgba(245,158,11,0) 62%),
+      linear-gradient(158deg,#f07300 0%,var(--org) 55%,var(--org-deep) 100%);
+    color:#fff;border-radius:24px;padding:clamp(44px,6vw,64px) 28px;text-align:center;margin:clamp(64px,10vw,110px) 0 0;box-shadow:var(--shadow-lg)}
+  .hours .eyebrow{color:#ffd9a8}
+  .hours h2{color:#fff}
+  .hours .big{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(26px,4vw,34px);line-height:1.5;letter-spacing:-.01em;margin:12px 0 10px}
+  .hours p{color:#fdeeda;font-size:15px;line-height:1.65}
+
+  .contact-actions{text-align:center;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  footer{padding:clamp(56px,8vw,80px) 24px 110px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7;border-top:1px solid var(--line);margin-top:clamp(64px,10vw,100px)}
+  footer a{color:var(--org)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:50;box-shadow:0 -10px 30px -18px rgba(232,93,4,.35)}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:background .25s ease}
+  .sticky a:hover{background:var(--wa2)}
+
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+
+  @media(max-width:560px){
+    .header-in{padding-left:18px;padding-right:18px}
+    .pill{font-size:11.5px;padding:8px 12px}
+    .wrap{padding:0 18px}
+    .hero-in{padding-left:18px;padding-right:18px}
+    .hero-actions .btn,.contact-actions .btn{width:100%}
+    .card,.menu-card{padding-left:22px;padding-right:22px}
+    .strip img{height:220px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none !important;animation:none !important}
+    .rv{opacity:1 !important;transform:none !important}
+    .card:hover,.menu-card:hover,.step:hover,.btn:hover{transform:none}
+  }
+
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--org);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--org);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:var(--cream);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--org);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--org);color:var(--org)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--org);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:6px 12px;border:1.5px solid var(--org);color:var(--org2);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--org);color:#fff;transform:translateY(-1px)}
+
+  .opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;white-space:nowrap;min-height:36px}
+  .opennow .odot{width:8px;height:8px;border-radius:50%;background:#b9b9b9;flex:none}
+  .opennow.open .odot{background:#27ae60;box-shadow:0 0 0 3px rgba(39,174,96,.2)}
+  .opennow.closed .odot{background:#d35450;box-shadow:0 0 0 3px rgba(211,84,80,.16)}
+
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
+  .igband{max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,72px) 20px 0}
+  .igband-in{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:18px;padding:22px 26px;background:var(--card)}
+  .igband .igt{font-size:16px;font-weight:700}
+  .igband .igh{color:var(--org);text-decoration:none;font-weight:700}
+  .igband a.igbtn{display:inline-flex;align-items:center;min-height:44px;background:var(--org);color:#fff;font-weight:700;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:14.5px;transition:transform .22s ease,box-shadow .22s ease}
+  .igband a.igbtn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="site-header">
+  <div class="header-in">
+    <div class="brand">Bom <span>Bocado</span></div>
+    <div class="pill">Encomendas e orçamentos pelo WhatsApp</div>
+    <span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-media"><img src="img/coffee-break-hero.jpg" alt="Mesa de coffee break da Bom Bocado com pães de queijo, mini sanduíches, salgados e bolos"></div>
+  <div class="hero-in">
+    <div class="badge">★ 4,8 · 32 avaliações · Barreiro, Belo Horizonte</div>
+    <h1>Da nossa casa para a sua festa</h1>
+    <p>Bolos, tortas, doces, salgados e buffet completo para o seu evento — e coffee breaks que transformam cada pausa da sua empresa em um momento especial.</p>
+    <div class="hero-actions">
+      <a class="btn wa" href="https://wa.me/5531987630810">Pedir orçamento no WhatsApp</a>
+      <a class="btn amber" href="#catalogo">Ver o catálogo</a>
+      <a class="btn" href="#orcamento">Montar orçamento do evento</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="eyebrow rv">01</div>
+    <h2 class="rv">Por que a Bom Bocado?</h2>
+    <p class="sub rv">Uma fábrica de sabores no Barreiro, especializada em doces, salgados e buffet para diversos tipos de eventos — para empresas e clientes particulares.</p>
+    <div class="grid">
+      <div class="card rv"><div class="ic">★</div><h3>4,8 de avaliação</h3><p>Nota 4,8 a partir de <span class="count" data-count="32">32</span> avaliações de clientes no perfil da empresa.</p></div>
+      <div class="card rv"><div class="ic">🎉</div><h3>Buffet completo para eventos</h3><p>Aniversários, casamentos, festas de 15 anos, eventos escolares, confraternizações empresariais, almoços corporativos e jantares especiais.</p></div>
+      <div class="card rv"><div class="ic">📱</div><h3>+<span class="count" data-count="5">5</span> mil seguidores</h3><p>Mais de 5.600 pessoas acompanham a fábrica no Instagram: <a href="https://www.instagram.com/bombocadofabrica">@bombocadofabrica</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="catalogo">
+    <div class="eyebrow rv">02</div>
+    <h2 class="rv">Catálogo Bom Bocado</h2>
+    <p class="sub rv">Direto do que a fábrica publica: bolos, doces, salgados e os formatos que ela monta para a sua festa ou empresa. Toque em Pedir para chamar no WhatsApp já com o item na mensagem.</p>
+
+    <div class="menu-card rv">
+      <h3>Bolos e tortas</h3>
+      <p class="note">O carro-chefe da casa — do bolinho para uma comemoração de última hora ao bolo de festa para grandes comemorações.</p>
+      <div class="mrow"><span>Bolinho — 4 fatias, recheio de brigadeiro preto e brigadeiro branco</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20Bolinho%204%20fatias%20(brigadeiro%20preto%20e%20brigadeiro%20branco)">Pedir</a></div>
+      <div class="mrow"><span>Bolo de ninho</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20Bolo%20de%20ninho">Pedir</a></div>
+      <div class="mrow"><span>Broa de fubá com goiabada</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20Broa%20de%20fub%C3%A1%20com%20goiabada">Pedir</a></div>
+      <div class="mrow"><span>Bolos e tortas de festa sob encomenda</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20bolo%20%2F%20torta%20de%20festa">Pedir orçamento</a></div>
+    </div>
+
+    <div class="menu-card rv">
+      <h3>Doces</h3>
+      <p class="note">Doces para a mesa da festa e os clássicos bem-casados para casamentos e nascimentos.</p>
+      <div class="mrow"><span>Brigadeiro</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20Brigadeiros">Pedir</a></div>
+      <div class="mrow"><span>Bem-casado / bem-formado / bem-nascido — o cento</span><span class="dots"></span><span class="pr">R$ 350,00*</span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20Bem-casado%20%2F%20bem-formado%20%2F%20bem-nascido%20%E2%80%94%20o%20cento">Pedir</a></div>
+      <div class="mrow"><span>Doces para festas e eventos</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20o%20cat%C3%A1logo%20de%20doces%20para%20festa">Pedir</a></div>
+    </div>
+
+    <div class="menu-card rv">
+      <h3>Salgados</h3>
+      <p class="note">Salgados finos e tradicionais, do lanche da tarde à mesa completa do evento.</p>
+      <div class="mrow"><span>Coxinha</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20Coxinhas">Pedir</a></div>
+      <div class="mrow"><span>Pão de queijo fresquinho</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20P%C3%A3o%20de%20queijo">Pedir</a></div>
+      <div class="mrow"><span>Quiche</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20pedir%3A%20Quiches">Pedir</a></div>
+      <div class="mrow"><span>Salgados finos e tradicionais para eventos</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20o%20cat%C3%A1logo%20de%20salgados%20para%20evento">Pedir</a></div>
+      <div class="mrow"><span>Pães, sanduíches, saladas e lasanha</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20p%C3%A3es%2C%20sandu%C3%ADches%2C%20saladas%20e%20lasanha">Pedir</a></div>
+    </div>
+
+    <div class="menu-card rv">
+      <h3>Kit festa</h3>
+      <p class="note">A festa resolvida em um pedido só: bolo, doces e salgados combinados para o tamanho do seu evento. Monte o seu com a equipe e receba o orçamento no WhatsApp.</p>
+      <div class="mrow"><span>Kit festa — bolo + doces + salgados para o seu evento</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20montar%20um%20kit%20festa%20(bolo%20%2B%20doces%20%2B%20salgados)">Montar o meu</a></div>
+      <div class="mrow"><span>Lembrancinhas para o evento</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20lembrancinhas%20para%20evento">Pedir</a></div>
+    </div>
+
+    <div class="menu-card rv">
+      <h3>Coffee break corporativo</h3>
+      <p class="note">Para reuniões, treinamentos, palestras e confraternizações: coffee breaks completos, com variedade de salgados, pães, sanduíches, bolos e apresentação caprichada. Um coffee break recente para treinamento incluiu bolo de ninho, broa de fubá com goiabada, pão de queijo fresquinho, café fresquinho, água mineral e sucos diversos.</p>
+      <div class="mrow"><span>Coffee break completo para a sua empresa</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20coffee%20break%20para%20minha%20empresa">Pedir orçamento</a></div>
+      <div class="mrow"><span>Brunch personalizado</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20brunch%20personalizado">Pedir orçamento</a></div>
+      <div class="mrow"><span>Almoço corporativo e jantar especial</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20almo%C3%A7o%20corporativo%20%2F%20jantar%20especial">Pedir orçamento</a></div>
+    </div>
+
+    <div class="menu-card rv">
+      <h3>Salgados congelados para revenda</h3>
+      <p class="note">A fábrica também atende quem revende: salgados congelados direto da produção do Barreiro. Consulte sabores, quantidades mínimas e condições pelo WhatsApp.</p>
+      <div class="mrow"><span>Salgados congelados — consulta para revenda</span><span class="dots"></span><a class="ord" href="https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20salgados%20congelados%20para%20revenda">Consultar</a></div>
+    </div>
+
+    <p class="fineprint rv">* Preço de promoção publicada pela própria Bom Bocado (bem-casado, bem-formado e bem-nascido a R$ 350,00 o cento, em arte de julho de 2023). Os demais itens são vendidos sob encomenda e orçamento — confirme valores atuais, sabores e disponibilidade pelo WhatsApp antes de fechar o pedido.</p>
+  </section>
+
+  <section id="orcamento">
+    <div class="eyebrow rv">03</div>
+    <h2 class="rv">Monte o orçamento do seu evento</h2>
+    <p class="sub rv">Preencha, toque no botão e a mensagem chega prontinha no WhatsApp da Bom Bocado — sem cadastro e sem compromisso.</p>
+    <div class="quotewrap rv">
+      <form id="quoteForm">
+        <div class="qgrid">
+          <div class="qfield"><label for="qName">Seu nome</label><input id="qName" type="text" autocomplete="name" placeholder="Como podemos te chamar?"></div>
+          <div class="qfield"><label for="qDate">Data do evento</label><input id="qDate" type="date"></div>
+          <div class="qfield"><label for="qGuests">Número de convidados</label><input id="qGuests" type="number" min="1" inputmode="numeric" placeholder="Ex.: 80"></div>
+          <div class="qfield"><label for="qType">Tipo de evento</label>
+            <select id="qType">
+              <option value="Aniversário">Aniversário</option>
+              <option value="Casamento">Casamento</option>
+              <option value="Corporativo / coffee break">Corporativo / coffee break</option>
+              <option value="Festa de 15 anos">Festa de 15 anos</option>
+              <option value="Evento escolar">Evento escolar</option>
+              <option value="Confraternização">Confraternização</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="qfield full"><label>Itens de interesse</label>
+            <div class="qchecks">
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Bolo / torta"> Bolo / torta</label>
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Doces"> Doces</label>
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Salgados"> Salgados</label>
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Kit festa completo"> Kit festa completo</label>
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Coffee break"> Coffee break</label>
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Buffet completo"> Buffet completo</label>
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Bem-casados"> Bem-casados</label>
+              <label class="qcheck"><input type="checkbox" class="qItem" value="Lembrancinhas"> Lembrancinhas</label>
+            </div>
+          </div>
+          <div class="qfield full"><label for="qNotes">Observações (opcional)</label><textarea id="qNotes" placeholder="Tema da festa, sabores preferidos, endereço de entrega..."></textarea></div>
+        </div>
+        <div class="qactions"><button class="btn wa" type="submit">Enviar pedido de orçamento no WhatsApp</button></div>
+        <p class="qhint">A Bom Bocado atende eventos de todos os tamanhos, de encontros pequenos a grandes comemorações. O tamanho e o cardápio do seu evento são confirmados com a equipe no WhatsApp.</p>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow rv">04</div>
+    <h2 class="rv">Como pedir</h2>
+    <p class="sub rv">Do primeiro oi ao dia da festa, tudo pelo WhatsApp.</p>
+    <div class="steps">
+      <div class="step rv"><span class="n">1</span><h3>Chame no WhatsApp</h3><p>Escreva para (31) 98763-0810 ou monte o orçamento do seu evento aqui na página.</p></div>
+      <div class="step rv"><span class="n">2</span><h3>Monte seu pedido</h3><p>Escolha bolos, doces, salgados ou o kit festa e conte a data e o número de convidados.</p></div>
+      <div class="step rv"><span class="n">3</span><h3>Receba o orçamento</h3><p>A equipe confirma itens, valores e disponibilidade para a sua data.</p></div>
+      <div class="step rv"><span class="n">4</span><h3>É só comemorar</h3><p>Da nossa casa para a sua festa — você só se preocupa em aproveitar.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow rv">05</div>
+    <h2 class="rv">Direto da fábrica</h2>
+    <p class="sub rv">Fotos reais da Bom Bocado — das mesas de coffee break aos bolos de festa.</p>
+    <div class="strip">
+      <figure class="rv"><img src="img/coffee-altus.jpg" alt="Coffee break da Bom Bocado: pão de queijo, bolo de fubá com goiabada, biscoitos e café"><figcaption>Coffee break para treinamento, no SENAI 4.0</figcaption></figure>
+      <figure class="rv"><img src="img/bolinho.jpg" alt="Bolinho de chocolate com cereja, da Bom Bocado"><figcaption>Bolinho de brigadeiro preto e branco</figcaption></figure>
+      <figure class="rv"><img src="img/bolo-hjk.jpg" alt="Bolo de 65 anos do Hospital Julia Kubitschek, da Bom Bocado"><figcaption>Bolo dos 65 anos do Hospital Julia Kubitschek</figcaption></figure>
+      <figure class="rv"><img src="img/coffee-evento.jpg" alt="Bolo personalizado e docinhos da Bom Bocado para evento do Grupo Oncoclínicas"><figcaption>Evento do Grupo Oncoclínicas</figcaption></figure>
+      <figure class="rv"><img src="img/reel1-thumb.jpg" alt="Mesa de evento da Bom Bocado com quiches, café e refresco"><figcaption>Montagem de mesa de evento no Barreiro</figcaption></figure>
+      <figure class="rv"><img src="img/reel2-thumb.jpg" alt="Porções individuais de doce da Bom Bocado servidas em evento"><figcaption>Porções individuais servidas em evento</figcaption></figure>
+      <figure class="rv logo-fig"><img src="img/hero-banner.jpg" alt="Arte da Bom Bocado: Transformando eventos em experiências deliciosas — aniversários, coffee breaks, casamentos, buffet completo"><figcaption>A marca e os eventos que a Bom Bocado atende</figcaption></figure>
+      <figure class="rv logo-fig"><img src="img/fb-logo.jpg" alt="Logotipo da Bom Bocado Doces e Salgados"><figcaption>A marca da fábrica</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow rv">06</div>
+    <h2 class="rv">O que os clientes dizem</h2>
+    <p class="sub rv">A nota é real: 4,8 de 5 a partir de 32 avaliações no perfil da empresa.</p>
+    <div class="agg rv">
+      <div class="stars">★★★★★</div>
+      <div class="score">4,8</div>
+      <p>Nota média de <strong><span class="count" data-count="32">32</span> avaliações</strong> no perfil da Bom Bocado · Preço: acessível</p>
+      <p style="margin-top:10px">Também no Instagram: <strong>5.670 seguidores</strong> em <a href="https://www.instagram.com/bombocadofabrica" style="color:#fff;font-weight:700">@bombocadofabrica</a></p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev rv"><span class="tag">Evento institucional</span><h3>65 anos de uma instituição do Barreiro</h3><p>Um bolo da Bom Bocado prestigiou a comemoração de 65 anos do Hospital Julia Kubitschek, instituição presente na vida do Barreiro e de Belo Horizonte.</p></div>
+      <div class="rev rv"><span class="tag">Evento corporativo</span><h3>Coffee break e brunch para empresa</h3><p>Para o Grupo Oncoclínicas, a Bom Bocado montou coffee break completo e brunch personalizado, com salgados finos e tradicionais, doces, bolos e lembrancinhas.</p></div>
+      <div class="rev rv"><span class="tag">Treinamento</span><h3>Coffee break no SENAI 4.0</h3><p>Coffee break para o treinamento da Altus Sistemas de Automação no SENAI 4.0, com bolo de ninho, broa de fubá com goiabada, pão de queijo fresquinho, café e sucos.</p></div>
+    </div>
+    <p class="fineprint rv">Os três destaques acima são eventos atendidos pela Bom Bocado, registrados nas publicações da própria empresa no Instagram. As avaliações individuais dos 32 clientes não estavam disponíveis no registro público consultado — por isso não reproduzimos textos de avaliação aqui.</p>
+  </section>
+
+  <div class="hours rv">
+    <div class="eyebrow">07</div>
+    <h2>Horário de funcionamento</h2>
+    <div class="big">Segunda a sábado<br>7h — 17h30</div>
+    <p>Domingo: fechado · R. José de Oliveira Fernandes, 182 — Barreiro, Belo Horizonte/MG, 30620-300</p>
+  </div>
+
+  <section>
+    <div class="eyebrow rv">08</div>
+    <h2 class="rv">Peça já o seu orçamento</h2>
+    <p class="sub rv">R. José de Oliveira Fernandes, 182 — Barreiro, Belo Horizonte, MG, 30620-300. Chame no WhatsApp ou acompanhe no Instagram.</p>
+    <div class="contact-actions rv">
+      <a class="btn wa" href="https://wa.me/5531987630810">WhatsApp (31) 98763-0810</a>
+      <a class="btn" href="tel:+553133819206">Ligar (31) 3381-9206</a>
+      <a class="btn amber" href="https://www.instagram.com/bombocadofabrica">Instagram</a>
+    </div>
+  </section>
+</div>
+
+<div class="igband"><div class="igband-in"><div class="igt">Siga a fábrica no Instagram <a class="igh" href="https://www.instagram.com/bombocadofabrica">@bombocadofabrica</a></div><a class="igbtn" href="https://www.instagram.com/bombocadofabrica">Seguir</a></div></div>
+<div class="mapsec">
+  <h2>Como chegar</h2>
+  <div class="mapframe"><iframe title="Map — Bom Bocado Doces e Salgados" src="https://www.google.com/maps?q=Bom%20Bocado%20Doces%20e%20Salgados%2C%20R.%20Jos%C3%A9%20de%20Oliveira%20Fernandes%2C%20182%2C%20Belo%20Horizonte%2C%20MG&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
+<footer>
+  Bom Bocado Doces e Salgados · Barreiro, Belo Horizonte, Minas Gerais<br><br>
+  Concept preview built by SiteSprint Studio — this is not the live website of Bom Bocado.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/5531987630810">Pedir orçamento no WhatsApp</a></div>
+
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente Bom Bocado">
+    <div class="chatw-head"><div><b>Assistente Bom Bocado</b><small>Assistente de demonstração · parte desta página de demonstração</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Digite sua pergunta…" aria-label="Digite sua pergunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
+<script>
+(function(){
+  var header=document.getElementById('site-header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>10);}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  var items=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+</script>
+<script>
+(function(){
+
+  /* Quote builder — assembles the WhatsApp message from the form on this page */
+  var qf=document.getElementById('quoteForm');
+  if(qf){
+    qf.addEventListener('submit',function(e){
+      e.preventDefault();
+      var name=document.getElementById('qName').value.trim();
+      var date=document.getElementById('qDate').value;
+      var guests=document.getElementById('qGuests').value.trim();
+      var type=document.getElementById('qType').value;
+      var notes=document.getElementById('qNotes').value.trim();
+      var items=[];
+      document.querySelectorAll('.qItem:checked').forEach(function(c){items.push(c.value);});
+      var dateBr=date;
+      if(date){var p=date.split('-');if(p.length===3)dateBr=p[2]+'/'+p[1]+'/'+p[0];}
+      var lines=['Olá! Quero um orçamento para o meu evento:'];
+      lines.push('Tipo de evento: '+type);
+      if(dateBr)lines.push('Data: '+dateBr);
+      if(guests)lines.push('Convidados: '+guests);
+      if(items.length)lines.push('Itens de interesse: '+items.join(', '));
+      if(name)lines.push('Nome: '+name);
+      if(notes)lines.push('Observações: '+notes);
+      lines.push('Vi a página da Bom Bocado e quero confirmar valores e disponibilidade.');
+      window.open('https://wa.me/5531987630810?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+    });
+  }
+
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "Pedir orçamento no WhatsApp", "href": "https://wa.me/5531987630810"}, "greeting": "Olá! Sou a assistente da Bom Bocado. Pergunte sobre o catálogo, o coffee break, como pedir um orçamento ou o horário — ou toque em uma sugestão.", "fallback": "Isso eu não tenho aqui — chame no WhatsApp (31) 98763-0810 que a equipe da Bom Bocado te ajuda.", "chips": ["Ver o catálogo", "Montar orçamento de evento", "Coffee break corporativo", "Horário de funcionamento", "Onde fica a fábrica?"], "items": [{"k": ["bem-casado", "bem casado", "bem-formado", "bem formado", "bem-nascido", "bem nascido"], "a": "Bem-casado / bem-formado / bem-nascido: R$ 350,00 o cento — preço de uma promoção publicada pela própria Bom Bocado em julho de 2023. Confirme o valor atual pelo WhatsApp."}, {"k": ["bolinho"], "a": "Bolinho — 4 fatias, recheio delicioso de brigadeiro preto e brigadeiro branco. Peça pelo WhatsApp."}, {"k": ["bolo de ninho", "ninho"], "a": "O bolo de ninho é um dos bolos da Bom Bocado — ele fez parte do coffee break do treinamento da Altus no SENAI 4.0."}, {"k": ["broa", "fuba", "fubá", "goiabada"], "a": "Broa de fubá com goiabada — servida no coffee break da Bom Bocado para o treinamento da Altus no SENAI 4.0."}, {"k": ["pao de queijo", "pão de queijo"], "a": "Pão de queijo fresquinho — um dos salgados da Bom Bocado, servido também nos coffee breaks."}, {"k": ["coxinha"], "a": "Coxinha — um dos salgados da Bom Bocado. Peça pelo WhatsApp ou monte o kit festa na página."}, {"k": ["quiche"], "a": "Quiche — um dos salgados da Bom Bocado."}, {"k": ["brigadeiro"], "a": "Brigadeiro — um dos doces da Bom Bocado, inclusive no bolinho de 4 fatias (brigadeiro preto e brigadeiro branco)."}, {"k": ["lasanha"], "a": "Lasanha — um dos itens da Bom Bocado. Confirme sabores e disponibilidade pelo WhatsApp."}, {"k": ["sanduiche", "sanduíche", "sanduiches"], "a": "Sanduíches — mini sanduíches fazem parte das mesas de coffee break e dos salgados da Bom Bocado."}, {"k": ["lembrancinha"], "a": "Lembrancinhas — a Bom Bocado também monta lembrancinhas para eventos. Peça o orçamento pelo WhatsApp."}], "intents": [{"k": ["ola", "oi", "bom dia", "boa tarde"], "g": 1, "a": "Olá! Pergunte sobre o catálogo, o coffee break, como pedir um orçamento ou o horário."}, {"k": ["catalogo", "cardapio", "menu", "produto", "preco", "valor", "quanto", "kit festa"], "a": "O catálogo: bolos e tortas, doces (brigadeiro, bem-casados), salgados (coxinha, pão de queijo, quiche), kit festa, coffee break corporativo e salgados congelados para revenda. O único preço publicado que temos é o bem-casado a R$ 350,00 o cento, de uma promoção de julho de 2023 — os demais itens são sob orçamento pelo WhatsApp.", "link": {"t": "Pedir orçamento no WhatsApp", "href": "https://wa.me/5531987630810"}}, {"k": ["coffee", "corporativo", "empresa", "treinamento", "reuniao", "palestra", "brunch"], "a": "Coffee break corporativo: coffee breaks completos para reuniões, treinamentos, palestras e confraternizações, com salgados, pães, sanduíches, bolos e apresentação caprichada. A Bom Bocado também faz brunch personalizado, almoço corporativo e jantar especial.", "link": {"t": "Pedir orçamento no WhatsApp", "href": "https://wa.me/5531987630810"}}, {"k": ["evento", "orcamento", "orçamento", "festa", "casamento", "aniversario", "15 anos", "confraternizacao"], "a": "A Bom Bocado atende aniversários, casamentos, festas de 15 anos, eventos escolares, confraternizações, almoços corporativos e jantares especiais, com buffet completo. Monte o orçamento na seção 'Monte o orçamento do seu evento' da página — a mensagem chega pronta no WhatsApp.", "link": {"t": "Montar orçamento", "href": "#orcamento"}}, {"k": ["congelado", "revenda", "revender"], "a": "Salgados congelados para revenda: a fábrica atende quem revende, direto da produção no Barreiro. Consulte sabores, quantidades mínimas e condições pelo WhatsApp (31) 98763-0810.", "link": {"t": "Consultar no WhatsApp", "href": "https://wa.me/5531987630810?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20salgados%20congelados%20para%20revenda"}}, {"k": ["horario", "funcionamento", "abre", "fecha", "aberta"], "a": "Horário: segunda a sábado, das 7h às 17h30. Domingo: fechado."}, {"k": ["onde", "endereco", "fica", "loja", "fabrica", "barreiro"], "a": "A fábrica fica na R. José de Oliveira Fernandes, 182 — Barreiro, Belo Horizonte/MG, 30620-300."}, {"k": ["contato", "telefone", "whatsapp", "numero", "instagram", "ligar"], "a": "WhatsApp: (31) 98763-0810 · Telefone: (31) 3381-9206 · Instagram: @bombocadofabrica (5.670 seguidores).", "link": {"t": "Chamar no WhatsApp", "href": "https://wa.me/5531987630810"}}, {"k": ["avaliacao", "nota", "recomend", "opiniao"], "a": "A Bom Bocado tem nota 4,8 de 5 a partir de 32 avaliações no perfil da empresa."}, {"k": ["obrigad"], "a": "Por nada! A Bom Bocado agradece a preferência."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+
+
+  /* Open-now indicator — computed from the hours published on this page */
+  var SCHED={"tz": "America/Sao_Paulo", "days": {"0": [], "1": [[420, 1050, "7h", "17h30"]], "2": [[420, 1050, "7h", "17h30"]], "3": [[420, 1050, "7h", "17h30"]], "4": [[420, 1050, "7h", "17h30"]], "5": [[420, 1050, "7h", "17h30"]], "6": [[420, 1050, "7h", "17h30"]]}};
+  var OTXT={"open": "Aberto agora · até às {x}", "closed": "Fechado · abre às {x}", "closedTomorrow": "Fechado · abre amanhã às {x}", "closedDay": "Fechado · abre {d} às {x}", "days": ["no domingo", "na segunda-feira", "na terça-feira", "na quarta-feira", "na quinta-feira", "na sexta-feira", "no sábado"]};
+  (function(){
+    var el=document.getElementById('opennow');if(!el)return;
+    function bizNow(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}
+    var now=bizNow(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes(),st=null,i,s,list,off,d;
+    list=SCHED.days[(day+6)%7]||[];
+    for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}
+    if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}
+    if(!st){
+      for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];
+        for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}
+    }
+    if(!st)return;
+    var txt;
+    if(st.open)txt=OTXT.open.replace('{x}',st.until);
+    else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);
+    else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);
+    else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);
+    el.querySelector('.otext').textContent=txt;
+    el.classList.add(st.open?'open':'closed');
+    el.hidden=false;
+  })();
+
+
+  /* Animated counters — numbers already published on this page */
+  var cEls=document.querySelectorAll('.count');
+  if(cEls.length){
+    var reduceC=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduceC&&('IntersectionObserver' in window)){
+      cEls.forEach(function(el){el.textContent='0';});
+      var cio=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting)return;
+          cio.unobserve(e.target);
+          var el=e.target,tg=parseFloat(el.getAttribute('data-count')),t0=null;
+          function step(ts){
+            if(!t0)t0=ts;
+            var p=Math.min(1,(ts-t0)/1300),ease=1-Math.pow(1-p,3);
+            el.textContent=String(Math.round(tg*ease));
+            if(p<1)requestAnimationFrame(step);else el.textContent=String(tg);
+          }
+          requestAnimationFrame(step);
+        });
+      },{threshold:.4});
+      cEls.forEach(function(el){cio.observe(el);});
+    }
+  }
+
+})();
+</script>
+</body>
+</html>

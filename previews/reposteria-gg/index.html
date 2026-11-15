@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repostería GG — Guadalajara | Alta repostería artesanal de autor</title>
+<meta name="description" content="Repostería GG, Guadalajara, Jalisco. Alta repostería artesanal de autor de Griselda Vargas: más de 20 sabores de pasteles y cheesecakes. Menú nuevo martes y jueves, cierre de pedidos viernes 8 PM. Sábados en el Bazar de Casa Cem.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#faf5ec;--cream2:#f3ead9;--ink:#2c211c;--mut:#77665a;--wine:#722f37;--wine2:#5c232a;--gold:#b98a2f;--gold2:#d9b45c;--pist:#6f7f45;--line:#e6d9c3;--card:#ffffff;--wa:#1faa55}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{font-family:'Manrope',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--wine);color:#fff}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  :focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+  header{position:sticky;top:0;z-index:30;background:rgba(250,245,236,.93);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:box-shadow .3s ease,border-color .3s ease}
+  header.scrolled{border-bottom-color:var(--line);box-shadow:0 10px 30px rgba(44,33,28,.09)}
+  .header-in{padding:15px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;gap:12px;flex-wrap:wrap;transition:padding .3s ease}
+  header.scrolled .header-in{padding-top:10px;padding-bottom:10px}
+  .brand{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(22px,3vw,27px);letter-spacing:-.01em;color:var(--wine2);line-height:1.1}
+  .brand span{color:var(--gold);font-style:italic}
+  .brand small{display:block;font-family:'Manrope',sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+  .pill{font-size:12.5px;font-weight:800;color:var(--wine2);background:var(--cream2);border:1px solid var(--line);padding:8px 14px;border-radius:999px;white-space:nowrap;min-height:36px;display:inline-flex;align-items:center}
+  /* HERO */
+  .hero{position:relative;isolation:isolate;color:#fff;text-align:center;overflow:hidden;background:var(--wine2)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block;z-index:-2}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(44,20,22,.72) 0%,rgba(44,20,22,.55) 42%,rgba(114,47,55,.48) 78%,rgba(44,20,22,.88) 100%)}
+  .hero-inner{max-width:1140px;margin:0 auto;padding:clamp(86px,13vw,150px) 20px clamp(90px,12vw,142px)}
+  .badge{display:inline-block;background:var(--gold);color:#2c211c;font-size:12px;font-weight:800;letter-spacing:1.6px;padding:9px 17px;border-radius:999px;text-transform:uppercase;line-height:1.4;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+  .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(40px,6.8vw,70px);line-height:1.05;letter-spacing:-.015em;margin:24px auto 16px;max-width:760px;text-wrap:balance}
+  .hero h1 em{font-style:italic;color:var(--gold2)}
+  .hero p{color:#f6ead6;max-width:600px;margin:0 auto 28px;font-size:clamp(16px,2vw,18.5px);line-height:1.65}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--ink);color:#fff;font-weight:800;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.wa{background:var(--wa);box-shadow:0 12px 26px rgba(31,170,85,.3)}
+  .btn.ghost{background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.65);color:#fff;backdrop-filter:blur(4px)}
+  /* ORDER WINDOW */
+  .window{max-width:1140px;margin:-38px auto 0;padding:0 20px;position:relative;z-index:5}
+  .window-in{background:var(--wine);color:#fff;border-radius:22px;padding:clamp(28px,5vw,42px);box-shadow:0 24px 50px rgba(92,35,42,.32);position:relative;overflow:hidden}
+  .window-in::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 240px at 50% -70px,rgba(217,180,92,.32),transparent 70%);pointer-events:none}
+  .window h2{color:#fff;position:relative}
+  .window .steps3{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px;position:relative}
+  @media(min-width:760px){.window .steps3{grid-template-columns:repeat(3,1fr)}}
+  .wstep{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:20px 18px;text-align:center}
+  .wstep .dow{font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:14px;color:var(--gold2);letter-spacing:.04em}
+  .wstep .big{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(21px,2.6vw,25px);line-height:1.2;margin:5px 0 6px}
+  .wstep p{font-size:13.5px;color:#f0ddc8;line-height:1.6}
+  .countdown{position:relative;text-align:center;margin-top:22px;font-size:14.5px;color:#f6ead6}
+  .countdown b{font-family:'Fraunces',Georgia,serif;font-size:clamp(24px,3.6vw,32px);color:#fff;display:block;margin-top:4px;letter-spacing:.01em}
+  .window .cta-row{position:relative;text-align:center;margin-top:20px}
+  /* LAYOUT */
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  section{padding:clamp(64px,10vw,108px) 0 4px}
+  section.tight{padding-top:clamp(42px,6vw,64px)}
+  .eyebrow{text-align:center;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:13px;letter-spacing:.35em;color:var(--gold);margin-bottom:14px;text-indent:.35em;text-transform:uppercase}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.015em;font-size:clamp(29px,4.4vw,40px);line-height:1.12;text-align:center;margin-bottom:10px;text-wrap:balance}
+  h2 em{font-style:italic;color:var(--wine)}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;line-height:1.7;max-width:600px;margin:0 auto 36px}
+  /* FORMATS / PRICES */
+  .formats{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:760px){.formats{grid-template-columns:1fr 1fr}}
+  .fcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 28px;text-align:center;box-shadow:0 4px 18px rgba(44,33,28,.05);transition:transform .3s ease,box-shadow .3s ease}
+  .fcard:hover{transform:translateY(-5px);box-shadow:0 20px 42px rgba(44,33,28,.11)}
+  .fcard .tag{font-size:11.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--pist)}
+  .fcard h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:23px;margin:8px 0 4px}
+  .fcard .price{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(38px,5vw,48px);color:var(--wine);line-height:1.1;margin:8px 0}
+  .fcard .price small{font-size:16px;color:var(--mut);font-family:'Manrope',sans-serif;font-weight:700}
+  .fcard p{font-size:14.5px;color:var(--mut);line-height:1.65;max-width:400px;margin:0 auto}
+  /* MENU */
+  .menu-cat{margin-bottom:clamp(38px,6vw,54px)}
+  .menu-cat-head{text-align:center;margin-bottom:22px}
+  .menu-cat-head h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(24px,3.4vw,30px);color:var(--wine2)}
+  .menu-cat-head h3::after{content:"";display:block;width:46px;height:2px;background:var(--gold);margin:12px auto 0;border-radius:999px}
+  .menu-cat-head p{color:var(--mut);font-size:14.5px;margin-top:10px}
+  .spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:18px}
+  .scard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:0 2px 10px rgba(44,33,28,.04);transition:transform .3s ease,box-shadow .3s ease;display:flex;flex-direction:column}
+  .scard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(44,33,28,.10)}
+  .scard .star{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--pist);padding:5px 11px;border-radius:999px;margin-bottom:12px}
+  .scard .star.season{background:var(--gold);color:#2c211c}
+  .scard h4{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19.5px;margin-bottom:7px;line-height:1.25}
+  .scard p{font-size:14.5px;line-height:1.65;color:var(--mut);flex:1}
+  .scard .ord{margin-top:14px;align-self:flex-start}
+  /* GALLERY */
+  .strip{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:560px){.strip{grid-template-columns:1fr 1fr}}
+  @media(min-width:960px){.strip{grid-template-columns:repeat(3,1fr)}}
+  .strip figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:0 2px 10px rgba(44,33,28,.04)}
+  .strip img{width:100%;aspect-ratio:4/5;height:auto;object-fit:cover;border-radius:10px;display:block}
+  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:10px;padding-bottom:2px;line-height:1.5}
+  /* HOW IT WORKS / STORY */
+  .grid{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 24px 28px;text-align:center;box-shadow:0 2px 10px rgba(44,33,28,.04);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(44,33,28,.10)}
+  .card .ic{font-size:28px;margin:0 auto 13px;width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--cream2);line-height:1}
+  .card h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19.5px;margin-bottom:8px;line-height:1.25}
+  .card p{font-size:14.5px;line-height:1.65;color:var(--mut)}
+  .story{display:grid;grid-template-columns:1fr;gap:26px;align-items:center}
+  @media(min-width:860px){.story{grid-template-columns:1fr 1.1fr}}
+  .story img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;display:block;box-shadow:0 20px 44px rgba(44,33,28,.16)}
+  .story .txt h2{text-align:left}
+  .story .txt p{color:var(--mut);font-size:15.5px;line-height:1.75;margin-bottom:14px}
+  .story .txt p b{color:var(--ink)}
+  /* REVIEWS */
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:760px){.rev-grid{grid-template-columns:1fr 1fr}}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 26px 24px;box-shadow:0 2px 10px rgba(44,33,28,.04)}
+  .rev::before{content:"\201C";display:block;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:56px;line-height:.55;color:var(--gold);margin:6px 0 16px}
+  .rev p{font-size:16.5px;line-height:1.65;font-family:'Fraunces',Georgia,serif;font-style:italic}
+  .rev .who{margin-top:14px;font-size:13px;font-weight:800;color:var(--wine)}
+  .rev .who span{color:var(--mut);font-weight:500}
+  /* VISIT */
+  .visit{background:var(--wine2);color:#fff;border-radius:22px;padding:clamp(38px,6vw,54px) clamp(22px,5vw,42px);text-align:center;margin:clamp(56px,8vw,84px) 0 8px;box-shadow:0 22px 48px rgba(92,35,42,.28);position:relative;overflow:hidden}
+  .visit::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 260px at 50% -60px,rgba(217,180,92,.26),transparent 70%);pointer-events:none}
+  .visit h2{color:#fff;position:relative}
+  .visit .big{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(30px,5vw,42px);margin:12px 0 8px;position:relative;line-height:1.15}
+  .visit p{color:#edd9c2;font-size:15.5px;line-height:1.7;max-width:620px;margin:0 auto;position:relative}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:660px;margin:14px auto 0;line-height:1.6}
+  .order-actions{text-align:center;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  footer{border-top:1px solid var(--line);margin-top:clamp(56px,8vw,84px);padding:30px 20px 104px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7}
+  footer a{color:var(--wine)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:40;box-shadow:0 -8px 28px rgba(44,33,28,.10)}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:50px;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:800;font-size:15.5px;max-width:1140px;margin:0 auto;transition:transform .25s ease,box-shadow .25s ease}
+  .sticky a:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(31,170,85,.30)}
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){*,*::before,*::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}.rv{opacity:1 !important;transform:none !important}}
+  @media(max-width:520px){.pill{font-size:11.5px;padding:7px 11px;white-space:normal;text-align:center}.order-actions .btn{width:100%}.hero-actions .btn{width:100%}}
+  /* AI assistant demo */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--wine);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--wine);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:var(--cream2);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--wine);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--wine);color:var(--wine)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--wine);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+  /* Tap-to-order */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:7px 13px;border:1.5px solid var(--wine);color:var(--wine);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--wine);color:#fff;transform:translateY(-1px)}
+  .ord-promo{display:inline-block;position:relative;background:#fff;color:var(--wine2);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:999px;font-size:15px;box-shadow:0 12px 26px rgba(0,0,0,.18);transition:transform .25s ease,box-shadow .25s ease}
+  .ord-promo:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(0,0,0,.22)}
+  /* Map */
+  .mapsec{max-width:1140px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="site-header">
+  <div class="header-in">
+    <div class="brand">Repostería <span>GG</span><small>Alta repostería · Guadalajara</small></div>
+    <div class="pill">Menú nuevo · martes y jueves</div>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="hero-img" src="img/pistache.jpg" alt="Cheesecake de pistache de Repostería GG, coronado con fresas, zarzamoras, moras azules y pistaches">
+  <div class="hero-inner rv">
+    <div class="badge">Alta repostería artesanal de autor · Guadalajara, Jalisco</div>
+    <h1>La sensación de <em>probar el cielo</em></h1>
+    <p>Pasteles y cheesecakes de autor de Griselda Vargas, con más de 20 sabores que cambian cada semana. Por rebanada los sábados en Casa Cem, y completos sobre pedido.</p>
+    <div class="hero-actions">
+      <a class="btn wa" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Reposter%C3%ADa%20GG">Pedir por WhatsApp</a>
+      <a class="btn ghost" href="#menu">Ver el menú de sabores</a>
+    </div>
+  </div>
+</div>
+
+<div class="window rv">
+  <div class="window-in">
+    <div class="eyebrow" style="color:var(--gold2)">Así funciona cada semana</div>
+    <h2>Menú nuevo martes y jueves.<br>Los pedidos cierran el viernes.</h2>
+    <div class="steps3">
+      <div class="wstep"><div class="dow">Martes y jueves</div><div class="big">Sale el menú nuevo</div><p>Cada semana publicamos los sabores disponibles. El menú cambia, así que lo de hoy puede no estar la próxima semana.</p></div>
+      <div class="wstep"><div class="dow">Viernes · 8:00 PM</div><div class="big">Cierre de pedidos</div><p>Aparta tus rebanadas o tu pastel completo antes del viernes a las 8:00 PM, o hasta agotar existencias.</p></div>
+      <div class="wstep"><div class="dow">Sábado y domingo</div><div class="big">Bazar y entregas</div><p>Sábados de 5 a 11 PM en el Bazar de Casa Cem. Domingos, entregas de rebanadas en diferentes puntos de la ciudad.</p></div>
+    </div>
+    <div class="countdown" id="countdown" hidden>Próximo cierre de pedidos · viernes 8:00 PM<b id="countdown-time"></b></div>
+    <div class="cta-row"><a class="ord-promo" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20apartar%20mi%20pedido%20de%20esta%20semana%20en%20Reposter%C3%ADa%20GG">Apartar mi pedido de esta semana</a></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="eyebrow rv">01 · Formatos</div>
+    <h2 class="rv">Rebanada o pastel completo, <em>tú eliges</em></h2>
+    <p class="sub rv">Dos formas de probar Repostería GG. Los pasteles completos se trabajan sobre pedido, con 7 días de anticipación.</p>
+    <div class="formats">
+      <div class="fcard rv">
+        <div class="tag">La favorita del bazar</div>
+        <h3>Rebanada</h3>
+        <div class="price">$135 <small>MXN</small></div>
+        <p>Una rebanada generosa de tu sabor favorito, lista para llevar el sábado en Casa Cem o para entrega el domingo. Pregunta por los sabores de esta semana.</p>
+        <div style="margin-top:18px"><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%20una%20rebanada%20%28%24135%29%20en%20Reposter%C3%ADa%20GG">Pedir una rebanada</a></div>
+      </div>
+      <div class="fcard rv">
+        <div class="tag">Para tu evento</div>
+        <h3>Pastel entero</h3>
+        <div class="price">$1,080 <small>MXN</small></div>
+        <p>Pastel completo para 10 personas, sobre pedido con 7 días de anticipación. Elige tu sabor y apártalo antes del cierre del viernes a las 8:00 PM.</p>
+        <div style="margin-top:18px"><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20encargar%20un%20pastel%20entero%20%28%241%2C080%29%20en%20Reposter%C3%ADa%20GG">Encargar el entero</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight" id="menu">
+    <div class="eyebrow rv">02 · El menú</div>
+    <h2 class="rv">Más de 20 sabores, <em>cada semana distintos</em></h2>
+    <p class="sub rv">Los sabores que verás en el bazar, publicados por Repostería GG. El menú cambia cada martes y jueves, así que confirma la disponibilidad de esta semana por WhatsApp. Rebanada $135 · pastel entero $1,080.</p>
+
+    <div class="menu-cat">
+      <div class="menu-cat-head rv"><h3>Cheesecakes</h3><p>El corazón de Repostería GG. Cremosos, altos y coronados con fruta fresca.</p></div>
+      <div class="spec">
+        <div class="scard rv"><span class="star">★ El más vendido</span><h4>Cheesecake de Pistache</h4><p>Nuestro cheesecake más vendido. Con fresas, frambuesas, zarzamoras y pistaches. Este sabor siempre está disponible.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Pistache">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake de Oreo</h4><p>Suave y cremoso, con trozos de Oreo en la mezcla que le dan ese toque crujiente en cada bocado. Decorado con más galletas Oreo.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Oreo">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake Snickers</h4><p>Cacahuates, chocolate y caramelo salado. Una mezcla muy especial, con base de cacahuate y caramelo salado encima.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20Snickers">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake de Mango y Maracuyá</h4><p>El dulzor tropical del mango con el toque ácido del maracuyá. Uno de los favoritos del bazar.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Mango%20y%20Maracuy%C3%A1">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake de Maracuyá</h4><p>Cremoso y con el toque fresco de la fruta de la pasión. Para quienes lo prefieren con un final ácido.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Maracuy%C3%A1">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake con Brownie</h4><p>Cheesecake cubierto de ganache de chocolate y trozos de brownie. Chocolate sobre chocolate, sin medias tintas.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20con%20Brownie">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake de Fresa e Higo</h4><p>Fresas frescas y el dulzor delicado del higo sobre un cheesecake suave. Un clásico de la vitrina.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Fresa%20e%20Higo">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake de Cereza</h4><p>Coronado con cerezas, un cheesecake clásico que nunca falta entre los favoritos.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Cereza">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake de Taro</h4><p>De un morado espectacular, con topping de mora azul. De los sabores que más llaman la atención en el bazar.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Taro">Pedir</a></div>
+        <div class="scard rv"><span class="star season">De temporada</span><h4>Cheesecake de Mandarina</h4><p>El sabor de temporada: fresco, cítrico y con el dulzor justo de la mandarina.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Mandarina">Pedir</a></div>
+        <div class="scard rv"><h4>Cheesecake de Manzana y Canela</h4><p>Manzana con canela, cálido y reconfortante. El favorito de quienes lo prueban en temporada fría.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Cheesecake%20de%20Manzana%20y%20Canela">Pedir</a></div>
+      </div>
+    </div>
+
+    <div class="menu-cat">
+      <div class="menu-cat-head rv"><h3>Pasteles</h3><p>De autor, con fruta fresca, ganache, nuez y mucho cariño. Para llevar por rebanada o encargar entero.</p></div>
+      <div class="spec">
+        <div class="scard rv"><span class="star season">De temporada</span><h4>Pastel Nogada</h4><p>Coronado con semillas de granada. El más vendido del mes en temporada.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20Nogada">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel Cazuela</h4><p>Coronado con pitahaya y toronja. Un pastel distinto, con fruta fresca de verdad.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20Cazuela">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Plátano con Caramelo</h4><p>Plátano, caramelo y nuez. Suave, húmedo y con ese final tostado del caramelo.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Pl%C3%A1tano%20con%20Caramelo">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Chocolate con Frutos Rojos</h4><p>Pastel de chocolate con fresas, moras azules y zarzamoras frescas. El consentido de los amantes del chocolate.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Chocolate%20con%20Frutos%20Rojos">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Chocolate Amargo con Coñac</h4><p>Chocolate amargo con el fondo cálido del coñac. Para paladares que buscan algo serio.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Chocolate%20Amargo%20con%20Co%C3%B1ac">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Chocolate con Pera y Almendras</h4><p>Chocolate con pera y almendra: suave, elegante y con textura en cada bocado.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Chocolate%20con%20Pera%20y%20Almendras">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Coco con Almendra</h4><p>Cubierto de coco y almendra tostada. Un clásico de la vitrina del bazar.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Coco%20con%20Almendra">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Guanábana con Coco</h4><p>Guanábana con coco, el favorito de la semana pasada en el bazar. Fresco y diferente a todo lo demás.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Guan%C3%A1bana%20con%20Coco">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel Golosos</h4><p>Pastel de chocolate cargado de Ferrero Rocher y Hershey's. Para los verdaderamente golosos.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20Golosos">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel Alemán de Chocolate</h4><p>Relleno alemán de caramelo y nuez sobre pan de chocolate. Un clásico que regresa al bazar.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20Alem%C3%A1n%20de%20Chocolate">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Kiwi y Naranja</h4><p>Kiwi y naranja fresca: color, acidez y dulzor en un solo pastel.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Kiwi%20y%20Naranja">Pedir</a></div>
+        <div class="scard rv"><h4>Pastel de Rol de Canela</h4><p>Coronado con mini roles de canela glaseados. Para los que aman el rol de canela, en versión pastel.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Rol%20de%20Canela">Pedir</a></div>
+      </div>
+    </div>
+
+    <div class="menu-cat">
+      <div class="menu-cat-head rv"><h3>Roles, pays y antojos</h3><p>Los acompañantes del bazar: roles recién hechos y pay para llevar por rebanada.</p></div>
+      <div class="spec">
+        <div class="scard rv"><h4>Roles de Mango y Maracuyá</h4><p>Roles con mermelada de mango, queso crema y mermelada casera, coronados con maracuyá. Regresaron por temporada al bazar.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Roles%20de%20Mango%20y%20Maracuy%C3%A1">Pedir</a></div>
+        <div class="scard rv"><h4>Roles de Canela</h4><p>Roles de canela con glaseado de queso crema, de la vitrina del bazar.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Roles%20de%20Canela">Pedir</a></div>
+        <div class="scard rv"><h4>Pay de Nuez</h4><p>Pay de nuez, servido por rebanada en el bazar. El compañero perfecto de una rebanada de pastel.</p><a class="ord" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20pedir%3A%20Pay%20de%20Nuez">Pedir</a></div>
+      </div>
+    </div>
+    <p class="fineprint rv">Los sabores de este menú fueron publicados por Repostería GG en sus redes. El menú cambia cada semana: confirma los sabores de esta semana por WhatsApp antes de apartar. Rebanada $135 MXN y pastel entero $1,080 MXN son los precios publicados para esos formatos.</p>
+  </section>
+
+  <section class="tight">
+    <div class="eyebrow rv">03 · Del bazar</div>
+    <h2 class="rv">Así se ven <em>nuestros pasteles</em></h2>
+    <p class="sub rv">Fotos reales de Repostería GG: la vitrina del sábado, las rebanadas y el pastel de pistache, el más vendido.</p>
+    <div class="strip">
+      <figure class="rv"><img src="img/mango.jpg" alt="Rebanada de cheesecake de mango de Repostería GG, servida en el bazar"><figcaption>Rebanada de mango, servida en el bazar</figcaption></figure>
+      <figure class="rv"><img src="img/oreo.jpg" alt="Cheesecake de Oreo de Repostería GG, decorado con galletas Oreo"><figcaption>Cheesecake de Oreo</figcaption></figure>
+      <figure class="rv"><img src="img/aleman.jpg" alt="Pastel alemán de chocolate de Repostería GG, con relleno de caramelo y nuez"><figcaption>Pastel alemán de chocolate</figcaption></figure>
+      <figure class="rv"><img src="img/rol-canela.jpg" alt="Pastel de rol de canela de Repostería GG, con mini roles glaseados"><figcaption>Pastel de rol de canela</figcaption></figure>
+      <figure class="rv"><img src="img/pistache.jpg" alt="Cheesecake de pistache de Repostería GG, el más vendido"><figcaption>Cheesecake de pistache, el más vendido</figcaption></figure>
+      <figure class="rv"><img src="img/bazar.jpg" alt="Griselda Vargas en su puesto de Repostería GG en el Bazar de Casa Cem, Guadalajara"><figcaption>Griselda en el Bazar de Casa Cem</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow rv">04 · Cómo pedir</div>
+    <h2 class="rv">Tres pasos y <em>tu postre está apartado</em></h2>
+    <p class="sub rv">Sin tienda física: trabajamos sobre pedido, con venta de rebanadas los sábados y entregas los domingos.</p>
+    <div class="grid">
+      <div class="card rv"><div class="ic">📋</div><h3>1. Revisa el menú</h3><p>El menú nuevo sale cada martes y jueves. Elige tu sabor de esta semana antes de que se agote.</p></div>
+      <div class="card rv"><div class="ic">💬</div><h3>2. Aparta por WhatsApp</h3><p>Escríbenos al +52 33 1893 5188 con tu sabor y tu formato: rebanada $135 o pastel entero $1,080. Los pedidos cierran el viernes a las 8:00 PM.</p></div>
+      <div class="card rv"><div class="ic">🎂</div><h3>3. Recoge o recibe</h3><p>Sábado de 5 a 11 PM en Casa Cem, o domingo en los puntos de entrega de la ciudad. Te recomendamos llegar al bazar entre 5 y 7 PM para encontrar variedad.</p></div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="story">
+      <div class="rv"><img src="img/bazar.jpg" alt="Griselda Vargas en el Bazar de Casa Cem, Guadalajara, con los pasteles de Repostería GG"></div>
+      <div class="txt rv">
+        <div class="eyebrow" style="text-align:left;margin-bottom:10px">05 · Nuestra historia</div>
+        <h2>Griselda Vargas y <em>más de 10 años</em> de repostería</h2>
+        <p><b>Hola, soy Griselda.</b> Repostería GG nació como un proyecto personal y hoy es un negocio familiar: GG son mis iniciales. Empecé sin un nombre claro para el negocio y encontré mi pasión en la repostería, perfeccionando cada receta en casa.</p>
+        <p>Hoy vendemos en el <b>Bazar de Casa Cem</b> todos los sábados, con más de 20 sabores de pasteles y cheesecakes, y entregamos rebanadas los domingos en diferentes puntos de Guadalajara.</p>
+        <p>Cada pastel se hace por encargo, con fruta fresca y sin prisa. Por eso el menú cambia cada semana: lo que ves hoy es lo que hicimos para ti esta semana.</p>
+        <a class="ord" href="https://wa.me/523318935188?text=Hola%20Griselda%2C%20quiero%20hacer%20un%20pedido%20en%20Reposter%C3%ADa%20GG">Escribirle a Griselda</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="eyebrow rv">06 · Lo que dicen</div>
+    <h2 class="rv">Comentarios reales <em>de nuestras redes</em></h2>
+    <p class="sub rv">Lo que nos escriben en Facebook e Instagram después de probar nuestros pasteles.</p>
+    <div class="rev-grid">
+      <div class="rev rv"><p>Lo más delicioso del mundo.</p><div class="who">Comentario en Instagram <span>· @reposteriagg</span></div></div>
+      <div class="rev rv"><p>Los pasteles más ricos que e probado en mi vida.</p><div class="who">Comentario en Facebook <span>· Repostería GG</span></div></div>
+    </div>
+    <p class="fineprint rv">Síguenos como <b>Repostería GG</b> en Facebook (38 mil seguidores) y <b>@reposteriagg</b> en Instagram (14 mil seguidores).</p>
+  </section>
+
+  <div class="visit rv">
+    <div class="eyebrow" style="color:var(--gold2)">07 · El bazar</div>
+    <h2>Nos vemos el sábado en Casa Cem</h2>
+    <div class="big">Sábados · 5:00 – 11:00 PM</div>
+    <p>Av. Chapultepec 376, esquina con Guadalupe Zuno, Guadalajara, Jalisco. Llega entre 5 y 7 PM para encontrar toda la variedad. Domingos: entregas de rebanadas en diferentes puntos de la ciudad (los puntos se publican cada semana).</p>
+    <div style="margin-top:24px"><a class="ord-promo" href="https://wa.me/523318935188?text=Hola%2C%20%C2%BFcu%C3%A1les%20son%20los%20sabores%20de%20esta%20semana%3F">Preguntar los sabores de esta semana</a></div>
+  </div>
+
+  <section class="tight">
+    <div class="eyebrow rv">08 · Haz tu pedido</div>
+    <h2 class="rv">¿Ya elegiste tu sabor?</h2>
+    <p class="sub rv">Recuerda: el menú cambia martes y jueves, y los pedidos cierran el viernes a las 8:00 PM o hasta agotar existencias.</p>
+    <div class="order-actions rv">
+      <a class="btn wa" href="https://wa.me/523318935188?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Reposter%C3%ADa%20GG">WhatsApp +52 33 1893 5188</a>
+      <a class="btn" href="https://www.instagram.com/reposteriagg" target="_blank" rel="noopener">Instagram @reposteriagg</a>
+      <a class="btn" href="https://www.tiktok.com/@reposgg" target="_blank" rel="noopener">TikTok @reposgg</a>
+    </div>
+  </section>
+</div>
+
+<div class="mapsec">
+  <h2>Cómo llegar al bazar</h2>
+  <div class="mapframe"><iframe title="Mapa — Bazar de Casa Cem, Repostería GG" src="https://www.google.com/maps?q=Casa%20Cem%2C%20Av.%20Chapultepec%20376%2C%20esquina%20con%20Guadalupe%20Zuno%2C%20Guadalajara%2C%20Jalisco&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
+<footer>
+  Repostería GG · Guadalajara, Jalisco · WhatsApp <a href="https://wa.me/523318935188">+52 33 1893 5188</a><br><br>
+  Concept preview built by SiteSprint Studio — this is not the live website of Repostería GG.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/523318935188?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Reposter%C3%ADa%20GG">Pedir por WhatsApp · Cierre viernes 8:00 PM</a></div>
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente GG">
+    <div class="chatw-head"><div><b>Asistente GG</b><small>Asistente de demostración · parte de esta vista previa</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
+<script>
+(function(){
+  var header=document.getElementById('site-header');
+  function onScroll(){ if(window.scrollY>12){header.classList.add('scrolled');}else{header.classList.remove('scrolled');} }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('in');});
+  } else {
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  }
+  /* Countdown to the Friday 8:00 PM order cutoff (America/Mexico_City) */
+  var cd=document.getElementById('countdown'),ct=document.getElementById('countdown-time');
+  if(cd&&ct){
+    function tick(){
+      var now;
+      try{ now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Mexico_City'})); }catch(e){ now=new Date(); }
+      var target=new Date(now.getTime());
+      target.setHours(20,0,0,0);
+      var add=(5-now.getDay()+7)%7; /* Friday = 5 */
+      if(add===0 && now.getTime()>=target.getTime()) add=7;
+      target.setDate(target.getDate()+add);
+      var diff=target.getTime()-now.getTime();
+      if(diff<0) diff=0;
+      var d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
+      function p(n){return (n<10?'0':'')+n;}
+      ct.textContent=(d>0?d+(d===1?' día · ':' días · '):'')+p(h)+':'+p(m)+':'+p(s);
+      cd.hidden=false;
+    }
+    tick(); setInterval(tick,1000);
+  }
+})();
+</script>
+<script>
+(function(){
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "Pedir por WhatsApp", "href": "https://wa.me/523318935188"}, "greeting": "¡Hola! Soy el asistente de Repostería GG. Pregúntame por los sabores, los precios, cuándo cierran los pedidos, el bazar del sábado o las entregas del domingo — o toca una sugerencia.", "fallback": "Eso no lo tengo a la mano — escríbenos por WhatsApp al +52 33 1893 5188 y Griselda te ayuda.", "chips": ["¿Cuánto cuesta?", "¿Cuándo cierran los pedidos?", "Sabores de cheesecake", "¿Dónde es el bazar?", "¿Entregan el domingo?", "¿El más vendido?"], "items": [{"k": ["pistache"], "a": "Cheesecake de Pistache: es nuestro más vendido, con fresas, frambuesas, zarzamoras y pistaches. Y es el sabor que siempre está disponible."}, {"k": ["oreo"], "a": "Cheesecake de Oreo: suave y cremoso, con trozos de Oreo en la mezcla que le dan un toque crujiente en cada bocado, decorado con más galletas Oreo."}, {"k": ["snickers", "snicker"], "a": "Cheesecake Snickers: cacahuates, chocolate y caramelo salado — una mezcla muy especial."}, {"k": ["mango"], "a": "De mango tenemos el Cheesecake de Mango y Maracuyá, y los Roles de Mango y Maracuyá con mermelada casera y queso crema."}, {"k": ["maracuya"], "a": "De maracuyá: el Cheesecake de Mango y Maracuyá, el Cheesecake de Maracuyá y los Roles de Mango y Maracuyá."}, {"k": ["nogada"], "a": "Pastel Nogada: coronado con semillas de granada. Es de temporada y fue el más vendido del mes."}, {"k": ["cazuela"], "a": "Pastel Cazuela: coronado con pitahaya y toronja, con fruta fresca de verdad."}, {"k": ["platano"], "a": "Pastel de Plátano con Caramelo: plátano, caramelo y nuez."}, {"k": ["taro"], "a": "Cheesecake de Taro: de color morado, con topping de mora azul."}, {"k": ["mandarina"], "a": "Cheesecake de Mandarina: sabor de temporada, fresco y cítrico."}, {"k": ["manzana"], "a": "Cheesecake de Manzana y Canela: cálido y reconfortante."}, {"k": ["guanabana"], "a": "Pastel de Guanábana con Coco: fue el favorito de la semana pasada en el bazar."}, {"k": ["golosos"], "a": "Pastel Golosos: pastel de chocolate cargado de Ferrero Rocher y Hershey's."}, {"k": ["aleman"], "a": "Pastel Alemán de Chocolate: relleno alemán de caramelo y nuez sobre pan de chocolate."}, {"k": ["kiwi"], "a": "Pastel de Kiwi y Naranja: kiwi y naranja fresca, color y acidez en un solo pastel."}, {"k": ["rol de canela", "roles"], "a": "Roles: de Mango y Maracuyá (mermelada de mango, queso crema y mermelada casera) y de Canela con glaseado de queso crema. También está el Pastel de Rol de Canela, coronado con mini roles glaseados."}, {"k": ["pay de nuez", "nuez"], "a": "Pay de Nuez: se sirve por rebanada en el bazar. La nuez también aparece en el Pastel de Plátano con Caramelo y en el Pastel Alemán."}, {"k": ["coñac", "conac"], "a": "Pastel de Chocolate Amargo con Coñac: chocolate amargo con el fondo cálido del coñac."}, {"k": ["pera"], "a": "Pastel de Chocolate con Pera y Almendras: suave, elegante y con textura en cada bocado."}, {"k": ["coco"], "a": "De coco: el Pastel de Coco con Almendra y el Pastel de Guanábana con Coco."}, {"k": ["cereza"], "a": "Cheesecake de Cereza: coronado con cerezas, un clásico de la vitrina."}, {"k": ["brownie"], "a": "Cheesecake con Brownie: cubierto de ganache de chocolate y trozos de brownie."}, {"k": ["fresa e higo", "higo"], "a": "Cheesecake de Fresa e Higo: fresas frescas y el dulzor delicado del higo."}], "intents": [{"k": ["hola", "buenas", "buenos"], "g": 1, "a": "¡Hola! Pregúntame por los sabores, los precios o cuándo cierran los pedidos."}, {"k": ["precio", "cuesta", "cuestan", "cuanto", "costo"], "a": "Precios publicados: rebanada $135 MXN y pastel entero para 10 personas $1,080 MXN. Los sabores cambian cada semana, así que confirma el tuyo por WhatsApp.", "link": {"t": "Pedir por WhatsApp", "href": "https://wa.me/523318935188"}}, {"k": ["rebanada"], "a": "La rebanada cuesta $135 MXN. Se vende los sábados en el Bazar de Casa Cem (5 a 11 PM) y los domingos hay entregas en diferentes puntos de la ciudad."}, {"k": ["entero", "completo", "pastel completo"], "a": "El pastel entero cuesta $1,080 MXN, es para 10 personas y se trabaja sobre pedido con 7 días de anticipación."}, {"k": ["cierran", "cierre", "hasta cuando", "apartar", "fecha limite"], "a": "Los pedidos cierran el viernes a las 8:00 PM, o hasta agotar existencias. El menú nuevo sale cada martes y jueves."}, {"k": ["menu", "sabores", "que hay", "carta", "ofrecen"], "a": "Tenemos más de 20 sabores entre cheesecakes (pistache, Oreo, Snickers, mango y maracuyá, taro, mandarina, manzana y canela, fresa e higo, cereza, con brownie) y pasteles (nogada, cazuela, plátano con caramelo, chocolate con frutos rojos, Golosos, alemán, guanábana con coco y más), además de roles y pay de nuez. El menú cambia cada martes y jueves.", "link": {"t": "Preguntar los sabores de esta semana", "href": "https://wa.me/523318935188"}}, {"k": ["cheesecake"], "a": "Cheesecakes: Pistache (el más vendido), Oreo, Snickers, Mango y Maracuyá, Maracuyá, con Brownie, Fresa e Higo, Cereza, Taro, Mandarina y Manzana y Canela. Pregunta por el que quieras."}, {"k": ["mas vendido", "favorito", "recomiendas", "popular"], "a": "El más vendido es el Cheesecake de Pistache — y es el sabor que siempre está disponible. El Pastel Nogada fue el más vendido del mes en su temporada."}, {"k": ["bazar", "sabado", "donde", "ubicacion", "direccion", "casa cem", "llegar"], "a": "Los sábados estamos en el Bazar de Casa Cem, Av. Chapultepec 376 esquina con Guadalupe Zuno, Guadalajara, Jalisco, de 5:00 a 11:00 PM. Te recomendamos llegar entre 5 y 7 PM para encontrar variedad."}, {"k": ["domingo", "entrega", "domicilio", "envio", "reparto"], "a": "Los domingos hacemos entregas de rebanadas en diferentes puntos de la ciudad. Los puntos se publican cada semana: pregúntanos por WhatsApp cuáles son los de este domingo.", "link": {"t": "Preguntar puntos de entrega", "href": "https://wa.me/523318935188"}}, {"k": ["horario", "hora", "abren", "abierto"], "a": "Vendemos los sábados de 5:00 a 11:00 PM en el Bazar de Casa Cem. No tenemos tienda física: trabajamos sobre pedido, con entregas los domingos."}, {"k": ["pedido", "pedir", "encargar", "quiero", "apartado", "anticipacion"], "a": "Para pedir, escríbenos por WhatsApp al +52 33 1893 5188 con tu sabor y formato (rebanada $135 o entero $1,080). Los pedidos cierran el viernes a las 8:00 PM, y los pasteles completos se encargan con 7 días de anticipación.", "link": {"t": "Hacer mi pedido", "href": "https://wa.me/523318935188"}}, {"k": ["griselda", "duena", "quien", "historia"], "a": "Repostería GG es de Griselda Vargas (GG son sus iniciales). Lleva más de 10 años de repostería y hoy es un negocio familiar de Guadalajara."}, {"k": ["contacto", "telefono", "whatsapp", "numero"], "a": "WhatsApp: +52 33 1893 5188. También estamos en Instagram como @reposteriagg y en TikTok como @reposgg.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/523318935188"}}, {"k": ["gracias"], "a": "¡Con gusto! Te esperamos el sábado en Casa Cem."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thi&amp;D Creations - Wellington, NZ | Handmade bouquets that never wilt</title>
+<meta name="description" content="Thi&D Creations, Wellington NZ. Handmade pipe-cleaner and crochet bouquets and gifts that never wilt. Browse the full catalogue by item number and order on WhatsApp. Pickup at 219 Willis Street, Wellington, NZ-wide delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fff9f1;--ink:#33261e;--mut:#7a6a5c;--rose:#b94a68;--rose2:#d4607f;--rose-deep:#7e2a44;
+    --sage:#5f7351;--gold:#d99a1f;--gold2:#b57d12;--sand:#fdeedd;--blush:#fde6ee;--line:#f0ddc6;--card:#ffffff;--wa:#1faa55;--wa2:#178a44;
+    --shadow:0 1px 2px rgba(51,38,30,.04),0 12px 32px -12px rgba(126,42,68,.16);
+    --shadow-lg:0 2px 4px rgba(51,38,30,.05),0 24px 48px -16px rgba(126,42,68,.26);
+    --radius:20px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--gold);color:var(--ink)}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  :focus-visible{outline:2px solid var(--rose2);outline-offset:3px;border-radius:6px}
+  .serif{font-family:'Fraunces',Georgia,'Times New Roman',serif}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(255,249,241,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:padding .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease}
+  .header-in{max-width:1120px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:padding .3s ease;flex-wrap:wrap}
+  header.scrolled{background:rgba(255,249,241,.97);border-bottom-color:var(--line);box-shadow:0 8px 30px -14px rgba(126,42,68,.25)}
+  header.scrolled .header-in{padding-top:11px;padding-bottom:11px}
+  .brand{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(21px,3vw,25px);letter-spacing:-.01em;color:var(--rose-deep);line-height:1.1;white-space:nowrap}
+  .brand span{color:var(--gold2)}
+  .pill{font-size:12.5px;font-weight:700;color:var(--rose-deep);background:var(--blush);padding:9px 15px;border-radius:999px;white-space:nowrap;border:1px solid #f3c3d2;min-height:36px;display:inline-flex;align-items:center}
+
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--rose-deep);isolation:isolate}
+  .hero-media{position:absolute;inset:0;z-index:-2}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+      radial-gradient(620px 400px at 84% -6%,rgba(217,154,31,.36),rgba(217,154,31,0) 62%),
+      linear-gradient(180deg,rgba(84,24,42,.84) 0%,rgba(126,42,68,.74) 46%,rgba(84,24,42,.93) 100%)}
+  .hero-in{max-width:1120px;margin:0 auto;padding:clamp(72px,10vw,118px) 24px clamp(80px,10vw,124px);text-align:center;position:relative}
+  .badge{display:inline-block;background:var(--rose);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.16em;padding:9px 17px;border-radius:999px;text-transform:uppercase;border:1px solid rgba(255,255,255,.28);box-shadow:0 10px 24px -10px rgba(40,10,20,.7)}
+  .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(38px,6.4vw,66px);line-height:1.06;letter-spacing:-.015em;margin:26px auto 20px;max-width:800px;text-wrap:balance;text-shadow:0 2px 24px rgba(40,10,20,.35)}
+  .hero p{color:#fbe3ea;max-width:580px;margin:0 auto 34px;font-size:clamp(16px,2vw,18px);line-height:1.65}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 30px;border-radius:999px;font-size:15.5px;line-height:1.25;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(40,10,20,.55)}
+  .btn:active{transform:translateY(0)}
+  .btn.wa{background:var(--wa)}
+  .btn.wa:hover{background:var(--wa2)}
+  .btn.gold{background:var(--gold);color:#33261e}
+  .btn.gold:hover{background:var(--gold2);color:#fff}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:clamp(64px,10vw,110px) 0 0}
+  section:last-child{padding-bottom:8px}
+  .eyebrow{text-align:center;font-size:12px;font-weight:800;letter-spacing:.34em;color:var(--gold2);margin-bottom:14px}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(30px,4.4vw,42px);letter-spacing:-.015em;line-height:1.12;text-align:center;margin-bottom:10px;color:var(--rose-deep)}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;max-width:580px;margin:0 auto 36px;line-height:1.65}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 26px 30px;text-align:center;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .card .ic{font-size:32px;line-height:1;margin-bottom:16px}
+  .card h3{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:20px;letter-spacing:-.01em;margin-bottom:8px;color:var(--rose-deep)}
+  .card p{font-size:14.5px;color:var(--mut);line-height:1.65}
+  .card p a{color:var(--rose);font-weight:600;text-decoration:none;border-bottom:1px solid #f3c3d2}
+  .card p a:hover{color:var(--gold2);border-bottom-color:var(--gold)}
+
+  /* ---------- Catalogue ---------- */
+  .cat-tools{position:sticky;top:64px;z-index:30;background:rgba(255,249,241,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow);margin-bottom:22px}
+  .searchrow{display:flex;gap:10px;flex-wrap:wrap}
+  .searchrow input{flex:1;min-width:200px;border:1.5px solid var(--line);border-radius:999px;padding:12px 18px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+  .searchrow input:focus{outline:none;border-color:var(--rose2)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+  .fchip{border:1.5px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:999px;cursor:pointer;transition:all .2s ease}
+  .fchip:hover{border-color:var(--rose2);color:var(--rose-deep)}
+  .fchip.active{background:var(--rose);border-color:var(--rose);color:#fff}
+  .catcount{text-align:center;color:var(--mut);font-size:13.5px;margin:0 0 18px}
+  .catgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease;display:flex;flex-direction:column}
+  .item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .item.hide{display:none}
+  .ph{position:relative;height:230px;background:#f7ead9;overflow:hidden;flex:none}
+  .ph img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+  .ph.nophoto{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+  .phflower{font-size:44px;line-height:1;color:rgba(126,42,68,.45)}
+  .phcode{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:40px;letter-spacing:.02em;color:rgba(51,38,30,.72)}
+  .codebadge{position:absolute;top:10px;left:10px;background:rgba(51,38,30,.82);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.06em;padding:5px 10px;border-radius:999px}
+  .ibody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .ibody h3{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:18.5px;line-height:1.25;letter-spacing:-.01em;color:var(--ink)}
+  .irow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
+  .price{font-weight:800;color:var(--gold2);font-size:16.5px;white-space:nowrap}
+  .icode{font-size:11.5px;color:var(--mut);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:8px 14px;border:1.5px solid var(--wa);color:var(--wa2);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--wa);color:#fff;transform:translateY(-1px)}
+  .noresults{display:none;text-align:center;color:var(--mut);font-size:15px;padding:28px 10px}
+  .noresults.show{display:block}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 22px 28px;text-align:center;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .step:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .step .n{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(150deg,var(--gold) 0%,var(--gold2) 100%);color:#fff;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:19px;margin-bottom:16px;box-shadow:0 10px 20px -8px rgba(181,125,18,.7)}
+  .step h3{font-size:16.5px;font-weight:700;margin-bottom:7px}
+  .step p{font-size:14px;color:var(--mut);line-height:1.65}
+
+  .panel{background:
+      radial-gradient(520px 320px at 88% -10%,rgba(217,154,31,.34),rgba(217,154,31,0) 62%),
+      linear-gradient(158deg,var(--rose2) 0%,var(--rose) 55%,var(--rose-deep) 100%);
+    color:#fff;border-radius:24px;padding:clamp(44px,6vw,64px) 28px;text-align:center;margin:clamp(64px,10vw,110px) 0 0;box-shadow:var(--shadow-lg)}
+  .panel .eyebrow{color:#ffd98a}
+  .panel h2{color:#fff}
+  .panel .big{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(24px,3.6vw,32px);line-height:1.5;letter-spacing:-.01em;margin:12px 0 10px}
+  .panel p{color:#fbe3ea;font-size:15px;line-height:1.65;max-width:620px;margin:0 auto}
+
+  .contact-actions{text-align:center;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+  .igband{max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,72px) 20px 0}
+  .igband-in{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:18px;padding:22px 26px;background:var(--card)}
+  .igband .igt{font-size:16px;font-weight:700}
+  .igband .igt b{color:var(--rose)}
+
+  footer{padding:clamp(56px,8vw,80px) 24px 110px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7;border-top:1px solid var(--line);margin-top:clamp(64px,10vw,100px)}
+  footer a{color:var(--rose)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:50;box-shadow:0 -10px 30px -18px rgba(126,42,68,.35)}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:background .25s ease}
+  .sticky a:hover{background:var(--wa2)}
+
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+
+  @media(max-width:560px){
+    .header-in{padding-left:18px;padding-right:18px}
+    .pill{font-size:11.5px;padding:8px 12px}
+    .wrap{padding:0 18px}
+    .hero-in{padding-left:18px;padding-right:18px}
+    .hero-actions .btn,.contact-actions .btn{width:100%}
+    .card{padding-left:22px;padding-right:22px}
+    .cat-tools{top:58px}
+    .catgrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+    .ph{height:170px}
+    .phcode{font-size:30px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none !important;animation:none !important}
+    .rv{opacity:1 !important;transform:none !important}
+    .card:hover,.step:hover,.item:hover,.btn:hover{transform:none}
+  }
+
+  /* ---------- AI assistant demo ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--rose-deep);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--rose-deep);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55;white-space:pre-line}
+  .msg.bot{background:var(--sand);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--rose);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--rose);color:var(--rose-deep)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--rose-deep);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+</style>
+</head>
+<body>
+<header id="site-header">
+  <div class="header-in">
+    <div class="brand">Thi&amp;D <span>Creations</span></div>
+    <div class="pill">Wellington, NZ &#183; Order on WhatsApp</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-media"><img src="img/b24.jpg" alt="Thi&D Creations handmade bouquet - light pink bouquet, item B24"></div>
+  <div class="hero-in">
+    <div class="badge">Handmade in Wellington &#183; New Zealand</div>
+    <h1>Bouquets that never wilt</h1>
+    <p>Handmade pipe-cleaner and crochet bouquets and gifts from Thi&amp;D Creations. Find your favourite by item number below, then order in one tap on WhatsApp.</p>
+    <div class="hero-actions">
+      <a class="btn wa" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations!%20I%27d%20like%20to%20order%20a%20bouquet.">Order on WhatsApp</a>
+      <a class="btn gold" href="#catalogue">Browse the catalogue</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="eyebrow rv">01</div>
+    <h2 class="rv">Why Thi&amp;D Creations?</h2>
+    <p class="sub rv">Flowers you keep. Every piece is handmade in Wellington - and made to last.</p>
+    <div class="grid">
+      <div class="card rv"><div class="ic">&#10047;</div><h3>Never wilts</h3><p>Pipe-cleaner and crochet flowers that stay bright for years - no watering, no wilting, no throwing away.</p></div>
+      <div class="card rv"><div class="ic">&#129525;</div><h3>Handmade, piece by piece</h3><p>Bouquets, mini pots, vases and plush-toy bouquets, each one made by hand in Wellington, NZ.</p></div>
+      <div class="card rv"><div class="ic">&#10084;</div><h3>Loved across NZ</h3><p>Around <b>~95K</b> followers on Instagram and <b>~99K</b> on Facebook follow Thi&amp;D Creations.</p></div>
+    </div>
+  </section>
+
+  <section id="catalogue">
+    <div class="eyebrow rv">02</div>
+    <h2 class="rv">The catalogue</h2>
+    <p class="sub rv">Every item from the Thi&amp;D Creations catalogue, with her own item numbers and prices. Search by item number (try B01), filter by flower or colour, and tap Order to message on WhatsApp with the item already filled in.</p>
+
+    <div class="cat-tools rv">
+      <div class="searchrow">
+        <input id="catSearch" type="search" placeholder="Search by item number or name - e.g. B24 or sunflower" aria-label="Search by item number or name">
+      </div>
+      <div class="chips" id="catChips"><button type="button" class="fchip active" data-filter="all">All items</button><button type="button" class="fchip" data-filter="sunflower">Sunflower</button><button type="button" class="fchip" data-filter="lily">Lily</button><button type="button" class="fchip" data-filter="tulip">Tulip</button><button type="button" class="fchip" data-filter="rose">Rose</button><button type="button" class="fchip" data-filter="daisy">Daisy</button><button type="button" class="fchip" data-filter="gerbera">Gerbera</button><button type="button" class="fchip" data-filter="hydrangea">Hydrangea</button><button type="button" class="fchip" data-filter="hibiscus">Hibiscus</button><button type="button" class="fchip" data-filter="bouquet">Bouquet</button><button type="button" class="fchip" data-filter="pot">Pot</button><button type="button" class="fchip" data-filter="vase">Vase</button><button type="button" class="fchip" data-filter="pink">Pink</button><button type="button" class="fchip" data-filter="purple">Purple</button><button type="button" class="fchip" data-filter="blue">Blue</button><button type="button" class="fchip" data-filter="red">Red</button><button type="button" class="fchip" data-filter="yellow">Yellow</button></div>
+    </div>
+    <p class="catcount" id="catCount"></p>
+    <div class="catgrid" id="catGrid">
+<article class="item rv" data-tags="sunflower" data-search="b01 7 sunflowers"><div class="ph"><img src="img/b01.jpg" alt="B01 - 7 Sunflowers" loading="lazy"><span class="codebadge">B01</span></div><div class="ibody"><h3>7 Sunflowers</h3><div class="irow"><span class="price">NZ$76</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B01%20-%207%20Sunflowers%20%28NZ%2476%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B01</div></div></article>
+<article class="item rv" data-tags="lily tulip rose pink" data-search="b02 pink lily, rose, tulip"><div class="ph"><img src="img/b02.jpg" alt="B02 - Pink lily, rose, tulip" loading="lazy"><span class="codebadge">B02</span></div><div class="ibody"><h3>Pink lily, rose, tulip</h3><div class="irow"><span class="price">NZ$50</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B02%20-%20Pink%20lily%2C%20rose%2C%20tulip%20%28NZ%2450%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B02</div></div></article>
+<article class="item rv" data-tags="lily tulip rose purple" data-search="b03 purple lily, rose, tulip"><div class="ph"><img src="img/b03.jpg" alt="B03 - Purple lily, rose, tulip" loading="lazy"><span class="codebadge">B03</span></div><div class="ibody"><h3>Purple lily, rose, tulip</h3><div class="irow"><span class="price">NZ$61</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B03%20-%20Purple%20lily%2C%20rose%2C%20tulip%20%28NZ%2461%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B03</div></div></article>
+<article class="item rv" data-tags="lily tulip purple blue" data-search="b04 blue-purple lily, tulips"><div class="ph"><img src="img/b04.jpg" alt="B04 - Blue-Purple lily, tulips" loading="lazy"><span class="codebadge">B04</span></div><div class="ibody"><h3>Blue-Purple lily, tulips</h3><div class="irow"><span class="price">NZ$44</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B04%20-%20Blue-Purple%20lily%2C%20tulips%20%28NZ%2444%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B04</div></div></article>
+<article class="item rv" data-tags="tulip purple" data-search="b05 purple tulips, lavender"><div class="ph"><img src="img/b05.jpg" alt="B05 - Purple tulips, lavender" loading="lazy"><span class="codebadge">B05</span></div><div class="ibody"><h3>Purple tulips, lavender</h3><div class="irow"><span class="price">NZ$44</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B05%20-%20Purple%20tulips%2C%20lavender%20%28NZ%2444%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B05</div></div></article>
+<article class="item rv" data-tags="sunflower" data-search="b06 2 golden sunflower"><div class="ph"><img src="img/b06.jpg" alt="B06 - 2 Golden sunflower" loading="lazy"><span class="codebadge">B06</span></div><div class="ibody"><h3>2 Golden sunflower</h3><div class="irow"><span class="price">NZ$25</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B06%20-%202%20Golden%20sunflower%20%28NZ%2425%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B06</div></div></article>
+<article class="item rv" data-tags="sunflower" data-search="b07 3 sunflowers"><div class="ph"><img src="img/b07.jpg" alt="B07 - 3 Sunflowers" loading="lazy"><span class="codebadge">B07</span></div><div class="ibody"><h3>3 Sunflowers</h3><div class="irow"><span class="price">NZ$40</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B07%20-%203%20Sunflowers%20%28NZ%2440%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B07</div></div></article>
+<article class="item rv" data-tags="tulip" data-search="b08 poinsettia, tulips"><div class="ph"><img src="img/b08.jpg" alt="B08 - Poinsettia, tulips" loading="lazy"><span class="codebadge">B08</span></div><div class="ibody"><h3>Poinsettia, tulips</h3><div class="irow"><span class="price">NZ$43</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B08%20-%20Poinsettia%2C%20tulips%20%28NZ%2443%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B08</div></div></article>
+<article class="item rv" data-tags="lily pink" data-search="b09 white-pink lilies"><div class="ph"><img src="img/b09.jpg" alt="B09 - White-pink lilies" loading="lazy"><span class="codebadge">B09</span></div><div class="ibody"><h3>White-pink lilies</h3><div class="irow"><span class="price">NZ$33</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B09%20-%20White-pink%20lilies%20%28NZ%2433%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B09</div></div></article>
+<article class="item rv" data-tags="tulip" data-search="b10 6 large tulips"><div class="ph"><img src="img/b10.jpg" alt="B10 - 6 large tulips" loading="lazy"><span class="codebadge">B10</span></div><div class="ibody"><h3>6 large tulips</h3><div class="irow"><span class="price">NZ$45</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B10%20-%206%20large%20tulips%20%28NZ%2445%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B10</div></div></article>
+<article class="item rv" data-tags="yellow" data-search="b11 yellow flowers"><div class="ph"><img src="img/b11.jpg" alt="B11 - Yellow Flowers" loading="lazy"><span class="codebadge">B11</span></div><div class="ibody"><h3>Yellow Flowers</h3><div class="irow"><span class="price">NZ$39</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B11%20-%20Yellow%20Flowers%20%28NZ%2439%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B11</div></div></article>
+<article class="item rv" data-tags="hibiscus" data-search="b12 3 hibiscus"><div class="ph"><img src="img/b12.jpg" alt="B12 - 3 Hibiscus" loading="lazy"><span class="codebadge">B12</span></div><div class="ibody"><h3>3 Hibiscus</h3><div class="irow"><span class="price">NZ$35</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B12%20-%203%20Hibiscus%20%28NZ%2435%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B12</div></div></article>
+<article class="item rv" data-tags="bouquet blue yellow" data-search="b13 blue-yellow bouquet"><div class="ph"><img src="img/b13.jpg" alt="B13 - Blue-yellow bouquet" loading="lazy"><span class="codebadge">B13</span></div><div class="ibody"><h3>Blue-yellow bouquet</h3><div class="irow"><span class="price">NZ$65</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B13%20-%20Blue-yellow%20bouquet%20%28NZ%2465%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B13</div></div></article>
+<article class="item rv" data-tags="tulip pink" data-search="b14 6 pink small tulips"><div class="ph"><img src="img/b14.jpg" alt="B14 - 6 Pink small tulips" loading="lazy"><span class="codebadge">B14</span></div><div class="ibody"><h3>6 Pink small tulips</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B14%20-%206%20Pink%20small%20tulips%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B14</div></div></article>
+<article class="item rv" data-tags="sunflower" data-search="b15 3 sunflowers"><div class="ph"><img src="img/b15.jpg" alt="B15 - 3 Sunflowers" loading="lazy"><span class="codebadge">B15</span></div><div class="ibody"><h3>3 Sunflowers</h3><div class="irow"><span class="price">NZ$35</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B15%20-%203%20Sunflowers%20%28NZ%2435%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B15</div></div></article>
+<article class="item rv" data-tags="rose red" data-search="b16 single red rose"><div class="ph"><img src="img/b16.jpg" alt="B16 - Single red rose" loading="lazy"><span class="codebadge">B16</span></div><div class="ibody"><h3>Single red rose</h3><div class="irow"><span class="price">NZ$12</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B16%20-%20Single%20red%20rose%20%28NZ%2412%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B16</div></div></article>
+<article class="item rv" data-tags="sunflower" data-search="b17 single sunflower"><div class="ph"><img src="img/b17.jpg" alt="B17 - Single sunflower" loading="lazy"><span class="codebadge">B17</span></div><div class="ibody"><h3>Single sunflower</h3><div class="irow"><span class="price">NZ$12</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B17%20-%20Single%20sunflower%20%28NZ%2412%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B17</div></div></article>
+<article class="item rv" data-tags="pot purple" data-search="b18 purple orchid pot"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B18</span><span class="codebadge">B18</span></div><div class="ibody"><h3>Purple orchid pot</h3><div class="irow"><span class="price">NZ$35</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B18%20-%20Purple%20orchid%20pot%20%28NZ%2435%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B18</div></div></article>
+<article class="item rv" data-tags="sunflower blue" data-search="b19 sunflowers with blues"><div class="ph"><img src="img/b19.jpg" alt="B19 - Sunflowers with blues" loading="lazy"><span class="codebadge">B19</span></div><div class="ibody"><h3>Sunflowers with blues</h3><div class="irow"><span class="price">NZ$55</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B19%20-%20Sunflowers%20with%20blues%20%28NZ%2455%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B19</div></div></article>
+<article class="item rv" data-tags="daisy pink" data-search="b20 pink daisies large"><div class="ph"><img src="img/b20.jpg" alt="B20 - Pink Daisies Large" loading="lazy"><span class="codebadge">B20</span></div><div class="ibody"><h3>Pink Daisies Large</h3><div class="irow"><span class="price">NZ$50</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B20%20-%20Pink%20Daisies%20Large%20%28NZ%2450%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B20</div></div></article>
+<article class="item rv" data-tags="pink" data-search="b21 pink mix flowers - large"><div class="ph"><img src="img/b21.jpg" alt="B21 - Pink mix flowers - Large" loading="lazy"><span class="codebadge">B21</span></div><div class="ibody"><h3>Pink mix flowers - Large</h3><div class="irow"><span class="price">NZ$82</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B21%20-%20Pink%20mix%20flowers%20-%20Large%20%28NZ%2482%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B21</div></div></article>
+<article class="item rv" data-tags="purple" data-search="b22 purple mix flowers"><div class="ph"><img src="img/b22.jpg" alt="B22 - Purple mix flowers" loading="lazy"><span class="codebadge">B22</span></div><div class="ibody"><h3>Purple mix flowers</h3><div class="irow"><span class="price">NZ$42</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B22%20-%20Purple%20mix%20flowers%20%28NZ%2442%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B22</div></div></article>
+<article class="item rv" data-tags="rose red" data-search="b23 3 red roses"><div class="ph"><img src="img/b23.jpg" alt="B23 - 3 Red roses" loading="lazy"><span class="codebadge">B23</span></div><div class="ibody"><h3>3 Red roses</h3><div class="irow"><span class="price">NZ$39</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B23%20-%203%20Red%20roses%20%28NZ%2439%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B23</div></div></article>
+<article class="item rv" data-tags="bouquet pink" data-search="b24 light pink bouquet"><div class="ph"><img src="img/b24.jpg" alt="B24 - Light pink bouquet" loading="lazy"><span class="codebadge">B24</span></div><div class="ibody"><h3>Light pink bouquet</h3><div class="irow"><span class="price">NZ$49</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B24%20-%20Light%20pink%20bouquet%20%28NZ%2449%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B24</div></div></article>
+<article class="item rv" data-tags="lily tulip pink" data-search="b25 pink big lilies, tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B25</span><span class="codebadge">B25</span></div><div class="ibody"><h3>Pink big lilies, tulips</h3><div class="irow"><span class="price">NZ$70</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B25%20-%20Pink%20big%20lilies%2C%20tulips%20%28NZ%2470%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B25</div></div></article>
+<article class="item rv" data-tags="red" data-search="b26 red-white flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B26</span><span class="codebadge">B26</span></div><div class="ibody"><h3>Red-White flowers</h3><div class="irow"><span class="price">NZ$50</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B26%20-%20Red-White%20flowers%20%28NZ%2450%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B26</div></div></article>
+<article class="item rv" data-tags="bouquet" data-search="b27 christmas bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdf2cf 0%,#f3d374 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B27</span><span class="codebadge">B27</span></div><div class="ibody"><h3>Christmas Bouquet</h3><div class="irow"><span class="price">NZ$50</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B27%20-%20Christmas%20Bouquet%20%28NZ%2450%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B27</div></div></article>
+<article class="item rv" data-tags="pink" data-search="b28 pink mix flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B28</span><span class="codebadge">B28</span></div><div class="ibody"><h3>Pink mix flowers</h3><div class="irow"><span class="price">NZ$42</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B28%20-%20Pink%20mix%20flowers%20%28NZ%2442%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B28</div></div></article>
+<article class="item rv" data-tags="rose red" data-search="b29 6 red roses"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B29</span><span class="codebadge">B29</span></div><div class="ibody"><h3>6 Red roses</h3><div class="irow"><span class="price">NZ$68</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B29%20-%206%20Red%20roses%20%28NZ%2468%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B29</div></div></article>
+<article class="item rv" data-tags="tulip rose purple red" data-search="b30 red roses, purple tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B30</span><span class="codebadge">B30</span></div><div class="ibody"><h3>Red roses, Purple tulips</h3><div class="irow"><span class="price">NZ$63</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B30%20-%20Red%20roses%2C%20Purple%20tulips%20%28NZ%2463%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B30</div></div></article>
+<article class="item rv" data-tags="blue" data-search="b31 blue mix flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#e0edfc 0%,#a5c6f0 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B31</span><span class="codebadge">B31</span></div><div class="ibody"><h3>Blue mix flowers</h3><div class="irow"><span class="price">NZ$49</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B31%20-%20Blue%20mix%20flowers%20%28NZ%2449%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B31</div></div></article>
+<article class="item rv" data-tags="purple" data-search="b32 purple-teal mix flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B32</span><span class="codebadge">B32</span></div><div class="ibody"><h3>Purple-teal mix flowers</h3><div class="irow"><span class="price">NZ$82</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B32%20-%20Purple-teal%20mix%20flowers%20%28NZ%2482%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B32</div></div></article>
+<article class="item rv" data-tags="lily rose gerbera pink" data-search="b33 pink lily, roses, gerbera"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B33</span><span class="codebadge">B33</span></div><div class="ibody"><h3>Pink Lily, Roses, Gerbera</h3><div class="irow"><span class="price">NZ$70</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B33%20-%20Pink%20Lily%2C%20Roses%2C%20Gerbera%20%28NZ%2470%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B33</div></div></article>
+<article class="item rv" data-tags="pink" data-search="b34 pink mix flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B34</span><span class="codebadge">B34</span></div><div class="ibody"><h3>Pink mix flowers</h3><div class="irow"><span class="price">NZ$25</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B34%20-%20Pink%20mix%20flowers%20%28NZ%2425%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B34</div></div></article>
+<article class="item rv" data-tags="tulip pink" data-search="b35 2 pink tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B35</span><span class="codebadge">B35</span></div><div class="ibody"><h3>2 Pink tulips</h3><div class="irow"><span class="price">NZ$18</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B35%20-%202%20Pink%20tulips%20%28NZ%2418%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B35</div></div></article>
+<article class="item rv" data-tags="tulip purple" data-search="b36 2 purple tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B36</span><span class="codebadge">B36</span></div><div class="ibody"><h3>2 Purple tulips</h3><div class="irow"><span class="price">NZ$18</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B36%20-%202%20Purple%20tulips%20%28NZ%2418%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B36</div></div></article>
+<article class="item rv" data-tags="gerbera pink" data-search="b37 single pink gerbera"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B37</span><span class="codebadge">B37</span></div><div class="ibody"><h3>Single pink gerbera</h3><div class="irow"><span class="price">NZ$13</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B37%20-%20Single%20pink%20gerbera%20%28NZ%2413%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B37</div></div></article>
+<article class="item rv" data-tags="gerbera purple" data-search="b38 single purple gerbera"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B38</span><span class="codebadge">B38</span></div><div class="ibody"><h3>Single purple gerbera</h3><div class="irow"><span class="price">NZ$13</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B38%20-%20Single%20purple%20gerbera%20%28NZ%2413%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B38</div></div></article>
+<article class="item rv" data-tags="hydrangea" data-search="b39 hydrangea"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdf2cf 0%,#f3d374 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B39</span><span class="codebadge">B39</span></div><div class="ibody"><h3>Hydrangea</h3><div class="irow"><span class="price">NZ$19</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B39%20-%20Hydrangea%20%28NZ%2419%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B39</div></div></article>
+<article class="item rv" data-tags="hibiscus" data-search="b40 5 hibiscus flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B40</span><span class="codebadge">B40</span></div><div class="ibody"><h3>5 Hibiscus Flowers</h3><div class="irow"><span class="price">NZ$65</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B40%20-%205%20Hibiscus%20Flowers%20%28NZ%2465%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B40</div></div></article>
+<article class="item rv" data-tags="lily tulip rose purple" data-search="b41 purple lily, rose, tulip"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B41</span><span class="codebadge">B41</span></div><div class="ibody"><h3>Purple lily, rose, tulip</h3><div class="irow"><span class="price">NZ$50</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B41%20-%20Purple%20lily%2C%20rose%2C%20tulip%20%28NZ%2450%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B41</div></div></article>
+<article class="item rv" data-tags="tulip pink" data-search="b42 9 small pink tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B42</span><span class="codebadge">B42</span></div><div class="ibody"><h3>9 small pink tulips</h3><div class="irow"><span class="price">NZ$45</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B42%20-%209%20small%20pink%20tulips%20%28NZ%2445%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B42</div></div></article>
+<article class="item rv" data-tags="purple blue" data-search="b43 purple-blue mix flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B43</span><span class="codebadge">B43</span></div><div class="ibody"><h3>Purple-blue mix flowers</h3><div class="irow"><span class="price">NZ$72</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B43%20-%20Purple-blue%20mix%20flowers%20%28NZ%2472%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B43</div></div></article>
+<article class="item rv" data-tags="lily tulip rose pink" data-search="b44 pink lily, rose, tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B44</span><span class="codebadge">B44</span></div><div class="ibody"><h3>Pink lily, rose, tulips</h3><div class="irow"><span class="price">NZ$55</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B44%20-%20Pink%20lily%2C%20rose%2C%20tulips%20%28NZ%2455%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B44</div></div></article>
+<article class="item rv" data-tags="tulip bouquet pink" data-search="b45 pink open tulip bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B45</span><span class="codebadge">B45</span></div><div class="ibody"><h3>Pink open tulip bouquet</h3><div class="irow"><span class="price">NZ$59</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B45%20-%20Pink%20open%20tulip%20bouquet%20%28NZ%2459%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B45</div></div></article>
+<article class="item rv" data-tags="lily yellow" data-search="b46 yellow-orange lilies"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdf2cf 0%,#f3d374 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B46</span><span class="codebadge">B46</span></div><div class="ibody"><h3>Yellow-orange lilies</h3><div class="irow"><span class="price">NZ$39</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B46%20-%20Yellow-orange%20lilies%20%28NZ%2439%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B46</div></div></article>
+<article class="item rv" data-tags="bouquet red" data-search="b47 red romance bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B47</span><span class="codebadge">B47</span></div><div class="ibody"><h3>Red romance bouquet</h3><div class="irow"><span class="price">NZ$60</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B47%20-%20Red%20romance%20bouquet%20%28NZ%2460%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B47</div></div></article>
+<article class="item rv" data-tags="pink" data-search="b48 pink magic"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B48</span><span class="codebadge">B48</span></div><div class="ibody"><h3>Pink magic</h3><div class="irow"><span class="price">NZ$40</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B48%20-%20Pink%20magic%20%28NZ%2440%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B48</div></div></article>
+<article class="item rv" data-tags="daisy pink" data-search="b49 pink daisy"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B49</span><span class="codebadge">B49</span></div><div class="ibody"><h3>Pink daisy</h3><div class="irow"><span class="price">NZ$38</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B49%20-%20Pink%20daisy%20%28NZ%2438%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B49</div></div></article>
+<article class="item rv" data-tags="daisy purple" data-search="b50 purple daisy"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B50</span><span class="codebadge">B50</span></div><div class="ibody"><h3>Purple daisy</h3><div class="irow"><span class="price">NZ$38</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B50%20-%20Purple%20daisy%20%28NZ%2438%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B50</div></div></article>
+<article class="item rv" data-tags="daisy blue" data-search="b51 blue daisy"><div class="ph nophoto" style="background:linear-gradient(150deg,#e0edfc 0%,#a5c6f0 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B51</span><span class="codebadge">B51</span></div><div class="ibody"><h3>Blue daisy</h3><div class="irow"><span class="price">NZ$38</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B51%20-%20Blue%20daisy%20%28NZ%2438%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B51</div></div></article>
+<article class="item rv" data-tags="sunflower yellow" data-search="b52 5 yellow sunflowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdf2cf 0%,#f3d374 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B52</span><span class="codebadge">B52</span></div><div class="ibody"><h3>5 Yellow sunflowers</h3><div class="irow"><span class="price">NZ$52</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B52%20-%205%20Yellow%20sunflowers%20%28NZ%2452%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B52</div></div></article>
+<article class="item rv" data-tags="lily red" data-search="b53 3 red lilies"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B53</span><span class="codebadge">B53</span></div><div class="ibody"><h3>3 Red lilies</h3><div class="irow"><span class="price">NZ$33</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B53%20-%203%20Red%20lilies%20%28NZ%2433%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B53</div></div></article>
+<article class="item rv" data-tags="pink" data-search="b54 3 pink flowers"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B54</span><span class="codebadge">B54</span></div><div class="ibody"><h3>3 Pink flowers</h3><div class="irow"><span class="price">NZ$39</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B54%20-%203%20Pink%20flowers%20%28NZ%2439%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B54</div></div></article>
+<article class="item rv" data-tags="tulip pink" data-search="b55 3 pink l tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B55</span><span class="codebadge">B55</span></div><div class="ibody"><h3>3 pink L tulips</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B55%20-%203%20pink%20L%20tulips%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B55</div></div></article>
+<article class="item rv" data-tags="tulip purple" data-search="b56 3 purple l tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B56</span><span class="codebadge">B56</span></div><div class="ibody"><h3>3 Purple L tulips</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B56%20-%203%20Purple%20L%20tulips%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B56</div></div></article>
+<article class="item rv" data-tags="lily tulip" data-search="b57 large lily, tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdf2cf 0%,#f3d374 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B57</span><span class="codebadge">B57</span></div><div class="ibody"><h3>Large lily, tulips</h3><div class="irow"><span class="price">NZ$50</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B57%20-%20Large%20lily%2C%20tulips%20%28NZ%2450%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B57</div></div></article>
+<article class="item rv" data-tags="bouquet pink" data-search="b58 giant pink bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B58</span><span class="codebadge">B58</span></div><div class="ibody"><h3>Giant pink bouquet</h3><div class="irow"><span class="price">NZ$210</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B58%20-%20Giant%20pink%20bouquet%20%28NZ%24210%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B58</div></div></article>
+<article class="item rv" data-tags="pot" data-search="b59 fairy mini pot"><div class="ph nophoto" style="background:linear-gradient(150deg,#e0edfc 0%,#a5c6f0 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B59</span><span class="codebadge">B59</span></div><div class="ibody"><h3>Fairy mini pot</h3><div class="irow"><span class="price">NZ$22 each</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B59%20-%20Fairy%20mini%20pot%20%28NZ%2422%20each%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B59</div></div></article>
+<article class="item rv" data-tags="sunflower pot" data-search="b60 sunflower mini pot"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdeeda 0%,#f5bc7d 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B60</span><span class="codebadge">B60</span></div><div class="ibody"><h3>Sunflower mini pot</h3><div class="irow"><span class="price">NZ$20 each</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B60%20-%20Sunflower%20mini%20pot%20%28NZ%2420%20each%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B60</div></div></article>
+<article class="item rv" data-tags="tulip pot" data-search="b61 tulip mini pot"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B61</span><span class="codebadge">B61</span></div><div class="ibody"><h3>Tulip mini pot</h3><div class="irow"><span class="price">NZ$20 each</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B61%20-%20Tulip%20mini%20pot%20%28NZ%2420%20each%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B61</div></div></article>
+<article class="item rv" data-tags="daisy pot" data-search="b62 daisy mini pot"><div class="ph nophoto" style="background:linear-gradient(150deg,#dcf3ef 0%,#97d2c8 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B62</span><span class="codebadge">B62</span></div><div class="ibody"><h3>Daisy mini pot</h3><div class="irow"><span class="price">NZ$20 each</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B62%20-%20Daisy%20mini%20pot%20%28NZ%2420%20each%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B62</div></div></article>
+<article class="item rv" data-tags="bouquet red" data-search="b63 giant red bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B63</span><span class="codebadge">B63</span></div><div class="ibody"><h3>Giant Red Bouquet</h3><div class="irow"><span class="price">NZ$210</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B63%20-%20Giant%20Red%20Bouquet%20%28NZ%24210%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B63</div></div></article>
+<article class="item rv" data-tags="hydrangea" data-search="b64 baby hydrangea"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B64</span><span class="codebadge">B64</span></div><div class="ibody"><h3>Baby hydrangea</h3><div class="irow"><span class="price">NZ$50</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B64%20-%20Baby%20hydrangea%20%28NZ%2450%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B64</div></div></article>
+<article class="item rv" data-tags="tulip" data-search="b65 5 teal l tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#dcf3ef 0%,#97d2c8 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B65</span><span class="codebadge">B65</span></div><div class="ibody"><h3>5 teal L tulips</h3><div class="irow"><span class="price">NZ$45</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B65%20-%205%20teal%20L%20tulips%20%28NZ%2445%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B65</div></div></article>
+<article class="item rv" data-tags="lily purple" data-search="b66 4 purple lilies"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B66</span><span class="codebadge">B66</span></div><div class="ibody"><h3>4 purple lilies</h3><div class="irow"><span class="price">NZ$42</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B66%20-%204%20purple%20lilies%20%28NZ%2442%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B66</div></div></article>
+<article class="item rv" data-tags="rose red" data-search="b67 3 large red rose"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B67</span><span class="codebadge">B67</span></div><div class="ibody"><h3>3 Large Red rose</h3><div class="irow"><span class="price">NZ$39</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B67%20-%203%20Large%20Red%20rose%20%28NZ%2439%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B67</div></div></article>
+<article class="item rv" data-tags="lily bouquet purple" data-search="b68 purple lily bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B68</span><span class="codebadge">B68</span></div><div class="ibody"><h3>Purple lily bouquet</h3><div class="irow"><span class="price">NZ$60</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B68%20-%20Purple%20lily%20bouquet%20%28NZ%2460%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B68</div></div></article>
+<article class="item rv" data-tags="lily bouquet red" data-search="b69 red lily, dahlia bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B69</span><span class="codebadge">B69</span></div><div class="ibody"><h3>Red lily, dahlia bouquet</h3><div class="irow"><span class="price">NZ$69</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B69%20-%20Red%20lily%2C%20dahlia%20bouquet%20%28NZ%2469%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B69</div></div></article>
+<article class="item rv" data-tags="hydrangea purple" data-search="b70 3 purple hydrangea"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B70</span><span class="codebadge">B70</span></div><div class="ibody"><h3>3 purple hydrangea</h3><div class="irow"><span class="price">NZ$45</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B70%20-%203%20purple%20hydrangea%20%28NZ%2445%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B70</div></div></article>
+<article class="item rv" data-tags="lily vase blue" data-search="b71 blue-teal lily vase"><div class="ph nophoto" style="background:linear-gradient(150deg,#e0edfc 0%,#a5c6f0 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B71</span><span class="codebadge">B71</span></div><div class="ibody"><h3>Blue-teal lily vase</h3><div class="irow"><span class="price">NZ$62</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B71%20-%20Blue-teal%20lily%20vase%20%28NZ%2462%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B71</div></div></article>
+<article class="item rv" data-tags="vase purple" data-search="b72 purple-teal mix vase"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B72</span><span class="codebadge">B72</span></div><div class="ibody"><h3>Purple-teal mix vase</h3><div class="irow"><span class="price">NZ$85</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B72%20-%20Purple-teal%20mix%20vase%20%28NZ%2485%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B72</div></div></article>
+<article class="item rv" data-tags="lily gerbera vase pink" data-search="b73 pink lily, gerbera vase"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B73</span><span class="codebadge">B73</span></div><div class="ibody"><h3>Pink lily, gerbera vase</h3><div class="irow"><span class="price">NZ$52</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B73%20-%20Pink%20lily%2C%20gerbera%20vase%20%28NZ%2452%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B73</div></div></article>
+<article class="item rv" data-tags="vase" data-search="b74 violet mix flower vase"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B74</span><span class="codebadge">B74</span></div><div class="ibody"><h3>Violet mix flower vase</h3><div class="irow"><span class="price">NZ$119</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B74%20-%20Violet%20mix%20flower%20vase%20%28NZ%24119%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B74</div></div></article>
+<article class="item rv" data-tags="bouquet" data-search="b75 tangled bouquet: s"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdf2cf 0%,#f3d374 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B75</span><span class="codebadge">B75</span></div><div class="ibody"><h3>Tangled bouquet: S</h3><div class="irow"><span class="price">NZ$38</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B75%20-%20Tangled%20bouquet%3A%20S%20%28NZ%2438%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B75</div></div></article>
+<article class="item rv" data-tags="tulip red" data-search="b76 5 red realistic tulips"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B76</span><span class="codebadge">B76</span></div><div class="ibody"><h3>5 red realistic tulips</h3><div class="irow"><span class="price">NZ$55</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B76%20-%205%20red%20realistic%20tulips%20%28NZ%2455%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B76</div></div></article>
+<article class="item rv" data-tags="rose bouquet pink" data-search="b77 pink rose bouquet: s"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B77</span><span class="codebadge">B77</span></div><div class="ibody"><h3>Pink rose Bouquet: S</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B77%20-%20Pink%20rose%20Bouquet%3A%20S%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B77</div></div></article>
+<article class="item rv" data-tags="rose bouquet blue" data-search="b78 blue rose bouquet: s"><div class="ph nophoto" style="background:linear-gradient(150deg,#e0edfc 0%,#a5c6f0 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B78</span><span class="codebadge">B78</span></div><div class="ibody"><h3>Blue rose bouquet: S</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B78%20-%20Blue%20rose%20bouquet%3A%20S%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B78</div></div></article>
+<article class="item rv" data-tags="sunflower purple" data-search="b79 sunflower + purple filling"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B79</span><span class="codebadge">B79</span></div><div class="ibody"><h3>Sunflower + purple filling</h3><div class="irow"><span class="price">NZ$38</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B79%20-%20Sunflower%20%2B%20purple%20filling%20%28NZ%2438%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B79</div></div></article>
+<article class="item rv" data-tags="gerbera" data-search="b80 gerbera color mix"><div class="ph nophoto" style="background:linear-gradient(150deg,#dcf3ef 0%,#97d2c8 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B80</span><span class="codebadge">B80</span></div><div class="ibody"><h3>Gerbera color mix</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B80%20-%20Gerbera%20color%20mix%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B80</div></div></article>
+<article class="item rv" data-tags="bouquet red" data-search="b81 red poppy bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde7e3 0%,#f2a49c 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B81</span><span class="codebadge">B81</span></div><div class="ibody"><h3>Red poppy bouquet</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B81%20-%20Red%20poppy%20bouquet%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B81</div></div></article>
+<article class="item rv" data-tags="bouquet" data-search="b82 thumbelina bouquet: l"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B82</span><span class="codebadge">B82</span></div><div class="ibody"><h3>Thumbelina Bouquet: L</h3><div class="irow"><span class="price">NZ$68</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B82%20-%20Thumbelina%20Bouquet%3A%20L%20%28NZ%2468%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B82</div></div></article>
+<article class="item rv" data-tags="bouquet" data-search="b83 thumbelina bouquet: s"><div class="ph nophoto" style="background:linear-gradient(150deg,#e0edfc 0%,#a5c6f0 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B83</span><span class="codebadge">B83</span></div><div class="ibody"><h3>Thumbelina bouquet: S</h3><div class="irow"><span class="price">NZ$30</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B83%20-%20Thumbelina%20bouquet%3A%20S%20%28NZ%2430%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B83</div></div></article>
+<article class="item rv" data-tags="sunflower" data-search="b84 single sunflower: l"><div class="ph nophoto" style="background:linear-gradient(150deg,#fdeeda 0%,#f5bc7d 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B84</span><span class="codebadge">B84</span></div><div class="ibody"><h3>Single sunflower: L</h3><div class="irow"><span class="price">NZ$15</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B84%20-%20Single%20sunflower%3A%20L%20%28NZ%2415%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B84</div></div></article>
+<article class="item rv" data-tags="bouquet pink" data-search="b84b simple pink bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B84b</span><span class="codebadge">B84b</span></div><div class="ibody"><h3>Simple pink bouquet</h3><div class="irow"><span class="price">NZ$29</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B84b%20-%20Simple%20pink%20bouquet%20%28NZ%2429%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B84b</div></div></article>
+<article class="item rv" data-tags="bouquet pink" data-search="b85 pink plush toy bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B85</span><span class="codebadge">B85</span></div><div class="ibody"><h3>Pink Plush Toy Bouquet</h3><div class="irow"><span class="price">NZ$75</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B85%20-%20Pink%20Plush%20Toy%20Bouquet%20%28NZ%2475%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B85</div></div></article>
+<article class="item rv" data-tags="bouquet blue" data-search="b86 blue plush toy bouquet"><div class="ph nophoto" style="background:linear-gradient(150deg,#e0edfc 0%,#a5c6f0 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">B86</span><span class="codebadge">B86</span></div><div class="ibody"><h3>Blue Plush Toy Bouquet</h3><div class="irow"><span class="price">NZ$75</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20B86%20-%20Blue%20Plush%20Toy%20Bouquet%20%28NZ%2475%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item B86</div></div></article>
+<article class="item rv" data-tags="pot" data-search="v01 daffodil garden - pot"><div class="ph nophoto" style="background:linear-gradient(150deg,#efe6fc 0%,#c8adef 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">V01</span><span class="codebadge">V01</span></div><div class="ibody"><h3>Daffodil Garden - Pot</h3><div class="irow"><span class="price">NZ$35</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20V01%20-%20Daffodil%20Garden%20-%20Pot%20%28NZ%2435%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item V01</div></div></article>
+<article class="item rv" data-tags="lily pot pink" data-search="v02 pink lily garden - pot"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">V02</span><span class="codebadge">V02</span></div><div class="ibody"><h3>Pink lily garden - Pot</h3><div class="irow"><span class="price">NZ$35</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20V02%20-%20Pink%20lily%20garden%20-%20Pot%20%28NZ%2435%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item V02</div></div></article>
+<article class="item rv" data-tags="vase pink yellow" data-search="v03 pink-yellow mix vase"><div class="ph nophoto" style="background:linear-gradient(150deg,#fde6ee 0%,#f6b9cf 100%)"><span class="phflower" aria-hidden="true">&#10047;</span><span class="phcode">V03</span><span class="codebadge">V03</span></div><div class="ibody"><h3>Pink-Yellow mix vase</h3><div class="irow"><span class="price">NZ$85</span><a class="ord" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations%21%20I%27d%20like%20to%20order%20item%20V03%20-%20Pink-Yellow%20mix%20vase%20%28NZ%2485%29.%20Is%20it%20available%3F" target="_blank" rel="noopener">Order &#8599;</a></div><div class="icode">Item V03</div></div></article>
+    </div>
+    <p class="noresults" id="noResults">No items match that search. Try an item number like B01, or clear the filters above.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow rv">03</div>
+    <h2 class="rv">How to order</h2>
+    <p class="sub rv">Ordering runs through WhatsApp - the way Thi&amp;D Creations already works.</p>
+    <div class="steps">
+      <div class="step rv"><span class="n">1</span><h3>Pick your item number</h3><p>Browse the catalogue above and note the item number, like B01 or V02.</p></div>
+      <div class="step rv"><span class="n">2</span><h3>Tap Order</h3><p>The button opens WhatsApp with the item number, name and price already written for you.</p></div>
+      <div class="step rv"><span class="n">3</span><h3>Make it yours</h3><p>Customisation is offered - ask about colours and personal touches in the same chat.</p></div>
+      <div class="step rv"><span class="n">4</span><h3>Pickup or delivery</h3><p>Pick up at 219 Willis Street, Wellington, or ask about NZ-wide delivery.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow rv">04</div>
+    <h2 class="rv">Pickup, delivery &amp; custom orders</h2>
+    <p class="sub rv">Three easy ways to get your flowers.</p>
+    <div class="grid">
+      <div class="card rv"><div class="ic">&#128205;</div><h3>Pickup in Wellington</h3><p>219 Willis Street, Wellington. Message on WhatsApp first so your order is ready to collect.</p></div>
+      <div class="card rv"><div class="ic">&#128230;</div><h3>NZ-wide delivery</h3><p>Not in Wellington? Thi&amp;D Creations delivers anywhere in New Zealand - ask on WhatsApp when you order.</p></div>
+      <div class="card rv"><div class="ic">&#127912;</div><h3>Customisation</h3><p>Want different colours or a personal touch? Customisation is offered - describe your idea on WhatsApp and ask what is possible.</p></div>
+    </div>
+  </section>
+
+  <div class="panel rv">
+    <div class="eyebrow">05</div>
+    <h2>Visit in Wellington</h2>
+    <div class="big">219 Willis Street, Wellington</div>
+    <p>Mondays: 8:00 am - 5:00 pm. For other days, message on WhatsApp at +64 22 099 6970 to check - or order ahead for pickup and NZ-wide delivery.</p>
+  </div>
+
+  <section>
+    <div class="eyebrow rv">06</div>
+    <h2 class="rv">Order yours</h2>
+    <p class="sub rv">Pick an item number from the catalogue and tap Order, or start a chat and ask about a custom bouquet.</p>
+    <div class="contact-actions rv">
+      <a class="btn wa" href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations!%20I%27d%20like%20to%20order%20a%20bouquet.">WhatsApp +64 22 099 6970</a>
+      <a class="btn" href="#catalogue">Back to the catalogue</a>
+    </div>
+  </section>
+</div>
+
+<div class="igband"><div class="igband-in"><div class="igt">Follow along: <b>~95K</b> on Instagram &#183; <b>~99K</b> on Facebook</div><div class="igt">New bouquets are posted there first.</div></div></div>
+<div class="mapsec">
+  <h2>Find us</h2>
+  <div class="mapframe"><iframe title="Map - Thi&D Creations, 219 Willis Street, Wellington" src="https://www.google.com/maps?q=219%20Willis%20Street%2C%20Wellington%2C%20New%20Zealand&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
+<footer>
+  Thi&amp;D Creations &#183; 219 Willis Street, Wellington, New Zealand<br><br>
+  Concept preview built by SiteSprint Studio - this is not the live website of Thi&amp;D Creations.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/64220996970?text=Hi%20Thi%26D%20Creations!%20I%27d%20like%20to%20order%20a%20bouquet.">Order on WhatsApp</a></div>
+
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">&#128172; Ask about an item</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Thi&D Creations demo assistant">
+    <div class="chatw-head"><div><b>Thi&amp;D Assistant</b><small>Demo assistant &#183; part of this concept preview</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Type an item number or question..." aria-label="Type an item number or question"><button type="submit" aria-label="Send">&#10148;</button></form>
+  </div>
+</div>
+
+<script>
+(function(){
+  var header=document.getElementById('site-header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>10);}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  var items=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.08,rootMargin:'0px 0px -4% 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+</script>
+
+<script>
+(function(){
+  /* Catalogue search + filter */
+  var search=document.getElementById('catSearch');
+  var chips=document.querySelectorAll('#catChips .fchip');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#catGrid .item'));
+  var count=document.getElementById('catCount');
+  var none=document.getElementById('noResults');
+  var activeFilter='all';
+  function apply(){
+    var q=(search.value||'').trim().toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var okF=(activeFilter==='all')||(c.getAttribute('data-tags')||'').split(' ').indexOf(activeFilter)!==-1;
+      var okQ=!q||(c.getAttribute('data-search')||'').indexOf(q)!==-1;
+      var show=okF&&okQ;
+      c.classList.toggle('hide',!show);
+      if(show)shown++;
+    });
+    count.textContent='Showing '+shown+' of '+cards.length+' items';
+    none.classList.toggle('show',shown===0);
+  }
+  search.addEventListener('input',apply);
+  chips.forEach(function(ch){
+    ch.addEventListener('click',function(){
+      chips.forEach(function(x){x.classList.remove('active');});
+      ch.classList.add('active');
+      activeFilter=ch.getAttribute('data-filter');
+      apply();
+    });
+  });
+  apply();
+})();
+</script>
+
+<script>
+(function(){
+  /* AI assistant demo - answers only from the catalogue and facts on this page */
+  var CATALOG=[{"code": "B01", "name": "7 Sunflowers", "price": "NZ$76"}, {"code": "B02", "name": "Pink lily, rose, tulip", "price": "NZ$50"}, {"code": "B03", "name": "Purple lily, rose, tulip", "price": "NZ$61"}, {"code": "B04", "name": "Blue-Purple lily, tulips", "price": "NZ$44"}, {"code": "B05", "name": "Purple tulips, lavender", "price": "NZ$44"}, {"code": "B06", "name": "2 Golden sunflower", "price": "NZ$25"}, {"code": "B07", "name": "3 Sunflowers", "price": "NZ$40"}, {"code": "B08", "name": "Poinsettia, tulips", "price": "NZ$43"}, {"code": "B09", "name": "White-pink lilies", "price": "NZ$33"}, {"code": "B10", "name": "6 large tulips", "price": "NZ$45"}, {"code": "B11", "name": "Yellow Flowers", "price": "NZ$39"}, {"code": "B12", "name": "3 Hibiscus", "price": "NZ$35"}, {"code": "B13", "name": "Blue-yellow bouquet", "price": "NZ$65"}, {"code": "B14", "name": "6 Pink small tulips", "price": "NZ$30"}, {"code": "B15", "name": "3 Sunflowers", "price": "NZ$35"}, {"code": "B16", "name": "Single red rose", "price": "NZ$12"}, {"code": "B17", "name": "Single sunflower", "price": "NZ$12"}, {"code": "B18", "name": "Purple orchid pot", "price": "NZ$35"}, {"code": "B19", "name": "Sunflowers with blues", "price": "NZ$55"}, {"code": "B20", "name": "Pink Daisies Large", "price": "NZ$50"}, {"code": "B21", "name": "Pink mix flowers - Large", "price": "NZ$82"}, {"code": "B22", "name": "Purple mix flowers", "price": "NZ$42"}, {"code": "B23", "name": "3 Red roses", "price": "NZ$39"}, {"code": "B24", "name": "Light pink bouquet", "price": "NZ$49"}, {"code": "B25", "name": "Pink big lilies, tulips", "price": "NZ$70"}, {"code": "B26", "name": "Red-White flowers", "price": "NZ$50"}, {"code": "B27", "name": "Christmas Bouquet", "price": "NZ$50"}, {"code": "B28", "name": "Pink mix flowers", "price": "NZ$42"}, {"code": "B29", "name": "6 Red roses", "price": "NZ$68"}, {"code": "B30", "name": "Red roses, Purple tulips", "price": "NZ$63"}, {"code": "B31", "name": "Blue mix flowers", "price": "NZ$49"}, {"code": "B32", "name": "Purple-teal mix flowers", "price": "NZ$82"}, {"code": "B33", "name": "Pink Lily, Roses, Gerbera", "price": "NZ$70"}, {"code": "B34", "name": "Pink mix flowers", "price": "NZ$25"}, {"code": "B35", "name": "2 Pink tulips", "price": "NZ$18"}, {"code": "B36", "name": "2 Purple tulips", "price": "NZ$18"}, {"code": "B37", "name": "Single pink gerbera", "price": "NZ$13"}, {"code": "B38", "name": "Single purple gerbera", "price": "NZ$13"}, {"code": "B39", "name": "Hydrangea", "price": "NZ$19"}, {"code": "B40", "name": "5 Hibiscus Flowers", "price": "NZ$65"}, {"code": "B41", "name": "Purple lily, rose, tulip", "price": "NZ$50"}, {"code": "B42", "name": "9 small pink tulips", "price": "NZ$45"}, {"code": "B43", "name": "Purple-blue mix flowers", "price": "NZ$72"}, {"code": "B44", "name": "Pink lily, rose, tulips", "price": "NZ$55"}, {"code": "B45", "name": "Pink open tulip bouquet", "price": "NZ$59"}, {"code": "B46", "name": "Yellow-orange lilies", "price": "NZ$39"}, {"code": "B47", "name": "Red romance bouquet", "price": "NZ$60"}, {"code": "B48", "name": "Pink magic", "price": "NZ$40"}, {"code": "B49", "name": "Pink daisy", "price": "NZ$38"}, {"code": "B50", "name": "Purple daisy", "price": "NZ$38"}, {"code": "B51", "name": "Blue daisy", "price": "NZ$38"}, {"code": "B52", "name": "5 Yellow sunflowers", "price": "NZ$52"}, {"code": "B53", "name": "3 Red lilies", "price": "NZ$33"}, {"code": "B54", "name": "3 Pink flowers", "price": "NZ$39"}, {"code": "B55", "name": "3 pink L tulips", "price": "NZ$30"}, {"code": "B56", "name": "3 Purple L tulips", "price": "NZ$30"}, {"code": "B57", "name": "Large lily, tulips", "price": "NZ$50"}, {"code": "B58", "name": "Giant pink bouquet", "price": "NZ$210"}, {"code": "B59", "name": "Fairy mini pot", "price": "NZ$22 each"}, {"code": "B60", "name": "Sunflower mini pot", "price": "NZ$20 each"}, {"code": "B61", "name": "Tulip mini pot", "price": "NZ$20 each"}, {"code": "B62", "name": "Daisy mini pot", "price": "NZ$20 each"}, {"code": "B63", "name": "Giant Red Bouquet", "price": "NZ$210"}, {"code": "B64", "name": "Baby hydrangea", "price": "NZ$50"}, {"code": "B65", "name": "5 teal L tulips", "price": "NZ$45"}, {"code": "B66", "name": "4 purple lilies", "price": "NZ$42"}, {"code": "B67", "name": "3 Large Red rose", "price": "NZ$39"}, {"code": "B68", "name": "Purple lily bouquet", "price": "NZ$60"}, {"code": "B69", "name": "Red lily, dahlia bouquet", "price": "NZ$69"}, {"code": "B70", "name": "3 purple hydrangea", "price": "NZ$45"}, {"code": "B71", "name": "Blue-teal lily vase", "price": "NZ$62"}, {"code": "B72", "name": "Purple-teal mix vase", "price": "NZ$85"}, {"code": "B73", "name": "Pink lily, gerbera vase", "price": "NZ$52"}, {"code": "B74", "name": "Violet mix flower vase", "price": "NZ$119"}, {"code": "B75", "name": "Tangled bouquet: S", "price": "NZ$38"}, {"code": "B76", "name": "5 red realistic tulips", "price": "NZ$55"}, {"code": "B77", "name": "Pink rose Bouquet: S", "price": "NZ$30"}, {"code": "B78", "name": "Blue rose bouquet: S", "price": "NZ$30"}, {"code": "B79", "name": "Sunflower + purple filling", "price": "NZ$38"}, {"code": "B80", "name": "Gerbera color mix", "price": "NZ$30"}, {"code": "B81", "name": "Red poppy bouquet", "price": "NZ$30"}, {"code": "B82", "name": "Thumbelina Bouquet: L", "price": "NZ$68"}, {"code": "B83", "name": "Thumbelina bouquet: S", "price": "NZ$30"}, {"code": "B84", "name": "Single sunflower: L", "price": "NZ$15"}, {"code": "B84b", "name": "Simple pink bouquet", "price": "NZ$29"}, {"code": "B85", "name": "Pink Plush Toy Bouquet", "price": "NZ$75"}, {"code": "B86", "name": "Blue Plush Toy Bouquet", "price": "NZ$75"}, {"code": "V01", "name": "Daffodil Garden - Pot", "price": "NZ$35"}, {"code": "V02", "name": "Pink lily garden - Pot", "price": "NZ$35"}, {"code": "V03", "name": "Pink-Yellow mix vase", "price": "NZ$85"}];
+  var WA_LINK='https://wa.me/64220996970';
+  var byCode={};
+  CATALOG.forEach(function(it){byCode[it.code.toUpperCase()]=it;});
+  var prices=CATALOG.map(function(it){var m=it.price.replace(/[^0-9.]/g,'');return parseFloat(m)||0;});
+  var minP=Math.min.apply(null,prices),maxP=Math.max.apply(null,prices);
+
+  var KB={
+    greeting:"Kia ora! I am the Thi&D Creations demo assistant. Type an item number (like B01) or a flower (like sunflower) and I will find it in the catalogue. You can also ask about prices, pickup, delivery or custom orders.",
+    fallback:"That one I do not have here. Message Thi&D Creations on WhatsApp at +64 22 099 6970 and they will help.",
+    chips:["How much is B01?","Show me sunflowers","Do you deliver?","Pickup address","Can I customise a bouquet?","Opening hours"]
+  };
+  var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),
+      chipsEl=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+  function scroll(){msgs.scrollTop=msgs.scrollHeight;}
+  function add(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    msgs.appendChild(d);scroll();
+  }
+  function orderLink(it){
+    var msg="Hi Thi&D Creations! I'd like to order item "+it.code+" - "+it.name+" ("+it.price+"). Is it available?";
+    return {t:'Order '+it.code+' on WhatsApp',href:WA_LINK+'?text='+encodeURIComponent(msg)};
+  }
+  function fmtList(list){
+    return list.map(function(it){return it.code+' - '+it.name+' - '+it.price;}).join('\n');
+  }
+  var STEMS={sunflower:'sunflower',lily:'lil',lilies:'lil',tulip:'tulip',rose:'rose',daisy:'dais',daisies:'dais',
+             gerbera:'gerbera',hydrangea:'hydrangea',hibiscus:'hibiscus',bouquet:'bouquet',pot:'pot',vase:'vase',
+             pink:'pink',purple:'purple',blue:'blue',red:'red',yellow:'yellow'};
+  function answer(q){
+    var t=' '+q.toLowerCase()+' ';
+    var m=q.match(/\b([bv])\s?-?\s?(\d{1,2})\s?(b)?\b/i);
+    if(m){
+      var code=(m[1]+m[2]+(m[3]||'')).toUpperCase();
+      var it=byCode[code];
+      if(it)return {a:'Item '+it.code+' - '+it.name+'\nPrice: '+it.price+'\nTap below to order it on WhatsApp, or keep browsing the catalogue on this page.',link:orderLink(it)};
+      return {a:'I could not find item '+code+' in the catalogue. Item numbers run from B01 to B86 (plus B84b) and V01 to V03 - try another number, or ask me for a flower like sunflower.',link:null};
+    }
+    if(/deliver|delivery|ship|post|courier/.test(t))
+      return {a:'Yes - Thi&D Creations offers NZ-wide delivery, as well as pickup in Wellington. Ask about delivery for your address when you order on WhatsApp.',link:{t:'Order on WhatsApp',href:WA_LINK}};
+    if(/pickup|pick up|address|where|located|visit|collect/.test(t))
+      return {a:'Pickup is at 219 Willis Street, Wellington. Message on WhatsApp first so your order is ready to collect.',link:{t:'Message on WhatsApp',href:WA_LINK}};
+    if(/custom|personal|own design|special request/.test(t))
+      return {a:'Customisation is offered. Tell Thi&D Creations your colours or idea on WhatsApp and ask what is possible for your bouquet or gift.',link:{t:'Ask on WhatsApp',href:WA_LINK}};
+    if(/hour|opening|monday|open now|when.*open/.test(t))
+      return {a:'Known hours: Mondays, 8:00 am - 5:00 pm. For other days, message on WhatsApp at +64 22 099 6970 to check.',link:null};
+    if(/contact|phone|whatsapp|call/.test(t))
+      return {a:'You can reach Thi&D Creations on WhatsApp at +64 22 099 6970.',link:{t:'Open WhatsApp',href:WA_LINK}};
+    if(/follow|instagram|facebook|social/.test(t))
+      return {a:'Around 95K people follow Thi&D Creations on Instagram and around 99K on Facebook - new bouquets are posted there.',link:null};
+    if(/price|cost|how much|expensive|cheap/.test(t)){
+      var key=null;
+      Object.keys(STEMS).forEach(function(k){if(t.indexOf(' '+k)!==-1||t.indexOf(k+' ')!==-1)key=STEMS[k];});
+      if(key){
+        var hits=CATALOG.filter(function(it){return it.name.toLowerCase().indexOf(key)!==-1;});
+        if(hits.length)return {a:'Here is what I found:\n'+fmtList(hits.slice(0,6))+(hits.length>6?'\n...and '+(hits.length-6)+' more in the catalogue above.':''),link:null};
+      }
+      return {a:'Catalogue prices run from NZ$'+minP+' to NZ$'+maxP+'. Type an item number (like B58) or a flower name and I will give you exact prices.',link:null};
+    }
+    var key2=null;
+    Object.keys(STEMS).forEach(function(k){if(t.indexOf(k)!==-1)key2=STEMS[k];});
+    if(key2){
+      var hits2=CATALOG.filter(function(it){return it.name.toLowerCase().indexOf(key2)!==-1;});
+      if(hits2.length)return {a:'Found '+hits2.length+' in the catalogue:\n'+fmtList(hits2.slice(0,6))+(hits2.length>6?'\n...and '+(hits2.length-6)+' more - use the filters in the catalogue to see them all.':''),link:null};
+    }
+    var words=q.toLowerCase().replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(function(w){return w.length>3&&['show','find','have','want','looking','please','item','items','much','does'].indexOf(w)===-1;});
+    if(words.length){
+      var scored=CATALOG.map(function(it){
+        var n=it.name.toLowerCase(),s=0;
+        words.forEach(function(w){if(n.indexOf(w)!==-1)s++;});
+        return {it:it,s:s};
+      }).filter(function(x){return x.s>0;}).sort(function(a,b){return b.s-a.s;});
+      if(scored.length)return {a:'Closest matches in the catalogue:\n'+fmtList(scored.slice(0,5).map(function(x){return x.it;})),link:null};
+    }
+    if(/^(hi|hello|hey|kia ora)\b/.test(q.trim().toLowerCase()))
+      return {a:'Kia ora! Type an item number like B01, or a flower like tulip, and I will look it up. You can also ask about delivery, pickup or custom orders.',link:null};
+    if(/thank/.test(t))return {a:'You are welcome! Anything else - an item number or a flower name?',link:null};
+    return {a:KB.fallback,link:{t:'Message on WhatsApp',href:WA_LINK}};
+  }
+  function send(text){
+    var q=(text||'').trim();if(!q)return;
+    add(q,'user');
+    var r=answer(q);
+    setTimeout(function(){add(r.a,'bot',r.link||null);},240);
+  }
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!started){started=true;add(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){send(c);});
+    chipsEl.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    send(inp.value);inp.value='';
+  });
+})();
+</script>
+</body>
+</html>
