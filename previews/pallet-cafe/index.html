@@ -20,6 +20,13 @@
   .strip figure{margin:0}
   .strip img{width:100%;height:190px;object-fit:cover;border-radius:14px;display:block}
   .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .menu-cat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+  .menu-cat h3{font-family:Georgia,serif;font-weight:normal;font-size:19px;color:var(--terra2);text-align:center;margin-bottom:12px}
+  .mi{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dotted var(--line);font-size:14.5px}
+  .mi:last-child{border-bottom:none}
+  .mi .p{font-weight:700;color:var(--terra);white-space:nowrap}
+  .menu-note{text-align:center;color:var(--mut);font-size:13px;margin-top:18px}
   .hero{max-width:1020px;margin:0 auto;padding:26px 20px 10px;text-align:center}
   .badge{display:inline-block;background:var(--terra);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
   .hero h1{font-family:Georgia,serif;font-weight:normal;font-size:42px;line-height:1.14;margin:20px auto 14px;max-width:620px}
@@ -80,6 +87,56 @@
       <figure><img src="img/breakfast.jpg" alt="A full breakfast plate served at Pallet Cafe"><figcaption>Breakfast, Pallet style</figcaption></figure>
       <figure><img src="img/coffee.jpg" alt="A coffee and teapot on a wooden table at Pallet Cafe"><figcaption>Coffee, done properly</figcaption></figure>
     </div>
+  </section>
+
+  <section style="padding-top:36px">
+    <h2>The menu</h2>
+    <p class="sub">Straight from the cafe's own published menu — breakfast all day, lunch, and the house specials regulars come back for.</p>
+    <div class="menu-grid">
+      <div class="menu-cat">
+        <h3>All Day Breakfast</h3>
+        <div class="mi"><span>Bacon and Egg Burger</span><span class="p">$9</span></div>
+        <div class="mi"><span>Egg Your Way</span><span class="p">$9</span></div>
+        <div class="mi"><span>Croissant</span><span></span></div>
+        <div class="mi"><span>Morning Wrap</span><span class="p">$11</span></div>
+        <div class="mi"><span>Avocado on Toast</span><span class="p">$13</span></div>
+        <div class="mi"><span>TPC Big Breakfast</span><span></span></div>
+      </div>
+      <div class="menu-cat">
+        <h3>Lunch</h3>
+        <div class="mi"><span>Classic Beef Burger</span><span class="p">$13</span></div>
+        <div class="mi"><span>Halloumi Burger / Wrap</span><span class="p">$12</span></div>
+        <div class="mi"><span>Fish Burger / Wrap</span><span class="p">$13</span></div>
+        <div class="mi"><span>Salads</span><span class="p">$15</span></div>
+        <div class="mi"><span>Creamy Mushroom and Chicken Pasta</span><span class="p">$15</span></div>
+        <div class="mi"><span>Schnitzel and Chips</span><span class="p">$15</span></div>
+        <div class="mi"><span>Fish Taco</span><span class="p">$18</span></div>
+      </div>
+      <div class="menu-cat">
+        <h3>House Special Pallet</h3>
+        <div class="mi"><span>Stir Fry Pasta with Beef</span><span class="p">$18</span></div>
+        <div class="mi"><span>Sweet and Sour Chicken with Rice</span><span class="p">$15</span></div>
+        <div class="mi"><span>Bo Luc Lac Shaking Beef</span><span class="p">$16</span></div>
+        <div class="mi"><span>Laksa</span><span class="p">$15–$19</span></div>
+        <div class="mi"><span>Spicy Beef Noodles Soup</span><span class="p">$15</span></div>
+        <div class="mi"><span>Vermicelli Bowls</span><span class="p">$14–$16</span></div>
+      </div>
+      <div class="menu-cat">
+        <h3>Drinks</h3>
+        <div class="mi"><span>Fresh Juice — orange, green apple, pineapple &amp; more</span><span class="p">$7</span></div>
+        <div class="mi"><span>Smoothies</span><span class="p">$6–$8.50</span></div>
+        <div class="mi"><span>Milkshakes &amp; Frappes</span><span></span></div>
+        <div class="mi"><span>Vietnamese Iced Coffee</span><span></span></div>
+        <div class="mi"><span>Plus the full coffee &amp; tea list in store</span><span></span></div>
+      </div>
+      <div class="menu-cat">
+        <h3>Catering</h3>
+        <div class="mi"><span>Rice Paper Rolls</span><span class="p">$3 each</span></div>
+        <div class="mi"><span>Mixed Finger Food Platter</span><span class="p">$95</span></div>
+        <div class="mi"><span>Also available: cold &amp; hot sandwich trays, bao buns, mini burgers, cheese platters &amp; fruit trays</span><span></span></div>
+      </div>
+    </div>
+    <p class="menu-note">Menu as published by Pallet Cafe (February 2025). Prices may have changed — check in store or call ahead.</p>
   </section>
 
   <div class="hours">
