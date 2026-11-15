@@ -19,6 +19,11 @@
   .hero h1{font-size:46px;font-weight:normal;line-height:1.1;margin:22px auto 14px;max-width:600px}
   .hero p{max-width:520px;margin:0 auto;color:var(--cream2);font-size:16.5px}
   .rule{width:64px;height:2px;background:var(--gold);margin:26px auto 0}
+  .hero-photo{display:block;width:min(680px,92%);margin:30px auto 0;border:2px solid var(--gold);border-radius:10px}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+  .strip figure{margin:0}
+  .strip img{width:100%;height:200px;object-fit:cover;border-radius:8px;display:block}
+  .strip figcaption{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
   .wrap{max-width:900px;margin:0 auto;padding:0 20px}
   section{padding:54px 0}
   h2{font-size:29px;font-weight:normal;text-align:center;margin-bottom:10px}
@@ -55,6 +60,7 @@
   <h1>A Dublin institution, pouring since 1834</h1>
   <p>McNeills of Capel Street — a traditional Irish pub in the heart of Dublin, and home to live traditional music sessions.</p>
   <div class="rule"></div>
+  <img class="hero-photo" src="img/storefront-night.jpg" alt="The teal J. McNeill storefront on Capel Street at night, staff standing at the door">
 </div>
 
 <div class="wrap">
@@ -64,6 +70,17 @@
     <div class="story">
       <div class="card"><div class="yr">1834</div><h3>It began with instruments</h3><p>McNeills started life on Capel Street as a music-instrument shop — selling the very instruments that would one day fill the pub with sound.</p></div>
       <div class="card"><div class="yr">Today</div><h3>The music never left</h3><p>The shop became a public house, but the tradition stayed. McNeills is known for its live traditional sessions — musicians, tunes, and a proper Dublin welcome.</p></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <h2>The pub in pictures</h2>
+    <p class="sub">McNeills as it is — the shopfront, the bar, and the fire.</p>
+    <div class="strip">
+      <figure><img src="img/storefront-pint.jpg" alt="A pint of Guinness on a table in front of McNeills' teal storefront"><figcaption>The shopfront on Capel Street</figcaption></figure>
+      <figure><img src="img/bar-interior.jpg" alt="Inside the bar at McNeills, a regular in a J. McNeill cap facing the taps"><figcaption>Inside at the bar</figcaption></figure>
+      <figure><img src="img/fireplace.jpg" alt="A pint on a table by the open fire inside McNeills"><figcaption>The open fire</figcaption></figure>
+      <figure><img src="img/capel-street.jpg" alt="Capel Street in Dublin city centre"><figcaption>Capel Street — our corner of the city centre</figcaption></figure>
     </div>
   </section>
 
