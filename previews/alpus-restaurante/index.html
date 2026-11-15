@@ -5,81 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ALPUS Restaurante Bar — San Cristóbal, Medellín | Desde 1983</title>
 <meta name="description" content="ALPUS Restaurante Bar, San Cristóbal, Medellín. Desde 1983, el sabor que reúne generaciones. Parrilla, picadas, pizzas, cócteles y música en vivo. Reservas y domicilios por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#14100d;--panel:#1e1813;--ink:#f2e9dd;--mut:#b8a893;--amber:#e39a2d;--amber2:#c47f1a;--rust:#b4502a;--line:#3a2f24;--card:#211a14;--wa:#1faa55}
+  :root{--paper:#14100d;--panel:#1e1813;--ink:#f2e9dd;--mut:#b8a893;--amber:#e39a2d;--amber2:#c47f1a;--rust:#b4502a;--line:#3a2f24;--card:#211a14;--wa:#1faa55;--shadow:0 20px 45px rgba(0,0,0,.38);--shadow-sm:0 12px 30px rgba(0,0,0,.30)}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-  header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:0 auto;gap:12px}
-  .brand{font-family:Georgia,serif;font-size:24px;letter-spacing:3px;color:var(--ink)}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--amber);color:#14100d}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  header{position:sticky;top:0;z-index:50;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:rgba(20,16,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:background .35s ease,border-color .35s ease,box-shadow .35s ease}
+  header.scrolled{background:rgba(20,16,13,.97);border-bottom-color:var(--line);box-shadow:0 12px 32px rgba(0,0,0,.35)}
+  .header-in{width:100%;max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(23px,3vw,27px);letter-spacing:3px;color:var(--ink);line-height:1.1}
   .brand span{color:var(--amber)}
-  .pill{font-size:12.5px;font-weight:700;color:var(--amber);background:#2a2013;padding:7px 13px;border-radius:999px;white-space:nowrap}
-  .hero{max-width:1020px;margin:0 auto;padding:26px 20px 10px;text-align:center}
-  .badge{display:inline-block;background:var(--rust);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
-  .hero h1{font-family:Georgia,serif;font-weight:normal;font-size:40px;line-height:1.14;margin:20px auto 14px;max-width:660px}
-  .hero p{color:var(--mut);max-width:580px;margin:0 auto 26px;font-size:16.5px}
-  .btn{display:inline-block;background:var(--ink);color:#14100d;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px}
+  .pill{font-size:12.5px;font-weight:700;color:var(--amber);background:#2a2013;padding:8px 14px;border-radius:999px;white-space:nowrap;border:1px solid var(--line);min-height:36px;display:inline-flex;align-items:center}
+  .hero{position:relative;overflow:hidden;isolation:isolate;color:var(--ink);text-align:center;padding:clamp(88px,14vw,148px) 20px clamp(84px,12vw,132px)}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;display:block}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,16,13,.62) 0%,rgba(20,16,13,.72) 46%,rgba(13,10,8,.94) 100%)}
+  .hero-in{max-width:840px;margin:0 auto}
+  .badge{display:inline-block;background:var(--rust);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.6px;padding:9px 16px;border-radius:999px;text-transform:uppercase;box-shadow:0 10px 24px rgba(0,0,0,.30)}
+  .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(42px,7.6vw,72px);line-height:1.04;letter-spacing:-.02em;margin:26px auto 18px;max-width:720px;text-wrap:balance}
+  .hero p{color:rgba(242,233,221,.88);max-width:600px;margin:0 auto 32px;font-size:clamp(16px,2.2vw,18px);line-height:1.65}
+  .hero-actions,.contact-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--ink);color:#14100d;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px;line-height:1.2;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(0,0,0,.38)}
   .btn.wa{background:var(--wa);color:#fff}
   .btn.amber{background:var(--amber);color:#14100d}
-  .hero-photo{max-width:1020px;margin:16px auto 0;padding:0 20px}
-  .hero-photo img{width:100%;max-height:520px;object-fit:cover;border-radius:18px;display:block}
-  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
-  section{padding:48px 0 4px}
-  h2{font-family:Georgia,serif;font-weight:normal;font-size:27px;text-align:center;margin-bottom:8px}
-  .sub{text-align:center;color:var(--mut);font-size:15px;max-width:580px;margin:0 auto 30px}
-  .quote{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:14px;padding:26px 28px;font-family:Georgia,serif;font-size:18.5px;font-style:italic;line-height:1.5}
-  .quote .who{display:block;margin-top:12px;font-size:13px;font-style:normal;color:var(--mut);font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
-  .card .ic{font-size:28px;margin-bottom:10px}
-  .card h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;margin-bottom:7px}
-  .card p{font-size:14.5px;color:var(--mut)}
-  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
-  .menu-card h3{font-family:Georgia,serif;font-weight:normal;font-size:20px;color:var(--amber);margin-bottom:4px}
-  .menu-card .note{font-size:13.5px;color:var(--mut);margin-bottom:12px}
-  .dish{padding:8px 0;border-bottom:1px dashed #453723}
-  .dish:last-child{border-bottom:none}
-  .dish b{display:block;font-size:15.5px}
-  .dish span{font-size:13.5px;color:var(--mut)}
-  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+  .btn.amber:hover{background:var(--amber2)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:clamp(64px,10vw,110px) 0 0}
+  section:last-child{padding-bottom:clamp(64px,10vw,110px)}
+  .eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;font-size:12px;font-weight:800;letter-spacing:.28em;color:var(--amber);margin-bottom:16px}
+  .eyebrow::before,.eyebrow::after{content:"";width:34px;height:1px;background:var(--amber);opacity:.55}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(30px,4.6vw,42px);line-height:1.12;letter-spacing:-.015em;text-align:center;margin-bottom:12px;text-wrap:balance}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;line-height:1.65;max-width:600px;margin:0 auto 38px}
+  .quote{position:relative;max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:20px;padding:clamp(34px,5vw,46px) clamp(26px,5vw,44px);font-family:'Fraunces',Georgia,serif;font-size:clamp(20px,3vw,24px);font-style:italic;font-weight:500;line-height:1.55;box-shadow:var(--shadow-sm);overflow:hidden}
+  .quote::before{content:"“";position:absolute;top:-18px;right:18px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:150px;line-height:1;color:var(--amber);opacity:.16;pointer-events:none}
+  .quote .who{display:block;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;font-weight:600;font-style:normal;color:var(--mut);font-family:'Inter',sans-serif}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm);border-color:#55452f}
+  .card .ic{font-size:30px;line-height:1;margin-bottom:14px}
+  .card h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px;line-height:1.25;margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--mut);line-height:1.65}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 26px;box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+  .menu-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:#55452f}
+  .menu-card h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:22px;line-height:1.25;color:var(--amber);margin-bottom:6px}
+  .menu-card .note{font-size:13.5px;color:var(--mut);line-height:1.6;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .dish{padding:12px 0;border-bottom:1px dashed #453723}
+  .dish:last-child{border-bottom:none;padding-bottom:2px}
+  .dish:first-of-type{padding-top:2px}
+  .dish b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:17px;line-height:1.3;color:var(--ink);margin-bottom:3px}
+  .dish span{font-size:13.5px;color:var(--mut);line-height:1.6}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
   .strip figure{margin:0}
-  .strip img{width:100%;height:200px;object-fit:cover;border-radius:14px;display:block}
-  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
-  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-  .review{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
-  .review .stars{color:var(--amber);letter-spacing:2px;margin-bottom:8px}
-  .review p{font-size:15px;font-style:italic}
-  .review .who{margin-top:12px;font-size:13px;color:var(--mut);font-style:normal}
-  .rating-big{text-align:center;font-family:Georgia,serif;font-size:30px;margin-bottom:6px}
-  .hours{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:38px 26px;text-align:center;margin:48px 0 8px}
-  .hours .big{font-family:Georgia,serif;font-size:26px;line-height:1.55;margin:10px 0 6px;color:var(--amber)}
-  .hours p{color:var(--mut);font-size:15px}
-  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:14px auto 0}
-  footer{padding:26px 20px 92px;text-align:center;color:var(--mut);font-size:13px}
+  .strip img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;border-radius:16px;display:block;box-shadow:var(--shadow-sm)}
+  .strip figcaption{font-size:12.5px;font-weight:600;color:var(--mut);text-align:center;margin-top:10px}
+  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .review{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px 26px 26px;box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .3s ease,box-shadow .3s ease}
+  .review:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+  .review .stars{color:var(--amber);letter-spacing:3px;font-size:14px;margin-bottom:14px}
+  .review p{font-family:'Fraunces',Georgia,serif;font-size:17px;line-height:1.55;font-style:italic;color:var(--ink)}
+  .review .who{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--mut);font-style:normal}
+  .rating-big{text-align:center;font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(30px,5vw,38px);line-height:1.2;margin-bottom:10px;color:var(--ink)}
+  .hours{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:clamp(42px,6vw,58px) 26px;text-align:center;margin:clamp(64px,10vw,110px) 0 0;box-shadow:var(--shadow-sm)}
+  .hours .big{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(24px,3.8vw,30px);line-height:1.55;margin:12px 0 10px;color:var(--amber)}
+  .hours p{color:var(--mut);font-size:15px;line-height:1.65}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:18px auto 0;line-height:1.6}
+  footer{padding:34px 20px 108px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7;border-top:1px solid var(--line)}
   footer a{color:var(--amber)}
-  .sticky{position:fixed;left:0;right:0;bottom:0;background:#0d0a08;border-top:1px solid var(--line);padding:10px 14px;z-index:20}
-  .sticky a{display:block;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px}
-  @media(min-width:760px){.hero h1{font-size:52px}}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(13,10,8,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:60}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 10px 24px rgba(31,170,85,.24)}
+  .sticky a:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(31,170,85,.30)}
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(max-width:560px){
+    .pill{white-space:normal;text-align:center}
+    .hero-actions .btn,.contact-actions .btn{width:100%}
+    .strip{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+    .rv{opacity:1!important;transform:none!important}
+    .btn:hover,.card:hover,.menu-card:hover,.review:hover,.sticky a:hover{transform:none}
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="brand">ALPUS <span>1983</span></div>
-  <div class="pill">San Cristóbal · Medellín</div>
+<header id="siteHeader">
+  <div class="header-in">
+    <div class="brand">ALPUS <span>1983</span></div>
+    <div class="pill">San Cristóbal · Medellín</div>
+  </div>
 </header>
 
 <div class="hero">
-  <div class="badge">Gastrobar · Restaurante y bar</div>
-  <h1>Desde 1983, el sabor que reúne generaciones</h1>
-  <p>Alpus lleva más de cuatro décadas siendo parte de Medellín: de sus noches, sus canciones, sus amigos y sus historias.</p>
-  <a class="btn wa" href="https://wa.me/573117397623">Reservas y domicilios — WhatsApp</a>
-  <a class="btn amber" href="#carta">Ver la carta</a>
+  <img src="img/bartender.jpg" alt="Bartender de Alpus preparando un cóctel">
+  <div class="hero-in">
+    <div class="badge">Gastrobar · Restaurante y bar</div>
+    <h1>Desde 1983, el sabor que reúne generaciones</h1>
+    <p>Alpus lleva más de cuatro décadas siendo parte de Medellín: de sus noches, sus canciones, sus amigos y sus historias.</p>
+    <div class="hero-actions">
+      <a class="btn wa" href="https://wa.me/573117397623">Reservas y domicilios — WhatsApp</a>
+      <a class="btn amber" href="#carta">Ver la carta</a>
+    </div>
+  </div>
 </div>
 
-<div class="hero-photo"><img src="img/bartender.jpg" alt="Bartender de Alpus preparando un cóctel"></div>
-
 <div class="wrap">
-  <section>
+  <section class="rv">
+    <div class="eyebrow">01</div>
     <h2>Nuestra historia</h2>
     <p class="sub">Un clásico de San Cristóbal que se renovó en 2025 sin perder lo esencial.</p>
     <div class="quote">
@@ -93,7 +133,8 @@
     </div>
   </section>
 
-  <section id="carta">
+  <section id="carta" class="rv">
+    <div class="eyebrow">02</div>
     <h2>La carta</h2>
     <p class="sub">“En Alpus el rock nos inspira, por eso nuestros platos llevan nombres que han marcado generaciones.” Pide la carta completa, con precios, por WhatsApp.</p>
     <div class="menu-grid">
@@ -146,7 +187,8 @@
     <p class="fineprint">Platos y bebidas tomados de las publicaciones de Alpus en Instagram. La carta completa, con precios, se pide por WhatsApp.</p>
   </section>
 
-  <section>
+  <section class="rv">
+    <div class="eyebrow">03</div>
     <h2>Lo que dicen nuestros clientes</h2>
     <div class="rating-big">★ 4.7 <span style="font-size:16px;color:var(--mut)">— 187 reseñas en Google</span></div>
     <p class="sub">Reseñas reales de clientes, tal como las publicaron.</p>
@@ -180,7 +222,8 @@
     <p class="fineprint">Calificación y reseñas de Google recopiladas por carta.menu (consultado el 15 de noviembre de 2026).</p>
   </section>
 
-  <section style="padding-top:36px">
+  <section class="rv">
+    <div class="eyebrow">04</div>
     <h2>El ambiente y el barrio</h2>
     <p class="sub">Noches de música en Alpus — y San Cristóbal, nuestro corregimiento en Medellín.</p>
     <div class="strip">
@@ -190,16 +233,18 @@
     </div>
   </section>
 
-  <div class="hours">
+  <div class="hours rv">
+    <div class="eyebrow">05</div>
     <h2>Horario</h2>
     <div class="big">Lunes a jueves y domingo: 6:00 p. m. – 11:30 p. m.<br>Viernes y sábado: 6:00 p. m. – 1:30 a. m.</div>
     <p>Almuerzos los fines de semana desde las 12:00 del mediodía · Te esperamos todos los días desde las 6:00 p. m.</p>
   </div>
 
-  <section>
+  <section class="rv">
+    <div class="eyebrow">06</div>
     <h2>Reservas y domicilios</h2>
     <p class="sub">Calle 62 # 129-32, San Cristóbal, Medellín, Antioquia. Reserva tu momento especial y celebra diferente.</p>
-    <div style="text-align:center">
+    <div class="contact-actions">
       <a class="btn wa" href="https://wa.me/573117397623">WhatsApp +57 311 739 7623</a>
       <a class="btn" href="https://www.instagram.com/alpusrestaurante1983">Instagram</a>
     </div>
@@ -213,5 +258,25 @@
 </footer>
 
 <div class="sticky"><a href="https://wa.me/573117397623">Reservas y domicilios — WhatsApp</a></div>
+<script>
+(function(){
+  var header=document.getElementById('siteHeader');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>10)}
+  onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  var items=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in')});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>

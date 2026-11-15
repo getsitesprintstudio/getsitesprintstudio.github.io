@@ -5,103 +5,190 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cristhiane Festas Doceria — Goiânia, GO | Doces artesanais por encomenda</title>
 <meta name="description" content="Cristhiane Festas Doceria, Goiânia/GO. Doces artesanais por cento, bem-casados, bombons e kits degustação. Encomendas pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#fffaf0;--ink:#26221c;--mut:#6f6759;--blue:#1e3a8a;--blue2:#2b4acb;--gold:#f0a91e;--gold2:#d18f0e;--line:#f0e2c4;--card:#ffffff;--wa:#1faa55;--wa2:#178a44}
+  :root{
+    --paper:#fffaf0;--ink:#26221c;--mut:#6f6759;--blue:#1e3a8a;--blue2:#2b4acb;--blue-deep:#14275e;
+    --gold:#f0a91e;--gold2:#d18f0e;--sand:#fdf3da;--line:#f0e2c4;--card:#ffffff;--wa:#1faa55;--wa2:#178a44;
+    --shadow:0 1px 2px rgba(38,34,28,.04),0 12px 32px -12px rgba(30,58,138,.14);
+    --shadow-lg:0 2px 4px rgba(38,34,28,.05),0 24px 48px -16px rgba(30,58,138,.24);
+    --radius:20px;
+  }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-  .serif{font-family:Georgia,'Times New Roman',serif}
-  header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:0 auto;gap:12px}
-  .brand{font-family:Georgia,serif;font-size:22px;color:var(--blue)}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--gold);color:var(--ink)}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  :focus-visible{outline:2px solid var(--blue2);outline-offset:3px;border-radius:6px}
+  .serif{font-family:'Fraunces',Georgia,'Times New Roman',serif}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:40;background:rgba(255,250,240,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:padding .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease}
+  .header-in{max-width:1120px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:padding .3s ease}
+  header.scrolled{background:rgba(255,250,240,.97);border-bottom-color:var(--line);box-shadow:0 8px 30px -14px rgba(30,58,138,.25)}
+  header.scrolled .header-in{padding-top:11px;padding-bottom:11px}
+  .brand{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(21px,3vw,25px);letter-spacing:-.01em;color:var(--blue);line-height:1.1;white-space:nowrap}
   .brand span{color:var(--gold2)}
-  .pill{font-size:12.5px;font-weight:700;color:var(--blue);background:#e6ebfb;padding:7px 13px;border-radius:999px;white-space:nowrap}
-  .hero{max-width:1020px;margin:0 auto;padding:26px 20px 10px;text-align:center}
-  .badge{display:inline-block;background:var(--blue);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
-  .hero h1{font-family:Georgia,serif;font-weight:normal;font-size:40px;line-height:1.14;margin:20px auto 14px;max-width:640px}
-  .hero p{color:var(--mut);max-width:540px;margin:0 auto 26px;font-size:16.5px}
-  .btn{display:inline-block;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px}
+  .pill{font-size:12.5px;font-weight:700;color:var(--blue);background:#e6ebfb;padding:9px 15px;border-radius:999px;white-space:nowrap;border:1px solid #d3ddf7;min-height:36px;display:inline-flex;align-items:center}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--blue-deep);isolation:isolate}
+  .hero-media{position:absolute;inset:0;z-index:-2}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+      radial-gradient(620px 400px at 84% -6%,rgba(240,169,30,.34),rgba(240,169,30,0) 62%),
+      linear-gradient(180deg,rgba(20,39,94,.86) 0%,rgba(30,58,138,.78) 46%,rgba(20,39,94,.92) 100%)}
+  .hero-in{max-width:1120px;margin:0 auto;padding:clamp(72px,10vw,118px) 24px clamp(80px,10vw,124px);text-align:center;position:relative}
+  .badge{display:inline-block;background:var(--blue);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.16em;padding:9px 17px;border-radius:999px;text-transform:uppercase;border:1px solid rgba(255,255,255,.28);box-shadow:0 10px 24px -10px rgba(10,20,50,.7)}
+  .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(38px,6.4vw,66px);line-height:1.06;letter-spacing:-.015em;margin:26px auto 20px;max-width:780px;text-wrap:balance;text-shadow:0 2px 24px rgba(10,20,50,.35)}
+  .hero p{color:#dbe4fb;max-width:560px;margin:0 auto 34px;font-size:clamp(16px,2vw,18px);line-height:1.65}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 30px;border-radius:999px;font-size:15.5px;line-height:1.25;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(10,20,50,.55)}
+  .btn:active{transform:translateY(0)}
   .btn.wa{background:var(--wa)}
+  .btn.wa:hover{background:var(--wa2)}
   .btn.gold{background:var(--gold);color:#26221c}
-  .hero-photo{max-width:1020px;margin:16px auto 0;padding:0 20px}
-  .hero-photo img{width:100%;border-radius:18px;display:block}
-  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
-  section{padding:48px 0 4px}
-  h2{font-family:Georgia,serif;font-weight:normal;font-size:27px;text-align:center;margin-bottom:8px}
-  .sub{text-align:center;color:var(--mut);font-size:15px;max-width:560px;margin:0 auto 30px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
-  .card .ic{font-size:28px;margin-bottom:10px}
-  .card h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;margin-bottom:7px}
-  .card p{font-size:14.5px;color:var(--mut)}
-  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;margin-bottom:16px}
-  .menu-card h3{font-family:Georgia,serif;font-weight:normal;font-size:20px;color:var(--blue);margin-bottom:4px}
-  .menu-card .note{font-size:13.5px;color:var(--mut);margin-bottom:12px}
-  .mrow{display:flex;align-items:baseline;gap:8px;padding:7px 0;font-size:15px}
-  .mrow .dots{flex:1;border-bottom:2px dotted #d8c491;transform:translateY(-4px)}
-  .mrow .pr{font-weight:700;color:var(--gold2);white-space:nowrap}
-  .flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-  .flavors .fcol{background:#fdf3da;border:1px solid var(--line);border-radius:16px;padding:22px}
-  .flavors h4{font-family:Georgia,serif;font-weight:normal;font-size:17px;margin-bottom:8px;color:var(--blue)}
-  .flavors p{font-size:14.5px;color:var(--ink)}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 20px;text-align:center}
-  .step .n{display:inline-block;width:34px;height:34px;line-height:34px;border-radius:50%;background:var(--gold);font-weight:800;margin-bottom:10px}
-  .step h3{font-size:16.5px;margin-bottom:6px}
-  .step p{font-size:14px;color:var(--mut)}
-  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+  .btn.gold:hover{background:var(--gold2);color:#fff}
+
+  /* ---------- Layout / sections ---------- */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:clamp(64px,10vw,110px) 0 0}
+  section:last-child{padding-bottom:8px}
+  .eyebrow{text-align:center;font-size:12px;font-weight:800;letter-spacing:.34em;color:var(--gold2);margin-bottom:14px;font-variant-numeric:tabular-nums}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(30px,4.4vw,42px);letter-spacing:-.015em;line-height:1.12;text-align:center;margin-bottom:10px;color:var(--blue)}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;max-width:560px;margin:0 auto 36px;line-height:1.65}
+
+  /* ---------- Cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 26px 30px;text-align:center;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .card .ic{font-size:32px;line-height:1;margin-bottom:16px}
+  .card h3{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:20px;letter-spacing:-.01em;margin-bottom:8px;color:var(--blue)}
+  .card p{font-size:14.5px;color:var(--mut);line-height:1.65}
+  .card p a{color:var(--blue2);font-weight:600;text-decoration:none;border-bottom:1px solid #c9d4f5}
+  .card p a:hover{color:var(--gold2);border-bottom-color:var(--gold)}
+
+  /* ---------- Products ---------- */
+  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px 24px;margin-bottom:18px;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .menu-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .menu-card h3{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:23px;letter-spacing:-.01em;color:var(--blue);margin-bottom:5px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .menu-card .note{font-size:13.5px;color:var(--mut);margin:14px 0 8px;line-height:1.6}
+  .mrow{display:flex;align-items:baseline;gap:10px;padding:10px 0;font-size:15px}
+  .mrow + .mrow{border-top:1px solid #faf0d7}
+  .mrow .dots{flex:1;border-bottom:2px dotted #d8c491;transform:translateY(-4px);min-width:24px}
+  .mrow .pr{font-weight:800;color:var(--gold2);white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+  .flavors .fcol{background:var(--sand);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
+  .flavors h4{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:19px;letter-spacing:-.01em;margin-bottom:10px;color:var(--blue)}
+  .flavors p{font-size:14.5px;color:var(--ink);line-height:1.7}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:20px auto 0;line-height:1.65}
+
+  /* ---------- Steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 22px 28px;text-align:center;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+  .step:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .step .n{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(150deg,var(--gold) 0%,var(--gold2) 100%);color:#fff;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:19px;margin-bottom:16px;box-shadow:0 10px 20px -8px rgba(209,143,14,.7)}
+  .step h3{font-size:16.5px;font-weight:700;letter-spacing:-.005em;margin-bottom:7px}
+  .step p{font-size:14px;color:var(--mut);line-height:1.65}
+
+  /* ---------- Strip ---------- */
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
   .strip figure{margin:0}
-  .strip img{width:100%;height:190px;object-fit:cover;border-radius:14px;display:block}
-  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
-  .hours{background:var(--blue);color:#fff;border-radius:18px;padding:38px 26px;text-align:center;margin:48px 0 8px}
+  .strip img{width:100%;height:260px;object-fit:cover;border-radius:var(--radius);display:block;box-shadow:var(--shadow-lg);background:#fff}
+  .strip figure.logo-fig img{object-fit:contain}
+  .strip figcaption{font-size:13px;color:var(--mut);text-align:center;margin-top:12px}
+
+  /* ---------- Hours panel ---------- */
+  .hours{background:
+      radial-gradient(520px 320px at 88% -10%,rgba(240,169,30,.32),rgba(240,169,30,0) 62%),
+      linear-gradient(158deg,var(--blue2) 0%,var(--blue) 55%,var(--blue-deep) 100%);
+    color:#fff;border-radius:24px;padding:clamp(44px,6vw,64px) 28px;text-align:center;margin:clamp(64px,10vw,110px) 0 0;box-shadow:var(--shadow-lg)}
+  .hours .eyebrow{color:var(--gold)}
   .hours h2{color:#fff}
-  .hours .big{font-family:Georgia,serif;font-size:26px;line-height:1.5;margin:10px 0 6px}
-  .hours p{color:#c9d4f5;font-size:15px}
-  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:14px auto 0}
-  footer{padding:26px 20px 92px;text-align:center;color:var(--mut);font-size:13px}
+  .hours .big{font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:clamp(26px,4vw,34px);line-height:1.5;letter-spacing:-.01em;margin:12px 0 10px}
+  .hours p{color:#c9d4f5;font-size:15px;line-height:1.65}
+
+  /* ---------- Contact ---------- */
+  .contact-actions{text-align:center;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+  /* ---------- Footer / sticky ---------- */
+  footer{padding:clamp(56px,8vw,80px) 24px 110px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7;border-top:1px solid var(--line);margin-top:clamp(64px,10vw,100px)}
   footer a{color:var(--blue)}
-  .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;z-index:20}
-  .sticky a{display:block;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px}
-  @media(min-width:760px){.hero h1{font-size:52px}}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:50;box-shadow:0 -10px 30px -18px rgba(30,58,138,.35)}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:background .25s ease}
+  .sticky a:hover{background:var(--wa2)}
+
+  /* ---------- Reveal ---------- */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+
+  @media(max-width:560px){
+    .header-in{padding-left:18px;padding-right:18px}
+    .pill{font-size:11.5px;padding:8px 12px}
+    .wrap{padding:0 18px}
+    .hero-in{padding-left:18px;padding-right:18px}
+    .hero-actions .btn,.contact-actions .btn{width:100%}
+    .card,.menu-card{padding-left:22px;padding-right:22px}
+    .strip img{height:220px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none !important;animation:none !important}
+    .rv{opacity:1 !important;transform:none !important}
+    .card:hover,.menu-card:hover,.step:hover,.btn:hover{transform:none}
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="brand">Cristhiane <span>Festas</span></div>
-  <div class="pill">Encomendas pelo WhatsApp</div>
+<header id="site-header">
+  <div class="header-in">
+    <div class="brand">Cristhiane <span>Festas</span></div>
+    <div class="pill">Encomendas pelo WhatsApp</div>
+  </div>
 </header>
 
 <div class="hero">
-  <div class="badge">Doceria artesanal · Goiânia, GO</div>
-  <h1>Doces feitos com amor para adoçar os melhores momentos da sua vida</h1>
-  <p>Brigadeiros e doces artesanais por cento, bem-casados, bombons recheados e kits degustação — tudo por encomenda, com retirada na loja.</p>
-  <a class="btn wa" href="https://wa.me/5562996295796">Pedir pelo WhatsApp</a>
-  <a class="btn gold" href="#produtos">Ver produtos e preços</a>
+  <div class="hero-media"><img src="img/banner.jpg" alt="Doces da Cristhiane Festas Doceria — brigadeiros, beijinhos e rocamboles de ninho"></div>
+  <div class="hero-in">
+    <div class="badge">Doceria artesanal · Goiânia, GO</div>
+    <h1>Doces feitos com amor para adoçar os melhores momentos da sua vida</h1>
+    <p>Brigadeiros e doces artesanais por cento, bem-casados, bombons recheados e kits degustação — tudo por encomenda, com retirada na loja.</p>
+    <div class="hero-actions">
+      <a class="btn wa" href="https://wa.me/5562996295796">Pedir pelo WhatsApp</a>
+      <a class="btn gold" href="#produtos">Ver produtos e preços</a>
+    </div>
+  </div>
 </div>
-
-<div class="hero-photo"><img src="img/banner.jpg" alt="Doces da Cristhiane Festas Doceria — brigadeiros, beijinhos e rocamboles de ninho"></div>
 
 <div class="wrap">
   <section>
-    <h2>Por que a Cristhiane Festas?</h2>
-    <p class="sub">Uma doceria de bairro com uma multidão de fãs — e doces que marcam momentos.</p>
+    <div class="eyebrow rv">01</div>
+    <h2 class="rv">Por que a Cristhiane Festas?</h2>
+    <p class="sub rv">Uma doceria de bairro com uma multidão de fãs — e doces que marcam momentos.</p>
     <div class="grid">
-      <div class="card"><div class="ic">📱</div><h3>+56 mil seguidores</h3><p>Mais de 56 mil pessoas acompanham a loja no Instagram: <a href="https://www.instagram.com/cristhianefestas">@cristhianefestas</a>.</p></div>
-      <div class="card"><div class="ic">🍬</div><h3>Docinhos de ~15 g</h3><p>Doces artesanais de aproximadamente 15 gramas, entregues em caixas brancas, prontos para a sua mesa de festa.</p></div>
-      <div class="card"><div class="ic">💍</div><h3>Para toda celebração</h3><p>Casamentos, nascimentos, aniversários, Dia das Mães, Natal e festas em geral.</p></div>
+      <div class="card rv"><div class="ic">📱</div><h3>+56 mil seguidores</h3><p>Mais de 56 mil pessoas acompanham a loja no Instagram: <a href="https://www.instagram.com/cristhianefestas">@cristhianefestas</a>.</p></div>
+      <div class="card rv"><div class="ic">🍬</div><h3>Docinhos de ~15 g</h3><p>Doces artesanais de aproximadamente 15 gramas, entregues em caixas brancas, prontos para a sua mesa de festa.</p></div>
+      <div class="card rv"><div class="ic">💍</div><h3>Para toda celebração</h3><p>Casamentos, nascimentos, aniversários, Dia das Mães, Natal e festas em geral.</p></div>
     </div>
   </section>
 
   <section id="produtos">
-    <h2>Produtos e preços</h2>
-    <p class="sub">Direto das promoções publicadas pela loja no Instagram. Peça o cardápio completo pelo WhatsApp.</p>
+    <div class="eyebrow rv">02</div>
+    <h2 class="rv">Produtos e preços</h2>
+    <p class="sub rv">Direto das promoções publicadas pela loja no Instagram. Peça o cardápio completo pelo WhatsApp.</p>
 
-    <div class="menu-card">
+    <div class="menu-card rv">
       <h3>Doces artesanais — o cento</h3>
       <p class="note">Brigadeiros e doces finos vendidos por cento (100 unidades), tradicionais e gourmets.</p>
       <div class="mrow"><span>Doces artesanais — o cento</span><span class="dots"></span><span class="pr">R$ 160,00</span></div>
       <div class="mrow"><span>Kit degustação — 21 unidades</span><span class="dots"></span><span class="pr">R$ 55,00</span></div>
     </div>
 
-    <div class="menu-card">
+    <div class="menu-card rv">
       <h3>Bem-casados e bem-nascidos</h3>
       <p class="note">Recheio doce e cremoso — o clássico das festas de casamento e nascimento.</p>
       <div class="mrow"><span>Bem-casado / bem-nascido — a unidade</span><span class="dots"></span><span class="pr">R$ 5,00</span></div>
@@ -109,7 +196,7 @@
       <div class="mrow"><span>100 unidades</span><span class="dots"></span><span class="pr">R$ 500,00</span></div>
     </div>
 
-    <div class="menu-card">
+    <div class="menu-card rv">
       <h3>Bombons e trufinhas</h3>
       <p class="note">Bombons recheados de coco com leite condensado ou brigadeiro artesanal cremoso; trufinhas abertas com copinhos de chocolate ao leite.</p>
       <div class="mrow"><span>Bombons recheados — 30 unidades</span><span class="dots"></span><span class="pr">R$ 99,00</span></div>
@@ -119,7 +206,7 @@
       <div class="mrow"><span>Trufinhas abertas — 100 unidades</span><span class="dots"></span><span class="pr">R$ 290,00</span></div>
     </div>
 
-    <div class="flavors">
+    <div class="flavors rv">
       <div class="fcol">
         <h4>Sabores tradicionais</h4>
         <p>Brigadeiro · Beijinho · Ninho · Casadinho · Olho de sogra · Bicho de pé · Churros</p>
@@ -129,39 +216,43 @@
         <p>Pistache · Limão italiano · Amêndoa · Maracujá · Manga · Framboesa · Brigadeiro de Oreo · Beijinho de coco queimado · Nutella · Café · Paçoca · Palha italiana</p>
       </div>
     </div>
-    <p class="fineprint">Preços das promoções publicadas no Instagram da loja (@cristhianefestas) em outubro/novembro de 2026. Confirme valores, sabores e disponibilidade pelo WhatsApp antes de fechar o pedido.</p>
+    <p class="fineprint rv">Preços das promoções publicadas no Instagram da loja (@cristhianefestas) em outubro/novembro de 2026. Confirme valores, sabores e disponibilidade pelo WhatsApp antes de fechar o pedido.</p>
   </section>
 
   <section>
-    <h2>Como encomendar</h2>
-    <p class="sub">Simples, do jeito que a loja já trabalha todos os dias.</p>
+    <div class="eyebrow rv">03</div>
+    <h2 class="rv">Como encomendar</h2>
+    <p class="sub rv">Simples, do jeito que a loja já trabalha todos os dias.</p>
     <div class="steps">
-      <div class="step"><span class="n">1</span><h3>Chame no WhatsApp</h3><p>Escreva para (62) 99629-5796 e peça o cardápio.</p></div>
-      <div class="step"><span class="n">2</span><h3>Monte seu pedido</h3><p>Escolha doces, sabores e quantidades para a sua data.</p></div>
-      <div class="step"><span class="n">3</span><h3>Confirme com 50% de sinal</h3><p>O agendamento é feito após a confirmação do sinal. Preços promocionais para Pix ou dinheiro — a loja também passa cartão.</p></div>
-      <div class="step"><span class="n">4</span><h3>Retire na loja</h3><p>As encomendas são para retirada na loja, na data combinada.</p></div>
+      <div class="step rv"><span class="n">1</span><h3>Chame no WhatsApp</h3><p>Escreva para (62) 99629-5796 e peça o cardápio.</p></div>
+      <div class="step rv"><span class="n">2</span><h3>Monte seu pedido</h3><p>Escolha doces, sabores e quantidades para a sua data.</p></div>
+      <div class="step rv"><span class="n">3</span><h3>Confirme com 50% de sinal</h3><p>O agendamento é feito após a confirmação do sinal. Preços promocionais para Pix ou dinheiro — a loja também passa cartão.</p></div>
+      <div class="step rv"><span class="n">4</span><h3>Retire na loja</h3><p>As encomendas são para retirada na loja, na data combinada.</p></div>
     </div>
   </section>
 
-  <section style="padding-top:36px">
-    <h2>A loja e a cidade</h2>
-    <p class="sub">A marca da Cristhiane Festas — e Goiânia, a cidade que ela adoça.</p>
+  <section>
+    <div class="eyebrow rv">04</div>
+    <h2 class="rv">A loja e a cidade</h2>
+    <p class="sub rv">A marca da Cristhiane Festas — e Goiânia, a cidade que ela adoça.</p>
     <div class="strip">
-      <figure><img src="img/logo.jpg" alt="Logotipo da Cristhiane Festas Doceria sobre doces da loja"><figcaption>A marca da loja</figcaption></figure>
-      <figure><img src="img/goiania.jpg" alt="Vista panorâmica de Goiânia, Goiás"><figcaption>Goiânia, GO</figcaption></figure>
+      <figure class="rv logo-fig"><img src="img/logo.jpg" alt="Logotipo da Cristhiane Festas Doceria sobre doces da loja"><figcaption>A marca da loja</figcaption></figure>
+      <figure class="rv"><img src="img/goiania.jpg" alt="Vista panorâmica de Goiânia, Goiás"><figcaption>Goiânia, GO</figcaption></figure>
     </div>
   </section>
 
-  <div class="hours">
+  <div class="hours rv">
+    <div class="eyebrow">05</div>
     <h2>Horário de funcionamento</h2>
     <div class="big">Segunda: 13h – 17h<br>Terça a sexta: 8h – 17h<br>Sábado: 8h – 12h</div>
     <p>Domingo: fechado · R. 3, Quadra C, Lote 09 — Goiânia/GO</p>
   </div>
 
   <section>
-    <h2>Faça sua encomenda</h2>
-    <p class="sub">R. 3, Quadra C, Lote 09 — Goiânia, GO, 74405-090. Chame no WhatsApp ou acompanhe as novidades no Instagram.</p>
-    <div style="text-align:center">
+    <div class="eyebrow rv">06</div>
+    <h2 class="rv">Faça sua encomenda</h2>
+    <p class="sub rv">R. 3, Quadra C, Lote 09 — Goiânia, GO, 74405-090. Chame no WhatsApp ou acompanhe as novidades no Instagram.</p>
+    <div class="contact-actions rv">
       <a class="btn wa" href="https://wa.me/5562996295796">WhatsApp (62) 99629-5796</a>
       <a class="btn" href="https://www.instagram.com/cristhianefestas">Instagram</a>
     </div>
@@ -174,5 +265,26 @@
 </footer>
 
 <div class="sticky"><a href="https://wa.me/5562996295796">Pedir pelo WhatsApp</a></div>
+
+<script>
+(function(){
+  var header=document.getElementById('site-header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>10);}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  var items=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>

@@ -5,59 +5,101 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galery Cake's — Iztapalapa, CDMX | Pasteles de diseño y personalizados</title>
 <meta name="description" content="Galery Cake's, Iztapalapa, CDMX. 18 años de experiencia en pasteles de diseño, temáticos y personalizados, postres, entremets y mesas de postres. Pedidos por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{--paper:#f4faf8;--ink:#22302c;--mut:#61726c;--teal:#0e7a72;--teal2:#0a5c56;--pink:#e58aa5;--mint:#cfe8dd;--line:#d7e8e1;--card:#ffffff;--wa:#1faa55}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-  header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:0 auto;gap:12px}
-  .brand{font-family:Georgia,serif;font-size:23px;color:var(--teal2)}
-  .brand span{color:var(--pink)}
-  .pill{font-size:12.5px;font-weight:700;color:var(--teal2);background:var(--mint);padding:7px 13px;border-radius:999px;white-space:nowrap}
-  .hero{max-width:1020px;margin:0 auto;padding:26px 20px 10px;text-align:center}
-  .badge{display:inline-block;background:var(--teal);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
-  .hero h1{font-family:Georgia,serif;font-weight:normal;font-size:40px;line-height:1.14;margin:20px auto 14px;max-width:640px}
-  .hero p{color:var(--mut);max-width:560px;margin:0 auto 26px;font-size:16.5px}
-  .btn{display:inline-block;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px}
-  .btn.wa{background:var(--wa)}
-  .btn.teal{background:var(--teal)}
-  .hero-photo{max-width:1020px;margin:16px auto 0;padding:0 20px}
-  .hero-photo img{width:100%;border-radius:18px;display:block}
-  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
-  section{padding:48px 0 4px}
-  h2{font-family:Georgia,serif;font-weight:normal;font-size:27px;text-align:center;margin-bottom:8px}
-  .sub{text-align:center;color:var(--mut);font-size:15px;max-width:560px;margin:0 auto 30px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
-  .card .ic{font-size:28px;margin-bottom:10px}
-  .card h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;margin-bottom:7px}
-  .card p{font-size:14.5px;color:var(--mut)}
-  .spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-  .spec .scard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
-  .spec h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;color:var(--teal2);margin-bottom:6px}
-  .spec p{font-size:14.5px;color:var(--mut)}
-  .promo{background:var(--teal2);color:#fff;border-radius:18px;padding:36px 26px;text-align:center;margin:48px 0 8px}
-  .promo h2{color:#fff}
-  .promo .big{font-family:Georgia,serif;font-size:32px;margin:10px 0 8px}
-  .promo p{color:#bfe0d8;font-size:15px;max-width:520px;margin:0 auto}
-  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
-  .strip figure{margin:0}
-  .strip img{width:100%;height:190px;object-fit:cover;border-radius:14px;display:block}
-  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
-  .hours{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:38px 26px;text-align:center;margin:48px 0 8px}
-  .hours .big{font-family:Georgia,serif;font-size:32px;margin:10px 0 6px;color:var(--teal2)}
-  .hours p{color:var(--mut);font-size:15px}
-  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:14px auto 0}
-  footer{padding:26px 20px 92px;text-align:center;color:var(--mut);font-size:13px}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--pink);color:var(--ink)}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  header{position:sticky;top:0;z-index:20;background:rgba(244,250,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:padding .3s ease,box-shadow .3s ease,background .3s ease,border-color .3s ease}
+  header.scrolled{background:var(--paper);border-bottom-color:var(--line);box-shadow:0 10px 30px rgba(34,48,44,.08)}
+  .header-in{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto;gap:12px;transition:padding .3s ease}
+  header.scrolled .header-in{padding-top:11px;padding-bottom:11px}
+  .brand{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(22px,3vw,26px);letter-spacing:-.01em;color:var(--teal2);line-height:1.1}
+  .brand span{color:var(--pink);font-style:italic}
+  .pill{font-size:12.5px;font-weight:700;color:var(--teal2);background:var(--mint);padding:8px 14px;border-radius:999px;white-space:nowrap;min-height:36px;display:inline-flex;align-items:center}
+  /* HERO */
+  .hero{max-width:1120px;margin:0 auto;padding:clamp(40px,6vw,64px) 20px 10px;text-align:center}
+  .badge{display:inline-flex;align-items:center;min-height:36px;background:var(--teal);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.6px;padding:8px 16px;border-radius:999px;text-transform:uppercase;box-shadow:0 8px 20px rgba(14,122,114,.22)}
+  .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.02em;font-size:clamp(38px,6.4vw,58px);line-height:1.06;margin:22px auto 16px;max-width:700px;text-wrap:balance}
+  .hero h1 em{font-style:italic;color:var(--teal2)}
+  .hero p{color:var(--mut);max-width:580px;margin:0 auto 28px;font-size:clamp(15.5px,2vw,17px);line-height:1.7}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.wa{background:var(--wa);box-shadow:0 10px 24px rgba(31,170,85,.26)}
+  .btn.wa:hover{box-shadow:0 16px 32px rgba(31,170,85,.32)}
+  .btn.teal{background:var(--teal);box-shadow:0 10px 24px rgba(14,122,114,.24)}
+  .btn.teal:hover{box-shadow:0 16px 32px rgba(14,122,114,.30)}
+  .hero-photo{max-width:1120px;margin:26px auto 0;padding:0 20px}
+  .hero-frame{background:linear-gradient(160deg,var(--mint),#eaf6f1 55%,var(--paper));border:1px solid var(--line);border-radius:22px;padding:clamp(14px,3vw,28px);box-shadow:0 20px 48px rgba(34,48,44,.10)}
+  .hero-frame img{width:100%;height:auto;max-height:560px;object-fit:contain;border-radius:14px;display:block;background:#fff;box-shadow:0 6px 22px rgba(34,48,44,.08)}
+  /* LAYOUT */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:clamp(64px,10vw,110px) 0 4px}
+  .eyebrow{text-align:center;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:13px;letter-spacing:.35em;color:var(--teal);margin-bottom:14px;text-indent:.35em}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.015em;font-size:clamp(28px,4.4vw,38px);line-height:1.12;text-align:center;margin-bottom:10px}
+  h2 em{font-style:italic;color:var(--teal2)}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;line-height:1.7;max-width:580px;margin:0 auto 34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 24px 28px;text-align:center;box-shadow:0 2px 10px rgba(34,48,44,.04);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(34,48,44,.10)}
+  .card .ic{font-size:30px;margin-bottom:12px;line-height:1}
+  .card h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19.5px;margin-bottom:8px;line-height:1.25}
+  .card p{font-size:14.5px;line-height:1.65;color:var(--mut)}
+  .spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .spec .scard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:0 2px 10px rgba(34,48,44,.04);transition:transform .3s ease,box-shadow .3s ease}
+  .spec .scard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(34,48,44,.10)}
+  .spec h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19.5px;color:var(--teal2);margin-bottom:7px;line-height:1.25}
+  .spec p{font-size:14.5px;line-height:1.65;color:var(--mut)}
+  .promo{background:var(--teal2);color:#fff;border-radius:22px;padding:clamp(36px,6vw,52px) clamp(22px,5vw,40px);text-align:center;margin:clamp(56px,8vw,84px) 0 8px;box-shadow:0 22px 48px rgba(10,92,86,.26);position:relative;overflow:hidden}
+  .promo::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 260px at 50% -60px,rgba(229,138,165,.28),transparent 70%);pointer-events:none}
+  .promo h2{color:#fff;position:relative}
+  .promo .big{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.015em;font-size:clamp(32px,5.4vw,46px);line-height:1.1;margin:12px 0 10px;position:relative}
+  .promo .big em{font-style:italic}
+  .promo p{color:#bfe0d8;font-size:15.5px;line-height:1.7;max-width:540px;margin:0 auto;position:relative}
+  .promo .fineprint{position:relative}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;align-items:start}
+  .strip figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:0 2px 10px rgba(34,48,44,.04)}
+  .strip img{width:100%;aspect-ratio:16/10;height:auto;object-fit:cover;border-radius:10px;display:block}
+  .strip figure:first-child img{object-fit:contain;background:#fff}
+  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:10px;padding-bottom:2px}
+  .hours{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(36px,6vw,50px) 26px;text-align:center;margin:clamp(56px,8vw,84px) 0 8px;box-shadow:0 2px 10px rgba(34,48,44,.04)}
+  .hours .big{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(32px,5vw,42px);margin:10px 0 8px;color:var(--teal2);letter-spacing:-.01em}
+  .hours p{color:var(--mut);font-size:15.5px;line-height:1.7;max-width:640px;margin:0 auto}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:14px auto 0;line-height:1.6}
+  .order-actions{text-align:center;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .order-actions .btn{min-height:52px}
+  footer{border-top:1px solid var(--line);margin-top:clamp(56px,8vw,84px);padding:30px 20px 100px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7}
   footer a{color:var(--teal2)}
-  .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;z-index:20}
-  .sticky a{display:block;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px}
-  @media(min-width:760px){.hero h1{font-size:52px}}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;z-index:25;box-shadow:0 -8px 28px rgba(34,48,44,.10)}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:50px;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:transform .25s ease,box-shadow .25s ease}
+  .sticky a:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(31,170,85,.30)}
+  /* REVEAL */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+    .rv{opacity:1 !important;transform:none !important}
+  }
+  @media(max-width:520px){
+    .pill{font-size:11.5px;padding:7px 11px;white-space:normal;text-align:center}
+    .header-in{padding-left:16px;padding-right:16px}
+    .order-actions .btn{width:100%}
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="brand">Galery <span>Cake's</span></div>
-  <div class="pill">Abierto todos los días · 8:00–21:00</div>
+<header id="site-header">
+  <div class="header-in">
+    <div class="brand">Galery <span>Cake's</span></div>
+    <div class="pill">Abierto todos los días · 8:00–21:00</div>
+  </div>
 </header>
 
 <div class="hero">
@@ -67,34 +109,36 @@
   <a class="btn wa" href="https://wa.me/525582088841">Cotiza tu pastel por WhatsApp</a>
 </div>
 
-<div class="hero-photo"><img src="img/banner.jpg" alt="Galery Cake's — Pastelería de prestigio"></div>
+<div class="hero-photo rv"><div class="hero-frame"><img src="img/banner.jpg" alt="Galery Cake's — Pastelería de prestigio"></div></div>
 
 <div class="wrap">
   <section>
-    <h2>Lo que hacemos</h2>
-    <p class="sub">Repostería estética y artesanal, con presentación impecable para tus fotos y recuerdos.</p>
+    <div class="eyebrow rv">01</div>
+    <h2 class="rv">Lo que hacemos</h2>
+    <p class="sub rv">Repostería estética y artesanal, con presentación impecable para tus fotos y recuerdos.</p>
     <div class="grid">
-      <div class="card"><div class="ic">🎂</div><h3>Pasteles personalizados</h3><p>¿Imaginaste tu pastel perfecto? Dinos cómo es y lo hacemos realidad: un concepto único, un personaje favorito o una frase épica para tu celebración.</p></div>
-      <div class="card"><div class="ic">🍰</div><h3>Postres y entremets</h3><p>Nos especializamos en postres y entremets para consentirte, compartir y endulzar tu día.</p></div>
-      <div class="card"><div class="ic">✨</div><h3>Mesas de postres</h3><p>Mesas de postres para celebrar a lo grande, con diseños personalizados para cada ocasión.</p></div>
+      <div class="card rv"><div class="ic">🎂</div><h3>Pasteles personalizados</h3><p>¿Imaginaste tu pastel perfecto? Dinos cómo es y lo hacemos realidad: un concepto único, un personaje favorito o una frase épica para tu celebración.</p></div>
+      <div class="card rv"><div class="ic">🍰</div><h3>Postres y entremets</h3><p>Nos especializamos en postres y entremets para consentirte, compartir y endulzar tu día.</p></div>
+      <div class="card rv"><div class="ic">✨</div><h3>Mesas de postres</h3><p>Mesas de postres para celebrar a lo grande, con diseños personalizados para cada ocasión.</p></div>
     </div>
   </section>
 
   <section>
-    <h2>Especialidades de la casa</h2>
-    <p class="sub">Algunas de las creaciones que publicamos en nuestra página. Pregunta por disponibilidad y cotiza el tuyo por WhatsApp.</p>
+    <div class="eyebrow rv">02</div>
+    <h2 class="rv">Especialidades de la casa</h2>
+    <p class="sub rv">Algunas de las creaciones que publicamos en nuestra página. Pregunta por disponibilidad y cotiza el tuyo por WhatsApp.</p>
     <div class="spec">
-      <div class="scard"><h3>Pastel de Cajeta</h3><p>Suave, cremosito, con abundante cajeta, nuez y fresas frescas… una delicia que conquista desde la primera rebanada.</p></div>
-      <div class="scard"><h3>Pastel Red Velvet</h3><p>Con su hermoso color rojo, una cobertura cremosa y delicadas rosas de betún, decorado con frutos rojos.</p></div>
-      <div class="scard"><h3>Pastel de Baileys y Tres Leches</h3><p>Esponjoso pan súper humedecido en 3 leches, relleno de crema de Baileys con trocitos de nuez y cereal confitado.</p></div>
-      <div class="scard"><h3>Pastel de Trufa de Chocolate</h3><p>Suave cobertura de chocolate, coronado con trufas espolvoreadas con fino cacao y crocantes láminas de chocolate puro.</p></div>
-      <div class="scard"><h3>Gelatina Mosaico</h3><p>Una explosión de colores y sabores: trocitos de gelatina de diferentes sabores con el toque fresco de frutos rojos.</p></div>
-      <div class="scard"><h3>Gelatina de Piñón con Queso</h3><p>Receta completamente artesanal, elaborada con piñón natural y una textura ultra cremosa. ¡Rinde para 15 personas!</p></div>
-      <div class="scard"><h3>Pasteles temáticos</h3><p>Como nuestro pastel futbolero, con una cancha llena de detalles, balones y hasta su propia portería. Perfecto para sorprender a ese pequeño crack.</p></div>
+      <div class="scard rv"><h3>Pastel de Cajeta</h3><p>Suave, cremosito, con abundante cajeta, nuez y fresas frescas… una delicia que conquista desde la primera rebanada.</p></div>
+      <div class="scard rv"><h3>Pastel Red Velvet</h3><p>Con su hermoso color rojo, una cobertura cremosa y delicadas rosas de betún, decorado con frutos rojos.</p></div>
+      <div class="scard rv"><h3>Pastel de Baileys y Tres Leches</h3><p>Esponjoso pan súper humedecido en 3 leches, relleno de crema de Baileys con trocitos de nuez y cereal confitado.</p></div>
+      <div class="scard rv"><h3>Pastel de Trufa de Chocolate</h3><p>Suave cobertura de chocolate, coronado con trufas espolvoreadas con fino cacao y crocantes láminas de chocolate puro.</p></div>
+      <div class="scard rv"><h3>Gelatina Mosaico</h3><p>Una explosión de colores y sabores: trocitos de gelatina de diferentes sabores con el toque fresco de frutos rojos.</p></div>
+      <div class="scard rv"><h3>Gelatina de Piñón con Queso</h3><p>Receta completamente artesanal, elaborada con piñón natural y una textura ultra cremosa. ¡Rinde para 15 personas!</p></div>
+      <div class="scard rv"><h3>Pasteles temáticos</h3><p>Como nuestro pastel futbolero, con una cancha llena de detalles, balones y hasta su propia portería. Perfecto para sorprender a ese pequeño crack.</p></div>
     </div>
   </section>
 
-  <div class="promo">
+  <div class="promo rv">
     <h2>Miércoles de rebanadas</h2>
     <div class="big">Tres leches 3×2 por $100</div>
     <p>Disfruta nuestras rebanadas de pastel de tres leches con la promoción de los miércoles. Corre porque vuelan — promoción sujeta a disponibilidad.</p>
@@ -102,24 +146,26 @@
   </div>
 
   <section style="padding-top:36px">
-    <h2>Nuestra marca y nuestro barrio</h2>
-    <p class="sub">Galery Cake's, donde el sabor nos caracteriza — en Iztapalapa, Ciudad de México.</p>
+    <div class="eyebrow rv">03</div>
+    <h2 class="rv">Nuestra marca y nuestro barrio</h2>
+    <p class="sub rv">Galery Cake's, donde el sabor nos caracteriza — en Iztapalapa, Ciudad de México.</p>
     <div class="strip">
-      <figure><img src="img/logo.jpg" alt="Logotipo de Galery Cake's"><figcaption>Galery Cake's</figcaption></figure>
-      <figure><img src="img/iztapalapa.jpg" alt="Vista aérea del Cerro de la Estrella, Iztapalapa"><figcaption>Cerro de la Estrella, Iztapalapa</figcaption></figure>
+      <figure class="rv"><img src="img/logo.jpg" alt="Logotipo de Galery Cake's"><figcaption>Galery Cake's</figcaption></figure>
+      <figure class="rv"><img src="img/iztapalapa.jpg" alt="Vista aérea del Cerro de la Estrella, Iztapalapa"><figcaption>Cerro de la Estrella, Iztapalapa</figcaption></figure>
     </div>
   </section>
 
-  <div class="hours">
+  <div class="hours rv">
     <h2>Horario</h2>
     <div class="big">8:00 – 21:00</div>
     <p>Lunes a domingo · Av. Pípila esq. Juan de la Barrera, Local 3, Col. Lomas de Zaragoza, Iztapalapa, CDMX</p>
   </div>
 
   <section>
-    <h2>Haz tu pedido</h2>
-    <p class="sub">¿Ya tienes en mente el diseño para tu próxima celebración? Contáctanos y cotiza tu pastel personalizado.</p>
-    <div style="text-align:center">
+    <div class="eyebrow rv">04</div>
+    <h2 class="rv">Haz tu pedido</h2>
+    <p class="sub rv">¿Ya tienes en mente el diseño para tu próxima celebración? Contáctanos y cotiza tu pastel personalizado.</p>
+    <div class="order-actions rv">
       <a class="btn wa" href="https://wa.me/525582088841">WhatsApp +52 55 8208 8841</a>
       <a class="btn teal" href="https://www.facebook.com/108698083866685">Facebook</a>
     </div>
@@ -132,5 +178,22 @@
 </footer>
 
 <div class="sticky"><a href="https://wa.me/525582088841">Cotizar por WhatsApp</a></div>
+<script>
+(function(){
+  var header=document.getElementById('site-header');
+  function onScroll(){ if(window.scrollY>12){header.classList.add('scrolled');}else{header.classList.remove('scrolled');} }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>

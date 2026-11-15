@@ -5,101 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>McNeills Pub — Capel Street, Dublin | Est. 1834</title>
 <meta name="description" content="McNeills of Capel Street, Dublin. A traditional Irish pub established in 1834, home to live traditional music sessions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--green:#14342a;--green2:#1d4a3a;--cream:#f4ecd9;--cream2:#efe3c8;--gold:#c8a24a;--ink:#22271f;--mut:#5f6a5c}
+  :root{
+    --green:#14342a;--green2:#1d4a3a;--cream:#f4ecd9;--cream2:#efe3c8;--gold:#c8a24a;--ink:#22271f;--mut:#5f6a5c;
+    --serif:"Fraunces",Georgia,'Times New Roman',serif;
+    --sans:"Inter",-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --shadow:0 18px 40px rgba(20,52,42,.16);
+    --radius:18px;
+  }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--ink);line-height:1.6}
-  .sans{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
-  header{background:var(--green);color:var(--cream);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-  .brand{font-size:20px;letter-spacing:.5px}
-  .brand span{color:var(--gold)}
-  .call{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;color:var(--cream);text-decoration:none;border:1px solid var(--gold);padding:7px 13px;border-radius:999px}
-  .hero{background:linear-gradient(165deg,var(--green) 55%,var(--green2));color:var(--cream);text-align:center;padding:70px 20px 60px}
-  .est{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;letter-spacing:3px;font-size:11.5px;padding:7px 16px;border-radius:999px;text-transform:uppercase}
-  .hero h1{font-size:46px;font-weight:normal;line-height:1.1;margin:22px auto 14px;max-width:600px}
-  .hero p{max-width:520px;margin:0 auto;color:var(--cream2);font-size:16.5px}
-  .rule{width:64px;height:2px;background:var(--gold);margin:26px auto 0}
-  .hero-photo{display:block;width:min(680px,92%);margin:30px auto 0;border:2px solid var(--gold);border-radius:10px}
-  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
-  .strip figure{margin:0}
-  .strip img{width:100%;height:200px;object-fit:cover;border-radius:8px;display:block}
-  .strip figcaption{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
-  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
-  section{padding:54px 0}
-  h2{font-size:29px;font-weight:normal;text-align:center;margin-bottom:10px}
-  .sub{text-align:center;color:var(--mut);max-width:560px;margin:0 auto 34px;font-size:15.5px}
-  .story{display:grid;grid-template-columns:1fr;gap:22px}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden;overflow-x:clip}
+  body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--gold);color:var(--green)}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(20,52,42,.96);color:var(--cream);transition:background .3s ease,box-shadow .3s ease,padding .3s ease;backdrop-filter:blur(10px)}
+  .hdr-inner{max-width:1120px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:padding .3s ease}
+  header.scrolled{background:var(--green);box-shadow:0 10px 30px rgba(20,52,42,.28)}
+  header.scrolled .hdr-inner{padding-top:11px;padding-bottom:11px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:clamp(19px,2.4vw,23px);letter-spacing:.4px;line-height:1.15}
+  .brand span{color:var(--gold);font-weight:500}
+  .call{font-family:var(--sans);font-size:13.5px;font-weight:600;color:var(--cream);text-decoration:none;border:1px solid var(--gold);padding:10px 18px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease}
+  .call:hover{transform:translateY(-2px);background:var(--gold);color:var(--green);box-shadow:0 10px 22px rgba(0,0,0,.22)}
+
+  /* Hero */
+  .hero{position:relative;isolation:isolate;color:var(--cream);text-align:center;overflow:hidden;background:var(--green)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;z-index:-2}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,52,42,.82) 0%,rgba(20,52,42,.68) 42%,rgba(29,74,58,.78) 78%,rgba(20,52,42,.94) 100%)}
+  .hero-inner{max-width:1120px;margin:0 auto;padding:clamp(84px,13vw,148px) 20px clamp(88px,12vw,140px)}
+  .est{display:inline-block;border:1px solid var(--gold);color:var(--gold);background:rgba(20,52,42,.45);font-family:var(--sans);font-weight:600;letter-spacing:3px;font-size:11.5px;padding:9px 18px;border-radius:999px;text-transform:uppercase;min-height:36px}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(42px,7.2vw,76px);line-height:1.04;letter-spacing:-.01em;margin:26px auto 18px;max-width:760px;text-wrap:balance}
+  .hero p{max-width:560px;margin:0 auto;color:var(--cream2);font-size:clamp(16px,2vw,18.5px);line-height:1.65}
+  .rule{width:72px;height:2px;background:var(--gold);margin:30px auto 0;border-radius:999px}
+
+  /* Layout / sections */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:clamp(64px,10vw,110px) 0}
+  section.tight{padding-top:0}
+  .eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.35em;color:var(--gold);text-align:center;margin-bottom:14px}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.4vw,42px);line-height:1.12;letter-spacing:-.01em;text-align:center;margin-bottom:12px;color:var(--green);text-wrap:balance}
+  .sub{text-align:center;color:var(--mut);max-width:580px;margin:0 auto 38px;font-size:clamp(15px,1.8vw,16.5px)}
+  .divider{border:0;border-top:1px solid var(--cream2);max-width:1120px;margin:0 auto}
+
+  /* Story cards */
+  .story{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:720px){.story{grid-template-columns:1fr 1fr}}
-  .card{background:#fffdf6;border:1px solid var(--cream2);border-radius:8px;padding:28px 24px;box-shadow:0 2px 10px rgba(20,52,42,.06)}
-  .card .yr{font-size:30px;color:var(--green);margin-bottom:6px}
-  .card h3{font-size:19px;font-weight:normal;margin-bottom:8px;color:var(--green)}
-  .card p{font-size:15px;color:#3d443a}
-  .sessions{background:var(--green);color:var(--cream);border-radius:10px;padding:46px 28px;text-align:center}
+  .card{background:#fffdf6;border:1px solid var(--cream2);border-radius:var(--radius);padding:clamp(28px,4vw,40px);box-shadow:0 4px 18px rgba(20,52,42,.06);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .card .yr{font-family:var(--serif);font-weight:600;font-size:clamp(42px,5.5vw,56px);line-height:1;color:var(--green);margin-bottom:14px}
+  .card .yr::after{content:"";display:block;width:44px;height:2px;background:var(--gold);margin-top:16px;border-radius:999px}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.4vw,23px);margin-bottom:9px;color:var(--green);line-height:1.25}
+  .card p{font-size:15.5px;color:#3d443a;line-height:1.7}
+
+  /* Photo strip */
+  .strip{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:560px){.strip{grid-template-columns:1fr 1fr}}
+  @media(min-width:960px){.strip{grid-template-columns:repeat(4,1fr)}}
+  .strip figure{margin:0}
+  .strip img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block;box-shadow:0 10px 26px rgba(20,52,42,.14);transition:transform .3s ease,box-shadow .3s ease}
+  .strip figure:hover img{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .strip figcaption{font-family:var(--sans);font-size:13px;color:var(--mut);text-align:center;margin-top:10px;line-height:1.5}
+
+  /* Sessions */
+  .sessions{background:linear-gradient(165deg,var(--green) 0%,var(--green2) 100%);color:var(--cream);border-radius:22px;padding:clamp(44px,7vw,68px) clamp(24px,5vw,56px);text-align:center;box-shadow:var(--shadow);border:1px solid rgba(200,162,74,.35)}
+  .sessions .eyebrow{color:var(--gold)}
   .sessions h2{color:var(--cream)}
-  .sessions p{color:var(--cream2);max-width:540px;margin:0 auto;font-size:16px}
-  .sessions .notes{font-size:30px;letter-spacing:10px;color:var(--gold);margin-bottom:16px}
+  .sessions p{color:var(--cream2);max-width:560px;margin:0 auto;font-size:clamp(15.5px,1.9vw,17px);line-height:1.7}
+  .sessions .notes{font-size:32px;letter-spacing:12px;color:var(--gold);margin-bottom:18px;line-height:1}
+
+  /* Visit / buttons */
   .visit{text-align:center}
-  .visit .addr{font-size:19px;margin-bottom:6px}
-  .visit p{color:var(--mut);font-size:15px}
-  .btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-  .btn{display:inline-block;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;text-decoration:none;padding:14px 26px;border-radius:999px;font-size:15px}
+  .visit .addr{font-family:var(--serif);font-size:clamp(20px,2.6vw,24px);color:var(--green);margin-bottom:8px;line-height:1.35}
+  .visit p{color:var(--mut);font-size:15.5px}
+  .btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;font-family:var(--sans);font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15px;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(20,52,42,.22)}
   .btn.call{background:var(--green);color:var(--cream)}
   .btn.fb{background:transparent;color:var(--green);border:1.5px solid var(--green)}
-  footer{padding:28px 20px 50px;text-align:center;color:var(--mut);font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px}
-  @media(min-width:760px){.hero h1{font-size:60px}}
+  .btn.fb:hover{background:var(--green);color:var(--cream)}
+  .btn.gold{background:var(--gold);color:#241a00}
+  .btn.gold:hover{box-shadow:0 14px 28px rgba(0,0,0,.28)}
+
+  footer{border-top:1px solid var(--cream2);padding:34px 20px 54px;text-align:center;color:var(--mut);font-family:var(--sans);font-size:13px;line-height:1.6;max-width:1120px;margin:0 auto}
+
+  /* Scroll reveal */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+    .rv{opacity:1!important;transform:none!important}
+  }
 </style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-<header>
-  <div class="brand">McNEILLS <span>of Capel Street</span></div>
-  <a class="call" href="tel:+35318728713">Call the pub</a>
+<header id="hdr">
+  <div class="hdr-inner">
+    <div class="brand">McNEILLS <span>of Capel Street</span></div>
+    <a class="call" href="tel:+35318728713">Call the pub</a>
+  </div>
 </header>
 
 <div class="hero">
-  <div class="est">Established 1834</div>
-  <h1>A Dublin institution, pouring since 1834</h1>
-  <p>McNeills of Capel Street — a traditional Irish pub in the heart of Dublin, and home to live traditional music sessions.</p>
-  <div class="rule"></div>
-  <img class="hero-photo" src="img/storefront-night.jpg" alt="The teal J. McNeill storefront on Capel Street at night, staff standing at the door">
+  <img class="hero-img" src="img/storefront-night.jpg" alt="The teal J. McNeill storefront on Capel Street at night, staff standing at the door">
+  <div class="hero-inner rv">
+    <div class="est">Established 1834</div>
+    <h1>A Dublin institution, pouring since 1834</h1>
+    <p>McNeills of Capel Street — a traditional Irish pub in the heart of Dublin, and home to live traditional music sessions.</p>
+    <div class="rule"></div>
+  </div>
 </div>
 
 <div class="wrap">
   <section>
-    <h2>From music shop to music pub</h2>
-    <p class="sub">Few Dublin pubs carry a story like this one.</p>
+    <div class="eyebrow rv">01</div>
+    <h2 class="rv">From music shop to music pub</h2>
+    <p class="sub rv">Few Dublin pubs carry a story like this one.</p>
     <div class="story">
-      <div class="card"><div class="yr">1834</div><h3>It began with instruments</h3><p>McNeills started life on Capel Street as a music-instrument shop — selling the very instruments that would one day fill the pub with sound.</p></div>
-      <div class="card"><div class="yr">Today</div><h3>The music never left</h3><p>The shop became a public house, but the tradition stayed. McNeills is known for its live traditional sessions — musicians, tunes, and a proper Dublin welcome.</p></div>
+      <div class="card rv"><div class="yr">1834</div><h3>It began with instruments</h3><p>McNeills started life on Capel Street as a music-instrument shop — selling the very instruments that would one day fill the pub with sound.</p></div>
+      <div class="card rv"><div class="yr">Today</div><h3>The music never left</h3><p>The shop became a public house, but the tradition stayed. McNeills is known for its live traditional sessions — musicians, tunes, and a proper Dublin welcome.</p></div>
     </div>
   </section>
 
-  <section style="padding-top:0">
-    <h2>The pub in pictures</h2>
-    <p class="sub">McNeills as it is — the shopfront, the bar, and the fire.</p>
+  <hr class="divider">
+
+  <section>
+    <div class="eyebrow rv">02</div>
+    <h2 class="rv">The pub in pictures</h2>
+    <p class="sub rv">McNeills as it is — the shopfront, the bar, and the fire.</p>
     <div class="strip">
-      <figure><img src="img/storefront-pint.jpg" alt="A pint of Guinness on a table in front of McNeills' teal storefront"><figcaption>The shopfront on Capel Street</figcaption></figure>
-      <figure><img src="img/bar-interior.jpg" alt="Inside the bar at McNeills, a regular in a J. McNeill cap facing the taps"><figcaption>Inside at the bar</figcaption></figure>
-      <figure><img src="img/fireplace.jpg" alt="A pint on a table by the open fire inside McNeills"><figcaption>The open fire</figcaption></figure>
-      <figure><img src="img/capel-street.jpg" alt="Capel Street in Dublin city centre"><figcaption>Capel Street — our corner of the city centre</figcaption></figure>
+      <figure class="rv"><img src="img/storefront-pint.jpg" alt="A pint of Guinness on a table in front of McNeills' teal storefront"><figcaption>The shopfront on Capel Street</figcaption></figure>
+      <figure class="rv"><img src="img/bar-interior.jpg" alt="Inside the bar at McNeills, a regular in a J. McNeill cap facing the taps"><figcaption>Inside at the bar</figcaption></figure>
+      <figure class="rv"><img src="img/fireplace.jpg" alt="A pint on a table by the open fire inside McNeills"><figcaption>The open fire</figcaption></figure>
+      <figure class="rv"><img src="img/capel-street.jpg" alt="Capel Street in Dublin city centre"><figcaption>Capel Street — our corner of the city centre</figcaption></figure>
     </div>
   </section>
 
-  <section style="padding-top:0">
-    <div class="sessions">
+  <section class="tight">
+    <div class="sessions rv">
       <div class="notes">♩ ♪ ♩</div>
+      <div class="eyebrow">03</div>
       <h2>Traditional music sessions</h2>
       <p>This is a pub where the music is the point. Settle in for live traditional sessions on Capel Street — the way Dublin pubs have always sounded. Call ahead to ask about tonight's session.</p>
       <div class="btnrow">
-        <a class="btn" style="background:var(--gold);color:#241a00" href="tel:+35318728713">Call +353 1 872 8713</a>
+        <a class="btn gold" href="tel:+35318728713">Call +353 1 872 8713</a>
       </div>
     </div>
   </section>
 
-  <section class="visit" style="padding-top:0">
-    <h2>Find us</h2>
-    <p class="addr">McNeills Pub, Capel Street, Dublin, Ireland</p>
-    <p>Follow the pub on Facebook for session news and what's on.</p>
-    <div class="btnrow">
+  <section class="visit tight">
+    <div class="eyebrow rv">04</div>
+    <h2 class="rv">Find us</h2>
+    <p class="addr rv">McNeills Pub, Capel Street, Dublin, Ireland</p>
+    <p class="rv">Follow the pub on Facebook for session news and what's on.</p>
+    <div class="btnrow rv">
       <a class="btn call" href="tel:+35318728713">Call the pub</a>
       <a class="btn fb" href="https://facebook.com/mcneillspub">McNeills on Facebook</a>
     </div>
@@ -110,5 +177,22 @@
   McNeills Pub · Capel Street, Dublin<br><br>
   Concept preview built by SiteSprint Studio — this is not the live website of McNeills Pub.
 </footer>
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  function onScroll(){ if(hdr){ hdr.classList.toggle('scrolled', window.scrollY>10); } }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  var items=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce || !('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
 </body>
 </html>

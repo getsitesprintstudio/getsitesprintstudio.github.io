@@ -5,103 +5,141 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tom &amp; Tony's Auto &amp; Wrecker Service — Clarksville, TN | Since 2000</title>
 <meta name="description" content="Tom & Tony's Auto & Wrecker Service, 2579 Fort Campbell Blvd, Clarksville TN. Family owned auto repair and towing, serving Clarksville since 2000. Call (931) 431-9494.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#16181d;--steel:#23262e;--red:#c1272d;--red2:#9c1f24;--paper:#f5f4f1;--mut:#5d6068;--line:#e0ded8}
+  :root{--ink:#16181d;--steel:#23262e;--red:#c1272d;--red2:#9c1f24;--paper:#f5f4f1;--mut:#5d6068;--line:#e0ded8;--line-dark:rgba(255,255,255,.14)}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-  .serif{font-family:Georgia,'Times New Roman',serif}
-  .topbar{background:var(--red);color:#fff;text-align:center;font-size:13px;font-weight:700;letter-spacing:.4px;padding:8px 14px}
-  header{background:var(--ink);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-  .brand{font-size:19px;font-weight:800;letter-spacing:.3px;line-height:1.2}
-  .brand small{display:block;font-size:11px;font-weight:600;letter-spacing:2px;color:#b9bcc4;text-transform:uppercase}
-  .call{color:#fff;text-decoration:none;border:1.5px solid var(--red);padding:8px 14px;border-radius:8px;font-size:13.5px;font-weight:700;white-space:nowrap}
-  .hero{background:linear-gradient(160deg,var(--ink),var(--steel) 75%);color:#fff;padding:58px 20px 52px;text-align:center}
-  .hero .since{display:inline-block;border:1px solid #4a4e59;color:#d6d8de;letter-spacing:2.5px;font-size:11px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
-  .hero h1{font-size:38px;line-height:1.14;letter-spacing:-.5px;max-width:620px;margin:18px auto 14px}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--red);color:#fff}
+  img{max-width:100%}
+  a{-webkit-tap-highlight-color:transparent}
+  .topbar{background:var(--red);color:#fff;text-align:center;font-size:13px;font-weight:700;letter-spacing:.4px;padding:9px 14px;position:relative;z-index:30}
+  header{background:var(--ink);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;position:sticky;top:0;z-index:20;transition:padding .3s ease,box-shadow .3s ease,background .3s ease}
+  header.scrolled{padding-top:11px;padding-bottom:11px;box-shadow:0 10px 32px rgba(0,0,0,.38),0 1px 0 rgba(255,255,255,.06)}
+  .header-in{width:100%;max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .brand{font-family:'Archivo',sans-serif;font-size:20px;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+  .brand small{display:block;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.2px;color:#b9bcc4;text-transform:uppercase;margin-top:3px}
+  .call{color:#fff;text-decoration:none;border:1.5px solid var(--red);padding:10px 16px;border-radius:8px;font-size:13.5px;font-weight:700;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;transition:background .25s ease,transform .25s ease,box-shadow .25s ease}
+  .call:hover{background:var(--red);transform:translateY(-1px);box-shadow:0 8px 20px rgba(193,39,45,.35)}
+  /* HERO */
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--ink);isolation:isolate}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;display:block}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(22,24,29,.62) 0%,rgba(22,24,29,.78) 48%,rgba(22,24,29,.94) 100%),linear-gradient(100deg,rgba(22,24,29,.88) 0%,rgba(22,24,29,.35) 62%,rgba(22,24,29,.55) 100%)}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(255,255,255,.14)}
+  .hero-in{max-width:1120px;margin:0 auto;padding:clamp(64px,10vw,104px) 20px clamp(56px,7vw,76px);text-align:center}
+  .hero .since{display:inline-flex;align-items:center;min-height:36px;border:1px solid rgba(255,255,255,.32);background:rgba(22,24,29,.42);backdrop-filter:blur(6px);color:#eceef1;letter-spacing:2.4px;font-size:11px;font-weight:600;padding:8px 16px;border-radius:999px;text-transform:uppercase}
+  .hero h1{font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(40px,7.2vw,68px);line-height:.98;max-width:760px;margin:22px auto 18px;text-wrap:balance}
   .hero h1 em{font-style:normal;color:#ff6b60}
-  .hero p{color:#c4c7cf;max-width:500px;margin:0 auto 28px;font-size:16px}
-  .btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px 32px;border-radius:10px;font-size:17px}
-  .btn:hover{background:var(--red2)}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-  section{padding:50px 0 4px}
-  h2{font-size:26px;letter-spacing:-.4px;text-align:center;margin-bottom:8px}
-  .sub{text-align:center;color:var(--mut);font-size:15px;max-width:520px;margin:0 auto 30px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-  .card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:12px;padding:26px 22px}
-  .card .ic{font-size:27px;margin-bottom:10px}
-  .card h3{font-size:18px;margin-bottom:7px}
-  .card p{font-size:14.5px;color:var(--mut)}
-  .heritage{background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 28px;display:grid;grid-template-columns:1fr;gap:18px;margin:48px 0 8px}
-  @media(min-width:720px){.heritage{grid-template-columns:auto 1fr;align-items:center}}
-  .heritage .big{font-family:Georgia,serif;font-size:52px;color:var(--red);line-height:1;text-align:center}
-  .heritage .big small{display:block;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-top:6px}
-  .heritage h3{font-size:20px;margin-bottom:6px}
-  .heritage p{color:var(--mut);font-size:15px}
+  .hero p{color:#d3d6dd;max-width:540px;margin:0 auto 30px;font-size:clamp(15.5px,2vw,17.5px);line-height:1.65}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--red);color:#fff;font-weight:700;text-decoration:none;padding:15px 32px;border-radius:10px;font-size:16.5px;letter-spacing:.01em;box-shadow:0 10px 26px rgba(193,39,45,.32);transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+  .btn:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 16px 34px rgba(193,39,45,.38)}
+  .btn:active{transform:translateY(0)}
+  .hero-cap-bar{border-top:1px solid rgba(255,255,255,.14);background:rgba(22,24,29,.55);backdrop-filter:blur(6px)}
+  .hero-cap{max-width:1120px;margin:0 auto;text-align:center;font-size:12.5px;color:#c9ccd3;padding:11px 20px;letter-spacing:.01em}
+  /* LAYOUT */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:clamp(64px,10vw,110px) 0 4px}
+  .eyebrow{text-align:center;font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;letter-spacing:.35em;color:var(--red);margin-bottom:14px;text-indent:.35em}
+  h2{font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:-.03em;font-size:clamp(28px,4.4vw,38px);line-height:1.05;text-align:center;margin-bottom:10px}
+  .sub{text-align:center;color:var(--mut);font-size:15.5px;line-height:1.65;max-width:540px;margin:0 auto 34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:14px;padding:30px 24px 28px;box-shadow:0 2px 10px rgba(22,24,29,.04);transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(22,24,29,.10)}
+  .card .ic{font-size:28px;margin-bottom:12px;line-height:1}
+  .card h3{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.015em;font-size:18.5px;margin-bottom:8px}
+  .card p{font-size:14.5px;line-height:1.65;color:var(--mut)}
+  .heritage{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(32px,5vw,48px);display:grid;grid-template-columns:1fr;gap:22px;margin:clamp(56px,8vw,84px) 0 8px;box-shadow:0 2px 10px rgba(22,24,29,.04)}
+  @media(min-width:720px){.heritage{grid-template-columns:auto 1fr;align-items:center;gap:44px}}
+  .heritage .big{font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:-.05em;font-size:clamp(76px,12vw,118px);color:var(--red);line-height:.9;text-align:center}
+  .heritage .big small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:2.2px;color:var(--mut);text-transform:uppercase;margin-top:10px}
+  .heritage h3{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.02em;font-size:clamp(20px,3vw,24px);margin-bottom:8px;line-height:1.2}
+  .heritage p{color:var(--mut);font-size:15.5px;line-height:1.7}
+  @media(min-width:720px){.heritage .txt{border-left:1px solid var(--line);padding-left:44px}}
   .visit{text-align:center;padding-bottom:10px}
-  .hero-photo{display:block;width:min(900px,94%);margin:26px auto 0;border-radius:14px}
-  .hero-cap{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;padding:0 20px}
-  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
   .strip figure{margin:0}
-  .strip img{width:100%;height:190px;object-fit:cover;border-radius:12px;display:block}
-  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
-  .visit .addr{font-size:18px;font-weight:700}
-  .visit p{color:var(--mut);font-size:15px;margin-top:4px}
-  footer{padding:26px 20px 96px;text-align:center;color:var(--mut);font-size:13px}
-  .sticky{position:fixed;left:0;right:0;bottom:0;background:var(--ink);padding:10px 14px;z-index:20}
-  .sticky a{display:block;text-align:center;background:var(--red);color:#fff;padding:15px;border-radius:10px;text-decoration:none;font-weight:800;font-size:16.5px}
-  @media(min-width:760px){.hero h1{font-size:50px}}
+  .strip img{width:100%;aspect-ratio:16/10;height:auto;object-fit:cover;border-radius:14px;display:block;box-shadow:0 10px 28px rgba(22,24,29,.12)}
+  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:9px}
+  .visit .addr{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.015em;font-size:clamp(18px,3vw,21px)}
+  .visit p{color:var(--mut);font-size:15.5px;margin-top:6px}
+  footer{border-top:1px solid var(--line);margin-top:clamp(56px,8vw,84px);padding:30px 20px 104px;text-align:center;color:var(--mut);font-size:13px;line-height:1.7}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:var(--ink);border-top:1px solid rgba(255,255,255,.10);padding:10px 14px;z-index:25;box-shadow:0 -8px 28px rgba(0,0,0,.22)}
+  .sticky a{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;background:var(--red);color:#fff;padding:14px;border-radius:10px;text-decoration:none;font-weight:800;font-size:16.5px;transition:background .25s ease,transform .25s ease}
+  .sticky a:hover{background:var(--red2);transform:translateY(-1px)}
+  /* REVEAL */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+    .rv{opacity:1 !important;transform:none !important}
+  }
+  @media(max-width:520px){
+    .brand{font-size:18px}
+    .call{padding:9px 12px;font-size:13px}
+    .hero-in{padding-left:18px;padding-right:18px}
+  }
 </style>
 </head>
 <body>
 <div class="topbar">Stranded? Call the wrecker — (931) 431-9494</div>
-<header>
-  <div class="brand">TOM &amp; TONY'S<small>Auto &amp; Wrecker Service</small></div>
-  <a class="call" href="tel:+19314319494">(931) 431-9494</a>
+<header id="site-header">
+  <div class="header-in">
+    <div class="brand">TOM &amp; TONY'S<small>Auto &amp; Wrecker Service</small></div>
+    <a class="call" href="tel:+19314319494">(931) 431-9494</a>
+  </div>
 </header>
 
 <div class="hero">
-  <div class="since">Family owned · Since 2000</div>
-  <h1>Clarksville's family shop for <em>repairs &amp; towing</em></h1>
-  <p>Auto repair and wrecker service from a family that's been taking care of Clarksville drivers since July 2000.</p>
-  <a class="btn" href="tel:+19314319494">Tap to Call (931) 431-9494</a>
+  <img class="hero-bg" src="img/downtown.jpg" alt="Downtown Clarksville, Tennessee, with the Roxy Theatre on Franklin Street">
+  <div class="hero-in">
+    <div class="since">Family owned · Since 2000</div>
+    <h1>Clarksville's family shop for <em>repairs &amp; towing</em></h1>
+    <p>Auto repair and wrecker service from a family that's been taking care of Clarksville drivers since July 2000.</p>
+    <a class="btn" href="tel:+19314319494">Tap to Call (931) 431-9494</a>
+  </div>
+  <div class="hero-cap-bar"><p class="hero-cap">Downtown Clarksville — the city this family shop has served since 2000</p></div>
 </div>
-
-<img class="hero-photo" src="img/downtown.jpg" alt="Downtown Clarksville, Tennessee, with the Roxy Theatre on Franklin Street">
-<p class="hero-cap">Downtown Clarksville — the city this family shop has served since 2000</p>
 
 <div class="wrap">
   <section>
-    <h2>What we do</h2>
-    <p class="sub">One call for the repair bay and the tow truck.</p>
+    <div class="eyebrow rv">01</div>
+    <h2 class="rv">What we do</h2>
+    <p class="sub rv">One call for the repair bay and the tow truck.</p>
     <div class="grid">
-      <div class="card"><div class="ic">🔧</div><h3>Auto Repair</h3><p>General auto repair to get you back on the road — done by a family shop that answers its own phone.</p></div>
-      <div class="card"><div class="ic">🚨</div><h3>Wrecker &amp; Towing</h3><p>Broken down or stuck? Our wrecker service gets to you and gets your vehicle where it needs to go.</p></div>
-      <div class="card"><div class="ic">🤝</div><h3>Family Owned &amp; Operated</h3><p>No call centers, no runaround. You talk to the family that owns the shop and stands behind the work.</p></div>
+      <div class="card rv"><div class="ic">🔧</div><h3>Auto Repair</h3><p>General auto repair to get you back on the road — done by a family shop that answers its own phone.</p></div>
+      <div class="card rv"><div class="ic">🚨</div><h3>Wrecker &amp; Towing</h3><p>Broken down or stuck? Our wrecker service gets to you and gets your vehicle where it needs to go.</p></div>
+      <div class="card rv"><div class="ic">🤝</div><h3>Family Owned &amp; Operated</h3><p>No call centers, no runaround. You talk to the family that owns the shop and stands behind the work.</p></div>
     </div>
   </section>
 
-  <div class="heritage">
+  <div class="heritage rv">
     <div class="big">26<small>Years in business</small></div>
-    <div>
+    <div class="txt">
       <h3>Serving Clarksville since July 5, 2000</h3>
       <p>Tom &amp; Tony's has served Clarksville drivers for over two and a half decades — 86 customer reviews and counting, built one honest job at a time on Fort Campbell Boulevard.</p>
     </div>
   </div>
 
   <section>
-    <h2>Our corner of Tennessee</h2>
-    <p class="sub">Scenes from Clarksville — home turf for the shop since 2000.</p>
+    <div class="eyebrow rv">02</div>
+    <h2 class="rv">Our corner of Tennessee</h2>
+    <p class="sub rv">Scenes from Clarksville — home turf for the shop since 2000.</p>
     <div class="strip">
-      <figure><img src="img/mural.jpg" alt="The Clarksville history mural in downtown Clarksville, Tennessee"><figcaption>The Clarksville mural, downtown</figcaption></figure>
-      <figure><img src="img/downtown-2.jpg" alt="A street in downtown Clarksville, Tennessee"><figcaption>Downtown Clarksville</figcaption></figure>
+      <figure class="rv"><img src="img/mural.jpg" alt="The Clarksville history mural in downtown Clarksville, Tennessee"><figcaption>The Clarksville mural, downtown</figcaption></figure>
+      <figure class="rv"><img src="img/downtown-2.jpg" alt="A street in downtown Clarksville, Tennessee"><figcaption>Downtown Clarksville</figcaption></figure>
     </div>
   </section>
 
   <section class="visit">
-    <h2>Find the shop</h2>
-    <p class="addr">2579 Fort Campbell Blvd, Clarksville, TN 37042</p>
-    <p>Call ahead or just call when you need us — that's what the wrecker is for.</p>
-    <div style="margin-top:22px"><a class="btn" href="tel:+19314319494">Call (931) 431-9494</a></div>
+    <div class="eyebrow rv">03</div>
+    <h2 class="rv">Find the shop</h2>
+    <p class="addr rv">2579 Fort Campbell Blvd, Clarksville, TN 37042</p>
+    <p class="rv">Call ahead or just call when you need us — that's what the wrecker is for.</p>
+    <div class="rv" style="margin-top:24px"><a class="btn" href="tel:+19314319494">Call (931) 431-9494</a></div>
   </section>
 </div>
 
@@ -111,5 +149,22 @@
 </footer>
 
 <div class="sticky"><a href="tel:+19314319494">📞 Call Tom &amp; Tony's</a></div>
+<script>
+(function(){
+  var header=document.getElementById('site-header');
+  function onScroll(){ if(window.scrollY>12){header.classList.add('scrolled');}else{header.classList.remove('scrolled');} }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>
