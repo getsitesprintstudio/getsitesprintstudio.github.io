@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santa Sazón — Restaurante y Cevichería | Villa María del Triunfo, Lima</title>
+<meta name="description" content="Santa Sazón, restaurante y cevichería en Nueva Esperanza, Villa María del Triunfo, Lima. Sabores marinos, especialidades criollas, desayunos y salón de eventos. Reservas y delivery por WhatsApp.">
+<style>
+  :root{--paper:#fdf8f2;--ink:#23272e;--mut:#6d675e;--navy:#123c4e;--navy2:#0d2d3c;--coral:#d95030;--coral2:#b93d22;--sand:#f3e3cd;--line:#ecd9bd;--card:#ffffff;--wa:#1faa55}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:0 auto;gap:12px}
+  .brand{font-family:Georgia,serif;font-size:23px;color:var(--navy)}
+  .brand span{color:var(--coral)}
+  .pill{font-size:12.5px;font-weight:700;color:var(--navy);background:var(--sand);padding:7px 13px;border-radius:999px;white-space:nowrap}
+  .hero{max-width:1020px;margin:0 auto;padding:26px 20px 10px;text-align:center}
+  .badge{display:inline-block;background:var(--coral);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
+  .hero h1{font-family:Georgia,serif;font-weight:normal;font-size:40px;line-height:1.14;margin:20px auto 14px;max-width:640px}
+  .hero p{color:var(--mut);max-width:560px;margin:0 auto 26px;font-size:16.5px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px}
+  .btn.wa{background:var(--wa)}
+  .btn.coral{background:var(--coral)}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+  section{padding:48px 0 4px}
+  h2{font-family:Georgia,serif;font-weight:normal;font-size:27px;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:var(--mut);font-size:15px;max-width:560px;margin:0 auto 30px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
+  .card .ic{font-size:28px;margin-bottom:10px}
+  .card h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;margin-bottom:7px}
+  .card p{font-size:14.5px;color:var(--mut)}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+  .menu-card h3{font-family:Georgia,serif;font-weight:normal;font-size:20px;color:var(--navy);margin-bottom:4px}
+  .menu-card .note{font-size:13.5px;color:var(--mut);margin-bottom:12px}
+  .dish{padding:8px 0;border-bottom:1px dashed #e3cfa9}
+  .dish:last-child{border-bottom:none}
+  .dish b{display:block;font-size:15.5px}
+  .dish span{font-size:13.5px;color:var(--mut)}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+  .strip figure{margin:0}
+  .strip img{width:100%;height:220px;object-fit:cover;border-radius:14px;display:block}
+  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
+  .visit{background:var(--navy);color:#fff;border-radius:18px;padding:38px 26px;text-align:center;margin:48px 0 8px}
+  .visit h2{color:#fff}
+  .visit .big{font-family:Georgia,serif;font-size:26px;line-height:1.5;margin:10px 0 6px}
+  .visit p{color:#c3d5dd;font-size:15px}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:14px auto 0}
+  footer{padding:26px 20px 92px;text-align:center;color:var(--mut);font-size:13px}
+  footer a{color:var(--navy)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;z-index:20}
+  .sticky a{display:block;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px}
+  @media(min-width:760px){.hero h1{font-size:52px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Santa <span>Sazón</span></div>
+  <div class="pill">Reservas y delivery: 979 303 054</div>
+</header>
+
+<div class="hero">
+  <div class="badge">Restaurante y cevichería · Villa María del Triunfo, Lima</div>
+  <h1>Sabores marinos y especialidades criollas</h1>
+  <p>Un cevichito fresco, un buen tacu tacu o un desayuno contundente — en Nueva Esperanza, Villa María del Triunfo. También contamos con salón de eventos.</p>
+  <a class="btn wa" href="https://wa.me/51979303054">Reservas y delivery por WhatsApp</a>
+  <a class="btn coral" href="#carta">Ver la carta</a>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2>La casa</h2>
+    <p class="sub">Restaurante y salón de eventos en la Av. 26 de Noviembre 331, Nueva Esperanza.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🐟</div><h3>Sabores marinos</h3><p>Ceviches, tiraditos y leche de tigre, preparados al momento con el pescado más fresco.</p></div>
+      <div class="card"><div class="ic">🍛</div><h3>Especialidades criollas</h3><p>Arroz con pato, lomo saltado, tacu tacu y causas — la sazón criolla de siempre.</p></div>
+      <div class="card"><div class="ic">🎉</div><h3>Salón de eventos</h3><p>Celebra con nosotros: separa tu mesa con tiempo y vive los partidos en pantalla con el mejor ambiente.</p></div>
+    </div>
+  </section>
+
+  <section id="carta">
+    <h2>La carta</h2>
+    <p class="sub">Los platos que publicamos en nuestras redes. Consulta precios y disponibilidad por WhatsApp.</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Del mar</h3>
+        <p class="note">Para los amantes del ceviche en todas sus formas.</p>
+        <div class="dish"><b>Ceviche clásico</b><span>El de siempre, fresco y al punto.</span></div>
+        <div class="dish"><b>Ceviche carretillero</b><span>Con su chicharrón crujiente.</span></div>
+        <div class="dish"><b>Ceviche mixto</b></div>
+        <div class="dish"><b>Tiradito</b><span>Delicado y fresco.</span></div>
+        <div class="dish"><b>Leche de tigre</b></div>
+      </div>
+      <div class="menu-card">
+        <h3>Criollo</h3>
+        <p class="note">Especialidades criollas llenas de sabor.</p>
+        <div class="dish"><b>Arroz con pato</b></div>
+        <div class="dish"><b>Lomo saltado</b></div>
+        <div class="dish"><b>Tacu tacu</b><span>Lleno de sabor.</span></div>
+        <div class="dish"><b>Causas</b></div>
+      </div>
+      <div class="menu-card">
+        <h3>Santa Desayunos</h3>
+        <p class="note">Cada desayuno incluye café caliente y jugo a elección. Jugos de fresa, piña y papaya.</p>
+        <div class="dish"><b>Pan con pejerrey frito</b></div>
+        <div class="dish"><b>Pan con lomo al jugo</b></div>
+        <div class="dish"><b>Pan con chancho al cilindro</b></div>
+        <div class="dish"><b>Pan con huevera frita</b></div>
+      </div>
+    </div>
+    <p class="fineprint">Platos tomados de las publicaciones de Santa Sazón en Facebook e Instagram. La carta y los precios pueden variar — confírmalos por WhatsApp.</p>
+  </section>
+
+  <section>
+    <h2>Servicios</h2>
+    <p class="sub">Todo pasa por nuestro WhatsApp: rápido y directo.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">📞</div><h3>Reservas</h3><p>Separa tu mesa con tiempo — las ubicaciones frente a la pantalla vuelan.</p></div>
+      <div class="card"><div class="ic">🛵</div><h3>Delivery</h3><p>Haz tu pedido por WhatsApp al 979 303 054 y te lo llevamos.</p></div>
+      <div class="card"><div class="ic">⚽</div><h3>Fútbol en pantalla</h3><p>Vive la emoción del fútbol con el mejor ambiente y pantallas listas.</p></div>
+    </div>
+  </section>
+
+  <section style="padding-top:36px">
+    <h2>Nuestro distrito</h2>
+    <p class="sub">Estamos en Nueva Esperanza, Villa María del Triunfo — Lima Sur.</p>
+    <div class="strip">
+      <figure><img src="img/plaza.jpg" alt="Plaza de Armas de Villa María del Triunfo, Lima"><figcaption>Plaza de Armas de Villa María del Triunfo</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="visit">
+    <h2>Visítanos</h2>
+    <div class="big">Av. 26 de Noviembre 331<br>Nueva Esperanza, Villa María del Triunfo</div>
+    <p>Lima 15817 · Consulta nuestro horario y haz tu reserva por WhatsApp</p>
+  </div>
+
+  <section>
+    <h2>Reservas y pedidos</h2>
+    <p class="sub">Escríbenos directamente al WhatsApp o síguenos en redes para enterarte de las novedades.</p>
+    <div style="text-align:center">
+      <a class="btn wa" href="https://wa.me/51979303054">WhatsApp 979 303 054</a>
+      <a class="btn" href="https://www.instagram.com/santasazonrestaurante">Instagram</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  Santa Sazón — Restaurante y Cevichería · Villa María del Triunfo, Lima<br><br>
+  Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de Santa Sazón.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/51979303054">Reservas y delivery — WhatsApp</a></div>
+</body>
+</html>

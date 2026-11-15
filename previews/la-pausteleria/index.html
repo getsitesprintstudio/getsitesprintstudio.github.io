@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Paustelería — Gustavo A. Madero, CDMX | Pausteles y cupcakes personalizados</title>
+<meta name="description" content="La Paustelería, Av. Río de Guadalupe 311, Gustavo A. Madero, CDMX. Pausteles, panes, tartas y cupcakes personalizados. Pedidos con 8 días de anticipación por WhatsApp.">
+<style>
+  :root{--paper:#fdf7f0;--ink:#2e2620;--mut:#77695c;--terra:#b96a4b;--terra2:#9c5439;--cream:#f7e8d8;--line:#eeddc9;--card:#ffffff;--wa:#1faa55}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:0 auto;gap:12px}
+  .brand{font-family:Georgia,serif;font-style:italic;font-size:24px;color:var(--terra2)}
+  .pill{font-size:12.5px;font-weight:700;color:var(--terra2);background:var(--cream);padding:7px 13px;border-radius:999px;white-space:nowrap}
+  .hero{max-width:1020px;margin:0 auto;padding:26px 20px 10px;text-align:center}
+  .badge{display:inline-block;background:var(--terra);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
+  .hero h1{font-family:Georgia,serif;font-weight:normal;font-size:40px;line-height:1.14;margin:20px auto 14px;max-width:640px}
+  .hero p{color:var(--mut);max-width:560px;margin:0 auto 26px;font-size:16.5px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px}
+  .btn.wa{background:var(--wa)}
+  .btn.terra{background:var(--terra)}
+  .hero-photo{max-width:1020px;margin:16px auto 0;padding:0 20px}
+  .hero-photo img{width:100%;border-radius:18px;display:block}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+  section{padding:48px 0 4px}
+  h2{font-family:Georgia,serif;font-weight:normal;font-size:27px;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:var(--mut);font-size:15px;max-width:560px;margin:0 auto 30px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
+  .card .ic{font-size:28px;margin-bottom:10px}
+  .card h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;margin-bottom:7px}
+  .card p{font-size:14.5px;color:var(--mut)}
+  .offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .offer .ocard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .offer h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;color:var(--terra2);margin-bottom:6px}
+  .offer p{font-size:14.5px;color:var(--mut)}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+  .strip figure{margin:0}
+  .strip img{width:100%;height:190px;object-fit:cover;border-radius:14px;display:block}
+  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
+  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .review .stars{color:var(--terra);letter-spacing:2px;margin-bottom:8px}
+  .review p{font-size:15px;font-style:italic}
+  .review .who{margin-top:12px;font-size:13px;color:var(--mut);font-style:normal}
+  .review img{width:100%;height:170px;object-fit:cover;border-radius:12px;margin-bottom:12px;display:block}
+  .hours{background:var(--terra2);color:#fff;border-radius:18px;padding:38px 26px;text-align:center;margin:48px 0 8px}
+  .hours h2{color:#fff}
+  .hours .big{font-family:Georgia,serif;font-size:27px;line-height:1.55;margin:10px 0 6px}
+  .hours p{color:#f3d9c8;font-size:15px}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:14px auto 0}
+  footer{padding:26px 20px 92px;text-align:center;color:var(--mut);font-size:13px}
+  footer a{color:var(--terra2)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;z-index:20}
+  .sticky a{display:block;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px}
+  @media(min-width:760px){.hero h1{font-size:52px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">La Paustelería</div>
+  <div class="pill">Pedidos con 8 días de anticipación</div>
+</header>
+
+<div class="hero">
+  <div class="badge">Panadería y repostería · Gustavo A. Madero, CDMX</div>
+  <h1>Tu imaginación es el límite</h1>
+  <p>Pausteles, panes, tartas y cupcakes personalizados, a 2 cuadras del Parque Tepeyac. Si lo puedes imaginar, lo horneamos: no hay imposibles.</p>
+  <a class="btn wa" href="https://wa.me/525549278378">Haz tu pedido por WhatsApp</a>
+  <a class="btn terra" href="https://www.instagram.com/lapausteleria">Ver en Instagram</a>
+</div>
+
+<div class="hero-photo"><img src="img/hero.jpg" alt="Tartas y pasteles de La Paustelería servidos en plato"></div>
+
+<div class="wrap">
+  <section>
+    <h2>La casa</h2>
+    <p class="sub">Una pastelería de barrio con vitrina de tartas, café para quedarte y pasteles que se vuelven el centro de la fiesta.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🎂</div><h3>Pasteles temáticos</h3><p>Pasteles y cupcakes personalizados con tu personaje o tema favorito — de videojuegos, anime, películas y más.</p></div>
+      <div class="card"><div class="ic">🗓️</div><h3>Pedidos anticipados</h3><p>Los pedidos se hacen con 8 días de anticipación por WhatsApp, para que tu pastel salga perfecto.</p></div>
+      <div class="card"><div class="ic">☕</div><h3>Café y tartas</h3><p>Café, bebidas de temporada y una gran variedad de tartas y postres para disfrutar en nuestras mesas.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lo que preparamos</h2>
+    <p class="sub">Sin precios en línea: cotiza tu pedido por WhatsApp y te atendemos con gusto.</p>
+    <div class="offer">
+      <div class="ocard"><h3>Pausteles personalizados</h3><p>Nuestro producto estrella: pasteles a tu medida, incluyendo pasteles de foto y pasteles de cupcakes para compartir.</p></div>
+      <div class="ocard"><h3>Cupcakes personalizados</h3><p>Cupcakes temáticos para cumpleaños, meses de bebé y cualquier celebración.</p></div>
+      <div class="ocard"><h3>Tartas</h3><p>Tartas de frutas, pastelitos y tartas de temporada — como nuestra tarta de calabaza, por tiempo limitado.</p></div>
+      <div class="ocard"><h3>Panes y croissants</h3><p>Pan dulce y croissants recién horneados en vitrina, todos los días que abrimos.</p></div>
+      <div class="ocard"><h3>Bebidas de temporada</h3><p>En otoño regresa el Pumpkin Spice. Y todo el año, bebidas como el taro que nuestros clientes adoran.</p></div>
+      <div class="ocard"><h3>Café</h3><p>Un buen café para acompañar tu tarta, en el local o para llevar.</p></div>
+    </div>
+  </section>
+
+  <section style="padding-top:36px">
+    <h2>De nuestra vitrina</h2>
+    <p class="sub">Fotos reales de La Paustelería: los pasteles, las tartas y el pan de cada día.</p>
+    <div class="strip">
+      <figure><img src="img/paustel-rosa.jpg" alt="Paustel rosa con rosetones de betún en La Paustelería"><figcaption>Nuestros pausteles</figcaption></figure>
+      <figure><img src="img/tarta-frutas.jpg" alt="Tarta de frutas con higos y frutos rojos"><figcaption>Tarta de frutas</figcaption></figure>
+      <figure><img src="img/paustel-zanahoria.jpg" alt="Pastel blanco decorado con zanahorias de betún"><figcaption>Pastel de zanahoria</figcaption></figure>
+      <figure><img src="img/tarta-calabaza.jpg" alt="Tarta de calabaza con crema batida"><figcaption>Tarta de calabaza</figcaption></figure>
+      <figure><img src="img/vitrina.jpg" alt="Croissants y pan dulce en la vitrina de La Paustelería"><figcaption>La vitrina de panes</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lo que dicen nuestros clientes</h2>
+    <p class="sub">Reseñas reales de clientes, tal como las publicaron.</p>
+    <div class="reviews">
+      <div class="review">
+        <p>“Muy amables y amigables… para todos los gustos y van innovando. Yo no perdono una vez a la semana”</p>
+        <div class="who">— Alberto · Reseña en Google</div>
+      </div>
+      <div class="review">
+        <p>“Muy rico el café, gran variedad de postres”</p>
+        <div class="who">— Esther · Reseña en Google</div>
+      </div>
+      <div class="review">
+        <p>“Me encanta como preparan el brauni”</p>
+        <div class="who">— Gianny · Reseña en Google</div>
+      </div>
+      <div class="review">
+        <img src="img/cliente-taro.jpg" alt="Bebidas en La Paustelería, foto de una clienta">
+        <p>“10/10 🥰💞 💜Taro”</p>
+        <div class="who">— Reyna · Publicación en Instagram</div>
+      </div>
+    </div>
+    <p class="fineprint">Reseñas de Google recopiladas por carta.menu (mayo de 2024) y publicación de una clienta en Instagram (abril de 2026).</p>
+  </section>
+
+  <div class="hours">
+    <h2>Horario</h2>
+    <div class="big">Martes a sábado: 8:00 – 20:00<br>Domingo: 8:00 – 19:00</div>
+    <p>Lunes: cerrado · Av. Río de Guadalupe 311, San Pedro el Chico, Gustavo A. Madero</p>
+  </div>
+
+  <section>
+    <h2>Visítanos o haz tu pedido</h2>
+    <p class="sub">Av. Río de Guadalupe 311, Col. San Pedro el Chico, Gustavo A. Madero, CDMX 07480 — a 2 cuadras del Parque Tepeyac, cerca del Metrobús Río de Guadalupe.</p>
+    <div style="text-align:center">
+      <a class="btn wa" href="https://wa.me/525549278378">WhatsApp +52 55 4927 8378</a>
+      <a class="btn" href="https://www.facebook.com/lapausteleriacdmx">Facebook</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  La Paustelería · Gustavo A. Madero, Ciudad de México<br><br>
+  Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de La Paustelería.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/525549278378">Pedir por WhatsApp</a></div>
+</body>
+</html>

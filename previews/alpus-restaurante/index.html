@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALPUS Restaurante Bar — San Cristóbal, Medellín | Desde 1983</title>
+<meta name="description" content="ALPUS Restaurante Bar, San Cristóbal, Medellín. Desde 1983, el sabor que reúne generaciones. Parrilla, picadas, pizzas, cócteles y música en vivo. Reservas y domicilios por WhatsApp.">
+<style>
+  :root{--paper:#14100d;--panel:#1e1813;--ink:#f2e9dd;--mut:#b8a893;--amber:#e39a2d;--amber2:#c47f1a;--rust:#b4502a;--line:#3a2f24;--card:#211a14;--wa:#1faa55}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:0 auto;gap:12px}
+  .brand{font-family:Georgia,serif;font-size:24px;letter-spacing:3px;color:var(--ink)}
+  .brand span{color:var(--amber)}
+  .pill{font-size:12.5px;font-weight:700;color:var(--amber);background:#2a2013;padding:7px 13px;border-radius:999px;white-space:nowrap}
+  .hero{max-width:1020px;margin:0 auto;padding:26px 20px 10px;text-align:center}
+  .badge{display:inline-block;background:var(--rust);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 15px;border-radius:999px;text-transform:uppercase}
+  .hero h1{font-family:Georgia,serif;font-weight:normal;font-size:40px;line-height:1.14;margin:20px auto 14px;max-width:660px}
+  .hero p{color:var(--mut);max-width:580px;margin:0 auto 26px;font-size:16.5px}
+  .btn{display:inline-block;background:var(--ink);color:#14100d;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:15.5px}
+  .btn.wa{background:var(--wa);color:#fff}
+  .btn.amber{background:var(--amber);color:#14100d}
+  .hero-photo{max-width:1020px;margin:16px auto 0;padding:0 20px}
+  .hero-photo img{width:100%;max-height:520px;object-fit:cover;border-radius:18px;display:block}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+  section{padding:48px 0 4px}
+  h2{font-family:Georgia,serif;font-weight:normal;font-size:27px;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:var(--mut);font-size:15px;max-width:580px;margin:0 auto 30px}
+  .quote{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:14px;padding:26px 28px;font-family:Georgia,serif;font-size:18.5px;font-style:italic;line-height:1.5}
+  .quote .who{display:block;margin-top:12px;font-size:13px;font-style:normal;color:var(--mut);font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
+  .card .ic{font-size:28px;margin-bottom:10px}
+  .card h3{font-family:Georgia,serif;font-weight:normal;font-size:18.5px;margin-bottom:7px}
+  .card p{font-size:14.5px;color:var(--mut)}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .menu-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+  .menu-card h3{font-family:Georgia,serif;font-weight:normal;font-size:20px;color:var(--amber);margin-bottom:4px}
+  .menu-card .note{font-size:13.5px;color:var(--mut);margin-bottom:12px}
+  .dish{padding:8px 0;border-bottom:1px dashed #453723}
+  .dish:last-child{border-bottom:none}
+  .dish b{display:block;font-size:15.5px}
+  .dish span{font-size:13.5px;color:var(--mut)}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+  .strip figure{margin:0}
+  .strip img{width:100%;height:200px;object-fit:cover;border-radius:14px;display:block}
+  .strip figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:7px}
+  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .review .stars{color:var(--amber);letter-spacing:2px;margin-bottom:8px}
+  .review p{font-size:15px;font-style:italic}
+  .review .who{margin-top:12px;font-size:13px;color:var(--mut);font-style:normal}
+  .rating-big{text-align:center;font-family:Georgia,serif;font-size:30px;margin-bottom:6px}
+  .hours{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:38px 26px;text-align:center;margin:48px 0 8px}
+  .hours .big{font-family:Georgia,serif;font-size:26px;line-height:1.55;margin:10px 0 6px;color:var(--amber)}
+  .hours p{color:var(--mut);font-size:15px}
+  .fineprint{font-size:12.5px;color:var(--mut);text-align:center;max-width:640px;margin:14px auto 0}
+  footer{padding:26px 20px 92px;text-align:center;color:var(--mut);font-size:13px}
+  footer a{color:var(--amber)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:#0d0a08;border-top:1px solid var(--line);padding:10px 14px;z-index:20}
+  .sticky a{display:block;text-align:center;background:var(--wa);color:#fff;padding:14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px}
+  @media(min-width:760px){.hero h1{font-size:52px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">ALPUS <span>1983</span></div>
+  <div class="pill">San Cristóbal · Medellín</div>
+</header>
+
+<div class="hero">
+  <div class="badge">Gastrobar · Restaurante y bar</div>
+  <h1>Desde 1983, el sabor que reúne generaciones</h1>
+  <p>Alpus lleva más de cuatro décadas siendo parte de Medellín: de sus noches, sus canciones, sus amigos y sus historias.</p>
+  <a class="btn wa" href="https://wa.me/573117397623">Reservas y domicilios — WhatsApp</a>
+  <a class="btn amber" href="#carta">Ver la carta</a>
+</div>
+
+<div class="hero-photo"><img src="img/bartender.jpg" alt="Bartender de Alpus preparando un cóctel"></div>
+
+<div class="wrap">
+  <section>
+    <h2>Nuestra historia</h2>
+    <p class="sub">Un clásico de San Cristóbal que se renovó en 2025 sin perder lo esencial.</p>
+    <div class="quote">
+      “Hoy tenemos una nueva versión, pero hay cosas que siguen intactas: una buena cerveza, buena comida, buena música y una mesa donde siempre cabe una historia más.”
+      <span class="who">— Alpus, en su Instagram</span>
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <div class="card"><div class="ic">🥃</div><h3>El Guanabanón</h3><p>Nuestra bebida insignia: “Nació con Alpus y sigue siendo parte de nuestra identidad”. Una bebida heredada que sigue contando nuestra historia.</p></div>
+      <div class="card"><div class="ic">🎸</div><h3>Música en vivo</h3><p>Noches de rock, baladas y pop en español, y son cubano — con artistas invitados en vivo.</p></div>
+      <div class="card"><div class="ic">🛵</div><h3>Domicilios</h3><p>Coman rico y a domicilio pidiendo en Alpus: escribe al WhatsApp, pide la carta, elige tu plato favorito y te lo llevamos a casa.</p></div>
+    </div>
+  </section>
+
+  <section id="carta">
+    <h2>La carta</h2>
+    <p class="sub">“En Alpus el rock nos inspira, por eso nuestros platos llevan nombres que han marcado generaciones.” Pide la carta completa, con precios, por WhatsApp.</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Para compartir</h3>
+        <p class="note">Los favoritos de la casa, al centro de la mesa.</p>
+        <div class="dish"><b>Un Metro de Chicharrón</b><span>Un chicharrón de un metro bañado en salsa BBQ, acompañado de queso crema, puerro, papitas, arepa con queso y ensalada de la casa. También por mitad (50 cm).</span></div>
+        <div class="dish"><b>Picada de Cerdo Alpus</b><span>Chorizo bañado en BBQ de tamarindo, chicharrón ahumado, piña asada, patacones con guacamole, papas rústicas y nuestras salsas de la casa.</span></div>
+        <div class="dish"><b>Picada de Pollo</b><span>Tenders apanados, papas, maíz, piña asada, patacones y salsas.</span></div>
+        <div class="dish"><b>Molcajete Molotov</b><span>“Nuestro Molcajete Molotov es puro power”: guacamole, nachos, pico de gallo, chicharrón y sour cream, capa por capa.</span></div>
+      </div>
+      <div class="menu-card">
+        <h3>De la parrilla</h3>
+        <p class="note">Al carbón, como debe ser.</p>
+        <div class="dish"><b>Lomo de Res a la Parrilla</b><span>Acompañado de chimichurri artesanal, papas rústicas, ensalada de la casa y arepita con queso.</span></div>
+        <div class="dish"><b>Costillas al Barril</b><span>De nuestra nueva carta.</span></div>
+        <div class="dish"><b>Pollo Tropical</b><span>Pollo con una deliciosa salsa de maracuyá y mango, con tocineta crocante.</span></div>
+        <div class="dish"><b>Pinchos</b><span>Cada pincho se mueve al compás de las brasas.</span></div>
+      </div>
+      <div class="menu-card">
+        <h3>Con nombre de rock</h3>
+        <p class="note">Platos que llevan nombres que han marcado generaciones.</p>
+        <div class="dish"><b>Arepa Nirvana</b></div>
+        <div class="dish"><b>Tacos The Rolling Stones</b><span>Unos tacos intensos, inolvidables.</span></div>
+        <div class="dish"><b>Kebab Jim Morrison</b></div>
+        <div class="dish"><b>Wrap Iron Maiden</b><span>Ropa vieja, cebolla caramelizada, pimentones asados y piña caramelizada.</span></div>
+        <div class="dish"><b>Hamburguesa Michael Jackson</b><span>Solo en Alpus.</span></div>
+      </div>
+      <div class="menu-card">
+        <h3>Sabor paisa</h3>
+        <p class="note">La tradición antioqueña, como en casa.</p>
+        <div class="dish"><b>Arepa Paisa</b><span>Nuestra arepa paisa, llena de sabor.</span></div>
+        <div class="dish"><b>Cazuela Paisa</b><span>Frijolitos, arroz, maduritos, chicharrón, chorizo, aguacate y fosforitos. Fines de semana desde el mediodía — incluye jugo, también a domicilio.</span></div>
+      </div>
+      <div class="menu-card">
+        <h3>Pizzas</h3>
+        <p class="note">¿Cuál te antojaste más?</p>
+        <div class="dish"><b>Pizza Alpus</b><span>Parmesano, sour cream, tomate caramelizado, pepperoni, albahaca y queso.</span></div>
+        <div class="dish"><b>Pizza Pollo BBQ</b><span>Pollo BBQ, maicitos, tocineta y queso.</span></div>
+      </div>
+      <div class="menu-card">
+        <h3>Cócteles y postres</h3>
+        <p class="note">12 cócteles de la casa, dibujados a mano por nosotros — sin IA.</p>
+        <div class="dish"><b>Los 12 cócteles</b><span>Cantarito, Paloma, Guavas Hell, Martini Pornstar, Tentación, Gin and Tonic, Tequila Sunrise, Moscow Mule, Margarita, Piña Colada, Mojito y Cocoloco. También sangría y vino caliente.</span></div>
+        <div class="dish"><b>Guavas Hell</b><span>Ron infusionado en bocadillo, triple sec, limón mandarino y un toque de jengibre.</span></div>
+        <div class="dish"><b>Sin alcohol</b><span>Virgen Sour y Guanabanón.</span></div>
+        <div class="dish"><b>Postres</b><span>Tiramisú de Oreo, Red Velvet y malteada de Oreo.</span></div>
+      </div>
+    </div>
+    <p class="fineprint">Platos y bebidas tomados de las publicaciones de Alpus en Instagram. La carta completa, con precios, se pide por WhatsApp.</p>
+  </section>
+
+  <section>
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="rating-big">★ 4.7 <span style="font-size:16px;color:var(--mut)">— 187 reseñas en Google</span></div>
+    <p class="sub">Reseñas reales de clientes, tal como las publicaron.</p>
+    <div class="reviews">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Muy excelente para un rato diferente, y la música ni q hablar”</p>
+        <div class="who">— Yonier · Reseña en Google</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Desde los 80s, un lugar muy agradable para mí”</p>
+        <div class="who">— Iván · Reseña en Google</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Es un ambiente para ir en pareja o con amigos, buena música y precios”</p>
+        <div class="who">— Big Barret · Reseña en Google</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Si de tradición hablamos cuantas historias por contar en este lugar una cerveza, una pizza o sus papas que son deliciosas”</p>
+        <div class="who">— Daniela · Reseña en Google</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Excelente servicio”</p>
+        <div class="who">— Laura · Reseña en Google</div>
+      </div>
+    </div>
+    <p class="fineprint">Calificación y reseñas de Google recopiladas por carta.menu (consultado el 15 de noviembre de 2026).</p>
+  </section>
+
+  <section style="padding-top:36px">
+    <h2>El ambiente y el barrio</h2>
+    <p class="sub">Noches de música en Alpus — y San Cristóbal, nuestro corregimiento en Medellín.</p>
+    <div class="strip">
+      <figure><img src="img/musica.jpg" alt="Noche de música en vivo en Alpus"><figcaption>Música en vivo en Alpus</figcaption></figure>
+      <figure><img src="img/sancristobal.jpg" alt="Iglesia de San Cristóbal, Medellín"><figcaption>Iglesia de San Cristóbal</figcaption></figure>
+      <figure><img src="img/medellin.jpg" alt="Vista de la ciudad de Medellín, Antioquia"><figcaption>Medellín, Antioquia</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="hours">
+    <h2>Horario</h2>
+    <div class="big">Lunes a jueves y domingo: 6:00 p. m. – 11:30 p. m.<br>Viernes y sábado: 6:00 p. m. – 1:30 a. m.</div>
+    <p>Almuerzos los fines de semana desde las 12:00 del mediodía · Te esperamos todos los días desde las 6:00 p. m.</p>
+  </div>
+
+  <section>
+    <h2>Reservas y domicilios</h2>
+    <p class="sub">Calle 62 # 129-32, San Cristóbal, Medellín, Antioquia. Reserva tu momento especial y celebra diferente.</p>
+    <div style="text-align:center">
+      <a class="btn wa" href="https://wa.me/573117397623">WhatsApp +57 311 739 7623</a>
+      <a class="btn" href="https://www.instagram.com/alpusrestaurante1983">Instagram</a>
+    </div>
+    <p class="fineprint">Correo: alpusrestaurantebar1983@gmail.com</p>
+  </section>
+</div>
+
+<footer>
+  ALPUS Restaurante Bar · San Cristóbal, Medellín, Colombia<br><br>
+  Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de ALPUS Restaurante Bar.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/573117397623">Reservas y domicilios — WhatsApp</a></div>
+</body>
+</html>
