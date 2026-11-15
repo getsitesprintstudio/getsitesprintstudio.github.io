@@ -141,6 +141,54 @@
     .rv{opacity:1 !important;transform:none !important}
     .card:hover,.menu-card:hover,.step:hover,.btn:hover{transform:none}
   }
+
+  /* ---------- AI assistant demo (wow) ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:var(--blue)TXT;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--blue);color:var(--blue)TXT;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:var(--sand);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--blue);color:var(--blue)TXT;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--blue);color:var(--blue)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--blue);color:var(--blue)TXT;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  /* ---------- Tap-to-order (wow) ---------- */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:6px 12px;border:1.5px solid var(--blue2);color:var(--blue2);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--blue2);color:#fff;transform:translateY(-1px)}
+
+  /* ---------- Open-now indicator (wow) ---------- */
+  .hdr-inner,.header-in{flex-wrap:wrap}
+  .opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;white-space:nowrap;min-height:36px}
+  .opennow .odot{width:8px;height:8px;border-radius:50%;background:#b9b9b9;flex:none}
+  .opennow.open .odot{background:#27ae60;box-shadow:0 0 0 3px rgba(39,174,96,.2)}
+  .opennow.closed .odot{background:#d35450;box-shadow:0 0 0 3px rgba(211,84,80,.16)}
+
+  /* ---------- Map (wow) ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
+  /* ---------- Instagram band (wow) ---------- */
+  .igband{max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,72px) 20px 0}
+  .igband-in{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:18px;padding:22px 26px;background:var(--card)}
+  .igband .igt{font-size:16px;font-weight:700}
+  .igband .igh{color:var(--blue2);text-decoration:none;font-weight:700}
+  .igband a.igbtn{display:inline-flex;align-items:center;min-height:44px;background:var(--blue);color:#fff;font-weight:700;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:14.5px;transition:transform .22s ease,box-shadow .22s ease}
+  .igband a.igbtn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+
 </style>
 </head>
 <body>
@@ -148,6 +196,7 @@
   <div class="header-in">
     <div class="brand">Cristhiane <span>Festas</span></div>
     <div class="pill">Encomendas pelo WhatsApp</div>
+    <span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
   </div>
 </header>
 
@@ -170,7 +219,7 @@
     <h2 class="rv">Por que a Cristhiane Festas?</h2>
     <p class="sub rv">Uma doceria de bairro com uma multidão de fãs — e doces que marcam momentos.</p>
     <div class="grid">
-      <div class="card rv"><div class="ic">📱</div><h3>+56 mil seguidores</h3><p>Mais de 56 mil pessoas acompanham a loja no Instagram: <a href="https://www.instagram.com/cristhianefestas">@cristhianefestas</a>.</p></div>
+      <div class="card rv"><div class="ic">📱</div><h3>+<span class="count" data-count="56">56</span> mil seguidores</h3><p>Mais de 56 mil pessoas acompanham a loja no Instagram: <a href="https://www.instagram.com/cristhianefestas">@cristhianefestas</a>.</p></div>
       <div class="card rv"><div class="ic">🍬</div><h3>Docinhos de ~15 g</h3><p>Doces artesanais de aproximadamente 15 gramas, entregues em caixas brancas, prontos para a sua mesa de festa.</p></div>
       <div class="card rv"><div class="ic">💍</div><h3>Para toda celebração</h3><p>Casamentos, nascimentos, aniversários, Dia das Mães, Natal e festas em geral.</p></div>
     </div>
@@ -184,26 +233,26 @@
     <div class="menu-card rv">
       <h3>Doces artesanais — o cento</h3>
       <p class="note">Brigadeiros e doces finos vendidos por cento (100 unidades), tradicionais e gourmets.</p>
-      <div class="mrow"><span>Doces artesanais — o cento</span><span class="dots"></span><span class="pr">R$ 160,00</span></div>
-      <div class="mrow"><span>Kit degustação — 21 unidades</span><span class="dots"></span><span class="pr">R$ 55,00</span></div>
+      <div class="mrow"><span>Doces artesanais — o cento</span><span class="dots"></span><span class="pr">R$ 160,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Doces%20artesanais%20%E2%80%94%20o%20cento%20%28R%24%20160%2C00%29">Pedir</a></div>
+      <div class="mrow"><span>Kit degustação — 21 unidades</span><span class="dots"></span><span class="pr">R$ 55,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Kit%20degusta%C3%A7%C3%A3o%20%E2%80%94%2021%20unidades%20%28R%24%2055%2C00%29">Pedir</a></div>
     </div>
 
     <div class="menu-card rv">
       <h3>Bem-casados e bem-nascidos</h3>
       <p class="note">Recheio doce e cremoso — o clássico das festas de casamento e nascimento.</p>
-      <div class="mrow"><span>Bem-casado / bem-nascido — a unidade</span><span class="dots"></span><span class="pr">R$ 5,00</span></div>
-      <div class="mrow"><span>5 unidades</span><span class="dots"></span><span class="pr">R$ 25,00</span></div>
-      <div class="mrow"><span>100 unidades</span><span class="dots"></span><span class="pr">R$ 500,00</span></div>
+      <div class="mrow"><span>Bem-casado / bem-nascido — a unidade</span><span class="dots"></span><span class="pr">R$ 5,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Bem-casado%20/%20bem-nascido%20%E2%80%94%20a%20unidade%20%28R%24%205%2C00%29">Pedir</a></div>
+      <div class="mrow"><span>5 unidades</span><span class="dots"></span><span class="pr">R$ 25,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Bem-casado%20/%20bem-nascido%20%E2%80%94%205%20unidades%20%28R%24%2025%2C00%29">Pedir</a></div>
+      <div class="mrow"><span>100 unidades</span><span class="dots"></span><span class="pr">R$ 500,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Bem-casado%20/%20bem-nascido%20%E2%80%94%20100%20unidades%20%28R%24%20500%2C00%29">Pedir</a></div>
     </div>
 
     <div class="menu-card rv">
       <h3>Bombons e trufinhas</h3>
       <p class="note">Bombons recheados de coco com leite condensado ou brigadeiro artesanal cremoso; trufinhas abertas com copinhos de chocolate ao leite.</p>
-      <div class="mrow"><span>Bombons recheados — 30 unidades</span><span class="dots"></span><span class="pr">R$ 99,00</span></div>
-      <div class="mrow"><span>Bombons recheados — 500 unidades</span><span class="dots"></span><span class="pr">R$ 1.650,00</span></div>
-      <div class="mrow"><span>Trufinhas abertas — 30 unidades</span><span class="dots"></span><span class="pr">R$ 87,00</span></div>
-      <div class="mrow"><span>Trufinhas abertas — 50 unidades</span><span class="dots"></span><span class="pr">R$ 145,00</span></div>
-      <div class="mrow"><span>Trufinhas abertas — 100 unidades</span><span class="dots"></span><span class="pr">R$ 290,00</span></div>
+      <div class="mrow"><span>Bombons recheados — 30 unidades</span><span class="dots"></span><span class="pr">R$ 99,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Bombons%20recheados%20%E2%80%94%2030%20unidades%20%28R%24%2099%2C00%29">Pedir</a></div>
+      <div class="mrow"><span>Bombons recheados — 500 unidades</span><span class="dots"></span><span class="pr">R$ 1.650,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Bombons%20recheados%20%E2%80%94%20500%20unidades%20%28R%24%201.650%2C00%29">Pedir</a></div>
+      <div class="mrow"><span>Trufinhas abertas — 30 unidades</span><span class="dots"></span><span class="pr">R$ 87,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Trufinhas%20abertas%20%E2%80%94%2030%20unidades%20%28R%24%2087%2C00%29">Pedir</a></div>
+      <div class="mrow"><span>Trufinhas abertas — 50 unidades</span><span class="dots"></span><span class="pr">R$ 145,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Trufinhas%20abertas%20%E2%80%94%2050%20unidades%20%28R%24%20145%2C00%29">Pedir</a></div>
+      <div class="mrow"><span>Trufinhas abertas — 100 unidades</span><span class="dots"></span><span class="pr">R$ 290,00</span><a class="ord" href="https://wa.me/5562996295796?text=Ol%C3%A1%2C%20quero%20encomendar%3A%20Trufinhas%20abertas%20%E2%80%94%20100%20unidades%20%28R%24%20290%2C00%29">Pedir</a></div>
     </div>
 
     <div class="flavors rv">
@@ -259,6 +308,11 @@
   </section>
 </div>
 
+<div class="igband"><div class="igband-in"><div class="igt">Siga a loja no Instagram <a class="igh" href="https://www.instagram.com/cristhianefestas">@cristhianefestas</a></div><a class="igbtn" href="https://www.instagram.com/cristhianefestas">Seguir</a></div></div>
+<div class="mapsec">
+  <h2>Como chegar</h2>
+  <div class="mapframe"><iframe title="Map — Cristhiane Festas Doceria" src="https://www.google.com/maps?q=Cristhiane%20Festas%20Doceria%2C%20R.%203%2C%20Quadra%20C%2C%20Lote%2009%2C%20Goi%C3%A2nia%2C%20GO&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
 <footer>
   Cristhiane Festas Doceria · Goiânia, Goiás<br><br>
   Página de demonstração criada pela SiteSprint Studio — este não é o site oficial da Cristhiane Festas Doceria.
@@ -266,6 +320,15 @@
 
 <div class="sticky"><a href="https://wa.me/5562996295796">Pedir pelo WhatsApp</a></div>
 
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente Cristhiane">
+    <div class="chatw-head"><div><b>Assistente Cristhiane</b><small>Assistente de demonstração · parte desta página de demonstração</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Digite sua pergunta…" aria-label="Digite sua pergunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
 <script>
 (function(){
   var header=document.getElementById('site-header');
@@ -284,6 +347,104 @@
     });
   },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   items.forEach(function(el){io.observe(el);});
+})();
+</script>
+<script>
+(function(){
+
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "Pedir pelo WhatsApp", "href": "https://wa.me/5562996295796"}, "greeting": "Olá! Sou a assistente da Cristhiane Festas. Pergunte sobre produtos e preços, sabores, como encomendar ou o horário — ou toque em uma sugestão.", "fallback": "Isso eu não tenho aqui — chame no WhatsApp (62) 99629-5796 que a loja te ajuda.", "chips": ["Produtos e preços", "Como encomendar?", "Quais os sabores?", "Horário de funcionamento", "Onde fica a loja?"], "items": [{"k": ["bem-casado", "bem casado", "bem-nascido", "bem nascido"], "a": "Bem-casado / bem-nascido: R$ 5,00 a unidade; 5 unidades por R$ 25,00; 100 unidades por R$ 500,00. Recheio doce e cremoso — o clássico das festas de casamento e nascimento."}, {"k": ["bombom", "bombons"], "a": "Bombons recheados (coco com leite condensado ou brigadeiro artesanal cremoso): 30 unidades por R$ 99,00; 500 unidades por R$ 1.650,00."}, {"k": ["trufinha"], "a": "Trufinhas abertas (copinhos de chocolate ao leite): 30 unidades por R$ 87,00; 50 por R$ 145,00; 100 por R$ 290,00."}, {"k": ["cento"], "a": "Doces artesanais — o cento (100 unidades), tradicionais e gourmets: R$ 160,00."}, {"k": ["degustacao", "degustação"], "a": "Kit degustação — 21 unidades: R$ 55,00."}, {"k": ["pistache"], "a": "O pistache é um dos nossos sabores gourmets. A lista completa de sabores está na seção de produtos da página."}], "intents": [{"k": ["ola", "oi", "bom dia", "boa tarde"], "g": 1, "a": "Olá! Pergunte sobre produtos e preços, sabores, como encomendar ou o horário."}, {"k": ["produto", "preco", "valor", "quanto", "cardapio", "catalogo"], "a": "Produtos e preços (das promoções publicadas no Instagram): doces artesanais, o cento por R$ 160,00; kit degustação (21 un.) R$ 55,00; bem-casado R$ 5,00/un.; bombons recheados desde R$ 99,00 (30 un.); trufinhas abertas desde R$ 87,00 (30 un.). Toque em um produto para pedir pelo WhatsApp.", "link": {"t": "Pedir pelo WhatsApp", "href": "https://wa.me/5562996295796"}}, {"k": ["encomend", "pedido", "pedir", "comprar", "como faco"], "a": "Para encomendar: chame no WhatsApp (62) 99629-5796, peça o cardápio, monte seu pedido e confirme com 50% de sinal. A retirada é na loja, na data combinada.", "link": {"t": "Chamar no WhatsApp", "href": "https://wa.me/5562996295796"}}, {"k": ["sabor"], "a": "Sabores tradicionais: brigadeiro, beijinho, ninho, casadinho, olho de sogra, bicho de pé e churros. Sabores gourmets: pistache, limão italiano, amêndoa, maracujá, manga, framboesa, brigadeiro de Oreo, beijinho de coco queimado, Nutella, café, paçoca e palha italiana."}, {"k": ["horario", "funcionamento", "abre", "fecha", "aberta"], "a": "Horário: segunda das 13h às 17h; terça a sexta das 8h às 17h; sábado das 8h às 12h. Domingo: fechado."}, {"k": ["onde", "endereco", "fica", "loja", "retirada", "entrega"], "a": "A loja fica na R. 3, Quadra C, Lote 09 — Goiânia/GO, 74405-090. As encomendas são para retirada na loja, na data combinada."}, {"k": ["pix", "pagamento", "sinal", "cartao", "pagar"], "a": "O agendamento é feito após a confirmação do sinal de 50%. Preços promocionais para Pix ou dinheiro — a loja também passa cartão."}, {"k": ["casamento", "aniversario", "festa", "nascimento", "natal", "maes"], "a": "Fazemos doces para casamentos, nascimentos, aniversários, Dia das Mães, Natal e festas em geral — docinhos de aproximadamente 15 g, entregues em caixas brancas, prontos para a sua mesa."}, {"k": ["contato", "telefone", "whatsapp", "numero", "instagram"], "a": "WhatsApp: (62) 99629-5796 · Instagram: @cristhianefestas (mais de 56 mil seguidores).", "link": {"t": "Chamar no WhatsApp", "href": "https://wa.me/5562996295796"}}, {"k": ["obrigad"], "a": "Por nada! A Cristhiane Festas agradece a preferência."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+
+
+  /* Open-now indicator — computed from the hours published on this page */
+  var SCHED={"tz": "America/Sao_Paulo", "days": {"0": [], "1": [[780, 1020, "13h", "17h"]], "2": [[480, 1020, "8h", "17h"]], "3": [[480, 1020, "8h", "17h"]], "4": [[480, 1020, "8h", "17h"]], "5": [[480, 1020, "8h", "17h"]], "6": [[480, 720, "8h", "12h"]]}};
+  var OTXT={"open": "Aberto agora · até às {x}", "closed": "Fechado · abre às {x}", "closedTomorrow": "Fechado · abre amanhã às {x}", "closedDay": "Fechado · abre {d} às {x}", "days": ["no domingo", "na segunda-feira", "na terça-feira", "na quarta-feira", "na quinta-feira", "na sexta-feira", "no sábado"]};
+  (function(){
+    var el=document.getElementById('opennow');if(!el)return;
+    function bizNow(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}
+    var now=bizNow(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes(),st=null,i,s,list,off,d;
+    list=SCHED.days[(day+6)%7]||[];
+    for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}
+    if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}
+    if(!st){
+      for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];
+        for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}
+    }
+    if(!st)return;
+    var txt;
+    if(st.open)txt=OTXT.open.replace('{x}',st.until);
+    else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);
+    else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);
+    else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);
+    el.querySelector('.otext').textContent=txt;
+    el.classList.add(st.open?'open':'closed');
+    el.hidden=false;
+  })();
+
+
+  /* Animated counters — numbers already published on this page */
+  var cEls=document.querySelectorAll('.count');
+  if(cEls.length){
+    var reduceC=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduceC&&('IntersectionObserver' in window)){
+      cEls.forEach(function(el){el.textContent='0';});
+      var cio=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting)return;
+          cio.unobserve(e.target);
+          var el=e.target,tg=parseFloat(el.getAttribute('data-count')),t0=null;
+          function step(ts){
+            if(!t0)t0=ts;
+            var p=Math.min(1,(ts-t0)/1300),ease=1-Math.pow(1-p,3);
+            el.textContent=String(Math.round(tg*ease));
+            if(p<1)requestAnimationFrame(step);else el.textContent=String(tg);
+          }
+          requestAnimationFrame(step);
+        });
+      },{threshold:.4});
+      cEls.forEach(function(el){cio.observe(el);});
+    }
+  }
+
 })();
 </script>
 </body>

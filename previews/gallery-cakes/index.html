@@ -92,6 +92,49 @@
     .header-in{padding-left:16px;padding-right:16px}
     .order-actions .btn{width:100%}
   }
+
+  /* ---------- AI assistant demo (wow) ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--teal)TXT;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--teal);color:var(--teal)TXT;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:var(--mint);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--teal);color:var(--teal)TXT;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--teal);color:var(--teal)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--teal);color:var(--teal)TXT;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  /* ---------- Tap-to-order (wow) ---------- */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:6px 12px;border:1.5px solid var(--teal);color:var(--teal2);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--teal);color:#fff;transform:translateY(-1px)}
+
+  .scard .ord{margin-top:12px}
+  .ord-promo{display:inline-block;position:relative;background:#fff;color:var(--teal2);font-weight:700;text-decoration:none;padding:13px 26px;border-radius:999px;font-size:15px;margin-top:20px;box-shadow:0 12px 26px rgba(0,0,0,.18);transition:transform .25s ease,box-shadow .25s ease}
+  .ord-promo:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(0,0,0,.22)}
+  /* ---------- Open-now indicator (wow) ---------- */
+  .hdr-inner,.header-in{flex-wrap:wrap}
+  .opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;white-space:nowrap;min-height:36px}
+  .opennow .odot{width:8px;height:8px;border-radius:50%;background:#b9b9b9;flex:none}
+  .opennow.open .odot{background:#27ae60;box-shadow:0 0 0 3px rgba(39,174,96,.2)}
+  .opennow.closed .odot{background:#d35450;box-shadow:0 0 0 3px rgba(211,84,80,.16)}
+
+  /* ---------- Map (wow) ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
 </style>
 </head>
 <body>
@@ -99,6 +142,7 @@
   <div class="header-in">
     <div class="brand">Galery <span>Cake's</span></div>
     <div class="pill">Abierto todos los días · 8:00–21:00</div>
+    <span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
   </div>
 </header>
 
@@ -128,13 +172,13 @@
     <h2 class="rv">Especialidades de la casa</h2>
     <p class="sub rv">Algunas de las creaciones que publicamos en nuestra página. Pregunta por disponibilidad y cotiza el tuyo por WhatsApp.</p>
     <div class="spec">
-      <div class="scard rv"><h3>Pastel de Cajeta</h3><p>Suave, cremosito, con abundante cajeta, nuez y fresas frescas… una delicia que conquista desde la primera rebanada.</p></div>
-      <div class="scard rv"><h3>Pastel Red Velvet</h3><p>Con su hermoso color rojo, una cobertura cremosa y delicadas rosas de betún, decorado con frutos rojos.</p></div>
-      <div class="scard rv"><h3>Pastel de Baileys y Tres Leches</h3><p>Esponjoso pan súper humedecido en 3 leches, relleno de crema de Baileys con trocitos de nuez y cereal confitado.</p></div>
-      <div class="scard rv"><h3>Pastel de Trufa de Chocolate</h3><p>Suave cobertura de chocolate, coronado con trufas espolvoreadas con fino cacao y crocantes láminas de chocolate puro.</p></div>
-      <div class="scard rv"><h3>Gelatina Mosaico</h3><p>Una explosión de colores y sabores: trocitos de gelatina de diferentes sabores con el toque fresco de frutos rojos.</p></div>
-      <div class="scard rv"><h3>Gelatina de Piñón con Queso</h3><p>Receta completamente artesanal, elaborada con piñón natural y una textura ultra cremosa. ¡Rinde para 15 personas!</p></div>
-      <div class="scard rv"><h3>Pasteles temáticos</h3><p>Como nuestro pastel futbolero, con una cancha llena de detalles, balones y hasta su propia portería. Perfecto para sorprender a ese pequeño crack.</p></div>
+      <div class="scard rv"><h3>Pastel de Cajeta</h3><p>Suave, cremosito, con abundante cajeta, nuez y fresas frescas… una delicia que conquista desde la primera rebanada.</p><a class="ord" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Cajeta">Pedir</a></div>
+      <div class="scard rv"><h3>Pastel Red Velvet</h3><p>Con su hermoso color rojo, una cobertura cremosa y delicadas rosas de betún, decorado con frutos rojos.</p><a class="ord" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20Red%20Velvet">Pedir</a></div>
+      <div class="scard rv"><h3>Pastel de Baileys y Tres Leches</h3><p>Esponjoso pan súper humedecido en 3 leches, relleno de crema de Baileys con trocitos de nuez y cereal confitado.</p><a class="ord" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Baileys%20y%20Tres%20Leches">Pedir</a></div>
+      <div class="scard rv"><h3>Pastel de Trufa de Chocolate</h3><p>Suave cobertura de chocolate, coronado con trufas espolvoreadas con fino cacao y crocantes láminas de chocolate puro.</p><a class="ord" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20pedir%3A%20Pastel%20de%20Trufa%20de%20Chocolate">Pedir</a></div>
+      <div class="scard rv"><h3>Gelatina Mosaico</h3><p>Una explosión de colores y sabores: trocitos de gelatina de diferentes sabores con el toque fresco de frutos rojos.</p><a class="ord" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20pedir%3A%20Gelatina%20Mosaico">Pedir</a></div>
+      <div class="scard rv"><h3>Gelatina de Piñón con Queso</h3><p>Receta completamente artesanal, elaborada con piñón natural y una textura ultra cremosa. ¡Rinde para 15 personas!</p><a class="ord" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20pedir%3A%20Gelatina%20de%20Pi%C3%B1%C3%B3n%20con%20Queso">Pedir</a></div>
+      <div class="scard rv"><h3>Pasteles temáticos</h3><p>Como nuestro pastel futbolero, con una cancha llena de detalles, balones y hasta su propia portería. Perfecto para sorprender a ese pequeño crack.</p><a class="ord" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20pedir%3A%20Pasteles%20tem%C3%A1ticos">Pedir</a></div>
     </div>
   </section>
 
@@ -142,6 +186,7 @@
     <h2>Miércoles de rebanadas</h2>
     <div class="big">Tres leches 3×2 por $100</div>
     <p>Disfruta nuestras rebanadas de pastel de tres leches con la promoción de los miércoles. Corre porque vuelan — promoción sujeta a disponibilidad.</p>
+    <a class="ord-promo" href="https://wa.me/525582088841?text=Hola%2C%20quiero%20la%20promoci%C3%B3n%20de%20mi%C3%A9rcoles%3A%20rebanadas%20de%20tres%20leches%203%C3%972%20por%20%24100">Pedir la promo por WhatsApp</a>
     <p class="fineprint" style="color:#bfe0d8">Promoción publicada por Galery Cake's en su página de Facebook (octubre de 2026).</p>
   </div>
 
@@ -172,12 +217,25 @@
   </section>
 </div>
 
+<div class="mapsec">
+  <h2>Cómo llegar</h2>
+  <div class="mapframe"><iframe title="Map — Galery Cake's" src="https://www.google.com/maps?q=Galery%20Cake%27s%2C%20Av.%20P%C3%ADpila%20esq.%20Juan%20de%20la%20Barrera%2C%20Lomas%20de%20Zaragoza%2C%20Iztapalapa%2C%20Ciudad%20de%20M%C3%A9xico&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
 <footer>
   Galery Cake's · Iztapalapa, Ciudad de México<br><br>
   Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de Galery Cake's.
 </footer>
 
 <div class="sticky"><a href="https://wa.me/525582088841">Cotizar por WhatsApp</a></div>
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Galery">
+    <div class="chatw-head"><div><b>Asistente Galery</b><small>Asistente de demostración · parte de esta página de demostración</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
 <script>
 (function(){
   var header=document.getElementById('site-header');
@@ -193,6 +251,79 @@
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   els.forEach(function(el){io.observe(el);});
+})();
+</script>
+<script>
+(function(){
+
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "Cotizar por WhatsApp", "href": "https://wa.me/525582088841"}, "greeting": "¡Hola! Soy el asistente de Galery Cake's. Pregúntame por nuestras especialidades, el horario, la promoción de miércoles o cómo cotizar tu pastel — o toca una sugerencia.", "fallback": "Eso no lo tengo a la mano — escríbenos por WhatsApp al +52 55 8208 8841 y te ayudamos.", "chips": ["¿Cuál es el horario?", "Especialidades", "¿Cómo cotizo un pastel?", "Promoción de miércoles", "¿Dónde están?"], "items": [{"k": ["cajeta"], "a": "Pastel de Cajeta: suave, cremosito, con abundante cajeta, nuez y fresas frescas — una delicia que conquista desde la primera rebanada."}, {"k": ["red velvet"], "a": "Pastel Red Velvet: con su hermoso color rojo, una cobertura cremosa y delicadas rosas de betún, decorado con frutos rojos."}, {"k": ["baileys"], "a": "Pastel de Baileys y Tres Leches: esponjoso pan súper humedecido en 3 leches, relleno de crema de Baileys con trocitos de nuez y cereal confitado."}, {"k": ["trufa"], "a": "Pastel de Trufa de Chocolate: suave cobertura de chocolate, coronado con trufas espolvoreadas con fino cacao y crocantes láminas de chocolate puro."}, {"k": ["gelatina", "pinon"], "a": "Gelatinas: la Mosaico (una explosión de colores y sabores, con el toque fresco de frutos rojos) y la de Piñón con Queso (receta completamente artesanal, con piñón natural y textura ultra cremosa — rinde para 15 personas)."}, {"k": ["tematico", "futbol"], "a": "Pasteles temáticos: como nuestro pastel futbolero, con una cancha llena de detalles, balones y hasta su propia portería."}, {"k": ["tres leches"], "a": "Los miércoles: rebanadas de pastel de tres leches 3×2 por $100 (promoción sujeta a disponibilidad). Y nuestro Pastel de Baileys y Tres Leches es una de las especialidades de la casa."}], "intents": [{"k": ["hola", "buenas", "buenos"], "g": 1, "a": "¡Hola! Pregúntame por nuestras especialidades, el horario o cómo cotizar tu pastel."}, {"k": ["horario", "abren", "abierto", "hora"], "a": "Abrimos todos los días de 8:00 a 21:00."}, {"k": ["especialidad", "menu", "carta", "saben hacer", "ofrecen", "pasteles"], "a": "Nuestras especialidades: Pastel de Cajeta, Pastel Red Velvet, Pastel de Baileys y Tres Leches, Pastel de Trufa de Chocolate, Gelatina Mosaico, Gelatina de Piñón con Queso y pasteles temáticos. Pregunta por disponibilidad por WhatsApp.", "link": {"t": "Preguntar por WhatsApp", "href": "https://wa.me/525582088841"}}, {"k": ["cotiz", "precio", "cuesta", "pedido", "pedir", "quiero", "encarg"], "a": "Cada pastel se cotiza según el diseño: dinos cómo imaginas tu pastel por WhatsApp y lo hacemos realidad. Con 18 años de experiencia, ¡hacemos magia con cada bocado!", "link": {"t": "Cotizar por WhatsApp", "href": "https://wa.me/525582088841"}}, {"k": ["promocion", "miercoles", "oferta", "rebanada"], "a": "Miércoles de rebanadas: pastel de tres leches 3×2 por $100. Corre porque vuelan — promoción sujeta a disponibilidad."}, {"k": ["mesa de postres", "mesas"], "a": "Hacemos mesas de postres para celebrar a lo grande, con diseños personalizados para cada ocasión. Cotiza la tuya por WhatsApp.", "link": {"t": "Cotizar por WhatsApp", "href": "https://wa.me/525582088841"}}, {"k": ["entremet", "postre"], "a": "Nos especializamos en postres y entremets para consentirte, compartir y endulzar tu día."}, {"k": ["donde", "ubicacion", "direccion", "llegar", "estan"], "a": "Estamos en Av. Pípila esq. Juan de la Barrera, Local 3, Col. Lomas de Zaragoza, Iztapalapa, CDMX."}, {"k": ["contacto", "telefono", "whatsapp", "numero"], "a": "WhatsApp: +52 55 8208 8841. También estamos en Facebook como Galery Cake's.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/525582088841"}}, {"k": ["gracias"], "a": "¡Con gusto! Te esperamos en Galery Cake's."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+
+
+  /* Open-now indicator — computed from the hours published on this page */
+  var SCHED={"tz": "America/Mexico_City", "days": {"0": [[480, 1260, "8:00", "21:00"]], "1": [[480, 1260, "8:00", "21:00"]], "2": [[480, 1260, "8:00", "21:00"]], "3": [[480, 1260, "8:00", "21:00"]], "4": [[480, 1260, "8:00", "21:00"]], "5": [[480, 1260, "8:00", "21:00"]], "6": [[480, 1260, "8:00", "21:00"]]}};
+  var OTXT={"open": "Abierto ahora · hasta las {x}", "closed": "Cerrado · abre a las {x}", "closedTomorrow": "Cerrado · abre mañana a las {x}", "closedDay": "Cerrado · abre el {d} a las {x}", "days": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"]};
+  (function(){
+    var el=document.getElementById('opennow');if(!el)return;
+    function bizNow(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}
+    var now=bizNow(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes(),st=null,i,s,list,off,d;
+    list=SCHED.days[(day+6)%7]||[];
+    for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}
+    if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}
+    if(!st){
+      for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];
+        for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}
+    }
+    if(!st)return;
+    var txt;
+    if(st.open)txt=OTXT.open.replace('{x}',st.until);
+    else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);
+    else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);
+    else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);
+    el.querySelector('.otext').textContent=txt;
+    el.classList.add(st.open?'open':'closed');
+    el.hidden=false;
+  })();
+
 })();
 </script>
 </body>

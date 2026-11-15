@@ -125,6 +125,40 @@
     .rv{opacity:1 !important;transform:none !important}
     .card:hover,.menu-card:hover,.btn:hover{transform:none}
   }
+
+  /* ---------- AI assistant demo (wow) ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--navy)TXT;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--navy);color:var(--navy)TXT;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:var(--sand);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--navy);color:var(--navy)TXT;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--navy);color:var(--navy)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--navy);color:var(--navy)TXT;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  /* ---------- Tap-to-order (wow) ---------- */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:6px 12px;border:1.5px solid var(--coral);color:var(--coral2);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--coral);color:#fff;transform:translateY(-1px)}
+
+  .dish .ord{display:flex;width:max-content;margin-top:9px}
+  /* ---------- Map (wow) ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
 </style>
 </head>
 <body>
@@ -167,27 +201,27 @@
       <div class="menu-card rv">
         <h3>Del mar</h3>
         <p class="note">Para los amantes del ceviche en todas sus formas.</p>
-        <div class="dish"><b>Ceviche clásico</b><span>El de siempre, fresco y al punto.</span></div>
-        <div class="dish"><b>Ceviche carretillero</b><span>Con su chicharrón crujiente.</span></div>
-        <div class="dish"><b>Ceviche mixto</b></div>
-        <div class="dish"><b>Tiradito</b><span>Delicado y fresco.</span></div>
-        <div class="dish"><b>Leche de tigre</b></div>
+        <div class="dish"><b>Ceviche clásico</b><span>El de siempre, fresco y al punto.</span><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Ceviche%20cl%C3%A1sico">Pedir</a></div>
+        <div class="dish"><b>Ceviche carretillero</b><span>Con su chicharrón crujiente.</span><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Ceviche%20carretillero">Pedir</a></div>
+        <div class="dish"><b>Ceviche mixto</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Ceviche%20mixto">Pedir</a></div>
+        <div class="dish"><b>Tiradito</b><span>Delicado y fresco.</span><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Tiradito">Pedir</a></div>
+        <div class="dish"><b>Leche de tigre</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Leche%20de%20tigre">Pedir</a></div>
       </div>
       <div class="menu-card rv">
         <h3>Criollo</h3>
         <p class="note">Especialidades criollas llenas de sabor.</p>
-        <div class="dish"><b>Arroz con pato</b></div>
-        <div class="dish"><b>Lomo saltado</b></div>
-        <div class="dish"><b>Tacu tacu</b><span>Lleno de sabor.</span></div>
-        <div class="dish"><b>Causas</b></div>
+        <div class="dish"><b>Arroz con pato</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Arroz%20con%20pato">Pedir</a></div>
+        <div class="dish"><b>Lomo saltado</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Lomo%20saltado">Pedir</a></div>
+        <div class="dish"><b>Tacu tacu</b><span>Lleno de sabor.</span><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Tacu%20tacu">Pedir</a></div>
+        <div class="dish"><b>Causas</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Causas">Pedir</a></div>
       </div>
       <div class="menu-card rv">
         <h3>Santa Desayunos</h3>
         <p class="note">Cada desayuno incluye café caliente y jugo a elección. Jugos de fresa, piña y papaya.</p>
-        <div class="dish"><b>Pan con pejerrey frito</b></div>
-        <div class="dish"><b>Pan con lomo al jugo</b></div>
-        <div class="dish"><b>Pan con chancho al cilindro</b></div>
-        <div class="dish"><b>Pan con huevera frita</b></div>
+        <div class="dish"><b>Pan con pejerrey frito</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Pan%20con%20pejerrey%20frito">Pedir</a></div>
+        <div class="dish"><b>Pan con lomo al jugo</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Pan%20con%20lomo%20al%20jugo">Pedir</a></div>
+        <div class="dish"><b>Pan con chancho al cilindro</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Pan%20con%20chancho%20al%20cilindro">Pedir</a></div>
+        <div class="dish"><b>Pan con huevera frita</b><a class="ord" href="https://wa.me/51979303054?text=Hola%2C%20quiero%20pedir%3A%20Pan%20con%20huevera%20frita">Pedir</a></div>
       </div>
     </div>
     <p class="fineprint rv">Platos tomados de las publicaciones de Santa Sazón en Facebook e Instagram. La carta y los precios pueden variar — confírmalos por WhatsApp.</p>
@@ -231,6 +265,10 @@
   </section>
 </div>
 
+<div class="mapsec">
+  <h2>Cómo llegar</h2>
+  <div class="mapframe"><iframe title="Map — Santa Sazón" src="https://www.google.com/maps?q=Santa%20Saz%C3%B3n%2C%20Av.%2026%20de%20Noviembre%20331%2C%20Villa%20Mar%C3%ADa%20del%20Triunfo%2C%20Lima%2C%20Per%C3%BA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
 <footer>
   Santa Sazón — Restaurante y Cevichería · Villa María del Triunfo, Lima<br><br>
   Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de Santa Sazón.
@@ -238,6 +276,15 @@
 
 <div class="sticky"><a href="https://wa.me/51979303054">Reservas y delivery — WhatsApp</a></div>
 
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Santa Sazón">
+    <div class="chatw-head"><div><b>Asistente Santa Sazón</b><small>Asistente de demostración · parte de esta página de demostración</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
 <script>
 (function(){
   var header=document.getElementById('site-header');
@@ -256,6 +303,53 @@
     });
   },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   items.forEach(function(el){io.observe(el);});
+})();
+</script>
+<script>
+(function(){
+
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "Escribir por WhatsApp", "href": "https://wa.me/51979303054"}, "greeting": "¡Hola! Soy el asistente de Santa Sazón. Pregúntame por la carta, reservas, delivery o nuestro salón de eventos — o toca una sugerencia.", "fallback": "Eso no lo tengo a la mano — escríbenos por WhatsApp al 979 303 054 y te ayudamos.", "chips": ["Ver la carta", "Quiero reservar", "¿Hacen delivery?", "¿Dónde están?", "Salón de eventos"], "items": [{"k": ["ceviche"], "a": "Ceviches: clásico (el de siempre, fresco y al punto), carretillero (con su chicharrón crujiente) y mixto. También tenemos tiradito y leche de tigre."}, {"k": ["tiradito"], "a": "Tiradito: delicado y fresco, en nuestra carta del mar."}, {"k": ["leche de tigre"], "a": "Leche de tigre — en nuestra carta del mar."}, {"k": ["arroz con pato"], "a": "Arroz con pato — de nuestras especialidades criollas."}, {"k": ["lomo saltado"], "a": "Lomo saltado — de nuestras especialidades criollas."}, {"k": ["tacu tacu"], "a": "Tacu tacu, lleno de sabor — de nuestras especialidades criollas."}, {"k": ["causa"], "a": "Causas — en nuestra carta criolla."}, {"k": ["desayuno", "pejerrey", "huevera", "chancho"], "a": "Santa Desayunos: pan con pejerrey frito, pan con lomo al jugo, pan con chancho al cilindro y pan con huevera frita. Cada desayuno incluye café caliente y jugo a elección (fresa, piña o papaya)."}], "intents": [{"k": ["hola", "buenas", "buenos"], "g": 1, "a": "¡Hola! Pregúntame por la carta, reservas, delivery o el salón de eventos."}, {"k": ["carta", "menu", "comer", "platos", "comida"], "a": "En la carta: del mar (ceviche clásico, carretillero, mixto, tiradito y leche de tigre), criollo (arroz con pato, lomo saltado, tacu tacu y causas) y Santa Desayunos. Consulta precios y disponibilidad por WhatsApp.", "link": {"t": "Consultar por WhatsApp", "href": "https://wa.me/51979303054"}}, {"k": ["precio", "cuesta", "vale", "cuanto"], "a": "Los precios se confirman por WhatsApp — la carta y los precios pueden variar.", "link": {"t": "Consultar por WhatsApp", "href": "https://wa.me/51979303054"}}, {"k": ["reserv", "mesa"], "a": "Para reservar tu mesa con tiempo, escríbenos por WhatsApp al 979 303 054 — las ubicaciones frente a la pantalla vuelan.", "link": {"t": "Reservar por WhatsApp", "href": "https://wa.me/51979303054"}}, {"k": ["delivery", "domicilio", "llevar", "pedido", "pedir"], "a": "Sí, hacemos delivery: haz tu pedido por WhatsApp al 979 303 054 y te lo llevamos.", "link": {"t": "Pedir por WhatsApp", "href": "https://wa.me/51979303054"}}, {"k": ["evento", "salon", "fiesta", "celebr"], "a": "Contamos con salón de eventos: celebra con nosotros y separa tu mesa con tiempo. Escríbenos por WhatsApp para coordinar.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/51979303054"}}, {"k": ["donde", "ubicacion", "direccion", "llegar", "estan"], "a": "Estamos en Av. 26 de Noviembre 331, Nueva Esperanza, Villa María del Triunfo, Lima 15817."}, {"k": ["horario", "abren", "abierto", "hora"], "a": "Consulta nuestro horario por WhatsApp al 979 303 054 y te confirmamos al momento, junto con tu reserva.", "link": {"t": "Consultar por WhatsApp", "href": "https://wa.me/51979303054"}}, {"k": ["futbol", "partido", "pantalla"], "a": "Sí — vive la emoción del fútbol con nosotros, con pantallas listas y el mejor ambiente."}, {"k": ["contacto", "telefono", "whatsapp", "numero", "instagram"], "a": "WhatsApp: 979 303 054 · Instagram: @santasazonrestaurante.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/51979303054"}}, {"k": ["gracias"], "a": "¡Con gusto! Te esperamos en Santa Sazón."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+
 })();
 </script>
 </body>

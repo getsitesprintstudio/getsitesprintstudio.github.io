@@ -103,6 +103,12 @@
     *,*::before,*::after{transition:none!important;animation:none!important}
     .rv{opacity:1!important;transform:none!important}
   }
+
+  /* ---------- Map (wow) ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--cream2);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -130,7 +136,7 @@
     <h2 class="rv">From music shop to music pub</h2>
     <p class="sub rv">Few Dublin pubs carry a story like this one.</p>
     <div class="story">
-      <div class="card rv"><div class="yr">1834</div><h3>It began with instruments</h3><p>McNeills started life on Capel Street as a music-instrument shop — selling the very instruments that would one day fill the pub with sound.</p></div>
+      <div class="card rv"><div class="yr"><span class="count" data-count="1834">1834</span></div><h3>It began with instruments</h3><p>McNeills started life on Capel Street as a music-instrument shop — selling the very instruments that would one day fill the pub with sound.</p></div>
       <div class="card rv"><div class="yr">Today</div><h3>The music never left</h3><p>The shop became a public house, but the tradition stayed. McNeills is known for its live traditional sessions — musicians, tunes, and a proper Dublin welcome.</p></div>
     </div>
   </section>
@@ -173,6 +179,10 @@
   </section>
 </div>
 
+<div class="mapsec">
+  <h2>Find us</h2>
+  <div class="mapframe"><iframe title="Map — McNeills Pub" src="https://www.google.com/maps?q=McNeills%20Pub%2C%20Capel%20Street%2C%20Dublin%2C%20Ireland&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
 <footer>
   McNeills Pub · Capel Street, Dublin<br><br>
   Concept preview built by SiteSprint Studio — this is not the live website of McNeills Pub.
@@ -192,6 +202,35 @@
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+
+  /* Animated counters — numbers already published on this page */
+  var cEls=document.querySelectorAll('.count');
+  if(cEls.length){
+    var reduceC=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduceC&&('IntersectionObserver' in window)){
+      cEls.forEach(function(el){el.textContent='0';});
+      var cio=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting)return;
+          cio.unobserve(e.target);
+          var el=e.target,tg=parseFloat(el.getAttribute('data-count')),t0=null;
+          function step(ts){
+            if(!t0)t0=ts;
+            var p=Math.min(1,(ts-t0)/1300),ease=1-Math.pow(1-p,3);
+            el.textContent=String(Math.round(tg*ease));
+            if(p<1)requestAnimationFrame(step);else el.textContent=String(tg);
+          }
+          requestAnimationFrame(step);
+        });
+      },{threshold:.4});
+      cEls.forEach(function(el){cio.observe(el);});
+    }
+  }
+
 })();
 </script>
 </body>

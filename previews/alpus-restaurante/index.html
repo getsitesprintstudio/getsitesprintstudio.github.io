@@ -94,6 +94,55 @@
     .rv{opacity:1!important;transform:none!important}
     .btn:hover,.card:hover,.menu-card:hover,.review:hover,.sticky a:hover{transform:none}
   }
+
+  /* ---------- AI assistant demo (wow) ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--amber)TXT;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--amber);color:var(--amber)TXT;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:var(--panel);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--amber);color:var(--amber)TXT;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--amber);color:var(--amber)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--amber);color:var(--amber)TXT;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  /* ---------- Tap-to-order (wow) ---------- */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:6px 12px;border:1.5px solid var(--amber);color:var(--amber);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--amber);color:#14100d;transform:translateY(-1px)}
+
+  .dish .ord{display:flex;width:max-content;margin-top:9px}
+  /* ---------- Open-now indicator (wow) ---------- */
+  .hdr-inner,.header-in{flex-wrap:wrap}
+  .opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;white-space:nowrap;min-height:36px}
+  .opennow .odot{width:8px;height:8px;border-radius:50%;background:#b9b9b9;flex:none}
+  .opennow.open .odot{background:#27ae60;box-shadow:0 0 0 3px rgba(39,174,96,.2)}
+  .opennow.closed .odot{background:#d35450;box-shadow:0 0 0 3px rgba(211,84,80,.16)}
+
+  /* ---------- Map (wow) ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
+  /* ---------- Instagram band (wow) ---------- */
+  .igband{max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,72px) 20px 0}
+  .igband-in{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:18px;padding:22px 26px;background:var(--card)}
+  .igband .igt{font-size:16px;font-weight:700}
+  .igband .igh{color:var(--amber);text-decoration:none;font-weight:700}
+  .igband a.igbtn{display:inline-flex;align-items:center;min-height:44px;background:var(--amber);color:#14100d;font-weight:700;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:14.5px;transition:transform .22s ease,box-shadow .22s ease}
+  .igband a.igbtn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+
 </style>
 </head>
 <body>
@@ -101,6 +150,7 @@
   <div class="header-in">
     <div class="brand">ALPUS <span>1983</span></div>
     <div class="pill">San Cristóbal · Medellín</div>
+    <span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
   </div>
 </header>
 
@@ -141,47 +191,47 @@
       <div class="menu-card">
         <h3>Para compartir</h3>
         <p class="note">Los favoritos de la casa, al centro de la mesa.</p>
-        <div class="dish"><b>Un Metro de Chicharrón</b><span>Un chicharrón de un metro bañado en salsa BBQ, acompañado de queso crema, puerro, papitas, arepa con queso y ensalada de la casa. También por mitad (50 cm).</span></div>
-        <div class="dish"><b>Picada de Cerdo Alpus</b><span>Chorizo bañado en BBQ de tamarindo, chicharrón ahumado, piña asada, patacones con guacamole, papas rústicas y nuestras salsas de la casa.</span></div>
-        <div class="dish"><b>Picada de Pollo</b><span>Tenders apanados, papas, maíz, piña asada, patacones y salsas.</span></div>
-        <div class="dish"><b>Molcajete Molotov</b><span>“Nuestro Molcajete Molotov es puro power”: guacamole, nachos, pico de gallo, chicharrón y sour cream, capa por capa.</span></div>
+        <div class="dish"><b>Un Metro de Chicharrón</b><span>Un chicharrón de un metro bañado en salsa BBQ, acompañado de queso crema, puerro, papitas, arepa con queso y ensalada de la casa. También por mitad (50 cm).</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Un%20Metro%20de%20Chicharr%C3%B3n">Pedir</a></div>
+        <div class="dish"><b>Picada de Cerdo Alpus</b><span>Chorizo bañado en BBQ de tamarindo, chicharrón ahumado, piña asada, patacones con guacamole, papas rústicas y nuestras salsas de la casa.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Picada%20de%20Cerdo%20Alpus">Pedir</a></div>
+        <div class="dish"><b>Picada de Pollo</b><span>Tenders apanados, papas, maíz, piña asada, patacones y salsas.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Picada%20de%20Pollo">Pedir</a></div>
+        <div class="dish"><b>Molcajete Molotov</b><span>“Nuestro Molcajete Molotov es puro power”: guacamole, nachos, pico de gallo, chicharrón y sour cream, capa por capa.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Molcajete%20Molotov">Pedir</a></div>
       </div>
       <div class="menu-card">
         <h3>De la parrilla</h3>
         <p class="note">Al carbón, como debe ser.</p>
-        <div class="dish"><b>Lomo de Res a la Parrilla</b><span>Acompañado de chimichurri artesanal, papas rústicas, ensalada de la casa y arepita con queso.</span></div>
-        <div class="dish"><b>Costillas al Barril</b><span>De nuestra nueva carta.</span></div>
-        <div class="dish"><b>Pollo Tropical</b><span>Pollo con una deliciosa salsa de maracuyá y mango, con tocineta crocante.</span></div>
-        <div class="dish"><b>Pinchos</b><span>Cada pincho se mueve al compás de las brasas.</span></div>
+        <div class="dish"><b>Lomo de Res a la Parrilla</b><span>Acompañado de chimichurri artesanal, papas rústicas, ensalada de la casa y arepita con queso.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Lomo%20de%20Res%20a%20la%20Parrilla">Pedir</a></div>
+        <div class="dish"><b>Costillas al Barril</b><span>De nuestra nueva carta.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Costillas%20al%20Barril">Pedir</a></div>
+        <div class="dish"><b>Pollo Tropical</b><span>Pollo con una deliciosa salsa de maracuyá y mango, con tocineta crocante.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Pollo%20Tropical">Pedir</a></div>
+        <div class="dish"><b>Pinchos</b><span>Cada pincho se mueve al compás de las brasas.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Pinchos">Pedir</a></div>
       </div>
       <div class="menu-card">
         <h3>Con nombre de rock</h3>
         <p class="note">Platos que llevan nombres que han marcado generaciones.</p>
-        <div class="dish"><b>Arepa Nirvana</b></div>
-        <div class="dish"><b>Tacos The Rolling Stones</b><span>Unos tacos intensos, inolvidables.</span></div>
-        <div class="dish"><b>Kebab Jim Morrison</b></div>
-        <div class="dish"><b>Wrap Iron Maiden</b><span>Ropa vieja, cebolla caramelizada, pimentones asados y piña caramelizada.</span></div>
-        <div class="dish"><b>Hamburguesa Michael Jackson</b><span>Solo en Alpus.</span></div>
+        <div class="dish"><b>Arepa Nirvana</b><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Arepa%20Nirvana">Pedir</a></div>
+        <div class="dish"><b>Tacos The Rolling Stones</b><span>Unos tacos intensos, inolvidables.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Tacos%20The%20Rolling%20Stones">Pedir</a></div>
+        <div class="dish"><b>Kebab Jim Morrison</b><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Kebab%20Jim%20Morrison">Pedir</a></div>
+        <div class="dish"><b>Wrap Iron Maiden</b><span>Ropa vieja, cebolla caramelizada, pimentones asados y piña caramelizada.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Wrap%20Iron%20Maiden">Pedir</a></div>
+        <div class="dish"><b>Hamburguesa Michael Jackson</b><span>Solo en Alpus.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Hamburguesa%20Michael%20Jackson">Pedir</a></div>
       </div>
       <div class="menu-card">
         <h3>Sabor paisa</h3>
         <p class="note">La tradición antioqueña, como en casa.</p>
-        <div class="dish"><b>Arepa Paisa</b><span>Nuestra arepa paisa, llena de sabor.</span></div>
-        <div class="dish"><b>Cazuela Paisa</b><span>Frijolitos, arroz, maduritos, chicharrón, chorizo, aguacate y fosforitos. Fines de semana desde el mediodía — incluye jugo, también a domicilio.</span></div>
+        <div class="dish"><b>Arepa Paisa</b><span>Nuestra arepa paisa, llena de sabor.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Arepa%20Paisa">Pedir</a></div>
+        <div class="dish"><b>Cazuela Paisa</b><span>Frijolitos, arroz, maduritos, chicharrón, chorizo, aguacate y fosforitos. Fines de semana desde el mediodía — incluye jugo, también a domicilio.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Cazuela%20Paisa">Pedir</a></div>
       </div>
       <div class="menu-card">
         <h3>Pizzas</h3>
         <p class="note">¿Cuál te antojaste más?</p>
-        <div class="dish"><b>Pizza Alpus</b><span>Parmesano, sour cream, tomate caramelizado, pepperoni, albahaca y queso.</span></div>
-        <div class="dish"><b>Pizza Pollo BBQ</b><span>Pollo BBQ, maicitos, tocineta y queso.</span></div>
+        <div class="dish"><b>Pizza Alpus</b><span>Parmesano, sour cream, tomate caramelizado, pepperoni, albahaca y queso.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Pizza%20Alpus">Pedir</a></div>
+        <div class="dish"><b>Pizza Pollo BBQ</b><span>Pollo BBQ, maicitos, tocineta y queso.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Pizza%20Pollo%20BBQ">Pedir</a></div>
       </div>
       <div class="menu-card">
         <h3>Cócteles y postres</h3>
         <p class="note">12 cócteles de la casa, dibujados a mano por nosotros — sin IA.</p>
-        <div class="dish"><b>Los 12 cócteles</b><span>Cantarito, Paloma, Guavas Hell, Martini Pornstar, Tentación, Gin and Tonic, Tequila Sunrise, Moscow Mule, Margarita, Piña Colada, Mojito y Cocoloco. También sangría y vino caliente.</span></div>
-        <div class="dish"><b>Guavas Hell</b><span>Ron infusionado en bocadillo, triple sec, limón mandarino y un toque de jengibre.</span></div>
-        <div class="dish"><b>Sin alcohol</b><span>Virgen Sour y Guanabanón.</span></div>
-        <div class="dish"><b>Postres</b><span>Tiramisú de Oreo, Red Velvet y malteada de Oreo.</span></div>
+        <div class="dish"><b>Los 12 cócteles</b><span>Cantarito, Paloma, Guavas Hell, Martini Pornstar, Tentación, Gin and Tonic, Tequila Sunrise, Moscow Mule, Margarita, Piña Colada, Mojito y Cocoloco. También sangría y vino caliente.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Los%2012%20c%C3%B3cteles">Pedir</a></div>
+        <div class="dish"><b>Guavas Hell</b><span>Ron infusionado en bocadillo, triple sec, limón mandarino y un toque de jengibre.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Guavas%20Hell">Pedir</a></div>
+        <div class="dish"><b>Sin alcohol</b><span>Virgen Sour y Guanabanón.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Sin%20alcohol">Pedir</a></div>
+        <div class="dish"><b>Postres</b><span>Tiramisú de Oreo, Red Velvet y malteada de Oreo.</span><a class="ord" href="https://wa.me/573117397623?text=Hola%2C%20quiero%20pedir%3A%20Postres">Pedir</a></div>
       </div>
     </div>
     <p class="fineprint">Platos y bebidas tomados de las publicaciones de Alpus en Instagram. La carta completa, con precios, se pide por WhatsApp.</p>
@@ -190,7 +240,7 @@
   <section class="rv">
     <div class="eyebrow">03</div>
     <h2>Lo que dicen nuestros clientes</h2>
-    <div class="rating-big">★ 4.7 <span style="font-size:16px;color:var(--mut)">— 187 reseñas en Google</span></div>
+    <div class="rating-big">★ 4.7 <span style="font-size:16px;color:var(--mut)">— <span class="count" data-count="187">187</span> reseñas en Google</span></div>
     <p class="sub">Reseñas reales de clientes, tal como las publicaron.</p>
     <div class="reviews">
       <div class="review">
@@ -252,12 +302,26 @@
   </section>
 </div>
 
+<div class="igband"><div class="igband-in"><div class="igt">Síguenos en Instagram <a class="igh" href="https://www.instagram.com/alpusrestaurante1983">@alpusrestaurante1983</a></div><a class="igbtn" href="https://www.instagram.com/alpusrestaurante1983">Seguir</a></div></div>
+<div class="mapsec">
+  <h2>Cómo llegar</h2>
+  <div class="mapframe"><iframe title="Map — ALPUS Restaurante Bar" src="https://www.google.com/maps?q=ALPUS%20Restaurante%20Bar%2C%20Calle%2062%20%23129-32%2C%20San%20Crist%C3%B3bal%2C%20Medell%C3%ADn%2C%20Colombia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
 <footer>
   ALPUS Restaurante Bar · San Cristóbal, Medellín, Colombia<br><br>
   Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de ALPUS Restaurante Bar.
 </footer>
 
 <div class="sticky"><a href="https://wa.me/573117397623">Reservas y domicilios — WhatsApp</a></div>
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente ALPUS">
+    <div class="chatw-head"><div><b>Asistente ALPUS</b><small>Asistente de demostración · parte de esta página de demostración</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
 <script>
 (function(){
   var header=document.getElementById('siteHeader');
@@ -276,6 +340,104 @@
     });
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   items.forEach(function(el){io.observe(el)});
+})();
+</script>
+<script>
+(function(){
+
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573117397623"}, "greeting": "¡Hola! Soy el asistente de ALPUS. Pregúntame por el horario, la carta, domicilios o reservas — o toca una sugerencia.", "fallback": "Eso no lo tengo a la mano — escríbenos por WhatsApp al +57 311 739 7623 y te ayudamos.", "chips": ["¿Cuál es el horario?", "Ver la carta", "¿Hacen domicilios?", "Quiero reservar", "¿Dónde están?"], "items": [{"k": ["chicharron", "metro de"], "a": "Un Metro de Chicharrón: un chicharrón de un metro bañado en salsa BBQ, acompañado de queso crema, puerro, papitas, arepa con queso y ensalada de la casa. También por mitad (50 cm). Su precio está en la carta completa, que te enviamos por WhatsApp.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573117397623"}}, {"k": ["guanabanon"], "a": "El Guanabanón es nuestra bebida insignia: nació con Alpus y sigue siendo parte de nuestra identidad. También está en la lista sin alcohol, junto al Virgen Sour."}, {"k": ["molcajete"], "a": "Molcajete Molotov: guacamole, nachos, pico de gallo, chicharrón y sour cream, capa por capa."}, {"k": ["cazuela"], "a": "Cazuela Paisa: frijolitos, arroz, maduritos, chicharrón, chorizo, aguacate y fosforitos. Fines de semana desde el mediodía — incluye jugo, también a domicilio."}, {"k": ["pizza"], "a": "Pizzas: la Pizza Alpus (parmesano, sour cream, tomate caramelizado, pepperoni, albahaca y queso) y la Pizza Pollo BBQ (pollo BBQ, maicitos, tocineta y queso)."}, {"k": ["coctel", "cocktail", "trago"], "a": "Tenemos 12 cócteles de la casa: Cantarito, Paloma, Guavas Hell, Martini Pornstar, Tentación, Gin and Tonic, Tequila Sunrise, Moscow Mule, Margarita, Piña Colada, Mojito y Cocoloco. También sangría y vino caliente."}, {"k": ["postre", "dulce"], "a": "De postre: Tiramisú de Oreo, Red Velvet y malteada de Oreo."}, {"k": ["nirvana"], "a": "Arepa Nirvana — uno de nuestros platos con nombre de rock, como los Tacos The Rolling Stones, el Kebab Jim Morrison, el Wrap Iron Maiden y la Hamburguesa Michael Jackson."}, {"k": ["lomo"], "a": "Lomo de Res a la Parrilla, acompañado de chimichurri artesanal, papas rústicas, ensalada de la casa y arepita con queso."}, {"k": ["picada"], "a": "Picadas: la Picada de Cerdo Alpus (chorizo en BBQ de tamarindo, chicharrón ahumado, piña asada, patacones con guacamole, papas rústicas y salsas de la casa) y la Picada de Pollo (tenders apanados, papas, maíz, piña asada, patacones y salsas)."}], "intents": [{"k": ["hola", "buenas", "buenos"], "g": 1, "a": "¡Hola! Pregúntame por el horario, la carta, domicilios o reservas."}, {"k": ["horario", "abren", "abierto", "cierran", "hora"], "a": "Abrimos lunes a jueves y domingo de 6:00 p. m. a 11:30 p. m., y viernes y sábado de 6:00 p. m. a 1:30 a. m. Los fines de semana también hay almuerzos desde las 12:00 del mediodía."}, {"k": ["carta", "menu", "comer", "platos", "comida"], "a": "En la carta hay para compartir (Un Metro de Chicharrón, Picada Alpus, Molcajete Molotov), de la parrilla, platos con nombre de rock (Arepa Nirvana, Tacos The Rolling Stones), sabor paisa, pizzas y 12 cócteles. La carta completa, con precios, se pide por WhatsApp.", "link": {"t": "Pedir la carta por WhatsApp", "href": "https://wa.me/573117397623"}}, {"k": ["precio", "cuesta", "vale", "cuanto"], "a": "Los precios están en la carta completa, que te enviamos por WhatsApp.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573117397623"}}, {"k": ["domicilio", "delivery", "llevar", "casa"], "a": "Sí, hacemos domicilios: escribe al WhatsApp, pide la carta, elige tu plato favorito y te lo llevamos a casa.", "link": {"t": "Pedir por WhatsApp", "href": "https://wa.me/573117397623"}}, {"k": ["reserv", "mesa", "celebr"], "a": "Para reservar tu momento especial, escríbenos por WhatsApp al +57 311 739 7623.", "link": {"t": "Reservar por WhatsApp", "href": "https://wa.me/573117397623"}}, {"k": ["donde", "ubicacion", "direccion", "llegar", "estan"], "a": "Estamos en la Calle 62 # 129-32, San Cristóbal, Medellín, Antioquia."}, {"k": ["musica", "vivo", "show", "concierto"], "a": "Tenemos música en vivo: noches de rock, baladas y pop en español, y son cubano — con artistas invitados en vivo."}, {"k": ["contacto", "telefono", "correo", "instagram", "whatsapp", "numero"], "a": "WhatsApp: +57 311 739 7623 · Correo: alpusrestaurantebar1983@gmail.com · Instagram: @alpusrestaurante1983.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/573117397623"}}, {"k": ["gracias"], "a": "¡Con gusto! Te esperamos en Alpus."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+
+
+  /* Open-now indicator — computed from the hours published on this page */
+  var SCHED={"tz": "America/Bogota", "days": {"0": [[720, 1410, "12:00 del mediod\u00eda", "11:30 p. m."]], "1": [[1080, 1410, "6:00 p. m.", "11:30 p. m."]], "2": [[1080, 1410, "6:00 p. m.", "11:30 p. m."]], "3": [[1080, 1410, "6:00 p. m.", "11:30 p. m."]], "4": [[1080, 1410, "6:00 p. m.", "11:30 p. m."]], "5": [[1080, 1530, "6:00 p. m.", "1:30 a. m."]], "6": [[720, 1530, "12:00 del mediod\u00eda", "1:30 a. m."]]}};
+  var OTXT={"open": "Abierto ahora · hasta las {x}", "closed": "Cerrado · abre a las {x}", "closedTomorrow": "Cerrado · abre mañana a las {x}", "closedDay": "Cerrado · abre el {d} a las {x}", "days": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"]};
+  (function(){
+    var el=document.getElementById('opennow');if(!el)return;
+    function bizNow(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}
+    var now=bizNow(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes(),st=null,i,s,list,off,d;
+    list=SCHED.days[(day+6)%7]||[];
+    for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}
+    if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}
+    if(!st){
+      for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];
+        for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}
+    }
+    if(!st)return;
+    var txt;
+    if(st.open)txt=OTXT.open.replace('{x}',st.until);
+    else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);
+    else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);
+    else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);
+    el.querySelector('.otext').textContent=txt;
+    el.classList.add(st.open?'open':'closed');
+    el.hidden=false;
+  })();
+
+
+  /* Animated counters — numbers already published on this page */
+  var cEls=document.querySelectorAll('.count');
+  if(cEls.length){
+    var reduceC=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduceC&&('IntersectionObserver' in window)){
+      cEls.forEach(function(el){el.textContent='0';});
+      var cio=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting)return;
+          cio.unobserve(e.target);
+          var el=e.target,tg=parseFloat(el.getAttribute('data-count')),t0=null;
+          function step(ts){
+            if(!t0)t0=ts;
+            var p=Math.min(1,(ts-t0)/1300),ease=1-Math.pow(1-p,3);
+            el.textContent=String(Math.round(tg*ease));
+            if(p<1)requestAnimationFrame(step);else el.textContent=String(tg);
+          }
+          requestAnimationFrame(step);
+        });
+      },{threshold:.4});
+      cEls.forEach(function(el){cio.observe(el);});
+    }
+  }
+
 })();
 </script>
 </body>

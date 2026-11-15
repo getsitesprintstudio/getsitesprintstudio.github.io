@@ -91,6 +91,47 @@
     .rv{opacity:1!important;transform:none!important}
     .btn:hover,.card:hover,.offer .ocard:hover,.review:hover,.sticky a:hover{transform:none}
   }
+
+  /* ---------- AI assistant demo (wow) ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:var(--terra)TXT;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--terra);color:var(--terra)TXT;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:var(--cream);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--terra);color:var(--terra)TXT;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--terra);color:var(--terra)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--terra);color:var(--terra)TXT;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  /* ---------- Tap-to-order (wow) ---------- */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:6px 12px;border:1.5px solid var(--terra);color:var(--terra2);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--terra);color:#fff;transform:translateY(-1px)}
+
+  .ocard .ord{margin-top:14px}
+  /* ---------- Open-now indicator (wow) ---------- */
+  .hdr-inner,.header-in{flex-wrap:wrap}
+  .opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;white-space:nowrap;min-height:36px}
+  .opennow .odot{width:8px;height:8px;border-radius:50%;background:#b9b9b9;flex:none}
+  .opennow.open .odot{background:#27ae60;box-shadow:0 0 0 3px rgba(39,174,96,.2)}
+  .opennow.closed .odot{background:#d35450;box-shadow:0 0 0 3px rgba(211,84,80,.16)}
+
+  /* ---------- Map (wow) ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
 </style>
 </head>
 <body>
@@ -98,6 +139,7 @@
   <div class="header-in">
     <div class="brand">La Paustelería</div>
     <div class="pill">Pedidos con 8 días de anticipación</div>
+    <span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
   </div>
 </header>
 
@@ -131,12 +173,12 @@
     <h2>Lo que preparamos</h2>
     <p class="sub">Sin precios en línea: cotiza tu pedido por WhatsApp y te atendemos con gusto.</p>
     <div class="offer">
-      <div class="ocard"><h3>Pausteles personalizados</h3><p>Nuestro producto estrella: pasteles a tu medida, incluyendo pasteles de foto y pasteles de cupcakes para compartir.</p></div>
-      <div class="ocard"><h3>Cupcakes personalizados</h3><p>Cupcakes temáticos para cumpleaños, meses de bebé y cualquier celebración.</p></div>
-      <div class="ocard"><h3>Tartas</h3><p>Tartas de frutas, pastelitos y tartas de temporada — como nuestra tarta de calabaza, por tiempo limitado.</p></div>
-      <div class="ocard"><h3>Panes y croissants</h3><p>Pan dulce y croissants recién horneados en vitrina, todos los días que abrimos.</p></div>
-      <div class="ocard"><h3>Bebidas de temporada</h3><p>En otoño regresa el Pumpkin Spice. Y todo el año, bebidas como el taro que nuestros clientes adoran.</p></div>
-      <div class="ocard"><h3>Café</h3><p>Un buen café para acompañar tu tarta, en el local o para llevar.</p></div>
+      <div class="ocard"><h3>Pausteles personalizados</h3><p>Nuestro producto estrella: pasteles a tu medida, incluyendo pasteles de foto y pasteles de cupcakes para compartir.</p><a class="ord" href="https://wa.me/525549278378?text=Hola%2C%20quiero%20pedir%3A%20Pausteles%20personalizados">Pedir</a></div>
+      <div class="ocard"><h3>Cupcakes personalizados</h3><p>Cupcakes temáticos para cumpleaños, meses de bebé y cualquier celebración.</p><a class="ord" href="https://wa.me/525549278378?text=Hola%2C%20quiero%20pedir%3A%20Cupcakes%20personalizados">Pedir</a></div>
+      <div class="ocard"><h3>Tartas</h3><p>Tartas de frutas, pastelitos y tartas de temporada — como nuestra tarta de calabaza, por tiempo limitado.</p><a class="ord" href="https://wa.me/525549278378?text=Hola%2C%20quiero%20pedir%3A%20Tartas">Pedir</a></div>
+      <div class="ocard"><h3>Panes y croissants</h3><p>Pan dulce y croissants recién horneados en vitrina, todos los días que abrimos.</p><a class="ord" href="https://wa.me/525549278378?text=Hola%2C%20quiero%20pedir%3A%20Panes%20y%20croissants">Pedir</a></div>
+      <div class="ocard"><h3>Bebidas de temporada</h3><p>En otoño regresa el Pumpkin Spice. Y todo el año, bebidas como el taro que nuestros clientes adoran.</p><a class="ord" href="https://wa.me/525549278378?text=Hola%2C%20quiero%20pedir%3A%20Bebidas%20de%20temporada">Pedir</a></div>
+      <div class="ocard"><h3>Café</h3><p>Un buen café para acompañar tu tarta, en el local o para llevar.</p><a class="ord" href="https://wa.me/525549278378?text=Hola%2C%20quiero%20pedir%3A%20Caf%C3%A9">Pedir</a></div>
     </div>
   </section>
 
@@ -197,12 +239,25 @@
   </section>
 </div>
 
+<div class="mapsec">
+  <h2>Cómo llegar</h2>
+  <div class="mapframe"><iframe title="Map — La Paustelería" src="https://www.google.com/maps?q=La%20Pausteler%C3%ADa%2C%20Av.%20R%C3%ADo%20de%20Guadalupe%20311%2C%20Gustavo%20A.%20Madero%2C%20Ciudad%20de%20M%C3%A9xico&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
 <footer>
   La Paustelería · Gustavo A. Madero, Ciudad de México<br><br>
   Página de demostración creada por SiteSprint Studio — este no es el sitio oficial de La Paustelería.
 </footer>
 
 <div class="sticky"><a href="https://wa.me/525549278378">Pedir por WhatsApp</a></div>
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente La Paustelería">
+    <div class="chatw-head"><div><b>Asistente La Paustelería</b><small>Asistente de demostración · parte de esta página de demostración</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  </div>
+</div>
 <script>
 (function(){
   var header=document.getElementById('siteHeader');
@@ -221,6 +276,79 @@
     });
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   items.forEach(function(el){io.observe(el)});
+})();
+</script>
+<script>
+(function(){
+
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "Pedir por WhatsApp", "href": "https://wa.me/525549278378"}, "greeting": "¡Hola! Soy el asistente de La Paustelería. Pregúntame por el horario, lo que preparamos o cómo hacer tu pedido — o toca una sugerencia.", "fallback": "Eso no lo tengo a la mano — escríbenos por WhatsApp al +52 55 4927 8378 y te atendemos con gusto.", "chips": ["¿Cuál es el horario?", "¿Cómo hago un pedido?", "¿Qué preparan?", "¿Dónde están?"], "items": [{"k": ["calabaza"], "a": "Nuestra tarta de calabaza es de temporada, por tiempo limitado — como el regreso del Pumpkin Spice en otoño."}, {"k": ["pumpkin"], "a": "En otoño regresa el Pumpkin Spice, una de nuestras bebidas de temporada."}, {"k": ["taro"], "a": "El taro es de las bebidas que nuestros clientes adoran — una clienta lo calificó 10/10 en Instagram."}, {"k": ["cupcake"], "a": "Cupcakes personalizados y temáticos para cumpleaños, meses de bebé y cualquier celebración. Se piden con 8 días de anticipación por WhatsApp.", "link": {"t": "Pedir por WhatsApp", "href": "https://wa.me/525549278378"}}, {"k": ["croissant", "pan dulce", "panes"], "a": "Pan dulce y croissants recién horneados en vitrina, todos los días que abrimos."}, {"k": ["tarta"], "a": "Tartas de frutas, pastelitos y tartas de temporada — como nuestra tarta de calabaza, por tiempo limitado."}, {"k": ["cafe"], "a": "Tenemos café para acompañar tu tarta, en el local o para llevar — nuestros clientes destacan lo rico que es."}], "intents": [{"k": ["hola", "buenas", "buenos"], "g": 1, "a": "¡Hola! Pregúntame por el horario, lo que preparamos o cómo hacer tu pedido."}, {"k": ["horario", "abren", "abierto", "hora", "lunes"], "a": "Abrimos martes a sábado de 8:00 a 20:00 y domingo de 8:00 a 19:00. Los lunes cerramos."}, {"k": ["pedido", "pedir", "encarg", "anticipacion", "apartar", "ordenar"], "a": "Los pedidos se hacen con 8 días de anticipación por WhatsApp, para que tu pastel salga perfecto.", "link": {"t": "Hacer mi pedido por WhatsApp", "href": "https://wa.me/525549278378"}}, {"k": ["preparan", "ofrecen", "menu", "carta"], "a": "Preparamos pausteles personalizados, cupcakes personalizados, tartas, panes y croissants, bebidas de temporada y café. Sin precios en línea: cotiza tu pedido por WhatsApp.", "link": {"t": "Cotizar por WhatsApp", "href": "https://wa.me/525549278378"}}, {"k": ["precio", "cuesta", "vale", "cuanto", "cotiz"], "a": "No publicamos precios en línea — cotiza tu pedido por WhatsApp y te atendemos con gusto.", "link": {"t": "Cotizar por WhatsApp", "href": "https://wa.me/525549278378"}}, {"k": ["donde", "ubicacion", "direccion", "llegar", "estan"], "a": "Estamos en Av. Río de Guadalupe 311, Col. San Pedro el Chico, Gustavo A. Madero, CDMX 07480 — a 2 cuadras del Parque Tepeyac, cerca del Metrobús Río de Guadalupe."}, {"k": ["contacto", "telefono", "whatsapp", "numero", "instagram", "facebook"], "a": "WhatsApp: +52 55 4927 8378 · Instagram: @lapausteleria · Facebook: La Paustelería CDMX.", "link": {"t": "Escribir por WhatsApp", "href": "https://wa.me/525549278378"}}, {"k": ["gracias"], "a": "¡Con gusto! Te esperamos en La Paustelería."}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+
+
+  /* Open-now indicator — computed from the hours published on this page */
+  var SCHED={"tz": "America/Mexico_City", "days": {"0": [[480, 1140, "8:00", "19:00"]], "1": [], "2": [[480, 1200, "8:00", "20:00"]], "3": [[480, 1200, "8:00", "20:00"]], "4": [[480, 1200, "8:00", "20:00"]], "5": [[480, 1200, "8:00", "20:00"]], "6": [[480, 1200, "8:00", "20:00"]]}};
+  var OTXT={"open": "Abierto ahora · hasta las {x}", "closed": "Cerrado · abre a las {x}", "closedTomorrow": "Cerrado · abre mañana a las {x}", "closedDay": "Cerrado · abre el {d} a las {x}", "days": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"]};
+  (function(){
+    var el=document.getElementById('opennow');if(!el)return;
+    function bizNow(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}
+    var now=bizNow(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes(),st=null,i,s,list,off,d;
+    list=SCHED.days[(day+6)%7]||[];
+    for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}
+    if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}
+    if(!st){
+      for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];
+        for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}
+    }
+    if(!st)return;
+    var txt;
+    if(st.open)txt=OTXT.open.replace('{x}',st.until);
+    else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);
+    else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);
+    else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);
+    el.querySelector('.otext').textContent=txt;
+    el.classList.add(st.open?'open':'closed');
+    el.hidden=false;
+  })();
+
 })();
 </script>
 </body>

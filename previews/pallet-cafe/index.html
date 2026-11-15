@@ -122,6 +122,47 @@
     *,*::before,*::after{transition:none!important;animation:none!important}
     .rv{opacity:1!important;transform:none!important}
   }
+
+  /* ---------- AI assistant demo (wow) ---------- */
+  .chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+  .chatw-btn{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:var(--terra)TXT;border:none;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px;transition:transform .25s ease,box-shadow .25s ease}
+  .chatw-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.3)}
+  .chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91;text-align:left}
+  .chatw-panel.open{display:flex}
+  .chatw-head{background:var(--terra);color:var(--terra)TXT;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .chatw-head b{font-size:15.5px;display:block;line-height:1.25}
+  .chatw-head small{font-size:11.5px;opacity:.88;display:block;margin-top:3px;line-height:1.4}
+  .chatw-x{background:transparent;border:none;color:inherit;font-size:24px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit}
+  .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;background:var(--card)}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+  .msg.bot{background:#f7ecdd;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--terra);color:var(--terra)TXT;align-self:flex-end;border-bottom-right-radius:4px}
+  .msg a.msg-link{display:inline-block;margin-top:9px;background:#1faa55;color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+  .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px;background:var(--card)}
+  .chip-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+  .chip-btn:hover{border-color:var(--terra);color:var(--terra)}
+  .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--card)}
+  .chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+  .chatw-form button{background:var(--terra);color:var(--terra)TXT;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+  @media(max-width:560px){.chatw{bottom:82px}.chatw-panel{bottom:142px}}
+
+  /* ---------- Tap-to-order (wow) ---------- */
+  .ord{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:6px 12px;border:1.5px solid var(--terra);color:var(--terra2);white-space:nowrap;transition:background .22s ease,color .22s ease,transform .22s ease;background:transparent}
+  .ord:hover{background:var(--terra);color:#fff;transform:translateY(-1px)}
+
+  .mi .ord{align-self:center}
+  /* ---------- Open-now indicator (wow) ---------- */
+  .hdr-inner,.header-in{flex-wrap:wrap}
+  .opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;white-space:nowrap;min-height:36px}
+  .opennow .odot{width:8px;height:8px;border-radius:50%;background:#b9b9b9;flex:none}
+  .opennow.open .odot{background:#27ae60;box-shadow:0 0 0 3px rgba(39,174,96,.2)}
+  .opennow.closed .odot{background:#d35450;box-shadow:0 0 0 3px rgba(211,84,80,.16)}
+
+  /* ---------- Map (wow) ---------- */
+  .mapsec{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,84px) 20px 0}
+  .mapframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 36px rgba(0,0,0,.12);margin-top:6px}
+  .mapframe iframe{width:100%;height:340px;border:0;display:block}
+
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -130,6 +171,7 @@
   <div class="hdr-inner">
     <div class="brand">Pallet <span>Cafe</span></div>
     <div class="hours-pill">Open daily 6 AM – 2 PM</div>
+    <span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
   </div>
 </header>
 
@@ -174,44 +216,44 @@
     <div class="menu-grid">
       <div class="menu-cat rv">
         <h3>All Day Breakfast</h3>
-        <div class="mi"><span>Bacon and Egg Burger</span><span class="lead" aria-hidden="true"></span><span class="p">$9</span></div>
-        <div class="mi"><span>Egg Your Way</span><span class="lead" aria-hidden="true"></span><span class="p">$9</span></div>
-        <div class="mi"><span>Croissant</span><span class="lead" aria-hidden="true"></span><span></span></div>
-        <div class="mi"><span>Morning Wrap</span><span class="lead" aria-hidden="true"></span><span class="p">$11</span></div>
-        <div class="mi"><span>Avocado on Toast</span><span class="lead" aria-hidden="true"></span><span class="p">$13</span></div>
-        <div class="mi"><span>TPC Big Breakfast</span><span class="lead" aria-hidden="true"></span><span></span></div>
+        <div class="mi"><span>Bacon and Egg Burger</span><span class="lead" aria-hidden="true"></span><span class="p">$9</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Bacon%20and%20Egg%20Burger%20%28%249%29">Order</a></div>
+        <div class="mi"><span>Egg Your Way</span><span class="lead" aria-hidden="true"></span><span class="p">$9</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Egg%20Your%20Way%20%28%249%29">Order</a></div>
+        <div class="mi"><span>Croissant</span><span class="lead" aria-hidden="true"></span><span></span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Croissant">Order</a></div>
+        <div class="mi"><span>Morning Wrap</span><span class="lead" aria-hidden="true"></span><span class="p">$11</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Morning%20Wrap%20%28%2411%29">Order</a></div>
+        <div class="mi"><span>Avocado on Toast</span><span class="lead" aria-hidden="true"></span><span class="p">$13</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Avocado%20on%20Toast%20%28%2413%29">Order</a></div>
+        <div class="mi"><span>TPC Big Breakfast</span><span class="lead" aria-hidden="true"></span><span></span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20TPC%20Big%20Breakfast">Order</a></div>
       </div>
       <div class="menu-cat rv">
         <h3>Lunch</h3>
-        <div class="mi"><span>Classic Beef Burger</span><span class="lead" aria-hidden="true"></span><span class="p">$13</span></div>
-        <div class="mi"><span>Halloumi Burger / Wrap</span><span class="lead" aria-hidden="true"></span><span class="p">$12</span></div>
-        <div class="mi"><span>Fish Burger / Wrap</span><span class="lead" aria-hidden="true"></span><span class="p">$13</span></div>
-        <div class="mi"><span>Salads</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span></div>
-        <div class="mi"><span>Creamy Mushroom and Chicken Pasta</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span></div>
-        <div class="mi"><span>Schnitzel and Chips</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span></div>
-        <div class="mi"><span>Fish Taco</span><span class="lead" aria-hidden="true"></span><span class="p">$18</span></div>
+        <div class="mi"><span>Classic Beef Burger</span><span class="lead" aria-hidden="true"></span><span class="p">$13</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Classic%20Beef%20Burger%20%28%2413%29">Order</a></div>
+        <div class="mi"><span>Halloumi Burger / Wrap</span><span class="lead" aria-hidden="true"></span><span class="p">$12</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Halloumi%20Burger%20/%20Wrap%20%28%2412%29">Order</a></div>
+        <div class="mi"><span>Fish Burger / Wrap</span><span class="lead" aria-hidden="true"></span><span class="p">$13</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Fish%20Burger%20/%20Wrap%20%28%2413%29">Order</a></div>
+        <div class="mi"><span>Salads</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Salads%20%28%2415%29">Order</a></div>
+        <div class="mi"><span>Creamy Mushroom and Chicken Pasta</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Creamy%20Mushroom%20and%20Chicken%20Pasta%20%28%2415%29">Order</a></div>
+        <div class="mi"><span>Schnitzel and Chips</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Schnitzel%20and%20Chips%20%28%2415%29">Order</a></div>
+        <div class="mi"><span>Fish Taco</span><span class="lead" aria-hidden="true"></span><span class="p">$18</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Fish%20Taco%20%28%2418%29">Order</a></div>
       </div>
       <div class="menu-cat rv">
         <h3>House Special Pallet</h3>
-        <div class="mi"><span>Stir Fry Pasta with Beef</span><span class="lead" aria-hidden="true"></span><span class="p">$18</span></div>
-        <div class="mi"><span>Sweet and Sour Chicken with Rice</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span></div>
-        <div class="mi"><span>Bo Luc Lac Shaking Beef</span><span class="lead" aria-hidden="true"></span><span class="p">$16</span></div>
-        <div class="mi"><span>Laksa</span><span class="lead" aria-hidden="true"></span><span class="p">$15–$19</span></div>
-        <div class="mi"><span>Spicy Beef Noodles Soup</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span></div>
-        <div class="mi"><span>Vermicelli Bowls</span><span class="lead" aria-hidden="true"></span><span class="p">$14–$16</span></div>
+        <div class="mi"><span>Stir Fry Pasta with Beef</span><span class="lead" aria-hidden="true"></span><span class="p">$18</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Stir%20Fry%20Pasta%20with%20Beef%20%28%2418%29">Order</a></div>
+        <div class="mi"><span>Sweet and Sour Chicken with Rice</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Sweet%20and%20Sour%20Chicken%20with%20Rice%20%28%2415%29">Order</a></div>
+        <div class="mi"><span>Bo Luc Lac Shaking Beef</span><span class="lead" aria-hidden="true"></span><span class="p">$16</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Bo%20Luc%20Lac%20Shaking%20Beef%20%28%2416%29">Order</a></div>
+        <div class="mi"><span>Laksa</span><span class="lead" aria-hidden="true"></span><span class="p">$15–$19</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Laksa%20%28%2415%E2%80%93%2419%29">Order</a></div>
+        <div class="mi"><span>Spicy Beef Noodles Soup</span><span class="lead" aria-hidden="true"></span><span class="p">$15</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Spicy%20Beef%20Noodles%20Soup%20%28%2415%29">Order</a></div>
+        <div class="mi"><span>Vermicelli Bowls</span><span class="lead" aria-hidden="true"></span><span class="p">$14–$16</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Vermicelli%20Bowls%20%28%2414%E2%80%93%2416%29">Order</a></div>
       </div>
       <div class="menu-cat rv">
         <h3>Drinks</h3>
-        <div class="mi"><span>Fresh Juice — orange, green apple, pineapple &amp; more</span><span class="lead" aria-hidden="true"></span><span class="p">$7</span></div>
-        <div class="mi"><span>Smoothies</span><span class="lead" aria-hidden="true"></span><span class="p">$6–$8.50</span></div>
-        <div class="mi"><span>Milkshakes &amp; Frappes</span><span class="lead" aria-hidden="true"></span><span></span></div>
-        <div class="mi"><span>Vietnamese Iced Coffee</span><span class="lead" aria-hidden="true"></span><span></span></div>
+        <div class="mi"><span>Fresh Juice — orange, green apple, pineapple &amp; more</span><span class="lead" aria-hidden="true"></span><span class="p">$7</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Fresh%20Juice%20%28%247%29">Order</a></div>
+        <div class="mi"><span>Smoothies</span><span class="lead" aria-hidden="true"></span><span class="p">$6–$8.50</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Smoothies%20%28%246%E2%80%93%248.50%29">Order</a></div>
+        <div class="mi"><span>Milkshakes &amp; Frappes</span><span class="lead" aria-hidden="true"></span><span></span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Milkshakes%20%26%20Frappes">Order</a></div>
+        <div class="mi"><span>Vietnamese Iced Coffee</span><span class="lead" aria-hidden="true"></span><span></span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Vietnamese%20Iced%20Coffee">Order</a></div>
         <div class="mi"><span>Plus the full coffee &amp; tea list in store</span><span class="lead" aria-hidden="true"></span><span></span></div>
       </div>
       <div class="menu-cat rv">
         <h3>Catering</h3>
-        <div class="mi"><span>Rice Paper Rolls</span><span class="lead" aria-hidden="true"></span><span class="p">$3 each</span></div>
-        <div class="mi"><span>Mixed Finger Food Platter</span><span class="lead" aria-hidden="true"></span><span class="p">$95</span></div>
+        <div class="mi"><span>Rice Paper Rolls</span><span class="lead" aria-hidden="true"></span><span class="p">$3 each</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Rice%20Paper%20Rolls%20%28%243%20each%29">Order</a></div>
+        <div class="mi"><span>Mixed Finger Food Platter</span><span class="lead" aria-hidden="true"></span><span class="p">$95</span><a class="ord" href="https://wa.me/61410723639?text=Hello%2C%20I%27d%20like%20to%20order%3A%20Mixed%20Finger%20Food%20Platter%20%28%2495%29">Order</a></div>
         <div class="mi"><span>Also available: cold &amp; hot sandwich trays, bao buns, mini burgers, cheese platters &amp; fruit trays</span><span class="lead" aria-hidden="true"></span><span></span></div>
       </div>
     </div>
@@ -221,7 +263,7 @@
   <section class="tight">
     <div class="eyebrow rv">04</div>
     <h2 class="rv">What visitors say</h2>
-    <p class="sub rv">Real reviews, in their own words — rated 4.8 from 95 reviews, and a TripAdvisor Travellers' Choice pick with 4.6 of 5 from 173 reviews.</p>
+    <p class="sub rv">Real reviews, in their own words — rated 4.8 from <span class="count" data-count="95">95</span> reviews, and a TripAdvisor Travellers' Choice pick with 4.6 of 5 from <span class="count" data-count="173">173</span> reviews.</p>
     <div class="rev-grid">
       <div class="rev rv"><p>"Just had a great breaky and coffee with my new mate Kar-Pin at Pallet Cafe just across from All Hallows! Check it out everything is awesome."</p><div class="who">Tom <span>· Instagram</span></div></div>
       <div class="rev rv"><p>"Great breakfast before a morning tea with my dream employer. Not a bad way to start a Friday!!"</p><div class="who">James <span>· Instagram</span></div></div>
@@ -256,12 +298,25 @@
   </section>
 </div>
 
+<div class="mapsec">
+  <h2>Find us</h2>
+  <div class="mapframe"><iframe title="Map — Pallet Cafe" src="https://www.google.com/maps?q=Pallet%20Cafe%2C%20Adelaide%20Street%2C%20Brisbane%20CBD%20QLD&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
 <footer>
   Pallet Cafe · Brisbane CBD, Queensland<br><br>
   Concept preview built by SiteSprint Studio — this is not the live website of Pallet Cafe.
 </footer>
 
 <div class="sticky"><a href="tel:+61410723639">Call Pallet Cafe</a></div>
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Ask us</button>
+  <div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Pallet Assistant">
+    <div class="chatw-head"><div><b>Pallet Assistant</b><small>Demo assistant · part of this concept preview</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Close">&times;</button></div>
+    <div class="chatw-msgs" id="chatwMsgs"></div>
+    <div class="chatw-chips" id="chatwChips"></div>
+    <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Type your question…" aria-label="Type your question…"><button type="submit" aria-label="Send">&#10148;</button></form>
+  </div>
+</div>
 <script>
 (function(){
   var hdr=document.getElementById('hdr');
@@ -277,6 +332,104 @@
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+
+  /* AI assistant demo — answers only from facts published on this page */
+  var KB={"waLink": {"t": "WhatsApp us", "href": "https://wa.me/61410723639"}, "greeting": "Hi! I'm the Pallet Assistant. Ask me about opening hours, the menu, catering or how to find us — or tap a suggestion below.", "fallback": "I don't have that in my notes — the team can help. Message us on WhatsApp or call +61 410 723 639.", "chips": ["Opening hours?", "See the menu", "How do I order?", "Where are you?", "Do you cater?"], "items": [{"k": ["laksa"], "a": "Laksa — $15–$19, from our House Special Pallet menu."}, {"k": ["big breakfast"], "a": "TPC Big Breakfast — on the All Day Breakfast menu. Its price isn't listed on this page, so call +61 410 723 639 to confirm."}, {"k": ["bacon and egg"], "a": "Bacon and Egg Burger — $9, on the All Day Breakfast menu."}, {"k": ["egg your way"], "a": "Egg Your Way — $9, on the All Day Breakfast menu."}, {"k": ["morning wrap"], "a": "Morning Wrap — $11, on the All Day Breakfast menu."}, {"k": ["avocado"], "a": "Avocado on Toast — $13, on the All Day Breakfast menu."}, {"k": ["croissant"], "a": "Croissant — on the All Day Breakfast menu; its price isn't listed on this page."}, {"k": ["beef burger", "classic beef"], "a": "Classic Beef Burger — $13, on the Lunch menu."}, {"k": ["halloumi"], "a": "Halloumi Burger / Wrap — $12, on the Lunch menu."}, {"k": ["fish taco"], "a": "Fish Taco — $18, on the Lunch menu."}, {"k": ["fish burger"], "a": "Fish Burger / Wrap — $13, on the Lunch menu."}, {"k": ["salad"], "a": "Salads — $15, on the Lunch menu."}, {"k": ["schnitzel"], "a": "Schnitzel and Chips — $15, on the Lunch menu."}, {"k": ["stir fry"], "a": "Stir Fry Pasta with Beef — $18, a House Special Pallet dish."}, {"k": ["sweet and sour"], "a": "Sweet and Sour Chicken with Rice — $15, a House Special Pallet dish."}, {"k": ["shaking beef", "bo luc lac"], "a": "Bo Luc Lac Shaking Beef — $16, a House Special Pallet dish."}, {"k": ["spicy beef"], "a": "Spicy Beef Noodles Soup — $15, a House Special Pallet dish."}, {"k": ["vermicelli"], "a": "Vermicelli Bowls — $14–$16, a House Special Pallet dish."}, {"k": ["pasta"], "a": "Two pastas: Creamy Mushroom and Chicken Pasta — $15 (Lunch), and Stir Fry Pasta with Beef — $18 (House Special Pallet)."}, {"k": ["juice"], "a": "Fresh Juice — $7 (orange, green apple, pineapple & more)."}, {"k": ["smoothie"], "a": "Smoothies — $6–$8.50, on the Drinks menu."}, {"k": ["milkshake", "frappe"], "a": "Milkshakes & Frappes are on the Drinks menu; their prices are listed in store."}, {"k": ["vietnamese"], "a": "Vietnamese Iced Coffee is on the Drinks menu; its price is listed in store."}, {"k": ["rice paper"], "a": "Rice Paper Rolls — $3 each, on the Catering menu."}, {"k": ["platter"], "a": "Mixed Finger Food Platter — $95, on the Catering menu."}], "intents": [{"k": ["hello", "hi", "hey"], "g": 1, "a": "Hello! Ask me about opening hours, the menu, catering or how to order."}, {"k": ["hour", "open", "close", "when", "time"], "a": "We're open every day from 6:00 AM to 2:00 PM."}, {"k": ["menu", "eat", "food", "breakfast", "lunch", "dish", "serve"], "a": "The menu: All Day Breakfast (from $9), Lunch (burgers, pasta and the Fish Taco at $18), House Special Pallet (Laksa $15–$19, Bo Luc Lac Shaking Beef $16), Drinks, and Catering. Ask me about any dish for its price."}, {"k": ["price", "cost", "much", "expensive", "cheap"], "a": "Prices are on the menu: breakfast from $9, lunch $12–$18, house specials $14–$19. Ask me about a specific dish and I'll give you its price."}, {"k": ["cater", "party", "event", "platter", "tray"], "a": "Yes, we cater: Rice Paper Rolls ($3 each), a Mixed Finger Food Platter ($95), plus cold & hot sandwich trays, bao buns, mini burgers, cheese platters and fruit trays. Call +61 410 723 639 to arrange it."}, {"k": ["order", "book", "takeaway", "take away", "delivery", "deliver"], "a": "To order, tap any dish in the menu to start a WhatsApp order, or call us on +61 410 723 639.", "link": {"t": "WhatsApp us", "href": "https://wa.me/61410723639"}}, {"k": ["where", "address", "location", "find", "located", "directions"], "a": "You'll find us in Brisbane CBD, Queensland — on Adelaide Street."}, {"k": ["coffee", "tea"], "a": "Coffee is our thing — we're rated #1 for coffee in Brisbane on TripAdvisor. The full coffee & tea list is in store; we also serve Vietnamese Iced Coffee, fresh juices ($7) and smoothies ($6–$8.50)."}, {"k": ["phone", "call", "contact", "number", "whatsapp"], "a": "Call us on +61 410 723 639, or message us on WhatsApp.", "link": {"t": "WhatsApp us", "href": "https://wa.me/61410723639"}}, {"k": ["thank"], "a": "You're welcome!"}]};
+  var chatPanel=document.getElementById('chatwPanel'),chatMsgs=document.getElementById('chatwMsgs'),chatChips=document.getElementById('chatwChips'),chatBtn=document.getElementById('chatwBtn'),chatStarted=false;
+  function chatScroll(){chatMsgs.scrollTop=chatMsgs.scrollHeight;}
+  function chatAdd(text,who,link){
+    var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+    if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}
+    chatMsgs.appendChild(d);chatScroll();
+  }
+  function chatFold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function chatAnswer(q){
+    var t=' '+chatFold(q)+' ',i,j,it,best=null,score=0,s;
+    for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)return it;}}
+    for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(chatFold(it.k[j]))!==-1)s++;}
+      if(it.g&&t.trim().length>24)continue;
+      if(s>score){score=s;best=it;}}
+    if(best)return best;
+    return {a:KB.fallback,link:KB.waLink};
+  }
+  function chatSend(text){
+    var q=(text||'').trim();if(!q)return;
+    chatAdd(q,'user');
+    var r=chatAnswer(q);
+    setTimeout(function(){chatAdd(r.a,'bot',r.link||null);},240);
+  }
+  chatBtn.addEventListener('click',function(){
+    var open=chatPanel.classList.toggle('open');
+    chatBtn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!chatStarted){chatStarted=true;chatAdd(KB.greeting,'bot');}
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false');});
+  KB.chips.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;
+    b.addEventListener('click',function(){chatSend(c);});
+    chatChips.appendChild(b);
+  });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var inp=document.getElementById('chatwInput');
+    chatSend(inp.value);inp.value='';
+  });
+
+
+  /* Open-now indicator — computed from the hours published on this page */
+  var SCHED={"tz": "Australia/Brisbane", "days": {"0": [[360, 840, "6:00 AM", "2:00 PM"]], "1": [[360, 840, "6:00 AM", "2:00 PM"]], "2": [[360, 840, "6:00 AM", "2:00 PM"]], "3": [[360, 840, "6:00 AM", "2:00 PM"]], "4": [[360, 840, "6:00 AM", "2:00 PM"]], "5": [[360, 840, "6:00 AM", "2:00 PM"]], "6": [[360, 840, "6:00 AM", "2:00 PM"]]}};
+  var OTXT={"open": "Open now · until {x}", "closed": "Closed · opens {x}", "closedTomorrow": "Closed · opens tomorrow {x}", "closedDay": "Closed · opens {d} {x}", "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]};
+  (function(){
+    var el=document.getElementById('opennow');if(!el)return;
+    function bizNow(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}
+    var now=bizNow(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes(),st=null,i,s,list,off,d;
+    list=SCHED.days[(day+6)%7]||[];
+    for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}
+    if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}
+    if(!st){
+      for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];
+        for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}
+    }
+    if(!st)return;
+    var txt;
+    if(st.open)txt=OTXT.open.replace('{x}',st.until);
+    else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);
+    else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);
+    else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);
+    el.querySelector('.otext').textContent=txt;
+    el.classList.add(st.open?'open':'closed');
+    el.hidden=false;
+  })();
+
+
+  /* Animated counters — numbers already published on this page */
+  var cEls=document.querySelectorAll('.count');
+  if(cEls.length){
+    var reduceC=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduceC&&('IntersectionObserver' in window)){
+      cEls.forEach(function(el){el.textContent='0';});
+      var cio=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting)return;
+          cio.unobserve(e.target);
+          var el=e.target,tg=parseFloat(el.getAttribute('data-count')),t0=null;
+          function step(ts){
+            if(!t0)t0=ts;
+            var p=Math.min(1,(ts-t0)/1300),ease=1-Math.pow(1-p,3);
+            el.textContent=String(Math.round(tg*ease));
+            if(p<1)requestAnimationFrame(step);else el.textContent=String(tg);
+          }
+          requestAnimationFrame(step);
+        });
+      },{threshold:.4});
+      cEls.forEach(function(el){cio.observe(el);});
+    }
+  }
+
 })();
 </script>
 </body>
