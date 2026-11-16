@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DELICIOSO Boneless–Alitas — Mérida, Yucatán | Buen Fin</title>
+<meta name="description" content="DELICIOSO Boneless–Alitas en Mérida, Yucatán: boneless y alitas. Promos Buen Fin: Caja de Boneless $330 MXN y 20 alitas con papas $200 MXN. Pide por WhatsApp al 999 241 7591.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0b;--black2:#131315;--panel:#1a1a1d;--red:#e81e26;--red2:#b30f16;--yellow:#ffd400;--cream:#fff8e6;--mut:#b8b3a6;--wa:#1faa55;--line:#2c2c30;--disp:"Archivo Black",system-ui,sans-serif;--sans:"Inter",system-ui,sans-serif;--shadow:0 24px 50px rgba(0,0,0,.55)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--black);color:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--yellow);color:#000}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(10,10,11,.96);backdrop-filter:blur(12px);border-bottom:3px solid var(--red);box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.hdr{max-width:1160px;margin:0 auto;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-size:clamp(20px,3vw,27px);color:#fff;line-height:1;text-transform:uppercase}.brand span{color:var(--yellow)}.brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.28em;font-weight:800;color:var(--mut);margin-top:4px}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:800;color:#fff;background:var(--panel);border:1px solid var(--line);padding:7px 13px;border-radius:999px}.odot{width:9px;height:9px;border-radius:50%;background:#666}.opennow.open .odot{background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.18)}.opennow.closed .odot{background:var(--red);box-shadow:0 0 0 4px rgba(232,30,38,.18)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#000}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.55;transform:scale(1.03)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.78),rgba(10,10,11,.42) 48%,var(--black) 97%)}
+.hero:after{content:"BUEN FIN · BUEN FIN · BUEN FIN";position:absolute;left:0;right:0;bottom:14px;z-index:0;font-family:var(--disp);font-size:13px;letter-spacing:.35em;color:rgba(255,212,0,.35);text-align:center;white-space:nowrap;overflow:hidden}
+.hero-in{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(138px,18vw,198px) 20px clamp(86px,10vw,112px);text-align:left}
+.promo-tag{display:inline-block;background:var(--yellow);color:#000;font-weight:900;font-size:12.5px;letter-spacing:.14em;padding:9px 16px;border-radius:4px;text-transform:uppercase;transform:rotate(-1.5deg);box-shadow:6px 6px 0 var(--red)}
+.hero h1{font-family:var(--disp);font-size:clamp(44px,8.5vw,88px);line-height:.92;margin:26px 0 10px;max-width:840px;color:#fff;text-transform:uppercase}.hero h1 em{font-style:normal;color:var(--yellow);-webkit-text-stroke:1px #000;text-shadow:4px 4px 0 var(--red)}
+.hero p.lead{color:#e8e2d2;max-width:580px;margin:16px 0 28px;font-size:clamp(16px,2vw,18.5px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:6px;font-weight:900;text-decoration:none;font-size:15.5px;transition:.25s;text-transform:uppercase;letter-spacing:.03em}.btn:hover{transform:translateY(-2px)}.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(31,170,85,.3)}.btn.red{background:var(--red);color:#fff}.btn.line{background:transparent;color:#fff;border:2px solid rgba(255,248,230,.5)}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.promo-cards{display:grid;grid-template-columns:1fr;gap:14px;max-width:760px;margin-top:34px}@media(min-width:640px){.promo-cards{grid-template-columns:1fr 1fr}}
+.promo-card{background:var(--yellow);color:#000;border-radius:8px;padding:20px 22px;box-shadow:8px 8px 0 var(--red2)}.promo-card small{font-weight:900;letter-spacing:.18em;font-size:11px;text-transform:uppercase}.promo-card b{display:block;font-family:var(--disp);font-size:clamp(26px,4vw,36px);line-height:1;margin:6px 0 2px}.promo-card span{font-weight:700;font-size:14px}
+.status-hero{max-width:760px;margin:26px 0 0;background:rgba(19,19,21,.9);border:1px solid var(--line);border-left:6px solid var(--yellow);border-radius:10px;padding:20px 24px;backdrop-filter:blur(8px)}
+.status-hero .big{font-family:var(--disp);font-size:clamp(22px,3.4vw,32px);color:#fff;text-transform:uppercase}
+.status-hero .small{color:var(--mut);font-size:14px;margin-top:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:.3em;color:var(--yellow);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(30px,4.8vw,48px);line-height:1.02;margin-bottom:12px;color:#fff;text-transform:uppercase}h2 em{font-style:normal;color:var(--red)}
+.sub{color:var(--mut);max-width:640px;margin:0 0 38px}
+.builder{background:linear-gradient(135deg,#1c1c1f,#121214);border:2px solid var(--yellow);border-radius:16px;padding:clamp(24px,4vw,40px);box-shadow:10px 10px 0 rgba(232,30,38,.85)}
+.builder h3{font-family:var(--disp);color:#fff;font-size:clamp(22px,3.4vw,32px);text-transform:uppercase;line-height:1.05}
+.builder .bsub{color:var(--mut);margin:10px 0 24px;max-width:620px}
+.brow{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px}
+.brow .binfo b{display:block;color:#fff;font-size:17px}.brow .binfo span{color:var(--mut);font-size:13.5px}.brow .bprice{color:var(--yellow);font-weight:900;white-space:nowrap}
+.stepper{display:inline-flex;align-items:center;gap:4px;background:#000;border:1px solid var(--line);border-radius:999px;padding:4px}
+.stepper button{width:42px;height:42px;border-radius:50%;border:none;background:var(--red);color:#fff;font-size:22px;font-weight:900;cursor:pointer;line-height:1}.stepper button.minus{background:#333}
+.stepper .qty{min-width:36px;text-align:center;font-weight:900;font-size:17px;color:#fff}
+.btotal{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:20px;background:#000;border:1px dashed var(--yellow);border-radius:12px;padding:18px 20px}
+.btotal b{font-family:var(--disp);font-size:clamp(20px,3vw,28px);color:var(--yellow)}
+.btotal span{color:var(--mut);font-size:13px;display:block}
+#builderWa{opacity:.45;pointer-events:none}#builderWa.on{opacity:1;pointer-events:auto}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:700px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+.dish{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s}.dish:hover{transform:translateY(-6px);border-color:var(--yellow);box-shadow:var(--shadow)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.dish-in{padding:22px}.dish .tag{font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--yellow);text-transform:uppercase}.dish h3{font-family:var(--disp);font-size:24px;color:#fff;margin:6px 0 6px;text-transform:uppercase}.dish p{font-size:14.5px;color:var(--mut);margin-bottom:8px}.dish .price{font-size:22px;font-weight:900;color:var(--yellow);margin-bottom:16px}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:6px;font-size:15px;transition:.2s}.ord:hover{background:#178a44}
+.ask{text-align:left;font-size:13px;color:var(--mut);margin-top:16px}
+.cal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:820px){.cal{grid-template-columns:repeat(7,1fr)}}
+.day{border:1px solid var(--line);background:var(--black2);border-radius:12px;padding:16px 12px;text-align:center}.day b{display:block;font-size:14px;color:#fff}.day span{font-size:12px;color:var(--mut);display:block;margin-top:4px;line-height:1.45}.day.off{opacity:.55}.day.off span{color:#ff6b70;font-weight:800}.day.today{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,212,0,.2)}.day.today b{color:var(--yellow)}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.mapframe{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:8px}.mapframe iframe{width:100%;height:360px;border:0;display:block}
+.addr{color:var(--mut);margin-bottom:18px}.addr b{color:var(--cream)}
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1160px;margin:56px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(10,10,11,.97);border-top:3px solid var(--red);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1160px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:6px;text-decoration:none;font-weight:900}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--red);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:900;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.4);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;z-index:91;color:#1a1405}.chatw-panel.open{display:flex}
+.chatw-head{background:#111;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fff3c4;align-self:flex-start}.msg.user{background:var(--red);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #e8dfae;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #eee}.chatw-form input{flex:1;border:1px solid #ddd;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--red);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">DELICIOSO <span>Boneless–Alitas</span><small>MÉRIDA · YUCATÁN</small></div>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Boneless y alitas de DELICIOSO Boneless–Alitas en Mérida">
+<div class="hero-in">
+<span class="promo-tag">🔥 Buen Fin — promos de hoy</span>
+<h1>Boneless y alitas <em>sin rodeos</em></h1>
+<p class="lead">En Mérida, Yucatán. Arma tu pedido en un toque con las promos del Buen Fin y mándalo directo por WhatsApp.</p>
+<div class="actions">
+<a class="btn red" href="#pedir">Armar mi pedido</a>
+<a class="btn line" href="#horario">Ver horario</a>
+</div>
+<div class="promo-cards">
+<div class="promo-card"><small>Promo Buen Fin</small><b>$330 MXN</b><span>Caja de Boneless</span></div>
+<div class="promo-card"><small>Promo Buen Fin</small><b>$200 MXN</b><span>20 alitas con papas</span></div>
+</div>
+<div class="status-hero" id="statusHero" hidden>
+<div class="big" id="statusBig">…</div>
+<div class="small" id="statusSmall">…</div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="pedir" class="rv">
+<div class="eyebrow">01 · Pide en un toque</div>
+<h2>Arma tu <em>pedido</em></h2>
+<p class="sub">Elige cantidades con los botones + y −. El total suma solo las promos con precio. Las alitas y boneless sueltos se agregan a tu mensaje sin precio, para confirmar por WhatsApp.</p>
+<div class="builder">
+<h3>Tu pedido Buen Fin</h3>
+<p class="bsub">Al terminar, toca el botón verde y tu pedido llega ya escrito a WhatsApp al 999 241 7591.</p>
+<div class="brow"><div class="binfo"><b>Caja de Boneless</b><span>Promo Buen Fin</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">$330 MXN</span><span class="stepper"><button type="button" class="minus" data-key="caja" aria-label="Quitar caja de boneless">−</button><span class="qty" id="qty-caja">0</span><button type="button" data-key="caja" aria-label="Agregar caja de boneless">+</button></span></div></div>
+<div class="brow"><div class="binfo"><b>20 alitas con papas</b><span>Promo Buen Fin</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">$200 MXN</span><span class="stepper"><button type="button" class="minus" data-key="alitas20" aria-label="Quitar 20 alitas con papas">−</button><span class="qty" id="qty-alitas20">0</span><button type="button" data-key="alitas20" aria-label="Agregar 20 alitas con papas">+</button></span></div></div>
+<div class="brow"><div class="binfo"><b>Alitas</b><span>Sin precio en esta vista — se confirma por WhatsApp</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">A confirmar</span><span class="stepper"><button type="button" class="minus" data-key="alitas" aria-label="Quitar alitas">−</button><span class="qty" id="qty-alitas">0</span><button type="button" data-key="alitas" aria-label="Agregar alitas">+</button></span></div></div>
+<div class="brow"><div class="binfo"><b>Boneless</b><span>Sin precio en esta vista — se confirma por WhatsApp</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">A confirmar</span><span class="stepper"><button type="button" class="minus" data-key="boneless" aria-label="Quitar boneless">−</button><span class="qty" id="qty-boneless">0</span><button type="button" data-key="boneless" aria-label="Agregar boneless">+</button></span></div></div>
+<div class="btotal"><div><span>Total de promos con precio</span><b id="bTotal">$0 MXN</b></div><a class="btn wa" id="builderWa" href="https://wa.me/529992417591" target="_blank" rel="noopener">Enviar pedido por WhatsApp →</a></div>
+<p class="ask">El total no incluye alitas ni boneless sueltos: su precio se confirma por WhatsApp al pedir.</p>
+</div>
+</section>
+
+<section id="menu" class="rv">
+<div class="eyebrow">02 · Lo que vendemos</div>
+<h2>Boneless <em>y alitas</em></h2>
+<p class="sub">Eso es lo nuestro: boneless y alitas. Toca Pedir en cada tarjeta y tu mensaje llega a WhatsApp ya escrito.</p>
+<div class="menu-grid">
+<article class="dish"><img src="img/hero.jpg" alt="Caja de Boneless de DELICIOSO"><div class="dish-in"><div class="tag">Promo Buen Fin</div><h3>Caja de Boneless</h3><p>La caja de boneless de la casa, en promo del Buen Fin.</p><div class="price">$330 MXN</div><a class="ord" href="https://wa.me/529992417591?text=Hola%20DELICIOSO%2C%20quiero%20pedir%20la%20Caja%20de%20Boneless%20de%20%24330%20MXN%20(Buen%20Fin)">Pedir caja de boneless →</a></div></article>
+<article class="dish"><img src="img/p1.jpg" alt="Alitas con papas de DELICIOSO"><div class="dish-in"><div class="tag">Promo Buen Fin</div><h3>20 alitas con papas</h3><p>20 alitas con papas, en promo del Buen Fin.</p><div class="price">$200 MXN</div><a class="ord" href="https://wa.me/529992417591?text=Hola%20DELICIOSO%2C%20quiero%20pedir%2020%20alitas%20con%20papas%20de%20%24200%20MXN%20(Buen%20Fin)">Pedir 20 alitas con papas →</a></div></article>
+<article class="dish"><img src="img/p2.jpg" alt="Boneless de DELICIOSO en Mérida"><div class="dish-in"><div class="tag">Sin hueso</div><h3>Boneless</h3><p>Boneless para pedir por WhatsApp. Confirma el precio al pedir.</p><a class="ord" href="https://wa.me/529992417591?text=Hola%20DELICIOSO%2C%20quiero%20pedir%20unos%20boneless">Pedir boneless →</a></div></article>
+<article class="dish"><img src="img/p3.jpg" alt="Alitas de DELICIOSO en Mérida"><div class="dish-in"><div class="tag">La clásica</div><h3>Alitas</h3><p>Alitas para pedir por WhatsApp. Confirma el precio al pedir.</p><a class="ord" href="https://wa.me/529992417591?text=Hola%20DELICIOSO%2C%20quiero%20pedir%20unas%20alitas">Pedir alitas →</a></div></article>
+</div>
+</section>
+
+<section id="horario" class="rv">
+<div class="eyebrow">03 · Horario</div>
+<h2>La semana <em>en Mérida</em></h2>
+<p class="sub">Domingo 3:00 p. m. a 10:00 p. m. · Martes a viernes 3:30 p. m. a 10:00 p. m. · Sábado 2:30 p. m. a 10:30 p. m. · Lunes cerrado.</p>
+<div class="cal" id="cal"></div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">04 · Galería</div>
+<h2>Directo <em>de la cocina</em></h2>
+<p class="sub">Fotos reales publicadas por DELICIOSO Boneless–Alitas.</p>
+<div class="strip">
+<figure><img src="img/p4.jpg" alt="Boneless de DELICIOSO"><figcaption>Boneless</figcaption></figure>
+<figure><img src="img/p5.jpg" alt="Alitas de DELICIOSO"><figcaption>Alitas</figcaption></figure>
+<figure><img src="img/p6.jpg" alt="Platillo de DELICIOSO en Mérida"><figcaption>Para compartir</figcaption></figure>
+<figure><img src="img/p7.jpg" alt="Platillo de DELICIOSO"><figcaption>Al momento</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">05 · Encuéntranos</div>
+<h2>En <em>Mérida</em></h2>
+<p class="addr">Estamos en <b>C. 18 217, Mérida, Yucatán 97100</b> · Pide por WhatsApp al 999 241 7591.</p>
+<div class="mapframe"><iframe title="Mapa — DELICIOSO Boneless–Alitas, C. 18 217, Mérida, Yucatán 97100" src="https://www.google.com/maps?q=C.%2018%20217%2C%20M%C3%A9rida%2C%20Yucat%C3%A1n%2097100%2C%20M%C3%A9xico&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div style="text-align:center;margin-top:26px"><a class="btn wa" href="https://wa.me/529992417591?text=Hola%20DELICIOSO%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp — 999 241 7591</a></div>
+</section>
+</div>
+
+<footer>
+DELICIOSO Boneless–Alitas · C. 18 217, Mérida, Yucatán 97100 · WhatsApp +52 999 241 7591<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of DELICIOSO Boneless–Alitas.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/529992417591?text=Hola%20DELICIOSO%2C%20quiero%20hacer%20un%20pedido">🔥 Pedir por WhatsApp — 999 241 7591</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente DELICIOSO">
+<div class="chatw-head"><div><b>Asistente DELICIOSO</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+(function(){
+var cal=document.getElementById('cal');if(!cal)return;
+var today;try{today={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[new Intl.DateTimeFormat('en-US',{timeZone:'America/Merida',weekday:'short'}).format(new Date())];}catch(e){today=new Date().getDay();}
+var plan=[{n:'Domingo',h:'3:00 p. m. – 10:00 p. m.'},{n:'Lunes',h:'Cerrado',off:true},{n:'Martes',h:'3:30 p. m. – 10:00 p. m.'},{n:'Miércoles',h:'3:30 p. m. – 10:00 p. m.'},{n:'Jueves',h:'3:30 p. m. – 10:00 p. m.'},{n:'Viernes',h:'3:30 p. m. – 10:00 p. m.'},{n:'Sábado',h:'2:30 p. m. – 10:30 p. m.'}];
+var order=[1,2,3,4,5,6,0];
+order.forEach(function(d){var p=plan[d];var div=document.createElement('div');div.className='day'+(p.off?' off':'')+(d===today?' today':'');var b=document.createElement('b');b.textContent=p.n+(d===today?' · hoy':'');var s=document.createElement('span');s.textContent=p.h;div.appendChild(b);div.appendChild(s);cal.appendChild(div);});
+})();
+/* Order builder */
+(function(){
+var prices={caja:330,alitas20:200,alitas:0,boneless:0};
+var names={caja:'Caja de Boneless — $330 MXN',alitas20:'20 alitas con papas — $200 MXN',alitas:'Alitas (precio a confirmar)',boneless:'Boneless (precio a confirmar)'};
+var qty={caja:0,alitas20:0,alitas:0,boneless:0};
+var totalEl=document.getElementById('bTotal');var wa=document.getElementById('builderWa');
+function fmt(n){return '$'+n+' MXN';}
+function render(){var total=0,count=0;Object.keys(qty).forEach(function(k){total+=qty[k]*prices[k];count+=qty[k];var el=document.getElementById('qty-'+k);if(el)el.textContent=qty[k];});totalEl.textContent=fmt(total);if(count===0){wa.classList.remove('on');wa.href='https://wa.me/529992417591';return;}var lines=['Hola DELICIOSO, quiero hacer un pedido:'];Object.keys(qty).forEach(function(k){if(qty[k]>0)lines.push(qty[k]+' x '+names[k]);});lines.push('Total de promos con precio: '+fmt(total));if(qty.alitas>0||qty.boneless>0)lines.push('Nota: el precio de alitas/boneless sueltos se confirma por WhatsApp.');wa.href='https://wa.me/529992417591?text='+encodeURIComponent(lines.join('\n'));wa.classList.add('on');}
+document.querySelectorAll('.stepper button').forEach(function(btn){btn.addEventListener('click',function(){var k=btn.getAttribute('data-key');if(!k)return;if(btn.classList.contains('minus')){qty[k]=Math.max(0,qty[k]-1);}else{qty[k]=Math.min(99,qty[k]+1);}render();});});
+render();
+})();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir por WhatsApp","href":"https://wa.me/529992417591"},"greeting":"¡Hola! Soy el asistente de DELICIOSO Boneless–Alitas en Mérida. Pregúntame por las promos del Buen Fin, el horario o cómo pedir.","fallback":"Eso no lo tengo a la mano — escríbenos por WhatsApp al +52 999 241 7591 y te ayudamos.","chips":["¿Qué promos hay?","¿Cuál es el horario?","¿Qué venden?","¿Cómo pido?","¿Dónde están?"],"items":[{"k":["caja"],"a":"Caja de Boneless — promo Buen Fin: $330 MXN. Puedes agregarla en el armador de pedidos de esta página.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["papas"],"a":"20 alitas con papas — promo Buen Fin: $200 MXN.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["boneless"],"a":"Boneless: tenemos la Caja de Boneless en promo Buen Fin por $330 MXN. Los boneless sueltos se confirman por WhatsApp al pedir.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["alitas"],"a":"Alitas: 20 alitas con papas en promo Buen Fin por $200 MXN. Las alitas sueltas se confirman por WhatsApp al pedir.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529992417591"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por las promos del Buen Fin, el horario o cómo pedir."},{"k":["promo","buen fin","oferta","descuento"],"a":"Promos del Buen Fin (publicadas hoy): Caja de Boneless $330 MXN y 20 alitas con papas $200 MXN.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["menu","venden","platillo","comida","hay"],"a":"Vendemos boneless y alitas. Promos Buen Fin: Caja de Boneless $330 MXN y 20 alitas con papas $200 MXN."},{"k":["precio","cuesta","cuestan","cuanto"],"a":"Precios verificados: Caja de Boneless $330 MXN y 20 alitas con papas $200 MXN (promos Buen Fin). Alitas y boneless sueltos se confirman por WhatsApp.","link":{"t":"Preguntar por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["horario","abren","abierto","cierran","hora","lunes","domingo","sabado"],"a":"Horario: domingo 3:00 p. m. a 10:00 p. m., martes a viernes 3:30 p. m. a 10:00 p. m., sábado 2:30 p. m. a 10:30 p. m. Lunes cerrado."},{"k":["pedir","ordenar","comprar","quiero","armador","pedido"],"a":"Para pedir: usa el armador de pedidos de esta página — elige cantidades y el total se calcula solo — o escríbenos directo por WhatsApp al +52 999 241 7591.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["donde","direccion","ubicacion","merida"],"a":"Estamos en C. 18 217, Mérida, Yucatán 97100.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp: +52 999 241 7591.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/529992417591"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en DELICIOSO."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+var SCHED={"tz":"America/Merida","days":{"0":[[900,1320,"3:00 p. m.","10:00 p. m."]],"1":[],"2":[[930,1320,"3:30 p. m.","10:00 p. m."]],"3":[[930,1320,"3:30 p. m.","10:00 p. m."]],"4":[[930,1320,"3:30 p. m.","10:00 p. m."]],"5":[[930,1320,"3:30 p. m.","10:00 p. m."]],"6":[[870,1350,"2:30 p. m.","10:30 p. m."]]}};
+var OTXT={"open":"Abierto ahora · hasta las {x}","closed":"Cerrado · abre a las {x}","closedTomorrow":"Cerrado · abre mañana a las {x}","closedDay":"Cerrado · abre el {d} a las {x}","days":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"]};
+(function(){function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}var el=document.getElementById('opennow'),hero=document.getElementById('statusHero');if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);if(el){el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;}if(hero){document.getElementById('statusBig').textContent=st.open?'Abierto ahora':'Cerrado por ahora';document.getElementById('statusSmall').textContent=txt+' · Domingo 3:00–10:00 p. m. · Mar–Vie 3:30–10:00 p. m. · Sáb 2:30–10:30 p. m. · Lun cerrado';hero.hidden=false;}})();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alitas &amp; Boneless La Güera — Mérida, Yucatán | Solo delivery</title>
+<meta name="description" content="Alitas & Boneless La Güera, Mérida, Yucatán: hamburguesas, paquetes y combos del Buen Fin, solo por motomandado. WhatsApp +52 999 458 4727.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0b0b0d;--coal:#151216;--panel:#1e1820;--cream:#fff6e9;--cream2:#f7e8d0;--pink:#ff2e88;--pink2:#ff5da8;--mag:#d1006b;--wa:#1faa55;--line:#3a2533;--sans:"Inter",system-ui,sans-serif;--disp:"Anton",Impact,sans-serif;--arch:"Archivo",system-ui,sans-serif;--shadow:0 26px 55px rgba(0,0,0,.55)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--black);color:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--pink);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(11,11,13,.95);backdrop-filter:blur(12px);border-bottom:3px solid var(--pink);box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.hdr{max-width:1160px;margin:0 auto;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-size:clamp(24px,3.4vw,34px);letter-spacing:.02em;color:#fff;text-transform:uppercase;line-height:1}.brand span{color:var(--pink)}.brand small{display:block;font-family:var(--arch);font-size:10px;letter-spacing:.3em;font-weight:800;color:var(--cream2)}
+.hdr-ask{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;text-decoration:none;font-weight:800;font-size:13px;padding:10px 16px;border-radius:999px}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#050505}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.55}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.78),rgba(11,11,13,.5) 48%,var(--black) 97%)}
+.hero-in{max-width:1160px;margin:0 auto;padding:clamp(138px,18vw,198px) 20px clamp(76px,10vw,108px);text-align:center}
+.pill{display:inline-flex;border:2px solid var(--pink);color:#fff;background:rgba(209,0,107,.35);font-family:var(--arch);font-size:12px;font-weight:900;letter-spacing:.22em;padding:9px 17px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--disp);font-size:clamp(52px,9vw,96px);line-height:.95;margin:24px auto 10px;max-width:900px;color:#fff;text-transform:uppercase}.hero h1 em{color:var(--pink);font-style:normal}
+.hero p.lead{color:var(--cream2);max-width:620px;margin:16px auto 28px;font-size:clamp(16px,2vw,18.5px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:6px;font-family:var(--arch);font-weight:900;text-decoration:none;font-size:15.5px;transition:.25s;text-transform:uppercase;letter-spacing:.04em}.btn:hover{transform:translateY(-2px)}.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(31,170,85,.3)}.btn.pink{background:var(--pink);color:#fff}.btn.line{background:transparent;color:#fff;border:2px solid rgba(255,246,233,.5)}.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.askbox{max-width:720px;margin:32px auto 0;background:var(--cream);color:#1a1016;border-radius:14px;padding:20px 24px;text-align:center}
+.askbox b{font-family:var(--arch);font-size:19px;display:block}.askbox span{font-size:14px;color:#5a4350}.askbox a{color:var(--mag);font-weight:800}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{text-align:center;font-family:var(--arch);font-size:12px;font-weight:900;letter-spacing:.32em;color:var(--pink2);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--disp);font-size:clamp(36px,5.4vw,56px);line-height:1;text-align:center;margin-bottom:12px;color:#fff;text-transform:uppercase}h2 em{color:var(--pink);font-style:normal}
+.sub{text-align:center;color:#d8c6b8;max-width:640px;margin:0 auto 38px}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:700px){.menu-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1020px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+.dish{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.3s}.dish:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:var(--shadow)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.dish-in{padding:22px}.dish .tag{font-family:var(--arch);font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--pink2);text-transform:uppercase}.dish h3{font-family:var(--disp);font-size:28px;color:#fff;margin:5px 0 6px;text-transform:uppercase;letter-spacing:.02em}.dish p{font-size:14.5px;color:#d8c6b8;margin-bottom:14px}.price{font-family:var(--disp);font-size:30px;color:var(--cream);margin-bottom:14px}.price small{font-size:13px;font-family:var(--arch);color:var(--pink2)}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:8px;font-size:15px}.ord:hover{background:#178a44}
+.bf{background:linear-gradient(135deg,#2b0718,#4a0a2a);border:2px solid var(--pink);border-radius:22px;padding:clamp(28px,4vw,44px);margin-top:10px}
+.bf-grid{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:760px){.bf-grid{grid-template-columns:1fr 1fr}}
+.bf-card{background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:16px;padding:24px}.bf-card h3{font-family:var(--disp);font-size:30px;color:#fff;text-transform:uppercase}.bf-card .price{color:var(--pink2)}
+.packlist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(min-width:760px){.packlist{grid-template-columns:repeat(4,1fr)}}
+.pack{background:var(--coal);border:1px solid var(--line);border-radius:14px;padding:20px 14px;text-align:center}.pack b{font-family:var(--disp);font-size:22px;color:#fff;display:block;text-transform:uppercase}.pack span{font-size:13px;color:#d8c6b8}
+.builder{background:var(--cream);color:#1a1016;border-radius:22px;padding:clamp(26px,4vw,42px);box-shadow:var(--shadow)}
+.builder h3{font-family:var(--disp);font-size:32px;text-transform:uppercase;color:#0b0b0d}.builder p{color:#5a4350;font-size:14.5px}
+.brow{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 0;border-bottom:1px dashed #d9c3ae;flex-wrap:wrap}.brow b{font-family:var(--arch)}.brow .bp{color:var(--mag);font-weight:800}
+.stepper{display:inline-flex;align-items:center;gap:10px}.stepper button{width:42px;height:42px;border-radius:50%;border:2px solid #0b0b0d;background:#fff;font-size:20px;font-weight:900;cursor:pointer}.stepper output{font-family:var(--disp);font-size:22px;min-width:26px;text-align:center}
+.btotal{display:flex;justify-content:space-between;align-items:center;margin-top:20px;flex-wrap:wrap;gap:12px}.btotal .tot{font-family:var(--disp);font-size:38px;color:var(--mag)}
+.askitems{margin-top:16px;font-size:14px}.askitems label{display:inline-flex;gap:7px;align-items:center;background:#fff;border:1px solid #d9c3ae;border-radius:999px;padding:8px 13px;margin:0 6px 8px 0;cursor:pointer;font-weight:600}
+.how{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--coal);border:1px solid var(--line);border-radius:16px;padding:26px 24px}.step .n{font-family:var(--disp);font-size:44px;color:var(--pink);line-height:1}.step h3{font-family:var(--arch);font-size:20px;color:#fff;margin:10px 0 6px}.step p{font-size:14.5px;color:#d8c6b8}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:#d8c6b8;margin-top:8px;font-weight:600}
+.quote{background:var(--pink);border-radius:20px;padding:clamp(30px,5vw,50px);text-align:center;margin-top:clamp(56px,8vw,84px)}
+.quote p{font-family:var(--disp);font-size:clamp(24px,3.6vw,38px);color:#fff;max-width:760px;margin:0 auto;line-height:1.15;text-transform:uppercase}
+footer{padding:38px 20px 118px;text-align:center;color:#b9a695;font-size:13px;max-width:1160px;margin:56px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(11,11,13,.97);border-top:3px solid var(--pink);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1160px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:8px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--pink);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.4);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;z-index:91;color:#221016}.chatw-panel.open{display:flex}
+.chatw-head{background:#0b0b0d;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#ffe3f0;align-self:flex-start}.msg.user{background:var(--pink);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #f3b8d2;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #f3d3e2}.chatw-form input{flex:1;border:1px solid #f3b8d2;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--pink);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">La <span>Güera</span><small>ALITAS &amp; BONELESS · MÉRIDA</small></div>
+<a class="hdr-ask" href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20%C2%BFcu%C3%A1l%20es%20el%20horario%20de%20hoy%3F">Pregunta por el horario de hoy</a>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Alitas y boneless de La Güera en Mérida">
+<div class="hero-in">
+<span class="pill">Solo delivery · Motomandado · Mérida, Yucatán</span>
+<h1>Sabor callejero, <em>directo a tu puerta</em></h1>
+<p class="lead">Hamburguesas, alitas, boneless y paquetes para compartir. Sin local: todo se pide por WhatsApp y te llega por motomandado en Mérida.</p>
+<div class="actions">
+<a class="btn pink" href="#armalo">Arma tu combo</a>
+<a class="btn wa" href="#menu">Ver el menú</a>
+</div>
+<div class="askbox"><b>¿Abrimos hoy? Pregunta por el horario de hoy</b><span>El horario cambia — confírmalo en un toque por WhatsApp antes de pedir.</span><br><a href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20%C2%BFcu%C3%A1l%20es%20el%20horario%20de%20hoy%3F">Preguntar por WhatsApp →</a></div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="menu" class="rv">
+<div class="eyebrow">01 · Hamburguesas</div>
+<h2>Las tres <em>de la casa</em></h2>
+<p class="sub">Precios verificados de nuestras publicaciones. Elige la tuya y pídela por WhatsApp, o ármala en el combo de abajo.</p>
+<div class="menu-grid">
+<article class="dish"><img src="img/p1.jpg" alt="Hamburguesa La Mera Mera de La Güera"><div class="dish-in"><div class="tag">Hamburguesa</div><h3>La Mera Mera</h3><p>La clásica de La Güera.</p><div class="price">$125</div><a class="ord" href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20quiero%20pedir%20una%20hamburguesa%20La%20Mera%20Mera%20(%24125)">Pedir La Mera Mera →</a></div></article>
+<article class="dish"><img src="img/p2.jpg" alt="Hamburguesa La Consentida de La Güera"><div class="dish-in"><div class="tag">Hamburguesa</div><h3>La Consentida</h3><p>La favorita, la consentida de la casa.</p><div class="price">$135</div><a class="ord" href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20quiero%20pedir%20una%20hamburguesa%20La%20Consentida%20(%24135)">Pedir La Consentida →</a></div></article>
+<article class="dish"><img src="img/p3.jpg" alt="Hamburguesa La Patrona de La Güera"><div class="dish-in"><div class="tag">Hamburguesa</div><h3>La Patrona</h3><p>La que manda en el menú.</p><div class="price">$145</div><a class="ord" href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20quiero%20pedir%20una%20hamburguesa%20La%20Patrona%20(%24145)">Pedir La Patrona →</a></div></article>
+</div>
+<p class="sub" style="margin-top:26px">Todo bañado a tu gusto: contamos con <b style="color:#fff">seis salsas de la casa</b>. Pregunta por ellas al pedir.</p>
+</section>
+
+<section class="rv">
+<div class="eyebrow">02 · Paquetes</div>
+<h2>Paquetes <em>1 a 7</em></h2>
+<p class="sub">Siete paquetes para compartir, de $180 a $350. El contenido y el precio exacto de cada paquete se confirman por WhatsApp — sin inventos.</p>
+<div class="packlist">
+<div class="pack"><b>Paquete 1</b><span>desde $180</span></div>
+<div class="pack"><b>Paquete 2</b><span>pregunta el precio</span></div>
+<div class="pack"><b>Paquete 3</b><span>pregunta el precio</span></div>
+<div class="pack"><b>Paquete 4</b><span>pregunta el precio</span></div>
+<div class="pack"><b>Paquete 5</b><span>pregunta el precio</span></div>
+<div class="pack"><b>Paquete 6</b><span>pregunta el precio</span></div>
+<div class="pack"><b>Paquete 7</b><span>hasta $350</span></div>
+<div class="pack"><b>Paquetes 1–7</b><span>$180 – $350</span></div>
+</div>
+<div style="text-align:center;margin-top:24px"><a class="btn wa" href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20quiero%20preguntar%20por%20los%20Paquetes%201%20a%207%20(%24180%20a%20%24350)">Preguntar por los paquetes →</a></div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">03 · Buen Fin · Válidos nov 13–17</div>
+<h2>Combos del <em>Buen Fin</em></h2>
+<p class="sub">Combos especiales del Buen Fin, válidos del 13 al 17 de noviembre. Ambos incluyen Coca-Cola de 3L gratis.</p>
+<div class="bf"><div class="bf-grid">
+<div class="bf-card"><div class="tag" style="font-family:var(--arch);font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--pink2)">BUEN FIN · NOV 13–17</div><h3>El Banquete</h3><p style="color:#d8c6b8;font-size:14.5px">Combo del Buen Fin. Incluye Coca-Cola de 3L gratis.</p><div class="price">$550</div><a class="ord" href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20quiero%20pedir%20el%20combo%20del%20Buen%20Fin%20El%20Banquete%20(%24550%2C%20con%20Coca-Cola%203L%20gratis)">Pedir El Banquete →</a></div>
+<div class="bf-card"><div class="tag" style="font-family:var(--arch);font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--pink2)">BUEN FIN · NOV 13–17</div><h3>El Antojo Supremo</h3><p style="color:#d8c6b8;font-size:14.5px">Combo del Buen Fin. Incluye Coca-Cola de 3L gratis.</p><div class="price">$450</div><a class="ord" href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20quiero%20pedir%20el%20combo%20del%20Buen%20Fin%20El%20Antojo%20Supremo%20(%24450%2C%20con%20Coca-Cola%203L%20gratis)">Pedir El Antojo Supremo →</a></div>
+</div></div>
+</section>
+
+<section id="armalo" class="rv">
+<div class="eyebrow">04 · Ármalo tú</div>
+<h2>Arma tu <em>combo</em></h2>
+<p class="sub">Suma hamburguesas y combos del Buen Fin con los botones + y −. El total se calcula en vivo y tu pedido llega listo a WhatsApp.</p>
+<div class="builder">
+<h3>Tu pedido</h3>
+<p>Los paquetes se agregan como pregunta — su precio exacto ($180 a $350) se confirma por WhatsApp.</p>
+<div id="brows"></div>
+<div class="askitems"><b>Agregar paquetes (preguntar precio):</b><br><br>
+<label><input type="checkbox" class="askitem" value="Paquete 1"> Paquete 1</label>
+<label><input type="checkbox" class="askitem" value="Paquete 2"> Paquete 2</label>
+<label><input type="checkbox" class="askitem" value="Paquete 3"> Paquete 3</label>
+<label><input type="checkbox" class="askitem" value="Paquete 4"> Paquete 4</label>
+<label><input type="checkbox" class="askitem" value="Paquete 5"> Paquete 5</label>
+<label><input type="checkbox" class="askitem" value="Paquete 6"> Paquete 6</label>
+<label><input type="checkbox" class="askitem" value="Paquete 7"> Paquete 7</label>
+</div>
+<div class="btotal"><div>Total de lo marcado con precio<br><span class="tot" id="btotal">$0</span></div><a class="btn wa" id="bsend" href="https://wa.me/529994584727" target="_blank" rel="noopener">Enviar pedido por WhatsApp →</a></div>
+<p style="margin-top:12px;font-size:13px">Pregunta por el horario de hoy al enviar tu pedido.</p>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">05 · Así funciona</div>
+<h2>Solo delivery, <em>por motomandado</em></h2>
+<div class="how">
+<div class="step"><div class="n">1</div><h3>Pides por WhatsApp</h3><p>Arma tu combo o elige del menú. Tu mensaje llega ya escrito al 999 458 4727.</p></div>
+<div class="step"><div class="n">2</div><h3>Confirmas horario y precio</h3><p>Pregunta por el horario de hoy y confirma tu pedido, las salsas y los paquetes.</p></div>
+<div class="step"><div class="n">3</div><h3>Te llega por motomandado</h3><p>Somos delivery-only en Mérida, Yucatán: sin local, directo a tu puerta.</p></div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">06 · Galería</div>
+<h2>Directo de <em>La Güera</em></h2>
+<p class="sub">Fotos reales publicadas por Alitas &amp; Boneless La Güera.</p>
+<div class="strip">
+<figure><img src="img/p4.jpg" alt="Platillo de La Güera"><figcaption>Alitas y boneless</figcaption></figure>
+<figure><img src="img/p5.jpg" alt="Hamburguesa de La Güera"><figcaption>Hamburguesas</figcaption></figure>
+<figure><img src="img/p6.jpg" alt="Paquete de La Güera"><figcaption>Paquetes</figcaption></figure>
+<figure><img src="img/p7.jpg" alt="Combo de La Güera"><figcaption>Combos</figcaption></figure>
+</div>
+</section>
+
+<div class="quote rv"><p>Seis salsas de la casa. Tres hamburguesas. Siete paquetes. Un solo WhatsApp.</p></div>
+</div>
+
+<footer>
+Alitas &amp; Boneless La Güera · Mérida, Yucatán · Solo delivery por motomandado · WhatsApp +52 999 458 4727<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Alitas &amp; Boneless La Güera.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp — 999 458 4727</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente La Güera">
+<div class="chatw-head"><div><b>Asistente La Güera</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+/* Combo builder */
+var ITEMS=[
+{id:'mera',name:'La Mera Mera',price:125},
+{id:'consentida',name:'La Consentida',price:135},
+{id:'patrona',name:'La Patrona',price:145},
+{id:'banquete',name:'El Banquete (Buen Fin, Coca-Cola 3L gratis)',price:550},
+{id:'antojo',name:'El Antojo Supremo (Buen Fin, Coca-Cola 3L gratis)',price:450}
+];
+var qty={};ITEMS.forEach(function(it){qty[it.id]=0;});
+var brows=document.getElementById('brows');
+function fmt(n){return '$'+n.toLocaleString('es-MX');}
+function render(){
+brows.innerHTML='';
+ITEMS.forEach(function(it){
+var row=document.createElement('div');row.className='brow';
+var left=document.createElement('div');var b=document.createElement('b');b.textContent=it.name;var sp=document.createElement('div');sp.className='bp';sp.textContent=fmt(it.price);left.appendChild(b);left.appendChild(sp);
+var st=document.createElement('div');st.className='stepper';
+var minus=document.createElement('button');minus.type='button';minus.textContent='−';minus.setAttribute('aria-label','Quitar '+it.name);
+var out=document.createElement('output');out.textContent=qty[it.id];
+var plus=document.createElement('button');plus.type='button';plus.textContent='+';plus.setAttribute('aria-label','Agregar '+it.name);
+minus.addEventListener('click',function(){if(qty[it.id]>0)qty[it.id]--;render();});
+plus.addEventListener('click',function(){qty[it.id]++;render();});
+st.appendChild(minus);st.appendChild(out);st.appendChild(plus);
+row.appendChild(left);row.appendChild(st);brows.appendChild(row);
+});
+var total=0;ITEMS.forEach(function(it){total+=qty[it.id]*it.price;});
+document.getElementById('btotal').textContent=fmt(total);
+var lines=['Hola La Güera, quiero pedir:'];
+ITEMS.forEach(function(it){if(qty[it.id]>0)lines.push(qty[it.id]+' x '+it.name+' — '+fmt(qty[it.id]*it.price));});
+document.querySelectorAll('.askitem').forEach(function(cb){if(cb.checked)lines.push('Preguntar precio: '+cb.value+' (paquetes $180 a $350)');});
+if(lines.length===1)lines.push('(todavía sin productos — quiero información)');
+lines.push('Total de productos con precio: '+fmt(total));
+lines.push('¿Cuál es el horario de hoy? Gracias.');
+document.getElementById('bsend').href='https://wa.me/529994584727?text='+encodeURIComponent(lines.join('\n'));
+}
+document.querySelectorAll('.askitem').forEach(function(cb){cb.addEventListener('change',render);});
+render();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"},"greeting":"¡Hola! Soy el asistente de Alitas & Boneless La Güera en Mérida. Pregúntame por hamburguesas, paquetes, combos del Buen Fin o cómo pedir.","fallback":"Eso no lo tengo a la mano — escríbenos por WhatsApp al +52 999 458 4727 y te ayudamos.","chips":["¿Qué hamburguesas hay?","¿Cuánto cuestan los paquetes?","¿Qué combos del Buen Fin hay?","¿Cuál es el horario?","¿Tienen local?","¿Qué salsas hay?"],"items":[{"k":["mera mera"],"a":"La Mera Mera cuesta $125. Es una de nuestras tres hamburguesas.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["consentida"],"a":"La Consentida cuesta $135. Es una de nuestras tres hamburguesas.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["patrona"],"a":"La Patrona cuesta $145. Es una de nuestras tres hamburguesas.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["banquete"],"a":"El Banquete es un combo del Buen Fin (válido nov 13–17) por $550 e incluye Coca-Cola de 3L gratis.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["antojo supremo","antojo"],"a":"El Antojo Supremo es un combo del Buen Fin (válido nov 13–17) por $450 e incluye Coca-Cola de 3L gratis.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["paquete"],"a":"Tenemos Paquetes 1 a 7, con precios de $180 a $350. El precio exacto de cada paquete se confirma por WhatsApp.","link":{"t":"Preguntar por WhatsApp","href":"https://wa.me/529994584727"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por el menú, los paquetes o los combos del Buen Fin."},{"k":["hamburguesa","menu","venden","hay"],"a":"Hamburguesas: La Mera Mera $125, La Consentida $135 y La Patrona $145. También hay Paquetes 1 a 7 ($180 a $350) y combos del Buen Fin."},{"k":["buen fin","combo"],"a":"Combos del Buen Fin (válidos nov 13–17): El Banquete $550 y El Antojo Supremo $450. Ambos incluyen Coca-Cola de 3L gratis."},{"k":["salsa"],"a":"Contamos con seis salsas de la casa. Pregunta por ellas por WhatsApp al pedir.","link":{"t":"Preguntar por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["precio","cuesta","cuestan","cuanto"],"a":"Hamburguesas: $125, $135 y $145. Paquetes 1 a 7: $180 a $350. Buen Fin: El Banquete $550 y El Antojo Supremo $450, con Coca-Cola de 3L gratis (nov 13–17)."},{"k":["horario","abren","abierto","hora","cuando"],"a":"Pregunta por el horario de hoy por WhatsApp — ahí te confirman si estamos tomando pedidos ahora.","link":{"t":"Preguntar el horario de hoy","href":"https://wa.me/529994584727?text=Hola%20La%20G%C3%BCera%2C%20%C2%BFcu%C3%A1l%20es%20el%20horario%20de%20hoy%3F"}},{"k":["local","comedor","direccion","donde","ubicacion"],"a":"No tenemos local: somos solo delivery por motomandado en Mérida, Yucatán. Todo se pide por WhatsApp."},{"k":["delivery","motomandado","envio","entrega"],"a":"Trabajamos solo por delivery con motomandado en Mérida, Yucatán. Pide por WhatsApp al +52 999 458 4727.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["pedir","ordenar","comprar","quiero"],"a":"Para pedir: arma tu combo en esta página o toca Pedir en el menú — tu mensaje llega a WhatsApp ya escrito.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp: +52 999 458 4727.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/529994584727"}},{"k":["coca","refresco"],"a":"Los combos del Buen Fin (El Banquete $550 y El Antojo Supremo $450, válidos nov 13–17) incluyen Coca-Cola de 3L gratis."},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en La Güera."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+</body>
+</html>

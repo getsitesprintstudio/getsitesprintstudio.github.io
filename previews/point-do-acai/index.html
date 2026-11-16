@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Point do Açaí Delivery — Olímpia, SP | Copos e marmitas de açaí</title>
+<meta name="description" content="Point do Açaí Delivery em Olímpia, SP: copo 300 ml R$ 10, 500 ml R$ 12, 700 ml R$ 15; marmita 500 ml R$ 13, 950 ml R$ 23. Aniversário de 7 anos com promoção durante novembro. Monte o seu e peça pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#2b0a3d;--plum2:#3d1154;--panel:#451a63;--berry:#c2185b;--berry2:#e91e63;--grape:#8e24aa;--cream:#fff8ef;--cream2:#f3e3d3;--mut:#d9c3e8;--wa:#1faa55;--line:#5b2a7d;--disp:"Fredoka",system-ui,sans-serif;--sans:"Nunito",system-ui,sans-serif;--shadow:0 26px 55px rgba(16,2,26,.6)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--plum);color:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--berry2);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(43,10,61,.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--berry);box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.hdr{max-width:1160px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-weight:700;font-size:clamp(23px,3vw,30px);color:#fff;line-height:1.05}.brand span{color:#ff7eb0}.brand small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.28em;font-weight:800;color:var(--mut);margin-top:2px}
+.hdr-cta{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:999px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;font-size:14px}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#1c0629}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.55}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(28,6,41,.78),rgba(43,10,61,.5) 45%,var(--plum) 97%)}
+.hero-in{max-width:1160px;margin:0 auto;padding:clamp(130px,17vw,190px) 20px clamp(70px,9vw,100px);text-align:center}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1.5px solid rgba(255,126,176,.6);color:#ffb3cd;background:rgba(61,17,84,.78);font-size:12.5px;font-weight:800;letter-spacing:.16em;padding:9px 17px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(44px,8vw,80px);line-height:1.02;margin:26px auto 8px;max-width:840px;color:#fff}.hero h1 em{font-style:normal;color:#ff7eb0}
+.hero .q{font-family:var(--disp);font-weight:500;font-size:clamp(21px,3.2vw,30px);color:#ffd9a8}
+.hero p.lead{color:#ecd9f7;max-width:600px;margin:18px auto 30px;font-size:clamp(16px,2vw,18.5px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)}.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(31,170,85,.3)}.btn.line{background:transparent;color:#fff;border:1.5px solid rgba(255,248,239,.5)}.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.bday{max-width:760px;margin:36px auto 0;background:linear-gradient(120deg,#5e1040,#3d1154);border:1.5px solid rgba(255,126,176,.55);border-radius:24px;padding:24px 26px;backdrop-filter:blur(8px)}
+.bday .big{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.6vw,34px);color:#fff}
+.bday .big em{font-style:normal;color:#ffd9a8}
+.bday .small{color:var(--mut);font-size:14.5px;margin-top:5px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{text-align:center;font-size:12px;font-weight:900;letter-spacing:.32em;color:#ff7eb0;margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(32px,4.8vw,48px);line-height:1.08;text-align:center;margin-bottom:12px;color:#fff}h2 em{font-style:normal;color:#ff7eb0}
+.sub{text-align:center;color:var(--mut);max-width:620px;margin:0 auto 38px}
+.price-grid{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:760px){.price-grid{grid-template-columns:repeat(2,1fr)}}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.pcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.pcard-in{padding:24px}.pcard .tag{font-size:11px;font-weight:900;letter-spacing:.18em;color:#ffb3cd;text-transform:uppercase}.pcard h3{font-family:var(--disp);font-weight:600;font-size:26px;color:#fff;margin:4px 0 14px}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:16px}.prow:last-of-type{border-bottom:none}.prow b{font-family:var(--disp);font-weight:600;font-size:20px;color:#ffd9a8;white-space:nowrap}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px;transition:.2s;margin-top:16px}.ord:hover{background:#178a44}
+.builder{max-width:820px;margin:0 auto;background:var(--cream);color:#33123f;border-radius:28px;padding:clamp(26px,4.5vw,42px);box-shadow:var(--shadow)}
+.builder h3{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,32px);text-align:center;color:#4a1160}
+.builder .bsub{text-align:center;color:#7a5b86;font-size:14.5px;margin:6px auto 8px;max-width:480px}
+.bstep{margin-top:24px}.bstep .blab{font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--berry);margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{flex:1 1 130px;border:2px solid #e6d3f2;background:#fff;border-radius:16px;padding:14px 12px;cursor:pointer;font:inherit;text-align:center;transition:.2s;color:#33123f}
+.opt b{display:block;font-family:var(--disp);font-weight:600;font-size:18px}
+.opt span{display:block;font-size:13px;color:#7a5b86;margin-top:2px}
+.opt .op{display:block;font-family:var(--disp);font-weight:700;font-size:19px;color:var(--berry);margin-top:5px}
+.opt.sel{border-color:var(--berry);background:#fdeef5;box-shadow:0 0 0 3px rgba(194,24,91,.16)}
+.bnote{background:#fdf3e3;border:1px dashed #e0aa4e;border-radius:14px;padding:13px 16px;font-size:14px;color:#6b4d12;margin-top:24px}
+.btotal{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;background:#2b0a3d;color:#fff;border-radius:16px;padding:16px 20px}
+.btotal .t1{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:800}
+.btotal .t2{font-family:var(--disp);font-weight:700;font-size:30px;color:#ffd9a8}
+.btotal .tsel{font-size:14.5px;color:#ecd9f7}
+.builder .ord{margin-top:18px;min-height:56px;font-size:16px}
+.how{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--plum2);border:1px solid var(--line);border-radius:22px;padding:26px 24px}.step .n{font-family:var(--disp);font-weight:700;font-size:40px;color:#ff7eb0;line-height:1}.step h3{font-family:var(--disp);font-weight:600;font-size:21px;color:#fff;margin:10px 0 6px}.step p{font-size:14.5px;color:var(--mut)}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.quote{background:linear-gradient(130deg,#4a0e33,#2b0a3d);border:1px solid #7d1f52;border-radius:26px;padding:clamp(32px,5vw,54px);text-align:center;margin-top:clamp(56px,8vw,84px)}
+.quote p{font-family:var(--disp);font-weight:500;font-size:clamp(21px,3.2vw,29px);color:#ffd9ec;max-width:720px;margin:0 auto;line-height:1.4}
+.quote small{display:block;margin-top:16px;color:var(--mut);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+footer{padding:38px 20px 118px;text-align:center;color:#b28fc9;font-size:13px;max-width:1160px;margin:56px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(43,10,61,.97);border-top:2px solid var(--berry);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1160px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;text-align:center}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--berry);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.4);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;z-index:91;color:#2a1038}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--plum2);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#f7e8fb;align-self:flex-start}.msg.user{background:var(--berry);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #e6cfea;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #f0ddf5}.chatw-form input{flex:1;border:1px solid #e6cfea;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--berry);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">Point do <span>Açaí</span><small>DELIVERY · OLÍMPIA · SP</small></div>
+<a class="hdr-cta" href="https://wa.me/5517981068573?text=Ol%C3%A1%2C%20Point%20do%20A%C3%A7a%C3%AD!%20Quero%20fazer%20um%20pedido">Pedir agora</a>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Açaí do Point do Açaí Delivery, Olímpia, SP">
+<div class="hero-in">
+<span class="pill">🫐 Delivery em Olímpia · SP</span>
+<h1>Seu açaí, do seu jeito, <em>na sua casa</em></h1>
+<div class="q">Copo ou marmita — você monta, a gente entrega</div>
+<p class="lead">Copos de 300, 500 e 700 ml e marmitas de 500 e 950 ml, com preço fechado e pedido direto pelo WhatsApp. Monte o seu aqui embaixo e receba em Olímpia.</p>
+<div class="actions">
+<a class="btn wa" href="#montar">Montar meu açaí</a>
+<a class="btn line" href="#precos">Ver preços</a>
+</div>
+<div class="bday">
+<div class="big">🎉 Aniversário de <em>7 anos</em> do Point do Açaí</div>
+<div class="small">Estamos comemorando 7 anos em Olímpia — e tem promoção rolando durante todo o mês de novembro. Chama no WhatsApp e aproveita.</div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="precos" class="rv">
+<div class="eyebrow">01 · Preços</div>
+<h2>Tabela simples, <em>preço fechado</em></h2>
+<p class="sub">Sem taxa escondida na tabela: escolha copo ou marmita e o tamanho. Os acompanhamentos você combina com a gente no WhatsApp.</p>
+<div class="price-grid">
+<article class="pcard"><img src="img/p1.jpg" alt="Copo de açaí do Point do Açaí"><div class="pcard-in"><div class="tag">Pra matar a vontade</div><h3>Copo de açaí</h3>
+<div class="prow"><span>Copo 300 ml</span><b>R$ 10</b></div>
+<div class="prow"><span>Copo 500 ml</span><b>R$ 12</b></div>
+<div class="prow"><span>Copo 700 ml</span><b>R$ 15</b></div>
+<a class="ord" href="https://wa.me/5517981068573?text=Ol%C3%A1%2C%20Point%20do%20A%C3%A7a%C3%AD!%20Quero%20pedir%20um%20copo%20de%20a%C3%A7a%C3%AD">Pedir um copo →</a></div></article>
+<article class="pcard"><img src="img/p2.jpg" alt="Marmita de açaí do Point do Açaí"><div class="pcard-in"><div class="tag">Pra compartilhar (ou não)</div><h3>Marmita de açaí</h3>
+<div class="prow"><span>Marmita 500 ml</span><b>R$ 13</b></div>
+<div class="prow"><span>Marmita 950 ml</span><b>R$ 23</b></div>
+<div class="prow"><span>Acompanhamentos</span><b>combine no zap</b></div>
+<a class="ord" href="https://wa.me/5517981068573?text=Ol%C3%A1%2C%20Point%20do%20A%C3%A7a%C3%AD!%20Quero%20pedir%20uma%20marmita%20de%20a%C3%A7a%C3%AD">Pedir uma marmita →</a></div></article>
+</div>
+</section>
+
+<section id="montar" class="rv">
+<div class="eyebrow">02 · Monte o seu</div>
+<h2>Monte seu açaí <em>em segundos</em></h2>
+<p class="sub">Escolha o formato e o tamanho: o preço atualiza na hora, da tabela oficial. Depois é só enviar — os acompanhamentos a gente combina com você na conversa.</p>
+<div class="builder">
+<h3>🫐 Montador de açaí</h3>
+<p class="bsub">Dois toques e seu pedido vai pronto pro WhatsApp, com tamanho e preço já escritos.</p>
+<div class="bstep">
+<div class="blab">Passo 1 · Copo ou marmita?</div>
+<div class="opts" id="typeOpts">
+<button type="button" class="opt sel" data-type="copo"><b>🥤 Copo</b><span>individual, pra já</span></button>
+<button type="button" class="opt" data-type="marmita"><b>🍱 Marmita</b><span>pra dividir ou guardar</span></button>
+</div>
+</div>
+<div class="bstep">
+<div class="blab">Passo 2 · Qual tamanho?</div>
+<div class="opts" id="sizeOpts"></div>
+</div>
+<div class="bnote"><b>Passo 3 · Acompanhamentos:</b> combine pelo WhatsApp — na hora de enviar o pedido, a gente fecha os acompanhamentos com você na conversa.</div>
+<div class="btotal">
+<div><div class="t1">Seu pedido</div><div class="tsel" id="bSel">Copo 300 ml</div></div>
+<div class="t2" id="bPrice">R$ 10</div>
+</div>
+<a class="ord" id="bOrder" href="https://wa.me/5517981068573" target="_blank" rel="noopener">Enviar pedido pelo WhatsApp →</a>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">03 · Como funciona</div>
+<h2>Pedido em <em>três passos</em></h2>
+<p class="sub">O Point do Açaí é delivery: você pede pelo WhatsApp e recebe em Olímpia, SP.</p>
+<div class="how">
+<div class="step"><div class="n">1</div><h3>Monte aqui</h3><p>Use o montador acima: copo ou marmita, tamanho e preço aparecem na hora.</p></div>
+<div class="step"><div class="n">2</div><h3>Envie pelo WhatsApp</h3><p>O pedido chega pronto no (17) 98106-8573. Aí combinamos os acompanhamentos e a entrega com você.</p></div>
+<div class="step"><div class="n">3</div><h3>Receba e aproveite</h3><p>Seu açaí sai pra entrega em Olímpia. É só esperar e aproveitar.</p></div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">04 · Galeria</div>
+<h2>Direto do <em>Point</em></h2>
+<p class="sub">Fotos publicadas pelo Point do Açaí Delivery.</p>
+<div class="strip">
+<figure><img src="img/p3.jpg" alt="Açaí do Point do Açaí Delivery"><figcaption>Montado na hora</figcaption></figure>
+<figure><img src="img/p4.jpg" alt="Copo de açaí do Point do Açaí"><figcaption>Copo do seu jeito</figcaption></figure>
+<figure><img src="img/p5.jpg" alt="Marmita de açaí do Point do Açaí"><figcaption>Marmita caprichada</figcaption></figure>
+<figure><img src="img/p6.jpg" alt="Point do Açaí Delivery em Olímpia"><figcaption>Olímpia, SP</figcaption></figure>
+</div>
+</section>
+
+<div class="quote rv">
+<p>"7 anos de Point do Açaí em Olímpia — obrigado a cada cliente que monta o seu com a gente. Em novembro, a comemoração é com promoção o mês todo."</p>
+<small>Point do Açaí Delivery · 7 anos</small>
+<div style="text-align:center;margin-top:26px"><a class="btn wa" href="https://wa.me/5517981068573?text=Ol%C3%A1%2C%20Point%20do%20A%C3%A7a%C3%AD!%20Quero%20fazer%20um%20pedido">Pedir pelo WhatsApp — (17) 98106-8573</a></div>
+</div>
+</div>
+
+<footer>
+Point do Açaí Delivery · Olímpia, SP · Copos R$ 10–15 · Marmitas R$ 13–23 · WhatsApp +55 17 98106-8573<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Point do Açaí Delivery.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/5517981068573?text=Ol%C3%A1%2C%20Point%20do%20A%C3%A7a%C3%AD!%20Quero%20fazer%20um%20pedido">🫐 Pedir pelo WhatsApp — (17) 98106-8573</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente Point do Açaí">
+<div class="chatw-head"><div><b>Assistente Point do Açaí</b><small>Assistente demo · prévia de conceito</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Fechar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escreva sua pergunta…" aria-label="Escreva sua pergunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+/* Açaí builder — preços verificados: copo 300/500/700 = 10/12/15; marmita 500/950 = 13/23 */
+(function(){
+var MENU={copo:{label:'Copo',sizes:[{ml:300,price:10},{ml:500,price:12},{ml:700,price:15}]},marmita:{label:'Marmita',sizes:[{ml:500,price:13},{ml:950,price:23}]}};
+var state={type:'copo',idx:0};
+var typeOpts=document.getElementById('typeOpts'),sizeOpts=document.getElementById('sizeOpts'),selEl=document.getElementById('bSel'),priceEl=document.getElementById('bPrice'),ordEl=document.getElementById('bOrder');
+function fmt(n){return 'R$ '+n;}
+function renderSizes(){
+sizeOpts.innerHTML='';
+MENU[state.type].sizes.forEach(function(s,i){
+var b=document.createElement('button');b.type='button';b.className='opt'+(i===state.idx?' sel':'');
+var b1=document.createElement('b');b1.textContent=s.ml+' ml';
+var b2=document.createElement('span');b2.className='op';b2.textContent=fmt(s.price);
+b.appendChild(b1);b.appendChild(b2);
+b.addEventListener('click',function(){state.idx=i;render();});
+sizeOpts.appendChild(b);
+});
+}
+function render(){
+renderSizes();
+var s=MENU[state.type].sizes[state.idx];
+var label=MENU[state.type].label+' '+s.ml+' ml';
+selEl.textContent=label;
+priceEl.textContent=fmt(s.price);
+var msg='Olá, Point do Açaí! Quero pedir: '+label+' — '+fmt(s.price)+'. Acompanhamentos: quero combinar por aqui, por favor.';
+ordEl.href='https://wa.me/5517981068573?text='+encodeURIComponent(msg);
+}
+typeOpts.querySelectorAll('.opt').forEach(function(b){
+b.addEventListener('click',function(){
+state.type=b.getAttribute('data-type');state.idx=0;
+typeOpts.querySelectorAll('.opt').forEach(function(x){x.classList.toggle('sel',x===b);});
+render();
+});
+});
+render();
+})();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5517981068573"},"greeting":"Olá! Sou o assistente do Point do Açaí Delivery. Pergunte sobre preços, tamanhos ou a promoção de aniversário — ou toque numa sugestão.","fallback":"Isso eu não tenho aqui — chama a gente no WhatsApp (17) 98106-8573 que respondemos por lá.","chips":["Quais os preços?","Tem promoção?","Como peço?","Quais acompanhamentos?","Vocês entregam?"],"items":[{"k":["marmita"],"a":"Marmitas: 500 ml por R$ 13 e 950 ml por R$ 23. Monte a sua no montador desta página e envie pelo WhatsApp.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5517981068573"}},{"k":["copo"],"a":"Copos: 300 ml por R$ 10, 500 ml por R$ 12 e 700 ml por R$ 15. Monte o seu no montador desta página.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5517981068573"}}],"intents":[{"k":["ola","oi","bom dia","boa tarde","boa noite"],"g":1,"a":"Olá! Pergunte sobre preços, tamanhos, a promoção de 7 anos ou como pedir."},{"k":["preco","precos","custa","custam","quanto","valor","tabela"],"a":"Preços: copo 300 ml R$ 10, 500 ml R$ 12, 700 ml R$ 15; marmita 500 ml R$ 13 e 950 ml R$ 23."},{"k":["promocao","aniversario","7 anos","sete anos","novembro","desconto"],"a":"Estamos comemorando 7 anos de Point do Açaí, com promoção durante o mês de novembro. Chama no WhatsApp (17) 98106-8573 pra aproveitar.","link":{"t":"Chamar no WhatsApp","href":"https://wa.me/5517981068573"}},{"k":["acompanhamento","topping","adicional","complemento","granola","leite ninho","morango"],"a":"Os acompanhamentos você combina pelo WhatsApp na hora do pedido — chama a gente no (17) 98106-8573 que fechamos o seu do seu jeito.","link":{"t":"Combinar no WhatsApp","href":"https://wa.me/5517981068573"}},{"k":["pedir","pedido","comprar","quero","montar"],"a":"Pra pedir: use o montador desta página (copo ou marmita + tamanho) e toque em enviar — o pedido chega pronto no nosso WhatsApp (17) 98106-8573.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5517981068573"}},{"k":["entrega","entregam","delivery","olimpia"],"a":"Somos delivery em Olímpia, SP: você pede pelo WhatsApp e combinamos a entrega com você na conversa.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5517981068573"}},{"k":["onde","endereco","cidade","local"],"a":"Atendemos Olímpia, SP, por delivery. Pedidos e detalhes pelo WhatsApp: (17) 98106-8573.","link":{"t":"Chamar no WhatsApp","href":"https://wa.me/5517981068573"}},{"k":["telefone","whatsapp","numero","contato"],"a":"WhatsApp: +55 17 98106-8573.","link":{"t":"Chamar no WhatsApp","href":"https://wa.me/5517981068573"}},{"k":["obrigado","obrigada","valeu"],"a":"Imagina! Obrigado por montar seu açaí com a gente."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+</body>
+</html>

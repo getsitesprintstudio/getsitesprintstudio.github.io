@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Sushi Chillán — Chillán, Chile | Sushi frito y promos</title>
+<meta name="description" content="New Sushi Chillán, Chillán, Chile: sushi frito, pollo mixto y promos mixtas. Jueves a martes 16:30–22:00, delivery hasta las 23:00. WhatsApp +56 9 5054 4516.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--char:#101114;--char2:#17181d;--panel:#1d1e24;--rice:#f7f2e9;--rice2:#e9dfcd;--salmon:#e85d4a;--salmon2:#ff7a66;--wa:#1faa55;--line:#2e2f38;--mut:#b6ab98;--serif:"Marcellus",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--shadow:0 26px 55px rgba(0,0,0,.5)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--char);color:var(--rice);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--salmon);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(16,17,20,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.hdr{max-width:1160px;margin:0 auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:clamp(22px,3vw,29px);color:#fff;letter-spacing:.04em}.brand span{color:var(--salmon2)}.brand small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.28em;font-weight:800;color:var(--mut)}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--rice)}.odot{width:9px;height:9px;border-radius:50%;background:#666}.opennow.open .odot{background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.18)}.opennow.closed .odot{background:var(--salmon);box-shadow:0 0 0 4px rgba(232,93,74,.16)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#070708}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.58}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,7,8,.74),rgba(16,17,20,.48) 45%,var(--char) 97%)}
+.hero-in{max-width:1160px;margin:0 auto;padding:clamp(140px,18vw,200px) 20px clamp(80px,10vw,110px);text-align:center}
+.moon{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,122,102,.55);color:var(--salmon2);background:rgba(23,24,29,.75);font-size:12px;font-weight:800;letter-spacing:.2em;padding:9px 17px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-size:clamp(44px,7.6vw,80px);line-height:1.04;margin:26px auto 8px;max-width:840px;color:#fff}.hero h1 em{color:var(--salmon2);font-style:normal}
+.hero p.lead{color:#ddd2ba;max-width:600px;margin:18px auto 30px;font-size:clamp(16px,2vw,18.5px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)}.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(31,170,85,.3)}.btn.line{background:transparent;color:#fff;border:1.5px solid rgba(247,242,233,.45)}.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.status-hero{max-width:760px;margin:34px auto 0;background:rgba(23,24,29,.88);border:1px solid var(--line);border-radius:22px;padding:22px 26px;backdrop-filter:blur(8px)}
+.status-hero .big{font-family:var(--serif);font-size:clamp(24px,3.6vw,34px);color:#fff}
+.status-hero .small{color:var(--mut);font-size:14px;margin-top:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{text-align:center;font-size:12px;font-weight:800;letter-spacing:.32em;color:var(--salmon2);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--serif);font-size:clamp(32px,4.8vw,48px);line-height:1.08;text-align:center;margin-bottom:12px;color:#fff}h2 em{color:var(--salmon2);font-style:normal}
+.sub{text-align:center;color:var(--mut);max-width:640px;margin:0 auto 38px}
+.featured{background:linear-gradient(135deg,#2a1512,#3d1a12);border:2px solid var(--salmon);border-radius:24px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr;gap:22px;align-items:center}@media(min-width:820px){.featured{grid-template-columns:1.2fr .8fr}}
+.featured h3{font-family:var(--serif);font-size:clamp(28px,4vw,40px);color:#fff;line-height:1.1}.featured p{color:#e9d9c8;font-size:15px;margin-top:8px}
+.stock{display:inline-flex;align-items:center;gap:10px;background:#101114;border:1px solid var(--salmon);color:#fff;font-weight:800;padding:11px 18px;border-radius:999px;margin-top:16px}.stock b{font-size:22px;color:var(--salmon2)}
+.feat-price{font-family:var(--serif);font-size:44px;color:#fff}.feat-price small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.18em;color:var(--salmon2);font-weight:800}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:700px){.menu-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1020px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+.dish{background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.3s}.dish:hover{transform:translateY(-6px);border-color:rgba(255,122,102,.5);box-shadow:var(--shadow)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.dish-in{padding:22px}.dish .tag{font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--salmon2);text-transform:uppercase}.dish h3{font-family:var(--serif);font-size:25px;color:#fff;margin:5px 0 6px}.dish p{font-size:14.5px;color:var(--mut);margin-bottom:14px}.price{font-family:var(--serif);font-size:27px;color:var(--rice);margin-bottom:14px}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px}.ord:hover{background:#178a44}
+.how{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--char2);border:1px solid var(--line);border-radius:20px;padding:26px 24px}.step .n{font-family:var(--serif);font-size:40px;color:var(--salmon);line-height:1}.step h3{font-family:var(--serif);font-size:21px;color:#fff;margin:10px 0 6px}.step p{font-size:14.5px;color:var(--mut)}
+.cal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:820px){.cal{grid-template-columns:repeat(7,1fr)}}
+.day{border:1px solid var(--line);background:var(--char2);border-radius:16px;padding:16px 12px;text-align:center}.day b{display:block;font-size:14px;color:#fff}.day span{font-size:12px;color:var(--mut);display:block;margin-top:4px;line-height:1.45}.day.off{opacity:.55}.day.off span{color:var(--salmon2);font-weight:700}.day.today{border-color:var(--salmon);box-shadow:0 0 0 3px rgba(232,93,74,.18)}.day.today b{color:var(--salmon2)}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.quote{background:var(--rice);border-radius:26px;padding:clamp(32px,5vw,54px);text-align:center;margin-top:clamp(56px,8vw,84px)}
+.quote p{font-family:var(--serif);font-size:clamp(21px,3.2vw,29px);color:#1d1e24;max-width:720px;margin:0 auto;line-height:1.4}
+.quote small{display:block;margin-top:16px;color:#7a6f5c;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1160px;margin:56px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(16,17,20,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1160px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--salmon);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.4);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;z-index:91;color:#221a12}.chatw-panel.open{display:flex}
+.chatw-head{background:#17181d;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fdeae6;align-self:flex-start}.msg.user{background:var(--salmon);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #f0c9c1;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #f0ddd6}.chatw-form input{flex:1;border:1px solid #f0c9c1;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--salmon);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">New Sushi <span>Chillán</span><small>CHILLÁN · CHILE</small></div>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Sushi de New Sushi Chillán">
+<div class="hero-in">
+<span class="moon">Sushi frito · Promos mixtas · Chillán</span>
+<h1>Sushi frito, <em>hecho para compartir</em></h1>
+<p class="lead">Tablas fritas y promos mixtas en Chillán. Pide por WhatsApp, elige tu tamaño y recíbelo en casa — delivery hasta las 23:00.</p>
+<div class="actions">
+<a class="btn wa" href="#promos">Ver promos y pedir</a>
+<a class="btn line" href="#horario">Ver horario</a>
+</div>
+<div class="status-hero" id="statusHero" hidden>
+<div class="big" id="statusBig">…</div>
+<div class="small" id="statusSmall">…</div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<section class="rv">
+<div class="eyebrow">01 · Promo destacada</div>
+<h2>El tablero <em>en vivo</em></h2>
+<p class="sub">Así se vería el tablero de promos con disponibilidad en vivo. Esta tarjeta muestra el estilo de promo de la casa como concepto de vista previa.</p>
+<div class="featured">
+<div>
+<div style="font-size:11px;font-weight:800;letter-spacing:.22em;color:var(--salmon2)">PROMO · ESTILO DE LA CASA · CONCEPTO</div>
+<h3>50 fritos pollo palta queso</h3>
+<p>La promo de escasez de la casa, presentada como concepto: cuando quedan pocos, el tablero lo muestra en vivo.</p>
+<div class="stock">Quedan <b id="stockNum">3</b> disponibles</div>
+<div style="margin-top:18px"><a class="btn wa" id="stockBtn" href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20pedir%20la%20promo%2050%20fritos%20pollo%20palta%20queso%20(%2412.000)">Quiero esta promo →</a></div>
+</div>
+<div style="text-align:center"><div class="feat-price"><small>PRECIO PROMO</small>$12.000</div><p style="color:var(--mut);font-size:13px;margin-top:10px">50 fritos pollo palta queso<br>Solo 3 disponibles en este concepto</p></div>
+</div>
+</section>
+
+<section id="promos" class="rv">
+<div class="eyebrow">02 · Menú y promos</div>
+<h2>Tablas y <em>promos verificadas</em></h2>
+<p class="sub">Precios tomados de nuestras publicaciones. En las promos por rango, toca Pedir y el mensaje de WhatsApp pregunta por el tamaño que quieres.</p>
+<div class="menu-grid">
+<article class="dish"><img src="img/hero.jpg" alt="60 fritos de New Sushi Chillán"><div class="dish-in"><div class="tag">Tabla frita</div><h3>60 fritos</h3><p>Tabla de 60 piezas fritas para compartir.</p><div class="price">$10.500</div><a class="ord" href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20pedir%20los%2060%20fritos%20(%2410.500)">Pedir 60 fritos →</a></div></article>
+<article class="dish"><img src="img/p1.jpg" alt="Pollo Mixto de New Sushi Chillán"><div class="dish-in"><div class="tag">20 / 40 / 60 cortes</div><h3>Pollo Mixto</h3><p>En 20, 40 o 60 cortes. El precio va de $8.000 a $18.500 según el tamaño.</p><div class="price">$8.000 – $18.500</div><a class="ord" href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20pedir%20un%20Pollo%20Mixto.%20%C2%BFMe%20confirmas%20el%20precio%20del%20tama%C3%B1o%20que%20quiero%20(20%2C%2040%20o%2060%20cortes)%3F">Pedir y elegir tamaño →</a></div></article>
+<article class="dish"><img src="img/p2.jpg" alt="Fritos Pollo Palta Queso de New Sushi Chillán"><div class="dish-in"><div class="tag">20 a 80 cortes</div><h3>Fritos Pollo Palta Queso</h3><p>De 20 a 80 cortes. El precio va de $7.000 a $22.000 según el tamaño.</p><div class="price">$7.000 – $22.000</div><a class="ord" href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20pedir%20Fritos%20Pollo%20Palta%20Queso.%20%C2%BFMe%20confirmas%20el%20precio%20del%20tama%C3%B1o%20que%20quiero%20(20%20a%2080%20cortes)%3F">Pedir y elegir tamaño →</a></div></article>
+<article class="dish"><img src="img/p3.jpg" alt="Promos mixtas de New Sushi Chillán"><div class="dish-in"><div class="tag">Promos</div><h3>Promos mixtas</h3><p>Promos mixtas desde $7.000. Pregunta por las promos vigentes al pedir.</p><div class="price">desde $7.000</div><a class="ord" href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20preguntar%20por%20las%20promos%20mixtas%20(desde%20%247.000)">Preguntar por promos →</a></div></article>
+<article class="dish"><img src="img/p4.jpg" alt="Promo 50 fritos pollo palta queso"><div class="dish-in"><div class="tag">Promo · Concepto</div><h3>50 fritos pollo palta queso</h3><p>Promo destacada del tablero: $12.000, solo 3 disponibles en este concepto de vista previa.</p><div class="price">$12.000</div><a class="ord" href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20pedir%20la%20promo%2050%20fritos%20pollo%20palta%20queso%20(%2412.000)">Pedir esta promo →</a></div></article>
+<article class="dish"><img src="img/p5.jpg" alt="Sushi de New Sushi Chillán"><div class="dish-in"><div class="tag">Para pedir</div><h3>¿Otro tamaño?</h3><p>Si buscas un tamaño distinto, pregúntanos por WhatsApp y te confirmamos disponibilidad y precio.</p><div class="price">Por WhatsApp</div><a class="ord" href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20hacer%20una%20consulta%20sobre%20el%20men%C3%BA">Consultar por WhatsApp →</a></div></article>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">03 · Así funciona</div>
+<h2>Pedir es <em>así de simple</em></h2>
+<div class="how">
+<div class="step"><div class="n">1</div><h3>Elige tu promo</h3><p>Toca Pedir en la tabla o promo que quieres. Tu mensaje llega a WhatsApp ya escrito.</p></div>
+<div class="step"><div class="n">2</div><h3>Elige el tamaño</h3><p>En promos por rango, confirma por WhatsApp cuántos cortes quieres: 20, 40, 60 o hasta 80.</p></div>
+<div class="step"><div class="n">3</div><h3>Delivery hasta las 23:00</h3><p>Coordinamos tu entrega por WhatsApp. El delivery funciona hasta las 23:00.</p></div>
+</div>
+</section>
+
+<section id="horario" class="rv">
+<div class="eyebrow">04 · Horario</div>
+<h2>La semana <em>en Chillán</em></h2>
+<p class="sub">Abrimos de jueves a martes, de 16:30 a 22:00. Los miércoles cerramos. Delivery hasta las 23:00.</p>
+<div class="cal" id="cal"></div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">05 · Galería</div>
+<h2>Directo de <em>nuestra cocina</em></h2>
+<p class="sub">Fotos reales publicadas por New Sushi Chillán.</p>
+<div class="strip">
+<figure><img src="img/p6.jpg" alt="Sushi de New Sushi Chillán"><figcaption>Fritos</figcaption></figure>
+<figure><img src="img/p7.jpg" alt="Tabla de New Sushi Chillán"><figcaption>Para compartir</figcaption></figure>
+<figure><img src="img/p2.jpg" alt="Pollo palta queso de New Sushi Chillán"><figcaption>Pollo palta queso</figcaption></figure>
+<figure><img src="img/p3.jpg" alt="Promo mixta de New Sushi Chillán"><figcaption>Promos mixtas</figcaption></figure>
+</div>
+</section>
+
+<div class="quote rv">
+<p>Sushi frito en Chillán, de jueves a martes desde las 16:30 — y delivery hasta las 23:00 para que nadie se quede con el antojo.</p>
+<small>New Sushi Chillán</small>
+</div>
+</div>
+
+<footer>
+New Sushi Chillán · Chillán, Chile · Jueves a martes 16:30–22:00 · Miércoles cerrado · Delivery hasta las 23:00 · WhatsApp +56 9 5054 4516<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of New Sushi Chillán.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/56950544516?text=Hola%20New%20Sushi%20Chill%C3%A1n%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp — +56 9 5054 4516</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente New Sushi Chillán">
+<div class="chatw-head"><div><b>Asistente New Sushi</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+/* Weekly calendar — verified: Thu–Tue 16:30–22:00, Wed closed */
+(function(){
+var cal=document.getElementById('cal');if(!cal)return;
+var today;try{today={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[new Intl.DateTimeFormat('en-US',{timeZone:'America/Santiago',weekday:'short'}).format(new Date())];}catch(e){today=new Date().getDay();}
+var plan=[{n:'Domingo',h:'16:30 – 22:00'},{n:'Lunes',h:'16:30 – 22:00'},{n:'Martes',h:'16:30 – 22:00'},{n:'Miércoles',h:'Cerrado',off:true},{n:'Jueves',h:'16:30 – 22:00'},{n:'Viernes',h:'16:30 – 22:00'},{n:'Sábado',h:'16:30 – 22:00'}];
+var order=[1,2,3,4,5,6,0];
+order.forEach(function(d){var p=plan[d];var div=document.createElement('div');div.className='day'+(p.off?' off':'')+(d===today?' today':'');var b=document.createElement('b');b.textContent=p.n+(d===today?' · hoy':'');var s=document.createElement('span');s.textContent=p.h+(p.off?'':' · delivery hasta 23:00');div.appendChild(b);div.appendChild(s);cal.appendChild(div);});
+})();
+/* Stock counter — concept promo, starts at 3 */
+(function(){
+var n=3;var el=document.getElementById('stockNum');var btn=document.getElementById('stockBtn');
+if(btn){btn.addEventListener('click',function(){if(n>0){n--;if(el)el.textContent=n;}});}
+})();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir por WhatsApp","href":"https://wa.me/56950544516"},"greeting":"¡Hola! Soy el asistente de New Sushi Chillán. Pregúntame por las tablas, las promos, los precios o el horario.","fallback":"Eso no lo tengo a la mano — escríbenos por WhatsApp al +56 9 5054 4516 y te ayudamos.","chips":["¿Qué promos hay?","¿Cuánto cuestan los 60 fritos?","¿Cuál es el horario?","¿Hasta qué hora hay delivery?","¿Cómo pido?"],"items":[{"k":["60 fritos"],"a":"Los 60 fritos cuestan $10.500.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/56950544516"}},{"k":["pollo mixto"],"a":"Pollo Mixto en 20, 40 o 60 cortes, de $8.000 a $18.500 según el tamaño. Confirma el precio de tu tamaño por WhatsApp.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/56950544516"}},{"k":["palta queso","pollo palta"],"a":"Fritos Pollo Palta Queso de 20 a 80 cortes, de $7.000 a $22.000 según el tamaño. También está la promo destacada de 50 fritos pollo palta queso por $12.000 en el tablero (concepto).","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/56950544516"}},{"k":["50 fritos"],"a":"La promo destacada del tablero es 50 fritos pollo palta queso por $12.000 — presentada como concepto de vista previa con solo 3 disponibles.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/56950544516"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por el menú, las promos o el horario."},{"k":["promo","menu","venden","hay","mixta"],"a":"Promos y tablas: 60 fritos $10.500; Pollo Mixto 20/40/60 cortes de $8.000 a $18.500; Fritos Pollo Palta Queso 20 a 80 cortes de $7.000 a $22.000; promos mixtas desde $7.000."},{"k":["precio","cuesta","cuestan","cuanto","valor"],"a":"Precios: 60 fritos $10.500; Pollo Mixto $8.000 a $18.500; Fritos Pollo Palta Queso $7.000 a $22.000; promos mixtas desde $7.000."},{"k":["horario","abren","abierto","cierran","hora","miercoles"],"a":"Horario: jueves a martes de 16:30 a 22:00. Miércoles cerrado. Delivery hasta las 23:00."},{"k":["delivery","reparto","envio","entrega"],"a":"El delivery funciona hasta las 23:00. Abrimos jueves a martes de 16:30 a 22:00; miércoles cerrado.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/56950544516"}},{"k":["pedir","ordenar","comprar","quiero"],"a":"Para pedir: toca Pedir en la promo que quieres y tu mensaje llega a WhatsApp ya escrito. En promos por rango, el mensaje pregunta por el tamaño que eliges.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/56950544516"}},{"k":["donde","direccion","ubicacion","chillan"],"a":"Estamos en Chillán, Chile. Todo se coordina por WhatsApp al +56 9 5054 4516.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/56950544516"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp: +56 9 5054 4516.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/56950544516"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en New Sushi Chillán."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+/* Open-now — verified hours America/Santiago, Thu–Tue 16:30–22:00 (990–1320), Wed closed; delivery until 23:00 noted in text */
+var SCHED={"tz":"America/Santiago","days":{"0":[[990,1320,"16:30","22:00"]],"1":[[990,1320,"16:30","22:00"]],"2":[[990,1320,"16:30","22:00"]],"3":[],"4":[[990,1320,"16:30","22:00"]],"5":[[990,1320,"16:30","22:00"]],"6":[[990,1320,"16:30","22:00"]]}};
+var OTXT={"open":"Abierto ahora · hasta las {x} · delivery hasta 23:00","closed":"Cerrado · abre a las {x}","closedTomorrow":"Cerrado · abre mañana a las {x}","closedDay":"Cerrado · abre el {d} a las {x}","days":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"]};
+(function(){function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}var el=document.getElementById('opennow'),hero=document.getElementById('statusHero');if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);if(el){el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;}if(hero){document.getElementById('statusBig').textContent=st.open?'Sí — estamos abiertos ahora':'Hoy no… todavía';document.getElementById('statusSmall').textContent=txt+' · Jueves a martes, 16:30 a 22:00 · Miércoles cerrado · Delivery hasta las 23:00';hero.hidden=false;}})();
+})();
+</script>
+</body>
+</html>

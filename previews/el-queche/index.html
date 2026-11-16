@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Queche Marisquería — Ciudad Obregón, Sonora | Cahuamanta, aguachile y ceviches</title>
+<meta name="description" content="El Queche Marisquería en Av. Jesús García 2125, Cajeme, Ciudad Obregón, Sonora: cahuamanta, aguachile, tostadas y ceviches. La Promo del Año $149 MXN solo por WhatsApp. Media de Cahuamanta $85 MXN. WhatsApp +52 644 220 5168.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sea:#07304a;--sea2:#0b4568;--deep:#041e30;--sand:#f6ecd9;--sand2:#efe0c4;--paper:#fffaf0;--coral:#ff6b4a;--coral-d:#e04e2e;--ink:#17303f;--mut:#6d7c84;--wa:#1faa55;--line:#e3d3b4;--serif:"Playfair Display",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif;--shadow:0 24px 50px rgba(4,30,48,.22)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--sand);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--coral);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(4,30,48,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(246,236,217,.16);box-shadow:0 12px 32px rgba(4,30,48,.4)}
+.hdr{max-width:1160px;margin:0 auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:900;font-size:clamp(22px,3vw,28px);color:#fff}.brand span{color:var(--coral)}.brand small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.26em;font-weight:800;color:#bcd2de}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:#fff}.odot{width:9px;height:9px;border-radius:50%;background:#666}.opennow.open .odot{background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.18)}.opennow.closed .odot{background:var(--coral);box-shadow:0 0 0 4px rgba(255,107,74,.18)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--deep)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.58}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,30,48,.74),rgba(7,48,74,.45) 45%,var(--sand) 98%)}
+.hero-in{max-width:1160px;margin:0 auto;padding:clamp(140px,18vw,200px) 20px clamp(80px,10vw,110px);text-align:center}
+.moon{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,107,74,.65);color:#ffc4b2;background:rgba(4,30,48,.72);font-size:12px;font-weight:800;letter-spacing:.2em;padding:9px 17px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(46px,8vw,84px);line-height:1;margin:26px auto 8px;max-width:840px;color:#fff}.hero h1 em{color:var(--coral);font-style:italic;font-weight:600}
+.hero .q{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3.4vw,32px);color:#ffe1b8}
+.hero p.lead{color:#dbe7ec;max-width:620px;margin:18px auto 30px;font-size:clamp(16px,2vw,18.5px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)}.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(31,170,85,.3)}.btn.coral{background:var(--coral);color:#fff;box-shadow:0 14px 30px rgba(255,107,74,.35)}.btn.line{background:transparent;color:#fff;border:1.5px solid rgba(246,236,217,.5)}.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.status-hero{max-width:760px;margin:34px auto 0;background:rgba(4,30,48,.86);border:1px solid rgba(246,236,217,.22);border-radius:22px;padding:22px 26px;backdrop-filter:blur(8px)}
+.status-hero .big{font-family:var(--serif);font-weight:800;font-size:clamp(24px,3.6vw,34px);color:#fff}
+.status-hero .small{color:#bcd2de;font-size:14px;margin-top:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{text-align:center;font-size:12px;font-weight:800;letter-spacing:.32em;color:var(--coral-d);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(32px,4.8vw,48px);line-height:1.08;text-align:center;margin-bottom:12px;color:var(--sea)}h2 em{color:var(--coral-d);font-style:italic}
+.sub{text-align:center;color:var(--mut);max-width:640px;margin:0 auto 38px}
+.promo{background:linear-gradient(130deg,var(--sea),var(--sea2));border-radius:28px;padding:clamp(30px,5vw,50px);color:#dbe7ec;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.promo:before{content:"";position:absolute;inset:auto -60px -90px auto;width:260px;height:260px;border-radius:50%;background:rgba(255,107,74,.22)}
+.promo .tag{display:inline-block;background:var(--coral);color:#fff;font-size:12px;font-weight:800;letter-spacing:.2em;padding:8px 16px;border-radius:999px;text-transform:uppercase}
+.promo h2{color:#fff;margin-top:18px}.promo h2 em{color:#ffc4b2}
+.promo .price{font-family:var(--serif);font-size:clamp(46px,7vw,68px);font-weight:900;color:#ffe1b8;line-height:1;margin:8px 0 12px}
+.promo p{max-width:560px;margin:0 auto 10px}
+.promo .only{font-weight:800;color:#ffc4b2;letter-spacing:.06em;text-transform:uppercase;font-size:13px;margin-bottom:24px}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:700px){.menu-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1020px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+.dish{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.3s}.dish:hover{transform:translateY(-6px);border-color:rgba(255,107,74,.55);box-shadow:var(--shadow)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.dish-in{padding:22px}.dish .tag{font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--coral-d);text-transform:uppercase}.dish h3{font-family:var(--serif);font-size:25px;font-weight:800;color:var(--sea);margin:5px 0 6px}.dish p{font-size:14.5px;color:var(--mut);margin-bottom:14px}
+.price{font-family:var(--serif);font-size:30px;font-weight:900;color:var(--coral-d);margin-bottom:16px}.price small{font-size:13px;font-family:var(--sans);font-weight:700;color:var(--mut)}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px;transition:.2s}.ord:hover{background:#178a44}
+.ask{text-align:center;font-size:13px;color:var(--mut);margin-top:16px}
+.story{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:clamp(30px,5vw,50px);display:grid;grid-template-columns:1fr;gap:26px;align-items:center}@media(min-width:860px){.story{grid-template-columns:1.1fr .9fr}}
+.story img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;display:block}
+.story h2{text-align:left}.story p{color:var(--mut);margin-bottom:14px}.story .big{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.8vw,26px);color:var(--sea);line-height:1.4}
+.cal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:820px){.cal{grid-template-columns:repeat(7,1fr)}}
+.day{border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:16px 12px;text-align:center}.day b{display:block;font-size:14px;color:var(--sea)}.day span{font-size:12px;color:var(--mut);display:block;margin-top:4px;line-height:1.45}.day.today{border-color:var(--coral);box-shadow:0 0 0 3px rgba(255,107,74,.18)}.day.today b{color:var(--coral-d)}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.mapframe{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:8px}.mapframe iframe{width:100%;height:360px;border:0;display:block}
+.addr{text-align:center;color:var(--mut);margin-bottom:18px}.addr b{color:var(--ink)}
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1160px;margin:56px auto 0;border-top:1px solid var(--line)}
+footer a{color:var(--coral-d);font-weight:700;text-decoration:none}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(4,30,48,.97);border-top:1px solid rgba(246,236,217,.16);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1160px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--coral);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(4,30,48,.35);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(4,30,48,.4);display:none;flex-direction:column;overflow:hidden;z-index:91;color:#17303f}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--sea);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fdf0dc;align-self:flex-start}.msg.user{background:var(--coral);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #eadfc8;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #eee2cc}.chatw-form input{flex:1;border:1px solid #eadfc8;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--coral);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">El <span>Queche</span><small>MARISQUERÍA · CD. OBREGÓN</small></div>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Mariscos de El Queche Marisquería, en Ciudad Obregón, Sonora">
+<div class="hero-in">
+<span class="moon">🦐 Mariscos estilo Sonora · Cajeme</span>
+<h1>El sabor del mar, <em>como se come en Sonora</em></h1>
+<div class="q">Cahuamanta, aguachile, tostadas y ceviches</div>
+<p class="lead">El Queche Marisquería está en Ciudad Obregón: mariscos frescos, la cahuamanta de la casa y La Promo del Año, solo por WhatsApp.</p>
+<div class="actions">
+<a class="btn coral" href="#promo">Ver La Promo del Año</a>
+<a class="btn line" href="#menu">Ver el menú</a>
+</div>
+<div class="status-hero" id="statusHero" hidden>
+<div class="big" id="statusBig">…</div>
+<div class="small" id="statusSmall">…</div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="promo" class="rv">
+<div class="promo">
+<span class="tag">La Promo del Año</span>
+<h2>La Promo <em>del Año</em></h2>
+<div class="price">$149 MXN</div>
+<p>Incluye <b>2 tacos de manta camarón + 1 bichi + 1 refresco</b>.</p>
+<div class="only">📲 Pedidos solo por WhatsApp</div>
+<a class="btn wa" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20La%20Promo%20del%20A%C3%B1o%20(%24149)%3A%202%20tacos%20de%20manta%20camar%C3%B3n%20%2B%201%20bichi%20%2B%201%20refresco" target="_blank" rel="noopener">Pedir La Promo del Año por WhatsApp →</a>
+</div>
+</section>
+
+<section id="menu" class="rv">
+<div class="eyebrow">01 · El menú</div>
+<h2>Mariscos <em>de la casa</em></h2>
+<p class="sub">Lo que se sirve en El Queche. Toca Pedir y tu mensaje llega a WhatsApp ya escrito.</p>
+<div class="menu-grid">
+<article class="dish"><img src="img/p1.jpg" alt="Cahuamanta de El Queche"><div class="dish-in"><div class="tag">La de la casa</div><h3>Cahuamanta</h3><p>La cahuamanta, el platillo insignia de El Queche.</p><div class="price">$85 <small>MXN · la media</small></div><a class="ord" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20pedir%20una%20media%20de%20cahuamanta%20(%2485)">Pedir media de cahuamanta →</a></div></article>
+<article class="dish"><img src="img/p2.jpg" alt="Aguachile de El Queche"><div class="dish-in"><div class="tag">Picosito y fresco</div><h3>Aguachile</h3><p>Aguachile fresco, al estilo de Sonora.</p><a class="ord" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20pedir%20un%20aguachile">Pedir aguachile →</a></div></article>
+<article class="dish"><img src="img/p3.jpg" alt="Tostadas de El Queche"><div class="dish-in"><div class="tag">Crujientes</div><h3>Tostadas</h3><p>Tostadas de mariscos, recién preparadas.</p><a class="ord" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20pedir%20unas%20tostadas">Pedir tostadas →</a></div></article>
+<article class="dish"><img src="img/p4.jpg" alt="Ceviches de El Queche"><div class="dish-in"><div class="tag">Frescos</div><h3>Ceviches</h3><p>Ceviches frescos de la casa.</p><a class="ord" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20pedir%20un%20ceviche">Pedir ceviche →</a></div></article>
+<article class="dish"><img src="img/p5.jpg" alt="La Promo del Año de El Queche"><div class="dish-in"><div class="tag">Promo · Solo WhatsApp</div><h3>La Promo del Año</h3><p>2 tacos de manta camarón + 1 bichi + 1 refresco. Pedidos solo por WhatsApp.</p><div class="price">$149 <small>MXN</small></div><a class="ord" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20La%20Promo%20del%20A%C3%B1o%20(%24149)">Pedir la promo →</a></div></article>
+<article class="dish"><img src="img/p6.jpg" alt="Mariscos de El Queche"><div class="dish-in"><div class="tag">¿Otro antojo?</div><h3>Pregunta por WhatsApp</h3><p>¿Buscas algo más del menú? Escríbenos y te contamos lo que hay hoy.</p><a class="ord" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20preguntar%20por%20el%20men%C3%BA%20de%20hoy">Preguntar por WhatsApp →</a></div></article>
+</div>
+<p class="ask">Los platillos sin precio en esta página se confirman por WhatsApp al momento de pedir.</p>
+</section>
+
+<section class="rv">
+<div class="eyebrow">02 · Nuestra historia</div>
+<div class="story">
+<div>
+<h2>Estamos <em>creciendo</em></h2>
+<p class="big">"Primera pecera terminada — y la segunda ya viene en camino."</p>
+<p>El Queche está creciendo. El 30 de octubre terminamos nuestra primera pecera, y la segunda ya viene en camino: más espacio para el marisco fresco que servimos todos los días en Ciudad Obregón.</p>
+<p>Síguenos en Instagram como <b>@el_queche</b> para ver el avance.</p>
+<a class="btn coral" href="https://www.instagram.com/el_queche" target="_blank" rel="noopener">Ver @el_queche en Instagram</a>
+</div>
+<img src="img/p7.jpg" alt="El Queche Marisquería está creciendo: su primera pecera">
+</div>
+</section>
+
+<section id="horario" class="rv">
+<div class="eyebrow">03 · Horario</div>
+<h2>La semana <em>de El Queche</em></h2>
+<p class="sub">Abrimos todos los días. Los domingos y de martes a viernes desde las 7:00 a. m.; los lunes desde las 11:00 a. m.; los sábados hasta las 7:30 p. m.</p>
+<div class="cal" id="cal"></div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">04 · Galería</div>
+<h2>Directo de <em>nuestra cocina</em></h2>
+<p class="sub">Fotos reales publicadas por El Queche Marisquería.</p>
+<div class="strip">
+<figure><img src="img/p2.jpg" alt="Platillo de El Queche"><figcaption>Fresco del día</figcaption></figure>
+<figure><img src="img/p3.jpg" alt="Mariscos de El Queche"><figcaption>Estilo Sonora</figcaption></figure>
+<figure><img src="img/p5.jpg" alt="Cocina de El Queche"><figcaption>Al momento</figcaption></figure>
+<figure><img src="img/p6.jpg" alt="Platillo de El Queche"><figcaption>De la casa</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">05 · Encuéntranos</div>
+<h2>En Ciudad <em>Obregón</em></h2>
+<p class="addr">Estamos en <b>Av. Jesús García 2125, Cajeme, Ciudad Obregón, Sonora</b></p>
+<div class="mapframe"><iframe title="Mapa — El Queche Marisquería, Av. Jesús García 2125, Cajeme, Sonora" src="https://www.google.com/maps?q=Av.%20Jes%C3%BAs%20Garc%C3%ADa%202125%2C%20Cajeme%2C%20Ciudad%20Obreg%C3%B3n%2C%20Sonora%2C%20M%C3%A9xico&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div style="text-align:center;margin-top:26px"><a class="btn wa" href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp — 644 220 5168</a></div>
+</section>
+</div>
+
+<footer>
+El Queche Marisquería · Av. Jesús García 2125, Cajeme, Ciudad Obregón, Sonora · WhatsApp +52 644 220 5168 · Instagram <a href="https://www.instagram.com/el_queche" target="_blank" rel="noopener">@el_queche</a><br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of El Queche Marisqueria.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/526442205168?text=Hola%20El%20Queche%2C%20quiero%20hacer%20un%20pedido">🦐 Pedir por WhatsApp — 644 220 5168</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente El Queche">
+<div class="chatw-head"><div><b>Asistente El Queche</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+/* Weekly calendar — verified hours (Places) */
+(function(){
+var cal=document.getElementById('cal');if(!cal)return;
+var today;try{today={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[new Intl.DateTimeFormat('en-US',{timeZone:'America/Hermosillo',weekday:'short'}).format(new Date())];}catch(e){today=new Date().getDay();}
+var plan=[{n:'Lunes',h:'11:00 a. m. – 6:00 p. m.'},{n:'Martes',h:'7:00 a. m. – 6:00 p. m.'},{n:'Miércoles',h:'7:00 a. m. – 6:00 p. m.'},{n:'Jueves',h:'7:00 a. m. – 6:00 p. m.'},{n:'Viernes',h:'7:00 a. m. – 6:00 p. m.'},{n:'Sábado',h:'7:00 a. m. – 7:30 p. m.'},{n:'Domingo',h:'7:00 a. m. – 6:00 p. m.'}];
+var order=[1,2,3,4,5,6,0];
+order.forEach(function(d){var p=plan[d];var div=document.createElement('div');div.className='day'+(d===today?' today':'');var b=document.createElement('b');b.textContent=p.n+(d===today?' · hoy':'');var s=document.createElement('span');s.textContent=p.h;div.appendChild(b);div.appendChild(s);cal.appendChild(div);});
+})();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir por WhatsApp","href":"https://wa.me/526442205168"},"greeting":"¡Hola! Soy el asistente de El Queche. Pregúntame por el menú, La Promo del Año, el horario o cómo llegar — o toca una sugerencia.","fallback":"Eso no lo tengo a la mano — escríbenos por WhatsApp al +52 644 220 5168 y te ayudamos.","chips":["¿Qué incluye La Promo del Año?","¿Cuánto cuesta la cahuamanta?","¿Cuál es el horario?","¿Dónde están?","¿Cómo pido?"],"items":[{"k":["promo","ano"],"a":"La Promo del Año cuesta $149 MXN e incluye 2 tacos de manta camarón + 1 bichi + 1 refresco. Los pedidos de la promo son solo por WhatsApp.","link":{"t":"Pedir la promo por WhatsApp","href":"https://wa.me/526442205168"}},{"k":["cahuamanta"],"a":"Cahuamanta — el platillo insignia de la casa. La media cuesta $85 MXN. Para cahuamanta completa u otros tamaños, pregúntanos por WhatsApp.","link":{"t":"Pedir cahuamanta","href":"https://wa.me/526442205168"}},{"k":["aguachile"],"a":"Aguachile — fresco, al estilo de Sonora. El precio se confirma por WhatsApp al pedir.","link":{"t":"Pedir aguachile","href":"https://wa.me/526442205168"}},{"k":["tostada"],"a":"Tostadas de mariscos, recién preparadas. El precio se confirma por WhatsApp al pedir.","link":{"t":"Pedir tostadas","href":"https://wa.me/526442205168"}},{"k":["ceviche"],"a":"Ceviches frescos de la casa. El precio se confirma por WhatsApp al pedir.","link":{"t":"Pedir ceviche","href":"https://wa.me/526442205168"}},{"k":["bichi"],"a":"El bichi viene incluido en La Promo del Año ($149 MXN): 2 tacos de manta camarón + 1 bichi + 1 refresco, solo por WhatsApp.","link":{"t":"Pedir la promo","href":"https://wa.me/526442205168"}},{"k":["pecera"],"a":"Estamos creciendo: nuestra primera pecera quedó terminada el 30 de octubre y la segunda ya viene en camino."}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por el menú, La Promo del Año, el horario o cómo llegar."},{"k":["menu","venden","platillo","comida","hay","marisco"],"a":"El menú de El Queche: cahuamanta, aguachile, tostadas y ceviches. Con precio en esta página: La Promo del Año $149 MXN y la media de cahuamanta $85 MXN."},{"k":["precio","cuesta","cuestan","cuanto"],"a":"Precios verificados: La Promo del Año $149 MXN (2 tacos de manta camarón + 1 bichi + 1 refresco, solo por WhatsApp) y la media de cahuamanta $85 MXN. Los demás platillos se confirman por WhatsApp al pedir.","link":{"t":"Preguntar por WhatsApp","href":"https://wa.me/526442205168"}},{"k":["horario","abren","abierto","cierran","hora","domingo","lunes","sabado"],"a":"Horario: domingo 7:00 a. m. a 6:00 p. m.; lunes 11:00 a. m. a 6:00 p. m.; martes a viernes 7:00 a. m. a 6:00 p. m.; sábado 7:00 a. m. a 7:30 p. m."},{"k":["pedir","ordenar","comprar","quiero"],"a":"Para pedir: elige tu platillo en el menú de esta página y toca Pedir — tu mensaje llega a WhatsApp ya escrito. La Promo del Año se pide solo por WhatsApp. También puedes escribirnos directo al +52 644 220 5168.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/526442205168"}},{"k":["donde","direccion","ubicacion","llegar","mapa","obregon","cajeme"],"a":"Estamos en Av. Jesús García 2125, Cajeme, Ciudad Obregón, Sonora. En esta página está el mapa con la ubicación.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/526442205168"}},{"k":["instagram","redes","seguir"],"a":"Estamos en Instagram como @el_queche: https://www.instagram.com/el_queche"},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp: +52 644 220 5168.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/526442205168"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en El Queche."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+/* Open-now — verified hours America/Hermosillo */
+var SCHED={"tz":"America/Hermosillo","days":{"0":[[420,1080,"7:00 a. m.","6:00 p. m."]],"1":[[660,1080,"11:00 a. m.","6:00 p. m."]],"2":[[420,1080,"7:00 a. m.","6:00 p. m."]],"3":[[420,1080,"7:00 a. m.","6:00 p. m."]],"4":[[420,1080,"7:00 a. m.","6:00 p. m."]],"5":[[420,1080,"7:00 a. m.","6:00 p. m."]],"6":[[420,1170,"7:00 a. m.","7:30 p. m."]]}};
+var OTXT={"open":"Abierto ahora · hasta las {x}","closed":"Cerrado · abre a las {x}","closedTomorrow":"Cerrado · abre mañana a las {x}","closedDay":"Cerrado · abre el {d} a las {x}","days":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"]};
+(function(){function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}var el=document.getElementById('opennow'),hero=document.getElementById('statusHero');if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);if(el){el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;}if(hero){document.getElementById('statusBig').textContent=st.open?'Sí — estamos abiertos ahora':'Hoy no… todavía';document.getElementById('statusSmall').textContent=txt+' · Abrimos todos los días · La Promo del Año se pide solo por WhatsApp';hero.hidden=false;}})();
+})();
+</script>
+</body>
+</html>
