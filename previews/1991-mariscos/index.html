@@ -44,6 +44,8 @@ header{position:sticky;top:0;z-index:60;background:rgba(6,63,54,.96);backdrop-fi
 /* ---------- hero ---------- */
 .hero{position:relative;background:radial-gradient(1100px 520px at 85% -10%,#0d7a5f 0%,transparent 55%),radial-gradient(800px 500px at -10% 110%,#0a5c47 0%,transparent 50%),linear-gradient(160deg,var(--sea) 0%,var(--sea2) 100%);color:var(--cream);overflow:hidden}
 .hero::after{content:"";position:absolute;inset:auto -10% -46% -10%;height:60%;background:radial-gradient(closest-side,rgba(255,107,74,.20),transparent);pointer-events:none}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.5;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(165deg,rgba(6,63,54,.80) 0%,rgba(4,41,31,.68) 55%,rgba(4,41,31,.88) 100%)}
 .hero-in{position:relative;z-index:2;padding:58px 0 0}
 .hero-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}
 .pill{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(253,246,234,.4);color:var(--cream);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
@@ -141,7 +143,11 @@ section{padding:74px 0}
 ...[truncated 6597 chars]7}
 .open-copy p + p{margin-top:14px}
 .open-copy .sig{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--sea);margin-top:18px}
-.open-art{background:linear-gradient(160deg,var(--gold),var(--coral));border-radius:20px;min-height:340px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);transform:rotate(1.2deg)}
+.open-art{background:linear-gradient(165deg,rgba(242,179,61,.30),rgba(232,80,47,.35) 55%,rgba(4,41,31,.62)),url('img/apertura-liston.jpg') center 30%/cover no-repeat;border-radius:20px;min-height:340px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);transform:rotate(1.2deg)}
+.open-photos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+.open-photos figure{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:#fff;border:1px solid var(--line)}
+.open-photos img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.open-photos figcaption{padding:12px 18px;font-weight:700;font-size:14px;color:var(--sea)}
 .open-art .big{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px}
 .open-art .big .n{font-family:'Anton',sans-serif;font-size:clamp(4rem,10vw,6.4rem);line-height:.95;text-shadow:4px 4px 0 rgba(4,41,31,.3)}
 .open-art .big .s{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2.6vw,1.4rem)}
@@ -191,6 +197,7 @@ footer a:hover{text-decoration:underline}
 }
 @media (max-width:560px){
   .dishes{grid-template-columns:1fr}
+  .open-photos{grid-template-columns:1fr}
   .logo .nm{display:none}
   section{padding:56px 0}
   .chatw{bottom:150px}
@@ -215,6 +222,7 @@ footer a:hover{text-decoration:underline}
 <main id="top">
   <!-- HERO -->
   <div class="hero">
+    <img class="hero-bg" src="img/hero-fachada.jpg" alt="" aria-hidden="true">
     <div class="wrap hero-in">
       <div class="hero-top">
         <span class="pill solid"><span class="dot"></span> Recién abierto</span>
@@ -375,6 +383,16 @@ footer a:hover{text-decoration:underline}
           <span class="tape"></span><span class="scissors">✂</span>
           <div class="big"><span class="n">¡YA<br>ABRIMOS!</span><span class="s">sábado 14 de noviembre · Cd. Valles</span></div>
         </div>
+      </div>
+      <div class="open-photos">
+        <figure class="rv">
+          <img src="img/apertura-interior.jpg" alt="Interior de 1991 Restaurante Mariscos durante la apertura, con clientes en las mesas" loading="lazy" decoding="async">
+          <figcaption>El interior, con casa llena el primer día</figcaption>
+        </figure>
+        <figure class="rv">
+          <img src="img/apertura-noche.jpg" alt="Letrero iluminado de 1991 Restaurante Mariscos por la noche" loading="lazy" decoding="async">
+          <figcaption>El letrero, ya iluminado de noche</figcaption>
+        </figure>
       </div>
     </div>
   </section>
