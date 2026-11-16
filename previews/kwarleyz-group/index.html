@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kwarleyz Group — Ghana | Real Estate, Hospitality &amp; Development</title>
+<meta name="description" content="Kwarleyz Group, Ghana: one front door to Wonda World hospitality, residential development and the Petronia City vision. No.1 Oxford Street, Kwarleyz Residence, The Vynyard — enquire in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0d0f; --ink2:#121317; --panel:#17181d; --panel2:#1d1e24;
+  --bone:#ece5d8; --bone2:#f4efe4; --mut:#a79e8d; --dim:#6f6a5e;
+  --gold:#c6a15b; --gold2:#e3c98c; --line:#2a2b31; --line2:#3a352a;
+  --wa:#22c15e;
+  --disp:"Archivo",system-ui,sans-serif; --serif:"Fraunces",Georgia,serif; --mono:"IBM Plex Mono",monospace;
+  --shadow:0 34px 80px rgba(0,0,0,.55);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--disp);background:var(--ink);color:var(--bone);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--ink)}
+img{max-width:100%;display:block}
+a{color:inherit}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(12,13,15,.94);backdrop-filter:blur(14px);border-color:var(--line)}
+.hwrap{max-width:1360px;margin:0 auto;padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.mark{width:40px;height:40px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:20px;color:var(--gold2);flex:none}
+.brand b{font-weight:800;letter-spacing:.14em;font-size:14px}
+.brand small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.3em;color:var(--mut);font-weight:400}
+nav.main{display:flex;gap:30px}
+nav.main a{text-decoration:none;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);position:relative;padding:4px 0}
+nav.main a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .3s}
+nav.main a:hover{color:var(--bone2)} nav.main a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:14px 24px;border:1px solid var(--gold);color:var(--ink);background:var(--gold);position:relative;overflow:hidden;transition:color .3s;cursor:pointer;font-family:var(--disp)}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;background:var(--bone2);transform:translateY(101%);transition:transform .35s cubic-bezier(.6,0,.2,1)}
+.btn:hover::before{transform:translateY(0)}
+.btn.ghost{background:transparent;color:var(--gold2)}
+.btn.ghost::before{background:var(--gold)} .btn.ghost:hover{color:var(--ink)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#04140a}
+.hcta{padding:11px 20px}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;filter:contrast(1.06) saturate(.92) brightness(.82)}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,13,15,.55) 0%,rgba(12,13,15,.12) 38%,rgba(12,13,15,.88) 82%,var(--ink) 100%)}
+.hero-in{position:relative;z-index:2;max-width:1360px;margin:0 auto;width:100%;padding:150px 28px 0}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:14px}
+.kicker::before{content:"";width:44px;height:1px;background:var(--gold)}
+.hero h1{font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:-.015em;font-size:clamp(4.2rem,14.5vw,13.5rem);margin:22px 0 6px;color:var(--bone2)}
+.hero h1 em{font-family:var(--serif);font-weight:300;font-style:italic;text-transform:none;letter-spacing:0;color:var(--gold2);font-size:.62em;vertical-align:.08em}
+.hero .sub{max-width:560px;font-size:clamp(1rem,1.6vw,1.2rem);color:#d8d0bf;font-weight:500}
+.hero .sub b{color:var(--bone2)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero-stats{position:relative;z-index:2;border-top:1px solid rgba(236,229,216,.18);margin-top:56px;background:rgba(12,13,15,.55);backdrop-filter:blur(8px)}
+.hs-in{max-width:1360px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
+.hstat{padding:22px 22px 24px;border-left:1px solid rgba(236,229,216,.14)}
+.hstat:first-child{border-left:none;padding-left:0}
+.hstat b{display:block;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;letter-spacing:-.02em;color:var(--bone2);line-height:1}
+.hstat b i{font-style:normal;color:var(--gold)}
+.hstat span{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+/* ---------- marquee ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;background:var(--ink2)}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 36s linear infinite}
+.mq-track span{font-family:var(--mono);font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);padding:0 26px;white-space:nowrap}
+.mq-track span b{color:var(--gold);font-weight:500}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ---------- sections ---------- */
+section{padding:110px 0}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;border-top:1px solid var(--line);padding-top:26px;margin-bottom:54px}
+.sec-no{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.sec-head h2{font-size:clamp(2.4rem,5.4vw,4.4rem);font-weight:800;line-height:.98;letter-spacing:-.02em;text-transform:uppercase;color:var(--bone2);margin-top:12px}
+.sec-head h2 em{font-family:var(--serif);font-weight:300;font-style:italic;text-transform:none;color:var(--gold2)}
+.sec-head p{max-width:380px;color:var(--mut);font-size:.98rem}
+/* group */
+.group-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
+.group-grid .lead{font-family:var(--serif);font-size:clamp(1.45rem,2.6vw,2rem);font-weight:300;line-height:1.42;color:var(--bone2)}
+.group-grid .lead em{color:var(--gold2)}
+.group-grid p.body{color:var(--mut);margin-top:22px;max-width:52ch}
+.founder{margin-top:34px;border-left:2px solid var(--gold);padding:6px 0 6px 20px}
+.founder b{display:block;font-size:1.05rem;color:var(--bone2);letter-spacing:.02em}
+.founder span{font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+.companies{border-top:1px solid var(--line)}
+.company{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:baseline;padding:20px 4px;border-bottom:1px solid var(--line);transition:background .25s,padding-left .25s}
+.company:hover{background:var(--panel);padding-left:14px}
+.company .n{font-family:var(--mono);font-size:11px;color:var(--gold)}
+.company h3{font-size:1.12rem;font-weight:700;color:var(--bone2);letter-spacing:.01em}
+.company p{color:var(--mut);font-size:.9rem;margin-top:2px}
+.company .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:5px 10px;white-space:nowrap}
+/* portfolio features */
+.feat{display:grid;grid-template-columns:1.25fr .75fr;gap:0;margin-bottom:26px;border:1px solid var(--line);background:var(--panel);overflow:hidden}
+.feat.rev{grid-template-columns:.75fr 1.25fr}
+.feat .ph{position:relative;min-height:420px;overflow:hidden}
+.feat .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(.95);transition:transform .8s cubic-bezier(.2,.6,.2,1)}
+.feat:hover .ph img{transform:scale(1.045)}
+.feat .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 55%,rgba(12,13,15,.5))}
+.status{position:absolute;top:18px;left:18px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;background:rgba(12,13,15,.82);border:1px solid var(--gold);color:var(--gold2);padding:7px 12px;backdrop-filter:blur(6px)}
+.status.plan{border-color:var(--line2);color:var(--mut)}
+.feat .tx{padding:44px 42px;display:flex;flex-direction:column}
+.feat .loc{font-family:var(--mono);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.feat h3{font-size:clamp(1.9rem,3.4vw,2.9rem);font-weight:800;line-height:1.02;letter-spacing:-.015em;text-transform:uppercase;color:var(--bone2);margin:12px 0 14px}
+.feat h3 em{font-family:var(--serif);font-weight:300;font-style:italic;text-transform:none;color:var(--gold2)}
+.feat p{color:var(--mut);font-size:.97rem}
+.facts{display:flex;gap:0;margin:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact{flex:1;padding:14px 14px 12px;border-left:1px solid var(--line)}
+.fact:first-child{border-left:none;padding-left:0}
+.fact b{display:block;font-size:1.3rem;font-weight:800;color:var(--bone2);line-height:1.1}
+.fact span{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.feat .go{margin-top:auto;padding-top:8px}
+.link-arrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);text-decoration:none;cursor:pointer;background:none;border:none;font-family:var(--disp)}
+.link-arrow i{font-style:normal;transition:transform .25s}
+.link-arrow:hover i{transform:translateX(5px)}
+.cap{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--dim);margin-top:10px;text-transform:uppercase}
+/* residential trio */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);background:var(--panel);overflow:hidden;transition:transform .3s,border-color .3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);border-color:var(--line2)}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(.95);transition:transform .7s}
+.card:hover .ph img{transform:scale(1.05)}
+.card .tx{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1.35rem;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--bone2);line-height:1.1}
+.card .loc{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.card p{color:var(--mut);font-size:.92rem;margin-top:10px;flex:1}
+/* petronia */
+.petronia{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.petronia .big{font-size:clamp(3.4rem,11vw,10rem);font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:-.02em;color:var(--bone2)}
+.petronia .big em{font-family:var(--serif);font-weight:300;font-style:italic;text-transform:none;color:var(--gold2);font-size:.58em}
+.p-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;margin-top:48px;align-items:start}
+.p-grid .ph{position:relative;border:1px solid var(--line2)}
+.p-grid .ph img{width:100%;aspect-ratio:5/4;object-fit:cover;filter:contrast(1.05) saturate(.9)}
+.p-grid p{color:var(--mut);margin-bottom:18px}
+.p-grid p b{color:var(--bone2)}
+.p-list{border-top:1px solid var(--line);margin-top:8px}
+.p-list div{display:flex;justify-content:space-between;gap:16px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:.95rem}
+.p-list div span:first-child{color:var(--bone)} .p-list div span:last-child{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.vision-note{margin-top:22px;border:1px solid var(--line2);padding:16px 18px;font-size:.88rem;color:var(--mut);background:rgba(198,161,91,.05)}
+.vision-note b{color:var(--gold2);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;display:block;margin-bottom:5px}
+/* enquiry */
+.enquiry{background:linear-gradient(180deg,var(--ink) 0%,#0a0b0d 100%)}
+.eq-grid{display:grid;grid-template-columns:1fr 400px;gap:44px;align-items:start}
+.steps-bar{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+.step-dot{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:9px 14px}
+.step-dot.on{color:var(--ink);background:var(--gold);border-color:var(--gold);font-weight:700}
+.step-dot.done{color:var(--gold2);border-color:var(--line2)}
+.eq-panel{border:1px solid var(--line);background:var(--panel);padding:36px}
+.eq-panel h3{font-size:1.5rem;font-weight:800;text-transform:uppercase;color:var(--bone2);letter-spacing:-.01em;margin-bottom:6px}
+.eq-panel .hint{color:var(--mut);font-size:.92rem;margin-bottom:24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--line2);background:var(--panel2);color:var(--bone);padding:12px 16px;font-family:var(--disp);font-size:.9rem;font-weight:600;cursor:pointer;transition:.2s;text-align:left}
+.chip small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:2px;font-weight:400}
+.chip:hover{border-color:var(--gold)}
+.chip.sel{border-color:var(--gold);background:rgba(198,161,91,.12);color:var(--bone2)}
+.chip.sel small{color:var(--gold2)}
+.f-row{margin-bottom:18px}
+.f-row label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.f-row label b{color:var(--gold)}
+.f-row input,.f-row textarea,.f-row select{width:100%;background:var(--ink2);border:1px solid var(--line2);color:var(--bone2);padding:14px 15px;font-family:var(--disp);font-size:.98rem;outline:none;transition:border-color .2s;border-radius:0;appearance:none}
+.f-row input:focus,.f-row textarea:focus,.f-row select:focus{border-color:var(--gold)}
+.f-row .err{display:none;color:#ff8a7a;font-size:.82rem;margin-top:6px}
+.f-row.invalid input,.f-row.invalid textarea{border-color:#c0452f}
+.f-row.invalid .err{display:block}
+.eq-nav{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.eq-nav .back{background:transparent;color:var(--mut);border:1px solid var(--line2)}
+.eq-nav .back::before{background:var(--panel2)}
+.eq-nav .back:hover{color:var(--bone2)}
+.summary{border:1px solid var(--line2);background:var(--ink2);padding:28px;position:sticky;top:96px}
+.summary h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.sum-line{padding:11px 0;border-bottom:1px solid var(--line)}
+.sum-line span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.sum-line b{color:var(--bone2);font-size:.98rem;font-weight:600}
+.sum-line p{color:var(--mut);font-size:.9rem;white-space:pre-wrap}
+.summary .dest-note{font-size:.82rem;color:var(--dim);margin-top:16px}
+.confirm{display:none;border:1px solid var(--gold);background:rgba(198,161,91,.07);padding:34px;text-align:left}
+.confirm.show{display:block}
+.confirm .tick{width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:22px;margin-bottom:18px}
+.confirm h3{font-size:1.6rem;text-transform:none;font-family:var(--serif);font-weight:500;color:var(--bone2)}
+.confirm p{color:var(--mut);margin:10px 0 22px;max-width:52ch}
+/* footer */
+footer{border-top:1px solid var(--line);padding:64px 0 40px;background:var(--ink2)}
+.f-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:44px}
+footer h5{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+footer p,footer a{color:var(--mut);font-size:.93rem}
+footer a{text-decoration:none} footer a:hover{color:var(--gold2)}
+.f-bottom{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.f-bottom span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase}
+.credit{font-size:.8rem;color:var(--dim)}
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.mq-track{animation:none}.feat .ph img,.card .ph img{transition:none}}
+@media(max-width:1020px){
+  nav.main{display:none}
+  .group-grid,.p-grid,.eq-grid{grid-template-columns:1fr}
+  .feat,.feat.rev{grid-template-columns:1fr}
+  .feat .ph{min-height:300px}
+  .trio{grid-template-columns:1fr}
+  .hs-in{grid-template-columns:1fr 1fr}
+  .hstat{border-left:none;padding-left:0}
+  .summary{position:static}
+  .f-grid{grid-template-columns:1fr}
+  section{padding:76px 0}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="hwrap">
+    <a class="brand" href="#top"><span class="mark">K</span><span><b>KWARLEYZ GROUP</b><small>GHANA · EST. VISION</small></span></a>
+    <nav class="main">
+      <a href="#group">The Group</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#residential">Residential</a>
+      <a href="#petronia">Petronia City</a>
+    </nav>
+    <a class="btn hcta" href="#enquire"><span>Enquire</span></a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="bg"><img src="img/oxford-night.webp" alt="No.1 Oxford Street, Osu, Accra at night — published photography from Kwarleyz Group"></div>
+  <div class="hero-in">
+    <p class="kicker rv">Kwarleyz Group · Accra, Ghana</p>
+    <h1 class="rv">Kwarleyz<br><em>Group</em></h1>
+    <p class="sub rv">Building places for <b>Ghana&rsquo;s future</b> — real estate, hospitality and development, gathered behind <b>one front door</b> for the first time.</p>
+    <div class="hero-cta rv">
+      <a class="btn" href="#enquire"><span>Start an enquiry</span></a>
+      <a class="btn ghost" href="#portfolio"><span>Explore the portfolio</span></a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hs-in">
+      <div class="hstat"><b>177</b><span>Rooms &amp; suites · operating portfolio</span></div>
+      <div class="hstat"><b>700<i>+</i></b><span>Homes delivered since 2013</span></div>
+      <div class="hstat"><b>2,500<i>+</i></b><span>Jobs created · group reported</span></div>
+      <div class="hstat"><b>2,000</b><span>Acres · Petronia City vision</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee" aria-hidden="true"><div class="mq-track" id="mq"></div></div>
+
+<!-- 01 THE GROUP -->
+<section id="group">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><p class="sec-no">01 — The Group</p><h2>One group.<br><em>Five companies.</em></h2></div>
+      <p>The developments had their own pages. The group did not have a front door. This platform is that front door — every venture, one enquiry route.</p>
+    </div>
+    <div class="group-grid">
+      <div class="rv">
+        <p class="lead">Kwarleyz Group specialises in investments and developments, connecting <em>land, design, construction, operation and asset management</em> — from Accra&rsquo;s skyline to an industrial vision for the Western Region.</p>
+        <p class="body">The group is the holding company for five companies spanning hospitality, industrial development, technology, construction and community investment. Its operating portfolio runs three hotels and serviced residences in Accra today, while its development programme — shown separately, never blended in — reaches toward a 2,000-acre industrial city at Takoradi.</p>
+        <div class="founder">
+          <b>Nana Kwame Bediako</b>
+          <span>Founder · Kwarleyz Group</span>
+        </div>
+      </div>
+      <div class="companies rv">
+        <div class="company"><span class="n">01</span><div><h3>Wonda World Inter-Links</h3><p>Parent company for the group&rsquo;s hospitality assets and developments.</p></div><span class="tag">Hospitality</span></div>
+        <div class="company"><span class="n">02</span><div><h3>Petronia City Development</h3><p>Controller of the industrial division — the planned 2,000-acre hub at Takoradi.</p></div><span class="tag">Industrial</span></div>
+        <div class="company"><span class="n">03</span><div><h3>Force Technologies</h3><p>The group&rsquo;s technology and digital infrastructure arm.</p></div><span class="tag">Technology</span></div>
+        <div class="company"><span class="n">04</span><div><h3>New Africa Construction</h3><p>Engineering and build capability across the portfolio.</p></div><span class="tag">Construction</span></div>
+        <div class="company"><span class="n">05</span><div><h3>New Africa Foundation</h3><p>Community investment and programmes.</p></div><span class="tag">Foundation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PORTFOLIO -->
+<section id="portfolio" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><p class="sec-no">02 — Operating Portfolio</p><h2>Open today,<br><em>in Accra.</em></h2></div>
+      <p>Three operating hotels and serviced residences — 177 rooms and suites across Osu, Airport Residential Area and Cantonments.</p>
+    </div>
+
+    <article class="feat rv">
+      <div class="ph"><span class="status">Operating</span><img src="img/oxford-day.webp" alt="No.1 Oxford Street, Osu — published photography from Kwarleyz Group" loading="lazy"></div>
+      <div class="tx">
+        <p class="loc">Osu · Accra</p>
+        <h3>No.1 Oxford <em>Street</em></h3>
+        <p>The group&rsquo;s flagship address on Oxford Street — a hotel and suites tower in the heart of Osu, with retail and leisure space and basement parking beneath.</p>
+        <div class="facts">
+          <div class="fact"><b>108</b><span>Suites</span></div>
+          <div class="fact"><b>14</b><span>Floors</span></div>
+          <div class="fact"><b>Osu</b><span>District</span></div>
+        </div>
+        <div class="go"><button class="link-arrow" data-enquire="No.1 Oxford Street">Enquire about this property <i>&rarr;</i></button>
+        <p class="cap">Photography published by Kwarleyz Group</p></div>
+      </div>
+    </article>
+
+    <article class="feat rev rv">
+      <div class="tx">
+        <p class="loc">Airport Residential Area · Accra</p>
+        <h3>Kwarleyz <em>Residence</em></h3>
+        <p>Accra&rsquo;s premier serviced residence — light-filled living spaces and private suites with the service of a hotel, managed by Marriott International. Launched 25 September 2018.</p>
+        <div class="facts">
+          <div class="fact"><b>40</b><span>Residences</span></div>
+          <div class="fact"><b>Studio–3BR</b><span>Layouts</span></div>
+          <div class="fact"><b>Marriott</b><span>Managed</span></div>
+        </div>
+        <div class="go"><button class="link-arrow" data-enquire="Kwarleyz Residence">Enquire about this property <i>&rarr;</i></button>
+        <p class="cap">Photography published by Kwarleyz Group</p></div>
+      </div>
+      <div class="ph"><span class="status">Operating</span><img src="img/kwarleyz-residence.webp" alt="Kwarleyz Residence, Airport Residential Area — published photography from Kwarleyz Group" loading="lazy"></div>
+    </article>
+
+    <article class="feat rv">
+      <div class="ph"><span class="status">Operating</span><img src="img/vynyard-aerial.webp" alt="The Vynyard, Cantonments, Accra — aerial photography published by Kwarleyz Group" loading="lazy"></div>
+      <div class="tx">
+        <p class="loc">Cantonments · Accra</p>
+        <h3>The <em>Vynyard</em></h3>
+        <p>A fully operational luxury residence of premium suites in Cantonments, affiliated with Marriott Bonvoy — apartment-style living together with hotel services.</p>
+        <div class="facts">
+          <div class="fact"><b>29</b><span>Suites</span></div>
+          <div class="fact"><b>1</b><span>Penthouse</span></div>
+          <div class="fact"><b>Bonvoy</b><span>Affiliation</span></div>
+        </div>
+        <div class="go"><button class="link-arrow" data-enquire="The Vynyard, Accra">Enquire about this property <i>&rarr;</i></button>
+        <p class="cap">Photography published by Kwarleyz Group</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 03 RESIDENTIAL -->
+<section id="residential" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><p class="sec-no">03 — Residential</p><h2>Homes with<br><em>a sense of place.</em></h2></div>
+      <p>More than 700 homes delivered since 2013 — completed developments and one project in development, labelled as such.</p>
+    </div>
+    <div class="trio">
+      <article class="card rv">
+        <div class="ph"><span class="status">Completed</span><img src="img/belgravia.webp" alt="Belgravia Villas, Accra — published imagery from Kwarleyz Group" loading="lazy"></div>
+        <div class="tx"><p class="loc">Accra</p><h3>Belgravia Villas</h3><p>A completed residential development in Accra, part of the group&rsquo;s delivered homes portfolio.</p>
+        <div class="go" style="margin-top:18px"><button class="link-arrow" data-enquire="Belgravia Villas">Enquire <i>&rarr;</i></button></div></div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><span class="status">Completed</span><img src="img/avenue-lincoln.webp" alt="Avenue Lincoln, Ridge, Accra — published imagery from Kwarleyz Group" loading="lazy"></div>
+        <div class="tx"><p class="loc">Ridge · Accra</p><h3>Avenue Lincoln</h3><p>A completed mixed-use development at Ridge — the address the group itself calls home, at 15 Avenue Lincoln.</p>
+        <div class="go" style="margin-top:18px"><button class="link-arrow" data-enquire="Avenue Lincoln">Enquire <i>&rarr;</i></button></div></div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><span class="status plan">In Development</span><img src="img/project-mpr.webp" alt="Project MPR — development visualisation published by Kwarleyz Group" loading="lazy"></div>
+        <div class="tx"><p class="loc">Accra</p><h3>Project MPR</h3><p>A development of 10 luxury townhouses with curved facades, landscaping and a gated community. Image is the group&rsquo;s development visualisation.</p>
+        <div class="go" style="margin-top:18px"><button class="link-arrow" data-enquire="Project MPR">Enquire <i>&rarr;</i></button></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 DEVELOPMENT PROGRAMME -->
+<section id="programme" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><p class="sec-no">04 — Development Programme</p><h2>Planned.<br><em>Shown as planned.</em></h2></div>
+      <p>These projects are planned, not operating. The visuals are the group&rsquo;s own published architectural proposals, kept separate from the portfolio above.</p>
+    </div>
+    <div class="trio">
+      <article class="card rv">
+        <div class="ph"><span class="status plan">Planned</span><img src="img/w-cantonments.webp" alt="W Cantonments — architectural proposal published by Kwarleyz Group" loading="lazy"></div>
+        <div class="tx"><p class="loc">Cantonments · Accra</p><h3>W Cantonments</h3><p>135 planned rooms and suites, a 600-guest ballroom, rooftop pool and bar. The group records a signed memorandum of understanding with Marriott International.</p>
+        <div class="go" style="margin-top:18px"><button class="link-arrow" data-enquire="W Cantonments (planned)">Enquire <i>&rarr;</i></button></div></div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><span class="status plan">Planned</span><img src="img/signia.webp" alt="Signia by Hilton, Cantonments — architectural proposal published by Kwarleyz Group" loading="lazy"></div>
+        <div class="tx"><p class="loc">Cantonments · Accra</p><h3>Signia by Hilton</h3><p>A planned meetings destination: 300 rooms and suites with conference facilities and a ballroom planned for 1,000 guests, under the Hilton flag.</p>
+        <div class="go" style="margin-top:18px"><button class="link-arrow" data-enquire="Signia by Hilton (planned)">Enquire <i>&rarr;</i></button></div></div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><span class="status plan">Planned</span><img src="img/group-vision.webp" alt="Kwarleyz Group development vision — published imagery from Kwarleyz Group" loading="lazy"></div>
+        <div class="tx"><p class="loc">Osu · Accra</p><h3>No.2 Oxford Street</h3><p>A planned healthcare and hospitality development on Oxford Street, extending the group&rsquo;s Osu presence beyond No.1.</p>
+        <div class="go" style="margin-top:18px"><button class="link-arrow" data-enquire="No.2 Oxford Street (planned)">Enquire <i>&rarr;</i></button></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PETRONIA -->
+<section class="petronia" id="petronia">
+  <div class="wrap">
+    <p class="sec-no rv">05 — The Vision · Western Region</p>
+    <h2 class="big rv" style="margin-top:16px">Petronia<br><em>City</em></h2>
+    <div class="p-grid">
+      <div class="rv">
+        <div class="ph"><img src="img/petronia-concept.webp" alt="Petronia City — development concept imagery published by Kwarleyz Group" loading="lazy"></div>
+        <p class="cap" style="margin-top:12px">Development concept imagery published by Kwarleyz Group — not a photograph of a built city</p>
+      </div>
+      <div class="rv">
+        <p><b>A planned 2,000-acre industrial hub at Takoradi</b>, in Ghana&rsquo;s Western Region — conceived as the first fully integrated business hub for West Africa&rsquo;s oil, gas and mining industries, inside a Free Zone enclave.</p>
+        <p>Petronia brings <b>manufacturing, energy, digital infrastructure and cargo logistics</b> into one development plan. Land is secured for the industrial hub, with site infrastructure progressing, per the group.</p>
+        <div class="p-list">
+          <div><span>Project Freedom</span><span>Proposed</span></div>
+          <div><span>The Culinary Hub</span><span>Proposed</span></div>
+          <div><span>Freedom Air</span><span>Proposed</span></div>
+          <div><span>Six projects in total</span><span>One plan</span></div>
+        </div>
+        <div class="vision-note"><b>Vision stage — stated plainly</b>Petronia City is a proposed development. Nothing on this page presents it as built, open or selling. Enquiries here are expressions of interest in the vision and its programme.</div>
+        <div style="margin-top:24px"><button class="btn ghost" data-enquire="Petronia City (proposed)"><span>Register interest in Petronia</span></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ENQUIRE -->
+<section class="enquiry" id="enquire">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><p class="sec-no">06 — Enquire</p><h2>One front door.<br><em>Every venture.</em></h2></div>
+      <p>Choose a destination, tell us the kind of enquiry, add your details — your message opens in WhatsApp, structured and ready to send to the group.</p>
+    </div>
+    <div class="eq-grid">
+      <div class="rv">
+        <div class="steps-bar" id="stepsBar">
+          <span class="step-dot on" data-sdot="1">01 · Destination</span>
+          <span class="step-dot" data-sdot="2">02 · Enquiry type</span>
+          <span class="step-dot" data-sdot="3">03 · Your details</span>
+        </div>
+
+        <div class="eq-panel" id="step1">
+          <h3>Where is this enquiry headed?</h3>
+          <p class="hint">A specific development, a group company — or the group as a whole.</p>
+          <div class="chips" id="destChips"></div>
+          <div class="eq-nav"><button class="btn" id="toStep2" disabled style="opacity:.45"><span>Continue</span></button></div>
+        </div>
+
+        <div class="eq-panel" id="step2" hidden>
+          <h3>What kind of enquiry?</h3>
+          <p class="hint" id="step2hint">Pick the closest match — it routes and labels your message.</p>
+          <div class="chips" id="typeChips"></div>
+          <div class="eq-nav">
+            <button class="btn back" id="backTo1"><span>Back</span></button>
+            <button class="btn" id="toStep3" disabled style="opacity:.45"><span>Continue</span></button>
+          </div>
+        </div>
+
+        <div class="eq-panel" id="step3" hidden>
+          <h3>Your details</h3>
+          <p class="hint">We build your WhatsApp message from these — nothing is stored on this page.</p>
+          <div class="f-row" id="rowName"><label for="fName">Full name <b>*</b></label><input id="fName" type="text" autocomplete="name" placeholder="Your name"><p class="err">Please add your name.</p></div>
+          <div class="f-row" id="rowContact"><label for="fContact">Email or phone <b>*</b></label><input id="fContact" type="text" autocomplete="email" placeholder="you@example.com or +233 …"><p class="err">Please add a valid email address or phone number.</p></div>
+          <div class="f-row"><label for="fDates">Dates / timing <span style="color:var(--dim)">(optional)</span></label><input id="fDates" type="text" placeholder="e.g. 12–15 March, or Q3 2027"></div>
+          <div class="f-row" id="rowMsg"><label for="fMsg">Your message <b>*</b></label><textarea id="fMsg" rows="4" placeholder="Tell the group what you need…"></textarea><p class="err">Please add a short message (at least 10 characters).</p></div>
+          <div class="eq-nav">
+            <button class="btn back" id="backTo2"><span>Back</span></button>
+            <button class="btn wa" id="sendWa"><span>Send via WhatsApp</span></button>
+          </div>
+        </div>
+
+        <div class="confirm" id="confirmBox">
+          <div class="tick">&#10003;</div>
+          <h3>Your enquiry is composed.</h3>
+          <p id="confirmText">Your structured message is ready in WhatsApp. If it did not open automatically, use the button below — it goes to the Kwarleyz Group number published for the group.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn wa" id="confirmLink" href="#" target="_blank" rel="noopener"><span>Open WhatsApp</span></a>
+            <button class="btn ghost" id="againBtn"><span>Start another enquiry</span></button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="summary rv" aria-live="polite">
+        <h4>Enquiry summary</h4>
+        <div class="sum-line"><span>Destination</span><b id="sumDest">Not selected yet</b></div>
+        <div class="sum-line"><span>Enquiry type</span><b id="sumType">Not selected yet</b></div>
+        <div class="sum-line"><span>From</span><b id="sumName">—</b></div>
+        <div class="sum-line"><span>Contact</span><b id="sumContact">—</b></div>
+        <div class="sum-line"><span>Message</span><p id="sumMsg">Your structured message will appear here as you build it.</p></div>
+        <p class="dest-note">Sent to Kwarleyz Group on WhatsApp — the number published with the group&rsquo;s name in the official development-finance disclosure for No.1 Oxford Street.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h5>Kwarleyz Group</h5>
+        <p>Real estate, hospitality and development in Ghana — Wonda World Inter-Links, Petronia City Development, Force Technologies, New Africa Construction and New Africa Foundation.</p>
+      </div>
+      <div>
+        <h5>Group address</h5>
+        <p>15 Osu Avenue Ridge<br>Accra, Ghana<br><span style="color:var(--dim)">As published for the group</span></p>
+      </div>
+      <div>
+        <h5>Enquiries</h5>
+        <p>All enquiries route through the single front door above, to the group on WhatsApp.</p>
+        <p style="margin-top:12px"><a href="#enquire">Start an enquiry &rarr;</a></p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>Kwarleyz Group · Ghana</span>
+      <span class="credit">Concept proposal built by SiteSprint Studio.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+"use strict";
+/* ============ data ============ */
+var WA_NUMBER = "233244684848";
+var DESTINATIONS = [
+  {id:"general", label:"General group enquiry", sub:"The group as a whole"},
+  {id:"oxford", label:"No.1 Oxford Street", sub:"Osu · Operating"},
+  {id:"residence", label:"Kwarleyz Residence", sub:"Airport Residential · Operating"},
+  {id:"vynyard", label:"The Vynyard, Accra", sub:"Cantonments · Operating"},
+  {id:"belgravia", label:"Belgravia Villas", sub:"Accra · Completed"},
+  {id:"lincoln", label:"Avenue Lincoln", sub:"Ridge · Completed"},
+  {id:"mpr", label:"Project MPR", sub:"Accra · In development"},
+  {id:"w", label:"W Cantonments (planned)", sub:"Cantonments · Planned"},
+  {id:"signia", label:"Signia by Hilton (planned)", sub:"Cantonments · Planned"},
+  {id:"oxford2", label:"No.2 Oxford Street (planned)", sub:"Osu · Planned"},
+  {id:"petronia", label:"Petronia City (proposed)", sub:"Takoradi · Vision stage"},
+  {id:"partner", label:"Partnership & investment", sub:"Group level"}
+];
+var TYPES = [
+  {id:"stay", label:"Stay / reservation"},
+  {id:"viewing", label:"Residence viewing"},
+  {id:"development", label:"Development interest"},
+  {id:"partnership", label:"Partnership / investment"},
+  {id:"press", label:"Press & media"},
+  {id:"other", label:"Something else"}
+];
+var state = { destination:null, destinationLabel:"", type:null, typeLabel:"", name:"", contact:"", dates:"", message:"" };
+
+/* ============ pure logic (runtime-tested) ============ */
+function isValidContact(v){
+  if(!v) return false;
+  v = String(v).trim();
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return true;
+  var digits = v.replace(/[^\d]/g,"");
+  return digits.length >= 7 && digits.length <= 15 && /^[+\d][\d\s\-()]+$/.test(v);
+}
+function validateEnquiry(s){
+  var errors = {};
+  if(!s.destination) errors.destination = "Choose a destination.";
+  if(!s.type) errors.type = "Choose an enquiry type.";
+  if(!s.name || !String(s.name).trim()) errors.name = "Name is required.";
+  if(!isValidContact(s.contact)) errors.contact = "A valid email or phone is required.";
+  if(!s.message || String(s.message).trim().length < 10) errors.message = "Message must be at least 10 characters.";
+  return { ok: Object.keys(errors).length === 0, errors: errors };
+}
+function composeMessage(s){
+  var lines = [];
+  lines.push("KWARLEYZ GROUP — WEBSITE ENQUIRY");
+  lines.push("Destination: " + (s.destinationLabel || s.destination || "General group enquiry"));
+  lines.push("Enquiry type: " + (s.typeLabel || s.type || "—"));
+  lines.push("Name: " + (s.name || "—"));
+  lines.push("Contact: " + (s.contact || "—"));
+  if(s.dates && String(s.dates).trim()) lines.push("Dates / timing: " + String(s.dates).trim());
+  lines.push("");
+  lines.push("Message:");
+  lines.push(String(s.message || "").trim());
+  return lines.join("\n");
+}
+function buildWaLink(s){
+  return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(composeMessage(s));
+}
+if (typeof window !== "undefined") {
+  window.__kwarleyz = { validateEnquiry: validateEnquiry, composeMessage: composeMessage, buildWaLink: buildWaLink, isValidContact: isValidContact, WA_NUMBER: WA_NUMBER };
+}
+
+/* ============ UI ============ */
+function $(id){ return document.getElementById(id); }
+function renderChips(containerId, items, key){
+  var c = $(containerId); c.innerHTML = "";
+  items.forEach(function(it){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.dataset.id = it.id;
+    b.innerHTML = it.label + (it.sub ? "<small>" + it.sub + "</small>" : "");
+    b.addEventListener("click", function(){
+      state[key] = it.id; state[key + "Label"] = it.label;
+      Array.prototype.forEach.call(c.children, function(x){ x.classList.toggle("sel", x === b); });
+      syncSummary(); syncNav();
+    });
+    c.appendChild(b);
+  });
+}
+function syncNav(){
+  $("toStep2").disabled = !state.destination;
+  $("toStep2").style.opacity = state.destination ? "1" : ".45";
+  $("toStep3").disabled = !state.type;
+  $("toStep3").style.opacity = state.type ? "1" : ".45";
+}
+function syncSummary(){
+  $("sumDest").textContent = state.destinationLabel || "Not selected yet";
+  $("sumType").textContent = state.typeLabel || "Not selected yet";
+  $("sumName").textContent = state.name || "—";
+  $("sumContact").textContent = state.contact || "—";
+  $("sumMsg").textContent = state.message ? composeMessage(state) : "Your structured message will appear here as you build it.";
+}
+function showStep(n){
+  [1,2,3].forEach(function(i){ $("step" + i).hidden = i !== n; });
+  $("confirmBox").classList.remove("show");
+  Array.prototype.forEach.call(document.querySelectorAll("[data-sdot]"), function(d){
+    var i = parseInt(d.dataset.sdot, 10);
+    d.classList.toggle("on", i === n);
+    d.classList.toggle("done", i < n);
+  });
+  $("enquire").scrollIntoView({ behavior:"smooth", block:"start" });
+}
+function markRow(id, bad){ $(id).classList.toggle("invalid", !!bad); }
+function init(){
+  /* marquee */
+  var words = ["No.1 Oxford Street","Kwarleyz Residence","The Vynyard","Belgravia Villas","Avenue Lincoln","Project MPR","W Cantonments","Signia by Hilton","Petronia City"];
+  var half = words.map(function(w){ return "<span>" + w + " <b>·</b></span>"; }).join("");
+  $("mq").innerHTML = half + half;
+  renderChips("destChips", DESTINATIONS, "destination");
+  renderChips("typeChips", TYPES, "type");
+  $("toStep2").addEventListener("click", function(){ if(state.destination) showStep(2); });
+  $("backTo1").addEventListener("click", function(){ showStep(1); });
+  $("toStep3").addEventListener("click", function(){ if(state.type) showStep(3); });
+  $("backTo2").addEventListener("click", function(){ showStep(2); });
+  ["fName","fContact","fDates","fMsg"].forEach(function(id){
+    $(id).addEventListener("input", function(){
+      state.name = $("fName").value; state.contact = $("fContact").value;
+      state.dates = $("fDates").value; state.message = $("fMsg").value;
+      syncSummary();
+    });
+  });
+  $("sendWa").addEventListener("click", function(){
+    state.name = $("fName").value; state.contact = $("fContact").value;
+    state.dates = $("fDates").value; state.message = $("fMsg").value;
+    var v = validateEnquiry(state);
+    markRow("rowName", !!v.errors.name);
+    markRow("rowContact", !!v.errors.contact);
+    markRow("rowMsg", !!v.errors.message);
+    if(!v.ok){
+      if(v.errors.destination){ showStep(1); return; }
+      if(v.errors.type){ showStep(2); return; }
+      return;
+    }
+    var link = buildWaLink(state);
+    $("confirmLink").href = link;
+    $("confirmText").textContent = "Thank you, " + state.name.split(" ")[0] + ". Your " + (state.typeLabel || "enquiry").toLowerCase() + " for " + (state.destinationLabel || "the group") + " is composed and ready in WhatsApp — press send there to deliver it to Kwarleyz Group.";
+    [1,2,3].forEach(function(i){ $("step" + i).hidden = true; });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-sdot]"), function(d){ d.classList.remove("on"); d.classList.add("done"); });
+    $("confirmBox").classList.add("show");
+    window.open(link, "_blank", "noopener");
+  });
+  $("againBtn").addEventListener("click", function(){
+    state = { destination:null, destinationLabel:"", type:null, typeLabel:"", name:"", contact:"", dates:"", message:"" };
+    ["fName","fContact","fDates","fMsg"].forEach(function(id){ $(id).value = ""; });
+    Array.prototype.forEach.call(document.querySelectorAll(".chip"), function(x){ x.classList.remove("sel"); });
+    syncSummary(); syncNav(); showStep(1);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-enquire]"), function(btn){
+    btn.addEventListener("click", function(){
+      var label = btn.dataset.enquire;
+      var match = DESTINATIONS.filter(function(d){ return d.label === label; })[0];
+      if(match){
+        state.destination = match.id; state.destinationLabel = match.label;
+        Array.prototype.forEach.call($("destChips").children, function(x){ x.classList.toggle("sel", x.dataset.id === match.id); });
+        syncSummary(); syncNav();
+      }
+      showStep(state.type ? 3 : 2);
+      if(state.type) showStep(3);
+    });
+  });
+  /* header */
+  var hdr = $("hdr");
+  window.addEventListener("scroll", function(){ hdr.classList.toggle("scrolled", window.scrollY > 30); }, { passive:true });
+  /* reveal */
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduced || !("IntersectionObserver" in window)){
+    Array.prototype.forEach.call(document.querySelectorAll(".rv"), function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold:.12 });
+    Array.prototype.forEach.call(document.querySelectorAll(".rv"), function(el){ io.observe(el); });
+  }
+  syncSummary(); syncNav();
+}
+document.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>
