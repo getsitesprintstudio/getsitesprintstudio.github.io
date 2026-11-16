@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carvalho Pizzaria &amp; Espetaria — Grande Inauguração 23 de Novembro · Rua Tupi, 10 · Araçatuba/SP</title>
+<meta name="description" content="A Carvalho Pizzaria & Espetaria inaugura dia 23 de novembro em Araçatuba. Pizzas, espetos e porções em ambiente familiar. Rua Tupi, 10 — Centro. Reserve sua mesa pelo WhatsApp (18) 99680-8009.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,900&family=Archivo:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0b0603;--night2:#120a05;--coal:#1c1209;--cream:#fdf6e9;--cream2:#f7e7c8;--mut:#cdb28a;--gold:#d9a441;--gold2:#f3cd7a;--gold-d:#9a6d1d;--red:#c0272d;--wa:#1faa55;--line:rgba(217,164,65,.25);--shadow:0 30px 60px rgba(0,0,0,.55);--serif:"Fraunces",Georgia,serif;--sans:"Archivo",system-ui,sans-serif;--script:"Pinyon Script",cursive}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--night);color:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--gold);color:var(--night)}img{max-width:100%;display:block}
+.grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--gold)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.35s;background:transparent}
+header.scrolled{background:rgba(11,6,3,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.hdr{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+.brand img{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);object-fit:cover}
+.brand b{font-family:var(--serif);font-weight:900;font-size:21px;letter-spacing:.01em;line-height:1;color:var(--gold2)}
+.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.34em;font-weight:800;color:var(--mut);margin-top:3px}
+.hdr-r{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hdr-ig{color:var(--cream2);text-decoration:none;font-weight:700;font-size:13.5px}.hdr-ig:hover{color:var(--gold2)}
+.hdr-cta{background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:13.5px;padding:11px 19px;border-radius:999px;transition:.25s}.hdr-cta:hover{transform:translateY(-2px)}
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:150px 0 0}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:contrast(1.05) saturate(1.08)}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,6,3,.72) 0%,rgba(11,6,3,.55) 42%,rgba(11,6,3,.94) 88%,var(--night) 100%),radial-gradient(900px 500px at 85% -10%,rgba(217,164,65,.25),transparent 60%)}
+.hero-logo{width:118px;height:118px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;box-shadow:var(--shadow);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(3.4rem,12.5vw,9.2rem);line-height:.92;letter-spacing:-.02em;color:#fff;text-transform:uppercase}
+.hero h1 .gold{background:linear-gradient(100deg,var(--gold-d),var(--gold2) 45%,var(--gold) 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .script{font-family:var(--script);font-size:clamp(2rem,5.5vw,3.6rem);color:var(--gold2);line-height:1;margin:10px 0 4px}
+.hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.6rem);color:var(--cream2);max-width:640px}
+.datepill{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--red);color:#fff;font-weight:800;padding:12px 22px;border-radius:999px;margin:26px 0 8px;box-shadow:0 16px 34px rgba(192,39,45,.4);transform:rotate(-1.5deg);font-size:15.5px}
+.addr-strip{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 6px;font-weight:700;font-size:17px}
+.addr-strip .pin{color:var(--gold2)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 54px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:800;font-size:15px;padding:15px 26px;border-radius:999px;transition:.25s;border:1px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-gold{background:linear-gradient(100deg,var(--gold-d),var(--gold));color:#1c1005}
+.btn-ghost{background:rgba(253,246,233,.06);color:var(--cream);border-color:var(--line)}
+.count{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 0}
+.count .cell{background:rgba(11,6,3,.72);border:1px solid var(--line);border-radius:16px;padding:12px 16px;min-width:86px;text-align:center;backdrop-filter:blur(6px)}
+.count .n{font-family:var(--serif);font-weight:900;font-size:32px;line-height:1;color:var(--gold2)}
+.count .t{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:800;margin-top:4px}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--night2);overflow:hidden;padding:13px 0;margin-top:54px}
+.marquee .track{display:flex;gap:0;white-space:nowrap;animation:mq 30s linear infinite;font-family:var(--serif);font-weight:700;letter-spacing:.14em;font-size:14px;color:var(--gold2);text-transform:uppercase}
+.marquee span{padding:0 18px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+section{padding:88px 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:36px}
+.sec-head .num{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:20px}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.02;letter-spacing:-.015em}
+.sec-head h2 em{font-style:italic;color:var(--gold2)}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media(max-width:880px){.grid2{grid-template-columns:1fr}}
+.copy p{color:var(--cream2);font-size:17px;margin-bottom:16px}
+.copy p b{color:#fff}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+@media(max-width:520px){.feat{grid-template-columns:1fr}}
+.feat div{background:var(--coal);border:1px solid var(--line);border-radius:14px;padding:15px 17px;font-weight:700;font-size:15px}
+.feat div span{display:block;font-weight:500;color:var(--mut);font-size:13.5px;margin-top:2px}
+.poster{position:relative}
+.poster img{border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line);width:100%}
+.poster .stk{position:absolute;top:-16px;right:-8px;background:var(--gold);color:#1c1005;font-weight:800;font-size:13px;padding:9px 16px;border-radius:999px;transform:rotate(4deg);box-shadow:0 12px 26px rgba(0,0,0,.45)}
+.big-addr{background:linear-gradient(160deg,var(--coal),var(--night2));border:1px solid var(--line);border-radius:26px;padding:44px 34px;text-align:center;box-shadow:var(--shadow)}
+.big-addr .rua{font-family:var(--serif);font-weight:900;font-size:clamp(2.6rem,8.5vw,5.4rem);line-height:1;color:#fff;letter-spacing:-.015em}
+.big-addr .rua em{font-style:italic;color:var(--gold2)}
+.big-addr .cid{font-size:18px;color:var(--mut);font-weight:600;margin-top:10px}
+.mapbox{margin-top:26px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.mapbox iframe{width:100%;height:380px;border:0;display:block}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:880px){.cards{grid-template-columns:1fr}}
+.card{background:var(--coal);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card .ph{height:210px;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:contrast(1.05) saturate(1.1)}
+.card:hover .ph img{transform:scale(1.06)}
+.card .bd{padding:22px}
+.card h3{font-family:var(--serif);font-weight:900;font-size:25px;margin-bottom:6px}
+.card h3 em{font-style:italic;color:var(--gold2)}
+.card p{color:var(--mut);font-size:15px;margin-bottom:16px}
+.card a{color:var(--gold2);font-weight:800;text-decoration:none;font-size:14.5px}
+.card a:hover{text-decoration:underline}
+.wide{margin-top:20px;border-radius:22px;overflow:hidden;border:1px solid var(--line);position:relative}
+.wide img{width:100%;height:300px;object-fit:cover;object-position:center 62%}
+.wide .cap{position:absolute;left:0;right:0;bottom:0;padding:38px 24px 18px;background:linear-gradient(180deg,transparent,rgba(11,6,3,.9));font-family:var(--serif);font-style:italic;font-size:20px;color:var(--cream)}
+.reserva{background:linear-gradient(160deg,#221507,var(--night2));border:1px solid var(--line);border-radius:26px;padding:40px 34px;box-shadow:var(--shadow)}
+.reserva h3{font-family:var(--serif);font-weight:900;font-size:30px;margin-bottom:8px}
+.reserva h3 em{font-style:italic;color:var(--gold2)}
+.reserva p{color:var(--mut);margin-bottom:22px;max-width:560px}
+.rform{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:880px){.rform{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.rform{grid-template-columns:1fr}}
+.rform label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--gold);display:block;margin-bottom:6px}
+.rform input,.rform select{width:100%;background:rgba(253,246,233,.06);border:1px solid var(--line);border-radius:12px;color:var(--cream);padding:13px 14px;font-family:var(--sans);font-size:15px}
+.rform select option{color:#111}
+.rsend{margin-top:18px}
+.note{font-size:13px;color:var(--mut);margin-top:12px}
+footer{border-top:1px solid var(--line);padding:52px 0 110px;background:var(--night2)}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+@media(max-width:880px){.fgrid{grid-template-columns:1fr}}
+footer h4{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:800}
+footer p,footer a{color:var(--mut);font-size:15px;text-decoration:none}
+footer a:hover{color:var(--gold2)}
+.fbrand{display:flex;gap:12px;align-items:center}
+.fbrand img{width:54px;height:54px;border-radius:50%;border:1px solid var(--gold);object-fit:cover}
+.credit{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:70;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;padding:14px 20px;border-radius:999px;box-shadow:0 16px 34px rgba(0,0,0,.5);font-size:14.5px;transition:.25s}
+.wa-float:hover{transform:translateY(-2px)}
+.ai-fab{position:fixed;left:18px;bottom:18px;z-index:70;background:linear-gradient(100deg,var(--gold-d),var(--gold));color:#1c1005;border:0;font-family:var(--sans);font-weight:800;padding:14px 20px;border-radius:999px;box-shadow:0 16px 34px rgba(0,0,0,.5);font-size:14.5px;cursor:pointer;transition:.25s}
+.ai-fab:hover{transform:translateY(-2px)}
+.ai-panel{position:fixed;left:18px;bottom:78px;z-index:71;width:min(360px,calc(100vw - 36px));background:#fffdf8;color:#241708;border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.6);overflow:hidden;display:none}
+.ai-panel.open{display:block}
+.ai-head{background:var(--night);color:var(--cream);padding:15px 18px;display:flex;justify-content:space-between;align-items:center}
+.ai-head b{font-family:var(--serif);font-size:16px}
+.ai-head button{background:none;border:0;color:var(--gold2);font-size:20px;cursor:pointer;line-height:1}
+.ai-body{padding:16px;max-height:320px;overflow-y:auto;font-size:14.5px}
+.ai-body .msg{background:#f6ead2;border-radius:14px;padding:11px 13px;margin-bottom:10px;line-height:1.5}
+.ai-body .msg.me{background:#e8f5ec;margin-left:34px}
+.ai-body .msg a{color:#0d7a3d;font-weight:800}
+.ai-chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 12px}
+.ai-chips button{background:#fff;border:1px solid #e2cf9f;color:#6b4d12;font-family:var(--sans);font-weight:700;font-size:12.5px;padding:8px 12px;border-radius:999px;cursor:pointer}
+.ai-chips button:hover{background:#f6ead2}
+.ai-form{display:flex;border-top:1px solid #eee0bd}
+.ai-form input{flex:1;border:0;padding:14px 16px;font-family:var(--sans);font-size:14.5px;background:#fffdf8;color:#241708;outline:none}
+.ai-form button{background:var(--gold);border:0;color:#1c1005;font-weight:800;padding:0 18px;cursor:pointer;font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="hdr">
+    <a class="brand" href="#topo">
+      <img src="img/logo.jpg" alt="Logotipo Carvalho Pizzaria e Espetaria">
+      <span><b>Carvalho</b><small>PIZZARIA &amp; ESPETARIA</small></span>
+    </a>
+    <div class="hdr-r">
+      <a class="hdr-ig" href="https://www.instagram.com/carvalhopizzariaeespetaria" target="_blank" rel="noopener">@carvalhopizzariaeespetaria</a>
+      <a class="hdr-cta" href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20reservar%20uma%20mesa%20na%20Carvalho%20Pizzaria%20%26%20Espetaria." target="_blank" rel="noopener">Reservar mesa</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="topo">
+  <div class="hero-bg"><img src="img/mesa.jpg" alt="Mesa da Carvalho com pizza de borda recheada, espetos e porções"></div>
+  <div class="wrap">
+    <img class="hero-logo rv" src="img/logo.jpg" alt="Carvalho Pizzaria e Espetaria">
+    <p class="lbl rv">Araçatuba · SP — Grande inauguração</p>
+    <h1 class="rv">Carva<span class="gold">lho</span></h1>
+    <p class="script rv">Pizzaria &amp; Espetaria</p>
+    <p class="tag rv">“Sabor em cada momento!” — uma experiência com muito sabor, no coração de Araçatuba.</p>
+    <div class="rv"><span class="datepill">📣 Segunda-feira · 23 de novembro de 2026</span></div>
+    <div class="count rv" id="countdown" aria-label="Contagem regressiva para a inauguração">
+      <div class="cell"><div class="n" id="cd-d">–</div><div class="t">Dias</div></div>
+      <div class="cell"><div class="n" id="cd-h">–</div><div class="t">Horas</div></div>
+      <div class="cell"><div class="n" id="cd-m">–</div><div class="t">Min</div></div>
+      <div class="cell"><div class="n" id="cd-s">–</div><div class="t">Seg</div></div>
+    </div>
+    <div class="addr-strip rv"><span class="pin">📍</span><span>Rua Tupi, 10 — Centro · Araçatuba/SP</span></div>
+    <div class="hero-ctas rv">
+      <a class="btn btn-wa" href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20reservar%20uma%20mesa%20para%20a%20inaugura%C3%A7%C3%A3o%20da%20Carvalho%2C%20dia%2023%20de%20novembro." target="_blank" rel="noopener">💬 Reservar mesa no WhatsApp</a>
+      <a class="btn btn-gold" href="#endereco">📍 Como chegar</a>
+      <a class="btn btn-ghost" href="#espera">Ver o que te espera</a>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
+</div>
+
+<section id="inauguracao">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="num">01 —</span><h2>Agora é <em>oficial</em></h2></div>
+    <div class="grid2">
+      <div class="copy rv">
+        <p>“<b>Inauguração dia 23 de novembro e você é nosso convidado(a).</b>” Foi assim que a Carvalho anunciou: vem aí a grande inauguração em Araçatuba — e a casa quer te encontrar por lá.</p>
+        <p>Pizzas, espetos e porções em <b>ambiente familiar</b>, com <b>jantar todos os dias</b> e música ao vivo anunciada para a inauguração. É só chegar — ou garantir sua mesa antes pelo WhatsApp.</p>
+        <div class="feat">
+          <div>🍕 Pizzas<span>o carro-chefe da casa</span></div>
+          <div>🍢 Espetos<span>para acompanhar e compartilhar</span></div>
+          <div>🍟 Porções<span>e várias delícias</span></div>
+          <div>👨‍👩‍👧 Ambiente familiar<span>feito para reunir todo mundo</span></div>
+        </div>
+        <a class="btn btn-wa" href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Pode%20me%20avisar%20sobre%20a%20inaugura%C3%A7%C3%A3o%20da%20Carvalho%2C%20dia%2023%20de%20novembro%3F" target="_blank" rel="noopener">💬 Quero ser avisado da inauguração</a>
+      </div>
+      <div class="poster rv">
+        <span class="stk">Dia 23 · Araçatuba</span>
+        <img src="img/inauguracao.jpg" alt="Arte oficial da grande inauguração da Carvalho Pizzaria e Espetaria, dia 23 de novembro em Araçatuba">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="endereco" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="num">02 —</span><h2>Onde <em>fica?</em></h2></div>
+    <div class="big-addr rv">
+      <p class="lbl">Endereço da inauguração</p>
+      <p class="rua">Rua Tupi, <em>10</em></p>
+      <p class="cid">Centro · Araçatuba — SP · CEP 16010-070</p>
+      <div class="hero-ctas" style="justify-content:center;margin:26px 0 0">
+        <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Tupi,+10+-+Centro,+Ara%C3%A7atuba+-+SP,+16010-070" target="_blank" rel="noopener">🧭 Traçar rota</a>
+        <a class="btn btn-wa" href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20a%20Carvalho%20Pizzaria%20%26%20Espetaria%20(Rua%20Tupi%2C%2010%20-%20Centro)." target="_blank" rel="noopener">💬 Pedir informações</a>
+      </div>
+    </div>
+    <div class="mapbox rv">
+      <iframe title="Mapa — Rua Tupi, 10, Centro, Araçatuba/SP" src="https://www.google.com/maps?q=Rua+Tupi,+10+-+Centro,+Ara%C3%A7atuba+-+SP,+16010-070&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="espera" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="num">03 —</span><h2>O que te <em>espera</em></h2></div>
+    <div class="cards">
+      <article class="card rv">
+        <div class="ph"><img src="img/pizza.jpg" alt="Pizza da Carvalho com borda recheada"></div>
+        <div class="bd">
+          <h3>Nossas <em>pizzas</em></h3>
+          <p>A pizza de borda recheada que já aparece nas artes da casa — o convite é um só: venha saborear.</p>
+          <a href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20pizzas%20da%20Carvalho." target="_blank" rel="noopener">Perguntar sobre as pizzas →</a>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><img src="img/espetos.jpg" alt="Espetos da Carvalho servidos com acompanhamentos"></div>
+        <div class="bd">
+          <h3>Nossos <em>espetos</em></h3>
+          <p>Espetos servidos com acompanhamentos, do jeito que a casa anunciou: para a mesa toda.</p>
+          <a href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20espetos%20da%20Carvalho." target="_blank" rel="noopener">Perguntar sobre os espetos →</a>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><img src="img/porcoes.jpg" alt="Porções da Carvalho: anéis de cebola, calabresa com fritas e outras delícias"></div>
+        <div class="bd">
+          <h3>Nossas <em>porções</em></h3>
+          <p>Porções e várias delícias para compartilhar — anéis de cebola, fritas e muito mais.</p>
+          <a href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20por%C3%A7%C3%B5es%20da%20Carvalho." target="_blank" rel="noopener">Perguntar sobre as porções →</a>
+        </div>
+      </article>
+    </div>
+    <div class="wide rv">
+      <img src="img/mesa.jpg" alt="Mesa completa da Carvalho com pizza, espetos e porções, no salão da casa">
+      <div class="cap">A mesa da Carvalho — e o salão de cadeiras vermelhas te esperando no Centro.</div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="num">04 —</span><h2>Reserve sua <em>mesa</em></h2></div>
+    <div class="reserva rv">
+      <h3>Monte sua reserva e <em>envie no WhatsApp</em></h3>
+      <p>A casa atende reservas de mesa pelo WhatsApp. Preencha, toque em enviar e a mensagem chega prontinha para a equipe da Carvalho.</p>
+      <form class="rform" id="rform">
+        <div><label for="r-nome">Seu nome</label><input id="r-nome" type="text" placeholder="Ex.: Maria Silva" autocomplete="name"></div>
+        <div><label for="r-pessoas">Pessoas</label>
+          <select id="r-pessoas">
+            <option value="2 pessoas">2 pessoas</option>
+            <option value="3 pessoas">3 pessoas</option>
+            <option value="4 pessoas" selected>4 pessoas</option>
+            <option value="5 pessoas">5 pessoas</option>
+            <option value="6 pessoas">6 pessoas</option>
+            <option value="mais de 6 pessoas">Mais de 6 pessoas</option>
+          </select></div>
+        <div><label for="r-data">Data</label><input id="r-data" type="date" value="2026-11-23" min="2026-11-23"></div>
+        <div><label for="r-obs">Observação (opcional)</label><input id="r-obs" type="text" placeholder="Ex.: aniversário, mesa perto da música"></div>
+      </form>
+      <div class="rsend"><button class="btn btn-wa" id="r-send" type="button" style="border:0;cursor:pointer;font-family:var(--sans)">💬 Enviar reserva no WhatsApp</button></div>
+      <p class="note">A inauguração é dia 23 de novembro de 2026. Para outras datas, a casa serve jantar todos os dias — confirme o horário da sua reserva na conversa.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand"><img src="img/logo.jpg" alt="Carvalho Pizzaria e Espetaria"><div><b style="font-family:var(--serif);font-size:19px;color:var(--gold2)">Carvalho</b><p style="font-size:12px;letter-spacing:.28em">PIZZARIA &amp; ESPETARIA</p></div></div>
+        <p style="margin-top:14px">“Sabor em cada momento!” Inauguração dia 23 de novembro de 2026, em Araçatuba.</p>
+      </div>
+      <div>
+        <h4>Onde estamos</h4>
+        <p>Rua Tupi, 10 — Centro<br>Araçatuba — SP · CEP 16010-070</p>
+        <p style="margin-top:10px"><a href="#endereco">Ver no mapa →</a></p>
+      </div>
+      <div>
+        <h4>Fale com a casa</h4>
+        <p>Reservas de mesas:<br><a href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20reservar%20uma%20mesa%20na%20Carvalho%20Pizzaria%20%26%20Espetaria." target="_blank" rel="noopener">WhatsApp (18) 99680-8009</a><br>Também pelo (18) 99738-6564</p>
+        <p style="margin-top:10px"><a href="https://www.instagram.com/carvalhopizzariaeespetaria" target="_blank" rel="noopener">Instagram @carvalhopizzariaeespetaria</a></p>
+      </div>
+    </div>
+    <div class="credit"><span>© Carvalho Pizzaria &amp; Espetaria · Araçatuba/SP</span><span>Concept preview built by SiteSprint Studio.</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5518996808009?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20a%20inaugura%C3%A7%C3%A3o%20da%20Carvalho." target="_blank" rel="noopener">💬 WhatsApp</a>
+<button class="ai-fab" id="ai-open" type="button">✨ Pergunte à Carvalho</button>
+
+<div class="ai-panel" id="ai-panel" role="dialog" aria-label="Assistente da Carvalho Pizzaria e Espetaria">
+  <div class="ai-head"><b>Assistente Carvalho</b><button id="ai-close" type="button" aria-label="Fechar">×</button></div>
+  <div class="ai-body" id="ai-body">
+    <div class="msg">Olá! 👋 Sou o assistente da <b>Carvalho Pizzaria &amp; Espetaria</b>. Posso ajudar com a inauguração, o endereço, o que a casa serve e reservas de mesa. O que você quer saber?</div>
+  </div>
+  <div class="ai-chips">
+    <button type="button" data-q="Quando é a inauguração?">Quando inaugura?</button>
+    <button type="button" data-q="Qual é o endereço?">Endereço</button>
+    <button type="button" data-q="O que vocês servem?">O que servem?</button>
+    <button type="button" data-q="Como reservo uma mesa?">Reservar mesa</button>
+  </div>
+  <form class="ai-form" id="ai-form">
+    <input id="ai-input" type="text" placeholder="Escreva sua pergunta..." autocomplete="off">
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<script>
+// Marquee — só palavras já publicadas pela casa
+(function(){
+  var words = "CARVALHO ✦ PIZZARIA & ESPETARIA ✦ GRANDE INAUGURAÇÃO ✦ 23 DE NOVEMBRO ✦ ARAÇATUBA — SP ✦ SABOR EM CADA MOMENTO ✦ VENHA SABOREAR ✦ ";
+  document.getElementById('mq').innerHTML = '<span>'+words+'</span><span>'+words+'</span>';
+})();
+
+// Header ao rolar
+window.addEventListener('scroll', function(){
+  document.getElementById('hdr').classList.toggle('scrolled', window.scrollY > 30);
+}, {passive:true});
+
+// Revelar ao rolar
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+// Contagem regressiva — inauguração: 23 de novembro de 2026 (horário de Brasília)
+(function(){
+  var target = new Date('2026-11-23T00:00:00-03:00').getTime();
+  var dEl=document.getElementById('cd-d'), hEl=document.getElementById('cd-h'), mEl=document.getElementById('cd-m'), sEl=document.getElementById('cd-s');
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    var diff = target - Date.now();
+    if (diff <= 0) {
+      dEl.textContent='0'; hEl.textContent='00'; mEl.textContent='00'; sEl.textContent='00';
+      var pill=document.querySelector('.datepill');
+      if (pill && !pill.dataset.done) { pill.dataset.done='1'; pill.textContent='🎉 É hoje! Grande inauguração — Rua Tupi, 10, Centro'; }
+      return;
+    }
+    var d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
+    dEl.textContent=d; hEl.textContent=pad(h); mEl.textContent=pad(m); sEl.textContent=pad(s);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+// Reserva → WhatsApp
+document.getElementById('r-send').addEventListener('click', function(){
+  var nome = document.getElementById('r-nome').value.trim();
+  var pessoas = document.getElementById('r-pessoas').value;
+  var data = document.getElementById('r-data').value;
+  var obs = document.getElementById('r-obs').value.trim();
+  var dataBR = data;
+  if (data && data.indexOf('-') > -1) { var p = data.split('-'); dataBR = p[2] + '/' + p[1] + '/' + p[0]; }
+  var msg = 'Olá! Quero reservar uma mesa na Carvalho Pizzaria & Espetaria.\n'
+    + 'Nome: ' + (nome || '(não informado)') + '\n'
+    + 'Pessoas: ' + pessoas + '\n'
+    + 'Data: ' + dataBR
+    + (obs ? '\nObservação: ' + obs : '');
+  window.open('https://wa.me/5518996808009?text=' + encodeURIComponent(msg), '_blank');
+});
+
+// Assistente — responde só com fatos publicados pela casa
+(function(){
+  var WA = 'https://wa.me/5518996808009';
+  var panel = document.getElementById('ai-panel');
+  var body = document.getElementById('ai-body');
+  document.getElementById('ai-open').addEventListener('click', function(){ panel.classList.toggle('open'); });
+  document.getElementById('ai-close').addEventListener('click', function(){ panel.classList.remove('open'); });
+  function add(text, me){
+    var div = document.createElement('div');
+    div.className = 'msg' + (me ? ' me' : '');
+    div.innerHTML = text;
+    body.appendChild(div);
+    body.scrollTop = body.scrollHeight;
+  }
+  function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+  function answer(q){
+    var s = norm(q);
+    var waLink = '<a href="' + WA + '?text=' + encodeURIComponent('Olá! Tenho uma dúvida sobre a Carvalho Pizzaria & Espetaria.') + '" target="_blank" rel="noopener">falar no WhatsApp</a>';
+    if (/(inaugur|abre|abertura|quando|dia 23|novembro)/.test(s)) return 'A grande inauguração é <b>segunda-feira, 23 de novembro de 2026</b>, em Araçatuba. Você é nosso convidado(a)! Quer garantir mesa? É só ' + waLink + '.';
+    if (/(endereco|onde|fica|chegar|mapa|local)/.test(s)) return 'Ficamos na <b>Rua Tupi, 10 — Centro, Araçatuba/SP</b> (CEP 16010-070). Nesta página, na seção “Onde fica?”, tem o mapa e o botão de rota. 📍';
+    if (/(reserva|mesa)/.test(s)) return 'As reservas de mesa são pelo WhatsApp: <b>(18) 99680-8009</b> (também pelo (18) 99738-6564). Você pode montar a reserva na seção “Reserve sua mesa” desta página ou ' + waLink + ' direto.';
+    if (/(serve|cardapio|menu|pizza|espeto|porc|comida|tem o que)/.test(s)) return 'A casa serve <b>pizzas, espetos, porções e várias delícias</b>, com jantar todos os dias em ambiente familiar. O cardápio completo com sabores e preços ainda não foi publicado — para detalhes, ' + waLink + '.';
+    if (/(preco|valor|quanto custa)/.test(s)) return 'Os preços ainda não foram publicados pela casa. Para saber valores, ' + waLink + ' — a equipe responde por lá.';
+    if (/(hora|funciona|abre|fecha|horario)/.test(s)) return 'A casa serve <b>jantar todos os dias</b>. O horário exato de funcionamento ainda não foi publicado — confirme pelo WhatsApp: ' + waLink + '. E anota aí: inauguração dia <b>23 de novembro de 2026</b>!';
+    if (/(musica|show|ao vivo)/.test(s)) return 'Sim! O vídeo de inauguração da casa anunciou <b>música ao vivo</b> para a grande abertura, dia 23 de novembro. 🎶';
+    if (/(delivery|entrega|ifood)/.test(s)) return 'Ainda não foi publicado se haverá delivery. Para confirmar, ' + waLink + ' com a equipe.';
+    if (/(familia|crianca|ambiente)/.test(s)) return 'A casa se apresenta como <b>ambiente familiar</b> — feita para reunir todo mundo em volta da mesa. 👨‍👩‍👧';
+    if (/(instagram|rede social|insta)/.test(s)) return 'O Instagram da casa é <b>@carvalhopizzariaeespetaria</b> — é por lá que saem as novidades da inauguração.';
+    if (/(telefone|whatsapp|contato|numero)/.test(s)) return 'Nosso WhatsApp é <b>(18) 99680-8009</b> — também atendemos pelo (18) 99738-6564. Toque para ' + waLink + '.';
+    if (/(oi|ola|bom dia|boa tarde|boa noite)/.test(s)) return 'Olá! 👋 Posso ajudar com a <b>inauguração (23 de novembro)</b>, o <b>endereço</b>, o que a casa <b>serve</b> e <b>reservas de mesa</b>. É só perguntar!';
+    return 'Posso ajudar com a inauguração, o endereço, o que a casa serve e reservas de mesa. Para qualquer outra coisa, ' + waLink + ' — a equipe da Carvalho responde por lá. 🙂';
+  }
+  document.getElementById('ai-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var input = document.getElementById('ai-input');
+    var q = input.value.trim();
+    if (!q) return;
+    add(q.replace(/</g,'&lt;'), true);
+    input.value = '';
+    setTimeout(function(){ add(answer(q), false); }, 250);
+  });
+  document.querySelectorAll('.ai-chips button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var q = b.getAttribute('data-q');
+      add(q, true);
+      setTimeout(function(){ add(answer(q), false); }, 250);
+    });
+  });
+})();
+</script>
+</body>
+</html>

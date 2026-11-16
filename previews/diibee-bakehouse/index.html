@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diibee Bakehouse — Custom Cake Cirebon &amp; Bolu Kering Premium</title>
+<meta name="description" content="Diibee Bakehouse, Cirebon. Custom cake, pudding, lapis Surabaya premium, cookies homemade dengan bahan baku kualitas terbaik dan tanpa pengawet. Order min H-5 via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#faf5ec;--cream:#f3ead9;--ink:#2b1d16;--cocoa:#4a3226;--mut:#7a675a;--gold:#b8862f;--gold2:#d9a441;--line:#e3d5bf;--card:#fffdf8;--wa:#1faa55;--red:#b3402e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--gold2);color:var(--ink)}
+  img{max-width:100%;display:block}
+  a{-webkit-tap-highlight-color:transparent}
+  .grain{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+  header{position:sticky;top:0;z-index:20;background:rgba(250,245,236,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .header-in{max-width:1140px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+  .brand em{color:var(--gold);font-style:italic}
+  .hnav{display:flex;gap:18px;align-items:center;font-size:.86rem;font-weight:600}
+  .hnav a{color:var(--cocoa);text-decoration:none}
+  .hnav a.cta{background:var(--wa);color:#fff;padding:9px 16px;border-radius:99px}
+  @media(max-width:640px){.hnav a:not(.cta){display:none}}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .hero{padding:52px 0 30px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:34px}}
+  .kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+  h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(3rem,7.5vw,5.2rem);line-height:.98;letter-spacing:-.02em}
+  h1 em{font-style:italic;color:var(--gold)}
+  .hero p.lead{margin:20px 0 8px;font-size:1.08rem;color:var(--cocoa);max-width:34rem}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px}
+  .badge{font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 14px;color:var(--cocoa)}
+  .badge.open{border-color:#bfe6cd;background:#eafaf0;color:#0d6e38}
+  .badge.closed{border-color:#f0cfc8;background:#fdf0ee;color:var(--red)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;padding:14px 24px;border-radius:99px;transition:transform .25s ease,box-shadow .25s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(43,29,22,.16)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .hero-photo{position:relative}
+  .hero-photo .frame{border-radius:190px 190px 18px 18px;overflow:hidden;border:1px solid var(--line)}
+  .hero-photo img{width:100%;height:560px;object-fit:cover;filter:contrast(1.04) saturate(1.06)}
+  @media(max-width:860px){.hero-photo img{height:420px}}
+  .sticker{position:absolute;left:-14px;bottom:34px;background:var(--gold);color:#fff;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;padding:12px 20px;border-radius:12px;transform:rotate(-4deg);box-shadow:0 14px 28px rgba(43,29,22,.22)}
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--cream);overflow:hidden;padding:10px 0;margin:26px 0 0}
+  .marquee div{white-space:nowrap;font-family:'Fraunces',serif;font-size:1rem;letter-spacing:.06em;color:var(--cocoa);animation:mq 30s linear infinite}
+  @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  section{padding:56px 0}
+  .sec-head{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+  .sec-num{font-size:11px;letter-spacing:.18em;color:var(--gold);font-weight:700}
+  h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.9rem,4.5vw,2.7rem);letter-spacing:-.015em}
+  h2 em{font-style:italic;color:var(--gold)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:580px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(43,29,22,.13)}
+  .card img{width:100%;height:300px;object-fit:cover;filter:contrast(1.04) saturate(1.05)}
+  .card .cb{padding:18px 20px 20px}
+  .card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.22rem;margin-bottom:6px}
+  .card p{font-size:.9rem;color:var(--mut);margin-bottom:14px}
+  .card button{width:100%;border:0;cursor:pointer;background:var(--ink);color:#fff;font-weight:700;font-size:.9rem;padding:12px;border-radius:99px;transition:background .25s ease}
+  .card button:hover{background:var(--gold)}
+  .card.offset{transform:translateY(22px)}
+  .card.offset:hover{transform:translateY(17px)}
+  @media(max-width:900px){.card.offset{transform:none}}
+  .orderbox{background:var(--ink);color:#f7efe2;border-radius:22px;padding:38px 34px;display:grid;grid-template-columns:.9fr 1.1fr;gap:36px}
+  @media(max-width:860px){.orderbox{grid-template-columns:1fr;padding:28px 22px}}
+  .orderbox h2{color:#fff}
+  .orderbox .rule{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:16px 18px;margin-top:18px;font-size:.93rem}
+  .orderbox .rule strong{color:var(--gold2)}
+  form label{display:block;font-size:.82rem;font-weight:600;letter-spacing:.04em;margin:14px 0 6px;color:#e9dcc6}
+  form input,form select,form textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:#fff;color:var(--ink);font:inherit;font-size:.95rem}
+  form textarea{resize:vertical;min-height:64px}
+  .hint{font-size:.8rem;color:#cbbfa9;margin-top:6px}
+  .err{display:none;background:#5a2019;border:1px solid #a04a38;color:#ffd9d2;border-radius:10px;padding:11px 14px;font-size:.88rem;margin-top:14px}
+  .ok{display:none;background:#173f27;border:1px solid #2e7d4f;color:#c9f2d8;border-radius:10px;padding:11px 14px;font-size:.88rem;margin-top:14px}
+  .submit{margin-top:20px;width:100%;border:0;cursor:pointer;background:var(--wa);color:#fff;font-weight:700;font-size:1rem;padding:15px;border-radius:99px;transition:transform .25s ease}
+  .submit:hover{transform:translateY(-2px)}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.facts{grid-template-columns:1fr}}
+  .fact{border-top:2px solid var(--gold);padding-top:14px}
+  .fact h3{font-family:'Fraunces',serif;font-size:1.15rem;margin-bottom:6px}
+  .fact p{font-size:.92rem;color:var(--cocoa)}
+  .mapbox{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:26px}
+  .mapbox iframe{width:100%;height:320px;border:0;display:block}
+  footer{border-top:1px solid var(--line);padding:30px 0 90px;text-align:center;color:var(--mut);font-size:.85rem}
+  footer .fb{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--ink);margin-bottom:6px}
+  .wafloat{position:fixed;right:18px;bottom:18px;z-index:30;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 20px;border-radius:99px;box-shadow:0 14px 30px rgba(20,90,50,.35)}
+  .rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee div{animation:none}}
+  /* assistant */
+  .asst{position:fixed;left:18px;bottom:18px;z-index:30}
+  .asst button.open{background:var(--ink);color:#fff;border:0;cursor:pointer;font-weight:700;font-size:.88rem;padding:13px 18px;border-radius:99px;box-shadow:0 12px 26px rgba(43,29,22,.3)}
+  .panel{display:none;width:min(330px,calc(100vw - 36px));background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 22px 44px rgba(43,29,22,.22);overflow:hidden;margin-bottom:10px}
+  .panel.show{display:block}
+  .panel .ph{background:var(--ink);color:#fff;padding:13px 16px;font-family:'Fraunces',serif}
+  .panel .ph small{display:block;font-family:'Inter',sans-serif;font-size:.75rem;color:#d8c9ae}
+  .msgs{height:230px;overflow-y:auto;padding:14px;font-size:.88rem}
+  .msgs .m{margin-bottom:10px;padding:9px 12px;border-radius:12px;max-width:88%}
+  .msgs .bot{background:var(--cream);color:var(--ink)}
+  .msgs .me{background:var(--ink);color:#fff;margin-left:auto}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
+  .chips button{border:1px solid var(--line);background:#fff;border-radius:99px;font-size:.76rem;font-weight:600;padding:6px 11px;cursor:pointer;color:var(--cocoa)}
+  .panel form{display:flex;border-top:1px solid var(--line)}
+  .panel form input{flex:1;border:0;padding:12px 14px;font:inherit;font-size:.88rem;background:#fff;color:var(--ink)}
+  .panel form button{border:0;background:var(--gold);color:#fff;font-weight:700;padding:0 16px;cursor:pointer}
+  .panel .wa-link{display:block;text-align:center;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:11px}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header>
+  <div class="header-in">
+    <a class="brand" href="#">Diibee <em>Bakehouse</em></a>
+    <nav class="hnav">
+      <a href="#galeri">Galeri</a>
+      <a href="#pesan">Cara Pesan</a>
+      <a href="#info">Info</a>
+      <a class="cta" href="https://wa.me/6283827649000?text=Halo%20Diibee%20Bakehouse%2C%20saya%20mau%20tanya%20soal%20pemesanan%20cake." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="kicker">Custom Cake Cirebon &amp; Bolu Kering Premium</div>
+      <h1>Cake custom,<br>dibuat <em>khusus</em><br>untuk harimu.</h1>
+      <p class="lead">Homemade cakes, bread, cookies, chocolates, dan pudding dengan bahan baku kualitas terbaik dan tanpa pengawet. Dulu dikenal sebagai Carina Cake &amp; Bakery.</p>
+      <div class="badges">
+        <span class="badge" id="openBadge">Memeriksa jam buka…</span>
+        <span class="badge">Order min. H-5</span>
+        <span class="badge">Tanpa pengawet</span>
+        <span class="badge">Keandra Park, Cirebon</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="#pesan">Pesan Cake Sekarang</a>
+        <a class="btn btn-ghost" href="#galeri">Lihat Galeri</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame"><img src="img/hero-coklat.jpg" alt="Cake cokelat custom ulang tahun dari Diibee Bakehouse"></div>
+      <div class="sticker">Order min. H-5 ya!</div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee"><div>Diibee Bakehouse — Custom Cake Cirebon — Lapis Surabaya Premium — Pudding — Cookies Homemade — Diibee Bakehouse — Custom Cake Cirebon — Lapis Surabaya Premium — Pudding — Cookies Homemade —&nbsp;</div></div>
+
+<div class="wrap">
+  <section id="galeri">
+    <div class="sec-head rv"><span class="sec-num">01 — GALERI</span><h2>Hasil karya <em>Diibee</em></h2></div>
+    <div class="grid">
+      <article class="card rv">
+        <img src="img/pudding-hadiah.jpg" alt="Pudding buah dalam kemasan kotak hadiah dengan pita emas">
+        <div class="cb"><h3>Pudding Buah Kemasan Hadiah</h3><p>Pudding dengan buah segar di atasnya, dikemas dalam kotak hadiah berpita emas. Siap diberikan untuk orang tersayang.</p>
+        <button data-item="Pudding Buah Segar">Pesan model ini</button></div>
+      </article>
+      <article class="card offset rv">
+        <img src="img/pudding-buah.jpg" alt="Pudding buah segar dengan kiwi, stroberi, dan anggur">
+        <div class="cb"><h3>Pudding Buah Segar</h3><p>Pudding jelly dengan buah segar: kiwi, stroberi, jeruk, dan anggur. Cantik untuk hadiah ulang tahun.</p>
+        <button data-item="Pudding Buah Segar">Pesan model ini</button></div>
+      </article>
+      <article class="card rv">
+        <img src="img/lapis-surabaya.jpg" alt="Lapis Surabaya Premium Plum">
+        <div class="cb"><h3>Lapis Surabaya Premium Plum</h3><p>Lapis Surabaya dua lapis dengan plum kering, untuk perayaan istimewa termasuk anniversary.</p>
+        <button data-item="Lapis Surabaya Premium Plum">Pesan model ini</button></div>
+      </article>
+      <article class="card rv">
+        <img src="img/mini-cake.jpg" alt="Mini Cake Premium 12cm warna pink">
+        <div class="cb"><h3>Mini Cake Premium 12cm</h3><p>Mini cake 12cm dengan buttercream pink dan kupu-kupu edible. Pas untuk kejutan kecil yang manis.</p>
+        <button data-item="Mini Cake Premium 12cm">Pesan model ini</button></div>
+      </article>
+      <article class="card offset rv">
+        <img src="img/longan-pudding.jpg" alt="Longan Choco Pudding">
+        <div class="cb"><h3>Longan Choco Pudding</h3><p>Pudding lengkeng dan cokelat dengan plakat cokelat bertuliskan pesan khusus.</p>
+        <button data-item="Longan Choco Pudding">Pesan model ini</button></div>
+      </article>
+      <article class="card rv">
+        <img src="img/cake-hitam-emas.jpg" alt="Cake ulang tahun hitam putih dan emas">
+        <div class="cb"><h3>Cake Hitam &amp; Emas</h3><p>Cake ulang tahun elegan hitam, putih, dan emas dengan daun emas edible dan topper bola mengkilap.</p>
+        <button data-item="Cake Hitam & Emas">Pesan model ini</button></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="pesan">
+    <div class="sec-head rv"><span class="sec-num">02 — PESAN</span><h2>Pesan tanpa <em>bolak-balik chat</em></h2></div>
+    <div class="orderbox rv">
+      <div>
+        <h2>Formulir Pemesanan</h2>
+        <p style="margin-top:12px;color:#d8c9ae;font-size:.95rem">Isi formulir ini, lalu kirim. Pesananmu langsung tersusun rapi dan terkirim ke WhatsApp Diibee Bakehouse.</p>
+        <div class="rule"><strong>Kenapa H-5?</strong><br>Setiap cake dibuat homemade khusus untukmu, jadi pemesanan minimal 5 hari sebelum tanggal pengambilan (H-5). Tanggal yang terlalu dekat akan otomatis ditolak oleh formulir ini, supaya tidak ada pesanan yang terlewat.</div>
+        <div class="rule">Tanggal paling awal yang bisa dipilih: <strong id="earliestLabel">—</strong></div>
+      </div>
+      <form id="orderForm" novalidate>
+        <label for="fItem">Pilih cake</label>
+        <select id="fItem">
+          <option>Cake Custom (desain sendiri)</option>
+          <option>Cake Cokelat Custom</option>
+          <option>Pudding Buah Segar</option>
+          <option>Lapis Surabaya Premium Plum</option>
+          <option>Mini Cake Premium 12cm</option>
+          <option>Longan Choco Pudding</option>
+          <option>Cake Hitam &amp; Emas</option>
+          <option>Bread / Roti</option>
+          <option>Cookies</option>
+          <option>Chocolates / Cokelat</option>
+          <option>Pudding lainnya</option>
+        </select>
+        <label for="fDate">Tanggal pengambilan</label>
+        <input type="date" id="fDate" required>
+        <div class="hint">Minimal H-5 dari hari ini, sesuai aturan Diibee Bakehouse.</div>
+        <label for="fName">Nama kamu</label>
+        <input type="text" id="fName" placeholder="Nama pemesan" required>
+        <label for="fText">Tulisan di cake (opsional)</label>
+        <input type="text" id="fText" placeholder="Contoh: Happy Birthday Mama">
+        <label for="fNote">Catatan desain (opsional)</label>
+        <textarea id="fNote" placeholder="Warna, tema, ukuran, atau permintaan khusus"></textarea>
+        <div class="err" id="formErr"></div>
+        <div class="ok" id="formOk"></div>
+        <button class="submit" type="submit">Kirim Pesanan via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="info">
+    <div class="sec-head rv"><span class="sec-num">03 — INFO</span><h2>Info <em>Diibee Bakehouse</em></h2></div>
+    <div class="facts">
+      <div class="fact rv"><h3>Alamat</h3><p>Keandra Park Cluster Aranda 5 No. 8, Cirebon, Jawa Barat.</p></div>
+      <div class="fact rv"><h3>Jam Buka</h3><p>Senin – Sabtu, 09.00 – 17.00 WIB.<br>Pemesanan tetap mengikuti aturan minimal H-5.</p></div>
+      <div class="fact rv"><h3>Cara Pesan</h3><p>Semua pemesanan melalui WhatsApp 0838-2764-9000. Homemade dengan bahan baku kualitas terbaik dan tanpa pengawet.</p></div>
+    </div>
+    <div class="mapbox rv"><iframe title="Peta lokasi Diibee Bakehouse" src="https://www.google.com/maps?q=Keandra%20Park%20Cluster%20Aranda%205%20No%208%20Cirebon&output=embed" loading="lazy"></iframe></div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fb">Diibee Bakehouse</div>
+    <p>Custom Cake Cirebon &amp; Bolu Kering Premium — Keandra Park Cluster Aranda 5 No. 8, Cirebon<br>
+    WhatsApp: 0838-2764-9000 · Instagram: @diibeebakehouse</p>
+    <p style="margin-top:12px">Concept preview built by SiteSprint Studio.</p>
+  </div>
+</footer>
+
+<a class="wafloat" href="https://wa.me/6283827649000?text=Halo%20Diibee%20Bakehouse%2C%20saya%20mau%20tanya%20soal%20pemesanan%20cake." target="_blank" rel="noopener">Chat WhatsApp</a>
+
+<div class="asst">
+  <div class="panel" id="asstPanel">
+    <div class="ph">Asisten Diibee<small>Menjawab dari info resmi di halaman ini</small></div>
+    <div class="msgs" id="asstMsgs"><div class="m bot">Halo! Mau tanya soal cake custom, aturan H-5, jam buka, atau cara pesan? Silakan tanya di sini.</div></div>
+    <div class="chips">
+      <button data-q="Berapa lama harus pesan sebelumnya?">Aturan H-5</button>
+      <button data-q="Jam buka kapan?">Jam buka</button>
+      <button data-q="Alamatnya di mana?">Alamat</button>
+      <button data-q="Jual apa saja?">Produk</button>
+    </div>
+    <form id="asstForm"><input id="asstInput" type="text" placeholder="Tulis pertanyaan…" autocomplete="off"><button type="submit">Kirim</button></form>
+    <a class="wa-link" href="https://wa.me/6283827649000?text=Halo%20Diibee%20Bakehouse%2C%20saya%20mau%20bertanya." target="_blank" rel="noopener">Lanjut ke WhatsApp</a>
+  </div>
+  <button class="open" id="asstOpen" type="button">Tanya Asisten</button>
+</div>
+
+<script>
+var WA = "6283827649000";
+function minDate(){ var d = new Date(); d.setDate(d.getDate()+5); return d; }
+function fmtID(d){ return d.toLocaleDateString("id-ID",{weekday:"long",day:"numeric",month:"long",year:"numeric"}); }
+function iso(d){ var m=("0"+(d.getMonth()+1)).slice(-2), day=("0"+d.getDate()).slice(-2); return d.getFullYear()+"-"+m+"-"+day; }
+var fDate=document.getElementById("fDate");
+var md=minDate();
+fDate.min=iso(md);
+document.getElementById("earliestLabel").textContent=fmtID(md);
+function showErr(msg){ var e=document.getElementById("formErr"); e.textContent=msg; e.style.display="block"; document.getElementById("formOk").style.display="none"; }
+function validateDate(){
+  if(!fDate.value) return false;
+  var picked=new Date(fDate.value+"T00:00:00");
+  var earliest=new Date(iso(minDate())+"T00:00:00");
+  if(picked<earliest){ showErr("Maaf, tanggal itu terlalu dekat. Diibee Bakehouse menerima order minimal H-5. Tanggal paling awal: "+fmtID(earliest)+"."); return false; }
+  document.getElementById("formErr").style.display="none"; return true;
+}
+fDate.addEventListener("change",validateDate);
+document.querySelectorAll(".card button").forEach(function(b){
+  b.addEventListener("click",function(){
+    var sel=document.getElementById("fItem");
+    for(var i=0;i<sel.options.length;i++){ if(sel.options[i].text===b.getAttribute("data-item")||sel.options[i].value===b.getAttribute("data-item")){ sel.selectedIndex=i; break; } }
+    document.getElementById("pesan").scrollIntoView({behavior:"smooth"});
+  });
+});
+document.getElementById("orderForm").addEventListener("submit",function(ev){
+  ev.preventDefault();
+  var item=document.getElementById("fItem").value;
+  var name=document.getElementById("fName").value.trim();
+  var txt=document.getElementById("fText").value.trim();
+  var note=document.getElementById("fNote").value.trim();
+  if(!name){ showErr("Isi nama kamu dulu ya."); return; }
+  if(!fDate.value){ showErr("Pilih tanggal pengambilan dulu ya."); return; }
+  if(!validateDate()) return;
+  var picked=new Date(fDate.value+"T00:00:00");
+  var lines=["Halo Diibee Bakehouse, saya mau pesan:","- Cake: "+item,"- Tanggal pengambilan: "+fmtID(picked),"- Nama: "+name];
+  if(txt) lines.push("- Tulisan di cake: "+txt);
+  if(note) lines.push("- Catatan: "+note);
+  var ok=document.getElementById("formOk"); ok.textContent="Pesanan tersusun. Membuka WhatsApp…"; ok.style.display="block";
+  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n")),"_blank");
+});
+/* open-now badge, Asia/Jakarta, Mon-Sat 09:00-17:00 */
+(function(){
+  var badge=document.getElementById("openBadge");
+  try{
+    var now=new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Jakarta"}));
+    var day=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+    var open=(day>=1&&day<=6&&mins>=540&&mins<1020);
+    badge.textContent=open?"Buka sekarang · 09.00–17.00 WIB":"Tutup · Buka Senin–Sabtu 09.00–17.00 WIB";
+    badge.classList.add(open?"open":"closed");
+  }catch(e){ badge.textContent="Senin–Sabtu · 09.00–17.00 WIB"; }
+})();
+/* assistant: answers only from verified page facts */
+var KB=[
+ {k:["h-5","h5","berapa lama","lead","sebelumnya","mendadak","hari ini","besok"],a:"Pemesanan di Diibee Bakehouse minimal H-5, yaitu 5 hari sebelum tanggal pengambilan. Gunakan formulir di halaman ini, tanggal yang terlalu dekat akan otomatis ditolak."},
+ {k:["jam","buka","tutup","kapan"],a:"Jam buka Diibee Bakehouse: Senin sampai Sabtu, pukul 09.00 - 17.00 WIB."},
+ {k:["alamat","lokasi","dimana","di mana","maps"],a:"Alamatnya di Keandra Park Cluster Aranda 5 No. 8, Cirebon, Jawa Barat. Ada peta di bagian Info halaman ini."},
+ {k:["jual","produk","menu","apa saja","tersedia"],a:"Diibee Bakehouse membuat homemade cakes, bread (roti), cookies, chocolates (cokelat), dan pudding, termasuk Lapis Surabaya Premium Plum, Mini Cake Premium 12cm, dan Longan Choco Pudding. Semua dengan bahan baku kualitas terbaik dan tanpa pengawet."},
+ {k:["harga","berapa","price","biaya"],a:"Harga tidak dicantumkan di halaman ini karena setiap cake custom berbeda. Tanya langsung lewat WhatsApp 0838-2764-9000 ya, tombolnya ada di bawah panel ini."},
+ {k:["pesan","order","cara"],a:"Cara pesan: isi formulir pemesanan di halaman ini (pilih cake dan tanggal minimal H-5), lalu kirim. Pesananmu akan diteruskan ke WhatsApp 0838-2764-9000."},
+ {k:["pengawet","bahan","homemade"],a:"Semua produk Diibee Bakehouse homemade dengan bahan baku kualitas terbaik dan tanpa pengawet."}
+];
+function answer(q){
+  var s=q.toLowerCase();
+  for(var i=0;i<KB.length;i++){ for(var j=0;j<KB[i].k.length;j++){ if(s.indexOf(KB[i].k[j])>-1) return KB[i].a; } }
+  return "Maaf, saya hanya bisa menjawab dari info resmi Diibee Bakehouse di halaman ini. Untuk pertanyaan lain, lanjut ke WhatsApp 0838-2764-9000 ya.";
+}
+var panel=document.getElementById("asstPanel"), msgs=document.getElementById("asstMsgs");
+document.getElementById("asstOpen").addEventListener("click",function(){ panel.classList.toggle("show"); });
+function addMsg(text,cls){ var d=document.createElement("div"); d.className="m "+cls; d.textContent=text; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
+document.getElementById("asstForm").addEventListener("submit",function(ev){ ev.preventDefault(); var inp=document.getElementById("asstInput"); var q=inp.value.trim(); if(!q) return; addMsg(q,"me"); inp.value=""; setTimeout(function(){ addMsg(answer(q),"bot"); },250); });
+document.querySelectorAll(".chips button").forEach(function(b){ b.addEventListener("click",function(){ addMsg(b.getAttribute("data-q"),"me"); setTimeout(function(){ addMsg(answer(b.getAttribute("data-q")),"bot"); },250); }); });
+/* scroll reveal */
+var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); },{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

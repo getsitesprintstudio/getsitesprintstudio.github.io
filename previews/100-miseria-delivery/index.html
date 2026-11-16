@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100Miséria Delivery — Itaperuna, RJ | Açaí Tradicional</title>
+<meta name="description" content="100Miséria Delivery em Itaperuna, RJ: açaí tradicional, pote de 1 litro R$ 37,90 e combo com 2 potes de 500 ml R$ 39,90, sem taxa de entrega. Promo do dia no quadro permanente e pedido em um toque pelo WhatsApp. Entregas das 15h00 às 22h45.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#2a0a3e;--plum2:#3b1154;--panel:#471a66;--grape:#7b1e9e;--yellow:#ffc400;--yellow2:#ffd94d;--pink:#ff2e88;--green:#00c853;--cream:#fff9ef;--mut:#dec7ef;--wa:#1faa55;--line:#5e2b80;--disp:"Fredoka",system-ui,sans-serif;--serif:"Fraunces",Georgia,serif;--sans:"Nunito",system-ui,sans-serif;--shadow:0 26px 55px rgba(14,2,24,.6)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--plum);color:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--yellow);color:var(--plum)}img{max-width:100%;display:block}
+.grain{position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(42,10,62,.96);backdrop-filter:blur(12px);border-bottom:2px solid var(--yellow);box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.hdr{max-width:1160px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}.brand img{width:52px;height:52px;border-radius:14px;object-fit:cover;border:2px solid var(--yellow)}
+.brand b{font-family:var(--disp);font-weight:700;font-size:clamp(20px,2.6vw,26px);line-height:1.05;display:block}.brand b span{color:var(--yellow)}
+.brand small{display:block;font-size:10.5px;letter-spacing:.26em;font-weight:800;color:var(--mut);margin-top:2px}
+.hdr-cta{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;font-weight:900;text-decoration:none;padding:11px 18px;border-radius:999px;font-size:14.5px;transition:.25s;box-shadow:0 10px 24px rgba(31,170,85,.35)}.hdr-cta:hover{transform:translateY(-2px)}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:800;padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:rgba(255,255,255,.06)}
+.dot{width:9px;height:9px;border-radius:50%;background:#999}.dot.open{background:#2ee06f;box-shadow:0 0 10px #2ee06f}.dot.closed{background:#ff5470}
+.hero{position:relative;padding:132px 20px 0;overflow:hidden;background:radial-gradient(900px 480px at 85% -5%,rgba(123,30,158,.55),transparent 60%),radial-gradient(700px 420px at 0% 30%,rgba(255,46,136,.20),transparent 55%),var(--plum)}
+.hero-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}
+.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:900;color:var(--yellow);display:flex;align-items:center;gap:10px}.kicker::before{content:"";width:34px;height:2px;background:var(--yellow)}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(3.2rem,8.5vw,6.2rem);line-height:.96;letter-spacing:-.02em;margin:16px 0 6px;color:#fff}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--yellow);letter-spacing:0}
+.hero p.lead{font-size:clamp(16.5px,2vw,19px);color:var(--mut);max-width:34em;margin:14px 0 24px}
+.hero p.lead b{color:#fff}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:999px;font-weight:900;text-decoration:none;font-size:16px;transition:.25s;border:2px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(31,170,85,.4)}.btn-wa:hover{transform:translateY(-3px)}
+.btn-ghost{background:transparent;color:#fff;border-color:var(--line)}.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow)}
+.hero-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.fact{font-size:13px;font-weight:800;background:rgba(255,255,255,.06);border:1.5px solid var(--line);padding:8px 14px;border-radius:999px}.fact b{color:var(--yellow)}
+.hero-photo{position:relative}
+.hero-photo .frame{border-radius:210px 210px 26px 26px;overflow:hidden;border:3px solid rgba(255,196,0,.55);box-shadow:var(--shadow);transform:rotate(1.6deg)}
+.hero-photo img{width:100%;height:520px;object-fit:cover;filter:contrast(1.06) saturate(1.12)}
+.sticker{position:absolute;background:var(--yellow);color:var(--plum);font-family:var(--disp);font-weight:700;padding:12px 18px;border-radius:16px;transform:rotate(-5deg);box-shadow:0 16px 34px rgba(0,0,0,.45);font-size:16px;line-height:1.25}
+.sticker small{display:block;font-family:var(--sans);font-weight:800;font-size:11.5px;letter-spacing:.06em}
+.sticker.s1{top:26px;left:-16px}.sticker.s2{bottom:30px;right:-8px;background:var(--pink);color:#fff;transform:rotate(4deg)}
+.marquee{margin-top:56px;border-top:2px solid var(--line);border-bottom:2px solid var(--line);background:var(--plum2);overflow:hidden;white-space:nowrap;padding:13px 0}
+.marquee div{display:inline-block;animation:mq 26s linear infinite;font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:.14em;color:var(--yellow2)}
+.marquee span{margin:0 22px;color:#fff}.marquee i{font-style:normal;color:var(--pink)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section{padding:84px 20px}.wrap{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:baseline;gap:18px;border-bottom:1.5px solid var(--line);padding-bottom:16px;margin-bottom:36px;flex-wrap:wrap}
+.sec-num{font-family:var(--serif);font-style:italic;color:var(--pink);font-size:20px}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.05;color:#fff;letter-spacing:-.01em}
+h2 em{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--yellow)}
+.sec-head p{margin-left:auto;max-width:36em;color:var(--mut);font-size:15.5px}
+.board{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
+.today-card{background:linear-gradient(150deg,#ff2e88,#c2185b);border-radius:26px;padding:30px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.today-card::after{content:"";position:absolute;inset:0;background:radial-gradient(420px 220px at 90% 0%,rgba(255,255,255,.25),transparent 60%);pointer-events:none}
+.today-tag{display:inline-block;background:#fff;color:#c2185b;font-weight:900;font-size:12px;letter-spacing:.18em;padding:7px 14px;border-radius:999px;transform:rotate(-2deg)}
+.today-card h3{font-family:var(--disp);font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.08;color:#fff;margin:18px 0 10px;font-weight:700}
+.today-card p{color:#ffe3f0;font-weight:700;max-width:30em}
+.today-card .cond{font-size:13.5px;color:#ffd3e6;font-weight:700;margin-top:12px}
+.board-side{display:grid;gap:22px}
+.past-card{background:var(--panel);border:1.5px solid var(--line);border-radius:26px;padding:24px}
+.past-card h4{font-family:var(--disp);font-size:19px;color:#fff;margin-bottom:14px;font-weight:600}
+.past{display:flex;gap:14px;padding:12px 0;border-top:1px dashed var(--line)}.past:first-of-type{border-top:none}
+.past .d{font-family:var(--disp);font-weight:700;color:var(--yellow);background:rgba(255,196,0,.12);border:1.5px solid rgba(255,196,0,.4);border-radius:12px;padding:6px 10px;height:fit-content;font-size:14px;white-space:nowrap}
+.past p{font-size:14.5px;color:var(--mut)}.past p b{color:#fff}
+.month-card{background:var(--panel);border:1.5px solid var(--line);border-radius:26px;overflow:hidden;display:grid;grid-template-columns:130px 1fr}
+.month-card img{width:100%;height:100%;object-fit:cover;min-height:150px}
+.month-card div{padding:20px}
+.month-card h4{font-family:var(--disp);color:#fff;font-size:18px;font-weight:600;line-height:1.25}
+.month-card p{color:var(--mut);font-size:14px;margin-top:6px}.month-card p b{color:var(--yellow)}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.item{background:var(--panel);border:1.5px solid var(--line);border-radius:26px;padding:28px;transition:.25s;position:relative}
+.item:hover{transform:translateY(-5px);border-color:var(--yellow)}
+.item .tag{position:absolute;top:-13px;right:22px;background:var(--green);color:#fff;font-weight:900;font-size:12px;letter-spacing:.08em;padding:6px 13px;border-radius:999px;transform:rotate(3deg)}
+.item h3{font-family:var(--disp);font-size:clamp(1.45rem,2.6vw,1.9rem);color:#fff;font-weight:600;line-height:1.15}
+.item p{color:var(--mut);margin:10px 0 18px;font-size:15.5px}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.price{font-family:var(--disp);font-weight:700;font-size:34px;color:var(--yellow)}
+.qty{display:inline-flex;align-items:center;gap:12px;background:rgba(0,0,0,.28);border:1.5px solid var(--line);border-radius:999px;padding:6px}
+.qty button{width:38px;height:38px;border-radius:50%;border:none;background:var(--grape);color:#fff;font-size:20px;font-weight:900;cursor:pointer;transition:.2s}.qty button:hover{background:var(--pink)}
+.qty output{font-family:var(--disp);font-weight:700;font-size:19px;min-width:24px;text-align:center}
+.builder{background:linear-gradient(160deg,var(--plum2),#22073a);border:2px solid var(--yellow);border-radius:28px;padding:32px;box-shadow:var(--shadow)}
+.builder h3{font-family:var(--disp);font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;font-weight:700}
+.builder h3 em{font-family:var(--serif);font-style:italic;color:var(--yellow)}
+.free-line{display:flex;gap:14px;align-items:flex-start;background:rgba(0,200,83,.12);border:1.5px dashed var(--green);border-radius:18px;padding:16px 18px;margin:20px 0;cursor:pointer}
+.free-line input{width:22px;height:22px;margin-top:3px;accent-color:var(--green);cursor:pointer}
+.free-line b{color:#fff}.free-line span{color:var(--mut);font-size:14px;display:block}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 20px}
+.fields label{font-size:12.5px;font-weight:900;letter-spacing:.08em;color:var(--mut);display:block}
+.fields input{width:100%;margin-top:6px;background:rgba(255,255,255,.07);border:1.5px solid var(--line);border-radius:13px;padding:13px 15px;color:#fff;font-family:var(--sans);font-size:15.5px;font-weight:700}
+.fields input:focus{outline:2px solid var(--yellow);border-color:transparent}
+.total-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1.5px dashed var(--line);padding-top:20px}
+.total-row .t{font-size:14px;font-weight:900;letter-spacing:.1em;color:var(--mut)}
+.total-row .v{font-family:var(--disp);font-weight:700;font-size:40px;color:var(--yellow)}
+#orderBtn.disabled{opacity:.45;pointer-events:none}
+.note{font-size:13px;color:var(--mut);margin-top:14px}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}
+.split .photo{border-radius:26px;overflow:hidden;transform:rotate(-1.8deg);border:3px solid rgba(255,46,136,.5);box-shadow:var(--shadow)}
+.split .photo img{height:440px;width:100%;object-fit:cover;filter:contrast(1.05) saturate(1.15)}
+.steps{display:grid;gap:0}
+.step{display:flex;gap:18px;padding:20px 0;border-bottom:1px dashed var(--line)}.step:last-child{border-bottom:none}
+.step .n{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--yellow);min-width:44px}
+.step h4{font-family:var(--disp);color:#fff;font-size:19px;font-weight:600}
+.step p{color:var(--mut);font-size:15px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.info{background:var(--panel);border:1.5px solid var(--line);border-radius:24px;padding:26px}
+.info .lab{font-size:11px;letter-spacing:.2em;font-weight:900;color:var(--yellow);text-transform:uppercase}
+.info h4{font-family:var(--disp);color:#fff;font-size:22px;margin:10px 0 6px;font-weight:600}
+.info p{color:var(--mut);font-size:15px}
+footer{border-top:2px solid var(--line);padding:44px 20px 110px;background:#1d0630}
+.foot{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot p{color:var(--mut);font-size:14px}.foot b{color:#fff}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--wa);color:#fff;text-decoration:none;font-weight:900;padding:15px 22px;border-radius:999px;box-shadow:0 16px 36px rgba(0,0,0,.5);display:inline-flex;gap:9px;align-items:center;transition:.25s}.float-wa:hover{transform:translateY(-3px)}
+.chat-fab{position:fixed;left:18px;bottom:18px;z-index:60;background:var(--yellow);color:var(--plum);border:none;font-family:var(--sans);font-weight:900;padding:15px 22px;border-radius:999px;box-shadow:0 16px 36px rgba(0,0,0,.5);cursor:pointer;font-size:15px;transition:.25s}.chat-fab:hover{transform:translateY(-3px)}
+.chat{position:fixed;left:18px;bottom:86px;z-index:61;width:min(360px,calc(100vw - 36px));background:#fff;color:#241233;border-radius:22px;box-shadow:0 30px 70px rgba(0,0,0,.55);overflow:hidden;display:none;flex-direction:column}
+.chat.open{display:flex}
+.chat-head{background:var(--plum);color:#fff;padding:16px 18px;display:flex;gap:12px;align-items:center}
+.chat-head img{width:42px;height:42px;border-radius:12px;object-fit:cover}
+.chat-head b{font-family:var(--disp);font-size:16.5px;display:block;line-height:1.2}.chat-head small{color:var(--mut);font-size:12px}
+.chat-body{padding:16px;display:flex;flex-direction:column;gap:10px;max-height:320px;overflow-y:auto;background:#faf5ff}
+.msg{padding:11px 14px;border-radius:16px;font-size:14.5px;line-height:1.5;max-width:88%}
+.msg.bot{background:#efe4fb;border-bottom-left-radius:4px}
+.msg.me{background:var(--wa);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.msg a{color:#7b1e9e;font-weight:900}.msg.me a{color:#fff}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 12px;background:#faf5ff}
+.chips button{border:1.5px solid var(--grape);background:#fff;color:var(--grape);font-weight:800;font-size:13px;padding:8px 13px;border-radius:999px;cursor:pointer;font-family:var(--sans)}.chips button:hover{background:var(--grape);color:#fff}
+.chat-form{display:flex;border-top:1.5px solid #e7dbf5}
+.chat-form input{flex:1;border:none;padding:14px 16px;font-family:var(--sans);font-size:15px}
+.chat-form input:focus{outline:none}
+.chat-form button{background:var(--wa);color:#fff;border:none;padding:0 20px;font-weight:900;cursor:pointer;font-family:var(--sans)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}.rv{opacity:1;transform:none;transition:none}*{transition:none!important}}
+@media(max-width:900px){.hero-in,.board,.menu-grid,.split{grid-template-columns:1fr}.hero-photo img{height:420px}.info-grid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.sticker.s1{left:4px}.sticker.s2{right:4px}.sec-head p{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header id="hdr">
+  <div class="hdr">
+    <a class="brand" href="#topo">
+      <img src="img/logo.jpg" alt="Logo Açaí 100 Miséria">
+      <span><b>100<span>Miséria</span> Delivery</b><small>AÇAÍ TRADICIONAL · ITAPERUNA-RJ</small></span>
+    </a>
+    <span class="status"><span class="dot" id="statusDot"></span><span id="statusText">Verificando horário…</span></span>
+    <a class="hdr-cta" href="https://wa.me/5522996077606?text=Ol%C3%A1!%20Quero%20pedir%20um%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="hero-in">
+      <div class="rv">
+        <p class="kicker">Delivery de açaí · Itaperuna-RJ</p>
+        <h1>O açaí mais <em>TOP</em> da cidade, sem sair de casa.</h1>
+        <p class="lead">Açaí tradicional no pote, <b>sem taxa de entrega</b>, com a <b>promoção do dia sempre no quadro</b> — e o pedido montado em um toque, direto pro WhatsApp.</p>
+        <div class="btns">
+          <a class="btn btn-wa" href="#pedido">Montar meu pedido</a>
+          <a class="btn btn-ghost" href="#promocoes">Ver a promo de hoje</a>
+        </div>
+        <div class="hero-facts">
+          <span class="fact">Entregas <b>15h00 às 22h45</b></span>
+          <span class="fact"><b>Sem taxa</b> de entrega</span>
+          <span class="fact">WhatsApp <b>(22) 99607-7606</b></span>
+        </div>
+      </div>
+      <div class="hero-photo rv">
+        <div class="frame"><img src="img/hero-acai.jpg" alt="Pote de açaí tradicional com banana, frutas e confeitos da 100Miséria Delivery"></div>
+        <div class="sticker s1">Pote de 1 Litro<small>AÇAÍ TRADICIONAL</small>R$ 37,90</div>
+        <div class="sticker s2">Sem taxa de entrega</div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true"><div><span>AÇAÍ TRADICIONAL</span><i>●</i><span>ITAPERUNA-RJ</span><i>●</i><span>SEM TAXA DE ENTREGA</span><i>●</i><span>O MAIS TOP DA CIDADE</span><i>●</i><span>PEÇA JÁ O SEU!!!</span><i>●</i><span>AÇAÍ TRADICIONAL</span><i>●</i><span>ITAPERUNA-RJ</span><i>●</i><span>SEM TAXA DE ENTREGA</span><i>●</i><span>O MAIS TOP DA CIDADE</span><i>●</i><span>PEÇA JÁ O SEU!!!</span><i>●</i></div></div>
+  </div>
+
+  <section id="promocoes">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-num">01 —</span>
+        <h2>Quadro de <em>promoções</em></h2>
+        <p>Antes, a promo do dia vivia só num post do Instagram e sumia no dia seguinte. Agora ela fica aqui, permanente — e já entra no seu pedido.</p>
+      </div>
+      <div class="board">
+        <article class="today-card rv">
+          <span class="today-tag">SOMENTE HOJE · <span id="todayDate">HOJE</span></span>
+          <h3>Adicionais de Disquetes e Gotas de Chocolate GRÁTIS</h3>
+          <p>A promo de hoje já pode entrar no seu pedido sem custo: marque a opção no monte seu pedido e ela vai escrita na mensagem do WhatsApp.</p>
+          <p class="cond">Válido apenas para pedidos no WhatsApp, até durarem nosso estoque. (Como publicado no Instagram da loja.)</p>
+        </article>
+        <div class="board-side">
+          <div class="past-card rv">
+            <h4>Promos dos últimos dias</h4>
+            <div class="past"><span class="d">14 NOV</span><p><b>Adicionais de Ovomaltine e Gotas de Chocolate GRÁTIS</b> — somente naquele dia, para pedidos no WhatsApp.</p></div>
+            <div class="past"><span class="d">13 NOV</span><p><b>Adicional de Fruta Morango GRÁTIS</b> — somente naquele dia, para pedidos no WhatsApp.</p></div>
+          </div>
+          <div class="month-card rv">
+            <img src="img/promo-novembro.jpg" alt="Arte da promoção do mês de novembro da 100Miséria: pote de 1 litro por R$ 37,90">
+            <div>
+              <h4>Promoção do mês de novembro</h4>
+              <p>Pote de 1 Litro de Açaí Tradicional por <b>R$ 37,90</b>, sem taxa de entrega. Peça já o seu!!!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cardapio" style="padding-top:10px">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-num">02 —</span>
+        <h2>Potes de <em>novembro</em></h2>
+        <p>Os dois potes da promoção do mês, com o preço publicado pela loja. Escolha a quantidade e monte o pedido abaixo.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="item rv">
+          <span class="tag">SEM TAXA DE ENTREGA</span>
+          <h3>Pote de 1 Litro — Açaí Tradicional</h3>
+          <p>O pote grande do mês de novembro, pra dividir (ou não). Entrega sem taxa.</p>
+          <div class="price-row">
+            <span class="price">R$ 37,90</span>
+            <span class="qty"><button type="button" data-dec="litro" aria-label="Diminuir">−</button><output id="q-litro">0</output><button type="button" data-inc="litro" aria-label="Aumentar">+</button></span>
+          </div>
+        </article>
+        <article class="item rv">
+          <span class="tag">SEM TAXA DE ENTREGA</span>
+          <h3>Combo 02 Potes de 500 ml — Açaí Tradicional</h3>
+          <p>Dois potes de 500 ml de açaí tradicional no combo do mês de novembro. Entrega sem taxa.</p>
+          <div class="price-row">
+            <span class="price">R$ 39,90</span>
+            <span class="qty"><button type="button" data-dec="combo" aria-label="Diminuir">−</button><output id="q-combo">0</output><button type="button" data-inc="combo" aria-label="Aumentar">+</button></span>
+          </div>
+        </article>
+      </div>
+
+      <div class="builder rv" id="pedido" style="margin-top:26px">
+        <h3>Monte seu pedido e <em>envie em um toque</em></h3>
+        <label class="free-line">
+          <input type="checkbox" id="freeTop">
+          <span><b>Quero a promo de hoje: Disquetes e Gotas de Chocolate GRÁTIS</b><span>SOMENTE HOJE — válido para pedidos no WhatsApp, até durarem o estoque. Custo: R$ 0,00.</span></span>
+        </label>
+        <div class="fields">
+          <label>Seu nome (opcional)<input type="text" id="custName" placeholder="Ex.: Maria" autocomplete="name"></label>
+          <label>Endereço de entrega (opcional)<input type="text" id="custAddr" placeholder="Rua, número, bairro" autocomplete="street-address"></label>
+        </div>
+        <div class="total-row">
+          <div><span class="t">TOTAL · ENTREGA GRÁTIS</span><div class="v" id="totalOut">R$ 0,00</div></div>
+          <a class="btn btn-wa disabled" id="orderBtn" href="#" target="_blank" rel="noopener">Enviar pedido no WhatsApp</a>
+        </div>
+        <p class="note">Ao tocar em enviar, seu pedido abre pronto no WhatsApp da loja: (22) 99607-7606. Entregas das 15h00 às 22h45.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:10px">
+    <div class="wrap split">
+      <div class="photo rv"><img src="img/morango.jpg" alt="Morangos frescos do adicional grátis anunciado pela 100Miséria Delivery"></div>
+      <div class="rv">
+        <div class="sec-head" style="margin-bottom:10px">
+          <span class="sec-num">03 —</span>
+          <h2>Como <em>funciona</em></h2>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="n">1.</span><div><h4>Confira a promo do dia</h4><p>Ela fica no quadro de promoções desta página, não só num post que some.</p></div></div>
+          <div class="step"><span class="n">2.</span><div><h4>Monte o pedido aqui</h4><p>Escolha os potes, marque o adicional grátis de hoje e veja o total na hora.</p></div></div>
+          <div class="step"><span class="n">3.</span><div><h4>Envie em um toque</h4><p>O pedido abre escrito no WhatsApp da loja. Sem digitar tudo na conversa, sem taxa de entrega.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:10px">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-num">04 —</span>
+        <h2>Informações da <em>loja</em></h2>
+      </div>
+      <div class="info-grid">
+        <div class="info rv"><span class="lab">Horário de entregas</span><h4>15h00 às 22h45</h4><p>Horário publicado na bio e nas postagens da loja no Instagram.</p></div>
+        <div class="info rv"><span class="lab">Entrega</span><h4>Sem taxa de entrega</h4><p>Nos potes da promoção do mês de novembro: pote de 1 litro e combo 2 × 500 ml.</p></div>
+        <div class="info rv"><span class="lab">Pedidos</span><h4>(22) 99607-7606</h4><p>Pedidos pelo WhatsApp em Itaperuna-RJ e região. Instagram: @100miseriaacai</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <p><b>100Miséria Delivery</b> · Açaí Tradicional · Itaperuna-RJ · Entregas 15h00 às 22h45 · (22) 99607-7606</p>
+    <p>Concept preview built by SiteSprint Studio.</p>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/5522996077606?text=Ol%C3%A1!%20Quero%20pedir%20um%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+<button class="chat-fab" id="chatFab" type="button">Tirar uma dúvida</button>
+
+<div class="chat" id="chatBox" role="dialog" aria-label="Assistente da loja">
+  <div class="chat-head">
+    <img src="img/logo.jpg" alt="">
+    <div><b>Assistente 100Miséria</b><small>Responde com as informações da página</small></div>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg bot">Olá! Posso ajudar com preços, a promo de hoje, horário de entrega e como pedir. É só perguntar.</div>
+  </div>
+  <div class="chips">
+    <button type="button" data-q="Qual o preço?">Qual o preço?</button>
+    <button type="button" data-q="Qual a promo de hoje?">Promo de hoje</button>
+    <button type="button" data-q="Qual o horário de entrega?">Horário</button>
+    <button type="button" data-q="A entrega é grátis?">Entrega grátis?</button>
+  </div>
+  <form class="chat-form" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Escreva sua dúvida…" autocomplete="off">
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<script>
+var WA = "5522996077606";
+var PRICES = { litro: 37.90, combo: 39.90 };
+var NAMES = { litro: "Pote de 1 Litro - Acai Tradicional", combo: "Combo 02 Potes de 500ml - Acai Tradicional" };
+var qty = { litro: 0, combo: 0 };
+
+function fmt(v){ return "R$ " + v.toFixed(2).replace(".", ","); }
+
+function render(){
+  document.getElementById("q-litro").textContent = qty.litro;
+  document.getElementById("q-combo").textContent = qty.combo;
+  var total = qty.litro * PRICES.litro + qty.combo * PRICES.combo;
+  document.getElementById("totalOut").textContent = fmt(total);
+  var btn = document.getElementById("orderBtn");
+  var free = document.getElementById("freeTop").checked;
+  if (qty.litro + qty.combo === 0 && !free){ btn.classList.add("disabled"); btn.removeAttribute("href"); return; }
+  var lines = ["Ola! Quero fazer um pedido:"];
+  if (qty.litro > 0) lines.push(qty.litro + "x " + NAMES.litro + " - " + fmt(qty.litro * PRICES.litro));
+  if (qty.combo > 0) lines.push(qty.combo + "x " + NAMES.combo + " - " + fmt(qty.combo * PRICES.combo));
+  if (free) lines.push("Promo de hoje (SOMENTE HOJE): Adicionais de Disquetes e Gotas de Chocolate GRATIS - R$ 0,00");
+  lines.push("Total: " + fmt(total) + " (sem taxa de entrega)");
+  var nome = document.getElementById("custName").value.trim();
+  var addr = document.getElementById("custAddr").value.trim();
+  if (nome) lines.push("Nome: " + nome);
+  if (addr) lines.push("Endereco de entrega: " + addr);
+  btn.classList.remove("disabled");
+  btn.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
+}
+document.querySelectorAll("[data-inc]").forEach(function(b){ b.addEventListener("click", function(){ qty[b.getAttribute("data-inc")]++; render(); }); });
+document.querySelectorAll("[data-dec]").forEach(function(b){ b.addEventListener("click", function(){ var k = b.getAttribute("data-dec"); if (qty[k] > 0) qty[k]--; render(); }); });
+document.getElementById("freeTop").addEventListener("change", render);
+document.getElementById("custName").addEventListener("input", render);
+document.getElementById("custAddr").addEventListener("input", render);
+render();
+
+function updateStatus(){
+  var now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
+  var mins = now.getHours() * 60 + now.getMinutes();
+  var open = mins >= 15 * 60 && mins < 22 * 60 + 45;
+  var dot = document.getElementById("statusDot");
+  var txt = document.getElementById("statusText");
+  dot.className = "dot " + (open ? "open" : "closed");
+  txt.textContent = open ? "Aberto agora · entregas até 22h45" : "Fechado agora · entregas das 15h00 às 22h45";
+  var d = now.getDate(); var m = now.getMonth() + 1;
+  document.getElementById("todayDate").textContent = (d < 10 ? "0" + d : d) + "/" + (m < 10 ? "0" + m : m);
+}
+updateStatus(); setInterval(updateStatus, 60000);
+
+window.addEventListener("scroll", function(){ document.getElementById("hdr").classList.toggle("scrolled", window.scrollY > 10); });
+
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+
+var chatBox = document.getElementById("chatBox");
+document.getElementById("chatFab").addEventListener("click", function(){ chatBox.classList.toggle("open"); });
+function addMsg(text, who){
+  var d = document.createElement("div"); d.className = "msg " + who; d.innerHTML = text;
+  document.getElementById("chatBody").appendChild(d);
+  document.getElementById("chatBody").scrollTop = 99999;
+}
+function answer(q){
+  var s = q.toLowerCase();
+  var waLink = '<a href="https://wa.me/' + WA + '" target="_blank" rel="noopener">chamar no WhatsApp</a>';
+  if (s.indexOf("preç") >= 0 || s.indexOf("prec") >= 0 || s.indexOf("quanto") >= 0 || s.indexOf("valor") >= 0)
+    return "Os preços do mês de novembro são: Pote de 1 Litro de Açaí Tradicional por R$ 37,90 e Combo com 02 Potes de 500 ml por R$ 39,90. Os dois sem taxa de entrega. Você pode montar o pedido aqui na página, na seção 02.";
+  if (s.indexOf("promo") >= 0 || s.indexOf("hoje") >= 0 || s.indexOf("grátis") >= 0 || s.indexOf("gratis") >= 0 && s.indexOf("entrega") < 0)
+    return "SOMENTE HOJE: Adicionais de Disquetes e Gotas de Chocolate GRÁTIS, válido apenas para pedidos no WhatsApp até durarem o estoque. Marque a opção no monte seu pedido que ela já vai no pedido, por R$ 0,00.";
+  if (s.indexOf("horár") >= 0 || s.indexOf("horar") >= 0 || s.indexOf("abre") >= 0 || s.indexOf("fecha") >= 0 || s.indexOf("entrega") >= 0 && s.indexOf("hora") >= 0)
+    return "As entregas são das 15h00 às 22h45, como publicado pela loja no Instagram.";
+  if (s.indexOf("entrega") >= 0 || s.indexOf("taxa") >= 0)
+    return "Nos potes da promoção de novembro não há taxa de entrega: sem taxa no Pote de 1 Litro (R$ 37,90) e no Combo 2 × 500 ml (R$ 39,90).";
+  if (s.indexOf("pedir") >= 0 || s.indexOf("pedido") >= 0 || s.indexOf("whatsapp") >= 0 || s.indexOf("telefone") >= 0 || s.indexOf("número") >= 0)
+    return "É só montar o pedido na seção 02 desta página e enviar em um toque, ou " + waLink + " direto: (22) 99607-7606.";
+  if (s.indexOf("onde") >= 0 || s.indexOf("cidade") >= 0 || s.indexOf("endereç") >= 0)
+    return "A loja é de Itaperuna-RJ e atende pelo delivery no WhatsApp (22) 99607-7606. Para qualquer detalhe além desta página, é só " + waLink + ".";
+  if (s.indexOf("ovomaltine") >= 0 || s.indexOf("morango") >= 0)
+    return "Essas foram promos de dias anteriores: Ovomaltine e Gotas de Chocolate grátis no dia 14/11 e Morango grátis no dia 13/11. A promo válida hoje é Disquetes e Gotas de Chocolate grátis.";
+  return "Só consigo responder com as informações desta página: preços de novembro (1 litro R$ 37,90 e combo 2 × 500 ml R$ 39,90, sem taxa), a promo de hoje e o horário de entregas (15h00 às 22h45). Para o resto, é só " + waLink + ": (22) 99607-7606.";
+}
+document.getElementById("chatForm").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var inp = document.getElementById("chatInput"); var v = inp.value.trim(); if (!v) return;
+  addMsg(v.replace(/</g, "&lt;"), "me"); inp.value = "";
+  setTimeout(function(){ addMsg(answer(v), "bot"); }, 250);
+});
+document.querySelectorAll(".chips button").forEach(function(b){ b.addEventListener("click", function(){ var q = b.getAttribute("data-q"); addMsg(q, "me"); setTimeout(function(){ addMsg(answer(q), "bot"); }, 250); }); });
+</script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuego y Carbón — Parrilla de Barrio | Pizzas nuevas, parrillada, tortas y milanesas en Municipio Libre, Aguascalientes</title>
+<meta name="description" content="Fuego y Carbón Parrilla de Barrio, Calle Presidentes 604, Municipio Libre, Aguascalientes. Llegaron las pizzas: 7 sabores desde $119, solo por WhatsApp para recoger. Parrillada $189, hamburguesas, tortas y milanesas. Pide por WhatsApp +52 449 104 4635.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#161009;--coal2:#211710;--paper:#f7ecd9;--cream:#fbf4e4;--ember:#ff5a1f;--red:#e83a17;--gold:#f2a81d;--ink:#241407;--mut:#8a7458;--line:rgba(247,236,217,.16);--wa:#1faa55;--disp:"Anton",Impact,sans-serif;--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--coal);color:var(--paper);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ember);color:#fff}img{max-width:100%;display:block}
+.grain{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+header{position:sticky;top:0;z-index:60;background:rgba(22,16,9,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr{max-width:1180px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-size:22px;letter-spacing:.04em;line-height:1;color:var(--paper)}.brand b{color:var(--ember);font-weight:400}.brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:4px;font-weight:700}
+.hdr nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.hdr nav a{color:var(--paper);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.85}.hdr nav a:hover{opacity:1;color:var(--ember)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:12px 20px;border-radius:999px;border:none;cursor:pointer;transition:.25s;box-shadow:0 10px 26px rgba(31,170,85,.3)}.btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(31,170,85,.4)}
+.btn.ember{background:var(--ember);box-shadow:0 10px 26px rgba(255,90,31,.35)}.btn.ember:hover{box-shadow:0 16px 32px rgba(255,90,31,.45)}
+.btn.ghost{background:transparent;border:1.5px solid var(--paper);box-shadow:none;color:var(--paper)}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.06) saturate(1.12)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,16,9,.42) 0%,rgba(22,16,9,.08) 38%,rgba(22,16,9,.88) 82%,var(--coal) 100%)}
+.hero-in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:120px 20px 54px;width:100%}
+.kick{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:12px}.kick::before{content:"";width:38px;height:2px;background:var(--ember)}
+.hero h1{font-family:var(--disp);font-size:clamp(3.6rem,12.5vw,10.5rem);line-height:.92;letter-spacing:.005em;text-transform:uppercase;margin:16px 0 6px;text-shadow:0 6px 40px rgba(0,0,0,.45)}
+.hero h1 .amp{color:var(--ember)}
+.hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,3vw,1.9rem);color:var(--cream);max-width:640px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.sticker{display:inline-block;background:var(--red);color:#fff;font-family:var(--disp);letter-spacing:.05em;padding:10px 18px;border-radius:6px;transform:rotate(-3deg);font-size:clamp(1rem,2.4vw,1.35rem);text-transform:uppercase;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.sticker.gold{background:var(--gold);color:var(--ink);transform:rotate(2deg)}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.tag{border:1px solid rgba(247,236,217,.4);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;background:rgba(22,16,9,.45);backdrop-filter:blur(4px)}
+.marquee{background:var(--ember);color:var(--coal);overflow:hidden;padding:11px 0;border-block:3px solid var(--coal);transform:rotate(-.6deg) scale(1.02);position:relative;z-index:3}
+.marquee div{display:flex;gap:0;white-space:nowrap;font-family:var(--disp);font-size:19px;letter-spacing:.06em;text-transform:uppercase;animation:mq 26s linear infinite;width:max-content}
+@keyframes mq{to{transform:translateX(-50%)}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:84px 0 10px}
+.sec-head{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:34px;flex-wrap:wrap}
+.sec-num{font-family:var(--serif);font-style:italic;color:var(--ember);font-size:20px}
+.sec-head h2{font-family:var(--disp);font-size:clamp(2.1rem,6vw,3.6rem);letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.sec-head p{color:#cdbb9c;font-size:15px;max-width:520px;margin-left:auto}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee div{animation:none}}
+.pizza-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.pz{background:var(--coal2);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative;overflow:hidden;transition:.25s}
+.pz:hover{transform:translateY(-5px);border-color:rgba(255,90,31,.55);box-shadow:0 22px 40px rgba(0,0,0,.35)}
+.pz::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--ember),var(--gold))}
+.pz .new{position:absolute;top:14px;right:14px;background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.14em;padding:4px 9px;border-radius:999px;text-transform:uppercase}
+.pz h3{font-family:var(--disp);font-size:24px;letter-spacing:.03em;text-transform:uppercase;line-height:1.05;padding-right:52px}
+.pz p{color:#cdbb9c;font-size:13.5px;margin:9px 0 16px;min-height:40px}
+.pz .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.price{font-family:var(--disp);font-size:21px;color:var(--gold)}.price small{display:block;font-family:var(--sans);font-size:10px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.order-link{color:#fff;background:var(--wa);text-decoration:none;font-weight:800;font-size:13px;padding:9px 14px;border-radius:999px;transition:.2s;white-space:nowrap}.order-link:hover{transform:translateY(-2px)}
+.note-bar{margin-top:22px;background:rgba(255,90,31,.1);border:1px dashed rgba(255,90,31,.55);border-radius:14px;padding:16px 20px;font-size:14.5px;color:var(--cream)}
+.note-bar b{color:var(--ember)}
+.builder{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start}
+@media(max-width:900px){.builder{grid-template-columns:1fr}}
+.cat{font-family:var(--disp);font-size:21px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);margin:26px 0 6px;display:flex;align-items:center;gap:12px}.cat::after{content:"";flex:1;height:1px;background:var(--line)}
+.cat:first-child{margin-top:0}
+.mi{display:flex;justify-content:space-between;gap:14px;padding:13px 4px;border-bottom:1px solid rgba(247,236,217,.08);align-items:center}
+.mi h4{font-size:15.5px;font-weight:700}.mi p{font-size:12.5px;color:#b7a37f;max-width:520px}
+.mi .r{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.mi .p{font-family:var(--disp);color:var(--paper);font-size:16px;min-width:52px;text-align:right}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(247,236,217,.35);background:transparent;color:var(--paper);font-size:17px;font-weight:800;cursor:pointer;transition:.2s;line-height:1}
+.stepper button:hover{border-color:var(--ember);color:var(--ember);transform:scale(1.08)}
+.stepper .q{min-width:20px;text-align:center;font-weight:800}
+.ticket{background:var(--cream);color:var(--ink);border-radius:16px;padding:24px;position:sticky;top:86px;box-shadow:0 26px 50px rgba(0,0,0,.4)}
+.ticket h3{font-family:var(--disp);font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+.ticket .addr{font-size:12.5px;color:#7a6242;margin-top:4px}
+.tlines{border-top:2px dashed #d8c49a;margin-top:16px;padding-top:14px;min-height:60px}
+.tline{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;gap:10px}
+.tline span:last-child{font-weight:700;white-space:nowrap}
+.empty{color:#9a7f55;font-size:14px;font-style:italic}
+.ttotal{border-top:2px dashed #d8c49a;margin-top:12px;padding-top:14px;display:flex;justify-content:space-between;align-items:baseline}
+.ttotal b{font-family:var(--disp);font-size:27px}
+.ttotal small{font-size:11px;color:#7a6242;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.ticket .btn{width:100%;justify-content:center;margin-top:16px}
+.ticket .fine{font-size:12px;color:#7a6242;margin-top:10px;text-align:center}
+.place{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+@media(max-width:900px){.place{grid-template-columns:1fr}}
+.place .ph{border-radius:18px;overflow:hidden;position:relative;min-height:340px}
+.place .ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;filter:contrast(1.05) saturate(1.1)}
+.place .ph figcaption{position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(22,16,9,.85));font-family:var(--serif);font-style:italic;font-size:15px;z-index:2}
+.place .info{background:var(--coal2);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.place .info h3{font-family:var(--disp);font-size:27px;text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
+.place .info p{color:#cdbb9c;font-size:15px}
+.place iframe{width:100%;height:220px;border:0;border-radius:12px;filter:grayscale(.25) contrast(1.05)}
+footer{margin-top:90px;border-top:1px solid var(--line);padding:34px 20px 110px;text-align:center;color:var(--mut);font-size:13px}
+footer .fb{font-family:var(--disp);color:var(--paper);font-size:19px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:80;background:var(--wa);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 14px 34px rgba(0,0,0,.45);transition:.2s}.wa-float:hover{transform:scale(1.08)}
+.ai-btn{position:fixed;left:18px;bottom:18px;z-index:80;background:var(--ember);color:#fff;border:none;font-weight:800;font-size:14px;padding:14px 20px;border-radius:999px;cursor:pointer;box-shadow:0 14px 34px rgba(0,0,0,.45);transition:.2s}.ai-btn:hover{transform:translateY(-2px)}
+.ai-panel{position:fixed;left:18px;bottom:86px;z-index:81;width:min(350px,calc(100vw - 36px));background:var(--cream);color:var(--ink);border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.5);overflow:hidden;display:none}
+.ai-panel.open{display:block}
+.ai-head{background:var(--coal);color:var(--paper);padding:14px 18px;font-family:var(--disp);letter-spacing:.05em;text-transform:uppercase;font-size:15px;display:flex;justify-content:space-between;align-items:center}
+.ai-head button{background:none;border:none;color:var(--paper);font-size:18px;cursor:pointer}
+.ai-body{height:280px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;font-size:14px}
+.msg{padding:9px 13px;border-radius:13px;max-width:88%;line-height:1.45}
+.msg.bot{background:#fff;border:1px solid #e5d5b3;align-self:flex-start}
+.msg.user{background:var(--ember);color:#fff;align-self:flex-end}
+.ai-chips{display:flex;gap:7px;flex-wrap:wrap;padding:0 14px 10px}
+.ai-chips button{background:#fff;border:1px solid #d8c49a;border-radius:999px;padding:6px 11px;font-size:12px;font-weight:700;cursor:pointer;color:var(--ink)}.ai-chips button:hover{border-color:var(--ember);color:var(--red)}
+.ai-input{display:flex;border-top:1px solid #e5d5b3}
+.ai-input input{flex:1;border:none;padding:13px 14px;font-size:14px;background:#fff;font-family:var(--sans);outline:none}
+.ai-input button{background:var(--wa);color:#fff;border:none;padding:0 18px;font-weight:800;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header><div class="hdr">
+<div class="brand">FUEGO <b>&amp;</b> CARBÓN<small>Parrilla de Barrio — Aguascalientes</small></div>
+<nav>
+<a href="#pizzas">Las pizzas</a><a href="#pedido">Arma tu pedido</a><a href="#lugar">El lugar</a>
+<a class="btn" href="https://wa.me/524491044635?text=Hola%20Fuego%20y%20Carb%C3%B3n%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+</nav></div></header>
+
+<div class="hero">
+<img class="bg" src="img/parrillada.jpg" alt="Charolas de parrillada de Fuego y Carbón con carnes asadas, cebolla, chiles toreados y salsa verde">
+<div class="hero-in">
+<div class="kick">Municipio Libre · Aguascalientes</div>
+<h1>Fuego <span class="amp">y</span><br>Carbón</h1>
+<p class="sub">La parrilla de barrio de Presidentes 604 — y desde el 14 de noviembre, también pizzas.</p>
+<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><span class="sticker">¡Llegaron las pipsas!</span><span class="sticker gold">Pizzas desde $119</span></div>
+<div class="hero-cta">
+<a class="btn ember" href="#pizzas">Ver las pizzas nuevas</a>
+<a class="btn ghost" href="#pedido">Arma tu pedido</a>
+</div>
+<div class="hero-tags"><span class="tag">Parrillada $189</span><span class="tag">Tortas desde $75</span><span class="tag">Milanesas desde $159</span><span class="tag">Calle Presidentes 604, Municipio Libre</span></div>
+</div></div>
+
+<div class="marquee"><div><span>Llegaron las pipsas ✦ Pizzas desde $119 ✦ Solo por WhatsApp para recoger ✦ Fuego y Carbón ✦ Parrilla de barrio ✦ Llegaron las pipsas ✦ Pizzas desde $119 ✦ Solo por WhatsApp para recoger ✦ Fuego y Carbón ✦ Parrilla de barrio ✦&nbsp;</span><span>Llegaron las pipsas ✦ Pizzas desde $119 ✦ Solo por WhatsApp para recoger ✦ Fuego y Carbón ✦ Parrilla de barrio ✦ Llegaron las pipsas ✦ Pizzas desde $119 ✦ Solo por WhatsApp para recoger ✦ Fuego y Carbón ✦ Parrilla de barrio ✦&nbsp;</span></div></div>
+
+<div class="wrap">
+<section id="pizzas">
+<div class="sec-head rv"><span class="sec-num">01 —</span><h2>Las pizzas nuevas</h2><p>Siete sabores que llegaron el sábado 14 de noviembre. Todavía no están en las apps de reparto: se piden directo por WhatsApp, para recoger.</p></div>
+<div class="pizza-grid" id="pizzaGrid"></div>
+<div class="note-bar rv">🍕 <b>¿Por qué aquí sí y en la app no?</b> Las pizzas son lo más nuevo de la casa y solo se venden por WhatsApp para recoger en Calle Presidentes 604. Toca cualquier pizza y tu pedido llega ya escrito al WhatsApp de la parrilla: <b>+52 449 104 4635</b>.</div>
+</section>
+
+<section id="pedido">
+<div class="sec-head rv"><span class="sec-num">02 —</span><h2>Arma tu pedido</h2><p>Toda la carta en un solo lugar: pizzas, parrilla, hamburguesas, tortas, milanesas y extras. Suma lo que quieras y mándalo por WhatsApp, sin intermediarios.</p></div>
+<div class="builder">
+<div id="menuList"></div>
+<aside class="ticket rv">
+<h3>Tu pedido</h3>
+<p class="addr">Fuego y Carbón · Calle Presidentes 604, Municipio Libre, Aguascalientes</p>
+<div class="tlines" id="tLines"><p class="empty">Todavía no agregas nada. Suma unas pizzas…</p></div>
+<div class="ttotal"><small>Total<span id="desdeLbl"></span></small><b id="tTotal">$0</b></div>
+<a class="btn" id="sendWa" href="https://wa.me/524491044635?text=Hola%20Fuego%20y%20Carb%C3%B3n%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+<p class="fine">Las pizzas se venden desde $119; el precio final de cada pizza se confirma por WhatsApp al hacer tu pedido.</p>
+</aside>
+</div>
+</section>
+
+<section id="lugar">
+<div class="sec-head rv"><span class="sec-num">03 —</span><h2>El lugar</h2><p>Parrilla de barrio en Municipio Libre. Las charolas salen con cebolla asada, chiles toreados, ensalada, tortillas y salsa, como se ve en la foto: es comida de aquí, hecha aquí.</p></div>
+<div class="place">
+<figure class="ph rv"><img src="img/detalle.jpg" alt="Detalle de charola de Fuego y Carbón: carnes asadas con cebolla, chile toreado y salsa verde"><figcaption>De la parrilla a tu charola: asada, adobada, bistec, cebolla y chile toreado.</figcaption></figure>
+<div class="info rv">
+<h3>Calle Presidentes 604</h3>
+<p><strong style="color:var(--paper)">Municipio Libre, Aguascalientes, Ags. 20199.</strong> Las pizzas nuevas son para recoger en el local: haz tu pedido por WhatsApp y pasa por ellas.</p>
+<p>WhatsApp / teléfono: <a href="https://wa.me/524491044635?text=Hola%20Fuego%20y%20Carb%C3%B3n%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" style="color:var(--ember);font-weight:800;text-decoration:none">+52 449 104 4635</a></p>
+<iframe title="Mapa: Fuego y Carbón, Calle Presidentes 604, Municipio Libre, Aguascalientes" loading="lazy" src="https://www.google.com/maps?q=Calle+Presidentes+604%2C+Municipio+Libre%2C+Aguascalientes%2C+Ags.+20199%2C+M%C3%A9xico&output=embed"></iframe>
+<a class="btn ember" href="https://wa.me/524491044635?text=Hola%20Fuego%20y%20Carb%C3%B3n%2C%20quiero%20pedir%20una%20pizza%20para%20recoger" target="_blank" rel="noopener">Pedir una pizza para recoger</a>
+</div>
+</div>
+</section>
+</div>
+
+<footer>
+<div class="fb">Fuego y Carbón — Parrilla de Barrio</div>
+<p>Calle Presidentes 604, Municipio Libre, Aguascalientes, Ags. 20199 · WhatsApp +52 449 104 4635</p>
+<p style="margin-top:10px">Concept preview built by SiteSprint Studio.</p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/524491044635?text=Hola%20Fuego%20y%20Carb%C3%B3n%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<button class="ai-btn" id="aiBtn">🤖 Pregúntale al asistente</button>
+<div class="ai-panel" id="aiPanel">
+<div class="ai-head"><span>Asistente · Fuego y Carbón</span><button id="aiClose" aria-label="Cerrar">✕</button></div>
+<div class="ai-body" id="aiBody"><div class="msg bot">¡Hola! Soy el asistente de Fuego y Carbón. Pregúntame por las pizzas nuevas, precios de la carta o cómo pedir. 🔥</div></div>
+<div class="ai-chips">
+<button data-q="¿Qué pizzas tienen?">¿Qué pizzas tienen?</button>
+<button data-q="¿Cuánto cuesta la parrillada?">Precio de la parrillada</button>
+<button data-q="¿Dónde están?">¿Dónde están?</button>
+<button data-q="¿Cómo pido?">¿Cómo pido?</button>
+</div>
+<div class="ai-input"><input id="aiText" type="text" placeholder="Escribe tu pregunta…"><button id="aiSend">Enviar</button></div>
+</div>
+
+<script>
+var WA="524491044635";
+var PIZZA_DESC="Nueva, desde el 14 de noviembre. Para recoger, pedido por WhatsApp.";
+var MENU=[
+{cat:"Las pizzas nuevas — desde $119",items:[
+["Pizza Hawaiana",119,1],["Pizza Pepperoni",119,1],["Pizza Mexicana",119,1],["Pizza Italiana",119,1],["Pizza de Arrachera con Chiles Toreados",119,1],["Pizza de Pastor",119,1],["Pizza de Carnes",119,1]]},
+{cat:"De la parrilla",items:[
+["Parrillada",189,0,"Arrachera, bistec, adobada y chorizo, cebollas y chiles asados, ensalada, tortillas y salsa."]]},
+{cat:"Hamburguesas",items:[
+["Hamburguesa Sencilla",79,0,"Pan parrillero, carne de res, queso, jitomate, cebolla, lechuga y aderezo."],
+["Hamburguesa Doble",109,0,"Pan parrillero, doble carne de res, doble queso, jitomate, cebolla, lechuga y aderezo."],
+["Hamburguesa Hawaiana",99,0,"Pan parrillero, carne de res, queso, piña asada, jamón, jitomate, cebolla, lechuga y aderezo."],
+["Hamburguesa BBQ",99,0,"Pan parrillero, carne de res, queso, tocino, salsa BBQ, cebolla, lechuga y aderezo."],
+["Hamburguesa Especial",110,0,"Pan parrillero, carne de res, queso, salchicha asada, jamón, jitomate, cebolla, lechuga y aderezo."]]},
+{cat:"Las tortas",items:[
+["Torta de Bistec con Queso",85,0,"Carne, cebolla asada, queso asadero."],
+["Torta de Asada",75,0,"A la plancha, con cebolla asada, salsas y verdura aparte."],
+["Torta de Adobada",75,0,""],["Torta de Chorizo",75,0,""],["Torta Campechana",75,0,""],
+["Torta de Adobada con Queso",75,0,""],["Torta de Chorizo con Queso",85,0,""]]},
+{cat:"Nuestras milanesas",items:[
+["Milanesa Fugazzeta",189,0,"Bistec empanizado frito, cebollas caramelizadas y queso mozzarella fundido, con ensalada fresca. Las papas se venden por separado."],
+["Milanesa Campera",169,0,""],["Milanesa Italiana",199,0,""],
+["Milanesa Napolitana",189,0,"Bistec empanizado frito, jamón de pierna, salsa pomodoro y queso mozzarella fundido, con ensalada fresca. Las papas a la francesa se venden por separado."],
+["Milanesa de Bistec Empanizado",159,0,""],["Milanesa de Pollo Empanizada",159,0,""]]},
+{cat:"Extras deliciosos",items:[
+["Boneless Búfalo 300 g con Papas",249,0,""],["Boneless BBQ 300 g con Papas",249,0,""],
+["Boneless Mango Habanero 300 g con Papas",249,0,""],["Papas a la Francesa 200 g",85,0,""],
+["Boneless Búfalo 500 g con Papas",449,0,""],["Boneless BBQ 500 g con Papas",449,0,""]]}
+];
+var cart={};
+function waLink(text){return "https://wa.me/"+WA+"?text="+encodeURIComponent(text);}
+function money(n){return "$"+n;}
+function renderPizzas(){
+var g=document.getElementById("pizzaGrid");var html="";
+MENU[0].items.forEach(function(it){
+html+='<article class="pz rv"><span class="new">Nuevo</span><h3>'+it[0].replace("Pizza de ","").replace("Pizza ","")+'</h3><p>'+PIZZA_DESC+'</p><div class="row"><span class="price"><small>Desde</small>'+money(it[1])+'</span><a class="order-link" target="_blank" rel="noopener" href="'+waLink("Hola Fuego y Carbón, quiero pedir una "+it[0]+" para recoger. ¿Me confirmas el precio y el tiempo de espera?")+'">Pedir esta</a></div></article>';
+});
+g.innerHTML=html;
+}
+function renderMenu(){
+var el=document.getElementById("menuList");var html="";
+MENU.forEach(function(group,gi){
+html+='<div class="cat">'+group.cat+'</div>';
+group.items.forEach(function(it,ii){
+var key=gi+"-"+ii;
+html+='<div class="mi"><div><h4>'+it[0]+'</h4>'+(it[3]?'<p>'+it[3]+'</p>':'')+'</div><div class="r"><span class="p">'+(it[2]?"desde ":"")+money(it[1])+'</span><span class="stepper"><button data-k="'+key+'" data-d="-1" aria-label="Quitar">−</button><span class="q" id="q-'+key+'">0</span><button data-k="'+key+'" data-d="1" aria-label="Agregar">+</button></span></div></div>';
+});
+});
+el.innerHTML=html;
+el.addEventListener("click",function(e){
+var b=e.target.closest("button[data-k]");if(!b)return;
+var k=b.getAttribute("data-k");var d=parseInt(b.getAttribute("data-d"),10);
+cart[k]=Math.max(0,(cart[k]||0)+d);if(cart[k]===0)delete cart[k];
+document.getElementById("q-"+k).textContent=cart[k]||0;
+renderTicket();
+});
+}
+function cartEntries(){
+var out=[];
+Object.keys(cart).forEach(function(k){
+var p=k.split("-");var it=MENU[parseInt(p[0],10)].items[parseInt(p[1],10)];
+out.push({name:it[0],price:it[1],desde:it[2]===1,qty:cart[k]});
+});
+return out;
+}
+function cartTotal(){return cartEntries().reduce(function(s,e){return s+e.price*e.qty;},0);}
+function hasDesde(){return cartEntries().some(function(e){return e.desde;});}
+function renderTicket(){
+var lines=document.getElementById("tLines");var entries=cartEntries();
+if(!entries.length){lines.innerHTML='<p class="empty">Todavía no agregas nada. Suma unas pizzas…</p>';}
+else{lines.innerHTML=entries.map(function(e){return '<div class="tline"><span>'+e.qty+" × "+e.name+(e.desde?" (desde)":"")+'</span><span>'+money(e.price*e.qty)+'</span></div>';}).join("");}
+document.getElementById("tTotal").textContent=money(cartTotal());
+document.getElementById("desdeLbl").textContent=hasDesde()?" — desde":"";
+var msg="Hola Fuego y Carbón, quiero hacer un pedido para recoger:\n"+entries.map(function(e){return "• "+e.qty+" × "+e.name+" — "+money(e.price*e.qty)+(e.desde?" (desde)":"");}).join("\n")+"\nTotal"+(hasDesde()?" desde":"")+": "+money(cartTotal())+"\n¿Me confirman el total y el tiempo de espera? ¡Gracias!";
+document.getElementById("sendWa").href=entries.length?waLink(msg):waLink("Hola Fuego y Carbón, quiero hacer un pedido");
+}
+function aiAnswer(qRaw){
+var q=qRaw.toLowerCase();
+var fb='Eso te lo confirman directo en la parrilla por WhatsApp: <a href="'+waLink("Hola Fuego y Carbón, tengo una pregunta: "+qRaw)+'" target="_blank" rel="noopener" style="color:#e83a17;font-weight:800">preguntar por WhatsApp</a>.';
+if(/pizza|pipsa/.test(q))return "¡Llegaron las pizzas el 14 de noviembre! Son 7: Hawaiana, Pepperoni, Mexicana, Italiana, Arrachera con Chiles Toreados, De Pastor y De Carnes, desde $119. No están en las apps: se piden por WhatsApp para recoger en Calle Presidentes 604.";
+if(/parrillada/.test(q))return "La Parrillada cuesta $189: arrachera, bistec, adobada y chorizo, con cebollas y chiles asados, ensalada, tortillas y salsa.";
+if(/milanesa/.test(q))return "Milanesas: Fugazzeta $189, Campera $169, Italiana $199, Napolitana $189, de bistec empanizado $159 y de pollo empanizada $159.";
+if(/torta/.test(q))return "Tortas desde $75: de asada, adobada, chorizo y campechana a $75; de bistec con queso y de chorizo con queso a $85; de adobada con queso $75.";
+if(/hamburguesa|burger/.test(q))return "Hamburguesas: Sencilla $79, Doble $109, Hawaiana $99, BBQ $99 y Especial $110, todas en pan parrillero.";
+if(/boneless|papas/.test(q))return "Extras: boneless de 300 g con papas $249 (búfalo, BBQ o mango habanero), de 500 g $449, y papas a la francesa de 200 g a $85.";
+if(/donde|direcci|ubicaci|llegar|mapa/.test(q))return "Estamos en Calle Presidentes 604, Municipio Libre, Aguascalientes, Ags. 20199. Abajo, en la sección El lugar, está el mapa.";
+if(/horario|abren|cierran|hora/.test(q))return "El horario te lo confirman al momento por WhatsApp, para que no te toque cerrado: "+fb;
+if(/whatsapp|telefono|teléfono|numero|número|contacto/.test(q))return "El WhatsApp de la parrilla es +52 449 104 4635. Toca cualquier botón verde de la página y tu pedido llega ya escrito.";
+if(/pedir|pido|ordenar|comprar|recoger|entrega|domicilio/.test(q))return "Pide por WhatsApp al +52 449 104 4635 o arma tu pedido en la sección 02 y mándalo con un toque. Las pizzas son para recoger en el local.";
+if(/uber|app|rappi|didi/.test(q))return "La carta de siempre está en las apps, pero las pizzas nuevas NO: solo se venden por WhatsApp para recoger. Por eso existe esta página.";
+if(/precio|cuesta|cuanto|cuánto/.test(q))return "Precios de la casa: pizzas desde $119, parrillada $189, hamburguesas $79–$110, tortas $75–$85, milanesas $159–$199 y boneless $249–$449.";
+if(/hola|buenas/.test(q))return "¡Hola! ¿Se te antoja una pizza nueva desde $119, una parrillada de $189 o una torta de $75? Pregúntame lo que quieras de la carta.";
+return "Puedo ayudarte con las pizzas nuevas, precios de la carta, la dirección y cómo pedir. "+fb;
+}
+function aiInit(){
+var panel=document.getElementById("aiPanel"),body=document.getElementById("aiBody"),input=document.getElementById("aiText");
+document.getElementById("aiBtn").addEventListener("click",function(){panel.classList.toggle("open");});
+document.getElementById("aiClose").addEventListener("click",function(){panel.classList.remove("open");});
+function send(text){
+var t=(text||input.value).trim();if(!t)return;
+body.innerHTML+='<div class="msg user"></div>';body.lastChild.textContent=t;input.value="";
+setTimeout(function(){body.innerHTML+='<div class="msg bot">'+aiAnswer(t)+'</div>';body.scrollTop=body.scrollHeight;},250);
+body.scrollTop=body.scrollHeight;
+}
+document.getElementById("aiSend").addEventListener("click",function(){send();});
+input.addEventListener("keydown",function(e){if(e.key==="Enter")send();});
+document.querySelectorAll(".ai-chips button").forEach(function(b){b.addEventListener("click",function(){send(b.getAttribute("data-q"));});});
+}
+document.addEventListener("DOMContentLoaded",function(){
+renderPizzas();renderMenu();renderTicket();aiInit();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.08});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el);});
+});
+</script>
+</body>
+</html>
