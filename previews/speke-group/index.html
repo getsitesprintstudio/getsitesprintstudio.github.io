@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speke Group of Hotels — One Group. One Booking Desk. | Concept Proposal</title>
+<meta name="description" content="A single direct booking platform for all 13 Speke Group properties in Uganda — 900+ rooms, resorts, hotels and serviced apartments, booked direct with the group reservations desk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lake:#0d2b23; --lake2:#12382d; --moss:#1d4a3a;
+  --cream:#f6f0e2; --cream2:#efe6d0; --paper:#fbf8f1;
+  --brass:#b98a2f; --brass2:#d3ab55; --clay:#a4552e;
+  --ink:#17211c; --mut:#5c665e; --line:rgba(23,33,28,.16);
+  --serif:"Fraunces",Georgia,serif; --sans:"Archivo",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--brass);color:#fff}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(18px,4vw,54px)}
+.lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.lbl .n{color:var(--brass);font-weight:700}
+.rule{height:1px;background:var(--line);border:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02}
+h2{font-size:clamp(2.3rem,5.4vw,4.4rem);letter-spacing:-.015em}
+h2 em,h1 em{font-style:italic;font-weight:300;color:var(--brass2)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(26px,4vw,48px)}
+.sec-head p{max-width:420px;color:var(--mut);font-size:15px}
+section{padding:clamp(64px,9vw,120px) 0}
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,43,35,.92);backdrop-filter:blur(8px);color:var(--cream);border-bottom:1px solid rgba(246,240,226,.14)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.brand{font-family:var(--serif);font-size:20px;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass2);font-weight:600}
+.nav{display:flex;gap:26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.nav a{text-decoration:none;opacity:.85;position:relative;padding:4px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--brass2);transition:width .3s}
+.nav a:hover{opacity:1}.nav a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--brass);color:#fff;text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border:0;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;background:var(--lake);transform:translateX(-101%);transition:transform .35s ease}
+.btn:hover::before{transform:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(13,43,35,.25)}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(246,240,226,.5)}
+.btn.ghost::before{background:var(--brass)}
+.btn.dark{background:var(--lake)}
+.btn.dark::before{background:var(--brass)}
+.btn.wa{background:#1faa55}.btn.wa::before{background:var(--lake)}
+.top-cta{padding:10px 18px;font-size:11px}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--cream);background:var(--lake);padding:130px 0 0;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.05)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,43,35,.55) 0%,rgba(13,43,35,.12) 38%,rgba(13,43,35,.88) 88%)}
+.hero-in{position:relative;z-index:2;width:100%}
+.hero .lbl{color:var(--brass2)}
+.hero h1{font-size:clamp(3.2rem,10.5vw,9.2rem);letter-spacing:-.02em;margin:14px 0 8px}
+.hero h1 .row2{display:block}
+.hero-sub{max-width:560px;font-size:clamp(15px,1.6vw,18px);color:rgba(246,240,226,.88)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 44px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(246,240,226,.28)}
+.hstat{padding:20px 18px 26px;border-left:1px solid rgba(246,240,226,.18)}
+.hstat:first-child{border-left:0;padding-left:0}
+.hstat b{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.9rem);display:block;line-height:1}
+.hstat span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,240,226,.75);font-weight:600}
+/* marquee */
+.marquee{background:var(--lake);color:var(--cream);overflow:hidden;border-top:1px solid rgba(246,240,226,.14);padding:13px 0}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 46s linear infinite}
+.mq-track span{font-family:var(--serif);font-style:italic;font-size:17px;white-space:nowrap;padding-right:14px}
+.mq-track b{color:var(--brass2);font-weight:400;padding-right:14px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+/* problem / solution */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:start}
+.why h2{margin:12px 0 18px}
+.why p.lede{font-size:17px;color:#39423c;max-width:560px}
+.leak{border-top:1px solid var(--line)}
+.leak div{display:flex;gap:18px;padding:18px 2px;border-bottom:1px solid var(--line);align-items:baseline}
+.leak b{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--clay);font-size:20px;min-width:34px}
+.leak h3{font-size:19px;font-family:var(--sans);font-weight:600;letter-spacing:0}
+.leak p{color:var(--mut);font-size:14px}
+.fixcard{background:var(--lake);color:var(--cream);padding:clamp(24px,3vw,40px);position:relative}
+.fixcard::before{content:"";position:absolute;top:0;left:0;width:56px;height:4px;background:var(--brass)}
+.fixcard h3{font-size:26px;margin:8px 0 12px}
+.fixcard ul{list-style:none}
+.fixcard li{padding:11px 0;border-bottom:1px solid rgba(246,240,226,.16);font-size:14.5px;display:flex;gap:12px}
+.fixcard li::before{content:"—";color:var(--brass2)}
+.fixcard li:last-child{border-bottom:0}
+/* properties */
+.props{background:var(--paper)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;position:relative}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 22px 44px rgba(23,33,28,.13)}
+.pcard.wide{grid-column:span 2}
+.pcard .ph{overflow:hidden;aspect-ratio:16/10;background:var(--cream2)}
+.pcard.wide .ph{aspect-ratio:16/8.2}
+.pcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;filter:contrast(1.04) saturate(1.04)}
+.pcard:hover .ph img{transform:scale(1.05)}
+.pcard .pb{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pcard .idx{font-family:var(--serif);font-style:italic;color:var(--brass);font-size:15px}
+.pcard h3{font-size:clamp(21px,2vw,26px)}
+.pcard .loc{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.pcard p{font-size:14px;color:var(--mut);flex:1}
+.pcard .types{font-size:12.5px;color:#39423c;border-top:1px dashed var(--line);padding-top:10px}
+.pcard .book{align-self:flex-start;margin-top:12px;background:none;border:0;border-bottom:2px solid var(--brass);color:var(--ink);font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:4px 0;cursor:pointer;transition:color .25s,border-color .25s}
+.pcard .book:hover{color:var(--brass);border-color:var(--ink)}
+.tag{position:absolute;top:14px;left:14px;z-index:2;background:var(--lake);color:var(--cream);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:6px 10px;transform:rotate(-3deg)}
+.tag.fest{background:var(--clay)}
+/* booking */
+.booking{background:var(--lake);color:var(--cream)}
+.booking .lbl{color:var(--brass2)}
+.booking h2 em{color:var(--brass2)}
+.book-grid{display:grid;grid-template-columns:1.5fr .9fr;gap:clamp(24px,4vw,52px);align-items:start}
+.steps{display:flex;gap:0;margin-bottom:26px;flex-wrap:wrap}
+.step-tab{flex:1;min-width:110px;text-align:left;background:none;border:0;border-top:3px solid rgba(246,240,226,.22);color:rgba(246,240,226,.6);font:600 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:10px 8px 0 0;cursor:pointer}
+.step-tab.on{border-color:var(--brass2);color:var(--cream)}
+.step-tab.done{border-color:var(--moss);color:var(--brass2)}
+fieldset{border:0;display:none}
+fieldset.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+legend{font-family:var(--serif);font-size:clamp(24px,3vw,34px);margin-bottom:6px}
+.fnote{color:rgba(246,240,226,.72);font-size:14px;margin-bottom:20px;max-width:520px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:flex;flex-direction:column;gap:7px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--brass2)}
+.fld input,.fld select,.fld textarea{background:rgba(246,240,226,.07);border:1px solid rgba(246,240,226,.3);color:var(--cream);padding:13px 14px;font:400 15px var(--sans);border-radius:0;width:100%}
+.fld select option{color:var(--ink)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid var(--brass2);outline-offset:1px}
+.fld .err{color:#ffb59d;font-size:12.5px;display:none}
+.fld.bad input,.fld.bad select,.fld.bad textarea{border-color:#e2724f}
+.fld.bad .err{display:block}
+.rate-note{margin-top:18px;border:1px solid rgba(211,171,85,.55);background:rgba(211,171,85,.1);padding:14px 16px;font-size:14px;display:none}
+.rate-note.show{display:block}
+.rate-note b{color:var(--brass2)}
+.wiz-nav{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn.back{background:transparent;border:1px solid rgba(246,240,226,.45);color:var(--cream)}
+.btn.back::before{background:var(--brass)}
+.summary{background:var(--cream);color:var(--ink);padding:clamp(22px,3vw,34px);position:sticky;top:86px}
+.summary::before{content:"";display:block;width:52px;height:4px;background:var(--brass);margin-bottom:16px}
+.summary h3{font-size:24px;margin-bottom:4px}
+.summary .s-loc{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:16px}
+.srow{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.srow span{color:var(--mut)} .srow b{font-weight:600;text-align:right}
+.summary .s-rate{margin-top:14px;font-size:14px;background:var(--cream2);padding:12px 14px}
+.summary .s-rate b{color:var(--clay)}
+.confirm{display:none;border:1px solid rgba(211,171,85,.6);background:rgba(211,171,85,.1);padding:22px;margin-top:8px}
+.confirm.show{display:block}
+.confirm h3{font-size:26px;margin-bottom:8px}
+.confirm p{font-size:14.5px;color:rgba(246,240,226,.85);max-width:520px}
+.confirm .ref{font-family:var(--serif);font-style:italic;color:var(--brass2);font-size:19px}
+/* festive + conference */
+.festive{background:var(--cream)}
+.fest-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:26px}
+.fest-card{background:var(--lake);color:var(--cream);padding:clamp(24px,3vw,38px);position:relative;overflow:hidden}
+.fest-card.c2{background:var(--clay)}
+.fest-card h3{font-size:clamp(24px,2.6vw,32px);margin:8px 0 6px}
+.fest-card .when{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass2);font-weight:700}
+.fest-card.c2 .when{color:#ffd9a8}
+.fest-card table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}
+.fest-card td{padding:9px 0;border-bottom:1px solid rgba(246,240,226,.2)}
+.fest-card td:last-child{text-align:right;font-family:var(--serif);font-size:19px;color:var(--brass2);white-space:nowrap}
+.fest-card.c2 td:last-child{color:#ffe1b0}
+.fest-card p{font-size:13.5px;color:rgba(246,240,226,.8)}
+.mini-form{background:#fff;border:1px solid var(--line);padding:clamp(22px,3vw,36px)}
+.mini-form h3{font-size:26px;margin-bottom:4px}
+.mini-form .fnote{color:var(--mut)}
+.mini-form .fld label{color:var(--clay)}
+.mini-form .fld input,.mini-form .fld select,.mini-form .fld textarea{background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+.mini-form .fld .err{color:#b3401e}
+.mini-form .fld.bad input,.mini-form .fld.bad select{border-color:#b3401e}
+.mini-done{display:none;margin-top:16px;background:var(--cream2);padding:16px;font-size:14.5px}
+.mini-done.show{display:block}
+.conf{background:var(--paper)}
+.conf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:26px}
+.cstat{border-top:3px solid var(--brass);padding-top:14px}
+.cstat b{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,3.2rem);display:block;line-height:1}
+.cstat span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.conf-photo{margin-bottom:26px;overflow:hidden}
+.conf-photo img{width:100%;height:clamp(220px,38vw,440px);object-fit:cover;filter:contrast(1.04)}
+/* one number */
+.onenum{background:var(--lake);color:var(--cream);text-align:center}
+.onenum h2{font-size:clamp(2.4rem,6vw,5rem)}
+.onenum .big-num{font-family:var(--serif);font-size:clamp(2rem,6.4vw,4.6rem);color:var(--brass2);text-decoration:none;display:inline-block;margin:18px 0 6px;letter-spacing:.01em;border-bottom:2px solid rgba(211,171,85,.4);transition:color .3s,border-color .3s}
+.onenum .big-num:hover{color:var(--cream);border-color:var(--cream)}
+.onenum p{color:rgba(246,240,226,.78);max-width:560px;margin:0 auto 26px;font-size:15.5px}
+footer{background:var(--lake);color:rgba(246,240,226,.65);border-top:1px solid rgba(246,240,226,.14);padding:34px 0 40px;font-size:13px}
+.foot-in{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:baseline}
+footer .brand{color:var(--cream)}
+footer a{color:var(--brass2)}
+.concept{font-size:12px;letter-spacing:.06em}
+/* responsive */
+@media(max-width:1020px){.pgrid{grid-template-columns:1fr 1fr}.pcard.wide{grid-column:span 2}.book-grid{grid-template-columns:1fr}.summary{position:static}.why-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.nav{display:none}.pgrid{grid-template-columns:1fr}.pcard.wide{grid-column:span 1}.fest-grid{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.hero-stats{grid-template-columns:1fr 1fr}.hstat{padding-left:0;border-left:0}.conf-stats{grid-template-columns:1fr}.top-cta{display:none}.step-tab{min-width:44%}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top">Speke Group<small>of Hotels · Uganda</small></a>
+    <nav class="nav">
+      <a href="#properties">Properties</a>
+      <a href="#festive">Festive</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#book">Book Direct</a>
+    </nav>
+    <a class="btn top-cta" href="#book"><span>Book Direct</span></a>
+  </div>
+</header>
+
+<!-- 00 · HERO -->
+<section class="hero" id="top" style="padding-top:0">
+  <img class="hero-img" src="img/hero-munyonyo-pool.jpg" alt="Swimming pool at Speke Resort Munyonyo on the shores of Lake Victoria">
+  <div class="wrap hero-in">
+    <p class="lbl" style="margin-top:120px">Speke Group of Hotels · Ruparelia Group · Uganda</p>
+    <h1>Thirteen properties.<span class="row2">One <em>booking desk.</em></span></h1>
+    <p class="hero-sub">Every Speke resort, hotel and apartment in Uganda — booked direct with the group, in one place, on one number. No third-party portals, no commissions, no hunting through five different phone numbers.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#book"><span>Start a Booking</span></a>
+      <a class="btn ghost" href="#properties"><span>Explore the 13 Properties</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><b>13</b><span>Resorts · Hotels · Apartments</span></div>
+      <div class="hstat"><b>900+</b><span>Rooms across the group</span></div>
+      <div class="hstat"><b>45</b><span>Conference rooms</span></div>
+      <div class="hstat"><b>1996</b><span>Speke Hotel joins the group</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mq-track" id="mq"></div></div>
+
+<!-- 01 · WHY DIRECT -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="rv">
+        <p class="lbl"><span class="n">01 —</span> Why this platform exists</p>
+        <h2>The group is world-class.<br>The <em>booking path</em> is not.</h2>
+        <p class="lede">Speke Group runs Uganda's most complete hospitality portfolio — a lakeside resort, a convention centre, a heritage hotel and ten more addresses. Yet a guest who wants to book today is sent sideways: to third-party portals that take a cut, to a festive post that ends in a phone call, or to a different number on every property page.</p>
+        <div class="leak" style="margin-top:28px">
+          <div><b>a.</b><div><h3>Bookings leak to portals</h3><p>Guests find Speke properties on third-party booking sites first — and the group pays commission on its own rooms.</p></div></div>
+          <div><b>b.</b><div><h3>Festive bookings close by hand</h3><p>The group's festive campaigns end with "call or WhatsApp" — every enquiry handled manually, with no structured details attached.</p></div></div>
+          <div><b>c.</b><div><h3>Five-plus numbers, no single desk</h3><p>Different contact numbers appear across the group's own pages, so guests guess — and enquiries scatter.</p></div></div>
+        </div>
+      </div>
+      <div class="fixcard rv">
+        <p class="lbl" style="color:var(--brass2)">The fix — this page</p>
+        <h3>One platform. One desk. One number.</h3>
+        <ul>
+          <li>All 13 properties presented properly, in one collection</li>
+          <li>A guided booking flow that collects property, dates, guests, rooms and guest details — before anyone picks up a phone</li>
+          <li>Every request arrives at the reservations desk as one complete, structured WhatsApp message</li>
+          <li>Festive and conference enquiries run through the same desk, in the same format</li>
+          <li>The number is the one Speke Resort Munyonyo already publishes: +256 752 711 714</li>
+        </ul>
+        <a class="btn" href="#book" style="margin-top:22px"><span>Try the Booking Flow</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · PROPERTIES -->
+<section class="props" id="properties" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">02 —</span> The Collection</p>
+        <h2>All thirteen, <em>properly presented</em></h2>
+      </div>
+      <p>The full Speke Group portfolio as published by the group — resorts, hotels and serviced apartments across Kampala and the Lake Victoria shore. Choose a property and the booking flow opens with it already selected.</p>
+    </div>
+    <div class="pgrid">
+
+      <article class="pcard wide rv">
+        <span class="tag">Flagship · Lake Victoria</span>
+        <div class="ph"><img src="img/munyonyo-room.jpg" alt="Deluxe room at Speke Resort Munyonyo" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 01</span>
+          <h3>Speke Resort Munyonyo</h3>
+          <p class="loc">Munyonyo · Shores of Lake Victoria · Kampala</p>
+          <p>Uganda's leading 5-star luxury resort, on the shores of Lake Victoria, around 30 minutes from Entebbe International Airport. Nine dining venues spanning Continental, Asian and African cuisines, with rooms looking over the lake and tropical gardens.</p>
+          <p class="types">Stay in: Superior Room · Executive Room · Deluxe Room · Presidential Cottage · Presidential Suite</p>
+          <button class="book" data-book="speke-resort-munyonyo">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/commonwealth-pool.jpg" alt="Munyonyo Commonwealth Resort swimming pool" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 02</span>
+          <h3>Munyonyo Commonwealth Resort</h3>
+          <p class="loc">Munyonyo · Kampala</p>
+          <p>Built in a record 11 months for the Commonwealth Heads of Government Meeting and completed in 2006, sharing the Munyonyo resort grounds and lake views with its sister resort.</p>
+          <p class="types">Stay in: Superior Room · Executive Room · Presidential Cottage · Presidential Suite</p>
+          <button class="book" data-book="munyonyo-commonwealth-resort">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <span class="tag">Events · MICE</span>
+        <div class="ph"><img src="img/convention-centre.jpg" alt="Speke Resort Convention Centre, Munyonyo" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 03</span>
+          <h3>Speke Resort Convention Centre</h3>
+          <p class="loc">Munyonyo · Kampala</p>
+          <p>Uganda's largest meetings, conferences and events structure — 56,000 sqm, up to 19,000 attendees and 17 conference rooms, beside the resort at Munyonyo.</p>
+          <p class="types">For: Conferences · Summits · Exhibitions · Galas — use the conference enquiry below</p>
+          <button class="book" data-book="speke-resort-convention-centre">Enquire for an event →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/kabira.jpg" alt="Deluxe Studio Room at Kabira Country Club" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 04</span>
+          <h3>Kabira Country Club</h3>
+          <p class="loc">Bukoto · Kampala</p>
+          <p>An award-winning boutique hotel whose name means "Little Forest" — newly renovated rooms set in tropical greenery, with a country-club rhythm of leisure, sport and dining.</p>
+          <p class="types">Stay in: Single Room · Double Room · Deluxe Studio Room · Three-Bedroom Duplex Penthouse</p>
+          <button class="book" data-book="kabira-country-club">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/speke-hotel.jpg" alt="Deluxe Double Room at Speke Hotel Kampala" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 05</span>
+          <h3>Speke Hotel</h3>
+          <p class="loc">Nile Avenue · Heart of Kampala</p>
+          <p>Kampala's heritage hotel, built in the British colonial times of the 1920s and the first property acquired by the Ruparelia Group, in 1996. Fifty ensuite rooms in the centre of the city, close to banks and business centres.</p>
+          <p class="types">Stay in: Deluxe Double Room · Deluxe Twin Room</p>
+          <button class="book" data-book="speke-hotel">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/dolphin.jpg" alt="Room at Dolphin Suites, Bugolobi" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 06</span>
+          <h3>Dolphin Suites</h3>
+          <p class="loc">Bugolobi · Kampala</p>
+          <p>A brick-built oasis spread across lush green land, 5 km from the city centre, with spacious balconies overlooking the hills of Bugolobi and the city of Kampala.</p>
+          <p class="types">Stay in: Guest Room · Suite</p>
+          <button class="book" data-book="dolphin-suites">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/forest.jpg" alt="Cottage at Forest Cottages, Bukoto" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 07</span>
+          <h3>Forest Cottages</h3>
+          <p class="loc">Bukoto · Kampala</p>
+          <p>Cottages inside a tropical rainforest in a quiet part of Bukoto — monkeys and more than twenty bird species at breakfast, less than 30 minutes from the central business district.</p>
+          <p class="types">Stay in: Standard Single · Standard Double · One-Bedroom Cottage · Two-Bedroom Cottage · Family Cottage</p>
+          <button class="book" data-book="forest-cottages">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <span class="tag fest">Festive Escape live</span>
+        <div class="ph"><img src="img/wampewo.jpg" alt="Bedroom at Speke Apartments Wampewo" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 08</span>
+          <h3>Speke Apartments Wampewo</h3>
+          <p class="loc">Plot 19–21 Wampewo Avenue · Kololo · Kampala</p>
+          <p>Luxury serviced apartments in the posh suburb of Wampewo, overlooking the city — five minutes from the Central Business District. Home of the group's published Festive Escape offer.</p>
+          <p class="types">Stay in: One-Bedroom Deluxe Apartment · One-Bedroom Superior Apartment · Serviced Apartment</p>
+          <button class="book" data-book="speke-apartments-wampewo">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/kitante.jpg" alt="Speke Apartments Kitante" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 09</span>
+          <h3>Speke Apartments Kitante</h3>
+          <p class="loc">Kitante Close · Kampala</p>
+          <p>Self-catering serviced apartments for corporate, leisure and family travellers, in a quiet close within easy reach of the city centre.</p>
+          <p class="types">Stay in: Serviced Apartment — exact type confirmed on enquiry</p>
+          <button class="book" data-book="speke-apartments-kitante">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/bukoto.jpg" alt="Two-bedroom apartment at Bukoto Heights" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 10</span>
+          <h3>Bukoto Heights</h3>
+          <p class="loc">Bukoto · Kampala</p>
+          <p>Luxury serviced apartments for short and long stays, with fully equipped kitchens — and full access to the health club at sister property Kabira Country Club.</p>
+          <p class="types">Stay in: Serviced Apartment · Two-Bedroom Apartment</p>
+          <button class="book" data-book="bukoto-heights">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/tagore.jpg" alt="Tagore Apartments, Kampala" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 11</span>
+          <h3>Tagore Apartments</h3>
+          <p class="loc">Mawanda Road · Opposite Acacia Mall · Kampala</p>
+          <p>Fourteen tastefully furnished two- and three-bedroom serviced apartments with cityscape views, for long and short stays in the main city centre.</p>
+          <p class="types">Stay in: Two-Bedroom Apartment · Three-Bedroom Apartment</p>
+          <button class="book" data-book="tagore-apartments">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/naguru.jpg" alt="Naguru Apartments, Kampala" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 12</span>
+          <h3>Naguru Apartments</h3>
+          <p class="loc">Naguru · Kampala</p>
+          <p>Eighteen fully furnished serviced apartments in the quiet, upscale neighbourhood of Naguru — a tranquil home away from home for corporate travellers, relocations and tourists, with special packages for stays of three months and more.</p>
+          <p class="types">Stay in: Two-Bedroom Apartment · Three-Bedroom Apartment</p>
+          <button class="book" data-book="naguru-apartments">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv">
+        <div class="ph"><img src="img/boulevard.jpg" alt="Boulevard Suites apartment with balcony, Kampala" loading="lazy"></div>
+        <div class="pb">
+          <span class="idx">No. 13</span>
+          <h3>Boulevard Suites</h3>
+          <p class="loc">Heart of Kampala City</p>
+          <p>Bespoke business and leisure living on the 5th to 7th floors of the Boulevard building — fully furnished one-, two- and three-bedroom apartments in the centre of the city.</p>
+          <p class="types">Stay in: One-Bedroom · Two-Bedroom · Three-Bedroom Apartment · Three-Bedroom City View Penthouse</p>
+          <button class="book" data-book="boulevard-suites">Book this property →</button>
+        </div>
+      </article>
+
+      <article class="pcard rv" style="background:var(--lake);color:var(--cream);border-color:var(--lake)">
+        <div class="pb" style="justify-content:center">
+          <span class="idx" style="color:var(--brass2)">The desk</span>
+          <h3 style="font-size:clamp(24px,2.4vw,32px)">Not sure which property fits?</h3>
+          <p style="color:rgba(246,240,226,.8)">Tell the reservations desk your dates and party size in the booking flow — they hold the whole group's availability, not one hotel's.</p>
+          <button class="book" data-book="" style="color:var(--cream);border-color:var(--brass2)">Ask the group desk →</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 03 · BOOKING -->
+<section class="booking" id="book">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">03 —</span> Book Direct</p>
+        <h2>Five steps. <em>One message.</em></h2>
+      </div>
+      <p style="color:rgba(246,240,226,.75)">Complete the steps and this platform composes your full booking request — property, dates, guests, rooms and your details — and hands it to the group reservations desk on WhatsApp. Nothing is charged here; the desk confirms availability and your rate.</p>
+    </div>
+
+    <div class="book-grid">
+      <div class="rv">
+        <div class="steps" role="tablist" aria-label="Booking steps">
+          <button class="step-tab on" data-goto="1">1 · Property</button>
+          <button class="step-tab" data-goto="2">2 · Dates &amp; Guests</button>
+          <button class="step-tab" data-goto="3">3 · Rooms</button>
+          <button class="step-tab" data-goto="4">4 · Your Details</button>
+          <button class="step-tab" data-goto="5">5 · Send</button>
+        </div>
+
+        <form id="bookForm" novalidate>
+          <fieldset class="on" data-step="1">
+            <legend>Choose your property</legend>
+            <p class="fnote">All 13 Speke Group properties, one desk. Pick one — or let the desk recommend.</p>
+            <div class="fgrid">
+              <div class="fld full" id="fld-property">
+                <label for="f-property">Property</label>
+                <select id="f-property"></select>
+                <span class="err">Please choose a property.</span>
+              </div>
+            </div>
+            <div class="wiz-nav"><button type="button" class="btn" data-next><span>Continue → Dates</span></button></div>
+          </fieldset>
+
+          <fieldset data-step="2">
+            <legend>Dates &amp; guests</legend>
+            <p class="fnote">Check-in cannot be in the past, and check-out must fall after check-in.</p>
+            <div class="fgrid">
+              <div class="fld" id="fld-checkin">
+                <label for="f-checkin">Check-in</label>
+                <input type="date" id="f-checkin">
+                <span class="err">Choose a check-in date that is not in the past.</span>
+              </div>
+              <div class="fld" id="fld-checkout">
+                <label for="f-checkout">Check-out</label>
+                <input type="date" id="f-checkout">
+                <span class="err">Check-out must be after check-in.</span>
+              </div>
+              <div class="fld" id="fld-adults">
+                <label for="f-adults">Adults</label>
+                <input type="number" id="f-adults" min="1" max="30" value="2">
+                <span class="err">At least 1 adult is required.</span>
+              </div>
+              <div class="fld">
+                <label for="f-children">Children</label>
+                <input type="number" id="f-children" min="0" max="20" value="0">
+              </div>
+            </div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-prev><span>← Back</span></button>
+              <button type="button" class="btn" data-next><span>Continue → Rooms</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="3">
+            <legend>Rooms</legend>
+            <p class="fnote">Only room types the property itself publishes are listed. Where the group has not published a rate, the desk confirms it on enquiry — no invented prices, ever.</p>
+            <div class="fgrid">
+              <div class="fld" id="fld-roomtype">
+                <label for="f-roomtype">Room / unit type</label>
+                <select id="f-roomtype"></select>
+                <span class="err">Please choose a room type.</span>
+              </div>
+              <div class="fld" id="fld-rooms">
+                <label for="f-rooms">Number of rooms / units</label>
+                <input type="number" id="f-rooms" min="1" max="50" value="1">
+                <span class="err">At least 1 room is required.</span>
+              </div>
+            </div>
+            <div class="rate-note" id="rateNote"></div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-prev><span>← Back</span></button>
+              <button type="button" class="btn" data-next><span>Continue → Your Details</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="4">
+            <legend>Your details</legend>
+            <p class="fnote">So the desk can reply and hold the rooms in your name.</p>
+            <div class="fgrid">
+              <div class="fld" id="fld-name">
+                <label for="f-name">Full name</label>
+                <input type="text" id="f-name" autocomplete="name" placeholder="e.g. Amina Kato">
+                <span class="err">Please add your name.</span>
+              </div>
+              <div class="fld" id="fld-phone">
+                <label for="f-phone">Phone / WhatsApp</label>
+                <input type="tel" id="f-phone" autocomplete="tel" placeholder="e.g. +256 7xx xxx xxx">
+                <span class="err">Please add a phone number the desk can reach.</span>
+              </div>
+              <div class="fld full">
+                <label for="f-email">Email (optional)</label>
+                <input type="email" id="f-email" autocomplete="email" placeholder="you@example.com">
+              </div>
+              <div class="fld full">
+                <label for="f-notes">Anything the desk should know? (optional)</label>
+                <textarea id="f-notes" rows="3" placeholder="Arrival time, airport transfer, special occasion, accessibility needs…"></textarea>
+              </div>
+            </div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-prev><span>← Back</span></button>
+              <button type="button" class="btn" data-next><span>Review Booking →</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="5">
+            <legend>Review &amp; send</legend>
+            <p class="fnote">Your complete request, exactly as the reservations desk will receive it. Sending opens WhatsApp with the message ready — you press send there, and the desk takes it from that point.</p>
+            <div class="rate-note show" id="reviewBox" style="white-space:pre-line"></div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-prev><span>← Back</span></button>
+              <button type="submit" class="btn wa"><span>Confirm &amp; Send via WhatsApp</span></button>
+            </div>
+            <div class="confirm" id="confirmBox">
+              <p class="lbl" style="color:var(--brass2)">Booking request composed</p>
+              <h3>Your reference: <span class="ref" id="confirmRef"></span></h3>
+              <p id="confirmText">WhatsApp should now be open with your full booking request addressed to the Speke Group reservations desk (+256 752 711 714). If it did not open, use the button below — and quote your reference when the desk replies.</p>
+              <div class="wiz-nav"><a class="btn wa" id="confirmLink" href="#" target="_blank" rel="noopener"><span>Open WhatsApp Again</span></a></div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <aside class="summary rv" aria-live="polite">
+        <p class="lbl" style="color:var(--clay)">Your stay</p>
+        <h3 id="s-property">Choose a property</h3>
+        <p class="s-loc" id="s-loc">Speke Group of Hotels · Uganda</p>
+        <div class="srow"><span>Check-in</span><b id="s-checkin">—</b></div>
+        <div class="srow"><span>Check-out</span><b id="s-checkout">—</b></div>
+        <div class="srow"><span>Nights</span><b id="s-nights">—</b></div>
+        <div class="srow"><span>Guests</span><b id="s-guests">—</b></div>
+        <div class="srow"><span>Room / unit</span><b id="s-room">—</b></div>
+        <div class="srow"><span>Rooms</span><b id="s-rooms">—</b></div>
+        <div class="s-rate" id="s-rate">Rate confirmed on enquiry by the reservations desk.</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · FESTIVE -->
+<section class="festive" id="festive">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">04 —</span> Festive Season</p>
+        <h2>The festive season, <em>booked properly</em></h2>
+      </div>
+      <p>Published festive offers, with published prices — and an enquiry form that sends the desk everything at once, instead of a bare "call us" at the end of a poster.</p>
+    </div>
+
+    <div class="fest-grid">
+      <div class="fest-card rv">
+        <p class="when">Speke Resort Munyonyo · 18 Dec 2026 – 3 Jan 2027</p>
+        <h3>The Grand Festive Getaway</h3>
+        <p>The resort's published Christmas and New Year package — festive dining, live music, fireworks and family entertainment on the Lake Victoria shore.</p>
+        <table>
+          <tr><td>Single room · 18–23 &amp; 26–30 Dec, 1–3 Jan</td><td>$139 / night</td></tr>
+          <tr><td>Single room · peak nights 24, 25 &amp; 31 Dec</td><td>$176 / night</td></tr>
+        </table>
+        <p>Rates as published for the 2026 festive package (also shown as Shs 584,000 and Shs 740,000). The booking flow above applies these rates automatically to festive dates at Speke Resort Munyonyo.</p>
+      </div>
+      <div class="fest-card c2 rv">
+        <p class="when">Speke Apartments Wampewo · 1 Nov 2026 – 15 Jan 2027</p>
+        <h3>The Festive Escape</h3>
+        <p>Half-board festive stays for two guests — breakfast and dinner, welcome drinks, fruit basket and house wine on arrival, heated pool, gym, steam and sauna, and a 30-minute couples massage once per stay, as published by the property.</p>
+        <table>
+          <tr><td>1 Bedroom Deluxe · per night</td><td>$150</td></tr>
+          <tr><td>1 Bedroom Superior · per night</td><td>$188</td></tr>
+        </table>
+        <p>Blackout dates as published: 24–25 December and 30 December – 1 January. Rates subject to change per the property's offer terms.</p>
+      </div>
+    </div>
+
+    <form class="mini-form rv" id="festForm" novalidate>
+      <p class="lbl" style="color:var(--clay)">Festive enquiry</p>
+      <h3>Ask for festive availability</h3>
+      <p class="fnote">One structured message to the same reservations desk — festive property, dates, party size and your details included.</p>
+      <div class="fgrid">
+        <div class="fld" id="ffld-prop">
+          <label for="ff-prop">Festive property</label>
+          <select id="ff-prop">
+            <option value="Speke Resort Munyonyo — Grand Festive Getaway">Speke Resort Munyonyo — Grand Festive Getaway</option>
+            <option value="Speke Apartments Wampewo — Festive Escape">Speke Apartments Wampewo — Festive Escape</option>
+            <option value="Another Speke Group property (festive stay)">Another Speke Group property</option>
+          </select>
+          <span class="err">Please choose a property.</span>
+        </div>
+        <div class="fld" id="ffld-guests">
+          <label for="ff-guests">Guests</label>
+          <input type="number" id="ff-guests" min="1" max="60" value="2">
+          <span class="err">At least 1 guest is required.</span>
+        </div>
+        <div class="fld" id="ffld-in">
+          <label for="ff-in">Arrival</label>
+          <input type="date" id="ff-in">
+          <span class="err">Choose an arrival date that is not in the past.</span>
+        </div>
+        <div class="fld" id="ffld-out">
+          <label for="ff-out">Departure</label>
+          <input type="date" id="ff-out">
+          <span class="err">Departure must be after arrival.</span>
+        </div>
+        <div class="fld" id="ffld-name">
+          <label for="ff-name">Your name</label>
+          <input type="text" id="ff-name" autocomplete="name" placeholder="e.g. Amina Kato">
+          <span class="err">Please add your name.</span>
+        </div>
+        <div class="fld" id="ffld-phone">
+          <label for="ff-phone">Phone / WhatsApp</label>
+          <input type="tel" id="ff-phone" autocomplete="tel" placeholder="e.g. +256 7xx xxx xxx">
+          <span class="err">Please add a phone number.</span>
+        </div>
+        <div class="fld full">
+          <label for="ff-notes">Notes (optional)</label>
+          <textarea id="ff-notes" rows="2" placeholder="Christmas lunch, New Year's Eve, children's activities…"></textarea>
+        </div>
+      </div>
+      <div class="wiz-nav"><button type="submit" class="btn dark"><span>Send Festive Enquiry via WhatsApp</span></button></div>
+      <div class="mini-done" id="festDone">Your festive enquiry is composed and ready in WhatsApp, addressed to the Speke Group reservations desk. Reference: <b id="festRef"></b></div>
+    </form>
+  </div>
+</section>
+
+<!-- 05 · CONFERENCES -->
+<section class="conf" id="conferences">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">05 —</span> Conferences &amp; Events</p>
+        <h2>Uganda's largest venue, <em>one enquiry</em></h2>
+      </div>
+      <p>Speke Resort Convention Centre anchors a group-wide meetings offer of 45 conference rooms. One structured enquiry reaches the events desk with dates, delegates and format already attached.</p>
+    </div>
+    <div class="conf-photo rv"><img src="img/convention-centre.jpg" alt="Speke Resort Convention Centre at Munyonyo" loading="lazy"></div>
+    <div class="conf-stats rv">
+      <div class="cstat"><b>56,000 sqm</b><span>Convention centre event space</span></div>
+      <div class="cstat"><b>19,000</b><span>Attendees — total capacity</span></div>
+      <div class="cstat"><b>45</b><span>Conference rooms across the group</span></div>
+    </div>
+
+    <form class="mini-form rv" id="confForm" novalidate>
+      <p class="lbl" style="color:var(--clay)">Conference enquiry</p>
+      <h3>Plan an event with the group</h3>
+      <p class="fnote">Sent to the same reservations desk on WhatsApp, fully structured — venue, format, dates and delegate numbers included from the start.</p>
+      <div class="fgrid">
+        <div class="fld" id="cfld-venue">
+          <label for="cf-venue">Preferred venue</label>
+          <select id="cf-venue">
+            <option value="Speke Resort Convention Centre, Munyonyo">Speke Resort Convention Centre, Munyonyo</option>
+            <option value="Speke Resort Munyonyo">Speke Resort Munyonyo</option>
+            <option value="Munyonyo Commonwealth Resort">Munyonyo Commonwealth Resort</option>
+            <option value="Kabira Country Club, Bukoto">Kabira Country Club, Bukoto</option>
+            <option value="Speke Hotel, Kampala">Speke Hotel, Kampala</option>
+            <option value="No preference — advise me">No preference — advise me</option>
+          </select>
+          <span class="err">Please choose a venue.</span>
+        </div>
+        <div class="fld" id="cfld-type">
+          <label for="cf-type">Event type</label>
+          <select id="cf-type">
+            <option value="Conference / Summit">Conference / Summit</option>
+            <option value="Corporate meeting">Corporate meeting</option>
+            <option value="Exhibition">Exhibition</option>
+            <option value="Gala / Banquet">Gala / Banquet</option>
+            <option value="Wedding / Celebration">Wedding / Celebration</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="err">Please choose an event type.</span>
+        </div>
+        <div class="fld" id="cfld-date">
+          <label for="cf-date">Event date</label>
+          <input type="date" id="cf-date">
+          <span class="err">Choose an event date that is not in the past.</span>
+        </div>
+        <div class="fld" id="cfld-pax">
+          <label for="cf-pax">Expected delegates / guests</label>
+          <input type="number" id="cf-pax" min="1" max="19000" value="100">
+          <span class="err">At least 1 delegate is required.</span>
+        </div>
+        <div class="fld" id="cfld-name">
+          <label for="cf-name">Your name</label>
+          <input type="text" id="cf-name" autocomplete="name" placeholder="e.g. David Okello">
+          <span class="err">Please add your name.</span>
+        </div>
+        <div class="fld">
+          <label for="cf-org">Organisation (optional)</label>
+          <input type="text" id="cf-org" autocomplete="organization" placeholder="Company / institution">
+        </div>
+        <div class="fld" id="cfld-phone">
+          <label for="cf-phone">Phone / WhatsApp</label>
+          <input type="tel" id="cf-phone" autocomplete="tel" placeholder="e.g. +256 7xx xxx xxx">
+          <span class="err">Please add a phone number.</span>
+        </div>
+        <div class="fld">
+          <label for="cf-email">Email (optional)</label>
+          <input type="email" id="cf-email" autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="fld full">
+          <label for="cf-notes">Event notes (optional)</label>
+          <textarea id="cf-notes" rows="2" placeholder="Room set-up, catering, accommodation for delegates, AV needs…"></textarea>
+        </div>
+      </div>
+      <div class="wiz-nav"><button type="submit" class="btn dark"><span>Send Conference Enquiry via WhatsApp</span></button></div>
+      <div class="mini-done" id="confDone">Your conference enquiry is composed and ready in WhatsApp, addressed to the Speke Group reservations desk. Reference: <b id="confRef"></b></div>
+    </form>
+  </div>
+</section>
+
+<!-- 06 · ONE NUMBER -->
+<section class="onenum">
+  <div class="wrap rv">
+    <p class="lbl" style="color:var(--brass2)"><span class="n">06 —</span> One number for the whole group</p>
+    <h2>Every property. Every enquiry.<br><em>One desk.</em></h2>
+    <a class="big-num" id="deskNum" href="#">+256 752 711 714</a>
+    <p>The reservations number Speke Resort Munyonyo already publishes — now the single front door for all 13 properties, festive stays and conferences. Tap the number and your message opens on WhatsApp.</p>
+    <a class="btn" href="#book"><span>Start a Booking</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <a class="brand" href="#top" style="font-size:17px">Speke Group<small style="color:var(--brass2)">of Hotels · Uganda</small></a>
+    <p>Property names, locations, room types and festive rates are as published by Speke Group of Hotels and its properties. Rates not published by the group are confirmed on enquiry.</p>
+    <p class="concept">Concept proposal built by SiteSprint Studio.</p>
+  </div>
+</footer>
+
+<script>
+"use strict";
+var WA_NUMBER = "256752711714";
+
+var PROPERTIES = [
+ {id:"speke-resort-munyonyo", name:"Speke Resort Munyonyo", loc:"Munyonyo · Lake Victoria · Kampala", rooms:["Superior Room","Executive Room","Deluxe Room","Presidential Cottage","Presidential Suite"]},
+ {id:"munyonyo-commonwealth-resort", name:"Munyonyo Commonwealth Resort", loc:"Munyonyo · Kampala", rooms:["Superior Room","Executive Room","Presidential Cottage","Presidential Suite"]},
+ {id:"speke-resort-convention-centre", name:"Speke Resort Convention Centre", loc:"Munyonyo · Kampala", rooms:["Convention / Event Space (events venue — no guest rooms)"]},
+ {id:"kabira-country-club", name:"Kabira Country Club", loc:"Bukoto · Kampala", rooms:["Single Room","Double Room","Deluxe Studio Room","Three-Bedroom Duplex Penthouse"]},
+ {id:"speke-hotel", name:"Speke Hotel", loc:"Nile Avenue · Heart of Kampala", rooms:["Deluxe Double Room","Deluxe Twin Room"]},
+ {id:"dolphin-suites", name:"Dolphin Suites", loc:"Bugolobi · Kampala", rooms:["Guest Room","Suite"]},
+ {id:"forest-cottages", name:"Forest Cottages", loc:"Bukoto · Kampala", rooms:["Standard Single Room","Standard Double Room","One-Bedroom Cottage","Two-Bedroom Cottage","Family Cottage"]},
+ {id:"speke-apartments-wampewo", name:"Speke Apartments Wampewo", loc:"Wampewo Avenue · Kololo · Kampala", rooms:["One-Bedroom Deluxe Apartment","One-Bedroom Superior Apartment","Serviced Apartment"]},
+ {id:"speke-apartments-kitante", name:"Speke Apartments Kitante", loc:"Kitante Close · Kampala", rooms:["Serviced Apartment (exact type confirmed on enquiry)"]},
+ {id:"bukoto-heights", name:"Bukoto Heights", loc:"Bukoto · Kampala", rooms:["Serviced Apartment","Two-Bedroom Apartment"]},
+ {id:"tagore-apartments", name:"Tagore Apartments", loc:"Mawanda Road · Opposite Acacia Mall · Kampala", rooms:["Two-Bedroom Apartment","Three-Bedroom Apartment"]},
+ {id:"naguru-apartments", name:"Naguru Apartments", loc:"Naguru · Kampala", rooms:["Two-Bedroom Apartment","Three-Bedroom Apartment"]},
+ {id:"boulevard-suites", name:"Boulevard Suites", loc:"Heart of Kampala City", rooms:["One-Bedroom Apartment","Two-Bedroom Apartment","Three-Bedroom Apartment","Three-Bedroom City View Penthouse"]}
+];
+function propertyById(id){ for(var i=0;i<PROPERTIES.length;i++){ if(PROPERTIES[i].id===id) return PROPERTIES[i]; } return null; }
+
+function isoToday(){ var d=new Date(); var m=("0"+(d.getMonth()+1)).slice(-2); var day=("0"+d.getDate()).slice(-2); return d.getFullYear()+"-"+m+"-"+day; }
+function nightsBetween(ci,co){ var a=Date.parse(ci), b=Date.parse(co); if(isNaN(a)||isNaN(b)) return 0; return Math.round((b-a)/86400000); }
+function eachNight(ci,co){ var out=[]; var t=Date.parse(ci); var end=Date.parse(co); while(t<end){ out.push(new Date(t).toISOString().slice(0,10)); t+=86400000; } return out; }
+
+/* Published festive rates only. Returns null when no published rate applies. */
+function festiveEstimate(propId, roomType, checkin, checkout, rooms){
+  var nights = eachNight(checkin, checkout);
+  if(!nights.length) return null;
+  var total=0, detail="";
+  if(propId==="speke-resort-munyonyo"){
+    var peak={"2026-12-24":1,"2026-12-25":1,"2026-12-31":1};
+    for(var i=0;i<nights.length;i++){ var n=nights[i];
+      if(n<"2026-12-18"||n>"2027-01-03") return null;
+      total += peak[n] ? 176 : 139;
+    }
+    total *= rooms;
+    detail = "Published Grand Festive Getaway single-room rate: $139 per night, $176 on peak nights (24, 25 & 31 Dec). Estimated total for this stay: $"+total+" ("+rooms+" room(s), single occupancy basis — desk confirms final rate).";
+    return {total:total, detail:detail};
+  }
+  if(propId==="speke-apartments-wampewo"){
+    var rate = /Superior/.test(roomType||"") ? 188 : (/Deluxe/.test(roomType||"") ? 150 : 0);
+    if(!rate) return null;
+    var blackout={"2026-12-24":1,"2026-12-25":1,"2026-12-30":1,"2026-12-31":1,"2027-01-01":1};
+    for(var j=0;j<nights.length;j++){ var d=nights[j];
+      if(d<"2026-11-01"||d>"2027-01-15"||blackout[d]) return null;
+    }
+    total = rate*nights.length*rooms;
+    detail = "Published Festive Escape rate: $"+rate+" per night for this apartment type (2 guests, half-board, as published). Estimated total for this stay: $"+total+" — desk confirms final rate.";
+    return {total:total, detail:detail};
+  }
+  return null;
+}
+
+function validateBooking(s, today){
+  var e={};
+  if(!s.property) e.property="Please choose a property.";
+  if(!s.checkin || s.checkin<today) e.checkin="Choose a check-in date that is not in the past.";
+  if(!s.checkout || (s.checkin && s.checkout<=s.checkin)) e.checkout="Check-out must be after check-in.";
+  if(!s.adults || s.adults<1) e.adults="At least 1 adult is required.";
+  if(!s.roomtype) e.roomtype="Please choose a room type.";
+  if(!s.rooms || s.rooms<1) e.rooms="At least 1 room is required.";
+  if(!s.name || !s.name.trim()) e.name="Please add your name.";
+  if(!s.phone || s.phone.replace(/\D/g,"").length<7) e.phone="Please add a phone number the desk can reach.";
+  return e;
+}
+function validateSimple(o){
+  var e={};
+  Object.keys(o.checks).forEach(function(k){ if(o.checks[k]) e[k]=o.checks[k]; });
+  return e;
+}
+function buildWaLink(text){ return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(text); }
+function makeRef(prefix, seed){
+  var h=0, s=String(seed||""); for(var i=0;i<s.length;i++){ h=(h*31 + s.charCodeAt(i))>>>0; }
+  return prefix+"-"+(1000 + (h % 9000));
+}
+function fmtDate(iso){ if(!iso) return "—"; var d=new Date(iso+"T12:00:00"); return d.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"}); }
+
+function composeBookingMessage(s, est, ref){
+  var p = propertyById(s.property);
+  var lines=[
+    "SPEKE GROUP — DIRECT BOOKING REQUEST",
+    "Reference: "+ref,
+    "Property: "+(p?p.name:"Group desk recommendation"),
+    "Check-in: "+fmtDate(s.checkin),
+    "Check-out: "+fmtDate(s.checkout),
+    "Nights: "+nightsBetween(s.checkin,s.checkout),
+    "Guests: "+s.adults+" adult(s)"+(s.children>0 ? ", "+s.children+" child(ren)" : ""),
+    "Room / unit: "+s.roomtype,
+    "Rooms: "+s.rooms,
+    est ? "Published festive rate estimate: $"+est.total+" (desk to confirm)" : "Rate: to be confirmed on enquiry",
+    "Name: "+s.name,
+    "Phone: "+s.phone
+  ];
+  if(s.email) lines.push("Email: "+s.email);
+  if(s.notes) lines.push("Notes: "+s.notes);
+  lines.push("Please confirm availability and the final rate. Thank you.");
+  return lines.join("\n");
+}
+function composeFestiveMessage(s, ref){
+  var lines=[
+    "SPEKE GROUP — FESTIVE ENQUIRY",
+    "Reference: "+ref,
+    "Offer / property: "+s.property,
+    "Arrival: "+fmtDate(s.checkin),
+    "Departure: "+fmtDate(s.checkout),
+    "Nights: "+nightsBetween(s.checkin,s.checkout),
+    "Guests: "+s.guests,
+    "Name: "+s.name,
+    "Phone: "+s.phone
+  ];
+  if(s.notes) lines.push("Notes: "+s.notes);
+  lines.push("Please confirm festive availability and the applicable published rate. Thank you.");
+  return lines.join("\n");
+}
+function composeConferenceMessage(s, ref){
+  var lines=[
+    "SPEKE GROUP — CONFERENCE / EVENT ENQUIRY",
+    "Reference: "+ref,
+    "Preferred venue: "+s.venue,
+    "Event type: "+s.type,
+    "Event date: "+fmtDate(s.date),
+    "Expected delegates / guests: "+s.pax,
+    "Name: "+s.name,
+    "Phone: "+s.phone
+  ];
+  if(s.org) lines.splice(6,0,"Organisation: "+s.org);
+  if(s.email) lines.push("Email: "+s.email);
+  if(s.notes) lines.push("Notes: "+s.notes);
+  lines.push("Please advise availability and a proposal. Thank you.");
+  return lines.join("\n");
+}
+
+if(typeof module!=="undefined" && module.exports){
+  module.exports={WA_NUMBER:WA_NUMBER,PROPERTIES:PROPERTIES,propertyById:propertyById,nightsBetween:nightsBetween,festiveEstimate:festiveEstimate,validateBooking:validateBooking,buildWaLink:buildWaLink,composeBookingMessage:composeBookingMessage,composeFestiveMessage:composeFestiveMessage,composeConferenceMessage:composeConferenceMessage,makeRef:makeRef};
+}
+
+/* ---------- DOM wiring (browser only) ---------- */
+if(typeof document!=="undefined"){
+document.addEventListener("DOMContentLoaded", function(){
+  var $=function(id){return document.getElementById(id);};
+  /* marquee */
+  var names=PROPERTIES.map(function(p){return p.name;});
+  var seq=names.map(function(n){return "<span>"+n+"</span><b>·</b>";}).join("");
+  $("mq").innerHTML=seq+seq;
+  /* desk number */
+  $("deskNum").href=buildWaLink("Hello Speke Group reservations, I would like to enquire about a stay at one of your properties.");
+  /* reveal */
+  if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});},{threshold:.08});
+    document.querySelectorAll(".rv").forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in");}); }
+
+  /* booking wizard */
+  var propSel=$("f-property");
+  propSel.innerHTML='<option value="">Choose a property…</option><option value="__desk">Not sure — recommend a property for me</option>'+PROPERTIES.map(function(p){return '<option value="'+p.id+'">'+p.name+" — "+p.loc+"</option>";}).join("");
+  var roomSel=$("f-roomtype");
+  var state={step:1, ref:null};
+  var today=isoToday();
+  $("f-checkin").min=today; $("f-checkout").min=today;
+  ["ff-in","ff-out","cf-date"].forEach(function(id){ $(id).min=today; });
+
+  function readState(){
+    return { property:propSel.value, checkin:$("f-checkin").value, checkout:$("f-checkout").value,
+      adults:parseInt($("f-adults").value,10)||0, children:parseInt($("f-children").value,10)||0,
+      roomtype:roomSel.value, rooms:parseInt($("f-rooms").value,10)||0,
+      name:$("f-name").value, phone:$("f-phone").value, email:$("f-email").value, notes:$("f-notes").value };
+  }
+  function fillRooms(){
+    var p=propertyById(propSel.value);
+    var list = p ? p.rooms : ["Room / apartment — type confirmed on enquiry"];
+    roomSel.innerHTML=list.map(function(r){return '<option value="'+r+'">'+r+"</option>";}).join("");
+  }
+  function estimate(s){ if(!s.property||s.property==="__desk") return null; return festiveEstimate(s.property, s.roomtype, s.checkin, s.checkout, s.rooms||1); }
+  function updateSummary(){
+    var s=readState(); var p=propertyById(s.property);
+    $("s-property").textContent = s.property==="__desk" ? "Group desk recommendation" : (p?p.name:"Choose a property");
+    $("s-loc").textContent = p?p.loc:"Speke Group of Hotels · Uganda";
+    $("s-checkin").textContent=fmtDate(s.checkin); $("s-checkout").textContent=fmtDate(s.checkout);
+    var n=nightsBetween(s.checkin,s.checkout); $("s-nights").textContent=n>0?n:"—";
+    $("s-guests").textContent=(s.adults||0)+" adult(s)"+(s.children>0?", "+s.children+" child(ren)":"");
+    $("s-room").textContent=s.roomtype||"—"; $("s-rooms").textContent=s.rooms||"—";
+    var est=estimate(s);
+    $("s-rate").innerHTML = est ? "<b>Festive estimate: $"+est.total+"</b><br>"+est.detail : "Rate confirmed on enquiry by the reservations desk — no rate is published for this selection.";
+    var rn=$("rateNote");
+    if(est){ rn.innerHTML="<b>Published festive rate applies.</b> "+est.detail; rn.classList.add("show"); }
+    else { rn.innerHTML=""; rn.classList.remove("show"); }
+    return s;
+  }
+  function markBad(id, bad){ var f=$(id); if(f) f.classList.toggle("bad", !!bad); }
+  function validateStep(step, s){
+    var e=validateBooking(s, today); var keysByStep={1:["property"],2:["checkin","checkout","adults"],3:["roomtype","rooms"],4:["name","phone"]};
+    var fld={property:"fld-property",checkin:"fld-checkin",checkout:"fld-checkout",adults:"fld-adults",roomtype:"fld-roomtype",rooms:"fld-rooms",name:"fld-name",phone:"fld-phone"};
+    var bad=false;
+    (keysByStep[step]||[]).forEach(function(k){ markBad(fld[k], !!e[k]); if(e[k]) bad=true; });
+    return !bad;
+  }
+  function goTo(step){
+    state.step=step;
+    document.querySelectorAll("#bookForm fieldset").forEach(function(fs){ fs.classList.toggle("on", +fs.dataset.step===step); });
+    document.querySelectorAll(".step-tab").forEach(function(t){ var g=+t.dataset.goto; t.classList.toggle("on", g===step); t.classList.toggle("done", g<step); });
+    if(step===5){
+      var s=updateSummary();
+      if(!state.ref) state.ref=makeRef("SG", s.property+s.checkin+s.name+Date.now());
+      var est=estimate(s);
+      $("reviewBox").textContent=composeBookingMessage(s.property==="__desk"?Object.assign({},s,{property:""}):s, est, state.ref);
+    }
+    document.getElementById("book").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+  propSel.addEventListener("change", function(){ state.ref=null; fillRooms(); updateSummary(); });
+  ["f-checkin","f-checkout","f-adults","f-children","f-rooms","f-name","f-phone","f-email","f-notes"].forEach(function(id){ $(id).addEventListener("input", function(){ state.ref=null; updateSummary(); }); });
+  roomSel.addEventListener("change", function(){ state.ref=null; updateSummary(); });
+  document.querySelectorAll("[data-next]").forEach(function(b){ b.addEventListener("click", function(){ var s=readState(); if(validateStep(state.step, s)) goTo(Math.min(5, state.step+1)); }); });
+  document.querySelectorAll("[data-prev]").forEach(function(b){ b.addEventListener("click", function(){ goTo(Math.max(1, state.step-1)); }); });
+  document.querySelectorAll(".step-tab").forEach(function(t){ t.addEventListener("click", function(){ var g=+t.dataset.goto; if(g<state.step) goTo(g); else if(g===state.step+1){ var s=readState(); if(validateStep(state.step,s)) goTo(g); } }); });
+  document.querySelectorAll("[data-book]").forEach(function(b){ b.addEventListener("click", function(){
+    var id=b.getAttribute("data-book");
+    propSel.value = id ? id : "__desk"; state.ref=null; fillRooms(); updateSummary();
+    if(id==="speke-resort-convention-centre"){ document.getElementById("conferences").scrollIntoView({behavior:"smooth"}); return; }
+    goTo(2);
+  }); });
+  $("bookForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var s=readState();
+    var e=validateBooking(s, today);
+    var stepOf={property:1,checkin:2,checkout:2,adults:2,roomtype:3,rooms:3,name:4,phone:4};
+    var badKeys=Object.keys(e);
+    if(badKeys.length){ var st=stepOf[badKeys[0]]||1; goTo(st); validateStep(st, s); return; }
+    if(!state.ref) state.ref=makeRef("SG", s.property+s.checkin+s.name+Date.now());
+    var msg=composeBookingMessage(s.property==="__desk"?Object.assign({},s,{property:""}):s, estimate(s), state.ref);
+    var link=buildWaLink(msg);
+    $("confirmRef").textContent=state.ref;
+    $("confirmLink").href=link;
+    $("confirmBox").classList.add("show");
+    window.open(link, "_blank");
+  });
+  fillRooms(); updateSummary();
+
+  /* festive form */
+  $("festForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var s={property:$("ff-prop").value, checkin:$("ff-in").value, checkout:$("ff-out").value, guests:parseInt($("ff-guests").value,10)||0, name:$("ff-name").value, phone:$("ff-phone").value, notes:$("ff-notes").value};
+    var checks={
+      property: !s.property?"x":"", guests: s.guests<1?"x":"",
+      checkin: (!s.checkin||s.checkin<today)?"x":"", checkout: (!s.checkout||(s.checkin&&s.checkout<=s.checkin))?"x":"",
+      name: !s.name.trim()?"x":"", phone: s.phone.replace(/\D/g,"").length<7?"x":""
+    };
+    var fld={property:"ffld-prop",guests:"ffld-guests",checkin:"ffld-in",checkout:"ffld-out",name:"ffld-name",phone:"ffld-phone"};
+    var bad=false; Object.keys(checks).forEach(function(k){ markBad(fld[k], !!checks[k]); if(checks[k]) bad=true; });
+    if(bad) return;
+    var ref=makeRef("SGF", s.property+s.checkin+s.name);
+    $("festRef").textContent=ref; $("festDone").classList.add("show");
+    window.open(buildWaLink(composeFestiveMessage(s, ref)), "_blank");
+  });
+
+  /* conference form */
+  $("confForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var s={venue:$("cf-venue").value, type:$("cf-type").value, date:$("cf-date").value, pax:parseInt($("cf-pax").value,10)||0, name:$("cf-name").value, org:$("cf-org").value, phone:$("cf-phone").value, email:$("cf-email").value, notes:$("cf-notes").value};
+    var checks={ venue:!s.venue?"x":"", type:!s.type?"x":"", date:(!s.date||s.date<today)?"x":"", pax:s.pax<1?"x":"", name:!s.name.trim()?"x":"", phone:s.phone.replace(/\D/g,"").length<7?"x":"" };
+    var fld={venue:"cfld-venue",type:"cfld-type",date:"cfld-date",pax:"cfld-pax",name:"cfld-name",phone:"cfld-phone"};
+    var bad=false; Object.keys(checks).forEach(function(k){ markBad(fld[k], !!checks[k]); if(checks[k]) bad=true; });
+    if(bad) return;
+    var ref=makeRef("SGC", s.venue+s.date+s.name);
+    $("confRef").textContent=ref; $("confDone").classList.add("show");
+    window.open(buildWaLink(composeConferenceMessage(s, ref)), "_blank");
+  });
+});
+}
+</script>
+</body>
+</html>
