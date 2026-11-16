@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1991 Restaurante Mariscos — Ya abrimos en Ciudad Valles | Mariscos del Pacífico y del Golfo</title>
+<meta name="description" content="1991 Restaurante Mariscos ya abrió en Ciudad Valles: mariscos del Pacífico y del Golfo. Calle Venustiano Carranza #1217, Col. Hidalgo, Cd. Valles, S.L.P. Especialidad: Camarones Louisiana desde $330.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sea:#063f36; --sea2:#04291f; --teal:#0a6b57; --teal-lt:#12a37f;
+  --coral:#ff6b4a; --coral-dk:#e8502f; --gold:#f2b33d; --cream:#fdf6ea; --paper:#fbf3e2;
+  --ink:#12312a; --mut:#5d7268; --line:#e3d5b8; --wa:#1faa55; --wa2:#178a44;
+  --shadow:0 1px 2px rgba(4,41,31,.06),0 18px 40px -16px rgba(4,41,31,.28);
+  --shadow-lg:0 2px 4px rgba(4,41,31,.07),0 30px 56px -18px rgba(4,41,31,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Archivo',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--coral);color:#fff}
+a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+img,svg{max-width:100%}
+.grain{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(6,63,54,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:3px solid var(--gold)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--cream)}
+.logo .yr{font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.02em;color:var(--gold);line-height:1}
+.logo .nm{font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25}
+.logo .nm small{display:block;font-weight:600;font-size:10px;letter-spacing:.22em;color:#9fd8c6}
+.hdr-cta{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 18px;border-radius:999px;min-height:46px;transition:transform .2s,background .2s;box-shadow:0 10px 24px -10px rgba(23,138,68,.7)}
+.hdr-cta:hover{background:var(--wa2);transform:translateY(-2px)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:radial-gradient(1100px 520px at 85% -10%,#0d7a5f 0%,transparent 55%),radial-gradient(800px 500px at -10% 110%,#0a5c47 0%,transparent 50%),linear-gradient(160deg,var(--sea) 0%,var(--sea2) 100%);color:var(--cream);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -46% -10%;height:60%;background:radial-gradient(closest-side,rgba(255,107,74,.20),transparent);pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:58px 0 0}
+.hero-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(253,246,234,.4);color:var(--cream);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(255,107,74,.25)}
+.pill.solid{background:var(--coral);border-color:var(--coral);color:#fff;transform:rotate(-2deg)}
+.hero h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.005em;font-size:clamp(3.4rem,11.5vw,9.2rem)}
+.hero h1 .yr-big{display:block;font-size:clamp(4.6rem,17vw,13.5rem);color:var(--gold);-webkit-text-stroke:2px rgba(4,41,31,.25);text-shadow:6px 6px 0 rgba(4,41,31,.35)}
+.hero h1 em{font-family:'Fraunces',serif;font-style:italic;text-transform:none;letter-spacing:0;color:var(--coral);font-size:.82em}
+.hero-sub{max-width:620px;font-size:clamp(1.02rem,2.2vw,1.22rem);color:#dcefe6;margin-top:20px}
+.hero-sub b{color:#fff}
+.ribbon{position:relative;margin:34px 0 0;background:var(--coral);color:#fff;transform:rotate(-1.2deg) scale(1.02);box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
+.ribbon-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:13px 6px}
+.ribbon .when{font-family:'Anton',sans-serif;font-size:clamp(1.15rem,3vw,1.7rem);letter-spacing:.04em;text-transform:uppercase}
+.ribbon .who{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(.95rem,2vw,1.1rem)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:26px;align-items:stretch;padding:34px 0 54px;position:relative;z-index:2}
+.addr-card{background:var(--cream);color:var(--ink);border-radius:20px;padding:28px 28px 24px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.addr-card::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--coral) 0 26px,var(--gold) 26px 52px,var(--teal) 52px 78px)}
+.addr-card .label{color:var(--coral-dk)}
+.addr-big{font-family:'Anton',sans-serif;text-transform:uppercase;line-height:1.04;font-size:clamp(1.7rem,4.4vw,2.6rem);margin:10px 0 6px;color:var(--sea)}
+.addr-big span{color:var(--coral-dk)}
+.addr-note{color:var(--mut);font-size:15px}
+.addr-note b{color:var(--ink)}
+.addr-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:800;font-size:15px;padding:13px 22px;border-radius:999px;min-height:50px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:none;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 26px -10px rgba(23,138,68,.65)}
+.btn-wa:hover{background:var(--wa2)}
+.btn-map{background:var(--sea);color:var(--cream)}
+.btn-map:hover{background:var(--teal)}
+.btn-ghost{background:transparent;color:var(--sea);border:2px solid var(--sea)}
+.btn-ghost:hover{background:var(--sea);color:var(--cream)}
+.spec-card{background:linear-gradient(165deg,#0b5f4a,#063f36);border:1.5px solid rgba(242,179,61,.5);border-radius:20px;padding:28px;color:var(--cream);position:relative;box-shadow:var(--shadow-lg);overflow:hidden}
+.spec-card::after{content:"1991";position:absolute;right:-8px;bottom:-34px;font-family:'Anton',sans-serif;font-size:120px;color:rgba(253,246,234,.06);line-height:1;pointer-events:none}
+.spec-card .label{color:var(--gold)}
+.spec-name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.8rem,4.6vw,2.7rem);line-height:1.02;margin:10px 0 4px}
+.spec-name em{font-family:'Fraunces',serif;font-style:italic;text-transform:none;color:var(--gold);font-size:.8em}
+.spec-desc{color:#cfe8dc;font-size:15px;max-width:34ch}
+.price-tag{display:inline-block;margin-top:16px;background:var(--gold);color:var(--sea2);font-family:'Anton',sans-serif;font-size:clamp(1.5rem,3.6vw,2.1rem);letter-spacing:.02em;padding:8px 20px 6px;border-radius:12px;transform:rotate(-2.5deg);box-shadow:0 12px 24px -8px rgba(0,0,0,.4)}
+.price-tag small{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:block;line-height:1}
+.spec-card .btn{margin-top:20px;position:relative;z-index:2}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--gold);color:var(--sea2);overflow:hidden;border-top:3px solid var(--sea2);border-bottom:3px solid var(--sea2);padding:10px 0}
+.marquee-track{display:flex;gap:0;width:max-content;animation:mq 30s linear infinite;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:19px;white-space:nowrap}
+.marquee-track span{padding:0 14px}
+.marquee-track i{font-style:normal;color:var(--coral-dk)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+/* ---------- sections ---------- */
+section{padding:74px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;border-top:2px solid var(--ink);padding-top:16px;margin-bottom:34px}
+.sec-head .num{font-family:'Anton',sans-serif;font-size:15px;color:var(--coral-dk);letter-spacing:.1em}
+.sec-head h2{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.98;font-size:clamp(2.1rem,5.6vw,3.6rem);color:var(--sea)}
+.sec-head h2 em{font-family:'Fraunces',serif;font-style:italic;text-transform:none;color:var(--coral-dk)}
+.sec-head p{max-width:360px;color:var(--mut);font-size:15px}
+
+/* dishes */
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dish{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.dish:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.dish-art{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.dish-art svg{width:62%;height:auto;filter:drop-shadow(0 14px 16px rgba(4,41,31,.25));transition:transform .35s}
+.dish:hover .dish-art svg{transform:scale(1.06) rotate(-1.5deg)}
+.dish-art .tag{position:absolute;top:12px;left:12px;background:rgba(4,41,31,.75);color:var(--cream);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.a1{background:radial-gradient(circle at 30% 20%,#ffd9a8,#f2b33d 70%)}
+.a2{background:radial-gradient(circle at 70% 25%,#bfe6da,#12a37f 75%)}
+.a3{background:radial-gradient(circle at 30% 20%,#ffc4b2,#ff6b4a 75%)}
+.a4{background:radial-gradient(circle at 70% 20%,#8a5a3b,#4a2c17 80%)}
+.a5{background:radial-gradient(circle at 30% 25%,#ffe3b3,#e8502f 80%)}
+.a6{background:radial-gradient(circle at 70% 25%,#cdeee2,#0a6b57 78%)}
+.dish-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dish-body h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:21px;line-height:1.08;color:var(--sea)}
+.dish-body p{color:var(--mut);font-size:14.5px;flex:1}
+.order-link{margin-top:6px;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;text-decoration:none;font-weight:800;font-size:14px;color:var(--wa2);border:2px solid var(--wa);padding:9px 16px;border-radius:999px;transition:background .2s,color .2s,transform .2s}
+.order-link:hover{background:var(--wa);color:#fff;transform:translateY(-2px)}
+
+/* llegar */
+.llegar-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:stretch}
+.llegar-info{background:var(--sea);color:var(--cream);border-radius:20px;padding:30px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.llegar-info::after{content:"";position:absolute;right:-46px;top:-46px;width:170px;height:170px;border-radius:50%;border:26px solid rgba(242,179,61,.25)}
+.llegar-info .label{color:var(--gold)}
+.llegar-info .addr-big{color:var(--cream)}
+.llegar-info .addr-big span{color:var(--gold)}
+.llegar-info p{color:#cfe8dc;font-size:15.5px;max-width:44ch}
+.llegar-info .ref{display:inline-block;margin-top:14px;background:rgba(253,246,234,.1);border:1px dashed rgba(253,246,234,.45);border-radius:12px;padding:10px 14px;font-size:14.5px}
+.llegar-info .ref b{color:var(--gold)}
+.llegar-info .addr-actions{margin-top:22px}
+.map-frame{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:340px;background:#e8e2cf}
+.map-frame iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+/* apertura */
+.open-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.open-copy p{font-size:16.5px;color:#33524
+...[truncated 6597 chars]7}
+.open-copy p + p{margin-top:14px}
+.open-copy .sig{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--sea);margin-top:18px}
+.open-art{background:linear-gradient(160deg,var(--gold),var(--coral));border-radius:20px;min-height:340px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);transform:rotate(1.2deg)}
+.open-art .big{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px}
+.open-art .big .n{font-family:'Anton',sans-serif;font-size:clamp(4rem,10vw,6.4rem);line-height:.95;text-shadow:4px 4px 0 rgba(4,41,31,.3)}
+.open-art .big .s{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2.6vw,1.4rem)}
+.open-art .scissors{position:absolute;top:16px;left:18px;font-size:30px;transform:rotate(-18deg)}
+.open-art .tape{position:absolute;width:110px;height:26px;background:rgba(253,246,234,.55);top:14px;right:-28px;transform:rotate(38deg)}
+
+/* footer */
+footer{background:var(--sea2);color:#bcd8cc;padding:44px 0 110px}
+footer .f-in{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-start}
+footer b{color:var(--cream)}
+footer a{color:var(--gold);text-decoration:none;font-weight:700}
+footer a:hover{text-decoration:underline}
+.concept{margin-top:22px;border-top:1px solid rgba(253,246,234,.18);padding-top:16px;font-size:12.5px;color:#7fa393}
+
+/* sticky wa */
+.sticky-wa{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(4,41,31,.97);backdrop-filter:blur(8px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.sticky-wa a{flex:1;text-align:center;text-decoration:none;font-weight:800;font-size:15px;padding:13px 10px;border-radius:999px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.sticky-wa .w{background:var(--wa);color:#fff}
+.sticky-wa .m{background:transparent;color:var(--cream);border:2px solid rgba(253,246,234,.5);flex:0 0 auto;padding-left:18px;padding-right:18px}
+
+/* chat */
+.chatw{position:fixed;right:16px;bottom:86px;z-index:90}
+.chatw-btn{background:var(--teal);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.3);min-height:48px;transition:transform .2s,background .2s}
+.chatw-btn:hover{transform:translateY(-2px);background:var(--sea)}
+.chatw-panel{position:fixed;right:16px;bottom:150px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.32);display:none;flex-direction:column;overflow:hidden;z-index:91}
+.chatw-panel.open{display:flex}
+.chatw-head{background:var(--sea);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}
+.chatw-head small{opacity:.85;font-size:11.5px;display:block}
+.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}
+.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+.msg.bot{background:#e9f4ee;align-self:flex-start}
+.msg.user{background:var(--teal);color:#fff;align-self:flex-end}
+.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}
+.chip-btn{border:1.5px solid var(--teal);color:var(--sea);background:#fff;font:inherit;font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.chip-btn:hover{background:var(--teal);color:#fff}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}
+.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}
+.chatw-form button{background:var(--teal);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+
+@media (max-width:900px){
+  .hero-grid,.llegar-grid,.open-grid{grid-template-columns:1fr}
+  .dishes{grid-template-columns:1fr 1fr}
+  .sec-head{flex-direction:column;align-items:flex-start}
+  .spec-card{transform:none}
+}
+@media (max-width:560px){
+  .dishes{grid-template-columns:1fr}
+  .logo .nm{display:none}
+  section{padding:56px 0}
+  .chatw{bottom:150px}
+  .chatw-panel{bottom:214px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#top" aria-label="1991 Restaurante Mariscos">
+      <span class="yr">1991</span>
+      <span class="nm">Restaurante Mariscos<small>Ciudad Valles · S.L.P.</small></span>
+    </a>
+    <a class="hdr-cta" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-top">
+        <span class="pill solid"><span class="dot"></span> Recién abierto</span>
+        <span class="pill">Mariscos del Pacífico y del Golfo</span>
+        <span class="pill">Ciudad Valles, S.L.P.</span>
+      </div>
+      <h1><span class="yr-big">1991</span>Restaurante <em>Mariscos</em><br>¡Ya abrimos!</h1>
+      <p class="hero-sub">El sabor del <b>Pacífico y del Golfo</b> ya tiene casa en Ciudad Valles. Abrimos el <b>sábado 14 de noviembre</b> — y aquí está, imposible de perder, <b>dónde encontrarnos</b>.</p>
+      <div class="ribbon" aria-hidden="true">
+        <div class="ribbon-in">
+          <span class="when">✂ Corte de listón · Sáb 14 de noviembre</span>
+          <span class="who">una inauguración con toda la familia</span>
+        </div>
+      </div>
+      <div class="hero-grid">
+        <div class="addr-card rv">
+          <div class="label">Dónde estamos — guárdalo</div>
+          <div class="addr-big">Calle Venustiano Carranza <span>#1217</span>, Col. Hidalgo</div>
+          <p class="addr-note">Cd. Valles, S.L.P. · Referencia de la zona: <b>hacia la cerillera</b>. Si te pierdes, mándanos WhatsApp y te guiamos.</p>
+          <div class="addr-actions">
+            <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Venustiano+Carranza+1217+Col.+Hidalgo+Ciudad+Valles+San+Luis+Potosi" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn btn-wa" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20voy%20en%20camino%2C%20%C2%BFme%20ayudan%20a%20llegar%3F" target="_blank" rel="noopener">Guiarme por WhatsApp</a>
+          </div>
+        </div>
+        <div class="spec-card rv">
+          <div class="label">Nuestra especialidad</div>
+          <div class="spec-name">Camarones <em>Louisiana</em></div>
+          <p class="spec-desc">Camarones estilo Cajun, la especialidad de la casa desde el primer día.</p>
+          <div class="price-tag"><small>Desde</small>$330</div>
+          <br>
+          <a class="btn btn-wa" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Camarones%20Louisiana" target="_blank" rel="noopener">Pedir la especialidad</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Ya abrimos <i>·</i> 1991 Restaurante Mariscos <i>·</i> Pacífico y Golfo <i>·</i> Ciudad Valles <i>·</i> Camarones Louisiana <i>·</i></span>
+      <span>Ya abrimos <i>·</i> 1991 Restaurante Mariscos <i>·</i> Pacífico y Golfo <i>·</i> Ciudad Valles <i>·</i> Camarones Louisiana <i>·</i></span>
+    </div>
+  </div>
+
+  <!-- PLATILLOS -->
+  <section id="platillos">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div><div class="num">01 — De la cocina</div><h2>Lo que salió <em>de la cocina</em></h2></div>
+        <p>Los platillos de nuestros primeros días, tal como salieron de la cocina en la apertura. Toca pedir y tu mensaje llega listo por WhatsApp.</p>
+      </div>
+      <div class="dishes">
+        <article class="dish rv">
+          <div class="dish-art a1"><span class="tag">De la apertura</span>
+            <svg viewBox="0 0 120 90" role="img" aria-label="Ilustración de pescado frito entero con camarones"><ellipse cx="60" cy="52" rx="52" ry="30" fill="#fdf6ea" opacity=".9"/><path d="M14 50c12-13 27-20 42-20 10 0 20 4 28 12l14-11v36L84 56c-8 8-18 12-28 12C41 68 26 61 14 50z" fill="#063f36"/><circle cx="36" cy="44" r="3.6" fill="#fdf6ea"/><path d="M88 22c6-1 11 3 12 8 1 6-3 11-8 12-4 1-8-1-10-4-1-2 0-4 2-4 2 0 3 1 4 2 3-1 5-4 4-7-1-3-3-5-6-5-2 0-3-3-1-4 1-1 2-1 3-2zM70 12c6-1 11 3 12 8 1 6-3 11-8 12-4 1-8-1-10-4-1-2 0-4 2-4 2 0 3 1 4 2 3-1 5-4 4-7-1-3-3-5-6-5-2 0-3-3-1-4 1-1 2-1 3-2z" fill="#e8502f"/></svg>
+          </div>
+          <div class="dish-body">
+            <h3>Pescado frito entero con camarones</h3>
+            <p>Pescado entero frito, coronado con camarones. El plato que se robó las fotos del primer día.</p>
+            <a class="order-link" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Pescado%20frito%20entero%20con%20camarones" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="dish rv">
+          <div class="dish-art a2"><span class="tag">Frescos</span>
+            <svg viewBox="0 0 120 90" role="img" aria-label="Ilustración de ostiones en hielo"><path d="M12 62c6-16 22-26 40-26 14 0 26 6 34 16-8 12-22 18-38 18-14 0-28-3-36-8z" fill="#063f36"/><path d="M20 60c6-12 18-19 32-19 11 0 20 4 27 12-7 9-18 13-30 13-11 0-22-2-29-6z" fill="#fdf6ea"/><ellipse cx="50" cy="52" rx="13" ry="7" fill="#12a37f"/><rect x="86" y="30" width="10" height="10" rx="2" fill="#fdf6ea" opacity=".85" transform="rotate(14 91 35)"/><rect x="98" y="44" width="9" height="9" rx="2" fill="#fdf6ea" opacity=".7" transform="rotate(-10 102 48)"/><rect x="24" y="22" width="9" height="9" rx="2" fill="#fdf6ea" opacity=".8" transform="rotate(20 28 26)"/></svg>
+          </div>
+          <div class="dish-body">
+            <h3>Ostiones</h3>
+            <p>Ostiones frescos servidos sobre hielo, como deben llegar a la mesa.</p>
+            <a class="order-link" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Ostiones" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="dish rv">
+          <div class="dish-art a3"><span class="tag">A la plancha</span>
+            <svg viewBox="0 0 120 90" role="img" aria-label="Ilustración de camarones a la plancha con arroz y ensalada"><ellipse cx="60" cy="54" rx="52" ry="29" fill="#fdf6ea" opacity=".92"/><path d="M30 34c7-2 14 2 16 9 2 6-2 13-8 15-5 2-11 0-14-4-2-2 0-5 2-5 2 0 4 1 5 3 3-2 5-6 4-9-1-4-4-6-8-7-2 0-3-3-1-4 1-1 3 1 4 2zM56 28c7-2 14 2 16 9 2 6-2 13-8 15-5 2-11 0-14-4-2-2 0-5 2-5 2 0 4 1 5 3 3-2 5-6 4-9-1-4-4-6-8-7-2 0-3-3-1-4 1-1 3 1 4 2zM82 36c7-2 14 2 16 9 2 6-2 13-8 15-5 2-11 0-14-4-2-2 0-5 2-5 2 0 4 1 5 3 3-2 5-6 4-9-1-4-4-6-8-7-2 0-3-3-1-4 1-1 3 1 4 2z" fill="#e8502f"/><ellipse cx="42" cy="70" rx="13" ry="5" fill="#f2b33d"/><circle cx="82" cy="70" r="5" fill="#0a6b57"/><circle cx="92" cy="68" r="4" fill="#e8502f"/><circle cx="74" cy="66" r="3.4" fill="#7fb069"/></svg>
+          </div>
+          <div class="dish-body">
+            <h3>Camarones a la plancha</h3>
+            <p>A la plancha, con arroz y ensalada de aguacate, pepino y tomate.</p>
+            <a class="order-link" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Camarones%20a%20la%20plancha" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="dish rv">
+          <div class="dish-art a4"><span class="tag">En salsa</span>
+            <svg viewBox="0 0 120 90" role="img" aria-label="Ilustración de camarones en salsa oscura"><path d="M16 44h88c0 20-18 34-44 34S16 64 16 44z" fill="#fdf6ea"/><ellipse cx="60" cy="44" rx="44" ry="9" fill="#3a2110"/><path d="M34 32c6-2 12 1 14 7M58 26c6-2 12 1 14 7M80 32c6-2 12 1 14 7" stroke="#ff6b4a" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M28 78h64" stroke="#f2b33d" stroke-width="4" stroke-linecap="round"/></svg>
+          </div>
+          <div class="dish-body">
+            <h3>Camarones en salsa oscura</h3>
+            <p>Camarones bañados en salsa oscura, de los que piden pan para limpiar el plato.</p>
+            <a class="order-link" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Camarones%20en%20salsa%20oscura" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="dish rv">
+          <div class="dish-art a5"><span class="tag">Picosito</span>
+            <svg viewBox="0 0 120 90" role="img" aria-label="Ilustración de ceviche de camarón picante"><path d="M38 18h44l-5 52c0 5-4 8-9 8h-16c-5 0-9-3-9-8L38 18z" fill="#fdf6ea" opacity=".95"/><path d="M41 30h38l-2 22H43L41 30z" fill="#e8502f"/><rect x="48" y="36" width="7" height="7" rx="1.5" fill="#fdf6ea"/><rect x="60" y="40" width="7" height="7" rx="1.5" fill="#f2b33d"/><rect x="66" y="33" width="7" height="7" rx="1.5" fill="#7fb069"/><rect x="54" y="46" width="7" height="7" rx="1.5" fill="#fdf6ea"/><path d="M84 14c5-1 9 2 10 6" stroke="#ff6b4a" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
+          </div>
+          <div class="dish-body">
+            <h3>Ceviche de camarón</h3>
+            <p>Ceviche de camarón con su punto picante, fresco y al momento.</p>
+            <a class="order-link" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Ceviche%20de%20camar%C3%B3n" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="dish rv">
+          <div class="dish-art a6"><span class="tag">El clásico</span>
+            <svg viewBox="0 0 120 90" role="img" aria-label="Ilustración de cóctel de camarón"><path d="M28 22h64c0 16-10 28-24 32v14h10v6H42v-6h10V54C38 50 28 38 28 22z" fill="#fdf6ea" opacity=".95"/><path d="M33 28h54c-1 10-7 17-16 20H49C40 45 34 38 33 28z" fill="#ff6b4a"/><path d="M86 12c6-1 11 3 12 8" stroke="#e8502f" stroke-width="6" stroke-linecap="round" fill="none"/><circle cx="46" cy="36" r="3" fill="#fdf6ea"/><circle cx="60" cy="40" r="3" fill="#f2b33d"/><circle cx="72" cy="35" r="3" fill="#7fb069"/></svg>
+          </div>
+          <div class="dish-body">
+            <h3>Cóctel de camarón</h3>
+            <p>El clásico cóctel de camarón, bien frío y bien servido.</p>
+            <a class="order-link" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20C%C3%B3ctel%20de%20camar%C3%B3n" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO LLEGAR -->
+  <section id="llegar" style="padding-top:10px">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div><div class="num">02 — Cómo llegar</div><h2>No te pierdas: <em>así se llega</em></h2></div>
+        <p>La pregunta número uno de la apertura fue la dirección. Aquí está en grande, con mapa y guía por WhatsApp.</p>
+      </div>
+      <div class="llegar-grid">
+        <div class="llegar-info rv">
+          <div class="label">Dirección</div>
+          <div class="addr-big">Calle Venustiano Carranza <span>#1217</span><br>Col. Hidalgo</div>
+          <p>Cd. Valles, San Luis Potosí. Somos el restaurante de mariscos nuevo de la colonia Hidalgo.</p>
+          <div class="ref">Referencia: <b>hacia la cerillera</b></div>
+          <div class="addr-actions">
+            <a class="btn btn-wa" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20voy%20en%20camino%2C%20%C2%BFme%20ayudan%20a%20llegar%3F" target="_blank" rel="noopener">Cómo llegar por WhatsApp</a>
+            <a class="btn btn-ghost" style="color:var(--cream);border-color:rgba(253,246,234,.55)" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Venustiano+Carranza+1217+Col.+Hidalgo+Ciudad+Valles+San+Luis+Potosi" target="_blank" rel="noopener">Abrir en Maps</a>
+          </div>
+        </div>
+        <div class="map-frame rv">
+          <iframe title="Mapa: Calle Venustiano Carranza #1217, Col. Hidalgo, Ciudad Valles, S.L.P." src="https://www.google.com/maps?q=Calle%20Venustiano%20Carranza%201217%2C%20Col.%20Hidalgo%2C%20Ciudad%20Valles%2C%20San%20Luis%20Potos%C3%AD&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APERTURA -->
+  <section id="apertura" style="padding-top:10px">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div><div class="num">03 — La apertura</div><h2>Un sueño que <em>ya abrió</em></h2></div>
+        <p>Corte de listón, bendición y casa llena: así fue el primer día de 1991.</p>
+      </div>
+      <div class="open-grid">
+        <div class="open-copy rv">
+          <p>El <b>sábado 14 de noviembre</b> cortamos el listón de <b>1991 Restaurante Mariscos</b> en Ciudad Valles, con la bendición del negocio y la casa llena de familia y amigos.</p>
+          <p>Traemos a la Huasteca el sabor de dos costas: <b>mariscos del Pacífico y del Golfo</b>, preparados al momento. Nuestra especialidad desde el día uno: los <b>Camarones Louisiana</b>, estilo Cajun, desde $330.</p>
+          <p class="sig">— Javier Escobedo, anfitrión de la casa</p>
+          <div class="addr-actions">
+            <a class="btn btn-wa" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+        <div class="open-art rv" aria-hidden="true">
+          <span class="tape"></span><span class="scissors">✂</span>
+          <div class="big"><span class="n">¡YA<br>ABRIMOS!</span><span class="s">sábado 14 de noviembre · Cd. Valles</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-in">
+      <div><b>1991 Restaurante Mariscos</b><br>Calle Venustiano Carranza #1217, Col. Hidalgo<br>Cd. Valles, S.L.P. · Hacia la cerillera</div>
+      <div>Mariscos del Pacífico y del Golfo<br>Especialidad: Camarones Louisiana — desde $330<br><a href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp: +52 833 761 3763</a></div>
+    </div>
+    <p class="concept">Concept preview built by SiteSprint Studio.</p>
+  </div>
+</footer>
+
+<div class="sticky-wa">
+  <a class="m" href="#llegar">Cómo llegar</a>
+  <a class="w" href="https://wa.me/528337613763?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+</div>
+
+<div class="chatw">
+  <button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+</div>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente 1991 Restaurante Mariscos">
+  <div class="chatw-head"><div><b>Asistente 1991</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+  <div class="chatw-msgs" id="chatwMsgs"></div>
+  <div class="chatw-chips" id="chatwChips"></div>
+  <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  /* scroll reveal */
+  var rvEls=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    rvEls.forEach(function(el){ io.observe(el); });
+  } else { rvEls.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* assistant — answers ONLY from facts on this page */
+  var WA="https://wa.me/528337613763";
+  var KB={
+    greeting:"¡Hola! Soy el asistente demo de 1991 Restaurante Mariscos en Ciudad Valles. Pregúntame por la dirección, cómo llegar, los platillos o la especialidad de la casa.",
+    fallback:"Eso no lo tengo en esta demo. Escríbenos por WhatsApp al +52 833 761 3763 y te ayudamos enseguida.",
+    chips:["¿Dónde están?","¿Cómo llego?","¿Cuál es la especialidad?","¿Qué platillos hay?","¿Cuándo abrieron?"],
+    items:[
+      {k:["louisiana","cajun","especialidad"],a:"Nuestra especialidad: Camarones Louisiana (camarones estilo Cajun), desde $330.",link:{t:"Pedir: Camarones Louisiana",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Camarones%20Louisiana"}},
+      {k:["pescado"],a:"Pescado frito entero con camarones: pescado entero frito coronado con camarones.",link:{t:"Pedir: Pescado frito entero",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Pescado%20frito%20entero%20con%20camarones"}},
+      {k:["ostion"],a:"Ostiones frescos, servidos sobre hielo.",link:{t:"Pedir: Ostiones",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Ostiones"}},
+      {k:["plancha"],a:"Camarones a la plancha, con arroz y ensalada de aguacate, pepino y tomate.",link:{t:"Pedir: Camarones a la plancha",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Camarones%20a%20la%20plancha"}},
+      {k:["salsa oscura"],a:"Camarones en salsa oscura, uno de los platillos de la apertura.",link:{t:"Pedir: Camarones en salsa oscura",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Camarones%20en%20salsa%20oscura"}},
+      {k:["ceviche"],a:"Ceviche de camarón, con su punto picante.",link:{t:"Pedir: Ceviche de camarón",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20Ceviche%20de%20camar%C3%B3n"}},
+      {k:["coctel","cóctel"],a:"Cóctel de camarón, el clásico, bien frío.",link:{t:"Pedir: Cóctel de camarón",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20quiero%20pedir%3A%20C%C3%B3ctel%20de%20camar%C3%B3n"}}
+    ],
+    intents:[
+      {k:["hola","buenas"],g:1,a:"¡Hola! Pregúntame por la dirección, los platillos o la especialidad de la casa."},
+      {k:["donde","direccion","dirección","ubicacion","ubicación","quedan","encuentran"],a:"Estamos en Calle Venustiano Carranza #1217, Col. Hidalgo, Cd. Valles, S.L.P. Referencia: hacia la cerillera. En la sección Cómo llegar de esta página tienes el mapa.",link:{t:"Guiarme por WhatsApp",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20voy%20en%20camino%2C%20%C2%BFme%20ayudan%20a%20llegar%3F"}},
+      {k:["llegar","llega","ruta","mapa","maps"],a:"Llega a Calle Venustiano Carranza #1217, Col. Hidalgo, en Cd. Valles — hacia la cerillera. Toca el botón y te guiamos por WhatsApp, o abre el mapa en la sección Cómo llegar.",link:{t:"Guiarme por WhatsApp",href:WA+"?text=Hola%201991%20Restaurante%20Mariscos%2C%20voy%20en%20camino%2C%20%C2%BFme%20ayudan%20a%20llegar%3F"}},
+      {k:["menu","menú","carta","platillos","venden","ofrecen","comida","hay"],a:"De la cocina: pescado frito entero con camarones, ostiones en hielo, camarones a la plancha con arroz y ensalada, camarones en salsa oscura, ceviche de camarón picante y cóctel de camarón. La especialidad: Camarones Louisiana desde $330.",link:{t:"Pedir por WhatsApp",href:WA}},
+      {k:["precio","cuesta","cuestan","vale","cuanto","cuánto"],a:"El único precio publicado es el de la especialidad: Camarones Louisiana desde $330. Para precios de los demás platillos, escríbenos por WhatsApp.",link:{t:"Preguntar por WhatsApp",href:WA}},
+      {k:["abrieron","apertura","inaugur","cuando","nuevo","abrio","abrió"],a:"Abrimos el sábado 14 de noviembre con corte de listón y bendición del negocio. Somos el restaurante de mariscos nuevo de la Col. Hidalgo, en Cd. Valles."},
+      {k:["pacifico","pacífico","golfo","tipo","estilo"],a:"Servimos mariscos del Pacífico y del Golfo, preparados al momento."},
+      {k:["dueno","dueño","propietario","javier","escobedo"],a:"El anfitrión de la casa es Javier Escobedo, quien recibió a los invitados el día de la apertura."},
+      {k:["pedir","ordenar","comprar","domicilio","llevar"],a:"Para pedir, toca Pedir por WhatsApp en el platillo que te antoje y tu mensaje llega listo. También puedes escribirnos directo.",link:{t:"Pedir por WhatsApp",href:WA}},
+      {k:["telefono","teléfono","whatsapp","numero","número","contacto"],a:"WhatsApp: +52 833 761 3763.",link:{t:"Escribir por WhatsApp",href:WA}},
+      {k:["gracias"],a:"¡Con gusto! Te esperamos en 1991 Restaurante Mariscos, en la Col. Hidalgo de Cd. Valles."}
+    ]
+  };
+  var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+  function addMsg(txt,who,link){
+    var d=document.createElement('div'); d.className='msg '+who; d.textContent=txt;
+    if(link){ var a=document.createElement('a'); a.className='msg-link'; a.href=link.href; a.target='_blank'; a.rel='noopener'; a.textContent=link.t; d.appendChild(document.createElement('br')); d.appendChild(a); }
+    msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight;
+  }
+  function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+  function answer(q){
+    var n=norm(q),i,j;
+    for(i=0;i<KB.items.length;i++){ for(j=0;j<KB.items[i].k.length;j++){ if(n.indexOf(norm(KB.items[i].k[j]))>-1){ addMsg(KB.items[i].a,'bot',KB.items[i].link); return; } } }
+    for(i=0;i<KB.intents.length;i++){ for(j=0;j<KB.intents[i].k.length;j++){ if(n.indexOf(norm(KB.intents[i].k[j]))>-1){ addMsg(KB.intents[i].a,'bot',KB.intents[i].link); return; } } }
+    addMsg(KB.fallback,'bot',{t:"Escribir por WhatsApp",href:WA});
+  }
+  function send(v){ var t=(v||'').trim(); if(!t) return; addMsg(t,'user'); setTimeout(function(){ answer(t); },260); }
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open'); btn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&!started){ started=true; addMsg(KB.greeting,'bot'); KB.chips.forEach(function(c){ var b=document.createElement('button'); b.type='button'; b.className='chip-btn'; b.textContent=c; b.addEventListener('click',function(){ send(c); }); chips.appendChild(b); }); }
+  });
+  document.getElementById('chatwClose').addEventListener('click',function(){ panel.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+  document.getElementById('chatwForm').addEventListener('submit',function(e){ e.preventDefault(); var i=document.getElementById('chatwInput'); send(i.value); i.value=''; });
+})();
+</script>
+</body>
+</html>

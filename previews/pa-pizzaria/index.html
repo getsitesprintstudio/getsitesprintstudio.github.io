@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P.A Pizzaria Delivery — Campanha, MG | Cardápio permanente e pedido pelo WhatsApp</title>
+<meta name="description" content="P.A Pizzaria Delivery, Campanha/MG. Cardápio permanente com preços, promoção do dia e pedido montado na hora pelo WhatsApp. Massa fresca todo dia, meio a meio e passamos cartão.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF2DE; --paper:#FFF9EC; --red:#C1271B; --red-d:#8F1B12; --red-x:#6E130C;
+  --ink:#22301C; --basil:#3F7A37; --basil-d:#2C5A27; --cheese:#F0A41F; --cheese-l:#FFC94D;
+  --line:rgba(34,48,28,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Archivo',sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden}
+::selection{background:var(--red);color:var(--cream)}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.serif-i{font-family:'Fraunces',serif;font-style:italic;font-weight:600}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--ink);color:var(--cream);position:relative;z-index:20}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:10px;padding-bottom:10px}
+.topbar .label{color:var(--cheese-l)}
+.topbar a{font-weight:700;font-size:13px;text-decoration:none;border-bottom:2px solid var(--cheese);padding-bottom:1px}
+.topbar a:hover{color:var(--cheese-l)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:56px 0 0;overflow:hidden}
+.hero .flag{display:flex;height:8px}
+.hero .flag i{flex:1}
+.hero .flag i:nth-child(1){background:var(--basil)}
+.hero .flag i:nth-child(2){background:var(--paper)}
+.hero .flag i:nth-child(3){background:var(--red)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:10px;align-items:center;position:relative}
+.hero-kicker{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.hero-kicker .rule{height:1px;width:56px;background:var(--ink)}
+.hero h1{font-family:'Anton',sans-serif;font-weight:400;line-height:.92;letter-spacing:-.01em;text-transform:uppercase}
+.hero h1 .l1{display:block;font-size:clamp(3.2rem,10.5vw,7.6rem);color:var(--red)}
+.hero h1 .l2{display:block;font-size:clamp(3.2rem,10.5vw,7.6rem);color:var(--ink)}
+.hero h1 .l3{display:block;font-family:'Fraunces',serif;font-style:italic;font-weight:600;text-transform:none;letter-spacing:0;font-size:clamp(1.7rem,4.4vw,3.1rem);color:var(--basil-d);margin-top:10px}
+.hero-sub{max-width:46ch;margin-top:18px;font-size:17px}
+.hero-sub b{color:var(--red-d)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:15px;text-decoration:none;padding:15px 24px;border-radius:999px;border:2px solid var(--ink);transition:transform .18s ease,background .18s ease,color .18s ease,box-shadow .18s ease;cursor:pointer;background:transparent;color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--red);border-color:var(--red);color:#FFF6E6;box-shadow:5px 5px 0 var(--ink)}
+.btn.wa:hover{background:var(--red-d);box-shadow:7px 7px 0 var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream)}
+.hero-art{position:relative;min-height:340px}
+.hero-art .pizza{width:min(118%,560px);max-width:none;margin-left:-4%;filter:drop-shadow(18px 22px 0 rgba(34,48,28,.12))}
+.stamp{position:absolute;top:6px;right:2px;background:var(--cheese);color:var(--red-x);border:3px solid var(--red-x);border-radius:50%;width:148px;height:148px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(9deg);box-shadow:0 10px 24px rgba(34,48,28,.25);z-index:3;padding:10px}
+.stamp .s1{font-size:10px;font-weight:800;letter-spacing:.14em}
+.stamp .s2{font-family:'Anton',sans-serif;font-size:31px;line-height:1;margin:3px 0}
+.stamp .s3{font-size:10px;font-weight:700;letter-spacing:.08em}
+.hero-note{position:absolute;bottom:8px;left:6px;background:var(--paper);border:1.5px solid var(--ink);border-radius:12px;padding:10px 14px;font-size:13.5px;font-weight:600;transform:rotate(-2.5deg);box-shadow:4px 4px 0 rgba(34,48,28,.85);max-width:250px;z-index:3}
+.hero-note .serif-i{color:var(--red)}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--red);color:#FFF3D6;overflow:hidden;padding:11px 0;border-top:2px solid var(--red-x);border-bottom:2px solid var(--red-x);margin-top:44px}
+.marquee-track{display:flex;gap:0;width:max-content;animation:mq 26s linear infinite;font-family:'Anton',sans-serif;font-size:19px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.marquee-track span{padding:0 14px}
+.marquee-track b{color:var(--cheese-l);font-weight:400}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:72px 0 8px}
+.sec-head{display:flex;align-items:baseline;gap:18px;border-top:2px solid var(--ink);padding-top:16px;margin-bottom:30px}
+.sec-head .num{font-family:'Anton',sans-serif;font-size:15px;color:var(--red);letter-spacing:.1em}
+.sec-head h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(1.9rem,5vw,3.2rem);text-transform:uppercase;line-height:1;letter-spacing:.01em}
+.sec-head h2 .serif-i{text-transform:none;font-size:.72em;color:var(--basil-d)}
+.sec-head p{margin-left:auto;max-width:34ch;font-size:14.5px;text-align:right}
+
+/* ---------- promo panel ---------- */
+.promo-panel{background:var(--ink);color:var(--cream);border-radius:22px;padding:34px 32px;position:relative;overflow:hidden;box-shadow:10px 10px 0 rgba(193,39,27,.9)}
+.promo-panel::after{content:"";position:absolute;right:-70px;top:-70px;width:250px;height:250px;border-radius:50%;border:34px solid rgba(240,164,31,.16)}
+.promo-panel .label{color:var(--cheese-l)}
+.promo-panel h3{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(1.7rem,4.4vw,2.7rem);line-height:1.05;text-transform:uppercase;margin:10px 0 8px;max-width:16ch}
+.promo-panel h3 .serif-i{text-transform:none;color:var(--cheese-l);font-size:.8em}
+.promo-panel p{max-width:52ch;color:#EDE4CB}
+.promo-panel p b{color:#fff}
+.promo-free{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;position:relative;z-index:2}
+.promo-free span{background:var(--cheese);color:var(--red-x);font-weight:800;font-size:13.5px;padding:9px 15px;border-radius:999px;transform:rotate(-1.5deg)}
+.promo-free span:nth-child(2){transform:rotate(1.2deg);background:var(--cream)}
+.promo-panel .btn{margin-top:24px;position:relative;z-index:2}
+
+/* ---------- builder ---------- */
+.builder{background:var(--paper);border:2px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:10px 10px 0 rgba(34,48,28,.9)}
+.builder-top{background:var(--red);color:#FFF6E6;padding:22px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between}
+.builder-top h3{font-family:'Anton',sans-serif;font-weight:400;font-size:24px;text-transform:uppercase;letter-spacing:.02em}
+.sizepick{display:flex;background:rgba(0,0,0,.22);border-radius:999px;padding:4px;gap:4px}
+.sizepick button{border:0;background:transparent;color:#FFE9C4;font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;padding:10px 18px;border-radius:999px;cursor:pointer;transition:background .15s ease,color .15s ease}
+.sizepick button.on{background:var(--cream);color:var(--red-d)}
+.sizepick button small{display:block;font-size:11px;font-weight:700;letter-spacing:.04em}
+.bgroup{padding:8px 28px 0}
+.bgroup>.label{color:var(--red);display:block;padding:16px 0 4px;border-bottom:1px solid var(--line)}
+.brow{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.brow:last-child{border-bottom:0}
+.brow .bname{flex:1}
+.brow .bname h4{font-size:17px;font-weight:800}
+.brow .bname p{font-size:13px;color:#5A6650}
+.brow .bprice{font-family:'Anton',sans-serif;font-size:19px;color:var(--red-d);min-width:86px;text-align:right}
+.stepper{display:flex;align-items:center;gap:2px;border:2px solid var(--ink);border-radius:999px;padding:3px;background:#fff}
+.stepper button{width:32px;height:32px;border-radius:50%;border:0;background:var(--cream);font-size:19px;font-weight:800;cursor:pointer;color:var(--ink);transition:background .15s ease;line-height:1}
+.stepper button:hover{background:var(--cheese-l)}
+.stepper .q{min-width:30px;text-align:center;font-weight:800;font-size:16px}
+.brow select{font-family:'Archivo',sans-serif;font-weight:700;font-size:14.5px;padding:9px 10px;border:2px solid var(--ink);border-radius:10px;background:#fff;color:var(--ink);max-width:150px}
+.half-picks{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.half-picks .plus{font-family:'Anton',sans-serif;color:var(--red);font-size:18px}
+.promo-flag{display:none;margin:18px 28px 0;background:#EAF3E4;border:1.5px dashed var(--basil);color:var(--basil-d);border-radius:12px;padding:12px 16px;font-weight:700;font-size:14.5px}
+.promo-flag.show{display:block}
+.builder-foot{display:flex;flex-wrap:wrap;align-items:center;gap:18px;justify-content:space-between;padding:22px 28px 26px;background:var(--cream);border-top:2px solid var(--ink);margin-top:14px}
+.total-box .label{color:var(--red)}
+.total-box b{font-family:'Anton',sans-serif;font-weight:400;font-size:42px;line-height:1;color:var(--ink)}
+.total-box small{display:block;font-size:12.5px;color:#5A6650;font-weight:600}
+#sendBtn.disabled{opacity:.45;pointer-events:none}
+
+/* ---------- menu index ---------- */
+.menu-list{border-top:1px solid var(--line)}
+.mrow{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;padding:20px 6px;border-bottom:1px solid var(--line);transition:background .18s ease,padding-left .18s ease}
+.mrow:hover{background:var(--paper);padding-left:14px}
+.mrow .idx{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:20px;color:var(--red)}
+.mrow h4{font-size:19px;font-weight:800}
+.mrow p{font-size:14px;color:#5A6650;max-width:56ch}
+.mrow .sizes{font-family:'Anton',sans-serif;color:var(--ink);font-size:15px;letter-spacing:.04em;text-align:right}
+.mrow .sizes small{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:11.5px;color:var(--red);letter-spacing:.1em}
+.ord{font-weight:800;font-size:13.5px;text-decoration:none;color:var(--red-d);border-bottom:2px solid var(--cheese);white-space:nowrap}
+.ord:hover{color:var(--red)}
+.menu-note{margin-top:18px;background:var(--paper);border:1.5px dashed var(--ink);border-radius:14px;padding:16px 20px;font-size:15px}
+.menu-note b{color:var(--red-d)}
+
+/* ---------- facts ---------- */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink);border-radius:22px;overflow:hidden;background:var(--paper)}
+.fact{padding:26px 22px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact .n{font-family:'Fraunces',serif;font-style:italic;font-weight:600;color:var(--red);font-size:19px}
+.fact h4{font-family:'Anton',sans-serif;font-weight:400;font-size:20px;text-transform:uppercase;margin:8px 0 6px;line-height:1.1}
+.fact p{font-size:14px;color:#5A6650}
+
+/* ---------- final cta / footer ---------- */
+.final{margin:76px 0 0;background:var(--red);color:#FFF3D6;border-radius:22px;padding:44px 34px;text-align:center;position:relative;overflow:hidden}
+.final h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(2rem,6vw,3.6rem);text-transform:uppercase;line-height:1}
+.final h2 .serif-i{text-transform:none;color:var(--cheese-l)}
+.final p{margin:12px auto 24px;max-width:48ch;color:#FFE9C4}
+.final .btn{background:var(--cream);border-color:var(--cream);color:var(--red-d);box-shadow:5px 5px 0 var(--red-x)}
+.final .btn:hover{background:#fff}
+footer{padding:38px 0 110px;text-align:center}
+footer .flogo{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;color:var(--red)}
+footer p{font-size:14px;color:#5A6650;margin-top:6px}
+footer a{font-weight:700}
+.concept{margin-top:16px;font-size:12.5px;letter-spacing:.06em;color:#8A927E}
+
+/* ---------- sticky + chat ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);padding:10px 16px;display:none}
+.sticky a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#FFF6E6;font-weight:800;text-decoration:none;padding:13px;border-radius:999px;font-size:15px}
+.chatw-btn{position:fixed;right:18px;bottom:20px;z-index:55;background:var(--basil);color:#fff;border:2px solid var(--ink);width:58px;height:58px;border-radius:50%;font-size:25px;cursor:pointer;box-shadow:4px 4px 0 rgba(34,48,28,.85);transition:transform .15s ease}
+.chatw-btn:hover{transform:translateY(-2px)}
+.chatw-panel{position:fixed;right:18px;bottom:88px;z-index:55;width:min(92vw,360px);background:var(--paper);border:2px solid var(--ink);border-radius:18px;overflow:hidden;display:none;box-shadow:8px 8px 0 rgba(34,48,28,.85)}
+.chatw-panel.open{display:block}
+.chatw-head{background:var(--ink);color:var(--cream);padding:14px 18px}
+.chatw-head b{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.03em}
+.chatw-head p{font-size:12.5px;color:#CFC7AC}
+.chatw-body{padding:14px;max-height:290px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}
+.msg{padding:10px 13px;border-radius:14px;font-size:14px;max-width:88%}
+.msg.bot{background:#F1E8CF;align-self:flex-start;border-bottom-left-radius:4px}
+.msg.me{background:var(--red);color:#FFF6E6;align-self:flex-end;border-bottom-right-radius:4px}
+.msg a{font-weight:800;color:var(--red-d)}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:0 14px 12px}
+.chip{border:1.5px solid var(--ink);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:'Archivo',sans-serif}
+.chip:hover{background:var(--cheese-l)}
+.chatw-form{display:flex;border-top:2px solid var(--ink)}
+.chatw-form input{flex:1;border:0;padding:13px 14px;font-family:'Archivo',sans-serif;font-size:14px;background:#fff;outline:none}
+.chatw-form button{border:0;background:var(--red);color:#FFF6E6;font-weight:800;padding:0 18px;cursor:pointer;font-family:'Archivo',sans-serif}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{min-height:0;margin-top:8px}
+  .hero-art .pizza{width:min(92%,440px);margin:0 auto}
+  .stamp{width:122px;height:122px;right:6px}
+  .stamp .s2{font-size:25px}
+  .hero-note{left:0}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact{border-bottom:1px solid var(--line)}
+  .sec-head p{display:none}
+  .sticky{display:block}
+  .chatw-btn{bottom:84px}
+  .chatw-panel{bottom:152px}
+  .mrow{grid-template-columns:38px 1fr}
+  .mrow .sizes{grid-column:2;text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <span class="label">P.A Pizzaria Delivery · Campanha — MG</span>
+    <a href="https://www.instagram.com/p.a.pizzasdelivery" target="_blank" rel="noopener">@p.a.pizzasdelivery</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-kicker"><span class="label" style="color:var(--red)">Delivery · Massa fresca todo dia</span><span class="rule"></span><span class="label">Passamos cartão</span></div>
+        <h1><span class="l1">P.A</span><span class="l2">Pizzaria</span><span class="l3">a pizza do bairro, sem sair de casa</span></h1>
+        <p class="hero-sub">O cardápio da P.A agora mora aqui — <b>permanente, com preço e tudo</b>. Nada de caçar promoção em story que some: monte seu pedido abaixo e envie direto pro WhatsApp.</p>
+        <div class="hero-ctas">
+          <a class="btn wa" href="#pedido">Montar meu pedido →</a>
+          <a class="btn ghost" href="#cardapio">Ver o cardápio</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="stamp"><span class="s1">Promoção de hoje</span><span class="s2">R$ 42</span><span class="s3">Pizza Grande</span></div>
+        <svg class="pizza" viewBox="0 0 520 520" role="img" aria-label="Ilustração de pizza da P.A Pizzaria">
+          <circle cx="260" cy="268" r="228" fill="#E9B558"/>
+          <circle cx="260" cy="268" r="204" fill="#C1271B"/>
+          <circle cx="260" cy="268" r="192" fill="#F6C65B"/>
+          <circle cx="260" cy="268" r="192" fill="none" stroke="#E9A93B" stroke-width="3" stroke-dasharray="3 14" stroke-linecap="round"/>
+          <path d="M260 268 L260 76 A192 192 0 0 1 426 172 Z" fill="#F8CF6E" opacity=".65"/>
+          <path d="M260 268 L426 364 A192 192 0 0 1 260 460 Z" fill="#F8CF6E" opacity=".5"/>
+          <path d="M260 268 L94 172 A192 192 0 0 1 260 76 Z" fill="#F8CF6E" opacity=".4"/>
+          <g fill="#A91F14">
+            <circle cx="330" cy="180" r="34"/><circle cx="180" cy="230" r="34"/><circle cx="300" cy="330" r="34"/><circle cx="205" cy="360" r="30"/><circle cx="385" cy="285" r="28"/>
+          </g>
+          <g fill="#C1271B">
+            <circle cx="330" cy="180" r="25"/><circle cx="180" cy="230" r="25"/><circle cx="300" cy="330" r="25"/><circle cx="205" cy="360" r="21"/><circle cx="385" cy="285" r="19"/>
+          </g>
+          <g fill="#3F7A37">
+            <ellipse cx="255" cy="150" rx="17" ry="9" transform="rotate(-24 255 150)"/>
+            <ellipse cx="150" cy="315" rx="17" ry="9" transform="rotate(30 150 315)"/>
+            <ellipse cx="345" cy="390" rx="17" ry="9" transform="rotate(-12 345 390)"/>
+            <ellipse cx="410" cy="200" rx="15" ry="8" transform="rotate(44 410 200)"/>
+            <ellipse cx="120" cy="180" rx="15" ry="8" transform="rotate(-40 120 180)"/>
+          </g>
+          <g fill="#FFF3D6" opacity=".85">
+            <circle cx="285" cy="240" r="7"/><circle cx="225" cy="290" r="6"/><circle cx="360" cy="330" r="6"/><circle cx="165" cy="150" r="6"/><circle cx="255" cy="405" r="7"/>
+          </g>
+          <path d="M260 268 L452 268" stroke="#E9A93B" stroke-width="4"/>
+          <path d="M260 268 L357 436" stroke="#E9A93B" stroke-width="4"/>
+          <path d="M260 268 L163 100" stroke="#E9A93B" stroke-width="4"/>
+        </svg>
+        <div class="hero-note">Fazemos <span class="serif-i">meio a meio</span> — dois sabores na mesma pizza.</div>
+      </div>
+    </div>
+  </div>
+  <div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Massa fresca todo dia <b>•</b> Meio a meio <b>•</b> Passamos cartão <b>•</b> Delivery rápido <b>•</b> Campanha — MG <b>•</b></span>
+    <span>Massa fresca todo dia <b>•</b> Meio a meio <b>•</b> Passamos cartão <b>•</b> Delivery rápido <b>•</b> Campanha — MG <b>•</b></span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- 01 PROMO + BUILDER -->
+  <section id="pedido">
+    <div class="sec-head" data-rv><span class="num">01 —</span><h2>Promoção do dia <span class="serif-i">&amp; monte seu pedido</span></h2><p>A promoção que antes sumia no story agora fica aqui, fixa, com o pedido montado na hora.</p></div>
+
+    <div class="promo-panel" data-rv>
+      <span class="label">Promoção do dia — fixa nesta página</span>
+      <h3>Pediu 2 grandes, <span class="serif-i">ganhou o resto</span></h3>
+      <p>Na compra de <b>2 pizzas grandes</b>, você ganha <b>1 Guaraná Tropical 2L</b> e <b>borda recheada grátis</b>. Sem print, sem story, sem prazo escondido.</p>
+      <div class="promo-free"><span>Guaraná Tropical 2L grátis</span><span>Borda recheada grátis</span></div>
+      <a class="btn wa" href="https://wa.me/5535999556047?text=Ol%C3%A1%2C%20P.A%20Pizzaria!%20Quero%20a%20promo%C3%A7%C3%A3o%20do%20dia%3A%202%20pizzas%20grandes%20com%20Guaran%C3%A1%20Tropical%202L%20e%20borda%20recheada%20gr%C3%A1tis" target="_blank" rel="noopener">Quero essa promoção →</a>
+    </div>
+
+    <div style="height:26px"></div>
+
+    <div class="builder" data-rv>
+      <div class="builder-top">
+        <h3>Monte seu pedido</h3>
+        <div class="sizepick" role="group" aria-label="Tamanho da pizza">
+          <button type="button" id="sizeG" class="on">Grande<small>R$ 42,00</small></button>
+          <button type="button" id="sizeM">Média<small>R$ 37,00</small></button>
+        </div>
+      </div>
+
+      <div class="bgroup">
+        <span class="label">Sabores da promoção — preço de hoje</span>
+        <div id="flavorRows"></div>
+      </div>
+
+      <div class="bgroup">
+        <span class="label">Meio a meio — dois sabores, uma pizza</span>
+        <div class="brow">
+          <div class="bname half-picks">
+            <select id="half1" aria-label="Primeiro sabor do meio a meio"></select>
+            <span class="plus">+</span>
+            <select id="half2" aria-label="Segundo sabor do meio a meio"></select>
+          </div>
+          <span class="bprice" data-price-label>R$ 42,00</span>
+          <div class="stepper"><button type="button" data-half="-1" aria-label="Diminuir">−</button><span class="q" id="halfQ">0</span><button type="button" data-half="1" aria-label="Aumentar">+</button></div>
+        </div>
+      </div>
+
+      <div class="bgroup">
+        <span class="label">Turbo de + R$ 4,00 — borda ou refri</span>
+        <div id="extraRows"></div>
+      </div>
+
+      <div class="promo-flag" id="promoFlag">✓ Promoção do dia ativada: com 2+ pizzas grandes, o Guaraná Tropical 2L e a borda recheada vão por conta da casa — já anotei no seu pedido.</div>
+
+      <div class="builder-foot">
+        <div class="total-box"><span class="label">Total do pedido</span><b id="bTotal">R$ 0,00</b><small>Entrega e pagamento combinados no WhatsApp · passamos cartão</small></div>
+        <a class="btn wa disabled" id="sendBtn" href="https://wa.me/5535999556047" target="_blank" rel="noopener">Enviar pedido no WhatsApp →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 MENU -->
+  <section id="cardapio">
+    <div class="sec-head" data-rv><span class="num">02 —</span><h2>Cardápio <span class="serif-i">completo</span></h2><p>O cardápio inteiro da casa, num lugar só — não só o que cabe no story do dia.</p></div>
+    <div class="menu-list" data-rv>
+      <div class="mrow"><span class="idx">a.</span><div><h4>Linha Tradicional</h4><p>Os clássicos da casa — incluindo os sabores da promoção de hoje: Portuguesa, Calabresa, Preguiçosa, Siciliana, Americana e Italiana.</p></div><div class="sizes">M · G<small>ver faixa abaixo</small></div></div>
+      <div class="mrow"><span class="idx">b.</span><div><h4>Moda da Casa</h4><p>As criações com a assinatura da P.A — pergunte os sabores do dia no WhatsApp.</p></div><div class="sizes">M · G<small>ver faixa abaixo</small></div></div>
+      <div class="mrow"><span class="idx">c.</span><div><h4>Linha Especial</h4><p>Os especiais da casa, pra quando a fome pede um degrau acima.</p></div><div class="sizes">M · G<small>ver faixa abaixo</small></div></div>
+      <div class="mrow"><span class="idx">d.</span><div><h4>Pizzas Doces</h4><p>Brigadeiro · Confete · Sonho de Valsa · Prestígio — a sobremesa já sai do mesmo forno.</p></div><div class="sizes">M · G<small>ver faixa abaixo</small></div></div>
+    </div>
+    <div class="menu-note" data-rv>Preços do cardápio completo: <b>de R$ 40,00 a R$ 57,00</b> (tamanhos M e G, conforme o sabor). Quer o preço exato de um sabor? <a class="ord" href="https://wa.me/5535999556047?text=Ol%C3%A1%2C%20P.A%20Pizzaria!%20Quero%20saber%20o%20pre%C3%A7o%20de%20um%20sabor%20do%20card%C3%A1pio" target="_blank" rel="noopener">Perguntar no WhatsApp →</a></div>
+  </section>
+
+  <!-- 03 FACTS -->
+  <section id="casa">
+    <div class="sec-head" data-rv><span class="num">03 —</span><h2>Jeito <span class="serif-i">da casa</span></h2></div>
+    <div class="facts" data-rv>
+      <div class="fact"><span class="n">i.</span><h4>Massa fresca todo dia</h4><p>A massa é feita fresca todos os dias. Nada de massa velha esperando na geladeira.</p></div>
+      <div class="fact"><span class="n">ii.</span><h4>Meio a meio</h4><p>Dois sabores na mesma pizza — metade pra você, metade pra quem divide (ou as duas pra você).</p></div>
+      <div class="fact"><span class="n">iii.</span><h4>Passamos cartão</h4><p>Pagamento no cartão aceito, além das outras formas combinadas no WhatsApp.</p></div>
+      <div class="fact"><span class="n">iv.</span><h4>Delivery rápido</h4><p>Pedido pelo WhatsApp e entrega rápida em Campanha, MG. É só montar o pedido acima e enviar.</p></div>
+    </div>
+
+    <div class="final" data-rv>
+      <h2>Bateu a fome? <span class="serif-i">resolve aqui</span></h2>
+      <p>Monte o pedido com preço na tela e envie pro WhatsApp da P.A — (35) 99955-6047. Sem negociar item por item na conversa.</p>
+      <a class="btn" href="#pedido">Montar meu pedido →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="flogo">P.A Pizzaria Delivery</div>
+    <p>Campanha — MG · Pedidos pelo WhatsApp <a href="https://wa.me/5535999556047" target="_blank" rel="noopener">(35) 99955-6047</a> · Instagram <a href="https://www.instagram.com/p.a.pizzasdelivery" target="_blank" rel="noopener">@p.a.pizzasdelivery</a></p>
+    <p class="concept">Concept preview built by SiteSprint Studio.</p>
+  </div>
+</footer>
+
+<div class="sticky"><a href="https://wa.me/5535999556047?text=Ol%C3%A1%2C%20P.A%20Pizzaria!%20Quero%20fazer%20um%20pedido" target="_blank" rel="noopener">🍕 Pedir pelo WhatsApp — (35) 99955-6047</a></div>
+
+<button class="chatw-btn" id="chatwBtn" aria-label="Abrir assistente">💬</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente P.A Pizzaria">
+  <div class="chatw-head"><b>Assistente P.A</b><p>Respondo com o que está nesta página. O resto, a gente resolve no WhatsApp.</p></div>
+  <div class="chatw-body" id="chatwBody">
+    <div class="msg bot">Oi! Posso te passar a promoção de hoje, os sabores, os preços e como pedir. O que você quer saber?</div>
+  </div>
+  <div class="chatw-chips">
+    <button class="chip" type="button" data-q="Qual a promoção de hoje?">Promoção de hoje</button>
+    <button class="chip" type="button" data-q="Quais os sabores e preços?">Sabores e preços</button>
+    <button class="chip" type="button" data-q="Vocês passam cartão?">Passa cartão?</button>
+    <button class="chip" type="button" data-q="Como faço o pedido?">Como peço?</button>
+  </div>
+  <form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" placeholder="Pergunte aqui..." autocomplete="off"><button type="submit">Enviar</button></form>
+</div>
+
+<script>
+/* ---------- scroll reveal (content visible if JS fails: .rv is only added here) ---------- */
+var rvEls=document.querySelectorAll('[data-rv]');
+rvEls.forEach(function(e){e.classList.add('rv')});
+var reduceM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduceM||!('IntersectionObserver' in window)){rvEls.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.1});rvEls.forEach(function(e){io.observe(e)});}
+
+/* ---------- order builder ---------- */
+var WA='https://wa.me/5535999556047';
+var FLAVORS=['Portuguesa','Calabresa','Preguiçosa','Siciliana','Americana','Italiana'];
+var EXTRAS=[
+  {id:'borda-cat',name:'Borda recheada — catupiry',desc:'Adicional por pizza, + R$ 4,00'},
+  {id:'borda-che',name:'Borda recheada — cheddar',desc:'Adicional por pizza, + R$ 4,00'},
+  {id:'refri2l',name:'Refrigerante 2L',desc:'Pra acompanhar, + R$ 4,00'}
+];
+var PRICES={G:42,M:37};
+var size='G';
+var qty={}; FLAVORS.forEach(function(f){qty[f]=0});
+var eqty={}; EXTRAS.forEach(function(x){eqty[x.id]=0});
+var halfQty=0;
+
+function fmt(v){return 'R$ '+v.toFixed(2).replace('.',',')}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+
+var fr=document.getElementById('flavorRows');
+FLAVORS.forEach(function(f){
+  var row=document.createElement('div');row.className='brow';
+  row.innerHTML='<div class="bname"><h4>'+esc(f)+'</h4><p>Sabor da promoção de hoje</p></div>'+
+    '<span class="bprice" data-price-label>'+fmt(PRICES[size])+'</span>'+
+    '<div class="stepper"><button type="button" data-flavor="'+esc(f)+'" data-d="-1" aria-label="Diminuir">−</button><span class="q" id="q-'+esc(f)+'">0</span><button type="button" data-flavor="'+esc(f)+'" data-d="1" aria-label="Aumentar">+</button></div>';
+  fr.appendChild(row);
+});
+var er=document.getElementById('extraRows');
+EXTRAS.forEach(function(x){
+  var row=document.createElement('div');row.className='brow';
+  row.innerHTML='<div class="bname"><h4>'+esc(x.name)+'</h4><p>'+esc(x.desc)+'</p></div>'+
+    '<span class="bprice">R$ 4,00</span>'+
+    '<div class="stepper"><button type="button" data-extra="'+x.id+'" data-d="-1" aria-label="Diminuir">−</button><span class="q" id="eq-'+x.id+'">0</span><button type="button" data-extra="'+x.id+'" data-d="1" aria-label="Aumentar">+</button></div>';
+  er.appendChild(row);
+});
+var h1=document.getElementById('half1'),h2=document.getElementById('half2');
+FLAVORS.forEach(function(f){h1.add(new Option(f,f));h2.add(new Option(f,f));});
+h2.selectedIndex=1;
+
+function grandesCount(){var n=0;FLAVORS.forEach(function(f){n+=qty[f]});n+=halfQty;return size==='G'?n:0}
+
+function recalc(){
+  document.querySelectorAll('[data-price-label]').forEach(function(el){el.textContent=fmt(PRICES[size])});
+  var total=0,lines=[];
+  FLAVORS.forEach(function(f){
+    document.getElementById('q-'+f).textContent=qty[f];
+    if(qty[f]>0){var v=qty[f]*PRICES[size];total+=v;lines.push(qty[f]+'x Pizza '+(size==='G'?'Grande':'Média')+' — '+f+' ('+fmt(v)+')');}
+  });
+  document.getElementById('halfQ').textContent=halfQty;
+  if(halfQty>0){var hv=halfQty*PRICES[size];total+=hv;lines.push(halfQty+'x Pizza '+(size==='G'?'Grande':'Média')+' meio a meio — '+h1.value+' + '+h2.value+' ('+fmt(hv)+')');}
+  EXTRAS.forEach(function(x){
+    document.getElementById('eq-'+x.id).textContent=eqty[x.id];
+    if(eqty[x.id]>0){var ev=eqty[x.id]*4;total+=ev;lines.push(eqty[x.id]+'x '+x.name+' ('+fmt(ev)+')');}
+  });
+  var promo=grandesCount()>=2;
+  document.getElementById('promoFlag').classList.toggle('show',promo);
+  document.getElementById('bTotal').textContent=fmt(total);
+  var btn=document.getElementById('sendBtn');
+  if(lines.length===0){btn.classList.add('disabled');btn.href=WA;}
+  else{
+    btn.classList.remove('disabled');
+    var msg='Olá, P.A Pizzaria! Quero pedir:\n'+lines.join('\n')+'\nTotal: '+fmt(total);
+    if(promo){msg+='\nPromoção do dia: 2+ grandes = Guaraná Tropical 2L + borda recheada grátis 🎉';}
+    btn.href=WA+'?text='+encodeURIComponent(msg);
+  }
+}
+document.querySelectorAll('[data-flavor]').forEach(function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-flavor');qty[f]=Math.max(0,qty[f]+parseInt(b.getAttribute('data-d'),10));recalc();});});
+document.querySelectorAll('[data-extra]').forEach(function(b){b.addEventListener('click',function(){var id=b.getAttribute('data-extra');eqty[id]=Math.max(0,eqty[id]+parseInt(b.getAttribute('data-d'),10));recalc();});});
+document.querySelectorAll('[data-half]').forEach(function(b){b.addEventListener('click',function(){halfQty=Math.max(0,halfQty+parseInt(b.getAttribute('data-half'),10));recalc();});});
+h1.addEventListener('change',recalc);h2.addEventListener('change',recalc);
+document.getElementById('sizeG').addEventListener('click',function(){size='G';this.classList.add('on');document.getElementById('sizeM').classList.remove('on');recalc();});
+document.getElementById('sizeM').addEventListener('click',function(){size='M';this.classList.add('on');document.getElementById('sizeG').classList.remove('on');recalc();});
+recalc();
+
+/* ---------- assistant (answers only from this page's facts) ---------- */
+var panel=document.getElementById('chatwPanel'),body=document.getElementById('chatwBody');
+document.getElementById('chatwBtn').addEventListener('click',function(){panel.classList.toggle('open');});
+function addMsg(txt,cls){var d=document.createElement('div');d.className='msg '+cls;d.innerHTML=txt;body.appendChild(d);body.scrollTop=body.scrollHeight;}
+var WA_LINK='<a href="'+WA+'?text='+encodeURIComponent('Olá, P.A Pizzaria! Quero fazer um pedido')+'" target="_blank" rel="noopener">chamar no WhatsApp →</a>';
+function answer(q){
+  var s=q.toLowerCase();
+  if(/promo/.test(s))return 'Hoje tem duas: (1) os 6 sabores da promoção saem a R$ 42,00 (grande) e R$ 37,00 (média); (2) promoção do dia — 2 pizzas grandes e você ganha 1 Guaraná Tropical 2L + borda recheada grátis. Monte no início da página ou '+WA_LINK;
+  if(/sabor|card[aá]pio|menu|tem de|quais/.test(s))return 'Sabores da promoção: Portuguesa, Calabresa, Preguiçosa, Siciliana, Americana e Italiana. O cardápio completo tem ainda a linha Tradicional, Moda da Casa, Especiais e as doces (Brigadeiro, Confete, Sonho de Valsa e Prestígio), com preços de R$ 40,00 a R$ 57,00 (M e G).';
+  if(/pre[çc]o|quanto|valor|custa/.test(s))return 'Na promoção de hoje: grande R$ 42,00 e média R$ 37,00 nos 6 sabores. Borda recheada (catupiry ou cheddar) ou refrigerante 2L: + R$ 4,00. No cardápio completo, os preços vão de R$ 40,00 a R$ 57,00.';
+  if(/cart[aã]o|pagamento|pagar|pix/.test(s))return 'Passamos cartão, sim. As demais formas de pagamento você combina direto no pedido pelo WhatsApp.';
+  if(/borda|catupiry|cheddar|refrigerante|refri|guaran/.test(s))return 'Por + R$ 4,00 você adiciona borda recheada de catupiry ou de cheddar, ou um refrigerante 2L. E na promoção do dia (2 grandes), a borda e o Guaraná Tropical 2L saem grátis.';
+  if(/meio|metade/.test(s))return 'Fazemos meio a meio: dois sabores na mesma pizza, no tamanho grande ou médio. Dá pra montar no montador de pedidos aqui da página.';
+  if(/entrega|delivery|demora|taxa/.test(s))return 'Trabalhamos com delivery rápido em Campanha, MG. Monte seu pedido aqui na página e envie — os detalhes da entrega são confirmados no WhatsApp: '+WA_LINK;
+  if(/massa|fresca/.test(s))return 'Nossa massa é fresca, feita todo dia.';
+  if(/hor[aá]rio|abre|fecha|endere[çc]o|onde fica|local/.test(s))return 'Essa informação não está publicada aqui — confirma direto com a gente no WhatsApp: '+WA_LINK;
+  if(/pedir|pedido|como fa[çc]o|whatsapp|zap/.test(s))return 'É simples: monte o pedido no início desta página (o total aparece na hora) e toque em "Enviar pedido no WhatsApp". Ou chama direto: '+WA_LINK;
+  if(/doce|brigadeiro|sobremesa/.test(s))return 'As pizzas doces são: Brigadeiro, Confete, Sonho de Valsa e Prestígio. Os preços do cardápio completo vão de R$ 40,00 a R$ 57,00 (M e G) — confirma o do sabor no WhatsApp.';
+  if(/oi|ol[aá]|boa/.test(s))return 'Olá! Quer saber a promoção de hoje, os sabores ou os preços? É só perguntar.';
+  return 'Isso eu não tenho publicado aqui. Te respondo certinho no WhatsApp: '+WA_LINK;
+}
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var inp=document.getElementById('chatwInput');var v=inp.value.trim();if(!v)return;addMsg(v.replace(/</g,'&lt;'),'me');inp.value='';setTimeout(function(){addMsg(answer(v),'bot')},250);});
+document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){var q=c.getAttribute('data-q');addMsg(q,'me');setTimeout(function(){addMsg(answer(q),'bot')},250);});});
+</script>
+</body>
+</html>
