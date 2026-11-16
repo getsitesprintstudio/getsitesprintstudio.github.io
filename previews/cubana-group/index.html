@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cubana Group — Lagos · Abuja · Enugu · Owerri · Port Harcourt | One Group, Every Night</title>
+<meta name="description" content="Cubana Group: every venue in one place — Pablo, Montana, The Grind, Cubana Hut & Grill, Hustle & Bustle, Crave, Opium, Gustavo and Grand Cubana Hotels Abuja. Reserve any table, or book a room, through one WhatsApp number: +234 906 000 5472.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#060504;--coal:#0d0a07;--coal2:#14100b;--panel:#171209;
+  --gold:#c9a24b;--gold2:#ecd28a;--gold-dim:rgba(201,162,75,.35);
+  --cream:#f4ecda;--cream2:#cfc3ab;--mut:#9a8d76;
+  --ember:#ff8b3d;--wa:#25d366;
+  --line:rgba(201,162,75,.22);--line2:rgba(244,236,218,.09);
+  --disp:"Anton",Impact,sans-serif;--serif:"Fraunces",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;
+  --shadow:0 30px 70px rgba(0,0,0,.55);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--black);color:var(--cream);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:#0a0703}
+img{max-width:100%;display:block}
+a{color:inherit}
+.grain{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E")}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+.label{font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.label em{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:.02em;font-size:15px;color:var(--gold2);font-weight:500}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px;margin-bottom:34px}
+.sec-head h2{font-family:var(--disp);font-weight:400;font-size:clamp(2.4rem,6vw,4.4rem);line-height:.98;letter-spacing:.01em;text-transform:uppercase;margin-top:10px}
+.sec-head h2 i{font-family:var(--serif);font-style:italic;text-transform:none;color:var(--gold2);font-weight:500}
+.sec-head p{max-width:420px;color:var(--cream2);font-size:15.5px}
+section{padding:96px 0 10px}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.35s;background:linear-gradient(180deg,rgba(6,5,4,.88),rgba(6,5,4,0))}
+header.scrolled{background:rgba(6,5,4,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line2)}
+.hdr{max-width:1240px;margin:0 auto;padding:15px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.brand{font-family:var(--disp);font-size:24px;letter-spacing:.14em;line-height:1;text-decoration:none}
+.brand span{color:var(--gold)}
+.brand small{display:block;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.42em;color:var(--mut);margin-top:4px}
+nav.main{display:flex;gap:26px}
+nav.main a{text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--cream2);position:relative;padding:4px 0}
+nav.main a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:.3s}
+nav.main a:hover{color:var(--cream)}nav.main a:hover:after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:800;font-size:13.5px;letter-spacing:.04em;padding:13px 22px;border-radius:999px;border:1px solid var(--gold);color:#0b0803;background:linear-gradient(120deg,var(--gold),var(--gold2));transition:.28s;cursor:pointer;font-family:var(--sans)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(201,162,75,.28)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--gold-dim)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold2);box-shadow:none}
+.btn.wa{background:#123524;border-color:#1f5c3d;color:#b9f4cd}
+.btn.wa:hover{box-shadow:0 14px 30px rgba(37,211,102,.18)}
+.btn.small{padding:10px 17px;font-size:12.5px}
+.hdr .btn{white-space:nowrap}
+@media(max-width:860px){nav.main{display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:0}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:contrast(1.08) saturate(1.12) brightness(.82)}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,5,4,.62) 0%,rgba(6,5,4,.18) 34%,rgba(6,5,4,.55) 68%,var(--black) 100%),radial-gradient(900px 480px at 18% 88%,rgba(255,139,61,.14),transparent 60%)}
+.hero-in{position:relative;z-index:2;width:100%}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--gold2)}
+.hero-eyebrow:before{content:"";width:38px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(4.6rem,17.5vw,15.5rem);line-height:.86;letter-spacing:.005em;text-transform:uppercase;color:var(--cream);text-shadow:0 24px 70px rgba(0,0,0,.6)}
+.hero h1 .goldline{display:block;color:transparent;-webkit-text-stroke:2px var(--gold);text-stroke:2px var(--gold)}
+.hero-sub{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:end;margin:26px 0 8px}
+.hero-sub .big{font-family:var(--serif);font-style:italic;font-size:clamp(1.45rem,3.4vw,2.3rem);line-height:1.25;color:var(--cream)}
+.hero-sub .big b{color:var(--gold2);font-weight:600}
+.hero-sub p{color:var(--cream2);font-size:16px;max-width:480px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:38px}
+.hstat{padding:20px 18px 26px;border-left:1px solid var(--line2)}
+.hstat:first-child{border-left:none;padding-left:0}
+.hstat b{display:block;font-family:var(--disp);font-weight:400;font-size:clamp(1.7rem,3.6vw,2.7rem);color:var(--cream);line-height:1}
+.hstat b i{font-style:normal;color:var(--gold)}
+.hstat span{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+@media(max-width:760px){.hero-sub{grid-template-columns:1fr}.hero-stats{grid-template-columns:1fr 1fr}.hstat{padding-left:14px}.hstat:nth-child(odd){border-left:none;padding-left:0}}
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:15px 0;background:var(--coal);margin-top:64px}
+.marquee-track{display:flex;gap:0;width:max-content;animation:mq 30s linear infinite}
+.marquee span{font-family:var(--disp);font-size:21px;letter-spacing:.22em;text-transform:uppercase;color:var(--cream2);padding:0 14px;white-space:nowrap}
+.marquee span i{font-style:normal;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+/* intro */
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
+.intro-grid h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.22}
+.intro-grid h3 i{color:var(--gold2)}
+.intro-grid p{color:var(--cream2);font-size:16.5px;margin-top:16px}
+.onenum{border:1px solid var(--line);background:linear-gradient(160deg,var(--coal2),var(--coal));padding:30px;border-radius:18px;position:relative;overflow:hidden}
+.onenum:after{content:"234";position:absolute;right:-8px;bottom:-52px;font-family:var(--disp);font-size:170px;color:rgba(201,162,75,.06);line-height:1}
+.onenum .phone{font-family:var(--disp);font-size:clamp(1.9rem,4.6vw,3rem);letter-spacing:.03em;color:var(--cream);margin:10px 0 6px}
+.onenum p{font-size:15px;margin-top:0}
+@media(max-width:860px){.intro-grid{grid-template-columns:1fr}}
+/* filters + venues */
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+.chip{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--cream2);cursor:pointer;transition:.25s}
+.chip:hover{border-color:var(--gold);color:var(--cream)}
+.chip.on{background:var(--gold);border-color:var(--gold);color:#0b0803}
+.countline{font-size:13px;color:var(--mut);margin:14px 2px 22px;letter-spacing:.06em}
+.countline b{color:var(--gold2)}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vcard{border:1px solid var(--line2);border-radius:18px;overflow:hidden;background:var(--coal);display:flex;flex-direction:column;transition:.35s;position:relative}
+.vcard:hover{transform:translateY(-6px);border-color:var(--gold-dim);box-shadow:var(--shadow)}
+.vcard.hide{display:none}
+.vphoto{height:215px;overflow:hidden;position:relative}
+.vphoto img{width:100%;height:100%;object-fit:cover;filter:contrast(1.06) saturate(1.1);transition:.6s}
+.vcard:hover .vphoto img{transform:scale(1.06)}
+.vphoto:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(6,5,4,.72))}
+.vtype{height:215px;position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(420px 240px at 50% 0%,rgba(201,162,75,.16),transparent 65%),linear-gradient(160deg,#181209,#0a0806);overflow:hidden}
+.vtype .mono{font-family:var(--disp);font-size:118px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--gold-dim);transition:.4s}
+.vcard:hover .vtype .mono{color:rgba(201,162,75,.14)}
+.vtype .citytag{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:10.5px;font-weight:800;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
+.vbody{padding:22px 22px 24px;display:flex;flex-direction:column;gap:7px;flex:1}
+.vnum{font-size:11px;font-weight:800;letter-spacing:.26em;color:var(--gold)}
+.vbody h3{font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.12}
+.vkind{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ember)}
+.vaddr{color:var(--cream2);font-size:14.5px;flex:1}
+.vfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;border-top:1px solid var(--line2);padding-top:16px}
+.vcity{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.vlink{font-weight:800;font-size:13.5px;color:var(--gold2);text-decoration:none;background:none;border:none;cursor:pointer;font-family:var(--sans);display:inline-flex;gap:7px;align-items:center;transition:.25s}
+.vlink:hover{gap:11px;color:var(--cream)}
+@media(max-width:1020px){.vgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.vgrid{grid-template-columns:1fr}}
+/* flows */
+.flow-shell{display:grid;grid-template-columns:1.55fr .85fr;gap:22px;align-items:start}
+.flow-card{border:1px solid var(--line);border-radius:20px;background:linear-gradient(165deg,var(--coal2),var(--coal));padding:32px;position:relative;overflow:hidden}
+.flow-card:before{content:"";position:absolute;inset:0;background:url("img/rooftop-night.jpg") center/cover;opacity:.05;pointer-events:none}
+.step{position:relative;padding:22px 0;border-top:1px dashed var(--line)}
+.step:first-of-type{border-top:none;padding-top:6px}
+.step-head{display:flex;align-items:center;gap:13px;margin-bottom:15px}
+.step-n{width:32px;height:32px;border-radius:50%;border:1px solid var(--gold);color:var(--gold2);font-family:var(--disp);font-size:15px;display:flex;align-items:center;justify-content:center;flex:none}
+.step-head h3{font-family:var(--serif);font-weight:600;font-size:20px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.frow3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.fld{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.fld label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.fld label b{color:var(--gold2);font-weight:800}
+.fld input,.fld select,.fld textarea{font-family:var(--sans);font-size:15.5px;color:var(--cream);background:#0a0806;border:1px solid var(--line2);border-radius:12px;padding:13px 14px;outline:none;transition:.25s;width:100%;color-scheme:dark}
+.fld textarea{resize:vertical;min-height:74px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,75,.15)}
+.fld.err input,.fld.err select{border-color:#e05d4f;box-shadow:0 0 0 3px rgba(224,93,79,.14)}
+.ferr{display:none;font-size:13px;color:#ff9a8a;font-weight:600}
+.fld.err .ferr{display:block}
+.summary{position:sticky;top:92px;border:1px solid var(--gold-dim);border-radius:20px;background:#0a0806;padding:28px;box-shadow:var(--shadow)}
+.summary h3{font-family:var(--disp);font-weight:400;letter-spacing:.06em;font-size:19px;text-transform:uppercase;margin-bottom:6px}
+.summary .ticket{border-top:1px dashed var(--line);margin-top:14px;padding-top:16px;display:flex;flex-direction:column;gap:9px}
+.srow{display:flex;justify-content:space-between;gap:16px;font-size:14.5px}
+.srow span{color:var(--mut);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding-top:3px;flex:none}
+.srow b{font-weight:700;text-align:right;color:var(--cream)}
+.srow b.gold{color:var(--gold2);font-family:var(--serif);font-style:italic;font-size:16.5px}
+.snote{font-size:13px;color:var(--mut);border-top:1px dashed var(--line);margin-top:16px;padding-top:14px}
+.confirm{display:none;margin-top:20px;border:1px solid #1f5c3d;background:rgba(37,211,102,.07);border-radius:16px;padding:22px;position:relative}
+.confirm.show{display:block}
+.confirm h4{font-family:var(--serif);font-size:21px;font-weight:600;color:#b9f4cd;margin-bottom:6px}
+.confirm p{font-size:14.5px;color:var(--cream2)}
+.confirm .btn{margin-top:14px}
+.formerr{display:none;margin-top:14px;border:1px solid rgba(224,93,79,.5);background:rgba(224,93,79,.08);color:#ffb3a7;border-radius:12px;padding:13px 16px;font-size:14px;font-weight:600}
+.formerr.show{display:block}
+@media(max-width:920px){.flow-shell{grid-template-columns:1fr}.summary{position:static}.frow,.frow3{grid-template-columns:1fr}}
+/* hotel */
+.hotel-hero{border-radius:22px;overflow:hidden;position:relative;border:1px solid var(--line);margin-bottom:22px}
+.hotel-hero img{width:100%;height:440px;object-fit:cover;filter:contrast(1.05) saturate(1.08)}
+.hotel-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,5,4,.05) 40%,rgba(6,5,4,.88))}
+.hotel-hero .cap{position:absolute;left:28px;right:28px;bottom:24px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.hotel-hero .cap h3{font-family:var(--disp);font-weight:400;font-size:clamp(2rem,5vw,3.4rem);text-transform:uppercase;line-height:1}
+.hotel-hero .cap p{color:var(--cream2);font-size:15px;max-width:520px}
+.hgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:8px}
+.hphoto{border-radius:18px;overflow:hidden;border:1px solid var(--line2);position:relative}
+.hphoto img{width:100%;height:230px;object-fit:cover;transition:.6s;filter:contrast(1.05) saturate(1.08)}
+.hphoto:hover img{transform:scale(1.05)}
+.hphoto span{position:absolute;left:14px;bottom:12px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;background:rgba(6,5,4,.72);padding:7px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+.amen{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line2);border-radius:18px;overflow:hidden;margin:22px 0}
+.amen div{padding:19px 18px;border-left:1px solid var(--line2);background:var(--coal)}
+.amen div:first-child{border-left:none}
+.amen b{display:block;font-family:var(--serif);font-style:italic;font-weight:600;font-size:17.5px;color:var(--gold2)}
+.amen span{font-size:13px;color:var(--mut)}
+.rooms{border:1px solid var(--line2);border-radius:18px;overflow:hidden;margin-bottom:26px}
+.rooms table{width:100%;border-collapse:collapse;font-size:15px}
+.rooms th{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);text-align:left;padding:15px 20px;background:var(--coal2);border-bottom:1px solid var(--line)}
+.rooms td{padding:15px 20px;border-bottom:1px solid var(--line2);color:var(--cream2)}
+.rooms tr:last-child td{border-bottom:none}
+.rooms td:first-child{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--cream)}
+.rooms td.rate{color:var(--gold2);font-style:italic;font-family:var(--serif)}
+@media(max-width:920px){.hgrid{grid-template-columns:1fr}.amen{grid-template-columns:1fr 1fr}.amen div{border-top:1px solid var(--line2)}.rooms{overflow-x:auto}}
+/* story */
+.story-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:start}
+.story-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.story-photos img{width:100%;height:300px;object-fit:cover;border-radius:16px;border:1px solid var(--line2);filter:contrast(1.05) saturate(1.08)}
+.story-photos img.tall{height:380px;grid-row:span 1;margin-top:34px}
+.tline{border-left:1px solid var(--line);margin-top:8px}
+.trow{position:relative;padding:0 0 26px 28px}
+.trow:before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.trow b{font-family:var(--disp);font-weight:400;font-size:21px;letter-spacing:.05em;color:var(--gold2)}
+.trow h4{font-family:var(--serif);font-weight:600;font-size:19px;margin:2px 0 3px}
+.trow p{color:var(--cream2);font-size:15px;max-width:520px}
+@media(max-width:860px){.story-grid{grid-template-columns:1fr}}
+/* one number */
+.onenumber{text-align:center;padding:110px 0 30px}
+.onenumber .mega{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,8.4vw,6.4rem);letter-spacing:.02em;line-height:1.02;margin:16px 0 8px}
+.onenumber .mega i{font-style:normal;color:var(--gold)}
+.onenumber p{color:var(--cream2);max-width:560px;margin:0 auto;font-size:16.5px}
+/* footer */
+footer{border-top:1px solid var(--line);margin-top:100px;padding:52px 0 40px;background:var(--coal)}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+footer h5{font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+footer p,footer li{font-size:14px;color:var(--mut)}
+footer ul{list-style:none}
+footer li{padding:3px 0}
+.fbrand{font-family:var(--disp);font-size:30px;letter-spacing:.12em}
+.fbrand span{color:var(--gold)}
+.fine{border-top:1px solid var(--line2);margin-top:38px;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--mut)}
+@media(max-width:860px){.fgrid{grid-template-columns:1fr}}
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:65;width:58px;height:58px;border-radius:50%;background:#1faa55;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 34px rgba(0,0,0,.5);transition:.25s;text-decoration:none}
+.wa-float:hover{transform:translateY(-3px) scale(1.04)}
+.wa-float svg{width:29px;height:29px;fill:#fff}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header id="hdr">
+  <div class="hdr">
+    <a class="brand" href="#top">CUBANA <span>GROUP</span><small>NIGERIA · EST. 2006</small></a>
+    <nav class="main">
+      <a href="#venues">Venues</a>
+      <a href="#reserve">Reserve a table</a>
+      <a href="#hotel">Grand Cubana Hotels</a>
+      <a href="#story">The story</a>
+    </nav>
+    <a class="btn small" href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener">WhatsApp the group</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="img/hero.jpg" alt="Cubana, Victoria Island, Lagos at night — the group's Adeola Odeku Street home, lit with its sign: The World Is Yours"></div>
+  <div class="hero-in wrap">
+    <div class="hero-top">
+      <span class="hero-eyebrow">Cubana Group · Nigeria</span>
+      <span class="label">One group <em>— every night</em></span>
+    </div>
+    <h1>Cubana<span class="goldline">Group</span></h1>
+    <div class="hero-sub">
+      <p class="big">The world is yours — <b>and now it has one address.</b> Every Cubana club, lounge, grill and hotel, in one place.</p>
+      <div>
+        <p>Founded by Obinna Iyiegbu — Obi Cubana — the group grew from one Abuja club in 2006 into Nigeria's defining nightlife name. This is its single front door: find a venue, reserve a table, book a room. One WhatsApp number runs all of it.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#reserve">Reserve a table</a>
+          <a class="btn ghost" href="#hotel">Book Grand Cubana Hotels</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><b>15<i>+</i></b><span>Venues in the group</span></div>
+      <div class="hstat"><b>5</b><span>Cities — one number</span></div>
+      <div class="hstat"><b>2006</b><span>Ibiza, Abuja — where it began</span></div>
+      <div class="hstat"><b>74</b><span>Rooms at Grand Cubana Hotels</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="mqTrack">
+  <span>Lagos <i>·</i></span><span>Abuja <i>·</i></span><span>Enugu <i>·</i></span><span>Owerri <i>·</i></span><span>Port Harcourt <i>·</i></span><span>Pablo <i>·</i></span><span>Montana <i>·</i></span><span>The Grind <i>·</i></span><span>Hustle &amp; Bustle <i>·</i></span><span>Opium <i>·</i></span><span>Gustavo <i>·</i></span><span>Grand Cubana Hotels <i>·</i></span>
+</div></div>
+
+<!-- INTRO -->
+<section id="about" style="padding-top:84px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label">01 — The idea</span><h2>One empire.<br><i>One front door.</i></h2></div>
+      <p>Until now, every Cubana venue lived on its own page, with its own number, on its own island. This platform ends that.</p>
+    </div>
+    <div class="intro-grid">
+      <div class="rv">
+        <h3>Fifteen venues. Five cities. <i>Until today, fifteen different ways to reach them — and no single place that held them all.</i></h3>
+        <p>Cubana Group's own website is gone, and each club, lounge, grill and hotel has been left to run itself — a Facebook page here, a different reservation number there. Guests guess. Tables sit unbooked while a phone rings in another city.</p>
+        <p>This site is the fix, built the way the group itself is built: bold, after dark, and impossible to miss. One directory of every venue. One reservation flow for every table. One booking flow for Grand Cubana Hotels. And behind all of it, a single WhatsApp line that answers for the whole empire.</p>
+      </div>
+      <div class="onenum rv">
+        <span class="label">The only number you need</span>
+        <div class="phone">+234 906 000 5472</div>
+        <p>Published on Cubana Hut &amp; Grill's listing in Victoria Island — now the group's one entry point. Every reserve and book button on this page opens a WhatsApp chat on this number, with your details already written out.</p>
+        <div class="hero-cta">
+          <a class="btn wa" href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener">Open WhatsApp</a>
+          <a class="btn ghost" href="#venues">Browse the venues</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUES -->
+<section id="venues">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label">02 — The directory</span><h2>Every venue.<br><i>Every city.</i></h2></div>
+      <p>Filter by city, pick your night, and reserve from the card — your venue is already chosen when the reservation opens.</p>
+    </div>
+    <div class="filters rv" role="group" aria-label="Filter venues by city">
+      <button class="chip on" data-filter="all" type="button">All venues</button>
+      <button class="chip" data-filter="lagos" type="button">Lagos</button>
+      <button class="chip" data-filter="abuja" type="button">Abuja</button>
+      <button class="chip" data-filter="enugu" type="button">Enugu</button>
+      <button class="chip" data-filter="owerri" type="button">Owerri</button>
+      <button class="chip" data-filter="portharcourt" type="button">Port Harcourt</button>
+    </div>
+    <p class="countline" id="venueCount">Showing <b>15</b> venues</p>
+    <div class="vgrid" id="venueGrid">
+
+      <article class="vcard rv" data-city="lagos">
+        <div class="vphoto"><img src="img/pablo.jpg" alt="Pablo by Cubana, Victoria Island, Lagos at night — Cubana sign and The World Is Yours lit in blue above the entrance" loading="lazy"></div>
+        <div class="vbody">
+          <span class="vnum">Nº 01 — LAGOS</span>
+          <h3>Pablo by Cubana</h3>
+          <span class="vkind">Nightclub</span>
+          <p class="vaddr">17 Adeola Odeku Street, Victoria Island, Lagos. The group's Lagos flagship — the building that carries the sign: <i>The World Is Yours.</i></p>
+          <div class="vfoot"><span class="vcity">Victoria Island</span><button class="vlink" type="button" data-reserve="Pablo by Cubana — Lagos">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="lagos">
+        <div class="vtype"><span class="mono">G</span><span class="citytag">Rooftop · Victoria Island</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 02 — LAGOS</span>
+          <h3>The Grind by Cubana</h3>
+          <span class="vkind">Rooftop restaurant &amp; lounge</span>
+          <p class="vaddr">Adeola Odeku Street, Victoria Island, Lagos — the rooftop above the Cubana Lagos house, for dinner before the night turns up.</p>
+          <div class="vfoot"><span class="vcity">Victoria Island</span><button class="vlink" type="button" data-reserve="The Grind by Cubana — Lagos">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="lagos">
+        <div class="vphoto"><img src="img/victoria-night.jpg" alt="The Cubana premises on Adeola Odeku Street, Victoria Island, Lagos at night, home of Cubana Hut &amp; Grill" loading="lazy"></div>
+        <div class="vbody">
+          <span class="vnum">Nº 03 — LAGOS</span>
+          <h3>Cubana Hut &amp; Grill</h3>
+          <span class="vkind">Bar &amp; grill · Restaurant</span>
+          <p class="vaddr">17 Adeola Odeku Street, Victoria Island, Lagos — local dishes to foreign plates, straight off the grill house. Its published number is the one this whole platform runs on.</p>
+          <div class="vfoot"><span class="vcity">Victoria Island</span><button class="vlink" type="button" data-reserve="Cubana Hut & Grill — Lagos">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="lagos">
+        <div class="vtype"><span class="mono">M</span><span class="citytag">Nightclub · GRA Ikeja</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 04 — LAGOS</span>
+          <h3>Montana by Cubana</h3>
+          <span class="vkind">Nightclub</span>
+          <p class="vaddr">15 Isaac John Street, GRA Ikeja, Lagos — the mainland's Cubana, relaunched under its banner line: <i>The City Is Yours.</i></p>
+          <div class="vfoot"><span class="vcity">Ikeja</span><button class="vlink" type="button" data-reserve="Montana by Cubana — Lagos">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vtype"><span class="mono">H</span><span class="citytag">Nightclub · Wuse 2</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 05 — ABUJA</span>
+          <h3>Hustle &amp; Bustle</h3>
+          <span class="vkind">Nightclub · Restaurant · Lounge</span>
+          <p class="vaddr">80 Aminu Kano Crescent, Wuse 2, Abuja — the capital's big room, built for nights that do not end early.</p>
+          <div class="vfoot"><span class="vcity">Wuse 2</span><button class="vlink" type="button" data-reserve="Hustle & Bustle — Abuja">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vphoto"><img src="img/crave.jpg" alt="Crave by Cubana, Abuja — the gold-columned Cubana building with the Crave sign above the entrance" loading="lazy"></div>
+        <div class="vbody">
+          <span class="vnum">Nº 06 — ABUJA</span>
+          <h3>Crave by Cubana</h3>
+          <span class="vkind">Dance &amp; nightclub</span>
+          <p class="vaddr">130 Ademola Adetokunbo Crescent, Wuse 2, Abuja — behind the gold columns, with its bar, grill and outdoor bush bar spot.</p>
+          <div class="vfoot"><span class="vcity">Wuse 2</span><button class="vlink" type="button" data-reserve="Crave by Cubana — Abuja">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vphoto"><img src="img/grand-gate.jpg" alt="The entrance gate of Grand Cubana Hotels, Jabi District, Abuja" loading="lazy"></div>
+        <div class="vbody">
+          <span class="vnum">Nº 07 — ABUJA</span>
+          <h3>Grand Cubana Hotels</h3>
+          <span class="vkind">Hotel · 74 rooms</span>
+          <p class="vaddr">6 Ebitu Ukiwe Street, Jabi District, Abuja — the group's hotel: outdoor pool, poolside bar, restaurant and a 24-hour fitness centre.</p>
+          <div class="vfoot"><span class="vcity">Jabi District</span><a class="vlink" href="#hotel">Book a room →</a></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vtype"><span class="mono">P</span><span class="citytag">Restaurant · Abuja</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 08 — ABUJA</span>
+          <h3>Puzzo by Cubana</h3>
+          <span class="vkind">Restaurant</span>
+          <p class="vaddr">Abuja — the group's high-end dining room in the capital. Reserve through the one number and the team confirms your table.</p>
+          <div class="vfoot"><span class="vcity">Abuja</span><button class="vlink" type="button" data-reserve="Puzzo by Cubana — Abuja">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vtype"><span class="mono">S</span><span class="citytag">Cubana Group · Abuja</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 09 — ABUJA</span>
+          <h3>Cubana Signature</h3>
+          <span class="vkind">Cubana Group · Abuja</span>
+          <p class="vaddr">Abuja — part of the group's cluster of hotels and houses in the capital. Enquiries run through the one group number.</p>
+          <div class="vfoot"><span class="vcity">Abuja</span><a class="vlink" href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry%20about%20Cubana%20Signature%2C%20Abuja." target="_blank" rel="noopener">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vtype"><span class="mono">C</span><span class="citytag">Suites · Abuja</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 10 — ABUJA</span>
+          <h3>Caledonian Suites</h3>
+          <span class="vkind">Suites</span>
+          <p class="vaddr">Abuja — the group's suites in the capital, one of the four Abuja hotels Obi Cubana counted to ThisDay in 2022.</p>
+          <div class="vfoot"><span class="vcity">Abuja</span><a class="vlink" href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry%20about%20Caledonian%20Suites%2C%20Abuja." target="_blank" rel="noopener">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vtype"><span class="mono">C</span><span class="citytag">Cubana Group · Abuja</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 11 — ABUJA</span>
+          <h3>Casa Cubana</h3>
+          <span class="vkind">Cubana Group · Abuja</span>
+          <p class="vaddr">Abuja — a Cubana Group house in the capital, listed in the chairman's own roll of the empire's venues.</p>
+          <div class="vfoot"><span class="vcity">Abuja</span><a class="vlink" href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry%20about%20Casa%20Cubana%2C%20Abuja." target="_blank" rel="noopener">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="abuja">
+        <div class="vtype"><span class="mono">I</span><span class="citytag">The original · 2006</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 12 — ABUJA</span>
+          <h3>Ibiza Nite Club</h3>
+          <span class="vkind">Nightclub · Est. 2006</span>
+          <p class="vaddr">Abuja — where everything started in 2006. Obi Cubana calls Ibiza the mother of Cubana; every venue on this page descends from it.</p>
+          <div class="vfoot"><span class="vcity">Abuja</span><button class="vlink" type="button" data-reserve="Ibiza Nite Club — Abuja">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="enugu">
+        <div class="vtype"><span class="mono">G</span><span class="citytag">Club &amp; grill · Independence Layout</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 13 — ENUGU</span>
+          <h3>Gustavo Cubana</h3>
+          <span class="vkind">Club · Restaurant &amp; grill</span>
+          <p class="vaddr">No. 3 Igboeze Street, Independence Layout, Enugu — the group's Enugu house, club and Cubana Hut &amp; Grill kitchen under one roof.</p>
+          <div class="vfoot"><span class="vcity">Enugu</span><button class="vlink" type="button" data-reserve="Gustavo Cubana — Enugu">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="owerri">
+        <div class="vphoto"><img src="img/opium.jpg" alt="Opium by Cubana, Owerri — the Opium entrance and outdoor seating under the Cubana sign" loading="lazy"></div>
+        <div class="vbody">
+          <span class="vnum">Nº 14 — OWERRI</span>
+          <h3>Opium by Cubana</h3>
+          <span class="vkind">Nightclub</span>
+          <p class="vaddr">World Bank Road, New Owerri, Imo State — the Owerri original, with its high-end restaurant and bush bar, in the city where Cubana itself was founded in 2009.</p>
+          <div class="vfoot"><span class="vcity">Owerri</span><button class="vlink" type="button" data-reserve="Opium by Cubana — Owerri">Reserve a table →</button></div>
+        </div>
+      </article>
+
+      <article class="vcard rv" data-city="portharcourt">
+        <div class="vtype"><span class="mono">P</span><span class="citytag">Lounge &amp; events · GRA</span></div>
+        <div class="vbody">
+          <span class="vnum">Nº 15 — PORT HARCOURT</span>
+          <h3>Cubana Lounge &amp; Event Centre</h3>
+          <span class="vkind">Lounge · Bar · Events</span>
+          <p class="vaddr">Plot F6C, Sani Abacha Road, GRA Phase 3, Port Harcourt — bar, restaurant and event space serving local and continental dishes.</p>
+          <div class="vfoot"><span class="vcity">Port Harcourt</span><button class="vlink" type="button" data-reserve="Cubana Lounge & Event Centre — Port Harcourt">Reserve a table →</button></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESERVE -->
+<section id="reserve">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label">03 — Reservations</span><h2>Reserve a table.<br><i>Any venue. One flow.</i></h2></div>
+      <p>Three steps, thirty seconds. Your reservation lands on the group's one WhatsApp number, written out in full — no phone tag, no guessing which number belongs to which club.</p>
+    </div>
+    <div class="flow-shell">
+      <form class="flow-card rv" id="resForm" novalidate>
+        <div class="step">
+          <div class="step-head"><span class="step-n">1</span><h3>Choose your venue</h3></div>
+          <div class="fld" id="f-resVenue">
+            <label for="resVenue">Venue <b>*</b></label>
+            <select id="resVenue">
+              <option value="">Select a venue…</option>
+              <option>Pablo by Cubana — Lagos</option>
+              <option>The Grind by Cubana — Lagos</option>
+              <option>Cubana Hut &amp; Grill — Lagos</option>
+              <option>Montana by Cubana — Lagos</option>
+              <option>Hustle &amp; Bustle — Abuja</option>
+              <option>Crave by Cubana — Abuja</option>
+              <option>Puzzo by Cubana — Abuja</option>
+              <option>Ibiza Nite Club — Abuja</option>
+              <option>Grand Cubana Hotels (restaurant) — Abuja</option>
+              <option>Gustavo Cubana — Enugu</option>
+              <option>Opium by Cubana — Owerri</option>
+              <option>Cubana Lounge &amp; Event Centre — Port Harcourt</option>
+            </select>
+            <span class="ferr">Please choose a venue.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="step-n">2</span><h3>Date, time &amp; party</h3></div>
+          <div class="frow3">
+            <div class="fld" id="f-resDate">
+              <label for="resDate">Date <b>*</b></label>
+              <input type="date" id="resDate">
+              <span class="ferr">Pick a date that is not in the past.</span>
+            </div>
+            <div class="fld" id="f-resTime">
+              <label for="resTime">Arrival time <b>*</b></label>
+              <input type="time" id="resTime" value="21:00">
+              <span class="ferr">Please set an arrival time.</span>
+            </div>
+            <div class="fld" id="f-resParty">
+              <label for="resParty">Party size <b>*</b></label>
+              <select id="resParty">
+                <option value="">How many?</option>
+                <option>2 guests</option><option>3 guests</option><option>4 guests</option>
+                <option>5 guests</option><option>6 guests</option><option>8 guests</option>
+                <option>10 guests</option><option>12 guests</option><option>15 guests</option>
+                <option>20+ guests (large group)</option>
+              </select>
+              <span class="ferr">Please choose a party size.</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="resOccasion">Occasion <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+            <select id="resOccasion">
+              <option value="">Just a night out</option>
+              <option>Birthday</option><option>Anniversary</option><option>Business / corporate</option>
+              <option>Celebration</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="step-n">3</span><h3>Your details</h3></div>
+          <div class="frow">
+            <div class="fld" id="f-resName">
+              <label for="resName">Full name <b>*</b></label>
+              <input type="text" id="resName" placeholder="Your name" autocomplete="name">
+              <span class="ferr">Please add your name.</span>
+            </div>
+            <div class="fld" id="f-resPhone">
+              <label for="resPhone">Phone / WhatsApp <b>*</b></label>
+              <input type="tel" id="resPhone" placeholder="e.g. 0803 000 0000" autocomplete="tel">
+              <span class="ferr">Please add a reachable phone number.</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="resNotes">Anything the venue should know? <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+            <textarea id="resNotes" placeholder="Table preference, a name for the door, a bottle waiting — tell us here."></textarea>
+          </div>
+          <p class="snote" style="border:none;margin:0 0 16px;padding:0">Table packages and any minimum spend are <b style="color:var(--gold2)">confirmed on enquiry</b> by the venue team — nothing is charged or promised on this page.</p>
+          <button class="btn" type="submit" style="width:100%;justify-content:center;font-size:15px;padding:16px">Review &amp; confirm on WhatsApp</button>
+          <div class="formerr" id="resFormErr">A few details are missing or need fixing — they are marked above.</div>
+          <div class="confirm" id="resConfirm">
+            <h4>Your table request is ready.</h4>
+            <p id="resConfirmText"></p>
+            <a class="btn wa" id="resWaBtn" href="#" target="_blank" rel="noopener">Send it on WhatsApp →</a>
+          </div>
+        </div>
+      </form>
+      <aside class="summary rv" aria-live="polite">
+        <span class="label">Live summary</span>
+        <h3>Your table</h3>
+        <div class="ticket">
+          <div class="srow"><span>Venue</span><b class="gold" id="sumResVenue">—</b></div>
+          <div class="srow"><span>Date</span><b id="sumResDate">—</b></div>
+          <div class="srow"><span>Arrival</span><b id="sumResTime">—</b></div>
+          <div class="srow"><span>Party</span><b id="sumResParty">—</b></div>
+          <div class="srow"><span>Occasion</span><b id="sumResOccasion">Just a night out</b></div>
+          <div class="srow"><span>Name</span><b id="sumResName">—</b></div>
+        </div>
+        <p class="snote">Sent to the group's one WhatsApp number:<br><b style="color:var(--cream)">+234 906 000 5472</b>. The venue confirms availability, table package and any minimum spend in the chat.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section id="hotel">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label">04 — Stay</span><h2>Grand Cubana<br><i>Hotels, Abuja.</i></h2></div>
+      <p>The night does not have to end at the club door. The group's own hotel sits in Jabi District — book it through the same one number.</p>
+    </div>
+    <div class="hotel-hero rv">
+      <img src="img/grand-lobby.jpg" alt="The lobby of Grand Cubana Hotels, Abuja — a crystal chandelier under a painted ceiling">
+      <div class="cap">
+        <div><span class="label">Jabi District · Abuja</span><h3>Grand Cubana Hotels</h3></div>
+        <p>6 Ebitu Ukiwe Street, Jabi District, Abuja — a 74-room hotel by the hotel's own description, within a five-minute drive of Jabi Lake Mall and Jabi Lake Park. Check-in from 3:00 PM · check-out 12:00 noon.</p>
+      </div>
+    </div>
+    <div class="hgrid">
+      <div class="hphoto rv"><img src="img/grand-pool.jpg" alt="The outdoor pool at Grand Cubana Hotels, Abuja, with loungers and a covered patio" loading="lazy"><span>Outdoor pool</span></div>
+      <div class="hphoto rv"><img src="img/grand-room.jpg" alt="A guest room at Grand Cubana Hotels, Abuja" loading="lazy"><span>Guest rooms</span></div>
+      <div class="hphoto rv"><img src="img/grand-suite.jpg" alt="The Ambassador Suite bedroom at Grand Cubana Hotels, Abuja" loading="lazy"><span>Ambassador Suite</span></div>
+    </div>
+    <div class="amen rv">
+      <div><b>Outdoor pool</b><span>With a poolside bar</span></div>
+      <div><b>Restaurant</b><span>Local &amp; international cuisine, breakfast to dinner</span></div>
+      <div><b>24-hour fitness</b><span>Fitness centre open around the clock</span></div>
+      <div><b>24-hour room service</b><span>Plus free WiFi and free on-site parking</span></div>
+    </div>
+    <div class="rooms rv">
+      <table>
+        <thead><tr><th>Room type — as listed for the hotel</th><th>Size</th><th>Bed</th><th>Sleeps</th><th>Rate</th></tr></thead>
+        <tbody>
+          <tr><td>Room (Alcove)</td><td>25 sq m</td><td>1 double bed</td><td>2</td><td class="rate">Confirmed on enquiry</td></tr>
+          <tr><td>Standard Room</td><td>30 sq m</td><td>1 queen bed</td><td>2</td><td class="rate">Confirmed on enquiry</td></tr>
+          <tr><td>Superior Room</td><td>35 sq m</td><td>1 queen bed</td><td>2</td><td class="rate">Confirmed on enquiry</td></tr>
+          <tr><td>Business Room</td><td>45 sq m</td><td>1 king bed</td><td>2</td><td class="rate">Confirmed on enquiry</td></tr>
+          <tr><td>Executive Room</td><td>47 sq m</td><td>1 king bed</td><td>2</td><td class="rate">Confirmed on enquiry</td></tr>
+          <tr><td>Suite (Ambassador)</td><td>45 sq m</td><td>1 queen bed</td><td>2</td><td class="rate">Confirmed on enquiry</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flow-shell">
+      <form class="flow-card rv" id="bookForm" novalidate>
+        <div class="step">
+          <div class="step-head"><span class="step-n">1</span><h3>Room &amp; dates</h3></div>
+          <div class="fld" id="f-bookRoom">
+            <label for="bookRoom">Room type <b>*</b></label>
+            <select id="bookRoom">
+              <option value="">Select a room type…</option>
+              <option>Room (Alcove)</option><option>Standard Room</option><option>Superior Room</option>
+              <option>Business Room</option><option>Executive Room</option><option>Suite (Ambassador)</option>
+              <option>No preference — advise me</option>
+            </select>
+            <span class="ferr">Please choose a room type.</span>
+          </div>
+          <div class="frow">
+            <div class="fld" id="f-bookIn">
+              <label for="bookIn">Check-in <b>*</b></label>
+              <input type="date" id="bookIn">
+              <span class="ferr">Pick a check-in date that is not in the past.</span>
+            </div>
+            <div class="fld" id="f-bookOut">
+              <label for="bookOut">Check-out <b>*</b></label>
+              <input type="date" id="bookOut">
+              <span class="ferr">Check-out must be after check-in.</span>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="fld" id="f-bookGuests">
+              <label for="bookGuests">Guests <b>*</b></label>
+              <select id="bookGuests">
+                <option value="">How many?</option>
+                <option>1 guest</option><option>2 guests</option><option>3 guests</option>
+                <option>4 guests</option><option>5+ guests</option>
+              </select>
+              <span class="ferr">Please choose the number of guests.</span>
+            </div>
+            <div class="fld" id="f-bookRooms">
+              <label for="bookRooms">Rooms <b>*</b></label>
+              <select id="bookRooms">
+                <option value="">How many rooms?</option>
+                <option>1 room</option><option>2 rooms</option><option>3 rooms</option>
+                <option>4 rooms</option><option>5+ rooms (group booking)</option>
+              </select>
+              <span class="ferr">Please choose the number of rooms.</span>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="step-n">2</span><h3>Guest details</h3></div>
+          <div class="frow">
+            <div class="fld" id="f-bookName">
+              <label for="bookName">Full name <b>*</b></label>
+              <input type="text" id="bookName" placeholder="Your name" autocomplete="name">
+              <span class="ferr">Please add your name.</span>
+            </div>
+            <div class="fld" id="f-bookPhone">
+              <label for="bookPhone">Phone / WhatsApp <b>*</b></label>
+              <input type="tel" id="bookPhone" placeholder="e.g. 0803 000 0000" autocomplete="tel">
+              <span class="ferr">Please add a reachable phone number.</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="bookNotes">Requests <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+            <textarea id="bookNotes" placeholder="Airport shuttle, early arrival, a quiet floor — tell us here. The hotel runs an airport shuttle on request."></textarea>
+          </div>
+          <p class="snote" style="border:none;margin:0 0 16px;padding:0">Room rates are <b style="color:var(--gold2)">confirmed on enquiry</b> — the hotel publishes no rate on this page, and the team confirms price and availability in the chat before anything is held.</p>
+          <button class="btn" type="submit" style="width:100%;justify-content:center;font-size:15px;padding:16px">Review &amp; confirm on WhatsApp</button>
+          <div class="formerr" id="bookFormErr">A few details are missing or need fixing — they are marked above.</div>
+          <div class="confirm" id="bookConfirm">
+            <h4>Your stay request is ready.</h4>
+            <p id="bookConfirmText"></p>
+            <a class="btn wa" id="bookWaBtn" href="#" target="_blank" rel="noopener">Send it on WhatsApp →</a>
+          </div>
+        </div>
+      </form>
+      <aside class="summary rv" aria-live="polite">
+        <span class="label">Live summary</span>
+        <h3>Your stay</h3>
+        <div class="ticket">
+          <div class="srow"><span>Hotel</span><b class="gold">Grand Cubana Hotels</b></div>
+          <div class="srow"><span>Room</span><b id="sumBookRoom">—</b></div>
+          <div class="srow"><span>Check-in</span><b id="sumBookIn">—</b></div>
+          <div class="srow"><span>Check-out</span><b id="sumBookOut">—</b></div>
+          <div class="srow"><span>Nights</span><b id="sumBookNights">—</b></div>
+          <div class="srow"><span>Guests</span><b id="sumBookGuests">—</b></div>
+          <div class="srow"><span>Rooms</span><b id="sumBookRooms">—</b></div>
+          <div class="srow"><span>Rate</span><b class="gold">Confirmed on enquiry</b></div>
+        </div>
+        <p class="snote">Sent to the group's one WhatsApp number:<br><b style="color:var(--cream)">+234 906 000 5472</b>. Check-in from 3:00 PM · check-out 12:00 noon.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label">05 — The story</span><h2>From one club<br><i>to an empire.</i></h2></div>
+      <p>Obinna Iyiegbu — Obi Cubana — opened a single Abuja lounge in 2006. Twenty years on, his name is the night, in five cities.</p>
+    </div>
+    <div class="story-grid">
+      <div class="story-photos rv">
+        <img src="img/gate.jpg" alt="A Cubana venue entrance — the Cubana sign above the gate, with its line: Our City, Our World" loading="lazy">
+        <img class="tall" src="img/owerri.jpg" alt="Cubana Owerri — the group's home in Imo State, where Cubana was founded in 2009" loading="lazy">
+      </div>
+      <div class="tline rv">
+        <div class="trow"><b>2006</b><h4>Ibiza, Abuja</h4><p>Obi Cubana opens Ibiza Club in Abuja — the dance lounge he calls the mother of Cubana, and the seed of everything on this page.</p></div>
+        <div class="trow"><b>2009</b><h4>Cubana is founded, Owerri</h4><p>The first full Cubana hospitality club opens in Owerri, Imo State — the city that still carries the group's name over its gate.</p></div>
+        <div class="trow"><b>LAGOS</b><h4>Adeola Odeku &amp; Ikeja</h4><p>Lagos gets the full house: Pablo and The Grind on Victoria Island, Montana in GRA Ikeja, and Cubana Hut &amp; Grill feeding both sides of the city.</p></div>
+        <div class="trow"><b>5 CITIES</b><h4>One group, everywhere the night is</h4><p>Enugu's Gustavo, Port Harcourt's lounge, Abuja's clubs, suites and the 74-room Grand Cubana Hotels — fifteen venues, one name, and now one front door.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE NUMBER -->
+<section class="onenumber">
+  <div class="wrap rv">
+    <span class="label">06 — One number</span>
+    <div class="mega">+234 906 <i>000 5472</i></div>
+    <p>Every table in Lagos, Abuja, Enugu, Owerri and Port Harcourt. Every room in Jabi. One WhatsApp number for the entire Cubana Group — save it once, and the empire is in your pocket.</p>
+    <div class="hero-cta" style="justify-content:center">
+      <a class="btn wa" href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener">Message the group</a>
+      <a class="btn ghost" href="#venues">Back to the venues</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">CUBANA <span>GROUP</span></div>
+        <p style="margin-top:12px;max-width:340px">Nigeria's nightlife group — clubs, lounges, grills, suites and hotels across Lagos, Abuja, Enugu, Owerri and Port Harcourt. Founded by Obinna Iyiegbu (Obi Cubana), est. 2006.</p>
+        <p style="margin-top:14px">One WhatsApp number: <a href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener" style="color:var(--gold2);font-weight:700;text-decoration:none">+234 906 000 5472</a></p>
+      </div>
+      <div>
+        <h5>Lagos &amp; Abuja</h5>
+        <ul>
+          <li>Pablo by Cubana — Victoria Island</li>
+          <li>The Grind by Cubana — Victoria Island</li>
+          <li>Cubana Hut &amp; Grill — Victoria Island</li>
+          <li>Montana by Cubana — GRA Ikeja</li>
+          <li>Hustle &amp; Bustle — Wuse 2, Abuja</li>
+          <li>Crave by Cubana — Wuse 2, Abuja</li>
+          <li>Grand Cubana Hotels — Jabi, Abuja</li>
+          <li>Puzzo · Signature · Caledonian · Casa · Ibiza — Abuja</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Enugu · Owerri · Port Harcourt</h5>
+        <ul>
+          <li>Gustavo Cubana — Independence Layout, Enugu</li>
+          <li>Opium by Cubana — World Bank Road, Owerri</li>
+          <li>Cubana Lounge &amp; Event Centre — GRA, Port Harcourt</li>
+        </ul>
+        <h5 style="margin-top:22px">Start here</h5>
+        <ul>
+          <li><a href="#reserve" style="text-decoration:none">Reserve a table</a></li>
+          <li><a href="#hotel" style="text-decoration:none">Book Grand Cubana Hotels</a></li>
+          <li><a href="#venues" style="text-decoration:none">Browse all venues</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <span>Venue names, addresses and hotel details are drawn from the group's own public listings and coverage. Table packages and room rates are confirmed on enquiry.</span>
+      <span>Concept proposal built by SiteSprint Studio.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/2349060005472?text=Hello%20Cubana%20Group%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with Cubana Group on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.7 28l6.3-1.6c1.5.8 3.2 1.2 5 1.2 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+</a>
+
+<script>
+"use strict";
+var WA_NUMBER = "2349060005472";
+function waLink(message){ return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(message); }
+function todayStr(){ var d = new Date(); var m = String(d.getMonth()+1).padStart(2,"0"); var day = String(d.getDate()).padStart(2,"0"); return d.getFullYear() + "-" + m + "-" + day; }
+function parseDate(s){ if(!s) return null; var p = s.split("-"); if(p.length!==3) return null; return new Date(Number(p[0]), Number(p[1])-1, Number(p[2])); }
+function fmtDate(s){ var d = parseDate(s); if(!d) return "—"; return d.toLocaleDateString("en-GB",{weekday:"short", day:"numeric", month:"short", year:"numeric"}); }
+function fmtTime(t){ if(!t) return "—"; var p = t.split(":"); var h = Number(p[0]), m = p[1]||"00"; var ap = h >= 12 ? "PM" : "AM"; var h12 = h % 12; if(h12===0) h12 = 12; return h12 + ":" + m + " " + ap; }
+function phoneOk(v){ if(!v) return false; var digits = v.replace(/\D/g,""); return digits.length >= 7 && digits.length <= 15; }
+function nightsBetween(a,b){ var d1 = parseDate(a), d2 = parseDate(b); if(!d1||!d2) return 0; return Math.round((d2 - d1)/86400000); }
+
+function validateReservation(d){
+  var errors = [];
+  if(!d.venue) errors.push("venue");
+  if(!d.date || d.date < todayStr()) errors.push("date");
+  if(!d.time) errors.push("time");
+  if(!d.party) errors.push("party");
+  if(!d.name || d.name.trim().length < 2) errors.push("name");
+  if(!phoneOk(d.phone)) errors.push("phone");
+  return { ok: errors.length===0, errors: errors };
+}
+function buildReservationMessage(d){
+  var lines = [
+    "Hello Cubana Group, I would like to reserve a table.",
+    "",
+    "Venue: " + d.venue,
+    "Date: " + fmtDate(d.date),
+    "Arrival time: " + fmtTime(d.time),
+    "Party size: " + d.party,
+    "Occasion: " + (d.occasion || "Just a night out"),
+    "Name: " + d.name.trim(),
+    "Phone: " + d.phone.trim()
+  ];
+  if(d.notes && d.notes.trim()) lines.push("Notes: " + d.notes.trim());
+  lines.push("", "Please confirm availability and the table package. Thank you.");
+  return lines.join("\n");
+}
+function validateBooking(d){
+  var errors = [];
+  if(!d.room) errors.push("room");
+  if(!d.checkin || d.checkin < todayStr()) errors.push("checkin");
+  if(!d.checkout || !d.checkin || d.checkout <= d.checkin) errors.push("checkout");
+  if(!d.guests) errors.push("guests");
+  if(!d.rooms) errors.push("rooms");
+  if(!d.name || d.name.trim().length < 2) errors.push("name");
+  if(!phoneOk(d.phone)) errors.push("phone");
+  return { ok: errors.length===0, errors: errors };
+}
+function buildBookingMessage(d){
+  var n = nightsBetween(d.checkin, d.checkout);
+  var lines = [
+    "Hello Cubana Group, I would like to book a stay at Grand Cubana Hotels, Abuja.",
+    "",
+    "Room type: " + d.room,
+    "Check-in: " + fmtDate(d.checkin),
+    "Check-out: " + fmtDate(d.checkout),
+    "Nights: " + n,
+    "Guests: " + d.guests,
+    "Rooms: " + d.rooms,
+    "Name: " + d.name.trim(),
+    "Phone: " + d.phone.trim()
+  ];
+  if(d.notes && d.notes.trim()) lines.push("Requests: " + d.notes.trim());
+  lines.push("", "Please confirm availability and the rate. Thank you.");
+  return lines.join("\n");
+}
+function filterVenues(city, cards){
+  var shown = 0;
+  cards.forEach(function(c){
+    var show = (city === "all" || c.getAttribute("data-city") === city);
+    c.classList.toggle("hide", !show);
+    if(show) shown++;
+  });
+  return shown;
+}
+window.CubanaApp = { WA_NUMBER: WA_NUMBER, waLink: waLink, todayStr: todayStr, fmtDate: fmtDate, fmtTime: fmtTime, phoneOk: phoneOk, nightsBetween: nightsBetween, validateReservation: validateReservation, buildReservationMessage: buildReservationMessage, validateBooking: validateBooking, buildBookingMessage: buildBookingMessage, filterVenues: filterVenues };
+
+document.addEventListener("DOMContentLoaded", function(){
+  /* header */
+  var hdr = document.getElementById("hdr");
+  window.addEventListener("scroll", function(){ hdr.classList.toggle("scrolled", window.scrollY > 30); }, { passive:true });
+  /* marquee duplicate for seamless loop */
+  var mq = document.getElementById("mqTrack");
+  if(mq) mq.innerHTML += mq.innerHTML;
+  /* reveal */
+  var rvEls = document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: .08 });
+    rvEls.forEach(function(el){ io.observe(el); });
+  } else {
+    rvEls.forEach(function(el){ el.classList.add("in"); });
+  }
+  /* city filter */
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".vcard"));
+  var countEl = document.getElementById("venueCount");
+  document.querySelectorAll(".chip").forEach(function(chip){
+    chip.addEventListener("click", function(){
+      document.querySelectorAll(".chip").forEach(function(c){ c.classList.remove("on"); });
+      chip.classList.add("on");
+      var n = filterVenues(chip.getAttribute("data-filter"), cards);
+      countEl.innerHTML = "Showing <b>" + n + "</b> venue" + (n===1?"":"s");
+      cards.forEach(function(c){ if(!c.classList.contains("hide")) c.classList.add("in"); });
+    });
+  });
+  /* date minimums */
+  var t = todayStr();
+  ["resDate","bookIn","bookOut"].forEach(function(id){ var el = document.getElementById(id); if(el) el.min = t; });
+
+  function markErr(fieldId, bad){ var f = document.getElementById(fieldId); if(f) f.classList.toggle("err", !!bad); }
+  function setText(id, v){ var el = document.getElementById(id); if(el) el.textContent = v; }
+
+  /* ---------- reservation flow ---------- */
+  var resIds = { venue:"resVenue", date:"resDate", time:"resTime", party:"resParty", occasion:"resOccasion", name:"resName", phone:"resPhone", notes:"resNotes" };
+  function readRes(){
+    var d = {};
+    Object.keys(resIds).forEach(function(k){ var el = document.getElementById(resIds[k]); d[k] = el ? el.value : ""; });
+    return d;
+  }
+  function syncResSummary(){
+    var d = readRes();
+    setText("sumResVenue", d.venue || "—");
+    setText("sumResDate", d.date ? fmtDate(d.date) : "—");
+    setText("sumResTime", d.time ? fmtTime(d.time) : "—");
+    setText("sumResParty", d.party || "—");
+    setText("sumResOccasion", d.occasion || "Just a night out");
+    setText("sumResName", d.name ? d.name : "—");
+  }
+  Object.keys(resIds).forEach(function(k){
+    var el = document.getElementById(resIds[k]);
+    if(el){ el.addEventListener("input", syncResSummary); el.addEventListener("change", syncResSummary); }
+  });
+  syncResSummary();
+  document.querySelectorAll("[data-reserve]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var sel = document.getElementById("resVenue");
+      sel.value = btn.getAttribute("data-reserve");
+      syncResSummary();
+      document.getElementById("reserve").scrollIntoView({ behavior:"smooth" });
+    });
+  });
+  document.getElementById("resForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var d = readRes();
+    var v = validateReservation(d);
+    markErr("f-resVenue", v.errors.indexOf("venue")>-1);
+    markErr("f-resDate", v.errors.indexOf("date")>-1);
+    markErr("f-resTime", v.errors.indexOf("time")>-1);
+    markErr("f-resParty", v.errors.indexOf("party")>-1);
+    markErr("f-resName", v.errors.indexOf("name")>-1);
+    markErr("f-resPhone", v.errors.indexOf("phone")>-1);
+    var errBox = document.getElementById("resFormErr");
+    var conf = document.getElementById("resConfirm");
+    if(!v.ok){ errBox.classList.add("show"); conf.classList.remove("show"); errBox.scrollIntoView({ behavior:"smooth", block:"center" }); return; }
+    errBox.classList.remove("show");
+    var msg = buildReservationMessage(d);
+    var btn = document.getElementById("resWaBtn");
+    btn.href = waLink(msg);
+    setText("resConfirmText", "Table for " + d.party + " at " + d.venue + ", " + fmtDate(d.date) + " at " + fmtTime(d.time) + ", in the name of " + d.name.trim() + ". Tap below and the whole request opens in WhatsApp, addressed to the group's one number — just press send.");
+    conf.classList.add("show");
+    conf.scrollIntoView({ behavior:"smooth", block:"center" });
+  });
+
+  /* ---------- hotel booking flow ---------- */
+  var bookIds = { room:"bookRoom", checkin:"bookIn", checkout:"bookOut", guests:"bookGuests", rooms:"bookRooms", name:"bookName", phone:"bookPhone", notes:"bookNotes" };
+  function readBook(){
+    var d = {};
+    Object.keys(bookIds).forEach(function(k){ var el = document.getElementById(bookIds[k]); d[k] = el ? el.value : ""; });
+    return d;
+  }
+  function syncBookSummary(){
+    var d = readBook();
+    setText("sumBookRoom", d.room || "—");
+    setText("sumBookIn", d.checkin ? fmtDate(d.checkin) : "—");
+    setText("sumBookOut", d.checkout ? fmtDate(d.checkout) : "—");
+    var n = nightsBetween(d.checkin, d.checkout);
+    setText("sumBookNights", n > 0 ? String(n) : "—");
+    setText("sumBookGuests", d.guests || "—");
+    setText("sumBookRooms", d.rooms || "—");
+  }
+  Object.keys(bookIds).forEach(function(k){
+    var el = document.getElementById(bookIds[k]);
+    if(el){ el.addEventListener("input", syncBookSummary); el.addEventListener("change", syncBookSummary); }
+  });
+  syncBookSummary();
+  document.getElementById("bookForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var d = readBook();
+    var v = validateBooking(d);
+    markErr("f-bookRoom", v.errors.indexOf("room")>-1);
+    markErr("f-bookIn", v.errors.indexOf("checkin")>-1);
+    markErr("f-bookOut", v.errors.indexOf("checkout")>-1);
+    markErr("f-bookGuests", v.errors.indexOf("guests")>-1);
+    markErr("f-bookRooms", v.errors.indexOf("rooms")>-1);
+    markErr("f-bookName", v.errors.indexOf("name")>-1);
+    markErr("f-bookPhone", v.errors.indexOf("phone")>-1);
+    var errBox = document.getElementById("bookFormErr");
+    var conf = document.getElementById("bookConfirm");
+    if(!v.ok){ errBox.classList.add("show"); conf.classList.remove("show"); errBox.scrollIntoView({ behavior:"smooth", block:"center" }); return; }
+    errBox.classList.remove("show");
+    var msg = buildBookingMessage(d);
+    var btn = document.getElementById("bookWaBtn");
+    btn.href = waLink(msg);
+    var n = nightsBetween(d.checkin, d.checkout);
+    setText("bookConfirmText", d.rooms + " × " + d.room + " at Grand Cubana Hotels, " + fmtDate(d.checkin) + " to " + fmtDate(d.checkout) + " (" + n + " night" + (n===1?"":"s") + "), for " + d.guests + ", in the name of " + d.name.trim() + ". Tap below and the whole request opens in WhatsApp — the team confirms availability and the rate in the chat.");
+    conf.classList.add("show");
+    conf.scrollIntoView({ behavior:"smooth", block:"center" });
+  });
+});
+</script>
+</body>
+</html>
