@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optiven Reserve — Reserve Your Plot Online | Optiven Group, Kenya</title>
+<meta name="description" content="Optiven Reserve: pick a real Optiven project, choose your published plot option, and send a complete structured reservation to Optiven on WhatsApp +254 790 300 300. Built for buyers in Kenya and the diaspora.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6efe0;--paper2:#fffaf0;--ink:#1d2617;--ink2:#45503c;--pine:#14301f;--deep:#0b1f13;--moss:#2e5b3e;--ochre:#c8871e;--ochre2:#e0a63c;--clay:#a4442a;--sand:#e7d9ba;--line:#ddd0b2;--wa:#1faa55;--wa2:#178a44;--shadow:0 26px 60px rgba(20,48,31,.18);--serif:"Fraunces",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;--rad:22px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--pine);color:#f6efe0}
+img{max-width:100%}
+body::after{content:"";position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+header{position:sticky;top:0;z-index:60;background:rgba(246,239,224,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{box-shadow:0 10px 30px rgba(20,48,31,.14);border-bottom-color:var(--line)}
+.hdr{max-width:1240px;margin:0 auto;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:clamp(22px,3vw,28px);line-height:1.02;letter-spacing:-.01em}
+.brand em{color:var(--clay);font-style:italic;font-weight:600}
+.brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.28em;font-weight:800;color:var(--ochre)}
+.hdr-r{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.fpill{font-size:12px;font-weight:800;color:var(--pine);background:var(--sand);padding:8px 13px;border-radius:999px}
+.hdr-cta{display:inline-flex;align-items:center;min-height:42px;padding:9px 20px;background:var(--pine);color:#fff;text-decoration:none;border-radius:999px;font-weight:800;font-size:13.5px;transition:.25s}
+.hdr-cta:hover{background:var(--moss);transform:translateY(-1px)}
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1100px 560px at 88% -10%,#3d6b45 0%,transparent 55%),linear-gradient(155deg,#0b1f13 0%,#14301f 58%,#2e5b3e 135%);color:#f6efe0}
+.hero:before{content:"O";position:absolute;right:-70px;top:-190px;font-family:var(--serif);font-style:italic;font-size:560px;line-height:1;color:rgba(224,166,60,.07);pointer-events:none}
+.hero-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr;position:relative}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero-copy{padding:clamp(52px,7vw,92px) 20px clamp(46px,5vw,64px)}
+.badge{display:inline-block;background:var(--ochre2);color:#241a05;font-size:11.5px;font-weight:900;letter-spacing:1.4px;padding:9px 16px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-size:clamp(52px,9vw,104px);line-height:.96;letter-spacing:-.02em;margin:26px 0 20px;font-weight:600}
+.hero h1 em{color:var(--ochre2);font-style:italic;font-weight:500}
+.hero p{color:#e3d7ba;max-width:540px;font-size:clamp(16px,2vw,18.5px);margin-bottom:30px}
+.hero p b{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s;position:relative;overflow:hidden;border:none;cursor:pointer;font-family:var(--sans)}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.3) 50%,transparent 60%);transform:translateX(-120%);transition:transform .5s ease;pointer-events:none}
+.btn:hover::after{transform:translateX(120%)}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 28px rgba(31,170,85,.3)}
+.btn.ghost{background:transparent;color:#f6efe0;border:1.5px solid rgba(246,239,224,.45)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:0;margin-top:44px;border-top:1px solid rgba(246,239,224,.22);padding-top:22px;flex-wrap:wrap}
+.hstat{padding-right:24px;margin-right:24px;border-right:1px solid rgba(246,239,224,.18)}
+.hstat:last-child{border-right:0;margin-right:0;padding-right:0}
+.hstat b{font-family:var(--serif);font-size:25px;display:block;line-height:1.1;color:#fff}
+.hstat span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#cdbb8d;font-weight:700}
+.hero-media{position:relative;padding:30px 20px 44px}
+@media(min-width:960px){.hero-media{padding:64px 30px 54px 6px}}
+.hero-media .frame{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(1.2deg)}
+.hero-media img{width:100%;height:100%;aspect-ratio:3/2.1;object-fit:cover;display:block;filter:saturate(1.06) contrast(1.05)}
+.hero-media .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(224,166,60,.16),rgba(11,31,19,.28));mix-blend-mode:overlay;pointer-events:none}
+.hero-media .card{position:absolute;left:2px;bottom:22px;z-index:2;background:rgba(255,250,240,.98);color:var(--ink);border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);max-width:calc(100% - 34px)}
+.hero-media .card b{font-family:var(--serif);font-size:17px;display:block;line-height:1.25}
+.hero-media .card span{font-size:12.5px;color:var(--ink2)}
+.hero-media .card a{color:var(--wa2);font-weight:800;text-decoration:none}
+.sticker{position:absolute;top:16px;right:8px;z-index:3;background:var(--clay);color:#fff;font-weight:900;font-size:12.5px;letter-spacing:.06em;padding:10px 15px;border-radius:12px;transform:rotate(-4deg);box-shadow:0 12px 26px rgba(0,0,0,.3)}
+@media(min-width:960px){.sticker{top:44px;right:16px}}
+.marquee{background:var(--clay);color:#f9e8d8;overflow:hidden;padding:13px 0}
+.mq{display:flex;gap:44px;white-space:nowrap;font-family:var(--serif);font-style:italic;font-size:17.5px;width:max-content;animation:mq 36s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px;counter-reset:sec}
+section{padding:clamp(70px,9vw,110px) 0 6px;counter-increment:sec}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:.24em;color:var(--ochre);margin-bottom:14px;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:counter(sec,decimal-leading-zero);font-family:var(--serif);font-style:italic;font-size:14px;letter-spacing:.04em;color:var(--clay)}
+.eyebrow::after{content:"";width:38px;height:1px;background:var(--ochre2)}
+h2{font-family:var(--serif);font-size:clamp(38px,5.6vw,62px);line-height:1.04;letter-spacing:-.015em;margin-bottom:12px;font-weight:600}
+h2 em{color:var(--clay);font-style:italic;font-weight:500}
+.sub{color:var(--ink2);max-width:700px;margin-bottom:44px;font-size:16.5px}
+/* FILTER + INDEX */
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:34px}
+.fbtn{border:1.5px solid var(--line);background:var(--paper2);color:var(--ink);font:inherit;font-size:13.5px;font-weight:800;padding:10px 18px;border-radius:999px;cursor:pointer;transition:.22s;min-height:44px}
+.fbtn:hover{border-color:var(--ochre);transform:translateY(-1px)}
+.fbtn.on{background:var(--pine);color:#fff;border-color:var(--pine)}
+.grid{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1020px){.grid{grid-template-columns:repeat(3,1fr)}}
+.pcard{background:var(--paper2);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:0 10px 28px rgba(20,48,31,.07);display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease;position:relative}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.pcard .ph{position:relative;overflow:hidden}
+.pcard .ph img{width:100%;aspect-ratio:16/10.5;object-fit:cover;display:block;transition:transform .55s ease;filter:saturate(1.05) contrast(1.04)}
+.pcard:hover .ph img{transform:scale(1.05)}
+.pcard .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,31,19,.45));pointer-events:none}
+.pnum{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--serif);font-style:italic;font-size:15px;background:rgba(11,31,19,.82);color:#f2e7cd;padding:5px 12px;border-radius:999px}
+.pstars{position:absolute;top:12px;right:12px;z-index:2;color:#f5c518;font-size:13px;letter-spacing:2px;background:rgba(11,31,19,.82);padding:5px 10px;border-radius:999px}
+.pbody{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.pbody h3{font-family:var(--serif);font-size:24px;line-height:1.15;font-weight:600;margin-bottom:4px}
+.ploc{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre);margin-bottom:10px}
+.pnote{font-size:14px;color:var(--ink2);margin-bottom:16px}
+.pprice{margin-top:auto;border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.pprice .from{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);font-weight:700;display:block}
+.pprice .amt{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--pine);font-weight:600}
+.reserve-btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;background:var(--pine);color:#fff;border:none;border-radius:999px;font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;transition:.22s}
+.reserve-btn:hover{background:var(--wa2);transform:translateY(-1px)}
+.srcnote{margin-top:26px;font-size:13px;color:var(--ink2);max-width:760px}
+/* HOW */
+.steps{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:880px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--pine);color:#efe8d2;border-radius:var(--rad);padding:32px 28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.step:nth-child(2){background:var(--paper2);color:var(--ink);border:1px solid var(--line)}
+.step:nth-child(3){background:var(--clay)}
+.step .n{font-family:var(--serif);font-style:italic;font-size:52px;line-height:1;opacity:.9;display:block;margin-bottom:14px}
+.step h3{font-family:var(--serif);font-size:23px;margin-bottom:8px;font-weight:600}
+.step p{font-size:14.5px;opacity:.92}
+/* RESERVE FLOW */
+.flow{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
+@media(min-width:1020px){.flow{grid-template-columns:1.25fr .75fr}}
+.panel{background:var(--paper2);border:1px solid var(--line);border-radius:26px;padding:clamp(26px,4.5vw,44px);box-shadow:var(--shadow)}
+.fstep{margin-bottom:36px}
+.fstep:last-of-type{margin-bottom:8px}
+.fstep-t{display:flex;align-items:center;gap:13px;margin-bottom:16px}
+.fstep-t .sn{width:36px;height:36px;flex:none;border-radius:50%;background:var(--pine);color:#fff;font-family:var(--serif);font-style:italic;display:flex;align-items:center;justify-content:center;font-size:16px}
+.fstep-t h3{font-family:var(--serif);font-size:22px;font-weight:600}
+.fstep-t small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--ink2);font-weight:600}
+select,input,textarea{font:inherit;color:var(--ink)}
+.fsel,.fin{width:100%;min-height:52px;padding:12px 15px;border:1.5px solid var(--line);border-radius:13px;background:#fff;font-size:15px}
+.fsel:focus,.fin:focus,textarea:focus{outline:2px solid var(--ochre2);outline-offset:1px;border-color:var(--ochre)}
+textarea.fin{min-height:86px;resize:vertical}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:13px;align-items:flex-start;border:1.5px solid var(--line);border-radius:15px;padding:14px 16px;background:#fff;cursor:pointer;transition:.2s}
+.opt:hover{border-color:var(--ochre)}
+.opt.sel{border-color:var(--pine);background:#f2ecd9;box-shadow:0 6px 18px rgba(20,48,31,.1)}
+.opt input{margin-top:4px;accent-color:var(--pine);width:18px;height:18px;flex:none}
+.opt .ol{font-weight:800;font-size:15px}
+.opt .op{font-family:var(--serif);font-style:italic;color:var(--pine);font-size:16.5px;display:block}
+.opt .od{font-size:12.5px;color:var(--ink2);display:block}
+.fgrid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.fgrid{grid-template-columns:1fr 1fr}.fgrid .wide{grid-column:span 2}}
+label.fl{display:block;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.err{display:none;font-size:13px;color:#b3261e;font-weight:700;margin-top:6px}
+.err.show{display:block}
+.field.bad .fin,.field.bad .fsel{border-color:#b3261e}
+.summary{position:sticky;top:96px;background:var(--deep);color:#efe8d2;border-radius:26px;padding:30px 28px;box-shadow:var(--shadow);overflow:hidden}
+.summary:before{content:"R";position:absolute;right:-24px;top:-70px;font-family:var(--serif);font-style:italic;font-size:230px;color:rgba(224,166,60,.08);pointer-events:none}
+.summary h3{font-family:var(--serif);font-size:24px;margin-bottom:4px;position:relative}
+.summary .ssub{font-size:13px;color:#c9b98d;margin-bottom:20px;position:relative}
+.srow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid rgba(246,239,224,.14);font-size:14px;position:relative}
+.srow span{color:#c9b98d;flex:none}
+.srow b{text-align:right;font-weight:700}
+.srow.total b{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--ochre2)}
+.submit-btn{width:100%;margin-top:22px;background:var(--wa);color:#fff;min-height:58px;font-size:16px}
+.submit-btn:hover{background:var(--wa2)}
+.snote{font-size:12.5px;color:#c9b98d;margin-top:14px;position:relative;line-height:1.55}
+.confirm{display:none;background:#eef6ee;border:1.5px solid var(--wa);border-radius:18px;padding:24px;margin-top:22px}
+.confirm.show{display:block}
+.confirm h4{font-family:var(--serif);font-size:21px;color:var(--pine);margin-bottom:6px}
+.confirm p{font-size:14.5px;color:var(--ink2);margin-bottom:16px}
+.confirm pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;font-size:12.5px;line-height:1.6;margin-bottom:16px;max-height:260px;overflow:auto;font-family:ui-monospace,Menlo,monospace}
+/* DIASPORA */
+.dias{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:880px){.dias{grid-template-columns:1.1fr .9fr}}
+.dcard{background:var(--paper2);border:1px solid var(--line);border-radius:var(--rad);padding:clamp(28px,4vw,44px);box-shadow:0 10px 28px rgba(20,48,31,.07)}
+.dcard h3{font-family:var(--serif);font-size:26px;margin-bottom:10px;font-weight:600}
+.dcard p{color:var(--ink2);font-size:15.5px;margin-bottom:12px}
+.dimg{border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow);transform:rotate(-1.1deg)}
+.dimg img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3.4;filter:saturate(1.05) contrast(1.04)}
+footer{padding:44px 20px 120px;text-align:center;color:var(--ink2);font-size:13px;max-width:1240px;margin:70px auto 0;border-top:1px solid var(--line);line-height:1.8}
+footer a{color:var(--pine);font-weight:700}
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,250,240,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.stickybar a{display:flex;max-width:1240px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--pine);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.rv.in{opacity:1;transform:none}
+@media(max-width:560px){.hero-media .card{bottom:8px}.hstat{padding-right:15px;margin-right:15px}.summary{position:static}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">Optiven <em>Reserve</em><small>OPTIVEN GROUP · KENYA · PLOT RESERVATION</small></div>
+<div class="hdr-r"><span class="fpill">Led by Dr. George Wachiuri</span><a class="hdr-cta" href="#reserve">Reserve a plot</a></div>
+</div></header>
+
+<div class="hero"><div class="hero-grid">
+<div class="hero-copy rv">
+<div class="badge">A reservation system for Optiven Group</div>
+<h1>Your land is <em>waiting.</em> Reserve it properly.</h1>
+<p>Optiven's projects end in a phone call today — so diaspora buyers negotiate entire land purchases inside chat threads. <b>Optiven Reserve</b> fixes that: pick a real project below, choose the plot exactly as Optiven publishes it, and send one complete, structured reservation to Optiven's team.</p>
+<div class="actions">
+<a class="btn wa" href="#reserve">Start a reservation</a>
+<a class="btn ghost" href="#projects">Browse the index</a>
+</div>
+<div class="hero-stats">
+<div class="hstat"><b>15+</b><span>Locations · optiven.co.ke</span></div>
+<div class="hstat"><b>KES 179,000</b><span>Published entry price</span></div>
+<div class="hstat"><b>0790 300 300</b><span>Optiven reservations line</span></div>
+</div>
+</div>
+<div class="hero-media rv">
+<div class="sticker">FROM KES 179,000 · PUBLISHED PRICES</div>
+<div class="frame"><img src="img/hero.jpg" alt="Vipingo Prime by Optiven — coastal project imagery published by Optiven"></div>
+<div class="card"><div><b>Vipingo Prime, Kilifi Coast</b><span>Real project photography from Optiven's own site · <a href="#reserve" data-pick="ocean">Reserve at Vipingo →</a></span></div></div>
+</div>
+</div></div>
+<div class="marquee" aria-hidden="true"><div class="mq"><span>Vipingo ✦ Malindi ✦ Nanyuki ✦ Naro Moru ✦ Nakuru ✦ Kitengela ✦ Kajiado ✦ Juja ✦ Thika ✦ Kantafu ✦ Kithimani ✦ Kitale ✦&nbsp;</span><span>Vipingo ✦ Malindi ✦ Nanyuki ✦ Naro Moru ✦ Nakuru ✦ Kitengela ✦ Kajiado ✦ Juja ✦ Thika ✦ Kantafu ✦ Kithimani ✦ Kitale ✦&nbsp;</span></div></div>
+
+<div class="wrap">
+<section id="projects" class="rv">
+<div class="eyebrow">The Project Index</div>
+<h2>Sixteen real projects. <em>Published prices only.</em></h2>
+<p class="sub">Every project, location and price below is taken from Optiven's own project pages on optiven.co.ke — including each project's Optiven star rating. Where Optiven does not publish a number, this page does not invent one.</p>
+<div class="filters" id="filters" role="group" aria-label="Filter projects by region"></div>
+<div class="grid" id="grid"></div>
+<p class="srcnote">Prices shown are Optiven's published cash prices (full payment terms as stated on each project page). Instalment prices, where Optiven publishes them, differ and are confirmed by Optiven when your reservation is received. Star ratings are Optiven's own project ratings.</p>
+</section>
+
+<section class="rv">
+<div class="eyebrow">How It Works</div>
+<h2>From browsing to a <em>booked reservation</em> in three steps</h2>
+<p class="sub">No accounts, no card details, no fake checkout. The reservation is the product — complete, structured, and in Optiven's hands in one message.</p>
+<div class="steps">
+<div class="step"><span class="n">01</span><h3>Choose your plot</h3><p>Pick a project from the index and the exact plot option Optiven publishes for it — size, view or zone — with its published cash price and deposit in front of you.</p></div>
+<div class="step"><span class="n">02</span><h3>Give your details once</h3><p>Name, contacts, country and timezone if you are buying from the diaspora, and how you intend to handle the deposit. The summary updates live as you go.</p></div>
+<div class="step"><span class="n">03</span><h3>Complete on WhatsApp</h3><p>One tap sends the full reservation to Optiven on +254 790 300 300, already written out. Optiven confirms availability and the deposit — no payment is taken on this page.</p></div>
+</div>
+</section>
+
+<section id="reserve" class="rv">
+<div class="eyebrow">Reserve</div>
+<h2>Reserve your <em>plot</em></h2>
+<p class="sub">Complete the three steps. Your reservation is composed for you and sent to Optiven's published WhatsApp line — the same number Optiven prints on every project page.</p>
+<div class="flow">
+<div class="panel">
+<form id="rform" novalidate>
+<div class="fstep">
+<div class="fstep-t"><span class="sn">1</span><div><h3>Project</h3><small>Filter and choose from Optiven's published projects</small></div></div>
+<select class="fsel" id="fProject" aria-label="Choose a project"></select>
+<div class="err" id="eProject">Please choose a project.</div>
+</div>
+<div class="fstep">
+<div class="fstep-t"><span class="sn">2</span><div><h3>Plot</h3><small>Only the sizes and types Optiven publishes for this project</small></div></div>
+<div class="opts" id="fOpts"></div>
+<div class="err" id="ePlot">Please choose a plot option.</div>
+</div>
+<div class="fstep">
+<div class="fstep-t"><span class="sn">3</span><div><h3>Your details</h3><small>So Optiven can confirm and call you back at a sane hour</small></div></div>
+<div class="fgrid">
+<div class="field wide"><label class="fl" for="fName">Full name *</label><input class="fin" id="fName" type="text" autocomplete="name" placeholder="e.g. Mary Wanjiku"><div class="err" id="eName">Please enter your full name.</div></div>
+<div class="field"><label class="fl" for="fEmail">Email *</label><input class="fin" id="fEmail" type="email" autocomplete="email" placeholder="you@example.com"><div class="err" id="eEmail">Please enter a valid email address.</div></div>
+<div class="field"><label class="fl" for="fPhone">Phone / WhatsApp *</label><input class="fin" id="fPhone" type="tel" autocomplete="tel" placeholder="+1 555 000 1234 or 07…"><div class="err" id="ePhone">Please enter a valid phone number.</div></div>
+<div class="field"><label class="fl" for="fCountry">Country of residence *</label>
+<select class="fsel" id="fCountry"><option value="">Select country…</option><option>Kenya</option><option>United States</option><option>United Kingdom</option><option>Canada</option><option>Germany</option><option>United Arab Emirates</option><option>Australia</option><option>South Africa</option><option>Other</option></select>
+<div class="err" id="eCountry">Please select your country of residence.</div></div>
+<div class="field"><label class="fl" for="fTz">Your timezone</label>
+<select class="fsel" id="fTz"><option value="">Select timezone…</option><option>Africa/Nairobi (EAT)</option><option>America/New_York (ET)</option><option>America/Chicago (CT)</option><option>America/Denver (MT)</option><option>America/Los_Angeles (PT)</option><option>Europe/London (GMT/BST)</option><option>Europe/Berlin (CET)</option><option>Asia/Dubai (GST)</option><option>Australia/Sydney (AEST)</option><option>Other</option></select></div>
+<div class="field"><label class="fl" for="fIntent">Deposit intent *</label>
+<select class="fsel" id="fIntent"><option value="">How will you handle the deposit?</option><option>Ready to pay the published deposit now</option><option>Can pay the deposit within 7 days</option><option>Can pay the deposit within 30 days</option><option>Prefer instalments — please advise me</option><option>Paying the full cash price</option></select>
+<div class="err" id="eIntent">Please tell Optiven your deposit intent.</div></div>
+<div class="field"><label class="fl" for="fContact">Best time to contact you</label><input class="fin" id="fContact" type="text" placeholder="e.g. Weekday evenings, my time"></div>
+<div class="field wide"><label class="fl" for="fNotes">Anything else? (optional)</label><textarea class="fin" id="fNotes" placeholder="e.g. Buying with my spouse, we are visiting Kenya in December and would like a site visit."></textarea></div>
+</div>
+</div>
+</form>
+<div class="confirm" id="confirm" role="status">
+<h4>✓ Your reservation is ready</h4>
+<p>This is not a payment and nothing has been charged. Tap the green button in the summary to open WhatsApp with this exact reservation addressed to Optiven (+254 790 300 300) — sending that message completes your reservation request.</p>
+<pre id="confirmText"></pre>
+</div>
+</div>
+<aside class="summary" aria-live="polite">
+<h3>Your reservation</h3>
+<p class="ssub">Live summary · published figures only</p>
+<div class="srow"><span>Project</span><b id="sProject">—</b></div>
+<div class="srow"><span>Location</span><b id="sLoc">—</b></div>
+<div class="srow"><span>Plot</span><b id="sPlot">—</b></div>
+<div class="srow total"><span>Published price</span><b id="sPrice">—</b></div>
+<div class="srow"><span>Published deposit</span><b id="sDeposit">—</b></div>
+<div class="srow"><span>Buyer</span><b id="sBuyer">—</b></div>
+<div class="srow"><span>Deposit intent</span><b id="sIntent">—</b></div>
+<button class="btn submit-btn" id="submitBtn" type="button">Compose my reservation →</button>
+<a class="btn submit-btn" id="waBtn" href="https://wa.me/254790300300" target="_blank" rel="noopener" style="display:none;background:var(--wa)">Complete on WhatsApp →</a>
+<p class="snote">No payment is taken on this page. Your deposit is arranged directly with Optiven after they confirm your plot is available. Final price and terms are confirmed by Optiven.</p>
+</aside>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">Built for the Diaspora</div>
+<h2>Buying from Houston or London <em>should not mean</em> buying inside a chat thread</h2>
+<p class="sub">Optiven's buyers abroad currently get a brochure page and a phone number. Reserve gives them the same structured experience a buyer in Nairobi gets in the office.</p>
+<div class="dias">
+<div class="dcard">
+<h3>Your timezone is part of the reservation</h3>
+<p>Country and timezone are captured with the reservation itself, so Optiven's team calls back inside your day — not at 3 a.m. your time — and the plot, price and deposit you chose are already on record before the first call.</p>
+<p>Every figure you see is the figure Optiven publishes in Kenya Shillings (KES) on optiven.co.ke. Nothing is converted, marked up or estimated here.</p>
+<a class="btn wa" href="#reserve" style="margin-top:8px">Reserve from anywhere →</a>
+</div>
+<div class="dimg"><img src="img/ocean-gate.jpg" alt="Entrance gate at Ocean View Ridge, Vipingo — photo published by Optiven"></div>
+</div>
+</section>
+</div>
+
+<footer>
+Optiven Reserve — a concept reservation system for Optiven Group, founded and led by Dr. George Wachiuri.<br>
+Project names, locations, star ratings and prices as published on <a href="https://www.optiven.co.ke/properties/" target="_blank" rel="noopener">optiven.co.ke</a> · Reservations line: +254 790 300 300 · This concept is not affiliated with or endorsed by Optiven Group.<br><br>
+Concept proposal built by SiteSprint Studio.
+</footer>
+
+<div class="stickybar"><a href="#reserve">Reserve a plot — from KES 179,000</a></div>
+<script id="reserve-core">
+/* Optiven Reserve — core logic (data + validation + message composition).
+   Prices are Optiven's published cash prices from optiven.co.ke project pages.
+   price:null means Optiven does not publish a price for that option. */
+var WA_NUMBER = "254790300300";
+var PROJECTS = [
+{id:"ocean",name:"Ocean View Ridge",place:"Vipingo",county:"Kilifi County",region:"coast",stars:4,img:"img/ocean.jpg",note:"2.4 km from the Mombasa–Malindi Road, 4.5 km from the shoreline. Ridge and ocean-view plots.",options:[
+{label:"1/8 Acre — Ridge View",price:1995000,deposit:null},
+{label:"1/8 Acre — Ocean View",price:2295000,deposit:null},
+{label:"1/4 Acre — Ridge View",price:3795000,deposit:null},
+{label:"1/4 Acre — Ocean View",price:4395000,deposit:null},
+{label:"1/2 Acre — Ridge View",price:7200000,deposit:null},
+{label:"1/2 Acre — Ocean View",price:8000000,deposit:null}],priceNote:"30-day full-payment prices"},
+{id:"joy",name:"Joy Lovers Club",place:"Malindi Town",county:"Kilifi County",region:"coast",stars:5,img:"img/joy.png",note:"High-end gated community along Mtangani Road, 1.6 km from the Indian Ocean — the “Muthaiga of Malindi”.",options:[
+{label:"1/8 Acre",price:3950000,deposit:1000000}],priceNote:"Cash price, 30 days"},
+{id:"malindi9",name:"Malindi Gardens Phase 9",place:"Malindi",county:"Kilifi County",region:"coast",stars:1,img:"img/malindi9.jpg",note:"The final phase of Optiven's Malindi series. Freehold title deeds, water lines by Mawasco, power and fibre in the neighbourhood.",options:[
+{label:"1/8 Acre",price:179000,deposit:20000}],priceNote:"Cash price"},
+{id:"malindi8",name:"Malindi Gardens Phase 8",place:"Malindi",county:"Kilifi County",region:"coast",stars:1,img:"img/malindi8.jpg",note:"Freehold title deeds and rich red soil in the heart of Malindi, with graded roads and beacons.",options:[
+{label:"1/8 Acre",price:179000,deposit:75000},
+{label:"1/4 Acre",price:254000,deposit:100000},
+{label:"1/2 Acre",price:499000,deposit:200000},
+{label:"1 Acre",price:995000,deposit:300000}],priceNote:"Cash prices"},
+{id:"kibali",name:"Kibali Cha Watoto Wetu Gardens",place:"Malindi",county:"Kilifi County",region:"coast",stars:1,img:"img/kibali.jpg",note:"A land-banking project aimed at the young, with county water on site along a road set for tarmacking.",options:[
+{label:"1/4 Acre — Residential",price:254000,deposit:100000},
+{label:"1/4 Acre — Commercial",price:299000,deposit:null}],priceNote:"Cash prices, 30 days"},
+{id:"oasis",name:"The Great Oasis Gardens",place:"Nanyuki",county:"Laikipia County",region:"mtkenya",stars:3,img:"img/oasis.jpg",note:"Between Mt. Kenya, the Aberdare Ranges and Lolldaiga Hills, with wildlife in proximity and easy access to Nanyuki Town.",options:[
+{label:"1/8 Acre",price:449000,deposit:200000},
+{label:"1/4 Acre",price:875000,deposit:200000},
+{label:"1/2 Acre",price:1655000,deposit:500000},
+{label:"1 Acre",price:3185000,deposit:500000}],priceNote:"Cash prices, 30 days"},
+{id:"wema",name:"Wema Gardens",place:"Naro Moru",county:"Nyeri County",region:"mtkenya",stars:2,img:"img/wema.jpg",note:"“The Place of Good Tidings” — 400 m off tarmac, about 7 km from Naro Moru town, waking up to Mt. Kenya.",options:[
+{label:"Residential plot (as published)",price:439000,deposit:200000}],priceNote:"Cash price, 14 days"},
+{id:"ushindi",name:"Ushindi Gardens",place:"Nakuru",county:"Nakuru County",region:"rift",stars:4,img:"img/ushindi.jpg",note:"1.2 km from the Nakuru–Eldoret Highway and 18 minutes from Nakuru City, with solar streetlights and a community park.",options:[
+{label:"1/8 Acre — Residential",price:1095000,deposit:300000},
+{label:"1/8 Acre — Commercial",price:2185000,deposit:500000}],priceNote:"Cash prices, 30 days"},
+{id:"juja",name:"Optiven Juja",place:"Juja",county:"Kiambu County",region:"central",stars:4,img:"img/juja.jpg",note:"A 4-star development just 1.4 km off the tarmac in fast-growing Juja.",options:[
+{label:"1/8 Acre",price:3995000,deposit:1000000}],priceNote:"Cash price, 30 days"},
+{id:"success",name:"Success Gardens Phase 3",place:"Gatanga Road, Thika",county:"Kiambu County",region:"central",stars:4,img:"img/success.jpg",note:"Right on Gatanga Road, 9 minutes off Thika Superhighway — gated, with water and electricity for every plot.",options:[
+{label:"1 Acre",price:6995000,deposit:700000}],priceNote:"Cash price, 30 days"},
+{id:"celebrations",name:"Celebrations Gardens Phase 2",place:"Kitengela",county:"Kajiado County",region:"metro",stars:3,img:"img/celebrations.jpg",note:"Gated community 3.8 km via Saitoti Road off Namanga Road, about 40 minutes south of Nairobi.",options:[
+{label:"Residential — Zone 1",price:1895000,deposit:500000},
+{label:"Residential — Zone 2",price:1695000,deposit:500000},
+{label:"Residential — Zone 3",price:1495000,deposit:500000},
+{label:"Commercial",price:1995000,deposit:500000}],priceNote:"Cash prices"},
+{id:"love",name:"Love Gardens",place:"Kajiado Township",county:"Kajiado County",region:"metro",stars:3,img:"img/love.jpg",note:"Within 2 km of Kajiado Town and under 1 km from tarmac, with borehole water on site and ready title deeds.",options:[
+{label:"Residential",price:950000,deposit:200000},
+{label:"Commercial",price:1050000,deposit:200000}],priceNote:"Cash offers"},
+{id:"shalom",name:"Shalom Gardens Phase 2",place:"Kantafu",county:"Machakos County",region:"metro",stars:3,img:"img/shalom.jpg",note:"Prime value-added project 4 km off Kangundo Road, served by an Optiven borehole and fully fenced.",options:[
+{label:"Plot (as published)",price:1450000,deposit:500000}],priceNote:"Cash price"},
+{id:"kithimani",name:"Kithimani Springs",place:"Kithimani",county:"Machakos County",region:"metro",stars:4,img:"img/kithimani.jpg",note:"Gated community with a stone perimeter wall, power and water on site — right on the tarmac, 1 km from Kithimani Township.",options:[
+{label:"Freehold plot (as published)",price:1500000,deposit:500000}],priceNote:"Cash price, 30 days"},
+{id:"vuyanzi",name:"Vuyanzi Gardens",place:"Kitale",county:"Trans Nzoia County",region:"western",stars:4,img:"img/vuyanzi.jpg",note:"A 4-star investment in Kitale, headquarters of Trans Nzoia County, with freehold title deeds and ready-to-build land.",options:[
+{label:"Residential plot (as published)",price:1995000,deposit:500000}],priceNote:"Cash price, 30 days"},
+{id:"furaha",name:"Furaha Farms",place:"Off Namanga Highway",county:"Kajiado County",region:"metro",stars:1,img:"img/furaha.jpg",note:"Farming parcels 1 km off the Namanga Highway — fenced, gated, caretaker on site; plot owners are already farming.",options:[
+{label:"1-Acre parcel",price:2995000,deposit:null},
+{label:"Phase 2 — larger parcels, 2 to 5 acres",price:null,deposit:null}],priceNote:"Published parcel price"}
+];
+var REGIONS = [
+{id:"all",label:"All projects"},
+{id:"coast",label:"Coast · Kilifi"},
+{id:"mtkenya",label:"Mt. Kenya"},
+{id:"rift",label:"Rift Valley"},
+{id:"central",label:"Central · Kiambu"},
+{id:"metro",label:"Nairobi Metro · Kajiado & Machakos"},
+{id:"western",label:"Western · Trans Nzoia"}
+];
+function formatKES(n){ if(n===null||n===undefined) return "Price on enquiry"; return "KES " + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function findProject(id){ for(var i=0;i<PROJECTS.length;i++){ if(PROJECTS[i].id===id) return PROJECTS[i]; } return null; }
+function fromPrice(p){ var m=null; p.options.forEach(function(o){ if(o.price!==null && (m===null||o.price<m)) m=o.price; }); return m; }
+function validateReservation(s){
+  var e={};
+  if(!s.projectId || !findProject(s.projectId)) e.project="Please choose a project.";
+  else if(s.optionIndex===null||s.optionIndex===undefined||!findProject(s.projectId).options[s.optionIndex]) e.plot="Please choose a plot option.";
+  if(!s.name || s.name.trim().length<3) e.name="Please enter your full name.";
+  if(!s.email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.email.trim())) e.email="Please enter a valid email address.";
+  var digits=(s.phone||"").replace(/\D/g,"");
+  if(!s.phone || digits.length<7 || digits.length>15) e.phone="Please enter a valid phone number.";
+  if(!s.country) e.country="Please select your country of residence.";
+  if(!s.intent) e.intent="Please tell Optiven your deposit intent.";
+  return e;
+}
+function composeMessage(s){
+  var p=findProject(s.projectId); var o=p.options[s.optionIndex];
+  var lines=[];
+  lines.push("Hello Optiven, I would like to reserve a plot.");
+  lines.push("");
+  lines.push("— RESERVATION REQUEST · OPTIVEN RESERVE —");
+  lines.push("Name: "+s.name.trim());
+  lines.push("Email: "+s.email.trim());
+  lines.push("Phone / WhatsApp: "+s.phone.trim());
+  lines.push("Country of residence: "+s.country);
+  if(s.tz) lines.push("Timezone: "+s.tz);
+  lines.push("Project: "+p.name+" — "+p.place+", "+p.county);
+  lines.push("Plot: "+o.label);
+  lines.push("Published price: "+(o.price!==null?formatKES(o.price)+" ("+p.priceNote.toLowerCase()+")":"Price on enquiry — please quote"));
+  lines.push("Published deposit: "+(o.deposit!==null?formatKES(o.deposit):"Not published — please advise"));
+  lines.push("Deposit intent: "+s.intent);
+  if(s.contact) lines.push("Best time to contact me: "+s.contact.trim());
+  if(s.notes) lines.push("Notes: "+s.notes.trim());
+  lines.push("");
+  lines.push("Please confirm availability and the next steps to secure this plot. Thank you.");
+  return lines.join("\n");
+}
+function buildWhatsAppLink(s){ return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(composeMessage(s)); }
+if(typeof window!=="undefined"){ window.ReserveCore={PROJECTS:PROJECTS,REGIONS:REGIONS,WA_NUMBER:WA_NUMBER,formatKES:formatKES,findProject:findProject,fromPrice:fromPrice,validateReservation:validateReservation,composeMessage:composeMessage,buildWhatsAppLink:buildWhatsAppLink}; }
+</script>
+<script>
+(function(){
+var hdr=document.getElementById('hdr');
+function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>10);}
+window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+var rvItems=document.querySelectorAll('.rv');
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){rvItems.forEach(function(e){e.classList.add('in');});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});rvItems.forEach(function(e){io.observe(e);});}
+
+var C=window.ReserveCore;
+var grid=document.getElementById('grid'), filtersEl=document.getElementById('filters');
+var activeRegion="all";
+function stars(n){var s="";for(var i=0;i<n;i++)s+="★";return s;}
+function renderFilters(){
+  filtersEl.innerHTML="";
+  C.REGIONS.forEach(function(r){
+    var b=document.createElement('button'); b.type="button"; b.className="fbtn"+(r.id===activeRegion?" on":""); b.textContent=r.label;
+    b.addEventListener('click',function(){activeRegion=r.id; renderFilters(); renderGrid();});
+    filtersEl.appendChild(b);
+  });
+}
+function renderGrid(){
+  grid.innerHTML="";
+  C.PROJECTS.forEach(function(p,idx){
+    if(activeRegion!=="all"&&p.region!==activeRegion) return;
+    var card=document.createElement('article'); card.className="pcard";
+    var from=C.fromPrice(p);
+    card.innerHTML='<div class="ph"><span class="pnum">No. '+String(idx+1).padStart(2,"0")+'</span><span class="pstars" title="Optiven star rating">'+stars(p.stars)+'</span><img src="'+p.img+'" alt="'+p.name+' — project photo published by Optiven" loading="lazy"></div>'+
+    '<div class="pbody"><h3>'+p.name+'</h3><div class="ploc">'+p.place+' · '+p.county+'</div><p class="pnote">'+p.note+'</p>'+
+    '<div class="pprice"><div><span class="from">From · '+p.priceNote+'</span><span class="amt">'+(from!==null?C.formatKES(from):"Price on enquiry")+'</span></div>'+
+    '<button type="button" class="reserve-btn" data-pick="'+p.id+'">Reserve →</button></div></div>';
+    grid.appendChild(card);
+  });
+  grid.querySelectorAll('[data-pick]').forEach(function(b){ b.addEventListener('click',function(){ pickProject(b.getAttribute('data-pick')); }); });
+}
+renderFilters(); renderGrid();
+
+var sel=document.getElementById('fProject'), optsEl=document.getElementById('fOpts');
+sel.innerHTML='<option value="">Select a project…</option>'+C.PROJECTS.map(function(p){return '<option value="'+p.id+'">'+p.name+' — '+p.place+', '+p.county+'</option>';}).join("");
+var state={projectId:"",optionIndex:null};
+function renderOpts(){
+  optsEl.innerHTML="";
+  var p=C.findProject(state.projectId);
+  if(!p){optsEl.innerHTML='<p style="color:var(--ink2);font-size:14px">Choose a project above and its published plot options will appear here.</p>'; return;}
+  p.options.forEach(function(o,i){
+    var lab=document.createElement('label'); lab.className="opt"+(state.optionIndex===i?" sel":"");
+    lab.innerHTML='<input type="radio" name="plotopt" value="'+i+'"><span><span class="ol">'+o.label+'</span><span class="op">'+(o.price!==null?C.formatKES(o.price):"Price on enquiry")+'</span><span class="od">'+(o.deposit!==null?("Published deposit: "+C.formatKES(o.deposit)):("Deposit: not published — Optiven will advise"))+" · "+p.priceNote+'</span></span>';
+    lab.querySelector('input').addEventListener('change',function(){ state.optionIndex=i; renderOpts(); updateSummary(); hideErr('ePlot'); });
+    optsEl.appendChild(lab);
+  });
+}
+function pickProject(id){
+  state.projectId=id; state.optionIndex=null; sel.value=id; renderOpts(); updateSummary(); hideErr('eProject');
+  document.getElementById('reserve').scrollIntoView({behavior:reduce?'auto':'smooth'});
+}
+document.querySelectorAll('[data-pick]').forEach(function(a){ a.addEventListener('click',function(ev){ var id=a.getAttribute('data-pick'); if(id){ ev.preventDefault(); pickProject(id);} }); });
+sel.addEventListener('change',function(){ state.projectId=sel.value; state.optionIndex=null; renderOpts(); updateSummary(); hideErr('eProject'); });
+
+function val(id){ return document.getElementById(id).value; }
+function collect(){
+  return {projectId:state.projectId, optionIndex:state.optionIndex, name:val('fName'), email:val('fEmail'), phone:val('fPhone'), country:val('fCountry'), tz:val('fTz'), intent:val('fIntent'), contact:val('fContact'), notes:val('fNotes')};
+}
+function setText(id,t){ document.getElementById(id).textContent=t; }
+function updateSummary(){
+  var s=collect(); var p=C.findProject(s.projectId);
+  setText('sProject', p?p.name:"—");
+  setText('sLoc', p?(p.place+", "+p.county):"—");
+  var o=(p&&s.optionIndex!==null)?p.options[s.optionIndex]:null;
+  setText('sPlot', o?o.label:"—");
+  setText('sPrice', o?(o.price!==null?C.formatKES(o.price):"Price on enquiry"):"—");
+  setText('sDeposit', o?(o.deposit!==null?C.formatKES(o.deposit):"Not published — Optiven advises"):"—");
+  setText('sBuyer', s.name.trim()?s.name.trim():"—");
+  setText('sIntent', s.intent||"—");
+}
+['fName','fEmail','fPhone','fCountry','fTz','fIntent','fContact','fNotes'].forEach(function(id){
+  var el=document.getElementById(id);
+  el.addEventListener('input',updateSummary); el.addEventListener('change',updateSummary);
+});
+function showErr(id,fieldId){ var e=document.getElementById(id); e.classList.add('show'); if(fieldId){ var f=document.getElementById(fieldId); if(f&&f.closest('.field')) f.closest('.field').classList.add('bad'); } }
+function hideErr(id){ document.getElementById(id).classList.remove('show'); }
+function clearBad(){ document.querySelectorAll('.field.bad').forEach(function(f){f.classList.remove('bad');}); ['eProject','ePlot','eName','eEmail','ePhone','eCountry','eIntent'].forEach(hideErr); }
+document.getElementById('submitBtn').addEventListener('click',function(){
+  clearBad();
+  var s=collect(); var errs=C.validateReservation(s);
+  var map={project:['eProject',null],plot:['ePlot',null],name:['eName','fName'],email:['eEmail','fEmail'],phone:['ePhone','fPhone'],country:['eCountry','fCountry'],intent:['eIntent','fIntent']};
+  var bad=false;
+  Object.keys(map).forEach(function(k){ if(errs[k]){ showErr(map[k][0],map[k][1]); bad=true; } });
+  if(bad){ document.getElementById('reserve').scrollIntoView({behavior:reduce?'auto':'smooth'}); return; }
+  var link=C.buildWhatsAppLink(s);
+  var wa=document.getElementById('waBtn'); wa.href=link; wa.style.display="flex";
+  document.getElementById('submitBtn').textContent="Update my reservation";
+  document.getElementById('confirmText').textContent=C.composeMessage(s);
+  var cf=document.getElementById('confirm'); cf.classList.add('show');
+  cf.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+});
+renderOpts(); updateSummary();
+})();
+</script>
+</body>
+</html>
