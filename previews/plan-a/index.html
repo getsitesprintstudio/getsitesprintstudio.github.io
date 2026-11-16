@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLAN'A — Alitas de fin de semana · Veracruz | 1 kg $250</title>
+<meta name="description" content="PLAN'A: alitas solo viernes, sábado y domingo, hasta agotar. 1 kg $250, ½ kg $150. Salsas BBQ, Parmesano, Valentina y Mango Habanero. Papas $70 y salchipapas $80. Pide por WhatsApp +52 923 116 5307.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fff6e9;--paper2:#ffedd3;--ink:#211309;--mut:#7d6350;--bbq:#7a2e1d;--parm:#e8a81c;--val:#d92b1f;--mango:#f26722;--wa:#1faa55;--line:#f0d9b8;--card:#fffdf8;--shadow:0 24px 50px rgba(122,46,29,.18);--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"Inter",system-ui,sans-serif;--hand:"Caveat",cursive}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--val);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(255,246,233,.95);backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(33,19,9,.12);border-bottom:1px solid var(--line)}
+.hdr{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-family:var(--disp);font-weight:800;font-size:28px;letter-spacing:-.02em;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.35)}header.scrolled .logo{color:var(--ink);text-shadow:none}.logo i{font-style:normal;color:var(--parm)}
+.hdr nav{display:flex;gap:6px;flex-wrap:wrap}.hdr nav a{color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:8px 13px;border-radius:999px;text-shadow:0 1px 8px rgba(0,0,0,.3)}header.scrolled .hdr nav a{color:var(--ink);text-shadow:none}.hdr nav a:hover{background:rgba(242,103,34,.18)}
+.hero{position:relative;isolation:isolate;color:#fff;overflow:hidden;background:#180b06}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.04)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(24,11,6,.93) 30%,rgba(122,46,29,.55) 68%,rgba(24,11,6,.35))}
+.hero-in{max-width:1180px;margin:0 auto;padding:clamp(130px,17vw,190px) 20px clamp(70px,9vw,100px)}
+.kicker{display:inline-flex;gap:8px;align-items:center;background:#fff;color:var(--ink);font-size:12px;font-weight:800;letter-spacing:.16em;padding:8px 15px;border-radius:999px;text-transform:uppercase}.kicker b{color:var(--val)}
+.hero h1{font-family:var(--disp);font-weight:800;font-size:clamp(76px,15vw,168px);line-height:.86;letter-spacing:-.03em;margin:22px 0 6px}.hero h1 i{font-style:normal;color:var(--parm)}
+.hero .hand{font-family:var(--hand);font-size:clamp(30px,4.6vw,46px);color:#ffd9a8;transform:rotate(-2deg);display:inline-block}
+.hero p.lead{max-width:540px;color:#ffeeda;font-size:clamp(16px,2vw,19px);margin:16px 0 28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s;border:none;cursor:pointer;font-family:var(--sans)}.btn:hover{transform:translateY(-2px)}.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(31,170,85,.35)}.btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.55)}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.marquee{background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;padding:13px 0;font-family:var(--disp);font-weight:800;letter-spacing:.14em;font-size:14px;text-transform:uppercase}.marquee span{display:inline-block;padding-right:14px}.marquee b{color:var(--parm)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.3em;color:var(--val);margin-bottom:12px;text-transform:uppercase}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(34px,5vw,52px);line-height:1.02;letter-spacing:-.02em;margin-bottom:12px}h2 i{font-style:normal;color:var(--mango)}
+.sub{color:var(--mut);max-width:600px;margin-bottom:36px}
+/* status board */
+.board{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(28px,4.5vw,48px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.board:before{content:"";position:absolute;inset:auto -60px -90px auto;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(242,103,34,.5),transparent 65%)}
+.board .live{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#ffd9a8}.dot{width:11px;height:11px;border-radius:50%;background:#666}.board.open .dot{background:#2ecc71;box-shadow:0 0 0 5px rgba(46,204,113,.2);animation:pulse 1.6s infinite}.board.closed .dot{background:var(--parm);box-shadow:0 0 0 5px rgba(232,168,28,.18)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,204,113,.45)}70%{box-shadow:0 0 0 9px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+.board h3{font-family:var(--disp);font-weight:800;font-size:clamp(38px,6vw,64px);line-height:.98;letter-spacing:-.02em;margin:14px 0 10px;position:relative}
+.board p{color:#e9d5bd;max-width:560px;position:relative}
+.board .days{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;position:relative}
+.dchip{border:1.5px solid #4d3826;border-radius:999px;padding:9px 16px;font-weight:800;font-size:13.5px;color:#cbb59b}.dchip.on{background:var(--mango);border-color:var(--mango);color:#fff}.dchip.today{outline:3px solid rgba(255,217,168,.55)}
+.board .cta{margin-top:26px;position:relative}
+/* menu */
+.menu-grid{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:820px){.menu-grid{grid-template-columns:1.25fr 1fr}}
+.big-card{background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 8px 26px rgba(33,19,9,.07)}
+.big-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.big-card-in{padding:26px}.big-card h3{font-family:var(--disp);font-size:30px;font-weight:800}
+.price-row{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0}
+.price-box{flex:1;min-width:140px;border:2px solid var(--line);border-radius:18px;padding:16px;text-align:center;cursor:pointer;background:#fff;transition:.2s;font:inherit;color:var(--ink)}.price-box:hover{transform:translateY(-3px)}.price-box.sel{border-color:var(--val);background:#fff3ec;box-shadow:0 0 0 3px rgba(217,43,31,.14)}.price-box b{font-family:var(--disp);font-size:30px;display:block}.price-box span{font-size:13px;color:var(--mut);font-weight:600}
+.sauces{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 18px}
+.sauce{border:2px solid var(--line);background:#fff;border-radius:16px;padding:13px 15px;cursor:pointer;font:inherit;font-weight:800;font-size:14.5px;display:flex;align-items:center;gap:10px;color:var(--ink);transition:.2s;text-align:left}.sauce:hover{transform:translateY(-2px)}.sauce.sel{border-color:var(--ink);box-shadow:0 0 0 3px rgba(33,19,9,.12)}.swatch{width:20px;height:20px;border-radius:50%;flex:none}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15.5px;transition:.2s}.ord:hover{background:#178a44}
+.note{font-size:13px;color:var(--mut);margin-top:12px}
+.side-stack{display:grid;gap:20px}
+.mini-card{background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 8px 26px rgba(33,19,9,.07);display:grid;grid-template-columns:42% 58%}
+.mini-card img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1}
+.mini-in{padding:22px}.mini-in h3{font-family:var(--disp);font-size:23px;font-weight:800}.mini-in p{font-size:14px;color:var(--mut)}.mini-in .pr{font-family:var(--disp);font-size:30px;font-weight:800;color:var(--val);margin:8px 0 12px}
+.mini-in .ord{min-height:48px;font-size:14.5px}
+.incl{margin-top:20px;background:var(--paper2);border:1px dashed #dfa75e;border-radius:20px;padding:20px 22px;font-size:14.5px}.incl b{font-family:var(--disp)}
+/* gallery */
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;display:block;transition:.3s}.strip figure:hover img{transform:scale(1.03)}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.owner{background:linear-gradient(120deg,var(--bbq),#4a1a0e);color:#fff;border-radius:28px;padding:clamp(30px,5vw,52px);margin-top:clamp(56px,8vw,84px);box-shadow:var(--shadow)}
+.owner h2{color:#fff}.owner p{color:#f3d9c8;max-width:600px}.owner .hand{font-family:var(--hand);font-size:30px;color:#ffd9a8}
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1180px;margin:56px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,253,248,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1180px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--val);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--bbq);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.9;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fff3ec;align-self:flex-start}.msg.user{background:var(--val);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--val);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="logo">PLAN<i>'</i>A</div>
+<nav><a href="#estado">¿Hoy hay?</a><a href="#menu">Menú</a><a href="#galeria">Galería</a></nav>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Alitas bañadas en salsa de PLAN'A">
+<div class="hero-in">
+<span class="kicker">Veracruz · Solo fin de semana · <b>Hasta agotar</b></span>
+<h1>PLAN<i>'</i>A</h1>
+<span class="hand">el plan del fin de semana</span>
+<p class="lead">Alitas por kilo, cuatro salsas y todo hecho al momento. Abrimos viernes, sábado y domingo — y cuando se acaba, se acaba.</p>
+<div class="actions">
+<a class="btn wa" href="#menu">Armar mi pedido</a>
+<a class="btn ghost" href="#estado">¿Hoy hay PLAN'A?</a>
+</div>
+</div>
+</div>
+
+<div class="marquee" aria-hidden="true"><span>BBQ <b>·</b> PARMESANO <b>·</b> VALENTINA <b>·</b> MANGO HABANERO <b>·</b> 1 KG $250 <b>·</b> VIERNES A DOMINGO <b>·</b> HASTA AGOTAR <b>·</b>&nbsp;</span><span>BBQ <b>·</b> PARMESANO <b>·</b> VALENTINA <b>·</b> MANGO HABANERO <b>·</b> 1 KG $250 <b>·</b> VIERNES A DOMINGO <b>·</b> HASTA AGOTAR <b>·</b>&nbsp;</span></div>
+
+<div class="wrap">
+<section id="estado" class="rv">
+<div class="eyebrow">01 · Estado de hoy</div>
+<h2>¿Hoy hay <i>PLAN'A</i>?</h2>
+<p class="sub">Somos un negocio de fin de semana. Este tablero se actualiza solo según el día en Veracruz: si es viernes, sábado o domingo, estamos tomando pedidos hasta agotar.</p>
+<div class="board" id="board">
+<span class="live"><span class="dot"></span><span id="boardLive">Revisando el día…</span></span>
+<h3 id="boardTitle">…</h3>
+<p id="boardText">…</p>
+<div class="days" id="boardDays"></div>
+<div class="cta"><a class="btn wa" id="boardCta" href="https://wa.me/529231165307?text=Hola%20PLAN%27A%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp — 923 116 5307</a></div>
+</div>
+</section>
+
+<section id="menu" class="rv">
+<div class="eyebrow">02 · Menú con precios</div>
+<h2>Arma tu pedido en dos toques</h2>
+<p class="sub">Elige el tamaño, elige la salsa, y tu pedido llega a WhatsApp ya escrito. Aderezos y verdura incluidos en las alitas.</p>
+<div class="menu-grid">
+<article class="big-card">
+<img src="img/p1.jpg" alt="Alitas de PLAN'A con salsa">
+<div class="big-card-in">
+<h3>Alitas PLAN'A</h3>
+<div class="price-row">
+<button type="button" class="price-box sel" data-size="1 kg" data-price="$250"><b>$250</b><span>1 kg completo</span></button>
+<button type="button" class="price-box" data-size="½ kg" data-price="$150"><b>$150</b><span>½ kg para el antojo</span></button>
+</div>
+<p style="font-weight:800;font-size:14px;margin-bottom:10px">Elige tu salsa:</p>
+<div class="sauces">
+<button type="button" class="sauce sel" data-sauce="BBQ"><span class="swatch" style="background:#7a2e1d"></span>BBQ</button>
+<button type="button" class="sauce" data-sauce="Parmesano"><span class="swatch" style="background:#e8a81c"></span>Parmesano</button>
+<button type="button" class="sauce" data-sauce="Valentina"><span class="swatch" style="background:#d92b1f"></span>Valentina</button>
+<button type="button" class="sauce" data-sauce="Mango Habanero"><span class="swatch" style="background:#f26722"></span>Mango Habanero</button>
+</div>
+<a class="ord" id="wingsOrder" href="#">Pedir mis alitas →</a>
+<p class="note" id="orderSummary">Tu pedido: alitas de 1 kg ($250) con salsa BBQ.</p>
+</div>
+</article>
+<div class="side-stack">
+<article class="mini-card">
+<img src="img/p4.jpg" alt="Papas de PLAN'A">
+<div class="mini-in"><h3>Papas</h3><p>El acompañamiento que nunca falla.</p><div class="pr">$70</div>
+<a class="ord" href="https://wa.me/529231165307?text=Hola%20PLAN%27A%2C%20quiero%20pedir%20unas%20papas%20(%2470)">Pedir papas →</a></div>
+</article>
+<article class="mini-card">
+<img src="img/p6.jpg" alt="Salchipapas de PLAN'A">
+<div class="mini-in"><h3>Salchipapas</h3><p>Papas con salchicha, para compartir (o no).</p><div class="pr">$80</div>
+<a class="ord" href="https://wa.me/529231165307?text=Hola%20PLAN%27A%2C%20quiero%20pedir%20unas%20salchipapas%20(%2480)">Pedir salchipapas →</a></div>
+</article>
+<div class="incl"><b>Todo incluido:</b> las alitas llevan aderezos y verdura incluidos, sin costo extra. Precios en pesos mexicanos, tal como los publica PLAN'A.</div>
+</div>
+</div>
+</section>
+
+<section id="galeria" class="rv">
+<div class="eyebrow">03 · Galería</div>
+<h2>Así se antoja</h2>
+<p class="sub">Alitas, papas y salchipapas — el menú completo de PLAN'A, en fotos.</p>
+<div class="strip">
+<figure><img src="img/p2.jpg" alt="Alitas con salsa de PLAN'A"><figcaption>Recién salseadas</figcaption></figure>
+<figure><img src="img/p3.jpg" alt="Alitas de PLAN'A para compartir"><figcaption>Para el fin de semana</figcaption></figure>
+<figure><img src="img/p5.jpg" alt="Alitas crujientes de PLAN'A"><figcaption>Crujientes, al momento</figcaption></figure>
+<figure><img src="img/hero.jpg" alt="Alitas de PLAN'A"><figcaption>El plan: PLAN'A</figcaption></figure>
+</div>
+</section>
+
+<div class="owner rv">
+<div class="eyebrow" style="color:#ffd9a8">04 · Negocio local</div>
+<h2>Hecho en casa, en Veracruz</h2>
+<p>PLAN'A es el emprendimiento de <b>Cinthia Toledo Cruz</b>. Cocina solo de viernes a domingo y vende hasta agotar, por eso todo se hace al momento y con la salsa que tú elijas.</p>
+<p style="margin-top:14px"><span class="hand">— aparta las tuyas antes de que se acaben</span></p>
+<div class="actions" style="margin-top:22px"><a class="btn wa" href="https://wa.me/529231165307?text=Hola%20PLAN%27A%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp</a></div>
+</div>
+</div>
+
+<footer>
+PLAN'A · Veracruz, México · Solo viernes a domingo, hasta agotar · WhatsApp +52 923 116 5307<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of PLAN'A.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/529231165307?text=Hola%20PLAN%27A%2C%20quiero%20hacer%20un%20pedido">🔥 Pedir por WhatsApp — 923 116 5307</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente PLAN'A">
+<div class="chatw-head"><div><b>Asistente PLAN'A</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+/* Order builder: size + sauce -> WhatsApp */
+var size='1 kg',price='$250',sauce='BBQ';
+function refresh(){document.getElementById('wingsOrder').href='https://wa.me/529231165307?text='+encodeURIComponent("Hola PLAN'A, quiero pedir alitas de "+size+" ("+price+") con salsa "+sauce);document.getElementById('orderSummary').textContent='Tu pedido: alitas de '+size+' ('+price+') con salsa '+sauce+'.';}
+document.querySelectorAll('.price-box').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.price-box').forEach(function(x){x.classList.remove('sel')});b.classList.add('sel');size=b.getAttribute('data-size');price=b.getAttribute('data-price');refresh();});});
+document.querySelectorAll('.sauce').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.sauce').forEach(function(x){x.classList.remove('sel')});b.classList.add('sel');sauce=b.getAttribute('data-sauce');refresh();});});
+refresh();
+/* Weekend status board — day of week in America/Mexico_City, no clock hours (none published) */
+(function(){
+var board=document.getElementById('board');if(!board)return;
+var dayIdx;try{var wd=new Intl.DateTimeFormat('en-US',{timeZone:'America/Mexico_City',weekday:'short'}).format(new Date());dayIdx={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[wd];}catch(e){dayIdx=new Date().getDay();}
+var names=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+var open=(dayIdx===0||dayIdx===5||dayIdx===6);
+var daysEl=document.getElementById('boardDays');
+[1,2,3,4,5,6,0].forEach(function(d){var c=document.createElement('span');c.className='dchip'+((d===0||d===5||d===6)?' on':'')+(d===dayIdx?' today':'');c.textContent=names[d]+(d===dayIdx?' · hoy':'');daysEl.appendChild(c);});
+board.classList.add(open?'open':'closed');
+document.getElementById('boardLive').textContent=open?'En vivo · tomando pedidos':'En vivo · hoy no cocinamos';
+if(open){document.getElementById('boardTitle').textContent="¡Hoy SÍ hay PLAN'A!";document.getElementById('boardText').textContent='Es '+names[dayIdx].toLowerCase()+' y estamos vendiendo hasta agotar. Aparta tu kilo por WhatsApp antes de que se acabe.';}
+else{var until=(5-dayIdx+7)%7;if(until===0)until=7;document.getElementById('boardTitle').textContent='Hoy no — faltan '+until+(until===1?' día':' días')+' para el viernes';document.getElementById('boardText').textContent='PLAN\'A cocina solo viernes, sábado y domingo, hasta agotar. Hoy es '+names[dayIdx].toLowerCase()+': puedes dejarnos tu pedido apartado por WhatsApp para el fin de semana.';document.getElementById('boardCta').textContent='Apartar mi pedido por WhatsApp';}
+})();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir por WhatsApp","href":"https://wa.me/529231165307"},"greeting":"¡Hola! Soy el asistente de PLAN'A. Pregúntame por los precios, las salsas o qué días vendemos — o toca una sugerencia.","fallback":"Eso no lo tengo a la mano — escríbenos por WhatsApp al +52 923 116 5307 y te ayudamos.","chips":["¿Qué días venden?","¿Cuánto cuestan las alitas?","¿Qué salsas hay?","¿Qué más venden?","Quiero pedir"],"items":[{"k":["salchipapas"],"a":"Salchipapas — $80. Pídelas por WhatsApp con el botón de esta página.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529231165307"}},{"k":["papas"],"a":"Papas — $70. Pídelas por WhatsApp con el botón de esta página.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529231165307"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por los precios, las salsas o los días de venta."},{"k":["precio","cuesta","cuestan","cuanto","kilo"],"a":"Alitas: 1 kg $250 y ½ kg $150, con aderezos y verdura incluidos. Papas $70 y salchipapas $80.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529231165307"}},{"k":["salsa","salsas","sabor","sabores","bbq","parmesano","valentina","mango","habanero"],"a":"Tenemos 4 salsas: BBQ, Parmesano, Valentina y Mango Habanero. Elige la tuya al armar tu pedido."},{"k":["dia","dias","horario","cuando","abren","abierto","fin de semana","viernes","sabado","domingo"],"a":"Vendemos solo de fin de semana: viernes, sábado y domingo, hasta agotar. Entre semana no cocinamos."},{"k":["agot","queda","hay"],"a":"Vendemos hasta agotar cada fin de semana (viernes a domingo). Para asegurar las tuyas, aparta tu pedido por WhatsApp.","link":{"t":"Apartar por WhatsApp","href":"https://wa.me/529231165307"}},{"k":["incluye","aderezo","verdura"],"a":"Las alitas incluyen aderezos y verdura, sin costo extra."},{"k":["pedir","ordenar","comprar","quiero"],"a":"Para pedir: elige tamaño y salsa en el menú de esta página y toca el botón — tu pedido llega a WhatsApp ya escrito. También puedes escribirnos directo al +52 923 116 5307.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/529231165307"}},{"k":["donde","ubicacion","direccion","veracruz"],"a":"Estamos en Veracruz y vendemos viernes, sábado y domingo hasta agotar. Escríbenos por WhatsApp al +52 923 116 5307 para coordinar tu pedido.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/529231165307"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp: +52 923 116 5307.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/529231165307"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos el fin de semana en PLAN'A."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+</body>
+</html>

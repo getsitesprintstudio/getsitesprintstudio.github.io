@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pollería Dorados — Lurigancho-Chosica, Lima | Pollo a la brasa en Cajamarquilla, Huachipa y Nievería</title>
+<meta name="description" content="Pollería Dorados en Lurigancho-Chosica, Lima. Tres locales: Cajamarquilla, Huachipa y Nievería. ¼ pollo + papas + cremas + ensalada S/9.99, ½ pollo S/19.99 y 1 pollo + Pepsi 1.5L S/44.99. Pide por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;0,9..144,800;1,9..144,550&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbf6ec;--paper2:#f4ead6;--ink:#211a12;--mut:#7d6c55;--gold:#d9930d;--gold2:#b97a06;--ember:#c2451e;--char:#241c11;--line:#e7d9bd;--card:#fff;--wa:#1faa55;--shadow:0 22px 48px rgba(33,26,18,.16);--serif:"Fraunces",Georgia,serif;--sans:"Manrope",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--gold);color:#fff}img{max-width:100%}
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{box-shadow:0 10px 30px rgba(33,26,18,.12);border-bottom-color:var(--line)}
+.hdr{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:800;font-size:27px;line-height:1}.brand span{color:var(--gold2)}.brand small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.26em;font-weight:800;color:var(--mut);margin-top:3px}
+.pill{font-size:12.5px;font-weight:800;color:var(--gold2);background:#fbeecd;padding:9px 15px;border-radius:999px;border:1px solid var(--line)}
+.hero{max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,84px) 20px 0;display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+@media(min-width:940px){.hero{grid-template-columns:1.02fr .98fr}}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:800;letter-spacing:.3em;color:var(--ember);text-transform:uppercase}
+.kicker:before{content:"";width:36px;height:2px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(46px,6.6vw,76px);line-height:1.02;margin:20px 0 18px}
+.hero h1 em{font-style:italic;font-weight:550;color:var(--gold2)}
+.hero p.lead{color:var(--mut);font-size:clamp(16px,2vw,19px);max-width:520px;margin-bottom:30px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s;border:1px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 28px rgba(31,170,85,.28)}
+.btn.line{background:transparent;color:var(--ink);border-color:#d8c49a}.btn.line:hover{border-color:var(--gold);color:var(--gold2)}
+.hero-fig{position:relative}
+.hero-fig:before{content:"";position:absolute;inset:18px -14px -14px 18px;border:2px solid var(--gold);border-radius:26px;z-index:0}
+.hero-fig img{position:relative;width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:26px;display:block;box-shadow:var(--shadow)}
+.hero-chip{position:absolute;left:-8px;bottom:26px;background:var(--char);color:#fff;border-radius:16px;padding:14px 20px;box-shadow:var(--shadow);z-index:2}
+.hero-chip small{display:block;font-size:11px;letter-spacing:.18em;font-weight:800;color:#f2c66d;text-transform:uppercase}
+.hero-chip b{font-family:var(--serif);font-size:27px}
+.marquee{background:var(--char);color:#f6e8cd;margin-top:clamp(52px,7vw,80px);overflow:hidden;white-space:nowrap}
+.marquee-in{display:inline-block;padding:12px 0;font-family:var(--serif);font-style:italic;font-size:16px;animation:tick 34s linear infinite}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee span{margin:0 26px}.marquee b{color:var(--gold);font-style:normal}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:clamp(66px,9vw,104px) 0 4px}
+.eyebrow{text-align:center;font-size:11.5px;font-weight:800;letter-spacing:.32em;color:var(--ember);text-transform:uppercase;margin-bottom:14px}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(33px,4.8vw,50px);line-height:1.08;text-align:center;margin-bottom:12px}
+h2 em{font-style:italic;font-weight:550;color:var(--gold2)}
+.sub{text-align:center;color:var(--mut);max-width:620px;margin:0 auto 40px;font-size:16px}
+.zonebox{background:var(--char);color:#fff;border-radius:26px;padding:clamp(26px,4.5vw,42px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.zonebox:before{content:"";position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(217,147,13,.4),transparent 70%)}
+.zonebox h3{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);text-align:center;margin-bottom:8px}
+.zonebox>p{text-align:center;color:#d9c9a8;font-size:14.5px;margin-bottom:24px}
+.zones{display:grid;grid-template-columns:1fr;gap:12px;position:relative}@media(min-width:820px){.zones{grid-template-columns:repeat(3,1fr)}}
+.zone-btn{border:2px solid #4d3f27;background:#2e2517;color:#fff;border-radius:18px;padding:20px;text-align:left;cursor:pointer;font:inherit;transition:.25s;width:100%}
+.zone-btn:hover{border-color:var(--gold)}
+.zone-btn b{display:block;font-family:var(--serif);font-size:20px;margin-bottom:4px}
+.zone-btn span{font-size:13.5px;color:#d9c9a8;line-height:1.55;display:block}
+.zone-btn.active{border-color:var(--gold);background:#3d2f16;box-shadow:0 0 0 4px rgba(217,147,13,.22)}
+.picked{text-align:center;margin-top:18px;font-weight:800;color:#f2c66d;font-size:14.5px;position:relative}
+.promo-grid{display:grid;grid-template-columns:1fr;gap:22px}@media(min-width:860px){.promo-grid{grid-template-columns:repeat(3,1fr)}}
+.promo{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 22px rgba(33,26,18,.06);transition:.3s;display:flex;flex-direction:column}
+.promo:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.promo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.promo-in{padding:26px;display:flex;flex-direction:column;flex:1}
+.promo .tag{font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--ember);text-transform:uppercase}
+.promo h3{font-family:var(--serif);font-weight:800;font-size:25px;margin:7px 0 7px;line-height:1.15}
+.promo p{font-size:14.5px;color:var(--mut)}
+.price{font-family:var(--serif);font-weight:800;font-size:42px;color:var(--gold2);margin:16px 0 4px;line-height:1}
+.price small{font-size:14px;color:var(--mut);font-family:var(--sans);font-weight:700}
+.ord{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:52px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px;transition:.25s}
+.ord:hover{background:#178a44}
+.midweek{background:linear-gradient(120deg,var(--gold) 0%,#e8ab1e 55%,var(--ember) 130%);border-radius:26px;padding:clamp(34px,5.5vw,56px) clamp(24px,5vw,54px);color:#fff;display:grid;grid-template-columns:1fr;gap:22px;align-items:center;box-shadow:var(--shadow)}
+@media(min-width:860px){.midweek{grid-template-columns:1.2fr .8fr}}
+.midweek .dow{font-family:var(--serif);font-weight:800;font-size:clamp(30px,4.6vw,46px);line-height:1.05}
+.midweek p{color:#fff4dc;max-width:520px;margin-top:10px}
+.midweek .ord{background:#fff;color:var(--gold2)}.midweek .ord:hover{background:var(--char);color:#fff}
+.loc-grid{display:grid;grid-template-columns:1fr;gap:22px}@media(min-width:860px){.loc-grid{grid-template-columns:repeat(3,1fr)}}
+.loc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 26px;box-shadow:0 8px 22px rgba(33,26,18,.05);display:flex;flex-direction:column}
+.loc .num{font-family:var(--serif);font-style:italic;font-weight:550;font-size:15px;color:var(--gold2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.loc h3{font-family:var(--serif);font-weight:800;font-size:24px;margin-bottom:9px}
+.loc p{font-size:14.5px;color:var(--mut);margin-bottom:8px}
+.loc .hrs{font-size:13.5px;color:var(--ink);background:var(--paper2);border-radius:12px;padding:11px 14px;margin:10px 0 16px;line-height:1.6}
+.loc a.maplink{font-weight:800;color:var(--gold2);text-decoration:none}
+.loc a.walink{margin-top:auto;display:flex;min-height:50px;align-items:center;justify-content:center;background:#eafaf0;border:1.5px solid var(--wa);color:#14753c;border-radius:999px;text-decoration:none;font-weight:800;transition:.25s}
+.loc a.walink:hover{background:var(--wa);color:#fff}
+.hours{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(30px,5vw,50px);box-shadow:0 8px 22px rgba(33,26,18,.05)}
+.hgrid{display:grid;grid-template-columns:1fr;gap:28px}@media(min-width:820px){.hgrid{grid-template-columns:1fr 1fr}}
+.hcol h3{font-family:var(--serif);font-weight:800;font-size:22px;margin-bottom:12px;text-align:center}
+.hrow{display:flex;justify-content:space-between;padding:10px 2px;border-bottom:1px solid var(--line);font-size:15px}
+.hrow:last-child{border-bottom:none}.hrow b{color:var(--gold2)}
+.maps{display:grid;grid-template-columns:1fr;gap:22px}@media(min-width:860px){.maps{grid-template-columns:1fr 1fr}}
+.mapframe{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.mapframe iframe{width:100%;height:330px;border:0;display:block}
+.mapcap{font-size:13px;color:var(--mut);text-align:center;margin-top:10px;font-weight:700}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(3,1fr)}}
+.strip figure{margin:0;overflow:hidden;border-radius:18px}
+.strip img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .6s}
+.strip figure:hover img{transform:scale(1.05)}
+.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:9px;font-weight:700}
+footer{padding:38px 20px 122px;text-align:center;color:var(--mut);font-size:13px;max-width:1180px;margin:60px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1180px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;text-align:center;padding:6px 14px}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--gold2);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--char);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fdf3da;align-self:flex-start}.msg.user{background:var(--gold2);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--gold2);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">Pollería <span>Dorados</span><small>LURIGANCHO · CHOSICA · LIMA</small></div>
+<div class="pill">3 locales · Cajamarquilla · Huachipa · Nievería</div>
+</div></header>
+
+<div class="hero">
+<div class="rv">
+<div class="kicker">Pollo a la brasa · Chosica</div>
+<h1>El dorado que <em>Chosica</em> ya conoce</h1>
+<p class="lead">Pollería Dorados, en Lurigancho-Chosica. Tres locales, promos desde S/9.99 y pedido por WhatsApp en un toque: elige tu zona y tu promo llega al local correcto.</p>
+<div class="hero-cta">
+<a class="btn wa" href="#pedir">Pedir por WhatsApp</a>
+<a class="btn line" href="#locales">Ver los 3 locales</a>
+</div>
+</div>
+<figure class="hero-fig rv">
+<img src="img/hero.jpg" alt="Pollo a la brasa entero de Pollería Dorados, Lurigancho-Chosica">
+<div class="hero-chip"><small>La promo de la casa</small><b>¼ pollo · S/9.99</b></div>
+</figure>
+</div>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-in" id="mqIn"></div></div>
+
+<div class="wrap">
+<section id="pedir" class="rv">
+<div class="eyebrow">01 · Pide en 2 pasos</div>
+<h2>Primero tu zona, <em>luego tu promo</em></h2>
+<p class="sub">Cada local de Dorados tiene su propio WhatsApp. Elige tu zona y todos los botones de pedido de esta página se dirigen a ese local.</p>
+<div class="zonebox">
+<h3>Paso 1 — ¿Desde qué zona pides?</h3>
+<p>Toca tu zona. Tu pedido llegará al WhatsApp de ese local.</p>
+<div class="zones">
+<button type="button" class="zone-btn active" data-zone="cajamarquilla"><b>Cajamarquilla</b><span>WhatsApp 901 245 324<br>Mz. A Lt. 23, Asoc. Sr. de Muruhuay, Villa Leticia — 3er paradero</span></button>
+<button type="button" class="zone-btn" data-zone="huachipa"><b>Huachipa</b><span>WhatsApp 926 909 575<br>Zona Huachipa, Lurigancho-Chosica</span></button>
+<button type="button" class="zone-btn" data-zone="nieveria"><b>Nievería</b><span>WhatsApp 927 909 191<br>Zona Nievería, Lurigancho-Chosica</span></button>
+</div>
+<div class="picked" id="pickedLabel">Zona elegida: Cajamarquilla · WhatsApp 901 245 324</div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">02 · Promos</div>
+<h2>Paso 2 — <em>Elige tu promo</em></h2>
+<p class="sub">Precios publicados por Pollería Dorados. Toca «Pedir» y se abre WhatsApp con tu zona y tu promo ya escritas.</p>
+<div class="promo-grid">
+<article class="promo"><img src="img/cuarto.jpg" alt="Cuarto de pollo a la brasa con acompañamientos"><div class="promo-in"><div class="tag">La de todos los días</div><h3>¼ de pollo completo</h3><p>¼ de pollo + papas + cremas + ensalada. La promo completa de Dorados.</p><div class="price">S/9.99</div><a class="ord" data-promo="¼ de pollo + papas + cremas + ensalada (S/9.99)" href="#">Pedir esta promo →</a></div></article>
+<article class="promo"><img src="img/medio.jpg" alt="Medio pollo a la brasa de Pollería Dorados"><div class="promo-in"><div class="tag">Para dos</div><h3>½ pollo</h3><p>Medio pollo a la brasa de Dorados, al precio de promo publicado.</p><div class="price">S/19.99</div><a class="ord" data-promo="½ pollo (S/19.99)" href="#">Pedir esta promo →</a></div></article>
+<article class="promo"><img src="img/hero.jpg" alt="Un pollo entero a la brasa de Pollería Dorados"><div class="promo-in"><div class="tag">Familiar</div><h3>1 pollo + Pepsi 1.5L</h3><p>Un pollo entero a la brasa más una Pepsi de 1.5 litros, para la familia.</p><div class="price">S/44.99</div><a class="ord" data-promo="1 pollo + Pepsi 1.5L (S/44.99)" href="#">Pedir esta promo →</a></div></article>
+</div>
+<p style="text-align:center;color:var(--mut);font-size:13px;margin-top:18px">Promos y precios tomados de las publicaciones de Pollería Dorados. Confirma la disponibilidad de tu promo al pedir por WhatsApp.</p>
+</section>
+
+<section class="rv">
+<div class="midweek">
+<div>
+<div class="dow">Miércoles y jueves<br>son de promo</div>
+<p>En Dorados, los miércoles y jueves llegan con promos de mitad de semana en tu local. Pregunta por la promo vigente en tu zona y pídela por WhatsApp.</p>
+</div>
+<div><a class="ord" data-promo="la promo de miércoles/jueves" href="#">Preguntar por la promo de mitad de semana →</a></div>
+</div>
+</section>
+
+<section id="locales" class="rv">
+<div class="eyebrow">03 · Nuestros locales</div>
+<h2>Tres locales en <em>Lurigancho-Chosica</em></h2>
+<p class="sub">Cajamarquilla, Huachipa y Nievería — cada uno con su propio WhatsApp para que tu pedido llegue directo.</p>
+<div class="loc-grid">
+<div class="loc"><div class="num">Local 01</div><h3>Cajamarquilla</h3><p>Mz. A Lt. 23, Asoc. Sr. de Muruhuay, Villa Leticia, Cajamarquilla — 3er paradero, Lurigancho-Chosica, Lima.</p><div class="hrs">Domingo: 10:00 a. m. – 11:00 p. m.<br>Lunes a sábado: 11:50 a. m. – 11:00 p. m.</div><a class="maplink" href="https://www.google.com/maps?q=Mz.+A+Lt.+23,+Asoc.+Sr.+de+Muruhuay,+Cajamarquilla,+Lurigancho,+Lima,+Per%C3%BA" target="_blank" rel="noopener">Cómo llegar →</a><a class="walink" href="https://wa.me/51901245324?text=Hola%20Poller%C3%ADa%20Dorados%20(Cajamarquilla)%2C%20quiero%20hacer%20un%20pedido">Pedir a Cajamarquilla — 901 245 324</a></div>
+<div class="loc"><div class="num">Local 02</div><h3>Huachipa</h3><p>Zona Huachipa, Lurigancho-Chosica, Lima. Pide por WhatsApp y te atendemos desde el local de Huachipa.</p><a class="maplink" href="https://www.google.com/maps?q=Huachipa,+Lurigancho,+Lima,+Per%C3%BA" target="_blank" rel="noopener">Ver la zona →</a><a class="walink" href="https://wa.me/51926909575?text=Hola%20Poller%C3%ADa%20Dorados%20(Huachipa)%2C%20quiero%20hacer%20un%20pedido">Pedir a Huachipa — 926 909 575</a></div>
+<div class="loc"><div class="num">Local 03</div><h3>Nievería</h3><p>Zona Nievería, Lurigancho-Chosica, Lima. Pide por WhatsApp y te atendemos desde el local de Nievería.</p><div class="hrs">Todos los días: 11:00 a. m. – 10:30 p. m.</div><a class="maplink" href="https://www.google.com/maps?q=Niever%C3%ADa,+Lurigancho,+Lima,+Per%C3%BA" target="_blank" rel="noopener">Ver la zona →</a><a class="walink" href="https://wa.me/51927909191?text=Hola%20Poller%C3%ADa%20Dorados%20(Niever%C3%ADa)%2C%20quiero%20hacer%20un%20pedido">Pedir a Nievería — 927 909 191</a></div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">04 · Horarios</div>
+<h2>Horarios <em>por local</em></h2>
+<p class="sub">Horarios publicados de los locales de Cajamarquilla y Nievería. Para Huachipa, confirma el horario al pedir por WhatsApp.</p>
+<div class="hours"><div class="hgrid">
+<div class="hcol"><h3>Cajamarquilla</h3>
+<div class="hrow"><span>Domingo</span><b>10:00 a. m. – 11:00 p. m.</b></div>
+<div class="hrow"><span>Lunes a sábado</span><b>11:50 a. m. – 11:00 p. m.</b></div>
+</div>
+<div class="hcol"><h3>Nievería</h3>
+<div class="hrow"><span>Lunes a domingo</span><b>11:00 a. m. – 10:30 p. m.</b></div>
+</div>
+</div></div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">05 · Galería</div>
+<h2>Así se ve <em>Dorados</em></h2>
+<p class="sub">El local de Cajamarquilla, nuestras publicaciones y el pollo a la brasa de la casa.</p>
+<div class="strip">
+<figure><img src="img/local.jpg" alt="Local de Pollería Dorados en Cajamarquilla, Chosica"><figcaption>Nuestro local en Cajamarquilla</figcaption></figure>
+<figure><img src="img/hero.jpg" alt="Pollo a la brasa entero"><figcaption>Pollo a la brasa entero</figcaption></figure>
+<figure><img src="img/cuarto.jpg" alt="Plato de pollo a la brasa"><figcaption>¼ de pollo — S/9.99</figcaption></figure>
+<figure><img src="img/medio.jpg" alt="Pollo a la parrilla con vegetales"><figcaption>½ pollo — S/19.99</figcaption></figure>
+<figure><img src="img/papas.jpg" alt="Papas fritas para acompañar"><figcaption>Papas de la casa</figcaption></figure>
+<figure><img src="img/redes.jpg" alt="Publicación de Pollería Dorados en sus redes"><figcaption>De nuestras redes</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">06 · Ubicación</div>
+<h2>Encuéntranos en <em>Chosica</em></h2>
+<p class="sub">El local de Cajamarquilla está en el 3er paradero, Villa Leticia. Y todo Lurigancho-Chosica es zona Dorados.</p>
+<div class="maps">
+<div><div class="mapframe"><iframe title="Mapa — Pollería Dorados, Cajamarquilla" src="https://www.google.com/maps?q=Mz.+A+Lt.+23,+Asoc.+Sr.+de+Muruhuay,+Cajamarquilla,+Lurigancho,+Lima,+Per%C3%BA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><div class="mapcap">Local Cajamarquilla — Mz. A Lt. 23, Asoc. Sr. de Muruhuay</div></div>
+<div><div class="mapframe"><iframe title="Mapa — Lurigancho-Chosica, Lima" src="https://www.google.com/maps?q=Lurigancho-Chosica,+Lima,+Per%C3%BA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><div class="mapcap">Lurigancho-Chosica — zonas Huachipa y Nievería</div></div>
+</div>
+</section>
+</div>
+
+<footer>
+Pollería Dorados · Lurigancho-Chosica, Lima, Perú · Cajamarquilla 901 245 324 · Huachipa 926 909 575 · Nievería 927 909 191<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Pollería Dorados.
+</footer>
+
+<div class="sticky"><a id="stickyWa" href="https://wa.me/51901245324?text=Hola%20Poller%C3%ADa%20Dorados%20(Cajamarquilla)%2C%20quiero%20hacer%20un%20pedido">🍗 Pedir por WhatsApp — Cajamarquilla · 901 245 324</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Dorados">
+<div class="chatw-head"><div><b>Asistente Dorados</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>10)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});items.forEach(function(e){io.observe(e)});}
+var mq="¼ POLLO + PAPAS + CREMAS + ENSALADA <b>S/9.99</b> ✦ ½ POLLO <b>S/19.99</b> ✦ 1 POLLO + PEPSI 1.5L <b>S/44.99</b> ✦ MIÉRCOLES Y JUEVES DE PROMO ✦ CAJAMARQUILLA · HUACHIPA · NIEVERÍA ✦ ";
+document.getElementById('mqIn').innerHTML="<span>"+mq+"</span><span>"+mq+"</span>";
+/* Zone picker — every order button re-routes to the chosen local */
+var ZONES={
+cajamarquilla:{name:"Cajamarquilla",num:"51901245324",disp:"901 245 324"},
+huachipa:{name:"Huachipa",num:"51926909575",disp:"926 909 575"},
+nieveria:{name:"Nievería",num:"51927909191",disp:"927 909 191"}
+};
+var zone="cajamarquilla";
+function waFor(promo){var z=ZONES[zone];return 'https://wa.me/'+z.num+'?text='+encodeURIComponent("Hola Pollería Dorados ("+z.name+"), quiero pedir: "+promo);}
+function refresh(){
+document.querySelectorAll('.ord').forEach(function(a){a.href=waFor(a.getAttribute('data-promo'));});
+var z=ZONES[zone];
+document.getElementById('pickedLabel').textContent='Zona elegida: '+z.name+' · WhatsApp '+z.disp;
+var st=document.getElementById('stickyWa');
+st.href='https://wa.me/'+z.num+'?text='+encodeURIComponent("Hola Pollería Dorados ("+z.name+"), quiero hacer un pedido");
+st.textContent='🍗 Pedir por WhatsApp — '+z.name+' · '+z.disp;
+}
+document.querySelectorAll('.zone-btn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.zone-btn').forEach(function(x){x.classList.remove('active')});b.classList.add('active');zone=b.getAttribute('data-zone');refresh();});});
+refresh();
+window.__doradosZone=function(){return zone;};
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir por WhatsApp","href":"https://wa.me/51901245324"},"greeting":"¡Hola! Soy el asistente demo de Pollería Dorados, en Lurigancho-Chosica. Pregúntame por las promos, los 3 locales, los horarios o cómo pedir.","fallback":"Eso no lo tengo a la mano — escríbenos por WhatsApp: Cajamarquilla 901 245 324, Huachipa 926 909 575 o Nievería 927 909 191.","chips":["¿Qué promos hay?","¿Dónde están los locales?","¿Cuál es el horario?","¿Cómo pido?"],"items":[{"k":["cuarto","1/4","¼"],"a":"¼ de pollo + papas + cremas + ensalada — S/9.99. Elige tu zona en esta página y pídelo por WhatsApp.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51901245324"}},{"k":["medio pollo","1/2","½"],"a":"½ pollo a la brasa — S/19.99, al precio de promo publicado por Dorados.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51901245324"}},{"k":["pollo entero","1 pollo","familiar","pepsi"],"a":"1 pollo entero + Pepsi 1.5L — S/44.99, la promo familiar de Dorados.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51901245324"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por las promos, los locales o los horarios de Dorados."},{"k":["promo","precio","cuesta","oferta"],"a":"Promos publicadas: ¼ de pollo + papas + cremas + ensalada S/9.99, ½ pollo S/19.99 y 1 pollo + Pepsi 1.5L S/44.99. Y miércoles y jueves son días de promo: pregunta por la vigente en tu local.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51901245324"}},{"k":["miercoles","jueves","mitad de semana"],"a":"Los miércoles y jueves son días de promo en Dorados. Pregunta por la promo vigente en tu local: Cajamarquilla 901 245 324, Huachipa 926 909 575, Nievería 927 909 191.","link":{"t":"Preguntar por WhatsApp","href":"https://wa.me/51901245324"}},{"k":["horario","abren","abierto","cierran","hora"],"a":"Horarios publicados: Cajamarquilla — domingo 10:00 a. m. a 11:00 p. m. y lunes a sábado 11:50 a. m. a 11:00 p. m. Nievería — todos los días 11:00 a. m. a 10:30 p. m. Para Huachipa, confirma el horario por WhatsApp."},{"k":["cajamarquilla"],"a":"Local Cajamarquilla: Mz. A Lt. 23, Asoc. Sr. de Muruhuay, Villa Leticia, 3er paradero, Lurigancho-Chosica. WhatsApp 901 245 324.","link":{"t":"Pedir a Cajamarquilla","href":"https://wa.me/51901245324"}},{"k":["huachipa"],"a":"Local Huachipa, en Lurigancho-Chosica. Su WhatsApp es 926 909 575: pide ahí y te atienden de ese local.","link":{"t":"Pedir a Huachipa","href":"https://wa.me/51926909575"}},{"k":["nieveria"],"a":"Local Nievería, en Lurigancho-Chosica. Atiende todos los días de 11:00 a. m. a 10:30 p. m. Su WhatsApp es 927 909 191.","link":{"t":"Pedir a Nievería","href":"https://wa.me/51927909191"}},{"k":["donde","local","direccion","ubicacion","chosica"],"a":"Tenemos 3 locales en Lurigancho-Chosica, Lima: Cajamarquilla (Mz. A Lt. 23, Asoc. Sr. de Muruhuay, Villa Leticia, 3er paradero), Huachipa y Nievería. Cada uno tiene su propio WhatsApp."},{"k":["pedir","ordenar","comprar","delivery"],"a":"Para pedir: elige tu zona en esta página (Cajamarquilla, Huachipa o Nievería), toca «Pedir» en la promo que quieras y se abre el WhatsApp de ese local con tu pedido listo.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51901245324"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp por local: Cajamarquilla 901 245 324, Huachipa 926 909 575 y Nievería 927 909 191.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/51901245324"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en Pollería Dorados."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+</body>
+</html>

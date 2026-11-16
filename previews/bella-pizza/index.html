@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bella Pizza — Pizzaria Delivery em Xique-Xique, BA | Peça pelo WhatsApp</title>
+<meta name="description" content="Bella Pizza Pizzaria Delivery em Xique-Xique, Bahia. Tamanhos P R$34,99 · M R$39,99 · G R$49,99 · Família R$59,99. Delivery e retirada, todos os dias das 18h às 23h. Peça pelo WhatsApp (74) 99926-8943.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--noite:#180f0a;--noite2:#241610;--creme:#fdf6ec;--creme2:#f7ead3;--tomate:#d63c2a;--tomate2:#b02a1c;--manj:#4a8a3f;--ouro:#e9a83c;--linha:#ecd9bd;--mut:#8a7460;--wa:#22a95c;--sombra:0 24px 50px rgba(24,15,10,.22);--serif:"Playfair Display",Georgia,serif;--sans:"Manrope",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--creme);color:var(--noite);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--tomate);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.35s;color:#fff}
+header.scrolled{background:rgba(24,15,10,.96);backdrop-filter:blur(10px);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.hdr{max-width:1180px;margin:0 auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{font-family:var(--serif);font-weight:800;font-size:27px;line-height:1}.logo em{color:var(--ouro);font-style:italic}.logo small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.34em;font-weight:800;color:#e8cfa5;margin-top:4px}
+.hdr-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;background:rgba(255,255,255,.12);padding:8px 13px;border-radius:999px}.odot{width:9px;height:9px;border-radius:50%;background:#bbb}.opennow.open .odot{background:#3ddc74;box-shadow:0 0 0 4px rgba(61,220,116,.2)}.opennow.closed .odot{background:#ff7a6b;box-shadow:0 0 0 4px rgba(255,122,107,.18)}
+.hdr-wa{background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:13.5px;padding:10px 18px;border-radius:999px}
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--noite);isolation:isolate}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;opacity:.85}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,rgba(24,15,10,.94) 30%,rgba(24,15,10,.55) 62%,rgba(176,42,28,.28))}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;z-index:-1;background:linear-gradient(180deg,transparent,var(--noite))}
+.hero-in{max-width:1180px;margin:0 auto;padding:clamp(140px,19vw,210px) 22px clamp(110px,13vw,150px)}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro)}
+.kicker:before{content:"";width:38px;height:1px;background:var(--ouro)}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(46px,8.4vw,96px);line-height:.98;max-width:700px;margin:22px 0 20px}
+.hero h1 em{font-style:italic;color:var(--ouro)}
+.hero p{max-width:520px;color:#f3e3cb;font-size:clamp(16px,2vw,19px);margin-bottom:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 16px 32px rgba(34,169,92,.35)} .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;font-size:13.5px;color:#e8cfa5;font-weight:700}
+.hero-facts b{color:#fff;font-family:var(--serif);font-size:19px;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:clamp(70px,9vw,110px) 0 6px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.32em;color:var(--tomate);text-transform:uppercase;margin-bottom:14px}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(34px,4.8vw,52px);line-height:1.06;margin-bottom:14px}
+h2 em{font-style:italic;color:var(--tomate)}
+.sub{color:var(--mut);max-width:600px;font-size:16.5px}
+.split{display:grid;grid-template-columns:1fr;gap:44px;align-items:center}@media(min-width:920px){.split{grid-template-columns:1.05fr .95fr}}
+.split img.photo{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:26px;box-shadow:var(--sombra)}
+.ladder{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}@media(min-width:760px){.ladder{grid-template-columns:repeat(4,1fr)}}
+.size{border:2px solid var(--linha);background:#fff;border-radius:20px;padding:24px 18px;text-align:left;cursor:pointer;font:inherit;transition:.22s;position:relative}
+.size:hover{transform:translateY(-4px);border-color:var(--ouro)}
+.size.active{border-color:var(--tomate);background:#fff4e8;box-shadow:0 0 0 3px rgba(214,60,42,.16)}
+.size .sz{font-family:var(--serif);font-size:40px;font-weight:800;line-height:1}
+.size .nm{font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:4px 0 10px}
+.size .pr{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--tomate)}
+.size .pop{position:absolute;top:-11px;right:14px;background:var(--tomate);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.08em;padding:4px 10px;border-radius:999px}
+.mode{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.mode button{border:1.5px solid var(--linha);background:#fff;font:inherit;font-weight:800;font-size:14px;padding:11px 20px;border-radius:999px;cursor:pointer;transition:.2s}
+.mode button.active{background:var(--noite);color:#fff;border-color:var(--noite)}
+.checkout{margin-top:26px;background:var(--noite);color:#fff;border-radius:24px;padding:28px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.checkout .sum{font-size:15px;color:#e8cfa5}.checkout .sum b{display:block;color:#fff;font-family:var(--serif);font-size:24px}
+.checkout a{background:var(--wa);color:#fff;text-decoration:none;font-weight:800;padding:16px 28px;border-radius:999px;min-height:56px;display:inline-flex;align-items:center;transition:.25s}.checkout a:hover{transform:translateY(-2px)}
+.note{font-size:13px;color:var(--mut);margin-top:14px}
+.dark{background:var(--noite);color:var(--creme);border-radius:34px;padding:clamp(44px,6vw,70px) clamp(24px,5vw,56px);margin-top:clamp(60px,8vw,90px)}
+.dark h2{color:#fff}.dark .sub{color:#cbb694}
+.feats{display:grid;grid-template-columns:1fr;gap:18px;margin-top:36px}@media(min-width:800px){.feats{grid-template-columns:repeat(3,1fr)}}
+.feat{border:1px solid rgba(253,246,236,.18);border-radius:20px;padding:26px;background:var(--noite2)}
+.feat .ic{font-size:26px;margin-bottom:12px}.feat h3{font-family:var(--serif);font-size:21px;margin-bottom:6px;color:#fff}.feat p{font-size:14.5px;color:#cbb694}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px}@media(min-width:860px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal figure{margin:0}.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;display:block;transition:.35s}.gal img:hover{transform:scale(1.03)}
+.gal figcaption{font-size:12.5px;color:var(--mut);font-weight:600;margin-top:8px;text-align:center}
+.info{display:grid;grid-template-columns:1fr;gap:20px;margin-top:36px}@media(min-width:860px){.info{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--linha);border-radius:22px;padding:30px;box-shadow:0 8px 24px rgba(24,15,10,.05)}
+.card h3{font-family:var(--serif);font-size:24px;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--creme2);font-size:15px}.row:last-child{border-bottom:none}.row b{color:var(--tomate)}
+.card p{font-size:15px;color:var(--mut);margin-bottom:10px}.card a{color:var(--tomate);font-weight:800;text-decoration:none}
+.mapframe{border-radius:22px;overflow:hidden;border:1px solid var(--linha);box-shadow:var(--sombra);margin-top:36px}.mapframe iframe{width:100%;height:360px;border:0;display:block}
+footer{padding:40px 22px 120px;text-align:center;color:var(--mut);font-size:13px;max-width:1180px;margin:60px auto 0;border-top:1px solid var(--linha)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(253,246,236,.97);border-top:1px solid var(--linha);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1180px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.75s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--tomate);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.28);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--linha);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--noite);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fff4e8;align-self:flex-start}.msg.user{background:var(--tomate);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--linha);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--linha)}.chatw-form input{flex:1;border:1px solid var(--linha);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--tomate);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="logo">Bella <em>Pizza</em><small>XIQUE-XIQUE · BAHIA</small></div>
+<div class="hdr-r">
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+<a class="hdr-wa" href="https://wa.me/5574999268943?text=Ol%C3%A1%20Bella%20Pizza!%20Quero%20fazer%20um%20pedido.">(74) 99926-8943</a>
+</div>
+</div></header>
+
+<div class="hero">
+<img class="bg" src="img/b1.jpg" alt="Pizza da Bella Pizza em Xique-Xique">
+<div class="hero-in rv">
+<div class="kicker">Pizzaria Delivery · Xique-Xique</div>
+<h1>A noite de Xique-Xique pede <em>Bella.</em></h1>
+<p>Delivery e retirada na Av. Raul Teixeira Braga, 71 — todos os dias, das 18h às 23h. Escolha o tamanho, confirme o sabor no WhatsApp e pronto.</p>
+<div class="actions">
+<a class="btn wa" href="#pedir">Montar meu pedido</a>
+<a class="btn ghost" href="#tamanhos">Ver tamanhos e preços</a>
+</div>
+<div class="hero-facts">
+<div><b>47 mil</b>seguidores no Instagram</div>
+<div><b>18h – 23h</b>todos os dias</div>
+<div><b>Pix</b>débito e crédito</div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="tamanhos" class="rv">
+<div class="eyebrow">01 · Tamanhos e preços</div>
+<h2>Um tamanho para <em>cada fome</em></h2>
+<p class="sub">Preço fechado por tamanho, sem surpresa. Toque em um tamanho para montar o pedido — o valor já vai escrito na mensagem do WhatsApp.</p>
+<div class="ladder" id="ladder">
+<button type="button" class="size" data-size="P" data-price="R$ 34,99"><span class="sz">P</span><div class="nm">Pequena</div><div class="pr">R$ 34,99</div></button>
+<button type="button" class="size active" data-size="M" data-price="R$ 39,99"><span class="pop">A mais pedida</span><span class="sz">M</span><div class="nm">Média</div><div class="pr">R$ 39,99</div></button>
+<button type="button" class="size" data-size="G" data-price="R$ 49,99"><span class="sz">G</span><div class="nm">Grande</div><div class="pr">R$ 49,99</div></button>
+<button type="button" class="size" data-size="Família" data-price="R$ 59,99"><span class="sz">F</span><div class="nm">Família</div><div class="pr">R$ 59,99</div></button>
+</div>
+</section>
+
+<section id="pedir" class="rv" style="padding-top:26px">
+<div class="eyebrow">02 · Monte seu pedido</div>
+<h2>Delivery ou <em>retirada?</em></h2>
+<p class="sub">Escolha como quer receber. Ao tocar em pedir, o WhatsApp abre com tamanho, preço e forma de entrega já escritos — é só confirmar o sabor com a equipe.</p>
+<div class="mode" id="modeRow">
+<button type="button" class="active" data-mode="Delivery">🛵 Delivery</button>
+<button type="button" data-mode="Retirada no balcão">🥡 Retirada no balcão</button>
+</div>
+<div class="checkout">
+<div class="sum">Seu pedido<b id="sumLabel">Pizza M — R$ 39,99 · Delivery</b></div>
+<a id="orderBtn" href="#" target="_blank" rel="noopener">Pedir no WhatsApp →</a>
+</div>
+<p class="note">Pagamento: Pix, cartão de débito e cartão de crédito. Segunda linha: (74) 98156-0887.</p>
+</section>
+
+<div class="dark rv">
+<div class="eyebrow" style="color:var(--ouro)">03 · Como funciona</div>
+<h2>Da tela ao forno em três toques</h2>
+<p class="sub">Sem aplicativo, sem cadastro, sem página alugada. O pedido é seu, direto com a Bella Pizza.</p>
+<div class="feats">
+<div class="feat"><div class="ic">🍕</div><h3>1. Escolha o tamanho</h3><p>P, M, G ou Família — com o preço fechado na tela, de R$ 34,99 a R$ 59,99.</p></div>
+<div class="feat"><div class="ic">💬</div><h3>2. Confirme no WhatsApp</h3><p>A mensagem já vai pronta com tamanho e entrega. Você só confirma o sabor com a equipe.</p></div>
+<div class="feat"><div class="ic">🛵</div><h3>3. Receba ou retire</h3><p>Delivery em Xique-Xique ou retirada na Av. Raul Teixeira Braga, 71. Pagamento em Pix, débito ou crédito.</p></div>
+</div>
+</div>
+
+<section class="rv">
+<div class="eyebrow">04 · Galeria</div>
+<h2>Saindo do forno</h2>
+<div class="gal">
+<figure><img src="img/b2.jpg" alt="Pizza no forno"><figcaption>Forno quente, toda noite</figcaption></figure>
+<figure><img src="img/b3.jpg" alt="Fatia de pizza com queijo"><figcaption>Queijo puxando</figcaption></figure>
+<figure><img src="img/b5.jpg" alt="Pizza inteira na mesa"><figcaption>Para a mesa toda</figcaption></figure>
+<figure><img src="img/b7.jpg" alt="Pizza artesanal"><figcaption>Massa do dia</figcaption></figure>
+<figure><img src="img/b4.jpg" alt="Pizza com manjericão"><figcaption>Manjericão fresco</figcaption></figure>
+<figure><img src="img/b6.jpg" alt="Pizza dourada"><figcaption>Dourada no ponto</figcaption></figure>
+<figure><img src="img/b8.jpg" alt="Pizza para compartilhar"><figcaption>Para compartilhar</figcaption></figure>
+<figure><img src="img/b1.jpg" alt="Pizza da casa"><figcaption>A queridinha da noite</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">05 · Horário e contato</div>
+<h2>Todos os dias, <em>das 18h às 23h</em></h2>
+<div class="info">
+<div class="card"><h3>Horário</h3>
+<div class="row"><span>Segunda a domingo</span><b>18:00 – 23:00</b></div>
+<p style="margin-top:14px">Delivery e retirada, todos os dias da semana.</p>
+</div>
+<div class="card"><h3>Onde estamos</h3>
+<p>Av. Raul Teixeira Braga, 71 — Xique-Xique, BA, 47400-000</p>
+<p>WhatsApp: <a href="https://wa.me/5574999268943">(74) 99926-8943</a><br>Segunda linha: (74) 98156-0887</p>
+<p>Pagamento: Pix, débito e crédito.</p>
+<a href="https://www.google.com/maps?q=Av.+Raul+Teixeira+Braga,+71,+Xique-Xique,+BA,+Brasil" target="_blank" rel="noopener">Como chegar →</a>
+</div>
+</div>
+<div class="mapframe"><iframe title="Mapa — Bella Pizza, Av. Raul Teixeira Braga, 71, Xique-Xique, BA" src="https://www.google.com/maps?q=Av.+Raul+Teixeira+Braga,+71,+Xique-Xique,+BA,+Brasil&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</section>
+</div>
+
+<footer>
+Bella Pizza Pizzaria Delivery · Av. Raul Teixeira Braga, 71, Xique-Xique, BA · WhatsApp (74) 99926-8943<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Bella Pizza.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/5574999268943?text=Ol%C3%A1%20Bella%20Pizza!%20Quero%20fazer%20um%20pedido.">🍕 Pedir pelo WhatsApp — (74) 99926-8943</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente Bella Pizza">
+<div class="chatw-head"><div><b>Assistente Bella Pizza</b><small>Assistente demo · prévia de conceito</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Fechar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escreva sua pergunta…" aria-label="Escreva sua pergunta"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+var size='M',price='R$ 39,99',mode='Delivery';
+function refresh(){
+document.getElementById('sumLabel').textContent='Pizza '+size+' — '+price+' · '+mode;
+var msg='Olá Bella Pizza! Quero pedir uma pizza tamanho '+size+' ('+price+'). Forma de entrega: '+mode+'. Sabor: confirmo aqui no chat.';
+document.getElementById('orderBtn').href='https://wa.me/5574999268943?text='+encodeURIComponent(msg);
+}
+document.querySelectorAll('.size').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.size').forEach(function(x){x.classList.remove('active')});b.classList.add('active');size=b.getAttribute('data-size');price=b.getAttribute('data-price');refresh();});});
+document.querySelectorAll('#modeRow button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('#modeRow button').forEach(function(x){x.classList.remove('active')});b.classList.add('active');mode=b.getAttribute('data-mode');refresh();});});
+refresh();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5574999268943"},"greeting":"Olá! Sou o assistente da Bella Pizza, em Xique-Xique. Pergunte sobre tamanhos e preços, horário, entrega, retirada ou pagamento — ou toque em uma sugestão.","fallback":"Isso eu não tenho aqui — fale direto com a equipe no WhatsApp (74) 99926-8943 que eles te ajudam.","chips":["Quais os tamanhos e preços?","Qual o horário?","Vocês entregam?","Quais as formas de pagamento?","Onde fica?"],"items":[],"intents":[{"k":["ola","oi","boa noite"],"g":1,"a":"Olá! Pergunte sobre tamanhos e preços, horário, delivery, retirada ou pagamento."},{"k":["tamanho","preco","preço","quanto custa","valor","cardapio","cardápio"],"a":"Tamanhos e preços: P R$ 34,99 · M R$ 39,99 · G R$ 49,99 · Família R$ 59,99. Escolha o tamanho nesta página e confirme o sabor no WhatsApp.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5574999268943"}},{"k":["sabor","sabores","calabresa","mussarela","portuguesa"],"a":"Para saber os sabores disponíveis hoje, confirme direto com a equipe no WhatsApp ao fazer o pedido — o tamanho e o preço você já escolhe aqui na página.","link":{"t":"Perguntar no WhatsApp","href":"https://wa.me/5574999268943"}},{"k":["horario","horário","abrem","aberto","fecham","hora","funciona"],"a":"Funcionamos todos os dias, das 18h às 23h, com delivery e retirada."},{"k":["entrega","delivery","entregam","domicilio","domicílio"],"a":"Sim, fazemos delivery em Xique-Xique. Peça pelo WhatsApp (74) 99926-8943 — a mensagem já vai com tamanho, preço e forma de entrega.","link":{"t":"Pedir delivery","href":"https://wa.me/5574999268943"}},{"k":["retirada","retirar","balcao","balcão","buscar"],"a":"Pode retirar no balcão: Av. Raul Teixeira Braga, 71, Xique-Xique, BA. É só pedir pelo WhatsApp e passar para buscar."},{"k":["pagamento","pix","cartao","cartão","debito","débito","credito","crédito","pagar"],"a":"Aceitamos Pix, cartão de débito e cartão de crédito."},{"k":["onde","endereco","endereço","fica","local","chegar"],"a":"Estamos na Av. Raul Teixeira Braga, 71, Xique-Xique, BA, 47400-000."},{"k":["telefone","whatsapp","numero","número","contato","linha"],"a":"WhatsApp: (74) 99926-8943. Segunda linha: (74) 98156-0887.","link":{"t":"Abrir WhatsApp","href":"https://wa.me/5574999268943"}},{"k":["instagram","seguidores"],"a":"A Bella Pizza tem 47 mil seguidores no Instagram — procura a gente por lá para ver as novidades."},{"k":["pedir","pedido","quero","comprar"],"a":"Para pedir: escolha o tamanho (P, M, G ou Família) e delivery ou retirada nesta página, e toque em Pedir no WhatsApp. A mensagem já vai pronta.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5574999268943"}},{"k":["obrigado","obrigada","valeu"],"a":"Por nada! Boa pizza — a gente se fala no WhatsApp."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+var SCHED={"tz":"America/Bahia","days":{"0":[[1080,1380,"18:00","23:00"]],"1":[[1080,1380,"18:00","23:00"]],"2":[[1080,1380,"18:00","23:00"]],"3":[[1080,1380,"18:00","23:00"]],"4":[[1080,1380,"18:00","23:00"]],"5":[[1080,1380,"18:00","23:00"]],"6":[[1080,1380,"18:00","23:00"]]}};
+var OTXT={"open":"Aberto agora · até às {x}","closed":"Fechado · abre às {x}","closedTomorrow":"Fechado · abre amanhã às {x}","closedDay":"Fechado · abre {d} às {x}","days":["domingo","segunda","terça","quarta","quinta","sexta","sábado"]};
+(function(){var el=document.getElementById('opennow');if(!el)return;function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;})();
+})();
+</script>
+</body>
+</html>

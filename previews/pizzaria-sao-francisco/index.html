@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzaria São Francisco — Limeira, SP | Mais de 12 anos · Quarta com entrega grátis</title>
+<meta name="description" content="Pizzaria São Francisco em Limeira, SP — mais de 12 anos de casa. Pizzas, linguiça, hot dogs e Coca-Cola. Quarta-feira com entrega grátis. Peça pelo WhatsApp (19) 97124-0647. R. Cap. Joaquim Manoel Pereira, 192.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#fbf7ee;--papel2:#f3ead8;--verde:#1e4634;--verde2:#143325;--tijolo:#b3402a;--ocre:#c98f2d;--tinta:#2b2118;--mut:#7d6c58;--linha:#e0d2b8;--wa:#1f9d55;--sombra:0 22px 46px rgba(43,33,24,.16);--serif:"Cormorant Garamond",Georgia,serif;--sans:"Public Sans",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--papel);color:var(--tinta);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--verde);color:#fff}img{max-width:100%}
+header{position:sticky;top:0;z-index:60;background:rgba(251,247,238,.92);backdrop-filter:blur(10px);transition:.3s;border-bottom:1px solid transparent}
+header.scrolled{border-bottom-color:var(--linha);box-shadow:0 10px 26px rgba(43,33,24,.1)}
+.hdr{max-width:1120px;margin:0 auto;padding:13px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{text-align:left}.brand .nome{font-family:var(--serif);font-weight:700;font-size:26px;line-height:1;color:var(--verde)}.brand .nome span{color:var(--tijolo)}.brand small{display:block;font-size:10px;letter-spacing:.3em;font-weight:800;color:var(--ocre);margin-top:3px}
+.hdr-r{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700}.odot{width:9px;height:9px;border-radius:50%;background:#bbb}.opennow.open .odot{background:#27ae60;box-shadow:0 0 0 4px rgba(39,174,96,.18)}.opennow.closed .odot{background:#d35450;box-shadow:0 0 0 4px rgba(211,84,80,.15)}
+.anos{font-size:12px;font-weight:800;color:var(--verde);border:1.5px solid var(--verde);padding:8px 13px;border-radius:999px}
+.promo-band{background:var(--ocre);color:#2b2118;text-align:center;padding:12px 18px;font-weight:800;font-size:14.5px;letter-spacing:.02em}
+.promo-band a{color:var(--verde2);text-decoration:underline}
+.hero{text-align:center;padding:clamp(64px,9vw,104px) 22px 0;max-width:1120px;margin:0 auto}
+.hero .crest{width:74px;height:74px;margin:0 auto 20px;border:2px solid var(--verde);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;background:#fff;box-shadow:var(--sombra)}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(44px,7.6vw,84px);line-height:1.02;color:var(--verde)}
+.hero h1 em{font-style:italic;color:var(--tijolo)}
+.hero .lede{max-width:600px;margin:20px auto 0;color:var(--mut);font-size:clamp(16px,2vw,18.5px)}
+.rule{max-width:340px;margin:30px auto 0;border:none;border-top:3px double var(--ocre)}
+.hero-img{max-width:1120px;margin:44px auto 0;padding:0 22px}
+.hero-img img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:24px;box-shadow:var(--sombra);display:block}
+.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15px;transition:.25s}.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 28px rgba(31,157,85,.3)} .btn.line{background:#fff;color:var(--verde);border:1.5px solid var(--verde)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:clamp(64px,8vw,96px) 0 4px}
+.eyebrow{text-align:center;font-size:11.5px;font-weight:800;letter-spacing:.34em;color:var(--tijolo);text-transform:uppercase;margin-bottom:12px}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(34px,4.8vw,50px);line-height:1.08;text-align:center;color:var(--verde);margin-bottom:12px}
+h2 em{font-style:italic;color:var(--tijolo)}
+.sub{text-align:center;color:var(--mut);max-width:600px;margin:0 auto;font-size:16px}
+.quarta{background:var(--verde);color:#fff;border-radius:28px;padding:clamp(40px,6vw,60px) clamp(24px,5vw,52px);text-align:center;box-shadow:var(--sombra);position:relative;overflow:hidden}
+.quarta:before,.quarta:after{content:"✦";position:absolute;color:rgba(201,143,45,.5);font-size:90px;line-height:1}
+.quarta:before{left:18px;top:6px}.quarta:after{right:18px;bottom:0}
+.quarta .tag{display:inline-block;background:var(--ocre);color:#2b2118;font-size:11.5px;font-weight:800;letter-spacing:.22em;padding:8px 15px;border-radius:999px;text-transform:uppercase}
+.quarta h2{color:#fff;margin-top:18px}.quarta h2 em{color:var(--ocre)}
+.quarta p{color:#d9e4d5;max-width:520px;margin:0 auto 26px}
+.quarta a{background:#fff;color:var(--verde2)}
+.cats{display:grid;grid-template-columns:1fr;gap:20px;margin-top:40px}@media(min-width:820px){.cats{grid-template-columns:repeat(2,1fr)}}
+.cat{background:#fff;border:1px solid var(--linha);border-radius:22px;overflow:hidden;box-shadow:0 8px 22px rgba(43,33,24,.05);transition:.3s;display:flex;flex-direction:column}
+.cat:hover{transform:translateY(-5px);box-shadow:var(--sombra)}
+.cat img{width:100%;aspect-ratio:16/8.5;object-fit:cover;display:block}
+.cat-in{padding:26px;display:flex;flex-direction:column;flex:1}
+.cat .num{font-family:var(--serif);font-style:italic;color:var(--ocre);font-size:19px}
+.cat h3{font-family:var(--serif);font-weight:700;font-size:29px;color:var(--verde);margin:2px 0 8px}
+.cat p{font-size:14.5px;color:var(--mut);flex:1}
+.ord{margin-top:18px;display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:14.5px}.ord:hover{background:#178544}
+.hist{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}@media(min-width:900px){.hist{grid-template-columns:.95fr 1.05fr}}
+.hist img{width:100%;aspect-ratio:4/3.2;object-fit:cover;border-radius:22px;box-shadow:var(--sombra)}
+.hist h2,.hist .eyebrow{text-align:left}.hist .sub{text-align:left;margin:0}
+.hist .quote{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--verde);border-left:3px solid var(--ocre);padding-left:18px;margin-top:24px;line-height:1.45}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:38px}@media(min-width:860px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal figure{margin:0}.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block;transition:.35s}.gal img:hover{transform:scale(1.03)}
+.gal figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.horas{background:#fff;border:1px solid var(--linha);border-radius:24px;padding:clamp(34px,5vw,50px);max-width:640px;margin:38px auto 0;box-shadow:0 8px 22px rgba(43,33,24,.05)}
+.horas .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--papel2);font-size:15px}.horas .row:last-child{border-bottom:none}.horas .row b{color:var(--tijolo)}.horas .row.today b,.horas .row.today span{color:var(--verde);font-weight:800}
+.mapframe{border-radius:22px;overflow:hidden;border:1px solid var(--linha);box-shadow:var(--sombra);margin-top:38px}.mapframe iframe{width:100%;height:360px;border:0;display:block}
+footer{padding:38px 22px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1120px;margin:56px auto 0;border-top:3px double var(--linha)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(251,247,238,.97);border-top:1px solid var(--linha);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1120px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(18px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--verde);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--linha);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--verde);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.9;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:var(--papel2);align-self:flex-start}.msg.user{background:var(--verde);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--linha);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--linha)}.chatw-form input{flex:1;border:1px solid var(--linha);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--verde);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand"><div class="nome">Pizzaria <span>São Francisco</span></div><small>LIMEIRA · SÃO PAULO</small></div>
+<div class="hdr-r">
+<span class="anos">+12 anos de casa</span>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div>
+</div></header>
+
+<div class="promo-band">🎉 QUARTA-FEIRA É DIA DE ENTREGA GRÁTIS — <a href="https://wa.me/5519971240647?text=Ol%C3%A1%20Pizzaria%20S%C3%A3o%20Francisco!%20Quero%20aproveitar%20a%20entrega%20gr%C3%A1tis%20de%20quarta-feira.">peça hoje pelo WhatsApp</a></div>
+
+<div class="hero rv">
+<div class="crest">🍕</div>
+<h1>A pizzaria do bairro,<br>há mais de <em>12 anos.</em></h1>
+<p class="lede">Na R. Cap. Joaquim Manoel Pereira, 192, em Limeira. Pizzas, linguiça, hot dogs e Coca-Cola — com produtos selecionados e o capricho de sempre. E na quarta, a entrega é grátis.</p>
+<div class="actions">
+<a class="btn wa" href="#cardapio">Ver o cardápio e pedir</a>
+<a class="btn line" href="#horario">Horário e endereço</a>
+</div>
+<hr class="rule">
+</div>
+<div class="hero-img rv"><img src="img/sf3.jpg" alt="Pizzaria São Francisco em Limeira"></div>
+
+<div class="wrap">
+<section class="rv">
+<div class="quarta">
+<span class="tag">Promoção da casa</span>
+<h2>Quarta-feira: <em>entrega grátis</em></h2>
+<p>Toda quarta-feira, o delivery da Pizzaria São Francisco sai sem taxa de entrega. Escolha no cardápio abaixo e peça pelo WhatsApp.</p>
+<a class="btn" href="https://wa.me/5519971240647?text=Ol%C3%A1%20Pizzaria%20S%C3%A3o%20Francisco!%20Quero%20pedir%20com%20a%20entrega%20gr%C3%A1tis%20de%20quarta-feira.">Pedir com entrega grátis →</a>
+</div>
+</section>
+
+<section id="cardapio" class="rv">
+<div class="eyebrow">Cardápio da casa</div>
+<h2>Peça por <em>categoria</em></h2>
+<p class="sub">Toque em Pedir na categoria que quiser: o WhatsApp abre com o pedido já escrito. Sabores e valores do dia, a equipe confirma com você no atendimento.</p>
+<div class="cats">
+<article class="cat"><img src="img/sf5.jpg" alt="Pizza da Pizzaria São Francisco"><div class="cat-in"><div class="num">— nº 01</div><h3>Pizzas</h3><p>O carro-chefe da casa há mais de 12 anos, feitas com produtos selecionados de qualidade.</p><a class="ord" href="https://wa.me/5519971240647?text=Ol%C3%A1%20Pizzaria%20S%C3%A3o%20Francisco!%20Quero%20pedir%20uma%20pizza.">Pedir pizza →</a></div></article>
+<article class="cat"><img src="img/sf6.jpg" alt="Linguiça na Pizzaria São Francisco"><div class="cat-in"><div class="num">— nº 02</div><h3>Linguiça</h3><p>Linguiça do jeito que o bairro gosta — um dos itens pelos quais a São Francisco é conhecida em Limeira.</p><a class="ord" href="https://wa.me/5519971240647?text=Ol%C3%A1%20Pizzaria%20S%C3%A3o%20Francisco!%20Quero%20pedir%20lingui%C3%A7a.">Pedir linguiça →</a></div></article>
+<article class="cat"><img src="img/sf7.jpg" alt="Hot dog da Pizzaria São Francisco"><div class="cat-in"><div class="num">— nº 03</div><h3>Hot Dogs</h3><p>Hot dogs para acompanhar a pizza — ou para ser o prato principal da noite.</p><a class="ord" href="https://wa.me/5519971240647?text=Ol%C3%A1%20Pizzaria%20S%C3%A3o%20Francisco!%20Quero%20pedir%20um%20hot%20dog.">Pedir hot dog →</a></div></article>
+<article class="cat"><img src="img/sf8.jpg" alt="Coca-Cola gelada"><div class="cat-in"><div class="num">— nº 04</div><h3>Bebidas · Coca-Cola</h3><p>Coca-Cola gelada para acompanhar — peça junto com a pizza e receba tudo de uma vez.</p><a class="ord" href="https://wa.me/5519971240647?text=Ol%C3%A1%20Pizzaria%20S%C3%A3o%20Francisco!%20Quero%20pedir%20uma%20Coca-Cola%20junto%20com%20meu%20pedido.">Pedir Coca-Cola →</a></div></article>
+</div>
+</section>
+
+<section class="rv">
+<div class="hist">
+<img src="img/sf9.jpg" alt="Pizzaria São Francisco — tradição em Limeira">
+<div>
+<div class="eyebrow">Nossa história</div>
+<h2>Mais de 12 anos servindo Limeira</h2>
+<p class="sub">“Pizzaria São Francisco está a mais de 12 anos trabalhando para melhor atender, com produtos selecionados de qualidade.” É assim que a casa se apresenta — e é assim que o bairro a conhece, com 13 mil seguidores acompanhando pelo Instagram.</p>
+<div class="quote">Produtos selecionados, atendimento de bairro e a quarta-feira com entrega grátis.</div>
+</div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">Galeria</div>
+<h2>Direto da <em>nossa casa</em></h2>
+<p class="sub">Fotos reais publicadas pela Pizzaria São Francisco.</p>
+<div class="gal">
+<figure><img src="img/sf1.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>Da nossa cozinha</figcaption></figure>
+<figure><img src="img/sf4.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>Sabor da casa</figcaption></figure>
+<figure><img src="img/sf10.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>Para a família</figcaption></figure>
+<figure><img src="img/sf6.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>Tradição no bairro</figcaption></figure>
+<figure><img src="img/sf7.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>Saindo do forno</figcaption></figure>
+<figure><img src="img/sf8.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>Para acompanhar</figcaption></figure>
+<figure><img src="img/sf9.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>Nossa casa</figcaption></figure>
+<figure><img src="img/sf5.jpg" alt="Foto da Pizzaria São Francisco"><figcaption>A queridinha</figcaption></figure>
+</div>
+</section>
+
+<section id="horario" class="rv">
+<div class="eyebrow">Horário e endereço</div>
+<h2>Até <em>meia-noite e meia,</em> todo dia</h2>
+<div class="horas">
+<div class="row"><span>Domingo</span><b>16:30 – 00:30</b></div>
+<div class="row"><span>Segunda-feira</span><b>17:00 – 00:30</b></div>
+<div class="row"><span>Terça-feira</span><b>17:00 – 00:30</b></div>
+<div class="row"><span>Quarta-feira · entrega grátis</span><b>17:00 – 00:30</b></div>
+<div class="row"><span>Quinta-feira</span><b>17:00 – 00:30</b></div>
+<div class="row"><span>Sexta-feira</span><b>16:30 – 00:30</b></div>
+<div class="row"><span>Sábado</span><b>16:30 – 00:30</b></div>
+</div>
+<p class="sub" style="margin-top:26px">R. Cap. Joaquim Manoel Pereira, 192 — Limeira, SP, 13483-281 · WhatsApp <a href="https://wa.me/5519971240647" style="color:var(--tijolo);font-weight:800;text-decoration:none">(19) 97124-0647</a></p>
+<div class="mapframe"><iframe title="Mapa — Pizzaria São Francisco, R. Cap. Joaquim Manoel Pereira, 192, Limeira, SP" src="https://www.google.com/maps?q=R.+Cap.+Joaquim+Manoel+Pereira,+192,+Limeira,+SP,+Brasil&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</section>
+</div>
+
+<footer>
+Pizzaria São Francisco · R. Cap. Joaquim Manoel Pereira, 192, Limeira, SP · WhatsApp (19) 97124-0647 · Mais de 12 anos de casa<br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Pizzaria São Francisco.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/5519971240647?text=Ol%C3%A1%20Pizzaria%20S%C3%A3o%20Francisco!%20Quero%20fazer%20um%20pedido.">🍕 Pedir pelo WhatsApp — (19) 97124-0647</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente Pizzaria São Francisco">
+<div class="chatw-head"><div><b>Assistente São Francisco</b><small>Assistente demo · prévia de conceito</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Fechar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escreva sua pergunta…" aria-label="Escreva sua pergunta"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>10)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5519971240647"},"greeting":"Olá! Sou o assistente da Pizzaria São Francisco, em Limeira. Pergunte sobre o cardápio, a entrega grátis de quarta-feira, o horário ou o endereço — ou toque em uma sugestão.","fallback":"Isso eu não tenho aqui — fale com a equipe no WhatsApp (19) 97124-0647 que eles te ajudam.","chips":["O que tem no cardápio?","Como é a entrega grátis de quarta?","Qual o horário?","Onde fica?","Há quanto tempo existe?"],"items":[],"intents":[{"k":["ola","oi","boa noite"],"g":1,"a":"Olá! Pergunte sobre o cardápio, a entrega grátis de quarta, o horário ou o endereço."},{"k":["quarta","entrega gratis","entrega grátis","promocao","promoção","gratis","grátis"],"a":"Toda quarta-feira a entrega é grátis na Pizzaria São Francisco. Peça pelo WhatsApp e aproveite — funcionamos na quarta das 17h às 00h30.","link":{"t":"Pedir com entrega grátis","href":"https://wa.me/5519971240647"}},{"k":["cardapio","cardápio","menu","tem o que","vende","oferece"],"a":"Nosso cardápio tem pizzas, linguiça, hot dogs e Coca-Cola. Sabores e valores do dia, a equipe confirma com você no WhatsApp.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5519971240647"}},{"k":["pizza","pizzas"],"a":"Pizza é o carro-chefe da casa há mais de 12 anos, com produtos selecionados. Peça pelo WhatsApp e confirme os sabores do dia com a equipe.","link":{"t":"Pedir pizza","href":"https://wa.me/5519971240647"}},{"k":["linguica","linguiça"],"a":"Temos linguiça — um dos itens pelos quais a São Francisco é conhecida em Limeira. Peça pelo WhatsApp.","link":{"t":"Pedir linguiça","href":"https://wa.me/5519971240647"}},{"k":["hot dog","hotdog","cachorro quente","lanche"],"a":"Temos hot dogs no cardápio. Peça pelo WhatsApp (19) 97124-0647.","link":{"t":"Pedir hot dog","href":"https://wa.me/5519971240647"}},{"k":["coca","refrigerante","bebida"],"a":"Temos Coca-Cola gelada para acompanhar seu pedido. É só pedir junto no WhatsApp.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5519971240647"}},{"k":["preco","preço","quanto custa","valor"],"a":"Os valores do dia a equipe confirma com você no WhatsApp, junto com os sabores disponíveis. E lembra: na quarta-feira a entrega é grátis.","link":{"t":"Perguntar no WhatsApp","href":"https://wa.me/5519971240647"}},{"k":["horario","horário","abrem","aberto","fecham","hora","funciona"],"a":"Horário: domingo, sexta e sábado das 16h30 às 00h30; segunda a quinta das 17h às 00h30. Fechamos meia-noite e meia, todos os dias."},{"k":["onde","endereco","endereço","fica","local","chegar"],"a":"Estamos na R. Cap. Joaquim Manoel Pereira, 192, Limeira, SP, 13483-281."},{"k":["quanto tempo","anos","historia","história","tradicao","tradição","desde quando"],"a":"A Pizzaria São Francisco está há mais de 12 anos em Limeira, trabalhando com produtos selecionados de qualidade — e tem 13 mil seguidores no Instagram."},{"k":["entrega","delivery","entregam"],"a":"Fazemos entrega — e na quarta-feira ela é grátis. Peça pelo WhatsApp (19) 97124-0647.","link":{"t":"Pedir delivery","href":"https://wa.me/5519971240647"}},{"k":["telefone","whatsapp","numero","número","contato"],"a":"WhatsApp: (19) 97124-0647.","link":{"t":"Abrir WhatsApp","href":"https://wa.me/5519971240647"}},{"k":["pedir","pedido","quero","comprar"],"a":"Para pedir: escolha a categoria no cardápio desta página (pizzas, linguiça, hot dogs ou Coca-Cola) e toque em Pedir — o WhatsApp abre com o pedido escrito.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5519971240647"}},{"k":["obrigado","obrigada","valeu"],"a":"Por nada! A gente se fala no WhatsApp."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+var SCHED={"tz":"America/Sao_Paulo","days":{"0":[[990,1470,"16:30","00:30"]],"1":[[1020,1470,"17:00","00:30"]],"2":[[1020,1470,"17:00","00:30"]],"3":[[1020,1470,"17:00","00:30"]],"4":[[1020,1470,"17:00","00:30"]],"5":[[990,1470,"16:30","00:30"]],"6":[[990,1470,"16:30","00:30"]]}};
+var OTXT={"open":"Aberto agora · até às {x}","closed":"Fechado · abre às {x}","closedTomorrow":"Fechado · abre amanhã às {x}","closedDay":"Fechado · abre {d} às {x}","days":["domingo","segunda","terça","quarta","quinta","sexta","sábado"]};
+(function(){var el=document.getElementById('opennow');if(!el)return;function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;})();
+})();
+</script>
+</body>
+</html>

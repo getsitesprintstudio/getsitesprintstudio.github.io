@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicole Pizzaria &amp; Esfiharia — Limeira, SP | 50+ sabores, combos e promo Seg–Qui</title>
+<meta name="description" content="Nicole Pizzaria & Esfiharia em Limeira, SP — Av. Campinas, 668. Mais de 50 sabores de pizza, esfihas e beirutes. Combos a partir de R$ 24,90 e promo de segunda a quinta: de R$ 49,90 por R$ 39,90. Peça pelo WhatsApp (19) 97105-5626. Aberto todos os dias, 18h–00h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff6ea;--cream2:#ffedd6;--ink:#221410;--mut:#7d6355;--red:#c1271b;--red-d:#8f1a10;--tom:#e8492f;--must:#f5a623;--basil:#2e7d4f;--line:#f0dbc0;--card:#fff;--wa:#1faa55;--shadow:0 24px 50px rgba(34,20,16,.16);--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"Archivo",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--red);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.35s;background:transparent}
+header.scrolled{background:rgba(255,246,234,.96);backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(34,20,16,.12);border-bottom:1px solid var(--line)}
+.hdr{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-weight:800;font-size:26px;letter-spacing:-.02em;color:#fff;line-height:1;text-decoration:none;transition:.35s}
+header.scrolled .brand{color:var(--ink)}
+.brand b{color:var(--must)} .brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;font-weight:800;color:var(--must);margin-top:3px}
+.hdr-r{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;background:rgba(255,255,255,.92);padding:8px 13px;border-radius:999px;color:var(--ink)}
+.odot{width:9px;height:9px;border-radius:50%;background:#bbb}.opennow.open .odot{background:#27ae60;box-shadow:0 0 0 4px rgba(39,174,96,.18)}.opennow.closed .odot{background:#d35450;box-shadow:0 0 0 4px rgba(211,84,80,.15)}
+.hdr-cta{background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:13.5px;padding:10px 18px;border-radius:999px;transition:.25s}.hdr-cta:hover{transform:translateY(-2px)}
+.hero{position:relative;background:var(--red-d);color:#fff;overflow:hidden;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% -10%,rgba(245,166,35,.35),transparent 60%),radial-gradient(700px 500px at -10% 110%,rgba(232,73,47,.5),transparent 60%);z-index:-1}
+.hero-in{max-width:1200px;margin:0 auto;padding:clamp(130px,17vw,190px) 20px clamp(70px,9vw,110px);display:grid;grid-template-columns:1fr;gap:44px;align-items:center}
+@media(min-width:960px){.hero-in{grid-template-columns:1.05fr .95fr}}
+.kicker{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 15px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.hero h1{font-family:var(--disp);font-weight:800;font-size:clamp(52px,8.5vw,96px);line-height:.94;letter-spacing:-.025em;margin:22px 0 18px}
+.hero h1 .out{color:transparent;-webkit-text-stroke:2px #fff}
+.hero h1 em{font-style:normal;color:var(--must)}
+.hero p{color:#ffe9d6;max-width:520px;font-size:clamp(16px,2vw,19px)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;font-size:16px;transition:.25s}.btn:hover{transform:translateY(-3px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 16px 30px rgba(0,0,0,.28)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}.btn.ghost:hover{border-color:#fff}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px}
+.hero-stats div b{font-family:var(--disp);font-size:26px;display:block;line-height:1}
+.hero-stats div span{font-size:12.5px;color:#ffd9bd;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.hero-media{position:relative}
+.hero-media .main{width:100%;aspect-ratio:4/4.6;object-fit:cover;border-radius:28px;box-shadow:0 40px 80px rgba(0,0,0,.4);display:block}
+@media(min-width:960px){.hero-media .main{aspect-ratio:4/4.9}}
+.hero-media .mini{position:absolute;left:-26px;bottom:34px;width:44%;aspect-ratio:1;object-fit:cover;border-radius:20px;border:6px solid var(--cream);box-shadow:var(--shadow);transform:rotate(-5deg)}
+.sticker{position:absolute;top:-24px;right:-8px;width:128px;height:128px;background:var(--must);color:var(--ink);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;transform:rotate(10deg);box-shadow:0 18px 36px rgba(0,0,0,.3);padding:12px}
+.sticker small{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.sticker b{font-family:var(--disp);font-size:21px;line-height:1.05}
+.sticker s{font-size:12px;font-weight:700;opacity:.65}
+.marquee{background:var(--ink);color:var(--cream2);overflow:hidden;padding:13px 0;white-space:nowrap}
+.marquee div{display:inline-block;font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;animation:mq 26s linear infinite}
+.marquee span{margin:0 22px}.marquee i{color:var(--must);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+section{padding:clamp(70px,9vw,110px) 0 6px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.32em;color:var(--red);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(34px,5vw,52px);line-height:1.02;letter-spacing:-.02em;margin-bottom:14px}
+h2 em{font-style:normal;color:var(--red)}
+.sub{color:var(--mut);max-width:640px;font-size:16.5px}
+.promo-band{margin-top:clamp(56px,8vw,84px);background:linear-gradient(120deg,var(--red) 0%,var(--tom) 100%);color:#fff;border-radius:30px;padding:clamp(34px,5vw,54px);display:grid;grid-template-columns:1fr;gap:26px;align-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+@media(min-width:880px){.promo-band{grid-template-columns:1.2fr .8fr}}
+.promo-band:before{content:"SEG–QUI";position:absolute;right:-18px;top:-30px;font-family:var(--disp);font-weight:800;font-size:150px;color:rgba(255,255,255,.08);letter-spacing:-.03em}
+.promo-band h2{color:#fff}.promo-band h2 em{color:var(--must)}
+.promo-band p{color:#ffe4d1;max-width:480px}
+.price-slash{text-align:left}
+@media(min-width:880px){.price-slash{text-align:center}}
+.price-slash s{display:block;font-family:var(--disp);font-size:30px;color:#ffc9b8;font-weight:600}
+.price-slash b{font-family:var(--disp);font-size:clamp(64px,8vw,92px);line-height:.95;color:#fff}
+.price-slash span{display:block;font-weight:700;color:#ffe4d1;font-size:14px;margin-top:6px}
+.builder{background:var(--ink);color:#fff;border-radius:30px;padding:clamp(30px,5vw,52px);box-shadow:var(--shadow);margin-top:38px}
+.builder h3{font-family:var(--disp);font-size:clamp(24px,3.4vw,32px);margin-bottom:6px}
+.builder .bstep{font-size:12px;font-weight:800;letter-spacing:.24em;color:var(--must);text-transform:uppercase;margin:30px 0 14px}
+.opt-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:760px){.opt-grid.c3{grid-template-columns:repeat(3,1fr)}.opt-grid.c2{grid-template-columns:repeat(2,1fr)}}
+.opt{border:2px solid #453128;background:#2b1c16;color:#fff;border-radius:18px;padding:20px;text-align:left;cursor:pointer;font:inherit;transition:.2s;width:100%}
+.opt:hover{border-color:#6b4a38;transform:translateY(-2px)}
+.opt b{display:block;font-family:var(--disp);font-size:20px;margin-bottom:3px}
+.opt span{font-size:13.5px;color:#d8bfac;display:block;line-height:1.5}
+.opt .p{font-family:var(--disp);font-size:26px;color:var(--must);margin-top:10px;display:block}
+.opt.active{border-color:var(--must);background:#3a2417;box-shadow:0 0 0 3px rgba(245,166,35,.25)}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;gap:16px;border:2px solid #453128;background:#2b1c16;border-radius:18px;padding:20px;flex-wrap:wrap}
+.toggle-row b{font-family:var(--disp);font-size:19px;display:block}
+.toggle-row span{font-size:13.5px;color:#d8bfac}
+.switch{position:relative;width:62px;height:34px;flex:none}
+.switch input{opacity:0;width:100%;height:100%;position:absolute;cursor:pointer;margin:0;z-index:2}
+.switch i{position:absolute;inset:0;background:#574134;border-radius:999px;transition:.25s}
+.switch i:after{content:"";position:absolute;top:4px;left:4px;width:26px;height:26px;border-radius:50%;background:#fff;transition:.25s}
+.switch input:checked + i{background:var(--basil)}
+.switch input:checked + i:after{transform:translateX(28px)}
+.summary{margin-top:30px;border-top:1px dashed #574134;padding-top:22px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+.summary .sum-txt{font-size:15.5px;color:#f3ddc9;max-width:560px}
+.summary .sum-txt b{color:#fff}
+.builder-cta{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:15px 30px;background:var(--wa);color:#fff;border-radius:999px;font-weight:800;text-decoration:none;font-size:16px;transition:.25s;box-shadow:0 14px 28px rgba(31,170,85,.3)}
+.builder-cta:hover{transform:translateY(-2px)}
+.cards{display:grid;grid-template-columns:1fr;gap:20px;margin-top:38px}
+@media(min-width:860px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.3s;box-shadow:0 8px 22px rgba(34,20,16,.05)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.card-in{padding:24px}
+.card .tag{font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--red);text-transform:uppercase}
+.card h3{font-family:var(--disp);font-size:24px;margin:6px 0 8px}
+.card p{font-size:14.5px;color:var(--mut)}
+.card .ord{display:inline-flex;margin-top:16px;min-height:48px;align-items:center;padding:11px 20px;background:#fff1e6;border:1.5px solid var(--red);color:var(--red-d);border-radius:999px;text-decoration:none;font-weight:800;font-size:14px;transition:.2s}
+.card .ord:hover{background:var(--red);color:#fff}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:38px}
+@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}
+.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;display:block;transition:.3s}
+.strip figure:hover img{transform:scale(1.03)}
+.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.info-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:38px}
+@media(min-width:880px){.info-grid{grid-template-columns:1fr 1fr}}
+.hours-card{background:var(--red-d);color:#fff;border-radius:26px;padding:clamp(30px,4.5vw,44px);box-shadow:var(--shadow)}
+.hours-card h3{font-family:var(--disp);font-size:28px;margin-bottom:6px}
+.hours-card .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:15px}
+.hours-card .row b{color:var(--cream2)}
+.hours-card p{margin-top:16px;color:#ffd9bd;font-size:14.5px}
+.addr-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(30px,4.5vw,44px);box-shadow:0 8px 22px rgba(34,20,16,.05)}
+.addr-card h3{font-family:var(--disp);font-size:28px;margin-bottom:10px}
+.addr-card p{color:var(--mut);font-size:15.5px}
+.addr-card a.wa-big{display:flex;margin-top:20px;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.mapframe{border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:38px}
+.mapframe iframe{width:100%;height:360px;border:0;display:block}
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1200px;margin:60px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1200px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+.chatw-btn{background:var(--red);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}
+.chatw-panel.open{display:flex}
+.chatw-head{background:var(--red);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}
+.chatw-head small{opacity:.9;font-size:11.5px;display:block}
+.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}
+.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+.msg.bot{background:#fff1e6;align-self:flex-start}.msg.user{background:var(--red);color:#fff;align-self:flex-end}
+.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}
+.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}
+.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}
+.chatw-form button{background:var(--red);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<a class="brand" href="#">Nicole<b>.</b><small>PIZZARIA &amp; ESFIHARIA · LIMEIRA</small></a>
+<div class="hdr-r">
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+<a class="hdr-cta" href="https://wa.me/5519971055626?text=Ol%C3%A1%2C%20Nicole%20Pizzaria!%20Quero%20fazer%20um%20pedido.">Pedir agora</a>
+</div></div></header>
+
+<div class="hero"><div class="hero-in">
+<div class="rv">
+<span class="kicker">Av. Campinas, 668 · Limeira, SP</span>
+<h1>A noite<br>em Limeira<br>pede <em>Nicole</em><span class="out">.</span></h1>
+<p>Mais de 50 sabores de pizza, esfihas caprichadas e beirutes — para uma pessoa, para o casal ou para a família inteira. Monte seu combo aqui e peça em um toque.</p>
+<div class="hero-ctas">
+<a class="btn wa" href="#montar">Montar meu combo</a>
+<a class="btn ghost" href="#combos">Ver combos e promos</a>
+</div>
+<div class="hero-stats">
+<div><b>50+</b><span>sabores de pizza</span></div>
+<div><b>18h–00h</b><span>todos os dias</span></div>
+<div><b>R$ 24,90</b><span>combo a partir de</span></div>
+</div>
+</div>
+<div class="hero-media rv">
+<img class="main" src="img/hero.jpg" alt="Pizza da Nicole Pizzaria e Esfiharia em Limeira">
+<img class="mini" src="img/pizza2.jpg" alt="Fatia de pizza com queijo da Nicole Pizzaria">
+<div class="sticker"><small>Seg a Qui</small><s>R$ 49,90</s><b>R$ 39,90</b></div>
+</div>
+</div></div>
+
+<div class="marquee" aria-hidden="true"><div>
+<span>Pizzas <i>✦</i></span><span>Esfihas <i>✦</i></span><span>Beirutes <i>✦</i></span><span>50+ sabores <i>✦</i></span><span>Borda recheada grátis qua e qui <i>✦</i></span><span>Promo seg–qui R$ 39,90 <i>✦</i></span>
+<span>Pizzas <i>✦</i></span><span>Esfihas <i>✦</i></span><span>Beirutes <i>✦</i></span><span>50+ sabores <i>✦</i></span><span>Borda recheada grátis qua e qui <i>✦</i></span><span>Promo seg–qui R$ 39,90 <i>✦</i></span>
+</div></div>
+
+<div class="wrap">
+
+<div class="promo-band rv">
+<div>
+<div class="eyebrow" style="color:var(--must)">Promo da semana</div>
+<h2>De segunda a quinta,<br>pizza de <em>R$ 49,90</em> sai por menos.</h2>
+<p>Na promo de segunda a quinta, o preço cai de R$ 49,90 para R$ 39,90. E às quartas e quintas a borda recheada é grátis. Confirme os sabores participantes ao pedir.</p>
+</div>
+<div class="price-slash"><s>R$ 49,90</s><b>R$ 39,90</b><span>segunda a quinta · por tempo da casa</span></div>
+</div>
+
+<section id="montar" class="rv">
+<div class="eyebrow">Monte do seu jeito</div>
+<h2>Monte seu combo e <em>peça no WhatsApp</em></h2>
+<p class="sub">Escolha o tamanho, a faixa de sabores e a borda. A página monta a mensagem e abre o WhatsApp da Nicole com tudo escrito.</p>
+
+<div class="builder">
+<h3>Seu pedido, passo a passo</h3>
+
+<div class="bstep">Passo 1 · Tamanho do combo</div>
+<div class="opt-grid c3" id="comboGrid">
+<button type="button" class="opt active" data-name="Combo Individual" data-price="R$ 24,90"><b>Individual</b><span>Para uma pessoa, sem dividir com ninguém.</span><span class="p">R$ 24,90</span></button>
+<button type="button" class="opt" data-name="Combo Casal" data-price="R$ 69,90"><b>Casal</b><span>Para dois: a noite de pizza a dois, resolvida.</span><span class="p">R$ 69,90</span></button>
+<button type="button" class="opt" data-name="Combo Família" data-price="R$ 99,99"><b>Família</b><span>Para a mesa toda: o combo grande da casa.</span><span class="p">R$ 99,99</span></button>
+</div>
+
+<div class="bstep">Passo 2 · Faixa de sabores</div>
+<div class="opt-grid c2" id="tierGrid">
+<button type="button" class="opt active" data-name="sabores da faixa de R$ 39,99"><b>Faixa R$ 39,99</b><span>Escolha entre os sabores desta faixa do cardápio — são mais de 50 sabores na casa.</span></button>
+<button type="button" class="opt" data-name="sabores da faixa de R$ 49,99"><b>Faixa R$ 49,99</b><span>Escolha entre os sabores desta faixa do cardápio. De seg a qui, veja a promo de R$ 39,90 nesta página.</span></button>
+</div>
+
+<div class="bstep">Passo 3 · Borda recheada</div>
+<div class="toggle-row">
+<div><b>Borda recheada</b><span id="bordaNote">Grátis às quartas e quintas. Nos outros dias, confirme o valor ao pedir.</span></div>
+<label class="switch"><input type="checkbox" id="bordaToggle" aria-label="Adicionar borda recheada"><i></i></label>
+</div>
+
+<div class="summary">
+<div class="sum-txt" id="sumTxt"></div>
+<a class="builder-cta" id="builderCta" href="#" target="_blank" rel="noopener">Pedir este combo no WhatsApp →</a>
+</div>
+</div>
+</section>
+
+<section id="combos" class="rv">
+<div class="eyebrow">Combos e favoritos</div>
+<h2>Os queridinhos <em>da casa</em></h2>
+<p class="sub">Preços publicados pela Nicole Pizzaria &amp; Esfiharia. Toque em pedir e o WhatsApp abre com o item já escrito.</p>
+<div class="cards">
+<article class="card"><img src="img/pizza3.jpg" alt="Combo de esfihas da Nicole Pizzaria"><div class="card-in"><div class="tag">Para compartilhar</div><h3>Combo 30 Esfihas</h3><p>30 esfihas nos sabores publicados pela casa — árabe, carne, calabresa e queijo minas. De R$ 120,00 por R$ 99,99.</p><a class="ord" href="https://wa.me/5519971055626?text=Ol%C3%A1%2C%20Nicole%20Pizzaria!%20Quero%20o%20Combo%2030%20Esfihas%20(R%24%2099%2C99).">Pedir o combo →</a></div></article>
+<article class="card"><img src="img/beirute.jpg" alt="Beirutes da Nicole Pizzaria e Esfiharia"><div class="card-in"><div class="tag">Além da pizza</div><h3>Beirutes</h3><p>A Nicole também faz beirutes — o lanche caprichado para variar o pedido da noite. Pergunte os sabores do dia no WhatsApp.</p><a class="ord" href="https://wa.me/5519971055626?text=Ol%C3%A1%2C%20Nicole%20Pizzaria!%20Quero%20saber%20os%20beirutes%20de%20hoje.">Perguntar sabores →</a></div></article>
+<article class="card"><img src="img/pizza1.jpg" alt="Pizza saindo do forno na Nicole Pizzaria"><div class="card-in"><div class="tag">O clássico</div><h3>Pizzas · 50+ sabores</h3><p>Mais de 50 sabores de pizza no cardápio, nas faixas de R$ 39,99 e R$ 49,99. Monte o seu no passo a passo acima.</p><a class="ord" href="#montar">Montar a minha →</a></div></article>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">Galeria</div>
+<h2>Direto do <em>forno</em></h2>
+<div class="strip">
+<figure><img src="img/pizza4.jpg" alt="Pizza da Nicole Pizzaria"><figcaption>Saindo do forno</figcaption></figure>
+<figure><img src="img/pizza5.jpg" alt="Pizza de queijo da Nicole Pizzaria"><figcaption>Para a família</figcaption></figure>
+<figure><img src="img/oven.jpg" alt="Preparo de pizza na Nicole Pizzaria"><figcaption>Feita na hora</figcaption></figure>
+<figure><img src="img/pizza2.jpg" alt="Fatia de pizza da Nicole Pizzaria"><figcaption>Aquele queijo puxando</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">Visite ou peça</div>
+<h2>Onde estamos e <em>quando abrimos</em></h2>
+<div class="info-grid">
+<div class="hours-card">
+<h3>Horário</h3>
+<div class="row"><span>Segunda a domingo</span><b>18:00 – 00:00</b></div>
+<p>Aberto todos os dias da semana, das 18h à meia-noite. Promo de R$ 39,90 de segunda a quinta; borda recheada grátis às quartas e quintas.</p>
+</div>
+<div class="addr-card">
+<h3>Endereço</h3>
+<p>Av. Campinas, 668 — Vila Cidade Jardim<br>Limeira, SP</p>
+<p style="margin-top:10px">Delivery e pedidos pelo WhatsApp: (19) 97105-5626.</p>
+<a class="wa-big" href="https://wa.me/5519971055626?text=Ol%C3%A1%2C%20Nicole%20Pizzaria!%20Quero%20fazer%20um%20pedido.">Pedir pelo WhatsApp</a>
+</div>
+</div>
+<div class="mapframe"><iframe title="Mapa — Nicole Pizzaria e Esfiharia, Av. Campinas, 668, Limeira, SP" src="https://www.google.com/maps?q=Av.+Campinas,+668,+Vila+Cidade+Jardim,+Limeira,+SP,+Brasil&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</section>
+</div>
+
+<footer>
+Nicole Pizzaria &amp; Esfiharia · Av. Campinas, 668, Limeira, SP · WhatsApp (19) 97105-5626<br><br>
+Concept preview built by SiteSprint Studio — esta é uma prévia de conceito, não o site oficial da Nicole Pizzaria &amp; Esfiharia.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/5519971055626?text=Ol%C3%A1%2C%20Nicole%20Pizzaria!%20Quero%20fazer%20um%20pedido.">🍕 Pedir no WhatsApp — (19) 97105-5626</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente Nicole">
+<div class="chatw-head"><div><b>Assistente Nicole</b><small>Assistente demo · prévia de conceito</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Fechar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escreva sua pergunta…" aria-label="Escreva sua pergunta"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});items.forEach(function(e){io.observe(e)});}
+/* Combo builder */
+var combo={name:'Combo Individual',price:'R$ 24,90'},tier='sabores da faixa de R$ 39,99',borda=false;
+function pick(gridId,cb){var g=document.getElementById(gridId);g.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){g.querySelectorAll('.opt').forEach(function(x){x.classList.remove('active')});b.classList.add('active');cb(b);refresh();});});}
+pick('comboGrid',function(b){combo={name:b.getAttribute('data-name'),price:b.getAttribute('data-price')};});
+pick('tierGrid',function(b){tier=b.getAttribute('data-name');});
+document.getElementById('bordaToggle').addEventListener('change',function(){borda=this.checked;refresh();});
+function refresh(){
+var msg='Olá, Nicole Pizzaria! Quero montar meu pedido: '+combo.name+' ('+combo.price+'), com '+tier+(borda?', com borda recheada':'')+'. Pode me ajudar a escolher os sabores?';
+document.getElementById('sumTxt').innerHTML='Seu combo: <b>'+combo.name+' — '+combo.price+'</b> · '+tier+(borda?' · <b>com borda recheada</b> (grátis qua e qui)':'')+'.';
+document.getElementById('builderCta').href='https://wa.me/5519971055626?text='+encodeURIComponent(msg);
+}
+refresh();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5519971055626"},"greeting":"Olá! Sou o assistente da Nicole Pizzaria & Esfiharia. Pergunte sobre combos, preços, a promo de seg a qui, borda recheada, horário ou endereço — ou toque numa sugestão.","fallback":"Isso eu não tenho aqui — chama a gente no WhatsApp (19) 97105-5626 que respondemos rapidinho.","chips":["Quais os combos e preços?","Como é a promo de seg a qui?","Borda recheada é grátis quando?","Qual o horário?","Onde fica?"],"items":[{"k":["combo 30","30 esfihas","esfihas"],"a":"Combo 30 Esfihas — de R$ 120,00 por R$ 99,99, nos sabores publicados pela casa: árabe, carne, calabresa e queijo minas. Também temos esfihas no cardápio para montar do seu jeito.","link":{"t":"Pedir o combo","href":"https://wa.me/5519971055626"}},{"k":["beirute"],"a":"Sim, a Nicole faz beirutes. Pergunte os sabores do dia pelo WhatsApp.","link":{"t":"Perguntar no WhatsApp","href":"https://wa.me/5519971055626"}}],"intents":[{"k":["ola","oi","boa noite"],"g":1,"a":"Olá! Pergunte sobre combos, preços, promo, horário ou endereço."},{"k":["combo","individual","casal","familia"],"a":"Combos: Individual R$ 24,90 · Casal R$ 69,90 · Família R$ 99,99. Monte o seu no passo a passo desta página e peça pelo WhatsApp.","link":{"t":"Montar meu combo","href":"https://wa.me/5519971055626"}},{"k":["promo","promocao","segunda","quinta","39,90","39.90","desconto"],"a":"Promo de segunda a quinta: pizza de R$ 49,90 por R$ 39,90. Confirme os sabores participantes ao pedir pelo WhatsApp.","link":{"t":"Aproveitar a promo","href":"https://wa.me/5519971055626"}},{"k":["borda","recheada","gratis"],"a":"Borda recheada é grátis às quartas e quintas. Nos outros dias, confirme o valor ao pedir pelo WhatsApp."},{"k":["preco","preço","quanto","custa","valor","faixa"],"a":"Preços: combos Individual R$ 24,90, Casal R$ 69,90 e Família R$ 99,99. Sabores nas faixas de R$ 39,99 e R$ 49,99 — e de seg a qui tem promo de R$ 49,90 por R$ 39,90."},{"k":["horario","abre","aberto","fecha","hora","funciona"],"a":"Abrimos todos os dias, das 18:00 à 00:00 (meia-noite), em Limeira."},{"k":["onde","endereco","endereço","fica","local","campinas"],"a":"Estamos na Av. Campinas, 668 — Vila Cidade Jardim, Limeira, SP."},{"k":["sabor","sabores","cardapio","cardápio","menu"],"a":"São mais de 50 sabores de pizza, nas faixas de R$ 39,99 e R$ 49,99, além de esfihas e beirutes. Chama no WhatsApp para receber o cardápio completo.","link":{"t":"Pedir o cardápio","href":"https://wa.me/5519971055626"}},{"k":["delivery","entrega","entregam"],"a":"Peça pelo WhatsApp (19) 97105-5626 e confirme a entrega para o seu endereço em Limeira.","link":{"t":"Pedir agora","href":"https://wa.me/5519971055626"}},{"k":["pedir","pedido","comprar","quero"],"a":"Para pedir: monte seu combo no passo a passo desta página ou toque no botão de WhatsApp — a mensagem já vai pronta.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5519971055626"}},{"k":["telefone","whatsapp","numero","contato"],"a":"Nosso WhatsApp é (19) 97105-5626.","link":{"t":"Abrir WhatsApp","href":"https://wa.me/5519971055626"}},{"k":["obrigado","obrigada","valeu"],"a":"Por nada! Boa pizza — te esperamos na Nicole."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+var SCHED={"tz":"America/Sao_Paulo","days":{"0":[[1080,1440,"18:00","00:00"]],"1":[[1080,1440,"18:00","00:00"]],"2":[[1080,1440,"18:00","00:00"]],"3":[[1080,1440,"18:00","00:00"]],"4":[[1080,1440,"18:00","00:00"]],"5":[[1080,1440,"18:00","00:00"]],"6":[[1080,1440,"18:00","00:00"]]}};
+var OTXT={"open":"Aberto agora · até {x}","closed":"Fechado · abre às {x}","closedTomorrow":"Fechado · abre amanhã às {x}","closedDay":"Fechado · abre {d} às {x}","days":["domingo","segunda","terça","quarta","quinta","sexta","sábado"]};
+(function(){var el=document.getElementById('opennow');if(!el)return;function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;})();
+})();
+</script>
+</body>
+</html>

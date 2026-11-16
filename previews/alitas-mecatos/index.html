@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alitas Mecatos — Sasaima, Cundinamarca | Terraza en la ruta desde Bogotá</title>
+<meta name="description" content="Alitas Mecatos en Sasaima, Cundinamarca, Cra. 3 #2-57. Terraza nueva (abrió el 2 de noviembre de 2026): alitas, hamburguesas, salchipapas y sándwiches. Pide por WhatsApp +57 310 797 8573.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf6ec;--paper:#fffdf8;--ink:#22301f;--leaf:#2f6b3a;--leaf2:#1e4d27;--lime:#8fbf4d;--sun:#f2a81d;--terra:#d96f32;--mut:#71806c;--line:#e7dcc4;--wa:#1faa55;--shadow:0 22px 48px rgba(34,48,31,.14);--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--leaf);color:#fff}img{max-width:100%}
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}header.scrolled{box-shadow:0 10px 30px rgba(34,48,31,.12);border-bottom-color:var(--line)}
+.hdr{max-width:1140px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:clamp(22px,3vw,27px);line-height:1.1}.brand span{color:var(--leaf)}.brand small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.24em;font-weight:800;color:var(--terra)}
+.newpill{font-size:12px;font-weight:800;color:var(--leaf2);background:#e4f0d2;padding:8px 13px;border-radius:999px}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700}.odot{width:9px;height:9px;border-radius:50%;background:#bbb}.opennow.open .odot{background:#27ae60;box-shadow:0 0 0 4px rgba(39,174,96,.18)}.opennow.closed .odot{background:#d35450;box-shadow:0 0 0 4px rgba(211,84,80,.15)}
+.hero{position:relative;overflow:hidden;background:var(--leaf2);color:#fff}
+.hero-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr}@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero-copy{padding:clamp(56px,8vw,96px) 20px}
+.badge{display:inline-block;background:var(--sun);color:#22301f;font-size:12px;font-weight:900;letter-spacing:1.2px;padding:9px 16px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,6.5vw,66px);line-height:1.02;margin:24px 0 16px;font-weight:600}
+.hero h1 em{color:var(--lime);font-style:italic}
+.hero p{color:#dcebd2;max-width:500px;font-size:clamp(16px,2vw,18.5px);margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 28px rgba(31,170,85,.3)}.btn.white{background:#fff;color:var(--leaf2)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-media{position:relative;min-height:320px}
+.hero-media img.main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media .card{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(255,253,248,.97);color:var(--ink);border-radius:16px;padding:14px 18px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow);max-width:calc(100% - 36px)}
+.hero-media .card img{width:54px;height:54px;border-radius:50%;object-fit:cover}
+.hero-media .card b{font-family:var(--serif);font-size:16px;display:block;line-height:1.25}.hero-media .card span{font-size:12.5px;color:var(--mut)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}section{padding:clamp(60px,9vw,96px) 0 4px}
+.eyebrow{text-align:center;font-size:12px;font-weight:900;letter-spacing:.3em;color:var(--terra);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--serif);font-size:clamp(31px,4.6vw,45px);line-height:1.1;text-align:center;margin-bottom:12px;font-weight:600}h2 em{color:var(--leaf);font-style:italic}
+.sub{text-align:center;color:var(--mut);max-width:640px;margin:0 auto 38px}
+.story{display:grid;grid-template-columns:1fr;gap:22px;align-items:center}@media(min-width:860px){.story{grid-template-columns:1fr 1fr}}
+.story img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+.story .txt h2{text-align:left}.story .txt .eyebrow{text-align:left}.story .txt p{color:var(--mut);margin-bottom:14px}
+.story .sign{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--leaf2)}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:760px){.menu-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1020px){.menu-grid{grid-template-columns:repeat(4,1fr)}}
+.dish{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.dish:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.dish-in{padding:22px;display:flex;flex-direction:column;flex:1}
+.dish h3{font-family:var(--serif);font-size:22px;margin-bottom:6px}.dish p{font-size:14px;color:var(--mut);flex:1}
+.ord{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:14.5px;margin-top:16px}.ord:hover{background:#178a44}
+.route{background:var(--leaf2);color:#fff;border-radius:26px;padding:clamp(32px,5vw,54px);box-shadow:var(--shadow)}
+.route h2{color:#fff;text-align:left}.route h2 em{color:var(--lime)}
+.route .eyebrow{text-align:left;color:var(--sun)}
+.route-grid{display:grid;grid-template-columns:1fr;gap:26px}@media(min-width:860px){.route-grid{grid-template-columns:1fr 1fr}}
+.route p{color:#cfe0c6;font-size:15.5px;margin-bottom:14px}
+.route ol{list-style:none;counter-reset:st;display:grid;gap:14px;margin-top:6px}
+.route li{counter-increment:st;display:flex;gap:14px;align-items:flex-start;font-size:15px;color:#e6f0dd}
+.route li:before{content:counter(st);flex:none;width:32px;height:32px;border-radius:50%;background:var(--sun);color:#22301f;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.route .addr{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:20px}
+.route .addr b{font-family:var(--serif);font-size:20px;display:block;margin-bottom:6px}
+.route a.wabtn{display:flex;margin-top:16px;min-height:52px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.mapframe{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}.mapframe iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.hours{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(36px,6vw,54px) 26px;text-align:center;box-shadow:0 8px 24px rgba(34,48,31,.06)}
+.hours .row{display:flex;justify-content:space-between;max-width:520px;margin:0 auto;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}.hours .row b{color:var(--leaf2)}.hours .row.closed-day span,.hours .row.closed-day b{color:#c0392b}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+footer{padding:36px 20px 116px;text-align:center;color:var(--mut);font-size:13px;max-width:1140px;margin:56px auto 0;border-top:1px solid var(--line)}
+footer a{color:var(--leaf);font-weight:700;text-decoration:none}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,253,248,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1140px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(18px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--leaf);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--leaf2);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.9;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#eef5e2;align-self:flex-start}.msg.user{background:var(--leaf);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--leaf);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">Alitas <span>Mecatos</span><small>SASAIMA · CUNDINAMARCA</small></div>
+<span class="newpill">✦ Nuevo · Abrió el 2 de nov. de 2026</span>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div></header>
+
+<div class="hero"><div class="hero-grid">
+<div class="hero-copy rv">
+<div class="badge">🌿 Terraza nueva en Sasaima</div>
+<h1>La parada fresca de la ruta: <em>alitas en la terraza</em></h1>
+<p>Alitas Mecatos abrió sus puertas el 2 de noviembre de 2026 en Sasaima, sobre la ruta turística que baja de Bogotá. Alitas, hamburguesas, salchipapas y sándwiches, al aire libre y sin afán.</p>
+<div class="actions">
+<a class="btn wa" href="#menu">Ver el menú y pedir</a>
+<a class="btn white" href="#llegar">Cómo llegar</a>
+</div>
+</div>
+<div class="hero-media"><img class="main" src="img/own1.jpg" alt="Alitas Mecatos, terraza en Sasaima, Cundinamarca">
+<div class="card"><img src="img/own2.jpg" alt="Alitas Mecatos"><div><b>Te recibe Jenny</b><span>Dueña de Alitas Mecatos · Cra. 3 #2-57, Sasaima</span></div></div>
+</div>
+</div></div>
+
+<div class="wrap">
+<section class="rv"><div class="story">
+<img src="img/terrace.jpg" alt="Terraza al aire libre, el ambiente de Alitas Mecatos en Sasaima">
+<div class="txt">
+<div class="eyebrow">Nuestra historia</div>
+<h2>Dos semanas de abiertos, <em>toda la ilusión</em></h2>
+<p>Somos un restaurante-terraza nuevo en Sasaima, Cundinamarca. Abrimos el 2 de noviembre de 2026 con una idea sencilla: que quien viaja por esta ruta tenga dónde parar, respirar verde y comer rico.</p>
+<p>Esta página nace porque hasta ahora la única forma de encontrarnos era de boca en boca. Aquí tienes el menú, el horario, el mapa y el botón para pedir — todo en un solo lugar.</p>
+<p class="sign">— Jenny, dueña de Alitas Mecatos</p>
+</div>
+</div></section>
+
+<section id="menu" class="rv">
+<div class="eyebrow">El menú</div>
+<h2>Para picar, <em>para quedarse</em></h2>
+<p class="sub">Esto es lo que preparamos en Alitas Mecatos. Toca Pedir en lo que te antoje y tu mensaje llega por WhatsApp con el plato ya escrito. Confirma precios y disponibilidad al pedir.</p>
+<div class="menu-grid">
+<article class="dish"><img src="img/wings.jpg" alt="Alitas de Alitas Mecatos"><div class="dish-in"><h3>Alitas</h3><p>Las de la casa: alitas para compartir en la terraza, el plato que nos da el nombre.</p><a class="ord" href="https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20quiero%20pedir%20alitas">Pedir alitas →</a></div></article>
+<article class="dish"><img src="img/burger.jpg" alt="Hamburguesas de Alitas Mecatos"><div class="dish-in"><h3>Hamburguesas</h3><p>Hamburguesas preparadas al momento, ideales para la parada en la ruta.</p><a class="ord" href="https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20quiero%20pedir%20una%20hamburguesa">Pedir hamburguesa →</a></div></article>
+<article class="dish"><img src="img/salchipapas.jpg" alt="Salchipapas de Alitas Mecatos"><div class="dish-in"><h3>Salchipapas</h3><p>Salchipapas para picar entre todos, el clásico mecato que nunca falla.</p><a class="ord" href="https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20quiero%20pedir%20salchipapas">Pedir salchipapas →</a></div></article>
+<article class="dish"><img src="img/sandwich.jpg" alt="Sándwiches de Alitas Mecatos"><div class="dish-in"><h3>Sándwiches</h3><p>Sándwiches frescos para llevar o para disfrutar en la terraza con calma.</p><a class="ord" href="https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20quiero%20pedir%20un%20s%C3%A1ndwich">Pedir un sándwich →</a></div></article>
+</div>
+</section>
+
+<section id="llegar" class="rv">
+<div class="route">
+<div class="eyebrow">Cómo llegar</div>
+<h2>De Bogotá a Sasaima, <em>y directo a la terraza</em></h2>
+<div class="route-grid">
+<div>
+<p>Sasaima está sobre la ruta turística que sale de Bogotá hacia el occidente de Cundinamarca. Somos la parada perfecta del paseo: bajas, parqueas y la terraza te espera.</p>
+<ol>
+<li>Sal de Bogotá por la ruta hacia Sasaima, Cundinamarca.</li>
+<li>Al llegar al casco urbano de Sasaima, busca la Carrera 3.</li>
+<li>Estamos en la Cra. 3 #2-57 — Alitas Mecatos, la terraza nueva del pueblo.</li>
+<li>¿Te pierdes? Toca el botón y te guiamos por WhatsApp.</li>
+</ol>
+<div class="addr"><b>📍 Cra. 3 #2-57, Sasaima, Cundinamarca</b><span>WhatsApp: +57 310 797 8573 · Instagram: @alitasmecatos</span>
+<a class="wabtn" href="https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20voy%20en%20camino%2C%20%C2%BFme%20ayudan%20a%20llegar%3F">Voy en camino — guíenme por WhatsApp</a></div>
+</div>
+<div class="mapframe"><iframe title="Mapa — Alitas Mecatos, Cra. 3 #2-57, Sasaima, Cundinamarca" src="https://www.google.com/maps?q=Cra.+3+%232-57%2C+Sasaima%2C+Cundinamarca%2C+Colombia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">Galería</div>
+<h2>Así se vive <em>la terraza</em></h2>
+<p class="sub">Nuestro espacio y nuestros platos, recién abiertos en Sasaima.</p>
+<div class="strip">
+<figure><img src="img/own1.jpg" alt="Alitas Mecatos en Sasaima"><figcaption>Alitas Mecatos</figcaption></figure>
+<figure><img src="img/wings.jpg" alt="Alitas para compartir"><figcaption>Alitas</figcaption></figure>
+<figure><img src="img/fries.jpg" alt="Para picar en la terraza"><figcaption>Para picar</figcaption></figure>
+<figure><img src="img/terrace.jpg" alt="Ambiente de terraza"><figcaption>La terraza</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="hours">
+<div class="eyebrow">Horario</div>
+<h2>Horario de atención</h2>
+<div class="row closed-day"><span>Lunes</span><b>Cerrado</b></div>
+<div class="row"><span>Martes</span><b>5:00 p. m. – 11:00 p. m.</b></div>
+<div class="row"><span>Miércoles</span><b>5:00 p. m. – 11:00 p. m.</b></div>
+<div class="row"><span>Jueves</span><b>5:00 p. m. – 11:00 p. m.</b></div>
+<div class="row"><span>Viernes</span><b>5:00 p. m. – 11:00 p. m.</b></div>
+<div class="row"><span>Sábado</span><b>5:00 p. m. – 11:00 p. m.</b></div>
+<div class="row"><span>Domingo</span><b>5:00 p. m. – 11:00 p. m.</b></div>
+<p style="margin-top:18px;color:var(--mut)">🌿 Tardes y noches en la terraza · Pedidos por WhatsApp: +57 310 797 8573</p>
+</div>
+</section>
+</div>
+
+<footer>
+Alitas Mecatos · Cra. 3 #2-57, Sasaima, Cundinamarca, Colombia · WhatsApp +57 310 797 8573 · <a href="https://www.instagram.com/alitasmecatos" target="_blank" rel="noopener">@alitasmecatos</a><br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Alitas Mecatos.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20quiero%20hacer%20un%20pedido">🌿 Pedir por WhatsApp — 310 797 8573</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Alitas Mecatos">
+<div class="chatw-head"><div><b>Asistente Alitas Mecatos</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>10)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Escribir por WhatsApp","href":"https://wa.me/573107978573"},"greeting":"¡Hola! Soy el asistente demo de Alitas Mecatos en Sasaima. Pregúntame por el menú, el horario, cómo llegar desde Bogotá o desde cuándo abrimos — o toca una sugerencia.","fallback":"Eso no lo tengo en esta demo — escríbenos por WhatsApp al +57 310 797 8573 y te ayudamos.","chips":["¿Qué venden?","¿Cuál es el horario?","¿Cómo llego desde Bogotá?","¿Dónde quedan?","Quiero pedir"],"items":[{"k":["salchipapa"],"a":"Salchipapas: el clásico para picar entre todos. Confirma precio y disponibilidad al pedir por WhatsApp.","link":{"t":"Pedir salchipapas","href":"https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20quiero%20pedir%20salchipapas"}},{"k":["sandwich","sándwich"],"a":"Tenemos sándwiches frescos, para llevar o para la terraza. Confirma opciones al pedir por WhatsApp.","link":{"t":"Pedir un sándwich","href":"https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20quiero%20pedir%20un%20s%C3%A1ndwich"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por el menú, el horario o cómo llegar a Sasaima."},{"k":["menu","venden","ofrecen","comida","platos"],"a":"Nuestro menú: alitas, hamburguesas, salchipapas y sándwiches. Pide por WhatsApp al +57 310 797 8573.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/573107978573"}},{"k":["alita","hamburguesa","burger"],"a":"Alitas y hamburguesas son de la casa. Confirma precios y disponibilidad al pedir por WhatsApp.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/573107978573"}},{"k":["horario","abren","abierto","cierran","hora","lunes"],"a":"Horario: martes a domingo de 5:00 p. m. a 11:00 p. m. Los lunes cerramos."},{"k":["donde","direccion","ubicacion","quedan","sasaima"],"a":"Estamos en la Cra. 3 #2-57, Sasaima, Cundinamarca. Somos un restaurante-terraza sobre la ruta turística desde Bogotá."},{"k":["llegar","ruta","bogota","viaje","carro"],"a":"Desde Bogotá toma la ruta hacia Sasaima; al llegar al casco urbano busca la Carrera 3, #2-57. En la sección Cómo llegar de esta página tienes el mapa, y por WhatsApp te guiamos.","link":{"t":"Guiarme por WhatsApp","href":"https://wa.me/573107978573?text=Hola%20Alitas%20Mecatos%2C%20voy%20en%20camino%2C%20%C2%BFme%20ayudan%20a%20llegar%3F"}},{"k":["nuevo","abrieron","cuando","jenny","duena","historia"],"a":"Abrimos el 2 de noviembre de 2026 — somos un negocio nuevo. Jenny es la dueña y quien te recibe en la terraza."},{"k":["terraza","aire libre","ambiente"],"a":"Somos un restaurante-terraza: mesas al aire libre, verde alrededor y ambiente tranquilo de ruta turística."},{"k":["pedir","ordenar","comprar","domicilio"],"a":"Para pedir, toca el botón de lo que te antoje en el menú de esta página y se abre WhatsApp con tu pedido ya escrito.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/573107978573"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp y pedidos: +57 310 797 8573. Instagram: @alitasmecatos.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/573107978573"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en la terraza de Alitas Mecatos."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+var SCHED={"tz":"America/Bogota","days":{"0":[[1020,1380,"5:00 p. m.","11:00 p. m."]],"2":[[1020,1380,"5:00 p. m.","11:00 p. m."]],"3":[[1020,1380,"5:00 p. m.","11:00 p. m."]],"4":[[1020,1380,"5:00 p. m.","11:00 p. m."]],"5":[[1020,1380,"5:00 p. m.","11:00 p. m."]],"6":[[1020,1380,"5:00 p. m.","11:00 p. m."]]}};
+var OTXT={"open":"Abierto ahora · hasta las {x}","closed":"Cerrado · abre a las {x}","closedTomorrow":"Cerrado · abre mañana a las {x}","closedDay":"Cerrado · abre el {d} a las {x}","days":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"]};
+(function(){var el=document.getElementById('opennow');if(!el)return;function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;})();
+})();
+</script>
+</body>
+</html>

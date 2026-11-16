@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santas Alitas &amp; Restaurante — Bogotá | San Pedro Plaza, Calle 187 #55-40</title>
+<meta name="description" content="Santas Alitas & Restaurante en Bogotá, Centro Comercial San Pedro Plaza, Calle 187 #55-40 Local A-43. Alitas 6–50 pz, hamburguesas, carnes y sopas de fin de semana. Pide por WhatsApp +57 314 286 7430.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#17110d;--coal2:#221812;--smoke:#2e211a;--paper:#faf3ea;--cream:#f3e4cf;--flame:#ff5a1f;--flame2:#e83e0c;--amber:#ffb020;--mut:#8d7a6a;--line:#e8d8c3;--wa:#1faa55;--disp:"Anton",Impact,sans-serif;--sans:"Inter",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--paper);color:var(--coal);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--flame);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.35s;color:#fff}
+header.scrolled{background:rgba(23,17,13,.96);backdrop-filter:blur(12px);box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.hdr{max-width:1180px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-family:var(--disp);font-size:24px;letter-spacing:.04em;line-height:1}.brand span{color:var(--flame)}.brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;font-weight:700;color:var(--amber);margin-top:4px}
+.hdr nav{display:none;gap:26px}@media(min-width:820px){.hdr nav{display:flex}}
+.hdr nav a{color:#f3e4cf;text-decoration:none;font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}.hdr nav a:hover{color:var(--amber)}
+.hdr .call{background:var(--wa);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 18px;border-radius:999px;white-space:nowrap}.hdr .call:hover{background:#178a44}
+.hero{position:relative;background:var(--coal);color:#fff;overflow:hidden}
+.hero-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0}@media(min-width:920px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+.hero-copy{padding:150px 20px 70px}@media(min-width:920px){.hero-copy{padding:170px 30px 90px 20px}}
+.kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid #4a3423;color:var(--amber);font-size:11.5px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+.hero h1{font-family:var(--disp);font-size:clamp(58px,10vw,118px);line-height:.92;letter-spacing:.01em;margin:26px 0 8px;text-transform:uppercase}
+.hero h1 .fire{color:var(--flame);display:block}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:2px #f3e4cf;display:block}
+.hero p.lead{color:#dcc7ae;max-width:480px;font-size:clamp(16px,2vw,18.5px);margin:20px 0 30px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 16px 32px rgba(31,170,85,.3)}.btn.ghost{border:1.5px solid #5a4230;color:#fff}.btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
+.hero-facts{display:flex;gap:0;flex-wrap:wrap;margin-top:44px;border-top:1px solid #3a2a1e}
+.hero-facts div{padding:16px 22px 4px 0;margin-right:22px}.hero-facts b{font-family:var(--disp);font-size:22px;color:var(--amber);display:block;letter-spacing:.03em}.hero-facts span{font-size:12px;color:#a68f76;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.hero-media{position:relative;min-height:340px}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--coal) 0%,transparent 30%),linear-gradient(0deg,rgba(23,17,13,.55),transparent 45%)}
+.hero-tag{position:absolute;z-index:2;left:20px;bottom:22px;background:var(--flame);color:#fff;font-family:var(--disp);letter-spacing:.05em;padding:12px 18px;font-size:17px;transform:rotate(-2deg);box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.marquee{background:var(--flame2);color:#fff;overflow:hidden;white-space:nowrap;padding:11px 0;font-family:var(--disp);letter-spacing:.14em;font-size:15px;text-transform:uppercase}
+.marquee span{display:inline-block;padding-right:48px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.32em;color:var(--flame2);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--disp);font-size:clamp(36px,5vw,54px);line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin-bottom:12px}
+.sub{color:var(--mut);max-width:640px;margin-bottom:40px;font-size:16px}
+.qr-band{background:var(--coal);color:#fff;border-radius:28px;padding:clamp(30px,5vw,52px);display:grid;grid-template-columns:1fr;gap:34px;align-items:center;box-shadow:0 30px 60px rgba(23,17,13,.3)}@media(min-width:860px){.qr-band{grid-template-columns:1.2fr .8fr}}
+.qr-band h2{color:#fff}.qr-band h2 em{font-style:normal;color:var(--flame)}
+.qr-band p{color:#cbb49a;max-width:480px}
+.qr-steps{display:grid;gap:12px;margin-top:24px}
+.qr-steps div{display:flex;gap:14px;align-items:flex-start}.qr-steps b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--flame);display:flex;align-items:center;justify-content:center;font-size:15px}.qr-steps span{font-size:15px;color:#e9d9c2;padding-top:5px}
+.qr-card{background:#fff;color:var(--coal);border-radius:22px;padding:26px;text-align:center;transform:rotate(1.5deg);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+.qr-card svg{width:168px;height:168px}
+.qr-card b{font-family:var(--disp);letter-spacing:.06em;font-size:19px;display:block;margin-top:12px;text-transform:uppercase}
+.qr-card small{color:var(--mut);font-size:13px}
+.qr-card a{display:flex;margin-top:16px;min-height:50px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:820px){.menu-grid{grid-template-columns:1fr 1fr}}
+.cat{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.cat:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(23,17,13,.13)}
+.cat img{width:100%;aspect-ratio:16/8;object-fit:cover;display:block}
+.cat-in{padding:26px;display:flex;flex-direction:column;flex:1}
+.cat .tag{font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--flame2);text-transform:uppercase}
+.cat h3{font-family:var(--disp);font-size:28px;letter-spacing:.02em;margin:6px 0 6px;text-transform:uppercase}
+.cat p{font-size:14.5px;color:var(--mut);flex:1}
+.cat .price{font-family:var(--disp);font-size:30px;color:var(--coal);margin:16px 0 4px}.cat .price small{font-family:var(--sans);font-size:12.5px;color:var(--mut);font-weight:600;letter-spacing:.05em}
+.ord{display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px;margin-top:12px}.ord:hover{background:#178a44}
+.note{text-align:center;color:var(--mut);font-size:13px;margin-top:20px}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block;transition:.3s}.strip img:hover{transform:scale(1.03)}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.info-grid{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:860px){.info-grid{grid-template-columns:1fr 1fr}}
+.panel{border-radius:22px;padding:30px}
+.panel.dark{background:var(--coal2);color:#fff}.panel.light{background:#fff;border:1px solid var(--line)}
+.panel h3{font-family:var(--disp);font-size:24px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:14px}
+.panel.dark p{color:#cbb49a;font-size:15px}.panel a.maplink{color:var(--amber);font-weight:800;text-decoration:none}
+.payrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.pay{border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:10px 18px;font-weight:800;font-size:14px}
+.mapframe{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px rgba(23,17,13,.12);margin-top:8px}.mapframe iframe{width:100%;height:380px;border:0;display:block}
+footer{padding:40px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1180px;margin:60px auto 0;border-top:1px solid var(--line)}
+footer a{color:var(--flame2);font-weight:700;text-decoration:none}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(250,243,234,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1180px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--flame2);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.3);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--coal);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#fdf0e4;align-self:flex-start}.msg.user{background:var(--flame2);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--flame2);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">SANTAS <span>ALITAS</span><small>&amp; RESTAURANTE · BOGOTÁ</small></div>
+<nav><a href="#menu">Menú</a><a href="#qr">Menú QR</a><a href="#visitanos">Visítanos</a></nav>
+<a class="call" href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20hacer%20un%20pedido">Pedir · 314 286 7430</a>
+</div></header>
+
+<div class="hero"><div class="hero-grid">
+<div class="hero-copy rv">
+<span class="kicker">🔥 Centro Comercial San Pedro Plaza · Local A-43</span>
+<h1>Alitas<span class="fire">con fuego</span><span class="outline">de verdad</span></h1>
+<p class="lead">Santas Alitas &amp; Restaurante en el norte de Bogotá: alitas desde 6 hasta 50 piezas, hamburguesas, carnes, pollo y sopas de fin de semana. Escanea el menú QR en tu mesa o pide por WhatsApp en un toque.</p>
+<div class="hero-cta">
+<a class="btn wa" href="#menu">Ver el menú y pedir</a>
+<a class="btn ghost" href="#visitanos">Cómo llegar</a>
+</div>
+<div class="hero-facts">
+<div><b>6–50 pz</b><span>Alitas a tu medida</span></div>
+<div><b>$18.900</b><span>Alitas desde</span></div>
+<div><b>Local A-43</b><span>San Pedro Plaza</span></div>
+</div>
+</div>
+<div class="hero-media"><img src="img/hero.jpg" alt="Alitas de Santas Alitas & Restaurante, Bogotá"><div class="hero-tag">ALITAS · BURGERS · CARNES</div></div>
+</div></div>
+
+<div class="marquee" aria-hidden="true"><span>Alitas 6–50 piezas ✦ Hamburguesas ✦ Carnes y pollo ✦ Sopas de fin de semana ✦ Entradas ✦ Pide por WhatsApp ✦&nbsp;</span><span>Alitas 6–50 piezas ✦ Hamburguesas ✦ Carnes y pollo ✦ Sopas de fin de semana ✦ Entradas ✦ Pide por WhatsApp ✦&nbsp;</span></div>
+
+<div class="wrap">
+<section id="qr" class="rv">
+<div class="qr-band">
+<div>
+<div class="eyebrow" style="color:var(--amber)">Menú QR · Concepto</div>
+<h2>Tu menú, <em>en la mesa</em> y en tu celular</h2>
+<p>Así funcionaría el menú QR de Santas Alitas: el cliente escanea el código en la mesa, ve el menú completo con precios y pide directo por WhatsApp, sin esperar la carta impresa.</p>
+<div class="qr-steps">
+<div><b>1</b><span>Escaneas el código QR que está en tu mesa.</span></div>
+<div><b>2</b><span>Eliges categoría: alitas, hamburguesas, carnes, sopas o entradas.</span></div>
+<div><b>3</b><span>Tocas pedir y tu pedido llega por WhatsApp con el plato ya escrito.</span></div>
+</div>
+</div>
+<div class="qr-card">
+<svg viewBox="0 0 100 100" role="img" aria-label="Código QR de concepto del menú de Santas Alitas"><rect width="100" height="100" fill="#fff"/><g fill="#17110d"><rect x="6" y="6" width="24" height="24"/><rect x="70" y="6" width="24" height="24"/><rect x="6" y="70" width="24" height="24"/><rect x="12" y="12" width="12" height="12" fill="#fff"/><rect x="76" y="12" width="12" height="12" fill="#fff"/><rect x="12" y="76" width="12" height="12" fill="#fff"/><rect x="17" y="17" width="2" height="2"/><rect x="40" y="8" width="6" height="6"/><rect x="52" y="14" width="6" height="6"/><rect x="40" y="24" width="12" height="6"/><rect x="8" y="40" width="6" height="12"/><rect x="22" y="44" width="10" height="6"/><rect x="42" y="40" width="16" height="6"/><rect x="66" y="42" width="6" height="16"/><rect x="80" y="40" width="12" height="6"/><rect x="44" y="56" width="6" height="12"/><rect x="58" y="60" width="12" height="6"/><rect x="78" y="58" width="6" height="10"/><rect x="40" y="78" width="10" height="6"/><rect x="58" y="76" width="6" height="16"/><rect x="72" y="80" width="18" height="6"/><rect x="86" y="66" width="6" height="8"/></g><rect x="41" y="41" width="18" height="18" fill="#ff5a1f"/><text x="50" y="54" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">SA</text></svg>
+<b>Menú Santas Alitas</b>
+<small>Concepto de menú QR para mesas y domicilios</small>
+<a href="#menu">Abrir el menú digital →</a>
+</div>
+</div>
+</section>
+
+<section id="menu" class="rv">
+<div class="eyebrow">El menú · Precios publicados por la casa</div>
+<h2>Pide por categoría</h2>
+<p class="sub">Precios tal como los publicó Santas Alitas. Toca el botón de cada categoría y tu pedido se abre en WhatsApp con el plato ya escrito.</p>
+<div class="menu-grid">
+<article class="cat"><img src="img/wings2.jpg" alt="Alitas de Santas Alitas"><div class="cat-in"><div class="tag">La especialidad</div><h3>Alitas</h3><p>Alitas en presentaciones de 6 a 50 piezas, para ti solo o para todo el parche.</p><div class="price">$18.900 – $109.900 <small>COP · según cantidad</small></div><a class="ord" href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20alitas">Pedir alitas →</a></div></article>
+<article class="cat"><img src="img/burger.jpg" alt="Hamburguesas de Santas Alitas"><div class="cat-in"><div class="tag">Burgers</div><h3>Hamburguesas</h3><p>Hamburguesas de la casa, en el rango de precios publicado por Santas Alitas.</p><div class="price">$18.000 – $25.000 <small>COP</small></div><a class="ord" href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20una%20hamburguesa">Pedir hamburguesa →</a></div></article>
+<article class="cat"><img src="img/carne.jpg" alt="Carnes y pollo de Santas Alitas"><div class="cat-in"><div class="tag">A la parrilla</div><h3>Carnes y pollo</h3><p>Carnes y pollo del restaurante, en el rango de precios publicado por la casa.</p><div class="price">$28.000 – $35.000 <small>COP</small></div><a class="ord" href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20carnes%20o%20pollo">Pedir carnes / pollo →</a></div></article>
+<article class="cat"><img src="img/sopa.jpg" alt="Sopas de fin de semana de Santas Alitas"><div class="cat-in"><div class="tag">Solo fin de semana</div><h3>Sopas</h3><p>Sopas disponibles únicamente los fines de semana, al precio publicado por la casa.</p><div class="price">$22.000 <small>COP · fin de semana</small></div><a class="ord" href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20la%20sopa%20del%20fin%20de%20semana">Pedir la sopa →</a></div></article>
+<article class="cat"><img src="img/entrada.jpg" alt="Entradas de Santas Alitas"><div class="cat-in"><div class="tag">Para empezar</div><h3>Entradas</h3><p>Entradas para abrir la mesa mientras llegan las alitas.</p><div class="price">$10.000 <small>COP</small></div><a class="ord" href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20una%20entrada">Pedir una entrada →</a></div></article>
+<article class="cat"><img src="img/pollo.jpg" alt="Platos de Santas Alitas & Restaurante"><div class="cat-in"><div class="tag">Todo el menú</div><h3>¿No te decides?</h3><p>Escríbenos por WhatsApp y te contamos el menú completo del día en San Pedro Plaza.</p><div class="price">Menú completo <small>por WhatsApp</small></div><a class="ord" href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20ver%20el%20men%C3%BA%20completo">Pedir el menú completo →</a></div></article>
+</div>
+<p class="note">Precios tomados del video del menú publicado por Santas Alitas el 15 de noviembre de 2026. Confirma disponibilidad al pedir por WhatsApp.</p>
+</section>
+
+<section class="rv">
+<div class="eyebrow">Galería</div>
+<h2>Puro antojo</h2>
+<p class="sub">Alitas, burgers y platos fuertes: el estilo de la casa en San Pedro Plaza.</p>
+<div class="strip">
+<figure><img src="img/wings3.jpg" alt="Alitas bañadas en salsa"><figcaption>Alitas de la casa</figcaption></figure>
+<figure><img src="img/burger.jpg" alt="Hamburguesa de Santas Alitas"><figcaption>Hamburguesas $18.000–$25.000</figcaption></figure>
+<figure><img src="img/carne.jpg" alt="Carnes a la parrilla"><figcaption>Carnes y pollo</figcaption></figure>
+<figure><img src="img/sopa.jpg" alt="Sopa de fin de semana"><figcaption>Sopas · fin de semana</figcaption></figure>
+</div>
+</section>
+
+<section id="visitanos" class="rv">
+<div class="eyebrow">Visítanos · Pagos</div>
+<h2>Estamos en San Pedro Plaza</h2>
+<p class="sub">Encuéntranos dentro del Centro Comercial San Pedro Plaza, en el norte de Bogotá.</p>
+<div class="info-grid">
+<div class="panel dark"><h3>Dirección</h3><p>Centro Comercial San Pedro Plaza<br>Calle 187 #55-40, Local A-43<br>Bogotá, Colombia</p><p style="margin-top:14px">WhatsApp y pedidos: +57 314 286 7430<br>Instagram: @santasalitasoficial18</p><p style="margin-top:14px"><a class="maplink" href="https://www.google.com/maps?q=Centro+Comercial+San+Pedro+Plaza%2C+Calle+187+%2355-40%2C+Bogot%C3%A1%2C+Colombia" target="_blank" rel="noopener">Abrir en Google Maps →</a></p></div>
+<div class="panel light"><h3>Medios de pago</h3><p style="color:var(--mut);font-size:15px;margin-bottom:14px">En Santas Alitas aceptamos:</p><div class="payrow"><span class="pay">💳 Visa</span><span class="pay">💳 Mastercard</span><span class="pay">📱 Nequi</span><span class="pay">📱 Daviplata</span></div><p style="color:var(--mut);font-size:14px;margin-top:16px">Pide por WhatsApp y confirma tu medio de pago al hacer el pedido.</p></div>
+</div>
+<div class="mapframe"><iframe title="Mapa — Santas Alitas, Centro Comercial San Pedro Plaza, Calle 187 #55-40, Bogotá" src="https://www.google.com/maps?q=Centro+Comercial+San+Pedro+Plaza%2C+Calle+187+%2355-40%2C+Bogot%C3%A1%2C+Colombia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</section>
+</div>
+
+<footer>
+Santas Alitas &amp; Restaurante · Centro Comercial San Pedro Plaza, Calle 187 #55-40, Local A-43, Bogotá · WhatsApp +57 314 286 7430 · <a href="https://www.instagram.com/santasalitasoficial18" target="_blank" rel="noopener">@santasalitasoficial18</a><br><br>
+Concept preview built by SiteSprint Studio — this is not the live website of Santas Alitas &amp; Restaurante.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20hacer%20un%20pedido">🔥 Pedir por WhatsApp — 314 286 7430</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Santas Alitas">
+<div class="chatw-head"><div><b>Asistente Santas Alitas</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>10)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Escribir por WhatsApp","href":"https://wa.me/573142867430"},"greeting":"¡Hola! Soy el asistente demo de Santas Alitas & Restaurante. Pregúntame por el menú, los precios, dónde estamos o cómo pagar — o toca una sugerencia.","fallback":"Eso no lo tengo en esta demo — escríbenos por WhatsApp al +57 314 286 7430 y te ayudamos.","chips":["¿Cuánto cuestan las alitas?","¿Qué hamburguesas hay?","¿Dónde están ubicados?","¿Qué medios de pago aceptan?","Quiero pedir"],"items":[{"k":["sopa"],"a":"Sopas — $22.000 COP, solo los fines de semana.","link":{"t":"Pedir la sopa","href":"https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20la%20sopa%20del%20fin%20de%20semana"}},{"k":["entrada"],"a":"Entradas — $10.000 COP.","link":{"t":"Pedir una entrada","href":"https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20una%20entrada"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por las alitas, hamburguesas, carnes, sopas, ubicación o pagos."},{"k":["alita","precio","cuesta","cuanto"],"a":"Alitas de 6 a 50 piezas: $18.900 a $109.900 COP según la cantidad. Hamburguesas $18.000–$25.000, carnes y pollo $28.000–$35.000, entradas $10.000 y sopas $22.000 (solo fin de semana).","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/573142867430"}},{"k":["hamburguesa","burger"],"a":"Hamburguesas: $18.000 a $25.000 COP.","link":{"t":"Pedir hamburguesa","href":"https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20una%20hamburguesa"}},{"k":["carne","pollo","parrilla"],"a":"Carnes y pollo: $28.000 a $35.000 COP.","link":{"t":"Pedir carnes / pollo","href":"https://wa.me/573142867430?text=Hola%20Santas%20Alitas%2C%20quiero%20pedir%20carnes%20o%20pollo"}},{"k":["donde","ubicacion","direccion","llegar","san pedro","local"],"a":"Estamos dentro del Centro Comercial San Pedro Plaza, Calle 187 #55-40, Local A-43, Bogotá."},{"k":["pago","nequi","daviplata","tarjeta","visa","mastercard"],"a":"Aceptamos Visa, Mastercard, Nequi y Daviplata."},{"k":["qr","menu digital","escanear"],"a":"El menú QR es el concepto de esta página: escaneas el código en la mesa, ves el menú con precios y pides por WhatsApp. Mira la sección Menú QR de esta página."},{"k":["instagram","redes"],"a":"Nuestro Instagram es @santasalitasoficial18."},{"k":["pedir","ordenar","comprar","domicilio"],"a":"Para pedir, toca el botón de la categoría que quieras en el menú de esta página y se abre WhatsApp con tu pedido ya escrito.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/573142867430"}},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp y pedidos: +57 314 286 7430.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/573142867430"}},{"k":["gracias"],"a":"¡Con gusto! Te esperamos en Santas Alitas, San Pedro Plaza."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+</body>
+</html>
