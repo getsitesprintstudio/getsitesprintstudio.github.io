@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esfiha da Hora Itajaí — São Judas, Itajaí | Novembro Black: esfihas a R$ 2,99</title>
+<meta name="description" content="Esfiha da Hora Itajaí, no São Judas em Itajaí, SC. A melhor esfiha aberta da região. Novembro Black: esfihas variadas a R$ 2,99, todos os dias. Peça pelo WhatsApp (47) 98417-7691.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#14100c;--black2:#1d1712;--coal:#241c15;
+  --cream:#faf3e7;--cream2:#f3e7d3;--paper:#fffaf1;
+  --ember:#f06414;--ember2:#d94e06;--ember-soft:#ff8a3c;
+  --red:#e0231c;--gold:#f5b942;
+  --ink:#221a13;--mut:#7d6f5e;--wa:#1faa55;--wa2:#178a44;
+  --line:#e7d8bf;--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif;
+  --shadow:0 24px 54px -18px rgba(20,16,12,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ember);color:#fff}
+img{max-width:100%}
+a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:6px}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}
+header.scrolled{background:rgba(20,16,12,.96);backdrop-filter:blur(12px);box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}
+.hdr{max-width:1140px;margin:0 auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:900;font-style:italic;font-size:clamp(23px,3vw,29px);color:#fff;line-height:1}
+.brand .da{color:var(--ember-soft)}
+.brand .hora-o{color:var(--gold)}
+.brand small{display:block;font-family:var(--sans);font-style:normal;font-size:10px;letter-spacing:.3em;font-weight:800;color:#cdbfa8;margin-top:4px}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:7px 13px;border-radius:999px}
+.odot{width:9px;height:9px;border-radius:50%;background:#999;flex:none}
+.opennow.open .odot{background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.22)}
+.opennow.closed .odot{background:#ff6b5e;box-shadow:0 0 0 4px rgba(255,107,94,.2)}
+
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--black)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;z-index:-2;opacity:.62}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(700px 420px at 88% -8%,rgba(240,100,20,.4),rgba(240,100,20,0) 60%),
+  linear-gradient(100deg,rgba(20,16,12,.96) 26%,rgba(20,16,12,.72) 62%,rgba(20,16,12,.38))}
+.hero-in{max-width:1140px;margin:0 auto;padding:clamp(148px,18vw,205px) 20px clamp(80px,10vw,108px)}
+.kicker{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(250,243,231,.5);color:var(--cream);font-size:11.5px;font-weight:800;letter-spacing:.2em;padding:9px 17px;border-radius:999px;text-transform:uppercase;background:rgba(20,16,12,.55)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(46px,7.6vw,84px);line-height:.99;margin:26px 0 6px;max-width:720px;color:#fff}
+.hero h1 em{color:var(--gold);font-style:italic;font-weight:600}
+.hero .claim{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,25px);color:#ffe3b3;margin-top:10px}
+.hero p.lead{color:#eadfc9;max-width:560px;margin:16px 0 30px;font-size:clamp(15.5px,2vw,18px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s;border:none;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px -8px rgba(31,170,85,.45)}
+.btn.wa:hover{background:var(--wa2)}
+.btn.ember{background:var(--ember);color:#fff;box-shadow:0 14px 30px -8px rgba(240,100,20,.5)}
+.btn.ember:hover{background:var(--ember2)}
+.btn.line{background:transparent;color:#fff;border:1.5px solid rgba(250,243,231,.55)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.status-hero{max-width:640px;margin:34px 0 0;background:var(--paper);border-radius:16px;padding:22px 26px;box-shadow:var(--shadow);border-left:6px solid var(--ember)}
+.status-hero .big{font-family:var(--serif);font-weight:700;font-size:clamp(23px,3.4vw,32px);color:var(--black)}
+.status-hero .small{color:var(--mut);font-size:14px;margin-top:4px}
+.status-hero .note{margin-top:10px;font-size:13px;color:var(--ember2);font-weight:700}
+
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:clamp(62px,9vw,98px) 0 4px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.32em;color:var(--ember2);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(33px,5vw,50px);line-height:1.06;margin-bottom:12px;color:var(--black)}
+h2 em{color:var(--ember);font-style:italic}
+.sub{color:var(--mut);max-width:640px;margin:0 0 38px;font-size:16px}
+
+/* ===== Novembro BLACK centerpiece ===== */
+.black-band{position:relative;background:var(--black);color:var(--cream);border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+.black-band:before{content:"";position:absolute;inset:0;background:radial-gradient(640px 380px at 92% -10%,rgba(240,100,20,.45),rgba(240,100,20,0) 62%),radial-gradient(500px 300px at -6% 110%,rgba(224,35,28,.28),rgba(224,35,28,0) 60%);pointer-events:none}
+.black-in{position:relative;display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:900px){.black-in{grid-template-columns:1.15fr .85fr}}
+.black-copy{padding:clamp(30px,5vw,52px)}
+.black-tag{display:inline-block;background:var(--red);color:#fff;font-size:11.5px;font-weight:900;letter-spacing:.22em;padding:8px 16px;border-radius:999px;text-transform:uppercase}
+.black-copy h3{font-family:var(--serif);font-weight:900;font-size:clamp(38px,5.6vw,62px);line-height:.98;color:#fff;margin:20px 0 4px}
+.black-copy h3 .blk{display:block;font-style:italic;background:linear-gradient(92deg,var(--ember-soft),var(--ember) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.01em}
+.black-copy .var{font-size:clamp(16px,2.2vw,20px);color:#eadfc9;margin-top:14px}
+.price-row{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-top:22px}
+.price-big{font-family:var(--serif);font-weight:900;font-size:clamp(72px,11vw,118px);line-height:.9;color:#fff}
+.price-big sup{font-size:.38em;color:var(--gold);font-weight:700;vertical-align:.9em;margin-right:2px}
+.price-side{padding-bottom:12px}
+.price-side b{display:block;color:var(--gold);letter-spacing:.24em;font-size:12.5px;text-transform:uppercase}
+.price-side span{color:#cdbfa8;font-size:14px}
+.black-photo{position:relative;min-height:340px}
+.black-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.black-photo figcaption{position:absolute;left:14px;bottom:14px;background:rgba(20,16,12,.82);color:var(--cream);font-size:12px;font-weight:700;padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px)}
+
+.builder{position:relative;margin-top:22px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,4vw,38px);box-shadow:var(--shadow)}
+.builder h4{font-family:var(--serif);font-size:clamp(23px,3vw,29px);color:var(--black)}
+.builder .bsub{color:var(--mut);font-size:14.5px;margin:6px 0 8px;max-width:620px}
+.brow{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding:17px 4px}
+.brow .binfo b{display:block;color:var(--ink);font-size:16.5px;font-family:var(--serif)}
+.brow .binfo span{color:var(--mut);font-size:13.5px}
+.brow .bprice{color:var(--ember2);font-weight:900;white-space:nowrap;font-size:16.5px}
+.stepper{display:inline-flex;align-items:center;gap:4px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:4px}
+.stepper button{width:42px;height:42px;border-radius:50%;border:none;background:var(--black);color:#fff;font-size:21px;font-weight:800;cursor:pointer;line-height:1;transition:.2s}
+.stepper button:hover{background:var(--ember)}
+.stepper button.minus{background:#d8c9ab;color:var(--ink)}
+.stepper button.minus:hover{background:#c9b78f}
+.stepper .qty{min-width:36px;text-align:center;font-weight:800;font-size:16.5px}
+.btotal{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px;background:var(--black);border-radius:16px;padding:20px 22px;color:#fff}
+.btotal .t-lab{color:#cdbfa8;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;display:block}
+.btotal b{font-family:var(--serif);font-size:clamp(24px,3.4vw,34px);color:#fff}
+.btotal .t-units{color:var(--gold);font-size:13.5px;font-weight:700;display:block}
+#builderWa{opacity:.45;pointer-events:none}
+#builderWa.on{opacity:1;pointer-events:auto}
+.builder-note{font-size:12.5px;color:var(--mut);margin-top:14px}
+
+/* ===== Sabores ===== */
+.flavors{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:700px){.flavors{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1020px){.flavors{grid-template-columns:repeat(4,1fr)}}
+.fcard{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 14px 32px -16px rgba(20,16,12,.22);transition:transform .3s ease,box-shadow .3s ease}
+.fcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.fcard img{width:100%;height:190px;object-fit:cover;display:block}
+.fcard .fin{padding:20px 20px 22px}
+.fcard .tag{font-size:10.5px;font-weight:800;letter-spacing:.18em;color:var(--ember2);text-transform:uppercase}
+.fcard h3{font-family:var(--serif);font-size:22px;color:var(--black);margin:4px 0 5px}
+.fcard p{font-size:14px;color:var(--mut);line-height:1.6}
+.fcard .promo-chip{display:inline-block;margin-top:12px;background:#fdeeda;border:1px solid #f5cf9f;color:var(--ember2);font-weight:800;font-size:13px;padding:6px 13px;border-radius:999px}
+.fcard .ask{display:inline-flex;margin-top:12px;color:var(--wa2);font-weight:800;font-size:14px;text-decoration:none}
+.fcard.noimg .fin{padding-top:26px}
+.sweet-mark{font-family:var(--serif);font-style:italic;font-weight:900;font-size:44px;color:var(--red);line-height:1;margin-bottom:8px}
+
+/* ===== Horário ===== */
+.cal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:820px){.cal{grid-template-columns:repeat(7,1fr)}}
+.day{border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:16px 10px;text-align:center}
+.day b{display:block;font-size:13.5px;color:var(--black)}
+.day span{font-size:12px;color:var(--mut);display:block;margin-top:4px;line-height:1.5}
+.day.today{border-color:var(--ember);box-shadow:0 0 0 3px rgba(240,100,20,.16)}
+.day.today b{color:var(--ember2)}
+.schedule-note{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--ember);border-radius:12px;padding:16px 20px;color:var(--mut);font-size:14.5px}
+.schedule-note b{color:var(--black)}
+
+/* ===== Galeria / quote / mapa ===== */
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}
+.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block;box-shadow:0 14px 30px -14px rgba(20,16,12,.3)}
+.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.quote{background:linear-gradient(130deg,var(--black2),var(--black));border-radius:24px;padding:clamp(34px,5vw,56px);text-align:center;margin-top:clamp(56px,8vw,84px);position:relative;overflow:hidden}
+.quote:before{content:"";position:absolute;inset:0;background:radial-gradient(520px 260px at 50% -20%,rgba(240,100,20,.35),rgba(240,100,20,0) 65%)}
+.quote p{position:relative;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(22px,3.4vw,31px);color:#ffe3b3;max-width:760px;margin:0 auto;line-height:1.45}
+.quote span{position:relative;display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:12.5px;letter-spacing:.22em;font-weight:800;color:#cdbfa8;text-transform:uppercase}
+.mapframe{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:8px}
+.mapframe iframe{width:100%;height:360px;border:0;display:block}
+.addr{color:var(--mut);margin-bottom:18px}
+.addr b{color:var(--ink)}
+.igband{border:1px solid var(--line);border-radius:18px;padding:22px 26px;background:var(--paper);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:26px}
+.igband .igt{font-size:16px;font-weight:700}
+.igband .igh{color:var(--ember2);text-decoration:none;font-weight:800}
+.igbtn{display:inline-flex;align-items:center;min-height:46px;background:var(--black);color:#fff;font-weight:800;text-decoration:none;padding:11px 24px;border-radius:999px;font-size:14.5px;transition:.22s}
+.igbtn:hover{background:var(--ember);transform:translateY(-2px)}
+
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1140px;margin:56px auto 0;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(250,243,231,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1140px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;font-size:15.5px}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}
+.chatw-btn{background:var(--ember);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.3);min-height:48px}
+.chatw-btn:hover{background:var(--ember2)}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.35);display:none;flex-direction:column;overflow:hidden;z-index:91;color:var(--ink)}
+.chatw-panel.open{display:flex}
+.chatw-head{background:var(--black);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}
+.chatw-head small{opacity:.85;font-size:11.5px;display:block;margin-top:2px}
+.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}
+.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}
+.msg.bot{background:var(--cream2);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.user{background:var(--ember);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}
+.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chip-btn:hover{border-color:var(--ember);color:var(--ember2)}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #eee}
+.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}
+.chatw-form button{background:var(--ember);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(max-width:560px){.hero-in{padding-top:132px}.black-photo{min-height:280px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">esfiha <span class="da">da</span> h<span class="hora-o">o</span>ra<small>ITAJAÍ · SÃO JUDAS</small></div>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/hero.jpg" alt="Esfihas abertas da Esfiha da Hora Itajaí — queijo, carne e milho">
+<div class="hero-in">
+<span class="kicker">Esfiha aberta · São Judas, Itajaí</span>
+<h1>Esfiha aberta, <em>saindo do forno</em> toda noite</h1>
+<p class="claim">“A melhor Esfiha aberta da região!”</p>
+<p class="lead">No São Judas, em Itajaí, a noite tem hora certa: a da esfiha. E em novembro, tem Novembro Black — esfihas variadas a R$ 2,99, todos os dias. Monte seu pedido aqui e envie pelo WhatsApp.</p>
+<div class="actions">
+<a class="btn ember" href="#black">Ver o Novembro Black</a>
+<a class="btn line" href="#horario">Ver horários</a>
+</div>
+<div class="status-hero" id="statusHero" hidden>
+<div class="big" id="statusBig">…</div>
+<div class="small" id="statusSmall">…</div>
+<div class="note">Domingo abrimos às 18h20 · sábado às 18h15 · segunda a sexta às 18h30.</div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<section id="black" class="rv">
+<div class="eyebrow">01 · Promoção do mês</div>
+<h2>Novembro Black <em>na Esfiha da Hora</em></h2>
+<p class="sub">A promoção publicada pela casa no dia 14 de novembro: esfihas variadas a R$ 2,99 — todos os dias. Sem letra miúda nesta página: o preço é esse, e o pedido monta em segundos.</p>
+
+<div class="black-band">
+<div class="black-in">
+<div class="black-copy">
+<span class="black-tag">Novembro Black</span>
+<h3>Novembro <span class="blk">BLACK</span></h3>
+<p class="var">Esfihas variadas a</p>
+<div class="price-row">
+<div class="price-big"><sup>R$</sup>2,99</div>
+<div class="price-side"><b>Todos os dias</b><span>durante o Novembro Black</span></div>
+</div>
+<p class="var" style="font-size:14.5px;color:#cdbfa8">Preço da promoção publicada pela Esfiha da Hora Itajaí. Confirme a disponibilidade dos sabores ao pedir.</p>
+</div>
+<figure class="black-photo">
+<img src="img/promo.jpg" alt="Arte oficial do Novembro Black da Esfiha da Hora Itajaí: esfihas variadas a R$ 2,99, todos os dias">
+<figcaption>Arte oficial da promoção · @esfihadahoraitajai</figcaption>
+</figure>
+</div>
+</div>
+
+<div class="builder" id="montar">
+<h4>Monte seu pedido do Novembro Black</h4>
+<p class="bsub">Escolha a quantidade de cada sabor — todos a R$ 2,99 na promoção. O total calcula na hora e o pedido chega pronto no WhatsApp da casa.</p>
+<div class="brow"><div class="binfo"><b>Esfiha de queijo</b><span>Queijo derretido, borda dourada — aparece na foto da promoção</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">R$ 2,99</span><span class="stepper"><button type="button" class="minus" data-key="queijo" aria-label="Tirar uma esfiha de queijo">−</button><span class="qty" id="qty-queijo">0</span><button type="button" data-key="queijo" aria-label="Adicionar uma esfiha de queijo">+</button></span></div></div>
+<div class="brow"><div class="binfo"><b>Esfiha de carne moída</b><span>Carne moída temperada — aparece na foto da promoção</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">R$ 2,99</span><span class="stepper"><button type="button" class="minus" data-key="carne" aria-label="Tirar uma esfiha de carne moída">−</button><span class="qty" id="qty-carne">0</span><button type="button" data-key="carne" aria-label="Adicionar uma esfiha de carne moída">+</button></span></div></div>
+<div class="brow"><div class="binfo"><b>Esfiha de milho</b><span>Milho sobre o queijo — aparece na foto da promoção</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">R$ 2,99</span><span class="stepper"><button type="button" class="minus" data-key="milho" aria-label="Tirar uma esfiha de milho">−</button><span class="qty" id="qty-milho">0</span><button type="button" data-key="milho" aria-label="Adicionar uma esfiha de milho">+</button></span></div></div>
+<div class="brow"><div class="binfo"><b>Outros sabores variados</b><span>Esfihas variadas da casa, no mesmo preço da promoção</span></div><div style="display:flex;align-items:center;gap:14px"><span class="bprice">R$ 2,99</span><span class="stepper"><button type="button" class="minus" data-key="variadas" aria-label="Tirar uma esfiha variada">−</button><span class="qty" id="qty-variadas">0</span><button type="button" data-key="variadas" aria-label="Adicionar uma esfiha variada">+</button></span></div></div>
+<div class="btotal"><div><span class="t-lab">Total do pedido</span><b id="bTotal">R$ 0,00</b><span class="t-units" id="bUnits"></span></div><a class="btn wa" id="builderWa" href="https://wa.me/5547984177691" target="_blank" rel="noopener">Enviar pedido pelo WhatsApp →</a></div>
+<p class="builder-note">Esfihas doces e outros sabores do cardápio: consulte sabores e valores direto no WhatsApp — (47) 98417-7691.</p>
+</div>
+</section>
+
+<section id="sabores" class="rv">
+<div class="eyebrow">02 · Sabores</div>
+<h2>Salgadas <em>e doces</em></h2>
+<p class="sub">As fotos abaixo são detalhes reais da foto da promoção da casa. Os sabores salgados entram no Novembro Black a R$ 2,99; as doces, a casa confirma sabores e valores no WhatsApp.</p>
+<div class="flavors">
+<div class="fcard"><img src="img/queijo.jpg" alt="Detalhe da esfiha de queijo da Esfiha da Hora Itajaí"><div class="fin"><div class="tag">Salgada · Clássica</div><h3>Queijo</h3><p>Queijo derretido até a borda, do jeitinho que aparece na foto da promoção.</p><span class="promo-chip">Novembro Black · R$ 2,99</span></div></div>
+<div class="fcard"><img src="img/carne.jpg" alt="Detalhe da esfiha de carne da Esfiha da Hora Itajaí"><div class="fin"><div class="tag">Salgada · Da casa</div><h3>Carne moída</h3><p>Carne moída temperada sobre a massa aberta — outro sabor da foto da promoção.</p><span class="promo-chip">Novembro Black · R$ 2,99</span></div></div>
+<div class="fcard"><img src="img/milho.jpg" alt="Detalhe da esfiha de milho da Esfiha da Hora Itajaí"><div class="fin"><div class="tag">Salgada · Queridinha</div><h3>Milho</h3><p>Milho generoso sobre o queijo, como mostra o detalhe da foto oficial.</p><span class="promo-chip">Novembro Black · R$ 2,99</span></div></div>
+<div class="fcard noimg"><div class="fin"><div class="sweet-mark">Doce</div><div class="tag">Para fechar a noite</div><h3>Esfihas doces</h3><p>A casa também faz esfihas doces — elas aparecem nas publicações do perfil. Sabores e valores do dia, direto no WhatsApp.</p><a class="ask" href="https://wa.me/5547984177691?text=Ol%C3%A1%2C%20Esfiha%20da%20Hora!%20Quais%20s%C3%A3o%20os%20sabores%20de%20esfiha%20doce%20de%20hoje%3F">Perguntar os sabores doces →</a></div></div>
+</div>
+</section>
+
+<section id="horario" class="rv">
+<div class="eyebrow">03 · Horários</div>
+<h2>A noite <em>começa cedo</em></h2>
+<p class="sub">Funcionamos todos os dias, sempre no turno da noite. O selo no topo da página é calculado com esta mesma tabela, no horário de São Paulo.</p>
+<div class="cal" id="cal"></div>
+<div class="schedule-note"><b>Para não errar:</b> domingo 18h20–23h00 · segunda a sexta 18h30–23h45 · sábado 18h15–23h45.</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">04 · Direto da casa</div>
+<h2>De perto, <em>sem filtro</em></h2>
+<p class="sub">Detalhes ampliados da foto oficial do Novembro Black, publicada pela própria Esfiha da Hora Itajaí.</p>
+<div class="strip">
+<figure><img src="img/queijo.jpg" alt="Esfiha de queijo em detalhe"><figcaption>Queijo até a borda</figcaption></figure>
+<figure><img src="img/carne.jpg" alt="Esfiha de carne em detalhe"><figcaption>Carne temperada</figcaption></figure>
+<figure><img src="img/milho.jpg" alt="Esfiha de milho em detalhe"><figcaption>Milho sobre o queijo</figcaption></figure>
+<figure><img src="img/forno.jpg" alt="Borda dourada de esfiha em detalhe"><figcaption>Borda dourada</figcaption></figure>
+</div>
+</section>
+
+<div class="quote rv">
+<p>“A melhor Esfiha aberta da região!”</p>
+<span>Como a própria casa se apresenta</span>
+</div>
+
+<section class="rv">
+<div class="eyebrow">05 · Onde estamos</div>
+<h2>No São Judas, <em>em Itajaí</em></h2>
+<p class="addr">Estamos na <b>R. Francisco de Paula Seara, 544 – Sala 3, São Judas, Itajaí, SC</b> · Pedidos pelo WhatsApp (47) 98417-7691.</p>
+<div class="mapframe"><iframe title="Mapa — Esfiha da Hora Itajaí, R. Francisco de Paula Seara, 544, São Judas, Itajaí, SC" src="https://www.google.com/maps?q=R.%20Francisco%20de%20Paula%20Seara%2C%20544%20-%20S%C3%A3o%20Judas%2C%20Itaja%C3%AD%2C%20SC&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div class="igband"><div class="igt">Acompanhe a casa no Instagram <a class="igh" href="https://www.instagram.com/esfihadahoraitajai">@esfihadahoraitajai</a> · 6.718 seguidores</div><a class="igbtn" href="https://www.instagram.com/esfihadahoraitajai">Seguir</a></div>
+<div style="text-align:center;margin-top:26px"><a class="btn wa" href="https://wa.me/5547984177691?text=Ol%C3%A1%2C%20Esfiha%20da%20Hora!%20Quero%20fazer%20um%20pedido">Pedir pelo WhatsApp — (47) 98417-7691</a></div>
+</section>
+</div>
+
+<footer>Concept preview built by SiteSprint Studio.</footer>
+
+<div class="sticky"><a href="https://wa.me/5547984177691?text=Ol%C3%A1%2C%20Esfiha%20da%20Hora!%20Quero%20aproveitar%20o%20Novembro%20Black%20(R%24%202%2C99)">🔥 Novembro Black R$ 2,99 — Pedir pelo WhatsApp</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente Esfiha da Hora Itajaí">
+<div class="chatw-head"><div><b>Assistente Esfiha da Hora</b><small>Assistente demo · prévia de conceito</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Fechar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escreva sua pergunta…" aria-label="Escreva sua pergunta"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');
+function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+
+/* Calendário semanal */
+(function(){
+var cal=document.getElementById('cal');if(!cal)return;
+var today;try{today={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short'}).format(new Date())];}catch(e){today=new Date().getDay();}
+var plan=[{n:'Domingo',h:'18h20 – 23h00'},{n:'Segunda',h:'18h30 – 23h45'},{n:'Terça',h:'18h30 – 23h45'},{n:'Quarta',h:'18h30 – 23h45'},{n:'Quinta',h:'18h30 – 23h45'},{n:'Sexta',h:'18h30 – 23h45'},{n:'Sábado',h:'18h15 – 23h45'}];
+var order=[1,2,3,4,5,6,0];
+order.forEach(function(d){var p=plan[d];var div=document.createElement('div');div.className='day'+(d===today?' today':'');var b=document.createElement('b');b.textContent=p.n+(d===today?' · hoje':'');var s=document.createElement('span');s.textContent=p.h;div.appendChild(b);div.appendChild(s);cal.appendChild(div);});
+})();
+
+/* Montador Novembro Black — R$ 2,99 por esfiha */
+(function(){
+var PRICE=2.99;
+var names={queijo:'Esfiha de queijo',carne:'Esfiha de carne moída',milho:'Esfiha de milho',variadas:'Esfiha variada (outros sabores)'};
+var qty={queijo:0,carne:0,milho:0,variadas:0};
+var totalEl=document.getElementById('bTotal'),unitsEl=document.getElementById('bUnits'),wa=document.getElementById('builderWa');
+function fmt(n){return n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+function render(){
+var total=0,count=0;
+Object.keys(qty).forEach(function(k){total+=qty[k]*PRICE;count+=qty[k];var el=document.getElementById('qty-'+k);if(el)el.textContent=qty[k];});
+totalEl.textContent=fmt(total);
+unitsEl.textContent=count===0?'':count+(count===1?' esfiha':' esfihas')+' × R$ 2,99';
+if(count===0){wa.classList.remove('on');wa.href='https://wa.me/5547984177691';return;}
+var lines=['Olá, Esfiha da Hora! Quero aproveitar o Novembro Black:'];
+Object.keys(qty).forEach(function(k){if(qty[k]>0)lines.push(qty[k]+'x '+names[k]+' — '+fmt(qty[k]*PRICE));});
+lines.push('Total: '+count+(count===1?' esfiha':' esfihas')+' — '+fmt(total));
+wa.href='https://wa.me/5547984177691?text='+encodeURIComponent(lines.join('\n'));
+wa.classList.add('on');
+}
+document.querySelectorAll('.stepper button').forEach(function(btn){btn.addEventListener('click',function(){var k=btn.getAttribute('data-key');if(!k)return;if(btn.classList.contains('minus')){qty[k]=Math.max(0,qty[k]-1);}else{qty[k]=Math.min(99,qty[k]+1);}render();});});
+render();
+})();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5547984177691"},"greeting":"Olá! Sou o assistente demo da Esfiha da Hora Itajaí. Pergunte sobre o Novembro Black, os sabores, os horários ou o endereço — ou toque em uma sugestão.","fallback":"Isso eu não tenho aqui — chame no WhatsApp (47) 98417-7691 que a equipe te ajuda.","chips":["Qual é a promoção?","Quais os sabores?","Qual o horário de hoje?","Onde fica?","Como peço?"],"items":[{"k":["doce","chocolate","sobremesa"],"a":"A casa também faz esfihas doces — elas aparecem nas publicações do perfil @esfihadahoraitajai. Sabores e valores do dia são confirmados no WhatsApp (47) 98417-7691.","link":{"t":"Perguntar no WhatsApp","href":"https://wa.me/5547984177691"}},{"k":["queijo"],"a":"Esfiha de queijo: um dos sabores da foto oficial da promoção — no Novembro Black, sai a R$ 2,99. Monte seu pedido na seção da promoção desta página.","link":{"t":"Montar pedido","href":"#montar"}},{"k":["carne"],"a":"Esfiha de carne moída temperada: aparece na foto oficial da promoção — no Novembro Black, R$ 2,99.","link":{"t":"Montar pedido","href":"#montar"}},{"k":["milho"],"a":"Esfiha de milho sobre o queijo: aparece na foto oficial da promoção — no Novembro Black, R$ 2,99.","link":{"t":"Montar pedido","href":"#montar"}}],"intents":[{"k":["ola","oi","boa noite"],"g":1,"a":"Olá! Pergunte sobre o Novembro Black, os sabores, os horários ou como pedir."},{"k":["promocao","black","novembro","oferta","2,99","299"],"a":"Novembro Black: esfihas variadas a R$ 2,99 — todos os dias, na promoção publicada pela casa em 14 de novembro. Monte o pedido na seção da promoção e envie pelo WhatsApp.","link":{"t":"Montar pedido","href":"#montar"}},{"k":["preco","quanto","custa","valor"],"a":"No Novembro Black, as esfihas variadas saem a R$ 2,99 cada — todos os dias. Esfihas doces e demais itens: valores confirmados no WhatsApp (47) 98417-7691.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5547984177691"}},{"k":["sabor","sabores","cardapio","menu","tem de"],"a":"Na foto oficial da promoção aparecem queijo, carne moída e milho — todos a R$ 2,99 no Novembro Black. A casa também faz esfihas doces; sabores e valores delas, no WhatsApp."},{"k":["horario","abre","aberto","fecha","hoje","hora","funciona"],"a":"Funcionamos todos os dias à noite: domingo 18h20–23h00 · segunda a sexta 18h30–23h45 · sábado 18h15–23h45. O selo no topo da página mostra se estamos abertos agora."},{"k":["onde","endereco","fica","sao judas","itajai","local"],"a":"Estamos na R. Francisco de Paula Seara, 544 – Sala 3, São Judas, Itajaí, SC. O mapa está no fim desta página.","link":{"t":"Chamar no WhatsApp","href":"https://wa.me/5547984177691"}},{"k":["pedir","pedido","comprar","quero","whatsapp","telefone","numero","contato"],"a":"Para pedir: monte seu pedido na seção do Novembro Black desta página — ele chega pronto no WhatsApp — ou chame direto no (47) 98417-7691.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5547984177691"}},{"k":["instagram","seguidores","rede social"],"a":"Instagram: @esfihadahoraitajai, com 6.718 seguidores. É lá que a casa publica as promoções, como o Novembro Black.","link":{"t":"Abrir o Instagram","href":"https://www.instagram.com/esfihadahoraitajai"}},{"k":["entrega","delivery","instadelivery"],"a":"O canal de pedidos da casa hoje é a plataforma InstaDelivery (instadelivery.com.br/esfihadahoraitajai) e o WhatsApp (47) 98417-7691. Condições de entrega são confirmadas ao pedir.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5547984177691"}},{"k":["obrigad","valeu"],"a":"Por nada! Boa noite — e boas esfihas."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;if(link.href.indexOf('http')===0){a.target='_blank';a.rel='noopener';}a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+
+/* Selo aberto/fechado — America/Sao_Paulo */
+var SCHED={"tz":"America/Sao_Paulo","days":{"0":[[1100,1380,"18h20","23h00"]],"1":[[1110,1425,"18h30","23h45"]],"2":[[1110,1425,"18h30","23h45"]],"3":[[1110,1425,"18h30","23h45"]],"4":[[1110,1425,"18h30","23h45"]],"5":[[1110,1425,"18h30","23h45"]],"6":[[1095,1425,"18h15","23h45"]]}};
+var OTXT={"open":"Aberto agora · até às {x}","closed":"Fechado · abre às {x}","closedTomorrow":"Fechado · abre amanhã às {x}","closedDay":"Fechado · abre {d} às {x}","days":["no domingo","na segunda-feira","na terça-feira","na quarta-feira","na quinta-feira","na sexta-feira","no sábado"]};
+(function(){function now(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:SCHED.tz}));}catch(e){return new Date();}}var n=now(),day=n.getDay(),mins=n.getHours()*60+n.getMinutes(),st=null,i,s,list,off,d;list=SCHED.days[(day+6)%7]||[];for(i=0;i<list.length;i++){s=list[i];if(s[1]>1440&&mins<s[1]-1440){st={open:true,until:s[3]};break;}}if(!st){list=SCHED.days[day]||[];for(i=0;i<list.length;i++){s=list[i];if(mins>=s[0]&&mins<s[1]){st={open:true,until:s[3]};break;}}}if(!st){for(off=0;off<8&&!st;off++){d=(day+off)%7;list=SCHED.days[d]||[];for(i=0;i<list.length;i++){s=list[i];if(off===0&&s[0]<=mins)continue;st={open:false,off:off,at:s[2],dayIdx:d};break;}}}var el=document.getElementById('opennow'),hero=document.getElementById('statusHero');if(!st)return;var txt;if(st.open)txt=OTXT.open.replace('{x}',st.until);else if(st.off===0)txt=OTXT.closed.replace('{x}',st.at);else if(st.off===1)txt=OTXT.closedTomorrow.replace('{x}',st.at);else txt=OTXT.closedDay.replace('{x}',st.at).replace('{d}',OTXT.days[st.dayIdx]);if(el){el.querySelector('.otext').textContent=txt;el.classList.add(st.open?'open':'closed');el.hidden=false;}if(hero){document.getElementById('statusBig').textContent=st.open?'Sim — estamos abertos agora':'Fechado por agora';document.getElementById('statusSmall').textContent=txt+' · Dom 18h20–23h00 · Seg a Sex 18h30–23h45 · Sáb 18h15–23h45';hero.hidden=false;}})();
+})();
+</script>
+</body>
+</html>

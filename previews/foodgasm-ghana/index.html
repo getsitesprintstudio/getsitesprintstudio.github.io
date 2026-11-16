@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodgasm Ghana — Online Catering Only | Achimota, Accra</title>
+<meta name="description" content="Foodgasm Ghana is online catering only in Achimota, Accra. No dine-in, not on Bolt Food. Food baskets, wedding, event and funeral catering, buffet in a pan, breakfast and lunch. Weekend combos from GHS 200. Order on WhatsApp +233 27 000 2908. Same-day delivery until 7:00 PM, daily, across Accra, Tema, Kasoa and environs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12100d;--ink2:#1c1915;--paper:#faf6ee;--cream:#f3ead9;--gold:#b7791f;--gold2:#d9a441;--chili:#b23a1e;--mut:#766d5e;--line:#e3d8c2;--wa:#1faa55;--shadow:0 24px 54px rgba(18,16,13,.16);--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ink);color:#fff}img{max-width:100%}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}header.scrolled{box-shadow:0 10px 30px rgba(18,16,13,.12);border-bottom-color:var(--line)}
+.hdr{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:clamp(22px,3vw,28px);line-height:1;letter-spacing:-.01em}.brand span{color:var(--gold)}.brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.26em;font-weight:900;color:var(--chili);margin-top:5px}
+.hdr nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.hdr nav a{color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:700}.hdr nav a.cta{background:var(--wa);color:#fff;padding:10px 18px;border-radius:999px}
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 12% 0%,rgba(217,164,65,.22),transparent 60%)}
+.hero-grid{position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr}@media(min-width:920px){.hero-grid{grid-template-columns:1.06fr .94fr}}
+.hero-copy{padding:clamp(54px,8vw,92px) 20px clamp(48px,6vw,72px)}
+.kicker{display:inline-block;border:1px solid rgba(255,255,255,.35);color:#f5d98f;font-size:11.5px;font-weight:900;letter-spacing:.22em;padding:9px 15px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-size:clamp(44px,7vw,74px);line-height:.98;margin:24px 0 18px;font-weight:600;letter-spacing:-.015em}.hero h1 em{color:var(--gold2);font-style:italic}
+.hero p.lede{color:#e8dfcc;max-width:520px;font-size:clamp(16px,2vw,19px);margin-bottom:14px}
+.hero p.only{color:#fff;font-weight:700;max-width:520px;font-size:15.5px;border-left:3px solid var(--gold2);padding-left:14px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15.5px;transition:.25s}.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 28px rgba(31,170,85,.28)}.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;color:#cfc4ab;font-size:13px;font-weight:700}.hero-meta b{color:#fff;font-family:var(--serif);font-size:19px;display:block}
+.hero-media{position:relative;min-height:380px}.hero-media img.main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media .card{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(250,246,238,.97);color:var(--ink);border-radius:16px;padding:15px 18px;box-shadow:var(--shadow)}.hero-media .card b{font-family:var(--serif);font-size:17px;display:block;line-height:1.25}.hero-media .card span{font-size:12.5px;color:var(--mut)}
+.clarity{background:#fff;border-bottom:1px solid var(--line)}
+.clarity-in{max-width:1180px;margin:0 auto;padding:clamp(46px,6vw,64px) 20px;text-align:center}
+.clarity h2{font-family:var(--serif);font-size:clamp(32px,5vw,50px);line-height:1.05;font-weight:600}.clarity h2 em{color:var(--chili);font-style:italic}
+.clarity .sub{color:var(--mut);max-width:660px;margin:14px auto 34px}
+.clar-grid{display:grid;grid-template-columns:1fr;gap:16px;text-align:left}@media(min-width:820px){.clar-grid{grid-template-columns:repeat(3,1fr)}}
+.clar{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px}.clar .no{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:15px}.clar h3{font-family:var(--serif);font-size:21px;margin:6px 0 7px}.clar p{font-size:14.5px;color:var(--mut)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}section{padding:clamp(60px,9vw,96px) 0 4px}
+.eyebrow{text-align:center;font-size:12px;font-weight:900;letter-spacing:.3em;color:var(--chili);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--serif);font-size:clamp(31px,4.6vw,46px);line-height:1.08;text-align:center;margin-bottom:12px;font-weight:600}h2 em{color:var(--gold);font-style:italic}
+.sub{text-align:center;color:var(--mut);max-width:660px;margin:0 auto 40px}
+.svc{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:720px){.svc{grid-template-columns:repeat(2,1fr)}}@media(min-width:1020px){.svc{grid-template-columns:repeat(3,1fr)}}
+.svcc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;transition:.3s}.svcc:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.svcc .ic{font-size:26px}.svcc h3{font-family:var(--serif);font-size:22px;margin:10px 0 7px}.svcc p{font-size:14.5px;color:var(--mut)}
+.combo-sec{background:var(--ink);color:#fff;border-radius:30px;padding:clamp(36px,6vw,58px);box-shadow:var(--shadow)}
+.combo-sec h2{color:#fff}.combo-sec h2 em{color:var(--gold2)}.combo-sec .eyebrow{color:var(--gold2)}.combo-sec .sub{color:#cfc4ab}
+.combos{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:900px){.combos{grid-template-columns:repeat(3,1fr)}}
+.combo{background:#fff;color:var(--ink);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.combo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.combo-in{padding:24px;display:flex;flex-direction:column;flex:1}.combo .tag{font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--chili);text-transform:uppercase}
+.combo h3{font-family:var(--serif);font-size:23px;margin:7px 0 6px}.combo p{font-size:14.5px;color:var(--mut);flex:1}
+.price{font-family:var(--serif);font-size:30px;font-weight:700;margin:14px 0 4px}.price small{font-family:var(--sans);font-size:12.5px;color:var(--mut);font-weight:700}
+.ord{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:52px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px;margin-top:14px}.ord:hover{background:#178a44}
+.note{text-align:center;color:#cfc4ab;font-size:13.5px;margin-top:20px}
+.dishes{max-width:920px;margin:0 auto}
+.dgrid{display:grid;grid-template-columns:1fr;column-gap:44px}@media(min-width:720px){.dgrid{grid-template-columns:1fr 1fr}}
+.drow{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-bottom:1px dashed var(--line);font-size:15.5px}.drow .nm{font-family:var(--serif);font-size:19px;font-weight:600}.dots{flex:1;border-bottom:2px dotted #d8c9a4;transform:translateY(-4px);min-width:18px}.dord{color:var(--wa);font-weight:800;font-size:12.5px;text-decoration:none;white-space:nowrap}.dord:hover{text-decoration:underline}
+.proof{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:860px){.proof{grid-template-columns:repeat(3,1fr)}}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}.pcard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}.pcard-in{padding:22px}.pcard .when{font-size:11.5px;font-weight:900;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}.pcard h3{font-family:var(--serif);font-size:21px;margin:7px 0 6px}.pcard p{font-size:14.5px;color:var(--mut)}
+.steps{background:var(--cream);border:1px solid var(--line);border-radius:26px;padding:clamp(32px,5vw,52px)}
+.steps-grid{display:grid;grid-template-columns:1fr;gap:24px}@media(min-width:860px){.steps-grid{grid-template-columns:1.1fr .9fr}}
+.steps h2{text-align:left}.steps .eyebrow{text-align:left}.steps ol{list-style:none;counter-reset:st;display:grid;gap:15px}.steps li{counter-increment:st;display:flex;gap:14px;align-items:flex-start;font-size:15.5px}.steps li:before{content:counter(st);flex:none;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.deliv{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.deliv b{font-family:var(--serif);font-size:20px;display:block;margin-bottom:6px}.deliv p{color:var(--mut);font-size:14.5px;margin-bottom:10px}
+.deliv a.wabtn{display:flex;min-height:52px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;margin-top:8px}
+.cta{background:var(--chili);color:#fff;border-radius:28px;padding:clamp(38px,6vw,60px);text-align:center;box-shadow:var(--shadow)}.cta h2{color:#fff}.cta h2 em{color:#ffd9a8}.cta p{color:#ffe3d6;max-width:600px;margin:0 auto 26px}
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1180px;margin:56px auto 0;border-top:1px solid var(--line)}footer a{color:var(--gold);font-weight:700;text-decoration:none}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(250,246,238,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}.sticky a{display:flex;max-width:1180px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(18px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--ink);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,364px);max-height:min(62vh,540px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:91}.chatw-panel.open{display:flex}
+.chatw-head{background:var(--ink);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#f3ead9;align-self:flex-start}.msg.user{background:var(--ink);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--ink);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<div class="brand">Foodgasm <span>Ghana</span><small>ACHIMOTA · ACCRA · ONLINE CATERING ONLY</small></div>
+<nav><a href="#combos">Weekend Combos</a><a href="#dishes">Dishes</a><a href="#events">Events</a><a href="https://www.instagram.com/foodgasm_gh" target="_blank" rel="noopener">@foodgasm_gh</a><a class="cta" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a></nav>
+</div></header>
+
+<div class="hero"><div class="hero-grid">
+<div class="hero-copy rv">
+<span class="kicker">Online catering only · Achimota, Accra</span>
+<h1>We brag <em>food</em> differently.</h1>
+<p class="lede">Food baskets, wedding and event catering, buffet in a pan, breakfast and lunch — cooked in Achimota and delivered to your door across Accra, Tema, Kasoa and environs.</p>
+<p class="only">There is no restaurant to walk into and no dine-in. Foodgasm Ghana is online catering only — every order is placed by WhatsApp, call or Instagram DM, and delivered to you.</p>
+<div class="actions">
+<a class="btn wa" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+<a class="btn ghost" href="#combos">See weekend combos</a>
+</div>
+<div class="hero-meta">
+<span><b>5+ years</b>in business</span>
+<span><b>25,111</b>followers on Instagram</span>
+<span><b>7:00 PM</b>same-day delivery, daily</span>
+</div>
+</div>
+<div class="hero-media"><img class="main" src="img/hero.jpg" alt="Foodgasm Ghana catering trays — grilled tilapia with peppers and onions, and fried rice, packed for delivery">
+<div class="card"><b>Catering trays, packed and delivered</b><span>Real Foodgasm Ghana catering — grilled tilapia, fried rice and pans ready for an event.</span></div>
+</div>
+</div></div>
+
+<div class="clarity"><div class="clarity-in rv">
+<p class="eyebrow">First, the clear part</p>
+<h2>Online catering only. <em>That is the whole model.</em></h2>
+<p class="sub">This is the question Foodgasm Ghana gets asked most — so here it is, plainly, before anything else. No confusion, no wasted trip.</p>
+<div class="clar-grid">
+<div class="clar"><span class="no">One —</span><h3>No dine-in</h3><p>There is no restaurant, no tables and no walk-in counter in Achimota or anywhere else. Foodgasm Ghana cooks to order and delivers.</p></div>
+<div class="clar"><span class="no">Two —</span><h3>Not on Bolt Food</h3><p>You will not find Foodgasm Ghana on Bolt Food or any delivery app. If a listing suggests otherwise, it is not how orders are taken here.</p></div>
+<div class="clar"><span class="no">Three —</span><h3>Order direct</h3><p>Orders are taken only by WhatsApp, by call, or by Instagram DM to @foodgasm_gh. Same-day delivery until 7:00 PM, daily.</p></div>
+</div>
+</div></div>
+
+<div class="wrap">
+<section id="services">
+<p class="eyebrow">What we cater</p>
+<h2>One kitchen, <em>every occasion</em></h2>
+<p class="sub">Single plates for one person, bulk pans for a houseful, and full catering for the days that matter most — all ordered direct and delivered.</p>
+<div class="svc">
+<div class="svcc rv"><div class="ic">🧺</div><h3>Food baskets</h3><p>Curated food baskets, put together to order — a generous way to send food to family, friends or colleagues.</p></div>
+<div class="svcc rv"><div class="ic">💍</div><h3>Weddings</h3><p>Wedding catering for your big day. December wedding bookings are open — enquire early on WhatsApp to secure your date.</p></div>
+<div class="svcc rv"><div class="ic">🎉</div><h3>Events &amp; funerals</h3><p>Event and funeral catering at scale, including funeral packs — handled with care, delivered on time, even at short notice.</p></div>
+<div class="svcc rv"><div class="ic">🍲</div><h3>Buffet in a pan</h3><p>The famous buffet-in-pan format: full pans of rice, stews and grills, ready to serve a gathering straight from the tray.</p></div>
+<div class="svcc rv"><div class="ic">🌅</div><h3>Breakfast &amp; lunch</h3><p>Breakfast and lunch orders for homes and offices — placed direct, cooked fresh and delivered the same day.</p></div>
+<div class="svcc rv"><div class="ic">📦</div><h3>Single &amp; bulk orders</h3><p>From a single order to bulk quantities for 30, 50 or more people. Tell us the number, and the kitchen plans around it.</p></div>
+</div>
+</section>
+
+<section id="combos">
+<div class="combo-sec rv">
+<p class="eyebrow">Saturday &amp; Sunday only</p>
+<h2>The priced <em>weekend combos</em></h2>
+<p class="sub">The only prices published — exactly as posted. Combos are available on Saturdays and Sundays. Tap to order and the message is written for you.</p>
+<div class="combos">
+<div class="combo"><img src="img/combo.jpg" alt="Foodgasm Ghana stew, packed in a lidded bucket ready for delivery"><div class="combo-in"><span class="tag">Weekend Combo · Sat &amp; Sun</span><h3>Weekend Combo</h3><p>2.5L kontomire stew plus 2.5L chicken light soup. The weekend stocked, in two generous pots.</p><div class="price">GHS 1,000 <small>· Sat &amp; Sun</small></div><a class="ord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20the%20Weekend%20Combo%20(GHS%201%2C000)%3A%202.5L%20kontomire%20stew%20%2B%202.5L%20chicken%20light%20soup." target="_blank" rel="noopener">Order this combo</a></div></div>
+<div class="combo"><img src="img/chicken.jpg" alt="Foodgasm Ghana pan meal — fried chicken over rice in a catering pan"><div class="combo-in"><span class="tag">Pan Meal</span><h3>Pan Meal</h3><p>The pan meal — a full pan, ready to share. A simple, priced way to feed the table without cooking.</p><div class="price">GHS 200 <small>· per pan</small></div><a class="ord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20the%20Pan%20Meal%20(GHS%20200)." target="_blank" rel="noopener">Order the Pan Meal</a></div></div>
+<div class="combo"><img src="img/meat.jpg" alt="Foodgasm Ghana catering tray of assorted meats, close up"><div class="combo-in"><span class="tag">The bigger package · Sat &amp; Sun</span><h3>Combo + Extra Stew</h3><p>The full Weekend Combo, plus an extra 2.5L of goat-meat stew or tomato stew — your choice.</p><div class="price">GHS 1,350 <small>· Sat &amp; Sun</small></div><a class="ord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20the%20GHS%201%2C350%20package%3A%20the%20Weekend%20Combo%20plus%202.5L%20goat-meat%20or%20tomato%20stew." target="_blank" rel="noopener">Order this package</a></div></div>
+</div>
+<p class="note">Daily menu prices are confirmed on WhatsApp when you order — dishes below are shown without prices, exactly as published.</p>
+</div>
+</section>
+
+<section id="dishes">
+<p class="eyebrow">The repertoire</p>
+<h2>Dishes the kitchen <em>is known for</em></h2>
+<p class="sub">The published repertoire. Availability and the day's menu are confirmed when you order on WhatsApp.</p>
+<div class="dishes"><div class="dgrid">
+<div class="drow"><span class="nm">Jollof rice</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20jollof%20rice." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Fried rice</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20fried%20rice." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Seafood fried rice</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20seafood%20fried%20rice." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Grilled chicken</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20grilled%20chicken." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Grilled tilapia</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20grilled%20tilapia." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Banku &amp; tilapia</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20banku%20and%20tilapia." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Goat jollof</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20goat%20jollof." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Goat light soup</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20goat%20light%20soup." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Chicken light soup</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20chicken%20light%20soup." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Kontomire stew</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20kontomire%20stew." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Tomato stew</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20tomato%20stew." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Spring rolls</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20spring%20rolls." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Samosas</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20samosas." target="_blank" rel="noopener">Order →</a></div>
+<div class="drow"><span class="nm">Salads</span><span class="dots"></span><a class="dord" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20order%20a%20salad." target="_blank" rel="noopener">Order →</a></div>
+</div></div>
+</section>
+
+<section id="events">
+<p class="eyebrow">Recent work</p>
+<h2>Trusted at <em>short notice</em>, booked for big days</h2>
+<p class="sub">From Foodgasm Ghana's own recent posts — the kitchen behind gatherings across Accra.</p>
+<div class="proof">
+<div class="pcard rv"><img src="img/hero.jpg" alt="Foodgasm Ghana last-minute event catering trays"><div class="pcard-in"><span class="when">14 November</span><h3>Last-minute, handled</h3><p>Last-minute event catering with same-day delivery, for parties of 30 to 50 people and more.</p></div></div>
+<div class="pcard rv"><img src="img/wedding.jpg" alt="A wedding celebration catered in Accra — guests dancing under draped lights"><div class="pcard-in"><span class="when">6 November</span><h3>December weddings open</h3><p>December wedding bookings are open. If your date is coming up, enquire now on WhatsApp.</p></div></div>
+<div class="pcard rv"><img src="img/meat.jpg" alt="Foodgasm Ghana assorted meat tray prepared for funeral packs"><div class="pcard-in"><span class="when">28 October</span><h3>50 funeral packs fulfilled</h3><p>Fifty funeral packs prepared and fulfilled — bulk orders handled with care and delivered complete.</p></div></div>
+</div>
+</section>
+
+<section id="order">
+<div class="steps rv">
+<div class="steps-grid">
+<div>
+<p class="eyebrow">How ordering works</p>
+<h2>WhatsApp in, <em>food delivered</em></h2>
+<ol>
+<li><span><b>Message on WhatsApp.</b> Say what you would like — a dish, a combo, a basket, or catering for a date and a number of guests.</span></li>
+<li><span><b>Confirm the details.</b> The day's menu, price and delivery are confirmed with you directly. No apps, no middlemen.</span></li>
+<li><span><b>It arrives.</b> Same-day delivery until 7:00 PM, daily — cooked in Achimota and brought to your door.</span></li>
+</ol>
+</div>
+<div class="deliv"><b>Delivery areas</b>
+<p>Accra, Tema, Kasoa and environs.</p>
+<p><b style="font-family:var(--sans);font-size:14.5px">Based in:</b> Achimota, Accra — online only, no dine-in and no walk-in address.</p>
+<p><b style="font-family:var(--sans);font-size:14.5px">Same-day delivery:</b> until 7:00 PM, daily.</p>
+<a class="wabtn" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Start an order — +233 27 000 2908</a>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="cta rv">
+<p class="eyebrow" style="color:#ffd9a8">Weddings · Events · Funerals</p>
+<h2>Planning an event? <em>Ask for a catering quote.</em></h2>
+<p>Tell Foodgasm Ghana the date, the place and how many people you are feeding — weddings, parties, funerals and office gatherings, for 30 to 50 people and more.</p>
+<a class="btn wa" href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20enquire%20about%20event%20catering.%20My%20event%20date%20and%20number%20of%20guests%20are%3A" target="_blank" rel="noopener">Enquire about event catering</a>
+</div>
+</section>
+</div>
+
+<footer>
+<p><b style="color:var(--ink)">Foodgasm Ghana</b> · Online catering only · Achimota, Accra · Delivery: Accra, Tema, Kasoa &amp; environs · Same-day delivery until 7:00 PM, daily</p>
+<p style="margin-top:8px">Order: <a href="https://wa.me/233270002908" target="_blank" rel="noopener">WhatsApp +233 27 000 2908</a> · Instagram: <a href="https://www.instagram.com/foodgasm_gh" target="_blank" rel="noopener">@foodgasm_gh</a> · “We brag food differently.”</p>
+<p style="margin-top:14px">Concept preview built by SiteSprint Studio.</p>
+</footer>
+
+<div class="sticky"><a href="https://wa.me/233270002908?text=Hello%20Foodgasm%20Ghana%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">💬 Order on WhatsApp — +233 27 000 2908</a></div>
+
+<div class="chatw"><button class="chatw-btn" id="chatOpen" type="button">✦ Ask Foodgasm</button></div>
+<div class="chatw-panel" id="chatPanel" role="dialog" aria-label="Foodgasm Ghana assistant">
+<div class="chatw-head"><div><b>Foodgasm Assistant</b><small>Answers from Foodgasm Ghana's published info only</small></div><button class="chatw-x" id="chatClose" type="button" aria-label="Close">×</button></div>
+<div class="chatw-msgs" id="chatMsgs"></div>
+<div class="chatw-chips" id="chatChips"></div>
+<form class="chatw-form" id="chatForm"><input id="chatInput" type="text" placeholder="Ask about location, combos, dishes…" autocomplete="off"><button type="submit">Send</button></form>
+</div>
+
+<script>
+var WA="https://wa.me/233270002908";
+function waLink(text){return WA+"?text="+encodeURIComponent(text)}
+var hdr=document.getElementById('hdr');
+addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>10)},{passive:true});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+var panel=document.getElementById('chatPanel'),msgs=document.getElementById('chatMsgs'),chips=document.getElementById('chatChips'),form=document.getElementById('chatForm'),input=document.getElementById('chatInput');
+function addMsg(text,who,linkText,linkHref){
+  var d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+  if(linkText){var a=document.createElement('a');a.className='msg-link';a.textContent=linkText;a.href=linkHref;a.target='_blank';a.rel='noopener';d.appendChild(document.createElement('br'));d.appendChild(a)}
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+function answer(qRaw){
+  var q=qRaw.toLowerCase();
+  var has=function(){for(var i=0;i<arguments.length;i++){if(q.indexOf(arguments[i])>-1)return true}return false};
+  if(has('where','located','location','address','dine','eat in','sit','restaurant','come to','visit','directions','bolt','app')){
+    return {t:"Important one: Foodgasm Ghana is ONLINE CATERING ONLY, based in Achimota, Accra. There is no dine-in, no restaurant to visit, and Foodgasm Ghana is NOT on Bolt Food. You order by WhatsApp, call or Instagram DM, and your food is delivered — across Accra, Tema, Kasoa and environs, same-day until 7:00 PM daily.",l:"Order on WhatsApp",h:waLink("Hello Foodgasm Ghana, I would like to place an order.")};
+  }
+  if(has('combo','weekend','1000','1,000','1350','1,350','kontomire')){
+    return {t:"The priced weekend combos (Saturdays and Sundays): Weekend Combo — GHS 1,000 for 2.5L kontomire stew + 2.5L chicken light soup. The bigger package — GHS 1,350 for the combo plus an extra 2.5L of goat-meat stew or tomato stew. And the Pan Meal is GHS 200.",l:"Order a combo on WhatsApp",h:waLink("Hello Foodgasm Ghana, I would like to order a weekend combo.")};
+  }
+  if(has('pan meal','pan','buffet','200')){
+    return {t:"The Pan Meal is GHS 200 — a full pan, ready to share. Foodgasm Ghana also does buffet-in-a-pan catering for gatherings. Daily dish prices are confirmed on WhatsApp when you order.",l:"Order the Pan Meal — GHS 200",h:waLink("Hello Foodgasm Ghana, I would like to order the Pan Meal (GHS 200).")};
+  }
+  if(has('wedding','event','funeral','party','catering','guests','bulk','basket')){
+    return {t:"Foodgasm Ghana caters weddings, events and funerals, makes food baskets, and handles single and bulk orders — recent work includes last-minute catering for parties of 30 to 50+ people, 50 funeral packs fulfilled, and December wedding bookings are open. Send your date and number of guests on WhatsApp for a quote.",l:"Enquire about catering",h:waLink("Hello Foodgasm Ghana, I would like to enquire about event catering. My event date and number of guests are:")};
+  }
+  if(has('deliver','delivery','tema','kasoa','area','reach','ship')){
+    return {t:"Delivery covers Accra, Tema, Kasoa and environs. Same-day delivery until 7:00 PM, daily. Orders are placed by WhatsApp, call or Instagram DM to @foodgasm_gh.",l:"Order on WhatsApp",h:waLink("Hello Foodgasm Ghana, I would like to place an order for delivery.")};
+  }
+  if(has('time','when','open','close','hour','until','same-day','same day')){
+    return {t:"Same-day delivery runs until 7:00 PM, daily — that is the published cutoff. Message on WhatsApp to place your order in time.",l:"Order on WhatsApp",h:waLink("Hello Foodgasm Ghana, I would like to place an order.")};
+  }
+  if(has('menu','dish','food','eat','jollof','rice','tilapia','banku','soup','stew','chicken','salad','samosa','spring roll','price','cost','how much')){
+    return {t:"The published repertoire: jollof rice, fried rice, seafood fried rice, grilled chicken, grilled tilapia, banku and tilapia, goat jollof, goat light soup, chicken light soup, kontomire stew, tomato stew, spring rolls, samosas and salads — plus breakfast and lunch. Daily menu prices are not published; they are confirmed on WhatsApp. The priced items are the weekend combos (GHS 1,000 / GHS 1,350, Sat and Sun) and the Pan Meal (GHS 200).",l:"Ask for today's menu on WhatsApp",h:waLink("Hello Foodgasm Ghana, please send me today's menu and prices.")};
+  }
+  if(has('order','buy','call','phone','number','whatsapp','contact','instagram')){
+    return {t:"Orders are taken only by WhatsApp or call on +233 27 000 2908, or by Instagram DM to @foodgasm_gh (25,111 followers, over five years in business). There is no website ordering and no delivery app.",l:"Open WhatsApp — +233 27 000 2908",h:waLink("Hello Foodgasm Ghana, I would like to place an order.")};
+  }
+  if(has('hello','hi','hey','good morning','good afternoon','good evening')){
+    return {t:"Hello, and welcome to Foodgasm Ghana — online catering only, from Achimota, Accra. Ask me about the weekend combos, the dishes, delivery areas, or catering for a wedding, event or funeral.",l:null,h:null};
+  }
+  return {t:"I can only answer from Foodgasm Ghana's published information — the weekend combos, the dish repertoire, delivery (Accra, Tema, Kasoa and environs, same-day until 7:00 PM daily), and event catering. For anything else, the team on WhatsApp will help you directly. And remember: online catering only — no dine-in, and not on Bolt Food.",l:"Ask on WhatsApp",h:waLink("Hello Foodgasm Ghana, I have a question.")};
+}
+var chipList=["Can I dine in?","Are you on Bolt Food?","Weekend combo prices?","What dishes do you make?","Do you cater weddings?","Where do you deliver?"];
+chipList.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.onclick=function(){ask(c)};chips.appendChild(b)});
+var greeted=false;
+function openChat(){panel.classList.add('open');if(!greeted){greeted=true;addMsg("Hello! I am the Foodgasm Ghana assistant. First things first: we are online catering only — no dine-in, and not on Bolt Food. Ask me about combos, dishes, delivery or event catering.","bot")}}
+document.getElementById('chatOpen').onclick=openChat;
+document.getElementById('chatClose').onclick=function(){panel.classList.remove('open')};
+function ask(text){addMsg(text,'user');var a=answer(text);setTimeout(function(){addMsg(a.t,'bot',a.l,a.h)},220)}
+form.addEventListener('submit',function(e){e.preventDefault();var v=input.value.trim();if(!v)return;input.value='';ask(v)});
+</script>
+</body>
+</html>

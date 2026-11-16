@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carpe Diem — Coyhaique, Aysén | Sushi nocturno y ofertas flash</title>
+<meta name="description" content="Carpe Diem en Coyhaique, Aysén, Chile: sushi nocturno a domicilio con ofertas flash hasta las 3 AM. Hoy: 50 MIX por $8.990. Pide por WhatsApp +56 9 6488 9459.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;0,9..144,900;1,9..144,500;1,9..144,650&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#07080f;--night2:#0d0f1a;--panel:#121422;--panel2:#17192c;--rice:#f4efe4;--mut:#a7a3b8;--pink:#ff2e7e;--cyan:#22d3ee;--amber:#ffb020;--wa:#22c15e;--line:#262842;--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",monospace;--shadow:0 30px 70px rgba(0,0,0,.55)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--night);color:var(--rice);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--pink);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(7,8,15,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);box-shadow:0 14px 34px rgba(0,0,0,.5)}
+.hdr{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--pink)}
+.brand b{font-family:var(--serif);font-weight:900;font-size:23px;letter-spacing:.01em;line-height:1}.brand b span{color:var(--pink)}.brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;font-weight:800;color:var(--cyan);margin-top:3px}
+.hdr-cta{display:none}@media(min-width:640px){.hdr-cta{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;font-size:14px}}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#04050a}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;opacity:.5;filter:saturate(1.15)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 500px at 85% 10%,rgba(255,46,126,.28),transparent 60%),radial-gradient(800px 500px at 8% 90%,rgba(34,211,238,.18),transparent 60%),linear-gradient(180deg,rgba(4,5,10,.72),rgba(7,8,15,.55) 46%,var(--night) 98%)}
+.hero-in{max-width:1180px;margin:0 auto;padding:clamp(150px,19vw,215px) 20px clamp(70px,9vw,100px)}
+.flashpill{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,176,32,.6);color:var(--amber);background:rgba(13,15,26,.82);font-size:12px;font-weight:900;letter-spacing:.18em;padding:10px 17px;border-radius:999px;text-transform:uppercase}
+.flashpill i{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 5px rgba(255,176,32,.18);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(255,176,32,.05)}}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(46px,8vw,88px);line-height:.98;margin:26px 0 6px;max-width:900px;color:#fff;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;font-weight:650;background:linear-gradient(92deg,var(--pink),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .cyan{color:var(--cyan)}
+.hero p.lead{color:#d9d4c5;max-width:580px;margin:20px 0 30px;font-size:clamp(16px,2vw,19px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;font-size:16px;transition:.25s;border:none;cursor:pointer;font-family:var(--sans)}.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 16px 34px rgba(34,193,94,.32)}.btn.pink{background:var(--pink);color:#fff;box-shadow:0 16px 34px rgba(255,46,126,.3)}.btn.line{background:transparent;color:#fff;border:1.5px solid rgba(244,239,228,.4)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.hero-meta span{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--rice);border:1px solid var(--line);background:rgba(18,20,34,.85);padding:9px 14px;border-radius:999px}
+.hero-meta span b{color:var(--cyan)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,102px) 0 4px}
+.eyebrow{text-align:center;font-size:12px;font-weight:900;letter-spacing:.34em;color:var(--pink);margin-bottom:14px;text-transform:uppercase}.eyebrow.c{color:var(--cyan)}.eyebrow.a{color:var(--amber)}
+h2{font-family:var(--serif);font-weight:900;font-size:clamp(33px,5vw,50px);line-height:1.05;text-align:center;margin-bottom:12px;color:#fff}h2 em{font-style:italic;font-weight:650;color:var(--amber)}
+.sub{text-align:center;color:var(--mut);max-width:660px;margin:0 auto 40px}
+.board{background:linear-gradient(160deg,#191128,#0d0f1a 55%);border:1px solid #3a2350;border-radius:28px;padding:clamp(24px,4vw,44px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.board:before{content:"";position:absolute;inset:0;background:radial-gradient(600px 260px at 90% 0%,rgba(255,46,126,.16),transparent 60%);pointer-events:none}
+.board-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px;position:relative}
+.board-head h3{font-family:var(--serif);font-weight:900;font-size:clamp(27px,4vw,38px);color:#fff;line-height:1.05}
+.board-head p{color:var(--mut);font-size:14px;max-width:480px}
+.scarce{font-family:var(--mono);font-weight:700;font-size:12.5px;color:#0b0c14;background:var(--amber);padding:10px 15px;border-radius:10px;letter-spacing:.06em;white-space:nowrap}
+.offers{display:grid;grid-template-columns:1fr;gap:18px;position:relative}@media(min-width:860px){.offers{grid-template-columns:repeat(3,1fr)}}
+.offer{background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}.offer:hover{transform:translateY(-6px);border-color:rgba(255,46,126,.55);box-shadow:var(--shadow)}
+.offer.hot{border:2px solid var(--pink)}
+.offer img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.offer-in{padding:22px;display:flex;flex-direction:column;flex:1}
+.otag{font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}.otag.p{color:var(--pink)}.otag.a{color:var(--amber)}
+.offer h4{font-family:var(--serif);font-weight:900;font-size:26px;color:#fff;margin:6px 0 6px;line-height:1.1}
+.offer p{font-size:14.5px;color:var(--mut);flex:1}
+.oprice{font-family:var(--mono);font-weight:700;font-size:30px;color:#fff;margin:14px 0 4px}.oprice small{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;color:var(--amber);font-weight:800}
+.oprice.ask{font-size:21px;color:var(--cyan)}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px;margin-top:14px}.ord:hover{background:#1aa34e}
+.builder{background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:clamp(26px,4vw,44px);box-shadow:var(--shadow)}
+.bgrid{display:grid;grid-template-columns:1fr;gap:28px}@media(min-width:900px){.bgrid{grid-template-columns:1.25fr .75fr}}
+.pick{display:grid;gap:12px}
+.pick label{display:flex;gap:14px;align-items:flex-start;background:var(--panel2);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;cursor:pointer;transition:.2s}
+.pick label:has(input:checked){border-color:var(--pink);background:#1d1430}
+.pick input{accent-color:var(--pink);width:20px;height:20px;margin-top:3px;flex:none}
+.pick b{font-family:var(--serif);font-size:19px;color:#fff;display:block;line-height:1.2}
+.pick span{font-size:13.5px;color:var(--mut);display:block}
+.pick .bp{font-family:var(--mono);font-weight:700;color:var(--amber);font-size:15px;white-space:nowrap;margin-left:auto}
+.qtyrow{display:flex;align-items:center;gap:16px;margin-top:22px;flex-wrap:wrap}
+.qtyrow b{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.qty{display:inline-flex;align-items:center;gap:4px;border:1.5px solid var(--line);border-radius:999px;padding:5px}
+.qty button{width:44px;height:44px;border-radius:50%;border:none;background:var(--panel2);color:#fff;font-size:22px;font-weight:800;cursor:pointer}
+.qty output{font-family:var(--mono);font-weight:700;font-size:20px;min-width:38px;text-align:center}
+.totalbox{background:#0a0b16;border:1px dashed #3d3f63;border-radius:20px;padding:26px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.totalbox small{font-size:11.5px;font-weight:900;letter-spacing:.22em;color:var(--cyan);text-transform:uppercase}
+.totalbox .tot{font-family:var(--mono);font-weight:700;font-size:clamp(30px,4.5vw,42px);color:#fff;margin:8px 0 2px}
+.totalbox p{font-size:13.5px;color:var(--mut);margin-bottom:18px}
+.how{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--night2);border:1px solid var(--line);border-radius:20px;padding:28px 24px}.step .n{font-family:var(--mono);font-weight:700;font-size:15px;color:#0b0c14;background:var(--cyan);display:inline-flex;padding:7px 13px;border-radius:999px}.step h3{font-family:var(--serif);font-weight:900;font-size:22px;color:#fff;margin:14px 0 6px}.step p{font-size:14.5px;color:var(--mut)}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px;font-weight:600}
+.social{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:700px){.social{grid-template-columns:1fr 1fr}}
+.scard{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px 26px;text-decoration:none;color:var(--rice);transition:.25s;display:block}.scard:hover{transform:translateY(-4px);border-color:rgba(34,211,238,.5)}
+.scard b{font-family:var(--serif);font-weight:900;font-size:25px;color:#fff;display:block}.scard span{color:var(--mut);font-size:14.5px}.scard .go{color:var(--cyan);font-weight:800;font-size:14px;display:block;margin-top:12px}
+.quote{background:linear-gradient(120deg,#1c0f2e,#0d1424);border:1px solid #3a2350;border-radius:26px;padding:clamp(34px,5vw,56px);text-align:center;margin-top:clamp(56px,8vw,84px)}
+.quote p{font-family:var(--serif);font-style:italic;font-weight:650;font-size:clamp(22px,3.4vw,31px);color:#fff;max-width:760px;margin:0 auto;line-height:1.4}
+.quote small{display:block;margin-top:16px;color:var(--mut);font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px;max-width:1180px;margin:56px auto 0;border-top:1px solid var(--line)}footer a{color:var(--cyan);font-weight:700;text-decoration:none}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(7,8,15,.97);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1180px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:var(--pink);color:#fff;border:none;cursor:pointer;font:inherit;font-weight:800;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.45);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.55);display:none;flex-direction:column;overflow:hidden;z-index:91;color:#171423}.chatw-panel.open{display:flex}
+.chatw-head{background:#0d0f1a;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#ffeef6;align-self:flex-start}.msg.user{background:var(--pink);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #f3b9d2;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #f3dbe7}.chatw-form input{flex:1;border:1px solid #f3b9d2;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--pink);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<a class="brand" href="#"><img src="img/logo.jpg" alt="Carpe Diem"><span><b>Carpe <span>Diem</span></b><small>COYHAIQUE · AYSÉN · PATAGONIA</small></span></a>
+<a class="hdr-cta" href="https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp</a>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/offer-50mix.jpg" alt="Caja de sushi de Carpe Diem en Coyhaique">
+<div class="hero-in">
+<span class="flashpill"><i></i> Oferta flash hasta las 3 AM</span>
+<h1>La noche de Coyhaique <em>pide sushi,</em> <span class="cyan">y pide Carpe Diem.</span></h1>
+<p class="lead">Sushi nocturno a domicilio en la Patagonia chilena. Sin local en Google, sin página web: hasta hoy, Carpe Diem se encontraba solo en redes. Aquí están las ofertas del día, listas para pedir en un toque.</p>
+<div class="actions">
+<a class="btn pink" href="#ofertas">Ver ofertas flash de hoy</a>
+<a class="btn wa" href="https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20hacer%20un%20pedido">Pedir por WhatsApp</a>
+</div>
+<div class="hero-meta">
+<span>HOY · <b>50 MIX $8.990</b></span><span>DELIVERY NOCTURNO · <b>COYHAIQUE</b></span><span>WHATSAPP · <b>+56 9 6488 9459</b></span>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="ofertas" class="rv">
+<div class="eyebrow">01 · El tablero de la noche</div>
+<h2>Ofertas flash <em>de hoy</em></h2>
+<p class="sub">Las ofertas de Carpe Diem cambian constantemente. Este tablero es el concepto: el dueño actualiza las ofertas del día y cada una se pide en un toque, directo a WhatsApp.</p>
+<div class="board">
+<div class="board-head">
+<div><h3>OFERTA FLASH HASTA LAS 3 AM</h3><p>Precios de oferta publicados por Carpe Diem. Cuando se acaban, se acaban.</p></div>
+<span class="scarce">⚠ POCAS UNIDADES DISPONIBLES</span>
+</div>
+<div class="offers">
+<article class="offer hot">
+<img src="img/hero.jpg" alt="50 MIX de Carpe Diem: caja con 5 tipos de rolls">
+<div class="offer-in"><span class="otag p">● Hoy · La de la casa</span><h4>50 MIX</h4>
+<p>Caja de 50 piezas con 5 tipos de rolls: fritos / tempura, con palta y de arroz. La oferta de hoy, 15 de noviembre.</p>
+<div class="oprice">$8.990<small>OFERTA DE HOY</small></div>
+<a class="ord" href="https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20pedir%20la%20oferta%20de%20hoy%3A%2050%20MIX%20por%20%248.990">Pedir el 50 MIX →</a></div></article>
+
+<article class="offer">
+<img src="img/panko40.jpg" alt="40 Piezas Panko de Carpe Diem">
+<div class="offer-in"><span class="otag">Oferta flash</span><h4>40 Piezas Panko</h4>
+<p>40 piezas panko: 30 de pollo y 10 de kanikama. Crujientes, recién hechas, para compartir — o no.</p>
+<div class="oprice">$8.990<small>OFERTA FLASH · PRECIO DEL DÍA</small></div>
+<a class="ord" href="https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20pedir%20la%20oferta%20flash%3A%2040%20Piezas%20Panko%20(30%20pollo%20%2B%2010%20kanikama)%20por%20%248.990">Pedir las 40 Panko →</a></div></article>
+
+<article class="offer">
+<img src="img/mix-xl.jpg" alt="50 MIX XL edición domingo de Carpe Diem">
+<div class="offer-in"><span class="otag a">Edición domingo</span><h4>50 MIX XL Domingo</h4>
+<p>La XL del domingo: 20 de pollo y 20 de kanikama, más el mix de la casa hasta completar las 50. Precio del día por WhatsApp.</p>
+<div class="oprice ask">Precio por WhatsApp<small>EDICIÓN DOMINGO · CONSULTA EL DEL DÍA</small></div>
+<a class="ord" href="https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20preguntar%20por%20el%2050%20MIX%20XL%20Domingo%20(20%20pollo%20%2B%2020%20kanikama)%2C%20%C2%BFcu%C3%A1l%20es%20el%20precio%20de%20hoy%3F">Preguntar por la XL →</a></div></article>
+</div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow c">02 · Arma tu pedido</div>
+<h2>Arma tu caja <em>en segundos</em></h2>
+<p class="sub">Elige la caja, ajusta la cantidad y mira el total en vivo. Al tocar el botón, tu pedido llega a WhatsApp ya escrito.</p>
+<div class="builder"><div class="bgrid">
+<div>
+<div class="pick" role="radiogroup" aria-label="Elige tu caja">
+<label><input type="radio" name="box" value="mix50" checked><span><b>50 MIX — oferta de hoy</b><span>50 piezas · 5 tipos de rolls: fritos/tempura, con palta y de arroz</span></span><span class="bp">$8.990</span></label>
+<label><input type="radio" name="box" value="panko40"><span><b>40 Piezas Panko — oferta flash</b><span>30 pollo + 10 kanikama · precio del día</span></span><span class="bp">$8.990</span></label>
+<label><input type="radio" name="box" value="xl"><span><b>50 MIX XL Domingo</b><span>20 pollo + 20 kanikama + mix de la casa · precio a confirmar</span></span><span class="bp">Consultar</span></label>
+</div>
+<div class="qtyrow"><b>Cantidad</b>
+<span class="qty"><button type="button" id="qMinus" aria-label="Quitar uno">−</button><output id="qOut">1</output><button type="button" id="qPlus" aria-label="Agregar uno">+</button></span>
+<span style="color:var(--mut);font-size:13.5px">Máximo 10 cajas por pedido en esta demo.</span>
+</div>
+</div>
+<div class="totalbox"><small>Tu total</small><div class="tot" id="totOut">$8.990</div><p id="totNote">1 × 50 MIX — oferta de hoy</p>
+<a class="btn wa" id="builderBtn" href="https://wa.me/56964889459" target="_blank" rel="noopener">Enviar pedido por WhatsApp →</a></div>
+</div></div>
+</section>
+
+<section class="rv">
+<div class="eyebrow a">03 · Así funciona</div>
+<h2>Pedir de noche, <em>sin vueltas</em></h2>
+<div class="how">
+<div class="step"><span class="n">PASO 1</span><h3>Mira el tablero</h3><p>Las ofertas flash del día están arriba, con su precio de oferta. Duran hasta las 3 AM o hasta agotar stock.</p></div>
+<div class="step"><span class="n">PASO 2</span><h3>Toca y pide</h3><p>Cada oferta y el armador de cajas abren WhatsApp con tu pedido ya escrito. Solo confirmas y listo.</p></div>
+<div class="step"><span class="n">PASO 3</span><h3>Delivery en Coyhaique</h3><p>Tu sushi sale a domicilio en Coyhaique, Aysén. La noche patagónica, resuelta.</p></div>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">04 · Galería</div>
+<h2>Directo de <em>sus publicaciones</em></h2>
+<p class="sub">Fotos reales de las cajas de Carpe Diem, tomadas de sus propias publicaciones en Instagram y Facebook.</p>
+<div class="strip">
+<figure><img src="img/panko-close.jpg" alt="Rolls panko de Carpe Diem en primer plano"><figcaption>Panko, primer plano</figcaption></figure>
+<figure><img src="img/mix-top.jpg" alt="Caja mix de Carpe Diem vista desde arriba"><figcaption>La caja mix</figcaption></figure>
+<figure><img src="img/mix-flame.jpg" alt="Caja de 50 mix de Carpe Diem"><figcaption>50 mix</figcaption></figure>
+<figure><img src="img/offer-50mix.jpg" alt="Oferta 50 mix de Carpe Diem"><figcaption>Oferta de hoy</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow c">05 · Encuéntranos</div>
+<h2>Hasta hoy, <em>solo en redes</em></h2>
+<p class="sub">Carpe Diem no tiene ficha en Google ni página web: vive en Facebook e Instagram. Esta página reúne todo en un solo lugar.</p>
+<div class="social">
+<a class="scard" href="https://www.facebook.com/dilerien" target="_blank" rel="noopener"><b>Facebook</b><span>Carpediem Coyhaique · 4,1 mil seguidores</span><span class="go">Ir a Facebook →</span></a>
+<a class="scard" href="https://www.instagram.com/sushi_carpediem" target="_blank" rel="noopener"><b>Instagram</b><span>@sushi_carpediem · 1,5 mil seguidores</span><span class="go">Ir a Instagram →</span></a>
+</div>
+<div class="quote">
+<p>“Oferta flash hasta las 3 AM” no es un eslogan: es como Carpe Diem vende cada noche en Coyhaique. Esta página convierte esa energía en pedidos.</p>
+<small>Carpe Diem · Coyhaique, Aysén, Patagonia chilena</small>
+</div>
+</section>
+</div>
+
+<footer>
+Carpe Diem · Coyhaique, Aysén, Chile · WhatsApp +56 9 6488 9459 · <a href="https://www.instagram.com/sushi_carpediem" target="_blank" rel="noopener">@sushi_carpediem</a><br><br>
+Concept preview built by SiteSprint Studio.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20hacer%20un%20pedido">🌙 Pedir por WhatsApp — +56 9 6488 9459</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pregúntanos</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Asistente Carpe Diem">
+<div class="chatw-head"><div><b>Asistente Carpe Diem</b><small>Asistente demo · vista previa de concepto</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Cerrar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta…"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});items.forEach(function(e){io.observe(e)});}
+/* Box builder */
+var BOXES={
+mix50:{name:'50 MIX — oferta de hoy',price:8990,msg:'Hola Carpe Diem, quiero pedir: {q} × 50 MIX (oferta de hoy) — total ${t}'},
+panko40:{name:'40 Piezas Panko — oferta flash',price:8990,msg:'Hola Carpe Diem, quiero pedir: {q} × 40 Piezas Panko (30 pollo + 10 kanikama, oferta flash) — total ${t}'},
+xl:{name:'50 MIX XL Domingo',price:null,msg:'Hola Carpe Diem, quiero pedir: {q} × 50 MIX XL Domingo (20 pollo + 20 kanikama). ¿Me confirmas el precio de hoy?'}
+};
+var qty=1,cur='mix50';
+function fmt(n){return '$'+n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+function render(){
+var b=BOXES[cur];document.getElementById('qOut').textContent=qty;
+var tot=document.getElementById('totOut'),note=document.getElementById('totNote'),btn=document.getElementById('builderBtn');
+if(b.price){tot.textContent=fmt(b.price*qty);note.textContent=qty+' × '+b.name;}
+else{tot.textContent='A confirmar';note.textContent=qty+' × '+b.name+' · el precio se confirma por WhatsApp';}
+var text=b.msg.replace('{q}',qty).replace('{t}',b.price?fmt(b.price*qty).replace('$',''):'');
+btn.href='https://wa.me/56964889459?text='+encodeURIComponent(text);
+}
+document.querySelectorAll('input[name="box"]').forEach(function(r){r.addEventListener('change',function(){cur=r.value;render();});});
+document.getElementById('qPlus').addEventListener('click',function(){if(qty<10)qty++;render();});
+document.getElementById('qMinus').addEventListener('click',function(){if(qty>1)qty--;render();});
+render();
+})();
+</script>
+<script>
+(function(){
+var KB={"waLink":{"t":"Pedir por WhatsApp","href":"https://wa.me/56964889459"},"greeting":"¡Hola! Soy el asistente demo de Carpe Diem en Coyhaique. Pregúntame por las ofertas flash de hoy, las cajas panko, la XL del domingo o cómo pedir.","fallback":"Eso no lo tengo en esta demo — escríbenos por WhatsApp al +56 9 6488 9459 y te ayudamos.","chips":["¿Cuál es la oferta de hoy?","¿Qué trae el 50 MIX?","¿Cuánto cuestan las 40 Panko?","¿Qué es la XL del domingo?","¿Hasta qué hora hay ofertas?","¿Cómo pido?"],"items":[{"k":["50 mix xl","xl domingo","mix xl"],"a":"50 MIX XL Domingo: 20 de pollo y 20 de kanikama, más el mix de la casa hasta completar las 50. Es la edición domingo; el precio del día se confirma por WhatsApp.","link":{"t":"Preguntar por la XL","href":"https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20preguntar%20por%20el%2050%20MIX%20XL%20Domingo"}},{"k":["40 panko","piezas panko","panko"],"a":"40 Piezas Panko: 30 de pollo y 10 de kanikama. Oferta flash, precio del día: $8.990.","link":{"t":"Pedir las 40 Panko","href":"https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20pedir%20la%20oferta%20flash%3A%2040%20Piezas%20Panko%20por%20%248.990"}},{"k":["50 mix","mix"],"a":"Hoy: 50 MIX por $8.990. Es una caja de 50 piezas con 5 tipos de rolls: fritos/tempura, con palta y de arroz.","link":{"t":"Pedir el 50 MIX de hoy","href":"https://wa.me/56964889459?text=Hola%20Carpe%20Diem%2C%20quiero%20pedir%20la%20oferta%20de%20hoy%3A%2050%20MIX%20por%20%248.990"}}],"intents":[{"k":["hola","buenas"],"g":1,"a":"¡Hola! Pregúntame por la oferta de hoy, las panko o la XL del domingo."},{"k":["oferta","promo","flash","hoy","hay"],"a":"Ofertas del tablero: hoy, 50 MIX por $8.990 (5 tipos de rolls); oferta flash 40 Piezas Panko (30 pollo + 10 kanikama) por $8.990, precio del día; y la 50 MIX XL Domingo, con precio por WhatsApp. Las ofertas flash son hasta las 3 AM y hay pocas unidades disponibles."},{"k":["precio","cuesta","cuestan","cuanto","vale"],"a":"Precios de oferta: 50 MIX de hoy $8.990 y 40 Piezas Panko $8.990 (oferta flash, precio del día). La XL del domingo se confirma por WhatsApp. Ojo: las ofertas cambian constantemente."},{"k":["hora","3 am","noche","tarde","hasta"],"a":"Las ofertas flash de Carpe Diem son hasta las 3 AM — es su línea publicada: OFERTA FLASH HASTA LAS 3 AM. Pocas unidades disponibles."},{"k":["pedir","ordenar","comprar","quiero","delivery","domicilio"],"a":"Para pedir: toca Pedir en la oferta que quieres, o arma tu caja en el armador de esta página, y tu pedido llega a WhatsApp ya escrito. Delivery en Coyhaique.","link":{"t":"Pedir por WhatsApp","href":"https://wa.me/56964889459"}},{"k":["donde","coyhaique","aysen","patagonia","ubicacion"],"a":"Carpe Diem está en Coyhaique, Aysén, en la Patagonia chilena. Todo se pide por WhatsApp y es a domicilio; no publican una dirección de local."},{"k":["telefono","whatsapp","numero","contacto"],"a":"WhatsApp: +56 9 6488 9459. También están en Instagram como @sushi_carpediem y en Facebook como Carpediem Coyhaique.","link":{"t":"Escribir por WhatsApp","href":"https://wa.me/56964889459"}},{"k":["instagram","facebook","redes","seguidores"],"a":"En redes: Instagram @sushi_carpediem (1,5 mil seguidores) y Facebook Carpediem Coyhaique (4,1 mil seguidores). Hasta hoy se les encuentra solo por ahí: no tienen ficha en Google ni página web."},{"k":["gracias"],"a":"¡Con gusto! Que sea una buena noche de sushi en Coyhaique."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:KB.waLink};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+</body>
+</html>

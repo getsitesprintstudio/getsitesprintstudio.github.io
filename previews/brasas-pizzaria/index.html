@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRASA'S Pizzaria &amp; Hamburgueria — Uruçuí, PI | Pizza e burger na brasa</title>
+<meta name="description" content="BRASA'S Pizzaria & Hamburgueria em Uruçuí, PI: hambúrgueres artesanais a partir de R$ 17,50, pizza grande 35cm, combos em promoção e bebidas geladas. Todos os dias, 18h30 às 23h30. Peça pelo WhatsApp: (89) 99471-4789.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,600;1,9..144,900&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#0b0805;--coal2:#120d07;--panel:#1a1208;--panel2:#211709;--ember:#ff6a2a;--ember2:#e8490f;--amber:#ffb03a;--cream:#f7ecd8;--smoke:#bfae94;--wa:#22b358;--line:#33241217;--linel:#3a2812;--disp:"Fraunces",Georgia,serif;--sans:"Archivo",system-ui,sans-serif;--shadow:0 30px 60px rgba(0,0,0,.6)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--coal);color:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}::selection{background:var(--ember);color:#fff}img{max-width:100%}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}header.scrolled{background:rgba(11,8,5,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--linel);box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.hdr{max-width:1180px;margin:0 auto;padding:11px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--ember)}
+.brand b{font-family:var(--disp);font-weight:900;font-size:22px;line-height:1;letter-spacing:.01em}.brand b span{color:var(--ember)}.brand small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.3em;font-weight:800;color:var(--smoke);margin-top:3px}
+.opennow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:800;color:#fff;background:var(--panel);border:1px solid var(--linel);padding:7px 13px;border-radius:999px;white-space:nowrap}.odot{width:9px;height:9px;border-radius:50%;background:#666;flex-shrink:0}.opennow.open .odot{background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.18)}.opennow.closed .odot{background:var(--ember);box-shadow:0 0 0 4px rgba(255,106,42,.18)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#000}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;z-index:-2;opacity:.62;transform:scale(1.04)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,8,5,.82),rgba(11,8,5,.38) 46%,var(--coal) 98%),radial-gradient(70% 55% at 18% 88%,rgba(255,106,42,.28),transparent 65%)}
+.hero-in{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:clamp(140px,17vw,190px) 20px clamp(70px,9vw,96px)}
+.hero .kick{display:inline-flex;align-items:center;gap:10px;background:rgba(18,13,7,.85);border:1px solid var(--linel);border-radius:999px;padding:8px 16px;font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+.hero h1{font-family:var(--disp);font-weight:900;font-size:clamp(46px,8.6vw,92px);line-height:.98;margin:26px 0 8px;max-width:820px;color:#fff}.hero h1 em{font-style:italic;color:var(--amber);text-shadow:0 0 44px rgba(255,106,42,.55)}
+.hero p.lead{color:#efe3cb;max-width:560px;margin:16px 0 28px;font-size:clamp(16px,2vw,18.5px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:900;text-decoration:none;font-size:15.5px;transition:.25s;letter-spacing:.02em}.btn:hover{transform:translateY(-2px)}.btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px rgba(34,179,88,.3)}.btn.ember{background:linear-gradient(135deg,var(--ember),var(--ember2));color:#fff;box-shadow:0 14px 30px rgba(232,73,15,.35)}.btn.line{background:transparent;color:#fff;border:2px solid rgba(247,236,216,.45)}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.hero-meta span{background:rgba(18,13,7,.88);border:1px solid var(--linel);border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700}.hero-meta b{color:var(--amber)}
+.status-hero{max-width:640px;margin:26px 0 0;background:rgba(18,13,7,.92);border:1px solid var(--linel);border-left:6px solid var(--ember);border-radius:12px;padding:18px 22px;backdrop-filter:blur(8px)}
+.status-hero .big{font-family:var(--disp);font-weight:900;font-size:clamp(21px,3.2vw,30px);color:#fff}
+.status-hero .small{color:var(--smoke);font-size:14px;margin-top:3px}
+.marquee{border-top:1px solid var(--linel);border-bottom:1px solid var(--linel);background:var(--coal2);overflow:hidden;padding:13px 0}.marquee div{font-family:var(--disp);font-weight:900;font-size:15px;letter-spacing:.34em;color:rgba(255,176,58,.5);white-space:nowrap;text-align:center}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}section{padding:clamp(64px,9vw,100px) 0 4px}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:.3em;color:var(--ember);margin-bottom:14px;text-transform:uppercase}
+h2{font-family:var(--disp);font-weight:900;font-size:clamp(32px,4.8vw,50px);line-height:1.03;margin-bottom:12px;color:#fff}h2 em{font-style:italic;color:var(--amber)}
+.sub{color:var(--smoke);max-width:640px;margin:0 0 38px}
+.count{display:inline-flex;align-items:center;gap:12px;background:#000;border:1px dashed var(--amber);border-radius:12px;padding:12px 20px;margin-bottom:30px}.count small{font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)}.count b{font-family:var(--disp);font-weight:900;font-size:26px;color:var(--amber);font-variant-numeric:tabular-nums}
+.promos{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:760px){.promos{grid-template-columns:repeat(3,1fr)}}
+.promo{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--linel);border-radius:16px;overflow:hidden;transition:.3s;position:relative}.promo:hover{transform:translateY(-6px);border-color:var(--amber);box-shadow:var(--shadow)}
+.promo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.promo .off{position:absolute;top:14px;left:14px;background:var(--ember);color:#fff;font-weight:900;font-size:12.5px;padding:7px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+.promo-in{padding:22px}.promo h3{font-family:var(--disp);font-weight:900;font-size:23px;color:#fff;line-height:1.15}.promo p{font-size:14px;color:var(--smoke);margin:7px 0 12px}
+.was{color:var(--smoke);text-decoration:line-through;font-size:14.5px;font-weight:700}.now{font-size:27px;font-weight:900;color:var(--amber)}
+.ord{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;background:var(--wa);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;font-size:15px;transition:.2s;margin-top:14px}.ord:hover{background:#178a44}.ord.sm{width:auto;min-height:40px;padding:8px 18px;font-size:13.5px;margin-top:0}
+.builder{background:linear-gradient(150deg,#201304,#120c05);border:1px solid var(--amber);border-radius:18px;padding:clamp(24px,4vw,42px);box-shadow:12px 12px 0 rgba(232,73,15,.55)}
+.builder h3{font-family:var(--disp);font-weight:900;color:#fff;font-size:clamp(23px,3.4vw,33px);line-height:1.08}
+.builder .bsub{color:var(--smoke);margin:10px 0 24px;max-width:640px}
+.bcat{font-size:11.5px;font-weight:900;letter-spacing:.22em;color:var(--amber);text-transform:uppercase;margin:24px 0 10px}.bcat:first-of-type{margin-top:0}
+.brow{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--linel);border-radius:12px;padding:15px 18px;margin-bottom:11px}
+.brow .binfo b{display:block;color:#fff;font-size:16.5px}.brow .binfo span{color:var(--smoke);font-size:13px}.brow .bprice{color:var(--amber);font-weight:900;white-space:nowrap}.brow .bprice s{color:var(--smoke);font-weight:600;font-size:13px;margin-right:6px}
+.stepper{display:inline-flex;align-items:center;gap:4px;background:#000;border:1px solid var(--linel);border-radius:999px;padding:4px}
+.stepper button{width:42px;height:42px;border-radius:50%;border:none;background:var(--ember);color:#fff;font-size:22px;font-weight:900;cursor:pointer;line-height:1}.stepper button.minus{background:#3a2a16}
+.stepper .qty{min-width:36px;text-align:center;font-weight:900;font-size:17px;color:#fff}
+.btotal{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:20px;background:#000;border:1px dashed var(--amber);border-radius:12px;padding:18px 20px}
+.btotal b{font-family:var(--disp);font-weight:900;font-size:clamp(21px,3vw,29px);color:var(--amber)}
+.btotal span{color:var(--smoke);font-size:13px;display:block}
+#builderWa{opacity:.45;pointer-events:none}#builderWa.on{opacity:1;pointer-events:auto}
+.ask{text-align:left;font-size:13px;color:var(--smoke);margin-top:16px}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:700px){.menu-grid{grid-template-columns:repeat(2,1fr)}@media(min-width:1020px){.menu-grid{grid-template-columns:repeat(3,1fr)}}}
+.dish{background:var(--panel);border:1px solid var(--linel);border-radius:16px;overflow:hidden;transition:.3s}.dish:hover{transform:translateY(-6px);border-color:var(--amber);box-shadow:var(--shadow)}
+.dish img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.dish-in{padding:20px 22px 22px}.dish .tag{font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--ember);text-transform:uppercase}.dish h3{font-family:var(--disp);font-weight:900;font-size:23px;color:#fff;margin:5px 0 5px;line-height:1.15}.dish p{font-size:14px;color:var(--smoke);margin-bottom:8px}.dish .price{font-size:22px;font-weight:900;color:var(--amber)}.dish .price s{color:var(--smoke);font-size:15px;font-weight:600;margin-right:7px}
+.mcat{font-family:var(--disp);font-weight:900;color:#fff;font-size:clamp(21px,2.8vw,27px);margin:40px 0 14px}.mcat span{color:var(--ember);font-style:italic}
+.items{display:grid;grid-template-columns:1fr;gap:12px}@media(min-width:700px){.items{grid-template-columns:repeat(2,1fr)}}
+.item{display:flex;justify-content:space-between;gap:14px;background:var(--panel);border:1px solid var(--linel);border-radius:12px;padding:16px 18px;transition:.25s}.item:hover{border-color:var(--amber);transform:translateY(-3px)}
+.item h4{color:#fff;font-size:16.5px;line-height:1.3}.item p{color:var(--smoke);font-size:13.5px;margin-top:3px}
+.iside{text-align:right;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;gap:10px;flex-shrink:0}.iside .price{color:var(--amber);font-weight:900;font-size:17px;white-space:nowrap}.iside .price s{color:var(--smoke);font-size:13px;font-weight:600;display:block}
+.pizza{display:grid;grid-template-columns:1fr;gap:0;background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--linel);border-radius:18px;overflow:hidden}@media(min-width:820px){.pizza{grid-template-columns:340px 1fr}}
+.pizza img{width:100%;height:100%;max-height:340px;object-fit:cover;display:block}@media(min-width:820px){.pizza img{max-height:none}}
+.pizza-in{padding:clamp(24px,4vw,40px)}.pizza-in h3{font-family:var(--disp);font-weight:900;font-size:clamp(26px,3.6vw,38px);color:#fff;line-height:1.08}.pizza-in p{color:var(--smoke);margin:12px 0 20px;max-width:520px}
+.pizza .ord{max-width:340px}
+.cal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:820px){.cal{grid-template-columns:repeat(7,1fr)}}
+.day{border:1px solid var(--linel);background:var(--coal2);border-radius:12px;padding:16px 12px;text-align:center}.day b{display:block;font-size:14px;color:#fff}.day span{font-size:12px;color:var(--smoke);display:block;margin-top:4px;line-height:1.45}.day.today{border-color:var(--amber);box-shadow:0 0 0 3px rgba(255,176,58,.18)}.day.today b{color:var(--amber)}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:860px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;display:block}.strip figcaption{text-align:center;font-size:12.5px;color:var(--smoke);margin-top:8px;font-weight:600}
+.mapframe{border-radius:14px;overflow:hidden;border:1px solid var(--linel);box-shadow:var(--shadow);margin-top:8px}.mapframe iframe{width:100%;height:360px;border:0;display:block}
+.addr{color:var(--smoke);margin-bottom:18px}.addr b{color:var(--cream)}
+.infoband{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.infoband span{background:var(--panel);border:1px solid var(--linel);border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;color:var(--cream)}.infoband b{color:var(--amber)}.infoband a{color:var(--amber);text-decoration:none}
+footer{padding:38px 20px 118px;text-align:center;color:var(--smoke);font-size:13px;max-width:1180px;margin:56px auto 0;border-top:1px solid var(--linel)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(11,8,5,.97);border-top:2px solid var(--ember);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.sticky a{display:flex;max-width:1180px;margin:0 auto;min-height:54px;align-items:center;justify-content:center;background:var(--wa);color:#fff;border-radius:999px;text-decoration:none;font-weight:900}
+.rv{opacity:0;transform:translateY(20px);transition:.7s}.rv.in{opacity:1;transform:none}
+.chatw{position:fixed;right:16px;bottom:88px;z-index:90}.chatw-btn{background:linear-gradient(135deg,var(--ember),var(--ember2));color:#fff;border:none;cursor:pointer;font:inherit;font-weight:900;padding:13px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.4);min-height:48px}
+.chatw-panel{position:fixed;right:16px;bottom:148px;width:min(92vw,362px);max-height:min(62vh,540px);background:#fffaf0;border:1px solid var(--linel);border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;z-index:91;color:#241708}.chatw-panel.open{display:flex}
+.chatw-head{background:#17100a;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;gap:10px}.chatw-head small{opacity:.85;font-size:11.5px;display:block}.chatw-x{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#ffe9c9;align-self:flex-start}.msg.user{background:var(--ember2);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
+.chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #ecd9ae;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #eee2c8}.chatw-form input{flex:1;border:1px solid #ddd;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--ember2);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header id="hdr"><div class="hdr">
+<a class="brand" href="#"><img src="img/logo.webp" alt="Logo da BRASA'S Pizzaria e Hamburgueria"><span><b>BRASA<span>'S</span></b><small>PIZZARIA &amp; HAMBURGUERIA · URUÇUÍ</small></span></a>
+<span class="opennow" id="opennow" hidden><span class="odot"></span><span class="otext"></span></span>
+</div></header>
+
+<div class="hero">
+<img class="hero-img" src="img/cheddar-bacon.webp" alt="Cheddar Bacon da BRASA'S Pizzaria e Hamburgueria, em Uruçuí">
+<div class="hero-in">
+<span class="kick">🔥 Na brasa, em Uruçuí · PI</span>
+<h1>Descubra um novo <em>grau de sabor</em></h1>
+<p class="lead">Hambúrguer artesanal no pão de batata, pizza grande de 35cm e combos que salvam a noite — feitos na brasa, todos os dias, em frente à Praça da Câmara Municipal.</p>
+<div class="actions">
+<a class="btn ember" href="#pedir">Montar meu pedido</a>
+<a class="btn line" href="#promocoes">Ver promoções</a>
+</div>
+<div class="hero-meta">
+<span>🕡 Todos os dias · <b>18h30 às 23h30</b></span>
+<span>🍔 Burgers a partir de <b>R$ 17,50</b></span>
+<span>📸 <b>@brasasburguer_</b> · 4.582 seguidores</span>
+</div>
+<div class="status-hero" id="statusHero" hidden>
+<div class="big" id="statusBig">…</div>
+<div class="small" id="statusSmall">…</div>
+</div>
+</div>
+</div>
+<div class="marquee"><div>BRASA · PIZZA · BURGER · URUÇUÍ · BRASA · PIZZA · BURGER · URUÇUÍ · BRASA · PIZZA · BURGER</div></div>
+
+<div class="wrap">
+<section id="promocoes" class="rv">
+<div class="eyebrow">01 · Promoções</div>
+<h2>Combos que <em>salvam a noite</em></h2>
+<p class="sub">As promoções da casa, com preço de verdade: o que era, o que ficou. Quando o cronômetro zera, a cozinha fecha — 23h30.</p>
+<div class="count"><small>As promos de hoje acabam em</small><b id="countdown">--:--:--</b></div>
+<div class="promos">
+<article class="promo"><img src="img/kit.webp" alt="Kit Salva Vida da BRASA'S: dois Cheddar Bacon, um X-Salada e Guaraná 1L"><span class="off">−12% hoje</span><div class="promo-in"><h3>Kit Salva Vida</h3><p>2× Cheddar Bacon + 1 X-Salada + Guaraná 1L. O combo família da casa.</p><span class="was">R$ 77,50</span><br><span class="now">R$ 68,00</span><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Kit%20Salva%20Vida%20(R%24%2068%2C00)">Pedir o Kit →</a></div></article>
+<article class="promo"><img src="img/especial.webp" alt="Dois Especial da Casa da BRASA'S"><span class="off">−10% hoje</span><div class="promo-in"><h3>Dois Especial da Casa</h3><p>Dois Especial da Casa: blend, molho cheddar, calabresa, cebola caramelizada e molho da casa no pão de batata.</p><span class="was">R$ 50,00</span><br><span class="now">R$ 45,00</span><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Dois%20Especial%20da%20Casa%20(R%24%2045%2C00)">Pedir os dois →</a></div></article>
+<article class="promo"><img src="img/p-kit2.webp" alt="Cheddar Bacon com Guaraná 350ml da BRASA'S"><span class="off">−10% hoje</span><div class="promo-in"><h3>Cheddar Bacon + Guaraná 350ml</h3><p>O queridinho da casa com a latinha gelada do lado. Simples assim.</p><span class="was">R$ 31,00</span><br><span class="now">R$ 28,00</span><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Cheddar%20Bacon%20%2B%20Guaran%C3%A1%20350ml%20(R%24%2028%2C00)">Pedir o combo →</a></div></article>
+</div>
+</section>
+
+<section id="pedir" class="rv">
+<div class="eyebrow">02 · Peça em um toque</div>
+<h2>Monte seu <em>pedido</em></h2>
+<p class="sub">Cardápio completo com os preços reais da BRASA'S. Escolha as quantidades com + e −, confira o total e envie: o pedido chega pronto no WhatsApp da casa.</p>
+<div class="builder">
+<h3>Seu pedido</h3>
+<p class="bsub">Ao terminar, toque no botão verde e seu pedido chega já escrito no WhatsApp (89) 99471-4789.</p>
+<div id="builderCats"></div>
+<div class="btotal"><div><span>Total</span><b id="bTotal">R$ 0,00</b></div><a class="btn wa" id="builderWa" href="https://wa.me/5589994714789" target="_blank" rel="noopener">Enviar pedido por WhatsApp →</a></div>
+<p class="ask">Preços do cardápio on-line da BRASA'S. Pizza Grande 35cm não entra no montador porque o preço é consultado no WhatsApp — veja o cartão da pizza logo abaixo do cardápio.</p>
+</div>
+</section>
+
+<section id="cardapio" class="rv">
+<div class="eyebrow">03 · Cardápio</div>
+<h2>Os favoritos <em>da brasa</em></h2>
+<p class="sub">Fotos reais publicadas pela BRASA'S. Toque em Pedir em qualquer item e a mensagem chega pronta no WhatsApp.</p>
+<div class="menu-grid">
+<article class="dish"><img src="img/cheddar-bacon.webp" alt="Cheddar Bacon da BRASA'S"><div class="dish-in"><div class="tag">O queridinho</div><h3>Cheddar Bacon</h3><p>Pão de batata, alface, tomate, blend, queijo mussarela, molho cheddar, bacon, cebola caramelizada, barbecue e molho branco.</p><div class="price">R$ 25,00</div><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Cheddar%20Bacon%20(R%24%2025%2C00)">Pedir →</a></div></article>
+<article class="dish"><img src="img/jogador-caro.webp" alt="Jogador Caro da BRASA'S"><div class="dish-in"><div class="tag">Assinatura da casa</div><h3>Jogador Caro</h3><p>Pão de batata, barbecue, blend, queijo mussarela duplo, catupiry com molho cheddar e recheio de carne seca.</p><div class="price">R$ 25,00</div><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Jogador%20Caro%20(R%24%2025%2C00)">Pedir →</a></div></article>
+<article class="dish"><img src="img/x-duplo.webp" alt="X-Duplo da BRASA'S"><div class="dish-in"><div class="tag">Para fome grande</div><h3>X-Duplo</h3><p>Pão de batata, alface, tomate, ovo, blend, frango desfiado bem temperado, queijo mussarela, molho cheddar, bacon e molho da casa.</p><div class="price">R$ 28,00</div><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Duplo%20(R%24%2028%2C00)">Pedir →</a></div></article>
+<article class="dish"><img src="img/x-bacon.webp" alt="X-Bacon da BRASA'S"><div class="dish-in"><div class="tag">Clássico</div><h3>X-Bacon</h3><p>Pão de batata, blend, queijo mussarela, bacon, barbecue e molho da casa.</p><div class="price">R$ 22,00</div><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Bacon%20(R%24%2022%2C00)">Pedir →</a></div></article>
+<article class="dish"><img src="img/x-franbacon.webp" alt="X-Franbacon da BRASA'S"><div class="dish-in"><div class="tag">Frango + bacon</div><h3>X-Franbacon</h3><p>Pão de batata, alface, tomate, frango desfiado bem temperado, queijo mussarela, bacon, barbecue e molho branco.</p><div class="price">R$ 22,00</div><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Franbacon%20(R%24%2022%2C00)">Pedir →</a></div></article>
+<article class="dish"><img src="img/cheddar2.webp" alt="Hambúrguer artesanal da BRASA'S"><div class="dish-in"><div class="tag">Promo da casa</div><h3>Duplo Cheddar Picanha</h3><p>Pão de batata, salada, 2 blends, 2 queijos mussarela, 2 molhos cheddar, bacon, cebola caramelizada e molho branco.</p><div class="price"><s>R$ 29,00</s>R$ 26,99</div><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Duplo%20Cheddar%20Picanha%20(R%24%2026%2C99)">Pedir →</a></div></article>
+</div>
+
+<h3 class="mcat">Hambúrgueres <span>· cardápio completo</span></h3>
+<div class="items">
+<article class="item"><div><h4>X-Salada</h4><p>Pão de batata, blend, queijo mussarela, molho da casa, alface e tomate</p></div><div class="iside"><div class="price">R$ 17,50</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Salada%20(R%24%2017%2C50)">Pedir →</a></div></article>
+<article class="item"><div><h4>X-Bacon</h4><p>Pão de batata, blend, queijo mussarela, bacon, barbecue e molho da casa</p></div><div class="iside"><div class="price">R$ 22,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Bacon%20(R%24%2022%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>X-Franbacon</h4><p>Frango desfiado temperado, queijo mussarela, bacon, barbecue e molho branco</p></div><div class="iside"><div class="price">R$ 22,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Franbacon%20(R%24%2022%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Vip Burguer</h4><p>Pão de batata, molho barbecue, blend, 2 queijos mussarela e salada especial com molho caseiro</p></div><div class="iside"><div class="price">R$ 24,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Vip%20Burguer%20(R%24%2024%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Cheddar Bacon</h4><p>Blend, queijo mussarela, molho cheddar, bacon, cebola caramelizada, barbecue e molho branco</p></div><div class="iside"><div class="price">R$ 25,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Cheddar%20Bacon%20(R%24%2025%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Jogador Caro</h4><p>Blend, queijo mussarela duplo, catupiry com molho cheddar e recheio de carne seca</p></div><div class="iside"><div class="price">R$ 25,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Jogador%20Caro%20(R%24%2025%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Especial da Casa</h4><p>Pão de batata, salada, blend, queijo mussarela, molho cheddar, calabresa, cebola caramelizada e molho branco</p></div><div class="iside"><div class="price">R$ 25,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Especial%20da%20Casa%20(R%24%2025%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Geleia de Pimenta</h4><p>Blend bovino suculento, queijo mussarela duplo derretido, catupiry cremoso e geleia de pimenta — cremosidade, sabor e um toque picante</p></div><div class="iside"><div class="price">R$ 23,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Geleia%20de%20Pimenta%20(R%24%2023%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>X-Duplo</h4><p>Blend, frango desfiado temperado, ovo, queijo mussarela, molho cheddar, bacon e molho da casa</p></div><div class="iside"><div class="price">R$ 28,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Duplo%20(R%24%2028%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Duplo Cheddar Picanha</h4><p>2 blends, 2 queijos mussarela, 2 molhos cheddar, bacon e cebola caramelizada — em promoção</p></div><div class="iside"><div class="price"><s>R$ 29,00</s>R$ 26,99</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Duplo%20Cheddar%20Picanha%20(R%24%2026%2C99)">Pedir →</a></div></article>
+</div>
+
+<h3 class="mcat">Pizza <span>· 35cm</span></h3>
+<div class="pizza">
+<img src="img/pizza.webp" alt="Pizza Grande 35cm da BRASA'S Pizzaria e Hamburgueria">
+<div class="pizza-in"><h3>Pizza Grande 35cm</h3><p>A pizza da casa, grande de verdade: 35cm, em 1 ou 2 sabores. Os sabores e o preço do dia são confirmados direto no WhatsApp — sem chute, sem surpresa.</p><a class="ord" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20saber%20os%20sabores%20e%20o%20pre%C3%A7o%20da%20Pizza%20Grande%2035cm">Consultar sabores e preço →</a></div>
+</div>
+
+<h3 class="mcat">Bebidas <span>· geladas</span></h3>
+<div class="items">
+<article class="item"><div><h4>Coca-Cola 350ml</h4><p>Lata 350ml</p></div><div class="iside"><div class="price">R$ 6,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Coca-Cola%20350ml%20(R%24%206%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Guaraná 350ml</h4><p>Lata 350ml</p></div><div class="iside"><div class="price">R$ 6,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Guaran%C3%A1%20350ml%20(R%24%206%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Guaraná 1L</h4><p>Garrafa 1 litro</p></div><div class="iside"><div class="price">R$ 10,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Guaran%C3%A1%201L%20(R%24%2010%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Coca-Cola 2L</h4><p>Garrafa 2 litros</p></div><div class="iside"><div class="price">R$ 15,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Coca-Cola%202L%20(R%24%2015%2C00)">Pedir →</a></div></article>
+<article class="item"><div><h4>Guaraná 2L</h4><p>Garrafa 2 litros</p></div><div class="iside"><div class="price">R$ 15,00</div><a class="ord sm" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Guaran%C3%A1%202L%20(R%24%2015%2C00)">Pedir →</a></div></article>
+</div>
+</section>
+
+<section id="horario" class="rv">
+<div class="eyebrow">04 · Horário</div>
+<h2>Todo dia, <em>no cair da noite</em></h2>
+<p class="sub">A BRASA'S abre todos os dias, das 18h30 às 23h30 — o horário do jantar em Uruçuí.</p>
+<div class="cal" id="cal"></div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">05 · Galeria</div>
+<h2>Direto <em>da brasa</em></h2>
+<p class="sub">Fotos reais publicadas pela BRASA'S Pizzaria &amp; Hamburgueria.</p>
+<div class="strip">
+<figure><img src="img/extra1.webp" alt="Hambúrguer artesanal da BRASA'S"><figcaption>Artesanal, sempre</figcaption></figure>
+<figure><img src="img/extra2.webp" alt="Hambúrguer da BRASA'S em Uruçuí"><figcaption>Feito na hora</figcaption></figure>
+<figure><img src="img/extra3.webp" alt="Combo da BRASA'S"><figcaption>Combos da casa</figcaption></figure>
+<figure><img src="img/combo-dois.webp" alt="Burger da BRASA'S"><figcaption>Capricho em cada camada</figcaption></figure>
+</div>
+</section>
+
+<section class="rv">
+<div class="eyebrow">06 · Onde estamos</div>
+<h2>Em Uruçuí, <em>na praça</em></h2>
+<div class="infoband"><span>📍 Em frente à <b>Praça da Câmara Municipal</b></span><span>🕡 Todos os dias · <b>18h30–23h30</b></span><span>📸 Instagram: <a href="https://www.instagram.com/brasasburguer_" target="_blank" rel="noopener"><b>@brasasburguer_</b></a></span></div>
+<p class="addr">Estamos na <b>Rua Almir Benvindo, 243, Uruçuí, PI</b> — em frente à Praça da Câmara Municipal. Peça pelo WhatsApp (89) 99471-4789.</p>
+<div class="mapframe"><iframe title="Mapa — BRASA'S Pizzaria e Hamburgueria, Rua Almir Benvindo, 243, Uruçuí, PI" src="https://www.google.com/maps?q=Rua%20Almir%20Benvindo%2C%20243%2C%20Uru%C3%A7u%C3%AD%2C%20PI%2C%20Brasil&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div style="text-align:center;margin-top:26px"><a class="btn wa" href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20fazer%20um%20pedido">Pedir por WhatsApp — (89) 99471-4789</a></div>
+</section>
+</div>
+
+<footer>
+BRASA'S Pizzaria &amp; Hamburgueria · Rua Almir Benvindo, 243, Uruçuí, PI · WhatsApp +55 89 99471-4789<br><br>
+Concept preview built by SiteSprint Studio.
+</footer>
+
+<div class="sticky"><a href="https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20fazer%20um%20pedido">🔥 Pedir por WhatsApp — (89) 99471-4789</a></div>
+
+<div class="chatw">
+<button class="chatw-btn" id="chatwBtn" type="button" aria-haspopup="dialog" aria-expanded="false">💬 Pergunte aqui</button>
+<div class="chatw-panel" id="chatwPanel" role="dialog" aria-label="Assistente BRASA'S">
+<div class="chatw-head"><div><b>Assistente BRASA'S</b><small>Assistente demo · prévia de conceito</small></div><button class="chatw-x" id="chatwClose" type="button" aria-label="Fechar">&times;</button></div>
+<div class="chatw-msgs" id="chatwMsgs"></div>
+<div class="chatw-chips" id="chatwChips"></div>
+<form class="chatw-form" id="chatwForm"><input id="chatwInput" type="text" autocomplete="off" placeholder="Escreva sua pergunta…" aria-label="Escreva sua pergunta"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+</div>
+</div>
+
+<script>
+(function(){
+var hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40)}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var rv=document.querySelectorAll('.rv');var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce||!('IntersectionObserver' in window)){rv.forEach(function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});rv.forEach(function(e){io.observe(e)});}
+/* Fortaleza clock: open 18:30-23:30 daily */
+function fortNow(){try{return new Date(new Date().toLocaleString('en-US',{timeZone:'America/Fortaleza'}));}catch(e){return new Date();}}
+function updateOpen(){
+var n=fortNow(),mins=n.getHours()*60+n.getMinutes(),open=mins>=1110&&mins<1410;
+var badge=document.getElementById('opennow'),hero=document.getElementById('statusHero');
+if(badge){badge.hidden=false;badge.className='opennow '+(open?'open':'closed');badge.querySelector('.otext').textContent=open?'Aberto agora · até 23h30':'Fechado · abre às 18h30';}
+if(hero){hero.hidden=false;document.getElementById('statusBig').textContent=open?'🟢 Aberto agora — a brasa está acesa':'🔴 Fechado no momento';document.getElementById('statusSmall').textContent=open?'Funcionamos hoje até às 23h30. Monte seu pedido e envie pelo WhatsApp.':'Abrimos todos os dias às 18h30 e vamos até às 23h30. Deixe seu pedido pronto no WhatsApp.';}
+var cd=document.getElementById('countdown');
+if(cd){var t=new Date(n.getTime());t.setHours(23,30,0,0);if(n>t)t.setDate(t.getDate()+1);var d=Math.max(0,t-n),h=Math.floor(d/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);cd.textContent=(h<10?'0':'')+h+':'+(m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+}
+updateOpen();setInterval(updateOpen,1000);
+/* Week calendar */
+(function(){
+var cal=document.getElementById('cal');if(!cal)return;
+var today=fortNow().getDay();
+var plan=[{n:'Domingo'},{n:'Segunda'},{n:'Terça'},{n:'Quarta'},{n:'Quinta'},{n:'Sexta'},{n:'Sábado'}];
+[1,2,3,4,5,6,0].forEach(function(d){var div=document.createElement('div');div.className='day'+(d===today?' today':'');var b=document.createElement('b');b.textContent=plan[d].n+(d===today?' · hoje':'');var s=document.createElement('span');s.textContent='18h30 – 23h30';div.appendChild(b);div.appendChild(s);cal.appendChild(div);});
+})();
+/* Order builder — single data source, prices in centavos */
+var CATS=[
+{c:'Promoções e combos',items:[
+{k:'kit',n:'Kit Salva Vida',d:'2× Cheddar Bacon + 1 X-Salada + Guaraná 1L',p:6800,w:7750},
+{k:'doisesp',n:'Dois Especial da Casa',d:'Dois burgers Especial da Casa',p:4500,w:5000},
+{k:'cheddarguar',n:'Cheddar Bacon + Guaraná 350ml',d:'Cheddar Bacon com Guaraná lata 350ml',p:2800,w:3100}]},
+{c:'Hambúrgueres',items:[
+{k:'xsalada',n:'X-Salada',d:'Blend, queijo mussarela, molho da casa, alface e tomate',p:1750},
+{k:'xbacon',n:'X-Bacon',d:'Blend, queijo mussarela, bacon, barbecue e molho da casa',p:2200},
+{k:'xfran',n:'X-Franbacon',d:'Frango desfiado temperado, queijo mussarela, bacon e barbecue',p:2200},
+{k:'vip',n:'Vip Burguer',d:'Blend, 2 queijos mussarela, barbecue e salada especial',p:2400},
+{k:'cheddar',n:'Cheddar Bacon',d:'Blend, molho cheddar, bacon e cebola caramelizada',p:2500},
+{k:'jogador',n:'Jogador Caro',d:'Queijo mussarela duplo, catupiry com cheddar e carne seca',p:2500},
+{k:'especial',n:'Especial da Casa',d:'Blend, molho cheddar, calabresa e cebola caramelizada',p:2500},
+{k:'geleia',n:'Geleia de Pimenta',d:'Blend, mussarela dupla, catupiry e geleia de pimenta',p:2300},
+{k:'xduplo',n:'X-Duplo',d:'Blend, frango desfiado, ovo, cheddar e bacon',p:2800},
+{k:'picanha',n:'Duplo Cheddar Picanha',d:'2 blends, 2 mussarela, 2 cheddar, bacon — em promoção',p:2699,w:2900}]},
+{c:'Bebidas',items:[
+{k:'coca350',n:'Coca-Cola 350ml',d:'Lata 350ml',p:600},
+{k:'guar350',n:'Guaraná 350ml',d:'Lata 350ml',p:600},
+{k:'guar1l',n:'Guaraná 1L',d:'Garrafa 1 litro',p:1000},
+{k:'coca2l',n:'Coca-Cola 2L',d:'Garrafa 2 litros',p:1500},
+{k:'guar2l',n:'Guaraná 2L',d:'Garrafa 2 litros',p:1500}]}];
+var ITEMS={},qty={};CATS.forEach(function(c){c.items.forEach(function(it){ITEMS[it.k]=it;qty[it.k]=0;});});
+function fmt(c){return 'R$ '+(c/100).toFixed(2).replace('.',',');}
+var host=document.getElementById('builderCats');
+CATS.forEach(function(c){
+var h=document.createElement('div');h.className='bcat';h.textContent=c.c;host.appendChild(h);
+c.items.forEach(function(it){
+var row=document.createElement('div');row.className='brow';
+var info=document.createElement('div');info.className='binfo';var b=document.createElement('b');b.textContent=it.n;var sp=document.createElement('span');sp.textContent=it.d;info.appendChild(b);info.appendChild(sp);
+var right=document.createElement('div');right.style.display='flex';right.style.alignItems='center';right.style.gap='14px';
+var pr=document.createElement('span');pr.className='bprice';if(it.w){var s=document.createElement('s');s.textContent=fmt(it.w);pr.appendChild(s);}pr.appendChild(document.createTextNode(fmt(it.p)));
+var st=document.createElement('span');st.className='stepper';
+var minus=document.createElement('button');minus.type='button';minus.className='minus';minus.textContent='−';minus.setAttribute('aria-label','Tirar '+it.n);
+var q=document.createElement('span');q.className='qty';q.id='qty-'+it.k;q.textContent='0';
+var plus=document.createElement('button');plus.type='button';plus.textContent='+';plus.setAttribute('aria-label','Adicionar '+it.n);
+minus.addEventListener('click',function(){qty[it.k]=Math.max(0,qty[it.k]-1);render();});
+plus.addEventListener('click',function(){qty[it.k]=Math.min(99,qty[it.k]+1);render();});
+st.appendChild(minus);st.appendChild(q);st.appendChild(plus);
+right.appendChild(pr);right.appendChild(st);row.appendChild(info);row.appendChild(right);host.appendChild(row);
+});});
+var totalEl=document.getElementById('bTotal'),wa=document.getElementById('builderWa');
+function render(){var total=0,count=0;Object.keys(qty).forEach(function(k){total+=qty[k]*ITEMS[k].p;count+=qty[k];var el=document.getElementById('qty-'+k);if(el)el.textContent=qty[k];});totalEl.textContent=fmt(total);if(count===0){wa.classList.remove('on');wa.href='https://wa.me/5589994714789';return;}var lines=["Olá, BRASA'S! Quero fazer um pedido:"];Object.keys(qty).forEach(function(k){if(qty[k]>0)lines.push(qty[k]+' x '+ITEMS[k].n+' — '+fmt(ITEMS[k].p));});lines.push('Total: '+fmt(total));wa.href='https://wa.me/5589994714789?text='+encodeURIComponent(lines.join('\n'));wa.classList.add('on');}
+render();
+})();
+</script>
+<script>
+(function(){
+var WA='https://wa.me/5589994714789';
+var KB={"greeting":"Olá! Sou o assistente da BRASA'S Pizzaria & Hamburgueria, em Uruçuí. Pergunte sobre o cardápio, os preços, as promoções, a pizza, o horário ou o endereço.","fallback":"Isso eu não tenho aqui — chame a gente no WhatsApp (89) 99471-4789 que respondemos rapidinho.","chips":["Quais são as promoções?","Quanto custa o Cheddar Bacon?","Tem pizza?","Qual o horário?","Onde fica?","Como faço um pedido?"],"items":[
+{"k":["kit salva vida","kit"],"a":"Kit Salva Vida — R$ 68,00 (era R$ 77,50). São 2 Cheddar Bacon + 1 X-Salada + 1 Guaraná 1L.","link":{"t":"Pedir o Kit Salva Vida","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Kit%20Salva%20Vida%20(R%24%2068%2C00)"}},
+{"k":["x-salada","x salada","salada"],"a":"X-Salada — R$ 17,50. Pão de batata, blend, queijo mussarela, molho da casa, alface e tomate. É o burger mais em conta da casa.","link":{"t":"Pedir X-Salada","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Salada%20(R%24%2017%2C50)"}},
+{"k":["franbacon"],"a":"X-Franbacon — R$ 22,00. Frango desfiado bem temperado, queijo mussarela, bacon, barbecue e molho branco no pão de batata.","link":{"t":"Pedir X-Franbacon","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Franbacon%20(R%24%2022%2C00)"}},
+{"k":["x-bacon","x bacon"],"a":"X-Bacon — R$ 22,00. Pão de batata, blend, queijo mussarela, bacon, barbecue e molho da casa.","link":{"t":"Pedir X-Bacon","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Bacon%20(R%24%2022%2C00)"}},
+{"k":["vip"],"a":"Vip Burguer — R$ 24,00. Molho barbecue, blend, 2 queijos mussarela e salada especial com molho caseiro.","link":{"t":"Pedir Vip Burguer","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Vip%20Burguer%20(R%24%2024%2C00)"}},
+{"k":["cheddar bacon","cheddar"],"a":"Cheddar Bacon — R$ 25,00. Blend, queijo mussarela, molho cheddar, bacon, cebola caramelizada, barbecue e molho branco. Tem também o combo Cheddar Bacon + Guaraná 350ml por R$ 28,00 (era R$ 31,00).","link":{"t":"Pedir Cheddar Bacon","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Cheddar%20Bacon%20(R%24%2025%2C00)"}},
+{"k":["jogador"],"a":"Jogador Caro — R$ 25,00. Blend, queijo mussarela duplo, catupiry com molho cheddar e recheio de carne seca.","link":{"t":"Pedir Jogador Caro","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Jogador%20Caro%20(R%24%2025%2C00)"}},
+{"k":["especial da casa","especial"],"a":"Especial da Casa — R$ 25,00: blend, queijo mussarela, molho cheddar, calabresa, cebola caramelizada e molho branco. E tem a promo Dois Especial da Casa por R$ 45,00 (era R$ 50,00).","link":{"t":"Pedir Especial da Casa","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Especial%20da%20Casa%20(R%24%2025%2C00)"}},
+{"k":["geleia","pimenta","picante"],"a":"Geleia de Pimenta — R$ 23,00. Blend bovino, queijo mussarela duplo, catupiry cremoso e geleia de pimenta: cremosidade com um toque picante.","link":{"t":"Pedir Geleia de Pimenta","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Geleia%20de%20Pimenta%20(R%24%2023%2C00)"}},
+{"k":["x-duplo","x duplo","duplo"],"a":"X-Duplo — R$ 28,00. Blend, frango desfiado temperado, ovo, queijo mussarela, molho cheddar, bacon e molho da casa.","link":{"t":"Pedir X-Duplo","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20X-Duplo%20(R%24%2028%2C00)"}},
+{"k":["picanha"],"a":"Duplo Cheddar Picanha — R$ 26,99 na promoção (era R$ 29,00). Dois blends, dois queijos mussarela, dois molhos cheddar, bacon e cebola caramelizada.","link":{"t":"Pedir Duplo Cheddar Picanha","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20pedir%3A%20Duplo%20Cheddar%20Picanha%20(R%24%2026%2C99)"}},
+{"k":["guarana","guaraná"],"a":"Guaraná: lata 350ml por R$ 6,00, garrafa 1L por R$ 10,00 e 2L por R$ 15,00.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["coca","refrigerante","bebida"],"a":"Bebidas: Coca-Cola 350ml e Guaraná 350ml por R$ 6,00; Guaraná 1L por R$ 10,00; Coca-Cola 2L e Guaraná 2L por R$ 15,00.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["hamburguer","hambúrguer","burger","lanche"],"a":"Hambúrgueres de R$ 17,50 a R$ 28,00: X-Salada (R$ 17,50), X-Bacon e X-Franbacon (R$ 22,00), Geleia de Pimenta (R$ 23,00), Vip Burguer (R$ 24,00), Cheddar Bacon, Jogador Caro e Especial da Casa (R$ 25,00), Duplo Cheddar Picanha (R$ 26,99 na promo) e X-Duplo (R$ 28,00). O cardápio completo está nesta página.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5589994714789"}}],"intents":[
+{"k":["ola","olá","oi","boa noite"],"g":1,"a":"Olá! Pergunte sobre o cardápio, as promoções, a pizza, o horário ou o endereço — ou monte seu pedido aqui na página."},
+{"k":["promo","combo","oferta","desconto"],"a":"Promoções: Kit Salva Vida (2 Cheddar Bacon + X-Salada + Guaraná 1L) por R$ 68,00 (era R$ 77,50); Dois Especial da Casa por R$ 45,00 (era R$ 50,00); Cheddar Bacon + Guaraná 350ml por R$ 28,00 (era R$ 31,00); e Duplo Cheddar Picanha por R$ 26,99 (era R$ 29,00).","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["pizza"],"a":"Temos a Pizza Grande de 35cm, em 1 ou 2 sabores. Os sabores e o preço do dia são confirmados no WhatsApp — é só chamar.","link":{"t":"Consultar sabores e preço da pizza","href":"https://wa.me/5589994714789?text=Ol%C3%A1%2C%20BRASA%27S!%20Quero%20saber%20os%20sabores%20e%20o%20pre%C3%A7o%20da%20Pizza%20Grande%2035cm"}},
+{"k":["petisco","petiscos"],"a":"A categoria de petiscos existe no cardápio on-line da casa, mas os itens e preços do dia são confirmados no WhatsApp.","link":{"t":"Perguntar no WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["cardapio","cardápio","menu","preco","preço","custa","quanto"],"a":"O cardápio completo com preços está nesta página: hambúrgueres de R$ 17,50 a R$ 28,00, combos a partir de R$ 28,00, bebidas de R$ 6,00 a R$ 15,00 e a Pizza Grande 35cm (sabores e preço pelo WhatsApp). Pergunte por um item específico que eu digo o preço.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["horario","horário","abre","aberto","fecha","hora","funciona"],"a":"Funcionamos todos os dias, das 18h30 às 23h30."},
+{"k":["onde","endereco","endereço","fica","local","urucui","uruçuí"],"a":"Ficamos na Rua Almir Benvindo, 243, Uruçuí, PI — em frente à Praça da Câmara Municipal.","link":{"t":"Chamar no WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["instagram","insta","rede social"],"a":"Nosso Instagram é @brasasburguer_, com 4.582 seguidores.","link":{"t":"Abrir o Instagram","href":"https://www.instagram.com/brasasburguer_"}},
+{"k":["pedir","pedido","comprar","quero","montar"],"a":"Para pedir: use o montador de pedidos desta página — escolha as quantidades, confira o total e envie; o pedido chega pronto no nosso WhatsApp (89) 99471-4789.","link":{"t":"Pedir pelo WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["telefone","whatsapp","numero","número","contato"],"a":"Nosso WhatsApp é (89) 99471-4789.","link":{"t":"Chamar no WhatsApp","href":"https://wa.me/5589994714789"}},
+{"k":["obrigado","obrigada","valeu"],"a":"Por nada! Boa noite e bom apetite — a brasa agradece."}]};
+var panel=document.getElementById('chatwPanel'),msgs=document.getElementById('chatwMsgs'),chips=document.getElementById('chatwChips'),btn=document.getElementById('chatwBtn'),started=false;
+function scroll(){msgs.scrollTop=msgs.scrollHeight}
+function add(t,who,link){var d=document.createElement('div');d.className='msg '+who;d.textContent=t;if(link){var a=document.createElement('a');a.className='msg-link';a.href=link.href;a.target='_blank';a.rel='noopener';a.textContent=link.t;d.appendChild(document.createElement('br'));d.appendChild(a);}msgs.appendChild(d);scroll();}
+function fold(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function answer(q){var t=' '+fold(q)+' ',i,j,it,best=null,score=0,s;for(i=0;i<KB.items.length;i++){it=KB.items[i];for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)return it;}}for(i=0;i<KB.intents.length;i++){it=KB.intents[i];s=0;for(j=0;j<it.k.length;j++){if(t.indexOf(fold(it.k[j]))!==-1)s++;}if(it.g&&t.trim().length>24)continue;if(s>score){score=s;best=it;}}if(best)return best;return {a:KB.fallback,link:{t:'Chamar no WhatsApp',href:WA}};}
+function send(text){var q=(text||'').trim();if(!q)return;add(q,'user');var r=answer(q);setTimeout(function(){add(r.a,'bot',r.link||null);},240);}
+btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');if(o&&!started){started=true;add(KB.greeting,'bot');}});
+document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
+document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+</body>
+</html>
