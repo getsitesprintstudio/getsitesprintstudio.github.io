@@ -85,6 +85,40 @@ footer a{color:var(--wine);font-weight:700;text-decoration:none}
 .chatw-msgs{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55}.msg.bot{background:#f7ecdc;align-self:flex-start}.msg.user{background:var(--wine);color:#fff;align-self:flex-end}.msg a.msg-link{display:inline-block;margin-top:8px;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13px}
 .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
 .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--wine);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+/* === DESIGN UPGRADE: Editorial beauty, fashion-label restraint (design layer only) === */
+body::after{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+section{padding:clamp(84px,11vw,132px) 0 4px}
+.hero h1{font-size:clamp(54px,8.5vw,96px);letter-spacing:-.02em;line-height:.98}
+h2{font-size:clamp(40px,6vw,64px);letter-spacing:-.015em}
+.eyebrow{font-size:11px;letter-spacing:.22em;display:flex;align-items:center;justify-content:center;gap:14px}
+.eyebrow::after{content:"";width:36px;height:1px;background:var(--gold2)}
+.wrap{counter-reset:sec}
+.wrap section{counter-increment:sec}
+.wrap>section>.eyebrow::before{content:counter(sec,decimal-leading-zero);color:var(--wine);font-family:var(--serif);font-style:italic;font-size:13px;letter-spacing:.05em}
+.vcard .eyebrow{justify-content:flex-start}
+.sub{margin-bottom:56px}
+.hero-media .arch,.gal img{filter:sepia(.22) saturate(1.06) contrast(1.05) brightness(1.02)}
+.gal figure{border-radius:999px 999px 12px 12px}
+.gal .big{border-radius:220px 220px 12px 12px}
+.gal figure::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(160deg,rgba(217,164,65,.28),rgba(94,33,41,.3));mix-blend-mode:overlay}
+.gal figcaption{z-index:1}
+.marquee{background:var(--ink)}
+.mq{font-size:19px;letter-spacing:.04em}
+.menuwrap{counter-reset:cat;padding:clamp(40px,6vw,72px)}
+.cat{counter-reset:item;margin-bottom:56px}
+.item{counter-increment:item;border-bottom:1px solid var(--line);padding:20px 4px;transition:background .3s}
+.item:hover{background:rgba(185,130,46,.05)}
+.item-top::before{content:counter(item,decimal-leading-zero);font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--gold);flex:none}
+.dots{display:none}
+.price{font-family:var(--serif);font-style:italic;font-size:19px}
+.book{position:relative}
+.book::after{content:"";position:absolute;left:18px;right:18px;bottom:8px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.book:hover::after{transform:scaleX(1)}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.3) 50%,transparent 60%);transform:translateX(-120%);transition:transform .5s ease;pointer-events:none}
+.btn:hover::after{transform:translateX(120%)}
+.rv{transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+@media(min-width:860px){.gal figure:nth-child(3){margin-top:22px}.gal figure:nth-child(5){margin-top:22px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>

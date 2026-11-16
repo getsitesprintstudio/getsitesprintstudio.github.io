@@ -83,6 +83,52 @@ footer{padding:38px 22px 118px;text-align:center;color:var(--mut);font-size:13.5
 .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--ink);color:var(--lime);border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
 @media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}.prod-in{padding:13px}.prod h3{font-size:15px}.price{font-size:17px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
+
+/* ===== Batch 5 design upgrade — Drop-culture lookbook (design layer only) ===== */
+/* Photocopy grain: fixed SVG-noise, below sticky bars (header 50 / sticky 60 / chat 90) */
+body::before{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.07;mix-blend-mode:multiply;background-size:180px 180px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+/* Type scale-up + tight tracking */
+.hero h1{font-size:clamp(3.6rem,9.5vw,6.4rem);line-height:.92;letter-spacing:-.032em}
+h2{font-size:clamp(34px,5.2vw,54px);letter-spacing:-.025em}
+.kicker,.eyebrow{font-size:11px;letter-spacing:.22em}
+/* Editorial section numbers + hairline (numbers via CSS only) */
+.wrap{counter-reset:sec}
+.wrap>section{counter-increment:sec}
+.wrap>section .eyebrow::before{content:counter(sec,decimal-leading-zero) " / ";font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0;text-transform:none;font-size:15px;color:var(--ink)}
+.visit .eyebrow::before{color:var(--lime)}
+/* Serif-italic annotations */
+.hero-meta{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:.02em;font-size:16px;color:#d7dbc8}
+.price small{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:13.5px;color:var(--wood)}
+/* Lime price-tag STICKERS: punched hole, ink border, hard shadow, rotated */
+.ptag{border:2px solid var(--ink);border-radius:3px;box-shadow:3px 3px 0 var(--ink);transform:rotate(-4deg);padding:7px 12px 7px 9px}
+.ptag::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink);margin-right:8px;vertical-align:1px}
+.grid .prod:nth-child(even) .ptag{transform:rotate(3deg)}
+.pchip{background:var(--lime);color:var(--ink);border:2px solid var(--ink);border-radius:3px;box-shadow:4px 4px 0 rgba(0,0,0,.85);transform:rotate(-2deg);font-family:var(--disp);letter-spacing:.04em}
+.pchip b{color:var(--ink)}
+.pchip:nth-child(2){transform:rotate(2.2deg)}
+.hero-media .tag{border:2px solid var(--ink);border-radius:3px;box-shadow:7px 7px 0 rgba(0,0,0,.85);transform:rotate(-3deg)}
+/* Marquee as drop-poster band */
+.marquee{transform:rotate(-1.2deg) scale(1.03);border-block:3px solid var(--ink)}
+.marquee div{font-size:15px;padding:13px 0;letter-spacing:.12em}
+/* Photo grade + stronger hover zoom */
+.hero-media img{filter:contrast(1.07) saturate(1.05)}
+.prod img{filter:contrast(1.06) saturate(1.06)}
+.prod:hover img{transform:scale(1.09) rotate(.5deg)}
+/* Cards / buttons micro-interactions */
+.prod{border-width:1.5px}
+.prod:hover{box-shadow:10px 10px 0 var(--lime),var(--shadow)}
+.btn,.ord,.fbtn{transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease}
+.ord:hover{transform:translateY(-2px);box-shadow:0 12px 22px -10px rgba(31,170,85,.6)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.sizebox,.notice{transition:transform .3s ease,box-shadow .3s ease}
+.sizebox:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+/* ONE broken-grid moment: one rotated / offset piece in the drop */
+@media(min-width:1100px){
+.grid .prod:nth-child(6){transform:rotate(-1.4deg) translateY(14px)}
+.grid .prod:nth-child(6):hover{transform:rotate(0deg) translateY(6px)}
+}
+/* Scroll reveal timing per brief */
+.rv{transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>

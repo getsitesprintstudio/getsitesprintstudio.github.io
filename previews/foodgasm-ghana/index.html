@@ -74,6 +74,64 @@ footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px
 .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid var(--line);background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
 .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}.chatw-form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--ink);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
+
+/* ===== Batch 5 design upgrade — Celebration editorial (design layer only) ===== */
+/* Subtle grain: fixed SVG-noise, below sticky bars (header 50 / sticky 60 / chat 90) */
+body::before{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.05;mix-blend-mode:multiply;background-size:180px 180px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+/* Woven-band motif — existing palette only (gold / chili / ink / cream), CSS gradients only */
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;opacity:.95;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--chili) 22px 30px,var(--ink2) 30px 52px,var(--cream) 52px 58px),repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 2px,transparent 2px 7px);background-blend-mode:multiply}
+.combo-sec{position:relative;overflow:hidden}
+.combo-sec::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--chili) 22px 30px,var(--ink2) 30px 52px,var(--cream) 52px 58px),repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 2px,transparent 2px 7px);background-blend-mode:multiply}
+.cta{position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--cream) 22px 30px,var(--ink2) 30px 52px,var(--gold2) 52px 58px),repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0 2px,transparent 2px 7px);background-blend-mode:multiply}
+/* Type scale-up, generous cream space, 11px labels */
+.hero h1{font-size:clamp(3.6rem,9vw,6.2rem);line-height:.95;letter-spacing:-.02em}
+h2{font-size:clamp(36px,5.4vw,56px);line-height:1.02;letter-spacing:-.015em}
+.clarity h2{font-size:clamp(36px,5.4vw,56px)}
+.eyebrow{font-size:11px}
+section{padding-top:clamp(76px,10vw,120px)}
+/* Editorial section numbers + hairline rules (numbers via CSS only) */
+.wrap{counter-reset:sec}
+.wrap>section{counter-increment:sec}
+.wrap>section .eyebrow::before{content:counter(sec,decimal-leading-zero) " — ";font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:0;text-transform:none;font-size:15px;color:var(--gold)}
+h2::after{content:"";display:block;width:54px;height:2px;background:var(--gold);margin:16px auto 0}
+.steps h2::after{margin:16px 0 0}
+.cta h2::after{background:#ffd9a8}
+.cta .eyebrow::before{color:#ffd9a8}
+/* Warm duotone treatment on food photos (CSS filter only, files untouched) */
+.hero-media img.main,.combo img,.pcard img{filter:sepia(.22) saturate(1.12) contrast(1.05) brightness(1.02)}
+.hero-media::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(183,121,31,.10),rgba(178,58,30,.16));mix-blend-mode:multiply;pointer-events:none}
+.hero-media .card{z-index:2;transform:rotate(-1deg);border:1px solid rgba(183,121,31,.45)}
+.combo img,.pcard img{transition:transform .6s ease,filter .6s ease}
+.combo:hover img,.pcard:hover img{transform:scale(1.05);filter:sepia(.12) saturate(1.2) contrast(1.06) brightness(1.02)}
+/* Services as a numbered editorial index */
+.svc{counter-reset:svc}
+.svcc{counter-increment:svc;position:relative;border-top:3px solid var(--gold);border-radius:10px;padding-top:30px}
+.svcc::before{content:counter(svc,decimal-leading-zero);position:absolute;top:16px;right:22px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:34px;line-height:1;color:var(--gold);opacity:.9}
+.svcc h3{font-size:23px;padding-right:52px}
+/* Weekend-combo badge treatment */
+.combo .tag{display:inline-block;align-self:flex-start;background:var(--gold);color:#fff;padding:7px 13px;border-radius:999px;transform:rotate(-3deg);box-shadow:3px 3px 0 rgba(18,16,13,.9)}
+.combos .combo:nth-child(2) .tag{background:var(--chili);transform:rotate(2.5deg)}
+.combos .combo:nth-child(3) .tag{background:var(--ink);transform:rotate(-2deg)}
+.combo .price{display:inline-block;align-self:flex-start;background:var(--cream);border:1.5px dashed var(--gold);border-radius:999px;padding:7px 16px}
+/* Buttons / cards micro-interactions + underline-grow nav */
+.btn,.ord{transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.btn.wa:hover,.ord:hover{box-shadow:0 18px 32px -12px rgba(31,170,85,.55)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.hdr nav a:not(.cta){position:relative}
+.hdr nav a:not(.cta)::after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.hdr nav a:not(.cta):hover::after{transform:scaleX(1)}
+.pcard{transition:transform .3s ease,box-shadow .3s ease}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.combo{transition:transform .3s ease,box-shadow .3s ease}
+.combo:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+/* ONE broken-grid moment: middle combo offset on wide screens */
+@media(min-width:900px){
+.combos .combo:nth-child(2){transform:translateY(22px)}
+.combos .combo:nth-child(2):hover{transform:translateY(17px)}
+}
+/* Scroll reveal timing per brief */
+.rv{transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>

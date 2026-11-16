@@ -154,6 +154,40 @@ footer{padding:40px 20px 118px;text-align:center;color:var(--mut);font-size:13px
 .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #ecd9bd}
 .chatw-form input{flex:1;border:1px solid #ecd9bd;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}
 .chatw-form button{background:var(--red);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+/* === DESIGN UPGRADE: Match-day launch poster (design layer only) === */
+body::after{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+.hero-in{max-width:1360px}
+.hero h1{font-size:clamp(72px,11.5vw,138px);line-height:.9;letter-spacing:-.015em}
+.hero .hand{font-size:clamp(30px,3.8vw,44px)}
+h2{font-size:clamp(42px,6vw,68px);letter-spacing:-.01em;line-height:.98}
+.eyebrow{font-size:11px;letter-spacing:.18em;display:flex;align-items:center;gap:14px}
+.wrap{counter-reset:sec}
+.wrap section{counter-increment:sec}
+.wrap section>.eyebrow::before{content:counter(sec,decimal-leading-zero);color:var(--red);font-family:var(--disp);font-size:13px;letter-spacing:.08em}
+.wrap section>.eyebrow::after{content:"";height:1px;width:64px;background:var(--line)}
+.marquee{transform:rotate(-1.4deg);width:104%;margin-left:-2%;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.hero-media .main,.story figure img,.pillar img,.gw-media img,.strip img{filter:contrast(1.08) saturate(1.14)}
+.hero-media::after,.story figure::after,.gw-media::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(14,7,5,.5) 1px,transparent 1.5px);background-size:6px 6px;mix-blend-mode:overlay;opacity:.35;border-radius:inherit}
+.hero-media::after{border-radius:26px;z-index:1}
+.story figure::after{inset:0 0 auto 0;aspect-ratio:1;border-radius:26px}
+.story .badge{z-index:2}
+.gw-media::after{border-radius:22px}
+.hero-media .sticker{z-index:2}
+.story figure{position:relative}
+.gw-media{position:relative}
+.pillar{position:relative}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);transform:translateX(-120%);transition:transform .5s ease;pointer-events:none}
+.btn:hover::after{transform:translateX(120%)}
+.pillar:hover img{transform:scale(1.04)}
+.pillar img{transition:transform .5s ease}
+.how-steps .hs{transition:.3s}.how-steps .hs:hover{transform:translateY(-4px);border-color:rgba(245,176,30,.55)}
+.rv{transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+@media(min-width:940px){
+.gw-in::before{content:"";position:absolute;top:0;bottom:0;left:54.5%;border-left:2px dashed rgba(255,211,77,.55)}
+.gw-media{border-left:2px dashed rgba(255,211,77,.35);padding-left:clamp(20px,3vw,36px);transform:rotate(-1.2deg)}
+.story figure{transform:translateY(20px) rotate(-1deg)}
+}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>

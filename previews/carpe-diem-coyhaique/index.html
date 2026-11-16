@@ -93,6 +93,42 @@ footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px
 .chatw-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 14px 12px}.chip-btn{border:1px solid #f3b9d2;background:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
 .chatw-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #f3dbe7}.chatw-form input{flex:1;border:1px solid #f3b9d2;border-radius:999px;padding:10px 14px;font:inherit;min-width:0}.chatw-form button{background:var(--pink);color:#fff;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1!important;transform:none!important}}
+
+/* ===== Design upgrade: Midnight Patagonia neon-noir ===== */
+body::after{content:"";position:fixed;inset:0;z-index:58;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");mix-blend-mode:overlay}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.55;background-image:radial-gradient(1.5px 1.5px at 12% 24%,rgba(255,255,255,.95) 50%,transparent 51%),radial-gradient(1px 1px at 28% 68%,rgba(255,255,255,.7) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 46% 14%,rgba(34,211,238,.9) 50%,transparent 51%),radial-gradient(1px 1px at 63% 42%,rgba(255,255,255,.8) 50%,transparent 51%),radial-gradient(2px 2px at 78% 20%,rgba(255,255,255,.9) 50%,transparent 51%),radial-gradient(1px 1px at 88% 58%,rgba(255,46,126,.8) 50%,transparent 51%),radial-gradient(1px 1px at 36% 86%,rgba(255,255,255,.6) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 6% 52%,rgba(34,211,238,.7) 50%,transparent 51%)}
+.hero h1{font-size:clamp(56px,10.5vw,124px);line-height:.92;letter-spacing:-.02em;text-shadow:0 0 44px rgba(255,46,126,.22)}
+.hero h1 em{filter:drop-shadow(0 0 16px rgba(255,46,126,.45))}
+.hero h1 .cyan{text-shadow:0 0 26px rgba(34,211,238,.65),0 0 70px rgba(34,211,238,.3)}
+.flashpill{box-shadow:0 0 22px rgba(255,176,32,.22),inset 0 0 14px rgba(255,176,32,.06)}
+.hero-meta span{box-shadow:inset 0 0 12px rgba(34,211,238,.05)}
+.eyebrow{font-size:11px;letter-spacing:.34em}
+.eyebrow::after{content:"";display:block;width:56px;height:1px;background:linear-gradient(90deg,var(--pink),var(--cyan));margin:12px auto 0;opacity:.8}
+h2{font-size:clamp(38px,5.8vw,58px);letter-spacing:-.02em}
+.board{box-shadow:var(--shadow),0 0 60px rgba(255,46,126,.08)}
+.scarce{transform:rotate(-3deg);box-shadow:0 10px 24px rgba(255,176,32,.25)}
+.offers{counter-reset:of}
+.offer{counter-increment:of}
+.offer img{transition:transform .6s ease}
+.offer:hover img{transform:scale(1.05)}
+.offer-in::before{content:"0" counter(of);font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.3em;color:var(--pink);margin-bottom:9px;text-shadow:0 0 12px rgba(255,46,126,.5)}
+.oprice{align-self:flex-start;background:#0a0b16;border:1px solid rgba(34,211,238,.38);border-radius:12px;padding:10px 16px;text-shadow:0 0 18px rgba(255,46,126,.45);box-shadow:inset 0 0 16px rgba(34,211,238,.07),0 0 24px rgba(34,211,238,.08)}
+.oprice.ask{text-shadow:0 0 18px rgba(34,211,238,.5)}
+.totalbox .tot{text-shadow:0 0 22px rgba(34,211,238,.45)}
+.pick .bp{text-shadow:0 0 12px rgba(255,176,32,.35)}
+.btn,.ord,.chatw-btn{transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.btn.pink:hover{box-shadow:0 20px 44px rgba(255,46,126,.5)}
+.btn.wa:hover,.ord:hover{box-shadow:0 18px 38px rgba(34,193,94,.45)}
+.btn:active,.ord:active{transform:scale(.98)}
+.step .n{transform:rotate(-3deg)}
+.scard{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.scard:hover{box-shadow:0 22px 44px rgba(0,0,0,.4)}
+@media(min-width:860px){.offer.hot{transform:translateY(-10px)}.offer.hot:hover{transform:translateY(-16px)}.strip figure:nth-child(2){transform:translateY(18px)}.strip figure:nth-child(4){transform:translateY(-8px)}}
+.marquee{overflow:hidden;background:#0a0b16;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;animation:marq 30s linear infinite;will-change:transform}
+.marquee-track span{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan);text-shadow:0 0 14px rgba(34,211,238,.55);padding-right:12px}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none!important}}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -118,6 +154,7 @@ footer{padding:38px 20px 118px;text-align:center;color:var(--mut);font-size:13px
 </div>
 </div>
 
+<div class="marquee" aria-hidden="true"><div class="marquee-track" data-src=".flashpill,.brand small"></div></div>
 <div class="wrap">
 <section id="ofertas" class="rv">
 <div class="eyebrow">01 · El tablero de la noche</div>
@@ -269,6 +306,17 @@ btn.addEventListener('click',function(){var o=panel.classList.toggle('open');btn
 document.getElementById('chatwClose').addEventListener('click',function(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');});
 KB.chips.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip-btn';b.textContent=c;b.addEventListener('click',function(){send(c);});chips.appendChild(b);});
 document.getElementById('chatwForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('chatwInput');send(i.value);i.value='';});
+})();
+</script>
+
+<script>
+(function(){
+var track=document.querySelector('.marquee-track');if(!track)return;
+var sels=track.getAttribute('data-src').split(','),parts=[],i,el;
+for(i=0;i<sels.length;i++){el=document.querySelector(sels[i]);if(el){var t=el.textContent.replace(/\s+/g,' ').trim();if(t)parts.push(t);}}
+if(!parts.length)return;
+var phrase=parts.join('  \u00B7  ')+'  \u00B7  ';
+for(i=0;i<6;i++){var s=document.createElement('span');s.textContent=phrase;track.appendChild(s);}
 })();
 </script>
 </body>
