@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Dogana — The 2028 Opening | Concept Proposal</title>
+<meta name="description" content="A booking-opening platform concept for Agriturismo La Dogana, Lucia de Ferrari's estate on Lake Trasimeno: the sequenced 2028 priority waitlist, wedding-date holds, wedding-party accommodation and apartment requests, ahead of the 1 December 2026 opening.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cardo:ital@0;1&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2b2e26; --olive:#3e4137; --olive2:#4c5044;
+  --sage:#6f7f68; --sage2:#8a9a80; --terra:#b05f2e; --terra2:#c97a42;
+  --gold:#bd9a55; --cream:#f6f1e5; --paper:#fbf7ec; --sand:#eadfc6; --sand2:#ded0ac;
+  --mut:#6f6c5e; --line:rgba(43,46,38,.16);
+  --serif:"Cormorant Garamond",Georgia,serif; --body:"Cardo",Georgia,serif; --sans:"Jost",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--sage);color:#fff}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(18px,4vw,54px)}
+.lbl{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+.lbl .n{color:var(--terra);font-weight:600}
+.rule{height:1px;background:var(--line);border:0}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.04}
+h2{font-size:clamp(2.3rem,5.2vw,4.2rem);letter-spacing:-.01em}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--terra2)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(26px,4vw,48px)}
+.sec-head p{max-width:440px;color:var(--mut);font-size:16px}
+section{padding:clamp(64px,9vw,118px) 0}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(43,46,38,.94);backdrop-filter:blur(8px);color:var(--cream);border-bottom:1px solid rgba(246,241,229,.14)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.brand{font-family:var(--serif);font-size:22px;letter-spacing:.16em;text-decoration:none;white-space:nowrap;text-transform:uppercase}
+.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.nav{display:flex;gap:26px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.nav a{text-decoration:none;opacity:.85;position:relative;padding:4px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--terra2);transition:width .3s}
+.nav a:hover{opacity:1}.nav a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:#fff;text-decoration:none;font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border:0;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;background:var(--olive);transform:translateX(-101%);transition:transform .35s ease}
+.btn:hover::before{transform:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(43,46,38,.28)}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(246,241,229,.5)}
+.btn.ghost::before{background:var(--terra)}
+.btn.dark{background:var(--olive)}
+.btn.dark::before{background:var(--terra)}
+.btn.back{background:transparent;color:var(--olive);border:1px solid var(--line)}
+.btn.back::before{background:var(--sand)}
+.top-cta{padding:10px 18px;font-size:11px}
+.tb-tools{display:flex;align-items:center;gap:12px}
+.lang-switch{display:flex;border:1px solid rgba(246,241,229,.35)}
+.lang-switch button{background:none;border:0;color:rgba(246,241,229,.7);font:600 11px var(--sans);letter-spacing:.1em;padding:7px 10px;cursor:pointer}
+.lang-switch button.on{background:var(--terra);color:#fff}
+.lang-switch button:focus-visible{outline:2px solid var(--terra2);outline-offset:1px}
+@media(max-width:1100px){.tb-tools{display:none}.nav{display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--cream);background:var(--ink);padding:130px 0 0;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.04) saturate(1.05)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,46,38,.52) 0%,rgba(43,46,38,.1) 38%,rgba(43,46,38,.92) 92%)}
+.hero-in{position:relative;z-index:2;width:100%}
+.hero .lbl{color:var(--gold)}
+.hero h1{font-size:clamp(3rem,9vw,7.8rem);letter-spacing:-.015em;margin:14px 0 8px}
+.hero h1 .row2{display:block}
+.hero-sub{max-width:600px;font-size:clamp(16px,1.7vw,19px);color:rgba(246,241,229,.92)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 40px}
+/* countdown */
+.count{display:flex;gap:0;border:1px solid rgba(246,241,229,.35);width:max-content;max-width:100%;background:rgba(43,46,38,.45);backdrop-filter:blur(4px);margin-top:26px}
+.count div{padding:14px 20px 12px;text-align:center;border-left:1px solid rgba(246,241,229,.22)}
+.count div:first-child{border-left:0}
+.count b{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3.4vw,2.6rem);display:block;line-height:1}
+.count span{font-family:var(--sans);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,241,229,.78);font-weight:600}
+.count-cap{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:14px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(246,241,229,.28);margin-top:38px}
+.hstat{padding:20px 18px 26px;border-left:1px solid rgba(246,241,229,.18)}
+.hstat:first-child{border-left:0;padding-left:0}
+.hstat b{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3vw,2.5rem);display:block;line-height:1.05}
+.hstat span{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,241,229,.75);font-weight:600}
+@media(max-width:760px){.hero-stats{grid-template-columns:1fr 1fr}.count div{padding:10px 13px 9px}}
+/* marquee */
+.marquee{background:var(--olive);color:var(--cream);overflow:hidden;border-top:1px solid rgba(246,241,229,.14);padding:13px 0}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 56s linear infinite}
+.mq-track span{font-family:var(--serif);font-style:italic;font-size:17px;white-space:nowrap;padding-right:14px}
+.mq-track b{color:var(--terra2);font-weight:400;padding-right:14px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+/* problem / solution */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:start}
+.why h2{margin:12px 0 18px}
+.why p.lede{font-size:18px;color:#45473c;max-width:560px}
+.leak{border-top:1px solid var(--line)}
+.leak div{display:flex;gap:18px;padding:18px 2px;border-bottom:1px solid var(--line);align-items:baseline}
+.leak b{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--terra);font-size:20px;min-width:34px}
+.leak h3{font-size:20px;font-family:var(--serif);font-weight:600;letter-spacing:0}
+.leak p{color:var(--mut);font-size:15px}
+.fixcard{background:var(--olive);color:var(--cream);padding:clamp(24px,3vw,40px);position:relative}
+.fixcard::before{content:"";position:absolute;top:0;left:0;width:56px;height:4px;background:var(--terra)}
+.fixcard h3{font-size:27px;margin:8px 0 12px}
+.fixcard ul{list-style:none}
+.fixcard li{padding:11px 0;border-bottom:1px solid rgba(246,241,229,.16);font-size:15.5px;display:flex;gap:12px}
+.fixcard li::before{content:"—";color:var(--terra2)}
+.fixcard li:last-child{border-bottom:0}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+/* editorial rows */
+.row2col{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,4vw,56px);padding:clamp(30px,4.5vw,56px) 0;border-top:1px solid var(--line);align-items:start}
+.row2col:first-of-type{border-top:0;padding-top:6px}
+.row2col.flip .gal{order:2}
+.gal .main{overflow:hidden;aspect-ratio:16/10.5;background:var(--sand2)}
+.gal .main img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;filter:contrast(1.03) saturate(1.04);cursor:zoom-in}
+.row2col:hover .gal .main img{transform:scale(1.04)}
+.gal .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.gal .thumbs div{overflow:hidden;aspect-ratio:16/9;background:var(--sand2)}
+.gal .thumbs img{width:100%;height:100%;object-fit:cover;filter:contrast(1.03) saturate(1.03);cursor:zoom-in}
+.cbody .idx{font-family:var(--serif);font-style:italic;color:var(--terra);font-size:17px}
+.cbody h3{font-size:clamp(2rem,3.6vw,3.1rem);margin:6px 0 4px}
+.cbody .loc{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:14px}
+.cbody p{font-size:16px;color:#45473c;max-width:520px}
+.cbody ul{list-style:none;margin-top:14px}
+.cbody li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px;display:flex;justify-content:space-between;gap:14px}
+.cbody li b{font-family:var(--serif);font-weight:600;white-space:nowrap}
+@media(max-width:900px){.row2col{grid-template-columns:1fr}.row2col.flip .gal{order:0}}
+/* day plan */
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.day{background:var(--cream);border:1px solid var(--line);padding:26px 22px;position:relative}
+.day .dn{font-family:var(--serif);font-style:italic;font-size:44px;color:var(--sand2);line-height:1}
+.day h3{font-size:23px;margin:8px 0 8px}
+.day p{font-size:14.5px;color:#45473c}
+@media(max-width:1000px){.days{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.days{grid-template-columns:1fr}}
+/* wizard */
+.wiz-sec{background:var(--olive);color:var(--cream)}
+.wiz-sec .sec-head p{color:rgba(246,241,229,.75)}
+.wiz{display:grid;grid-template-columns:1fr 380px;gap:clamp(22px,3.5vw,48px);align-items:start}
+.wiz-card{background:var(--paper);color:var(--ink);padding:clamp(22px,3vw,38px)}
+.step-tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:24px;flex-wrap:wrap}
+.step-tab{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:10px 13px;color:var(--mut);border-bottom:2px solid transparent;margin-bottom:-1px}
+.step-tab.on{color:var(--terra);border-color:var(--terra)}
+.step-tab.done{color:var(--sage)}
+fieldset{border:0;display:none}
+fieldset.on{display:block}
+fieldset legend{font-family:var(--serif);font-size:27px;font-weight:600;margin-bottom:6px;padding:0}
+.fsub{color:var(--mut);font-size:15px;margin-bottom:18px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld.full{grid-column:1/-1}
+.fld label{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--olive)}
+.fld input,.fld select,.fld textarea{font-family:var(--body);font-size:16px;padding:11px 12px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:0;width:100%}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid var(--sage);outline-offset:0}
+.fld.bad input,.fld.bad select{border-color:#b23c2a;background:#fdf3f0}
+.err{display:none;color:#b23c2a;font-size:13px;font-family:var(--sans)}
+.fld.bad .err{display:block}
+input[type=range]{accent-color:var(--terra);padding:0;border:0;background:transparent}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.check{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);padding:12px;background:#fff;cursor:pointer;font-size:15px}
+.check input{margin-top:4px;accent-color:var(--terra)}
+.wiz-nav{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.fnote{font-size:13.5px;color:var(--mut);margin-top:14px}
+/* summary rail */
+.sum{position:sticky;top:96px;background:var(--ink);color:var(--cream);padding:26px}
+.sum h3{font-size:24px;margin-bottom:4px}
+.sum .ref{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.srow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid rgba(246,241,229,.16);font-size:14.5px}
+.srow span{color:rgba(246,241,229,.72)}
+.srow b{font-weight:600;text-align:right}
+.srow.tot{font-size:17px}
+.srow.tot b{color:var(--terra2);font-family:var(--serif);font-size:21px}
+.sum .fnote{color:rgba(246,241,229,.6)}
+.confirm{display:none;border:1px solid var(--sage);background:#f0f3ea;padding:20px;margin-top:20px}
+.confirm.show{display:block}
+.confirm h4{font-family:var(--serif);font-size:23px;margin-bottom:6px}
+.confirm .big{font-family:var(--serif);font-size:30px;color:var(--terra)}
+@media(max-width:1000px){.wiz{grid-template-columns:1fr}.sum{position:static}}
+/* calendar */
+.cal-year{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cal-m{background:#fff;border:1px solid var(--line);padding:14px}
+.cal-m h4{font-family:var(--serif);font-size:19px;font-weight:600;text-align:center;margin-bottom:8px;text-transform:capitalize}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.cal-grid .dow{font-family:var(--sans);font-size:9px;letter-spacing:.05em;text-align:center;color:var(--mut);padding:3px 0;font-weight:600}
+.cal-day{font-family:var(--sans);font-size:11.5px;text-align:center;padding:5px 0;border:0;background:transparent;cursor:pointer;color:var(--ink)}
+.cal-day:hover{background:var(--sand)}
+.cal-day.sel{background:var(--terra);color:#fff;font-weight:600}
+.cal-day.held{background:var(--sage);color:#fff}
+.cal-day:disabled{color:#c9c2ae;cursor:default;background:transparent}
+.cal-legend{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--sans);font-size:12px;color:var(--mut);margin-top:16px}
+.cal-legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+@media(max-width:1000px){.cal-year{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.cal-year{grid-template-columns:repeat(2,1fr)}}
+/* units */
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.unit{border:1px solid var(--line);background:#fff;padding:20px}
+.unit h4{font-family:var(--serif);font-size:22px;font-weight:600}
+.unit .u-meta{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);font-weight:600;margin:4px 0 8px}
+.unit p{font-size:14.5px;color:#45473c}
+.unit .u-sleeps{margin-top:10px;font-family:var(--serif);font-style:italic;color:var(--terra);font-size:16px}
+@media(max-width:1000px){.units{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.units{grid-template-columns:1fr}}
+/* gallery */
+.gstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gstrip figure{overflow:hidden;aspect-ratio:4/3;background:var(--sand2)}
+.gstrip img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .7s ease;filter:contrast(1.03) saturate(1.04)}
+.gstrip figure:hover img{transform:scale(1.05)}
+@media(max-width:800px){.gstrip{grid-template-columns:1fr 1fr}}
+/* faq + seasons */
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:0;text-align:left;font-family:var(--serif);font-size:21px;font-weight:600;padding:18px 4px;cursor:pointer;display:flex;justify-content:space-between;gap:16px;color:var(--ink)}
+.faq-q .pm{color:var(--terra);font-family:var(--sans);font-weight:400}
+.faq-a{display:none;padding:0 4px 20px;color:#45473c;font-size:15.5px;max-width:760px}
+.faq-item.open .faq-a{display:block}
+/* dashboard */
+.dash-sec{background:var(--cream)}
+.dash{background:var(--ink);color:var(--cream);padding:clamp(22px,3vw,38px)}
+.dash-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;margin-bottom:18px}
+.dash-head h3{font-size:28px}
+.dash-tag{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;background:var(--terra);color:#fff;padding:5px 10px;font-weight:600}
+.dash-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px}
+@media(max-width:900px){.dash-grid{grid-template-columns:1fr}}
+.dash table{width:100%;border-collapse:collapse;font-size:14px}
+.dash th{font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,241,229,.6);text-align:left;padding:8px 6px;border-bottom:1px solid rgba(246,241,229,.25);font-weight:600}
+.dash td{padding:9px 6px;border-bottom:1px solid rgba(246,241,229,.12);vertical-align:top}
+.dash .pos{font-family:var(--serif);font-size:19px;color:var(--terra2)}
+.dash .stat b{font-family:var(--serif);font-size:32px;font-weight:500;display:block;line-height:1.1}
+.dash .stat span{font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,241,229,.65);font-weight:600}
+.dash .stat{padding:12px 0;border-bottom:1px solid rgba(246,241,229,.14)}
+.dash .live-row td{background:rgba(176,95,46,.16)}
+/* proposal */
+.prop-sec{background:var(--olive);color:var(--cream)}
+.prop-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.prop-item{border:1px solid rgba(246,241,229,.25);padding:24px}
+.prop-item h3{font-size:23px;margin-bottom:8px}
+.prop-item p{color:rgba(246,241,229,.8);font-size:15.5px}
+@media(max-width:800px){.prop-grid{grid-template-columns:1fr}}
+/* contact + footer */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ccard{border:1px solid var(--line);background:#fff;padding:22px}
+.ccard h4{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:8px;font-weight:600}
+.ccard p{font-size:16px}
+.ccard a{color:var(--terra);text-decoration:none;font-weight:600}
+@media(max-width:800px){.contact-grid{grid-template-columns:1fr}}
+footer{background:var(--ink);color:rgba(246,241,229,.75);padding:44px 0;font-size:14px}
+footer .fbrand{font-family:var(--serif);font-size:24px;color:var(--cream);letter-spacing:.14em;text-transform:uppercase}
+footer p{max-width:820px;margin-top:10px}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(24,26,21,.94);display:none;align-items:center;justify-content:center;padding:24px}
+.lb.show{display:flex}
+.lb img{max-width:min(1100px,94vw);max-height:88vh;object-fit:contain}
+.lb button{position:absolute;top:18px;right:22px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;line-height:1}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top">La Dogana<small data-i18n="brand.sub">Lucia's Estate · Lake Trasimeno</small></a>
+    <nav class="nav">
+      <a href="#opening" data-i18n="nav.opening">The Opening</a>
+      <a href="#waitlist" data-i18n="nav.waitlist">Waitlist</a>
+      <a href="#calendar" data-i18n="nav.calendar">2028 Calendar</a>
+      <a href="#weddings" data-i18n="nav.weddings">Weddings</a>
+      <a href="#stay" data-i18n="nav.stay">Stay</a>
+      <a href="#forlucia" data-i18n="nav.forlucia">For Lucia</a>
+    </nav>
+    <div class="tb-tools">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="langEN" class="on">EN</button>
+        <button type="button" id="langIT">IT</button>
+      </div>
+      <a class="btn top-cta" href="#waitlist"><span data-i18n="nav.cta">Join the waitlist</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top" style="padding-top:0">
+  <img class="hero-img" src="img/hero.jpg" alt="La Dogana estate above Lake Trasimeno">
+  <div class="wrap hero-in">
+    <p class="lbl" data-i18n="hero.lbl">Lucia's Estate · Lake Trasimeno · Umbria &amp; Tuscany</p>
+    <h1><span data-i18n="hero.h1a">2028 opens</span> <em data-i18n="hero.h1b">on 1 December.</em></h1>
+    <p class="hero-sub" data-i18n="hero.sub">La Dogana's 2027 wedding season is fully booked. When bookings for 2028 open, the couples on the priority list go first. This is the platform that runs that morning — a sequenced waitlist, date holds and every request in one place.</p>
+    <div class="count" id="countBox" aria-label="Countdown to 1 December 2026">
+      <div><b id="cdD">—</b><span data-i18n="cd.d">Days</span></div>
+      <div><b id="cdH">—</b><span data-i18n="cd.h">Hours</span></div>
+      <div><b id="cdM">—</b><span data-i18n="cd.m">Minutes</span></div>
+      <div><b id="cdS">—</b><span data-i18n="cd.s">Seconds</span></div>
+    </div>
+    <p class="count-cap" data-i18n="cd.cap">Until bookings open · 1 December 2026</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#waitlist"><span data-i18n="hero.cta1">Join the priority waitlist</span></a>
+      <a class="btn ghost" href="#calendar"><span data-i18n="hero.cta2">See the 2028 calendar</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><b data-i18n="hs1b">1 Dec 2026</b><span data-i18n="hs1s">Bookings open for 2028</span></div>
+      <div class="hstat"><b data-i18n="hs2b">Fully booked</b><span data-i18n="hs2s">The whole 2027 season</span></div>
+      <div class="hstat"><b>23</b><span data-i18n="hs3s">Bedrooms, exclusive use</span></div>
+      <div class="hstat"><b>40–60</b><span data-i18n="hs4s">Guests at every wedding</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mq-track" id="mqTrack"></div></div>
+
+<section class="why" id="opening">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="rv">
+        <p class="lbl"><span class="n">01</span> · <span data-i18n="why.lbl">The problem</span></p>
+        <h2><span data-i18n="why.h2a">One form stands between your couples</span> <em data-i18n="why.h2b">and 2028.</em></h2>
+        <p class="lede" data-i18n="why.lede">La Dogana hosts a limited number of weddings a year, and reservations can be made up to two years in advance. The 2027 season sold out completely. On 1 December, a year of 2028 dates opens at once — and today, the only thing receiving them is a web form and an inbox.</p>
+        <div class="leak" style="margin-top:28px">
+          <div><b>i.</b><div><h3 data-i18n="lk1h">A whole season, one morning</h3><p data-i18n="lk1p">Every 2028 date opens on the same day. The couples who enquire first expect an answer first — a form cannot keep that order.</p></div></div>
+          <div><b>ii.</b><div><h3 data-i18n="lk2h">A list with no sequence</h3><p data-i18n="lk2p">The priority waiting list has no positions, no references and no date holds. Nobody can be told where they stand, and no date can be held while a couple decides.</p></div></div>
+          <div><b>iii.</b><div><h3 data-i18n="lk3h">Every answer written by hand</h3><p data-i18n="lk3p">Enquiries are answered one by one — the estate replies within two business days — while couples choosing between venues decide in hours.</p></div></div>
+          <div><b>iv.</b><div><h3 data-i18n="lk4h">The apartments wait too</h3><p data-i18n="lk4p">Eleven apartments and two houses, and no rates or availability published anywhere. Every stay, like every wedding, begins as an email and a wait.</p></div></div>
+        </div>
+      </div>
+      <div class="fixcard rv">
+        <p class="lbl" style="color:var(--gold)" data-i18n="fix.lbl">This platform</p>
+        <h3 data-i18n="fix.h">The opening, run properly</h3>
+        <ul>
+          <li data-i18n="fix1">A priority waitlist with real sequence — every couple receives a position and a reference the moment they join</li>
+          <li data-i18n="fix2">A 2028 wedding calendar with date-hold requests, held in order behind the waitlist</li>
+          <li data-i18n="fix3">Wedding-party accommodation tied to each date — all 23 bedrooms requested in one structured message</li>
+          <li data-i18n="fix4">Apartment stay requests with dates and party size, in the same flow</li>
+          <li data-i18n="fix5">Every request composed straight to Lucia's WhatsApp — no inbox archaeology on opening morning</li>
+          <li data-i18n="fix6">An owner's view of the whole opening: the list in order, the holds, the requests</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wiz-sec" id="waitlist">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl" style="color:var(--gold)"><span class="n">02</span> · <span data-i18n="wl.lbl">The centrepiece</span></p>
+        <h2><span data-i18n="wl.h2a">The 2028 priority</span> <em data-i18n="wl.h2b">waiting list</em></h2>
+      </div>
+      <p data-i18n="wl.intro">Join in four short steps. Your position and reference are issued immediately, and your place is offered in order when bookings open on 1 December 2026.</p>
+    </div>
+    <div class="wiz">
+      <div class="wiz-card rv">
+        <div class="step-tabs" id="wlTabs">
+          <span class="step-tab on" data-tab="1" data-i18n="wl.t1">1 · Your date</span>
+          <span class="step-tab" data-tab="2" data-i18n="wl.t2">2 · Your celebration</span>
+          <span class="step-tab" data-tab="3" data-i18n="wl.t3">3 · Your details</span>
+          <span class="step-tab" data-tab="4" data-i18n="wl.t4">4 · Review &amp; join</span>
+        </div>
+        <form id="wlForm" novalidate>
+          <fieldset data-fs="1" class="on">
+            <legend data-i18n="wl.s1h">When would you marry?</legend>
+            <p class="fsub" data-i18n="wl.s1sub">2028 bookings open on 1 December 2026. Tell us the date or month you hope for — flexibility helps, and it is noted on your place in the queue.</p>
+            <div class="fgrid">
+              <div class="fld" id="fld-wlMonth"><label for="wlMonth" data-i18n="wl.month">Preferred month, 2028</label>
+                <select id="wlMonth"></select><span class="err" data-i18n="wl.month.err">Please choose a month or tell us you are flexible.</span></div>
+              <div class="fld"><label for="wlDate" data-i18n="wl.date">Preferred date (optional)</label><input type="date" id="wlDate" min="2028-01-01" max="2028-12-31"><span class="err" data-i18n="wl.date.err">That date is outside 2028.</span></div>
+              <div class="fld full"><label class="check" style="border:0;padding:0"><input type="checkbox" id="wlFlex"> <span data-i18n="wl.flex">We are flexible — offer us any date that frees up</span></label></div>
+            </div>
+            <div class="wiz-nav"><button type="button" class="btn" data-next><span data-i18n="btn.cont">Continue</span></button></div>
+          </fieldset>
+          <fieldset data-fs="2">
+            <legend data-i18n="wl.s2h">Your celebration</legend>
+            <p class="fsub" data-i18n="wl.s2sub">Every La Dogana wedding is a four-day experience with exclusive use of the estate, for 40 to 60 adult guests.</p>
+            <div class="fgrid">
+              <div class="fld full"><label for="wlGuests"><span data-i18n="wl.guests">Adult guests</span> — <b id="wlGuestsVal">50</b></label>
+                <input type="range" id="wlGuests" min="40" max="60" value="50" step="1"><span class="err" data-i18n="wl.guests.err">Weddings at La Dogana host 40 to 60 adult guests.</span></div>
+              <div class="fld"><label for="wlCeremony" data-i18n="wl.ceremony">Ceremony</label>
+                <select id="wlCeremony">
+                  <option value="symbolic" data-i18n="cer.sym">Symbolic, on the Roman terrace</option>
+                  <option value="civil" data-i18n="cer.civ">Civil, at the fortress in Passignano</option>
+                  <option value="catholic" data-i18n="cer.cat">Catholic, in a church in Cortona</option>
+                  <option value="undecided" data-i18n="cer.und">Not decided yet</option>
+                </select></div>
+              <div class="fld"><label for="wlStay" data-i18n="wl.stayq">Guests staying on the estate?</label>
+                <select id="wlStay">
+                  <option value="all" data-i18n="stay.all">Yes — as many as the 23 bedrooms hold</option>
+                  <option value="some" data-i18n="stay.some">Some of our guests</option>
+                  <option value="tbc" data-i18n="stay.tbc">To be decided</option>
+                </select></div>
+            </div>
+            <div class="wiz-nav"><button type="button" class="btn back" data-back><span data-i18n="btn.back">Back</span></button><button type="button" class="btn" data-next><span data-i18n="btn.cont">Continue</span></button></div>
+          </fieldset>
+          <fieldset data-fs="3">
+            <legend data-i18n="wl.s3h">Your details</legend>
+            <p class="fsub" data-i18n="wl.s3sub">So the estate can reach you the moment your date is offered.</p>
+            <div class="fgrid">
+              <div class="fld" id="fld-wlName1"><label for="wlName1" data-i18n="wl.name1">Your name</label><input type="text" id="wlName1" autocomplete="name"><span class="err" data-i18n="wl.name.err">Please add your name.</span></div>
+              <div class="fld"><label for="wlName2" data-i18n="wl.name2">Your partner's name</label><input type="text" id="wlName2"></div>
+              <div class="fld" id="fld-wlEmail"><label for="wlEmail" data-i18n="wl.email">Email</label><input type="email" id="wlEmail" autocomplete="email"><span class="err" data-i18n="wl.email.err">Please add a valid email address.</span></div>
+              <div class="fld" id="fld-wlCountry"><label for="wlCountry" data-i18n="wl.country">Country of residence</label><input type="text" id="wlCountry" autocomplete="country-name"><span class="err" data-i18n="wl.country.err">Please add your country.</span></div>
+              <div class="fld full"><label for="wlNotes" data-i18n="wl.notes">Anything Lucia should know? (optional)</label><textarea id="wlNotes" rows="3"></textarea></div>
+            </div>
+            <div class="wiz-nav"><button type="button" class="btn back" data-back><span data-i18n="btn.back">Back</span></button><button type="button" class="btn" data-next><span data-i18n="btn.review">Review &amp; join</span></button></div>
+          </fieldset>
+          <fieldset data-fs="4">
+            <legend data-i18n="wl.s4h">Review &amp; join</legend>
+            <p class="fsub" data-i18n="wl.s4sub">Your request is composed as one structured message to Lucia's WhatsApp. Your position and reference are issued here, in order, before you send it.</p>
+            <div id="wlReview"></div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-back><span data-i18n="btn.back">Back</span></button>
+              <a class="btn" id="wlWa" href="#" target="_blank" rel="noopener"><span data-i18n="wl.send">Send via WhatsApp</span></a>
+              <button type="button" class="btn dark" id="wlJoin"><span data-i18n="wl.join">I have sent it — issue my place</span></button>
+            </div>
+            <div class="confirm" id="wlConfirm">
+              <h4 data-i18n="wl.conf.h">You are on the list.</h4>
+              <p><span data-i18n="wl.conf.pos">Priority position</span> <span class="big" id="wlPos">—</span> · <span data-i18n="wl.conf.ref">Reference</span> <span class="big" id="wlRef">—</span></p>
+              <p data-i18n="wl.conf.p">When bookings open on 1 December 2026, places are offered in position order. Lucia's team confirms every couple personally.</p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <aside class="sum rv">
+        <p class="ref" data-i18n="sum.ref">Your place · in real time</p>
+        <h3 data-i18n="sum.h">Your waitlist place</h3>
+        <div class="srow"><span data-i18n="sum.next">Next position issued</span><b id="sumPos">—</b></div>
+        <div class="srow"><span data-i18n="sum.month">Preferred month</span><b id="sumMonth">—</b></div>
+        <div class="srow"><span data-i18n="sum.date">Preferred date</span><b id="sumDate">—</b></div>
+        <div class="srow"><span data-i18n="sum.guests">Adult guests</span><b id="sumGuests">—</b></div>
+        <div class="srow"><span data-i18n="sum.cer">Ceremony</span><b id="sumCer">—</b></div>
+        <div class="srow tot"><span data-i18n="sum.opens">Bookings open</span><b>1 Dec 2026</b></div>
+        <p class="fnote" data-i18n="sum.note">Positions are issued in the order requests arrive. Joining the list holds your place in the queue — it is not a booking, and Lucia confirms every couple personally.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="calendar">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">03</span> · <span data-i18n="cal.lbl">2028, at a glance</span></p>
+        <h2><span data-i18n="cal.h2a">The 2028</span> <em data-i18n="cal.h2b">wedding calendar</em></h2>
+      </div>
+      <p data-i18n="cal.intro">Choose a date to request a hold. Every date is a request, never a promise — holds are queued behind the priority waitlist and Lucia confirms each one personally.</p>
+    </div>
+    <div class="cal-year rv" id="calYear"></div>
+    <div class="cal-legend rv">
+      <span><i style="background:var(--terra)"></i><span data-i18n="cal.leg.sel">Your selected date</span></span>
+      <span><i style="background:var(--sage)"></i><span data-i18n="cal.leg.held">Hold requested in this session</span></span>
+      <span data-i18n="cal.leg.note">Weddings are four-day experiences with exclusive use for 3 nights.</span>
+    </div>
+    <div class="wiz" style="margin-top:34px">
+      <div class="wiz-card rv">
+        <h3 style="font-size:27px;margin-bottom:6px" data-i18n="hld.h">Request a date hold</h3>
+        <p class="fsub" data-i18n="hld.sub">A hold asks the estate to keep your date while you decide. It is queued in waitlist order and confirmed personally — no payment is taken here.</p>
+        <div class="fgrid">
+          <div class="fld"><label data-i18n="hld.date">Selected date</label><input type="text" id="hldDateShow" readonly value="—"></div>
+          <div class="fld"><label for="hldGuests" data-i18n="hld.guests">Adult guests (40–60)</label><input type="number" id="hldGuests" min="40" max="60" value="50"></div>
+          <div class="fld" id="fld-hldName"><label for="hldName" data-i18n="hld.name">Your names</label><input type="text" id="hldName"><span class="err" data-i18n="hld.name.err">Please add your names.</span></div>
+          <div class="fld" id="fld-hldEmail"><label for="hldEmail" data-i18n="hld.email">Email</label><input type="email" id="hldEmail"><span class="err" data-i18n="hld.email.err">Please add a valid email address.</span></div>
+        </div>
+        <p class="err" id="hldErr" style="margin-top:10px"></p>
+        <div class="wiz-nav">
+          <a class="btn" id="hldWa" href="#" target="_blank" rel="noopener"><span data-i18n="hld.send">Request this hold on WhatsApp</span></a>
+          <button type="button" class="btn dark" id="hldDone"><span data-i18n="hld.done">I have sent it</span></button>
+        </div>
+        <div class="confirm" id="hldConfirm">
+          <h4 data-i18n="hld.conf.h">Hold requested.</h4>
+          <p><span data-i18n="hld.conf.ref">Reference</span> <span class="big" id="hldRef">—</span></p>
+          <p data-i18n="hld.conf.p">Your date is marked on the calendar above. Lucia's team confirms every hold personally, in waitlist order.</p>
+        </div>
+      </div>
+      <aside class="sum rv">
+        <p class="ref" data-i18n="hld.sum.ref">How holds work</p>
+        <h3 data-i18n="hld.sum.h">Held in order</h3>
+        <div class="srow"><span data-i18n="hld.sum.1">Priority list first</span><b data-i18n="hld.sum.1b">Always</b></div>
+        <div class="srow"><span data-i18n="hld.sum.2">One wedding at a time</span><b data-i18n="hld.sum.2b">Exclusive use</b></div>
+        <div class="srow"><span data-i18n="hld.sum.3">Confirmed by</span><b>Lucia</b></div>
+        <p class="fnote" data-i18n="hld.sum.note">In production, a confirmed hold starts the estate's reservation fee under its published policies — the platform never invents an amount; Lucia sets it.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<section id="weddings" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">04</span> · <span data-i18n="wed.lbl">The wedding itself</span></p>
+        <h2><span data-i18n="wed.h2a">Four days,</span> <em data-i18n="wed.h2b">the whole estate yours</em></h2>
+      </div>
+      <p data-i18n="wed.intro">The 2028 package, exactly as the estate publishes it: a complete four-day experience with full wedding planning, exclusive use, and every meal from the welcome night to the final dinner.</p>
+    </div>
+    <div class="days rv">
+      <div class="day"><p class="dn">1</p><h3 data-i18n="d1h">Arrival &amp; Welcome Night</h3><p data-i18n="d1p">Guests settle into their apartments from 2 pm. In the evening, a buffet dinner under the string lights — homemade pasta, focaccia, pinsa and gelato, with wine, beer and aperitivo included.</p></div>
+      <div class="day"><p class="dn">2</p><h3 data-i18n="d2h">The Wedding Day</h3><p data-i18n="d2p">A symbolic ceremony on the Roman terrace among the olive trees, aperitivo by the pool, a seated dinner tailored to your guests, then cake cutting and three hours of open bar and dancing, with music until 2 am.</p></div>
+      <div class="day"><p class="dn">3</p><h3 data-i18n="d3h">Pool Brunch &amp; Last Dinner</h3><p data-i18n="d3p">A relaxed poolside brunch above the lake, and a final dinner of bruschette with the estate's own organic olive oil, cured meats and cheeses, homemade lasagna and tiramisù.</p></div>
+      <div class="day"><p class="dn">4</p><h3 data-i18n="d4h">Farewell &amp; Check-out</h3><p data-i18n="d4p">Breakfast, a last swim or a walk among the olive trees — then goodbyes, or the start of your guests' Italian holiday.</p></div>
+    </div>
+    <div class="row2col rv">
+      <div class="gal">
+        <div class="main"><img class="lb" src="img/wed-3.jpg" alt="A wedding celebration at La Dogana"></div>
+        <div class="thumbs"><div><img class="lb" src="img/wed-1.jpg" alt="Wedding day at La Dogana"></div><div><img class="lb" src="img/wed-6.jpg" alt="Wedding dinner at La Dogana"></div></div>
+      </div>
+      <div class="cbody">
+        <p class="idx" data-i18n="inc.idx">What's included · 2028</p>
+        <h3 data-i18n="inc.h">The published package</h3>
+        <p data-i18n="inc.p">Full wedding planning from contract signature to the end of the stay, with the estate's in-house planner: ceremony and reception coordination, décor direction, a menu tasting and a venue inspection.</p>
+        <ul>
+          <li><span data-i18n="inc1">Exclusive use of the entire property</span><b data-i18n="inc1b">4 days</b></li>
+          <li><span data-i18n="inc2">Private bridal house, with breakfast</span><b data-i18n="inc2b">3 nights</b></li>
+          <li><span data-i18n="inc3">Welcome night, wedding day, brunch &amp; final dinner</span><b data-i18n="inc3b">Included</b></li>
+          <li><span data-i18n="inc4">Open bar after the cake</span><b data-i18n="inc4b">3 hours</b></li>
+          <li><span data-i18n="inc5">Security, cleaning and service taxes</span><b data-i18n="inc5b">Included</b></li>
+          <li><span data-i18n="inc6">2028 package price</span><b data-i18n="inc6b">By guest count</b></li>
+        </ul>
+        <p class="fnote" data-i18n="inc.note">As the estate publishes it: for 2028 the package is priced according to your final guest count, and accommodation and breakfasts are charged separately, with a minimum three-night exclusive-use stay for 40 adults.</p>
+      </div>
+    </div>
+    <div class="row2col flip rv">
+      <div class="gal">
+        <div class="main"><img class="lb" src="img/estate-1.jpg" alt="The estate and pool above Lake Trasimeno"></div>
+        <div class="thumbs"><div><img class="lb" src="img/wed-4.jpg" alt="The Roman terrace at La Dogana"></div><div><img class="lb" src="img/estate-3.jpg" alt="Evening at La Dogana"></div></div>
+      </div>
+      <div class="cbody">
+        <p class="idx" data-i18n="spc.idx">Spaces &amp; accommodation</p>
+        <h3 data-i18n="spc.h">23 bedrooms, one party</h3>
+        <p data-i18n="spc.p">An 18th-century farmhouse complex above the lake: the Lake House, an independent cottage and the bridal house — plus a 26-metre pool among 300-year-old olive trees, the Roman ceremony terrace, the restaurant under its pergola, and the historic Mill Room as an indoor back-up.</p>
+        <ul>
+          <li><span data-i18n="spc1">Lake House apartments</span><b>11 · 20 <span data-i18n="spc.bed">bedrooms</span></b></li>
+          <li><span data-i18n="spc2">Independent cottage</span><b>3 <span data-i18n="spc.bed2">bedrooms</span></b></li>
+          <li><span data-i18n="spc3">Bridal house</span><b data-i18n="spc3b">Private, 3 nights</b></li>
+          <li><span data-i18n="spc4">Pool</span><b>26 m</b></li>
+          <li><span data-i18n="spc5">Olive trees on the estate</span><b>4,000</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wiz" style="margin-top:20px">
+      <div class="wiz-card rv">
+        <h3 style="font-size:27px;margin-bottom:6px" data-i18n="pty.h">Wedding-party accommodation</h3>
+        <p class="fsub" data-i18n="pty.sub">Guests staying for a wedding? Request the bedrooms against your date in one message — the estate confirms who sleeps where, personally.</p>
+        <div class="fgrid">
+          <div class="fld" id="fld-pCouple"><label for="pCouple" data-i18n="pty.couple">The couple's names</label><input type="text" id="pCouple"><span class="err" data-i18n="pty.couple.err">Please add the couple's names.</span></div>
+          <div class="fld"><label for="pDate" data-i18n="pty.date">Wedding date (2028)</label><input type="date" id="pDate" min="2028-01-01" max="2028-12-31"><span class="err" data-i18n="pty.date.err">Please choose a date in 2028.</span></div>
+          <div class="fld"><label for="pRooms"><span data-i18n="pty.rooms">Bedrooms needed</span> (1–23)</label><input type="number" id="pRooms" min="1" max="23" value="10"></div>
+          <div class="fld"><label for="pGuests" data-i18n="pty.guests">Guests staying</label><input type="number" id="pGuests" min="1" max="80" value="40"></div>
+          <div class="fld" id="fld-pName"><label for="pName" data-i18n="pty.name">Your name</label><input type="text" id="pName"><span class="err" data-i18n="pty.name.err">Please add your name.</span></div>
+          <div class="fld" id="fld-pEmail"><label for="pEmail" data-i18n="pty.email">Email</label><input type="email" id="pEmail"><span class="err" data-i18n="pty.email.err">Please add a valid email address.</span></div>
+        </div>
+        <p class="err" id="pErr" style="margin-top:10px"></p>
+        <div class="wiz-nav">
+          <a class="btn" id="pWa" href="#" target="_blank" rel="noopener"><span data-i18n="pty.send">Request rooms on WhatsApp</span></a>
+          <button type="button" class="btn dark" id="pDone"><span data-i18n="pty.done">I have sent it</span></button>
+        </div>
+        <div class="confirm" id="pConfirm">
+          <h4 data-i18n="pty.conf.h">Accommodation requested.</h4>
+          <p><span data-i18n="pty.conf.ref">Reference</span> <span class="big" id="pRef">—</span></p>
+          <p data-i18n="pty.conf.p">Lucia's team confirms the rooms against your wedding date personally.</p>
+        </div>
+      </div>
+      <aside class="sum rv">
+        <p class="ref" data-i18n="pty.sum.ref">Exclusive use</p>
+        <h3 data-i18n="pty.sum.h">The whole estate, one wedding</h3>
+        <div class="srow"><span data-i18n="pty.sum.1">Bedrooms in total</span><b>23</b></div>
+        <div class="srow"><span data-i18n="pty.sum.2">Guests in the apartments</span><b>40–60</b></div>
+        <div class="srow"><span data-i18n="pty.sum.3">Minimum stay</span><b data-i18n="pty.sum.3b">3 nights</b></div>
+        <p class="fnote" data-i18n="pty.sum.note">Extra single beds can be added in several living rooms — the estate confirms the exact layout for each wedding.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="stay">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">05</span> · <span data-i18n="apt.lbl">Holiday apartments</span></p>
+        <h2><span data-i18n="apt.h2a">Stay on the estate,</span> <em data-i18n="apt.h2b">without the inbox wait</em></h2>
+      </div>
+      <p data-i18n="apt.intro">Eleven apartments in the Lake House, the Coach House in the woods and the Woodcutter's House among the olives. The estate publishes no rates or availability — so this flow asks properly, with dates and party size, in one structured request.</p>
+    </div>
+    <div class="units rv" id="unitGrid"></div>
+    <div class="wiz" style="margin-top:34px">
+      <div class="wiz-card rv">
+        <h3 style="font-size:27px;margin-bottom:6px" data-i18n="sty.h">Request a stay</h3>
+        <p class="fsub" data-i18n="sty.sub">Choose a home, your dates and your party. Your request goes to Lucia's WhatsApp as one structured message; the estate confirms availability and rates personally.</p>
+        <div class="fgrid">
+          <div class="fld"><label for="stUnit" data-i18n="sty.unit">Apartment or house</label><select id="stUnit"></select></div>
+          <div class="fld"><label for="stParty" data-i18n="sty.party">Guests</label><input type="number" id="stParty" min="1" max="8" value="2"><span class="err" id="stPartyErr"></span></div>
+          <div class="fld" id="fld-stIn"><label for="stIn" data-i18n="sty.in">Arrive</label><input type="date" id="stIn"><span class="err" data-i18n="sty.in.err">Please choose an arrival date.</span></div>
+          <div class="fld" id="fld-stOut"><label for="stOut" data-i18n="sty.out">Depart</label><input type="date" id="stOut"><span class="err" data-i18n="sty.out.err">Departure must be after arrival.</span></div>
+          <div class="fld" id="fld-stName"><label for="stName" data-i18n="sty.name">Your name</label><input type="text" id="stName" autocomplete="name"><span class="err" data-i18n="sty.name.err">Please add your name.</span></div>
+          <div class="fld" id="fld-stEmail"><label for="stEmail" data-i18n="sty.email">Email</label><input type="email" id="stEmail" autocomplete="email"><span class="err" data-i18n="sty.email.err">Please add a valid email address.</span></div>
+          <div class="fld full"><label for="stNotes" data-i18n="sty.notes">Anything the team should know? (optional)</label><textarea id="stNotes" rows="2"></textarea></div>
+        </div>
+        <div id="stReview" style="margin-top:16px"></div>
+        <div class="wiz-nav">
+          <a class="btn" id="stWa" href="#" target="_blank" rel="noopener"><span data-i18n="sty.send">Send the request on WhatsApp</span></a>
+          <button type="button" class="btn dark" id="stDone"><span data-i18n="sty.done">I have sent it</span></button>
+        </div>
+        <div class="confirm" id="stConfirm">
+          <h4 data-i18n="sty.conf.h">Request sent.</h4>
+          <p><span data-i18n="sty.conf.ref">Reference</span> <span class="big" id="stRef">—</span></p>
+          <p data-i18n="sty.conf.p">Check-in is from 2 pm; the team confirms every stay personally. If you arrive after 9 pm, message the estate on WhatsApp with your ETA.</p>
+        </div>
+      </div>
+      <aside class="sum rv">
+        <p class="ref" data-i18n="sty.sum.ref">Good to know</p>
+        <h3 data-i18n="sty.sum.h">From the estate's own pages</h3>
+        <div class="srow"><span data-i18n="sty.sum.1">Check-in</span><b>14:00–19:30</b></div>
+        <div class="srow"><span data-i18n="sty.sum.2">Check-out</span><b>09:30</b></div>
+        <div class="srow"><span data-i18n="sty.sum.3">Air conditioning</span><b data-i18n="sty.sum.3b">Every apartment</b></div>
+        <div class="srow"><span data-i18n="sty.sum.4">Pool</span><b>26 m</b></div>
+        <p class="fnote" data-i18n="sty.sum.note">Every apartment has a kitchenette, bed linen and towels included, and most have lake views. The restaurant is reserved for estate guests.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">06</span> · <span data-i18n="exp.lbl">Life at La Dogana</span></p>
+        <h2><span data-i18n="exp.h2a">More than</span> <em data-i18n="exp.h2b">weddings</em></h2>
+      </div>
+      <p data-i18n="exp.intro">Retreats, cooking and the estate's own olive oil — everything below is published on La Dogana's own pages, and every enquiry can ride the same request flow.</p>
+    </div>
+    <div class="row2col rv">
+      <div class="gal"><div class="main"><img class="lb" src="img/cook.jpg" alt="Fresh pasta cooking class at La Dogana"></div>
+      <div class="thumbs"><div><img class="lb" src="img/hike.jpg" alt="Hiking retreat in Tuscany"></div><div><img class="lb" src="img/apt-window.jpg" alt="A window over Lake Trasimeno"></div></div></div>
+      <div class="cbody">
+        <p class="idx" data-i18n="exp.idx">From the estate's pages</p>
+        <h3 data-i18n="exp.h">Days at the estate</h3>
+        <ul>
+          <li><span data-i18n="exp1">Fresh pasta cooking class &amp; private dinner, with Elisa</span><b data-i18n="exp1b">3–4 hours · min. 6 guests</b></li>
+          <li><span data-i18n="exp2">Yoga retreats in the restored ancient mill</span><b data-i18n="exp2b">7 days</b></li>
+          <li><span data-i18n="exp3">Wine retreats with small family wineries</span><b data-i18n="exp3b">7 days</b></li>
+          <li><span data-i18n="exp4">Hike retreats — Via Francigena &amp; Val d'Orcia</span><b data-i18n="exp4b">Guided</b></li>
+          <li><span data-i18n="exp5">Organic extra virgin olive oil from the estate</span><b data-i18n="exp5b">4,000 trees</b></li>
+          <li><span data-i18n="exp6">The estate bought by Lucia's great-grandmother</span><b>1938</b></li>
+        </ul>
+        <p class="fnote" data-i18n="exp.note">In 1938 Maria Casale Sacchi — one of the first female chemists in Italy — bought La Dogana with the proceeds of her ammonia synthesis patent. Lucia is the fourth generation to care for it.</p>
+      </div>
+    </div>
+    <div class="gstripe rv" style="margin-top:10px">
+      <figure><img class="lb" src="img/wed-2.jpg" alt="Wedding portrait at La Dogana"></figure>
+      <figure><img class="lb" src="img/wed-5.jpg" alt="Celebration at La Dogana"></figure>
+      <figure><img class="lb" src="img/wed-7.jpg" alt="The estate gardens"></figure>
+      <figure><img class="lb" src="img/lucia.jpg" alt="La Dogana"></figure>
+      <figure><img class="lb" src="img/estate-2.jpg" alt="The Lake House"></figure>
+      <figure><img class="lb" src="img/coach.jpg" alt="The Coach House bedroom"></figure>
+      <figure><img class="lb" src="img/wood.jpg" alt="The Woodcutter's House living room"></figure>
+      <figure><img class="lb" src="img/apt-26.jpg" alt="Apartment living room with lake view"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">07</span> · <span data-i18n="faq.lbl">Good questions</span></p>
+        <h2><span data-i18n="faq.h2a">Before you</span> <em data-i18n="faq.h2b">ask Lucia</em></h2>
+      </div>
+      <p data-i18n="faq.intro">Every answer below comes from La Dogana's own published pages — nothing added, nothing guessed.</p>
+    </div>
+    <div class="faq-list rv" id="faqList"></div>
+  </div>
+</section>
+
+<section class="dash-sec" id="dashboard">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">08</span> · <span data-i18n="dash.lbl">The owner's view</span></p>
+        <h2><span data-i18n="dash.h2a">December 1, from</span> <em data-i18n="dash.h2b">Lucia's side</em></h2>
+      </div>
+      <p data-i18n="dash.intro">Instead of one form inbox on the biggest morning of her year: the list in order, the holds marked, every request complete. Join the waitlist above and watch your own place appear here.</p>
+    </div>
+    <div class="dash rv">
+      <div class="dash-head"><h3 data-i18n="dash.h">The 2028 opening board</h3><span class="dash-tag" id="dashTag">Illustrative example</span></div>
+      <div class="dash-grid">
+        <div>
+          <table aria-label="Priority waitlist">
+            <thead><tr><th data-i18n="dash.c1">Pos.</th><th data-i18n="dash.c2">Couple</th><th data-i18n="dash.c3">Hoping for</th><th data-i18n="dash.c4">Guests</th><th data-i18n="dash.c5">Reference</th></tr></thead>
+            <tbody id="dashWlBody"></tbody>
+          </table>
+          <p style="margin-top:14px;font-size:13.5px;color:rgba(246,241,229,.65)" id="dashHoldLine"></p>
+        </div>
+        <div>
+          <div class="stat"><b id="dashStatList">—</b><span data-i18n="dash.s1">Couples on the priority list</span></div>
+          <div class="stat"><b id="dashStatHolds">—</b><span data-i18n="dash.s2">Date holds requested</span></div>
+          <div class="stat"><b>1 Dec 2026</b><span data-i18n="dash.s3">Opening day — offers go out in position order</span></div>
+          <div class="stat"><b data-i18n="dash.s4b">One form</b><span data-i18n="dash.s4">What runs the opening today</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prop-sec" id="forlucia">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl" style="color:var(--gold)"><span class="n">09</span> · <span data-i18n="prop.lbl">For Lucia</span></p>
+        <h2><span data-i18n="prop.h2a">What production</span> <em data-i18n="prop.h2b">looks like</em></h2>
+      </div>
+      <p style="color:rgba(246,241,229,.78)" data-i18n="prop.intro">This concept, made real on your own domain — live before the list opens, not after. Built and launched with your team, in English and Italian.</p>
+    </div>
+    <div class="prop-grid rv" id="proposal">
+      <div class="prop-item"><h3 data-i18n="pr1h">Live on your domain, before 1 December</h3><p data-i18n="pr1p">The platform launches on agriturismodogana.it ahead of opening day, with your existing waitlist migrated into sequence — nobody who already wrote to you loses their place.</p></div>
+      <div class="prop-item"><h3 data-i18n="pr2h">Real date holds &amp; deposit capture</h3><p data-i18n="pr2p">Confirmed holds take the reservation fee under your own published policies, paid into your accounts. The platform handles the sequence, the references and the reminders.</p></div>
+      <div class="prop-item"><h3 data-i18n="pr3h">A live 2028 calendar</h3><p data-i18n="pr3p">Dates open, held and confirmed at a glance — for you, and in a couple-facing view that never shows more than it should.</p></div>
+      <div class="prop-item"><h3 data-i18n="pr4h">Apartments, answered in order</h3><p data-i18n="pr4p">Stay requests arrive complete — dates, party, unit — and can be confirmed with one reply, instead of two business days of back-and-forth.</p></div>
+      <div class="prop-item"><h3 data-i18n="pr5h">Routing your team already knows</h3><p data-i18n="pr5p">Weddings to weddings@, stays to info@, retreats to retreats@ — and urgent requests to your WhatsApp, exactly as your pages publish today.</p></div>
+      <div class="prop-item"><h3 data-i18n="pr6h">Training &amp; opening-week support</h3><p data-i18n="pr6p">Your team of nine trained on the board before launch, and support through the whole opening week — the morning of 1 December included.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">10</span> · <span data-i18n="ct.lbl">Contacts</span></p>
+        <h2><span data-i18n="ct.h2a">Reach</span> <em data-i18n="ct.h2b">the estate</em></h2>
+      </div>
+      <p data-i18n="ct.intro">As published on La Dogana's own pages. Viewing visits are by scheduled appointment only.</p>
+    </div>
+    <div class="contact-grid rv">
+      <div class="ccard"><h4>WhatsApp / iMessage</h4><p><a href="https://wa.me/393473305609" target="_blank" rel="noopener">+39 347 330 5609</a></p><p data-i18n="ct.wa">For assistance — the estate's published number. For urgent matters, phone calls only.</p></div>
+      <div class="ccard"><h4 data-i18n="ct.em.h">Email, by department</h4><p>Weddings — <a href="mailto:weddings@agriturismodogana.it">weddings@agriturismodogana.it</a><br><span data-i18n="ct.em.apt">Apartments</span> — <a href="mailto:info@agriturismodogana.it">info@agriturismodogana.it</a><br><span data-i18n="ct.em.ret">Retreats</span> — <a href="mailto:retreats@agriturismodogana.it">retreats@agriturismodogana.it</a></p></div>
+      <div class="ccard"><h4 data-i18n="ct.ad.h">The estate</h4><p>Località Dogana 7, Tuoro sul Trasimeno 06069 (PG)<br><span data-i18n="ct.ad.ig">Lucia on Instagram</span> — <a href="https://www.instagram.com/luciasitalia" target="_blank" rel="noopener">@luciasitalia</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="fbrand">La Dogana</p>
+    <p data-i18n="ft.1">Concept proposal built by SiteSprint Studio. This is a concept demonstration, not the official website of Agriturismo La Dogana. No live availability is shown and no payment is taken anywhere on this page; every request is confirmed personally by the estate.</p>
+    <p data-i18n="ft.2">Photography and facts: Agriturismo La Dogana (agriturismodogana.it) — the estate's own published pages, including its wedding, apartments and how-to-arrive pages. Figures marked illustrative are illustrative.</p>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox"><button type="button" id="lbClose" aria-label="Close">×</button><img id="lbImg" src="" alt=""></div>
+<script>
+'use strict';
+const WA_NUMBER = '393473305609';
+const OPENING = Date.UTC(2026, 10, 30, 23, 0, 0); /* 1 Dec 2026, 00:00 Europe/Rome (CET, UTC+1) */
+const WL_BASE = 17; /* illustrative couples already on the list, as labelled on the board */
+
+const UNITS = [
+ {id:'apt1', name:{en:'Apartment 1',it:'Appartamento 1'}, size:'50 m²', floor:{en:'First floor · lake view',it:'Primo piano · vista lago'}, sleeps:5, hl:{en:'Two double bedrooms, one on a mezzanine; garden area with BBQ nearby.',it:'Due camere matrimoniali, una su soppalco; area giardino con BBQ nelle vicinanze.'}},
+ {id:'apt2', name:{en:'Apartment 2',it:'Appartamento 2'}, size:'60 m²', floor:{en:'First floor',it:'Primo piano'}, sleeps:5, hl:{en:'A double bedroom and a big bedroom with three singles; lake view.',it:'Una camera matrimoniale e una grande camera con tre letti singoli; vista lago.'}},
+ {id:'apt3', name:{en:'Apartment 3',it:'Appartamento 3'}, size:'70 m²', floor:{en:'First floor',it:'Primo piano'}, sleeps:5, hl:{en:'Attic sleeping area and a small panoramic terrace at the entrance.',it:'Zona notte in mansarda e piccola terrazza panoramica all\u2019ingresso.'}},
+ {id:'apt4', name:{en:'Apartment 4',it:'Appartamento 4'}, size:'50 m²', floor:{en:'First floor · lake view',it:'Primo piano · vista lago'}, sleeps:5, hl:{en:'Lake view from both bedrooms; sitting room with kitchen.',it:'Vista lago da entrambe le camere; soggiorno con cucina.'}},
+ {id:'apt5', name:{en:'Apartment 5',it:'Appartamento 5'}, size:'65 m²', floor:{en:'First floor',it:'Primo piano'}, sleeps:4, hl:{en:'The only apartment with a private terrace, over the lake.',it:'L\u2019unico appartamento con terrazza privata, sul lago.'}},
+ {id:'apt23', name:{en:'Apartment 23',it:'Appartamento 23'}, size:'35 m²', floor:{en:'Ground floor',it:'Piano terra'}, sleeps:3, hl:{en:'A double bedroom and living room with kitchen — simple and quiet.',it:'Una camera matrimoniale e soggiorno con cucina: semplice e tranquillo.'}},
+ {id:'apt24', name:{en:'Apartment 24',it:'Appartamento 24'}, size:'45 m²', floor:{en:'Ground floor',it:'Piano terra'}, sleeps:5, hl:{en:'Master bedroom plus a small bunk room; garden table with lake view.',it:'Camera matrimoniale più piccola camera con letti a castello; tavolo in giardino vista lago.'}},
+ {id:'apt25', name:{en:'Apartment 25',it:'Appartamento 25'}, size:'45 m²', floor:{en:'Ground floor',it:'Piano terra'}, sleeps:5, hl:{en:'Two bedrooms and a big bathroom; garden table with lake view.',it:'Due camere e un grande bagno; tavolo in giardino vista lago.'}},
+ {id:'apt26', name:{en:'Apartment 26',it:'Appartamento 26'}, size:'70 m²', floor:{en:'Ground floor',it:'Piano terra'}, sleeps:6, hl:{en:'Two large double bedrooms and a big living room — the family favourite.',it:'Due grandi camere matrimoniali e ampio soggiorno: il preferito dalle famiglie.'}},
+ {id:'apt27', name:{en:'Apartment 27',it:'Appartamento 27'}, size:'45 m²', floor:{en:'Ground floor',it:'Piano terra'}, sleeps:4, hl:{en:'Second bedroom set up as you wish — single bed or bunk beds.',it:'Seconda camera allestita come desiderate: letto singolo o letti a castello.'}},
+ {id:'apt28', name:{en:'Apartment 28',it:'Appartamento 28'}, size:'35 m²', floor:{en:'Ground floor',it:'Piano terra'}, sleeps:3, hl:{en:'A double bedroom and living room with kitchenette, by the garden.',it:'Una camera matrimoniale e soggiorno con angolo cottura, sul giardino.'}},
+ {id:'coach', name:{en:'The Coach House',it:'La Coach House'}, size:'50 m²', floor:{en:'Independent cottage · the bridal house',it:'Casetta indipendente · la casa della sposa'}, sleeps:3, hl:{en:'In the woodland garden, 200 m from the Lake House, with private parking.',it:'Nel giardino boscoso, a 200 m dalla Lake House, con parcheggio privato.'}},
+ {id:'wood', name:{en:"The Woodcutter's House",it:'La Casa del Taglialegna'}, size:'100 m²', floor:{en:'Independent cottage · 3 bedrooms',it:'Casetta indipendente · 3 camere'}, sleeps:8, hl:{en:'Surrounded by woodland and olive grove, 300 m from the Lake House; two bathrooms, BBQ.',it:'Immersa nel bosco e nell\u2019oliveto, a 300 m dalla Lake House; due bagni, BBQ.'}}
+];
+
+const FAQ = [
+ {q:{en:'When do bookings for 2028 open?',it:'Quando aprono le prenotazioni per il 2028?'},
+  a:{en:'On 1 December 2026. The estate hosts a limited number of weddings each year, reservations can be made up to two years in advance, and 2027 is fully booked — which is why the priority waiting list exists.',it:'Il 1° dicembre 2026. La tenuta ospita un numero limitato di matrimoni ogni anno, le prenotazioni sono possibili fino a due anni in anticipo e il 2027 è al completo: per questo esiste la lista d\u2019attesa prioritaria.'}},
+ {q:{en:'How many guests can a wedding have?',it:'Quanti ospiti può avere un matrimonio?'},
+  a:{en:'The estate recommends 40 to 60 adults, for comfort and for the indoor back-up plan in case of rain. The apartments host 40 to 60 guests, the reception up to 60, and accommodation carries a minimum three-night exclusive-use stay for 40 adults.',it:'La tenuta consiglia da 40 a 60 adulti, per comfort e per il piano B al coperto in caso di pioggia. Gli appartamenti ospitano da 40 a 60 ospiti, il ricevimento fino a 60, e per l\u2019alloggio è previsto un soggiorno minimo di tre notti in uso esclusivo per 40 adulti.'}},
+ {q:{en:'What does the four-day package include?',it:'Cosa include il pacchetto di quattro giorni?'},
+  a:{en:'Full wedding planning with the in-house planner, exclusive use of the entire property for four days, the private bridal house for three nights with breakfast, the welcome-night buffet, the wedding day with aperitivo, seated dinner, cake and three hours of open bar, the poolside brunch and the final dinner — plus security, cleaning and the taxes on the included services.',it:'La pianificazione completa con la wedding planner interna, l\u2019uso esclusivo dell\u2019intera proprietà per quattro giorni, la casa della sposa privata per tre notti con colazione, il buffet della serata di benvenuto, il giorno del matrimonio con aperitivo, cena servita, torta e tre ore di open bar, il brunch a bordo piscina e la cena finale, oltre a sicurezza, pulizie e tasse sui servizi inclusi.'}},
+ {q:{en:'How is the 2028 package priced?',it:'Come viene calcolato il prezzo del pacchetto 2028?'},
+  a:{en:'Exactly as the estate publishes it: the four-day package for 40–60 adult guests is priced according to your final guest count, and accommodation and breakfasts are charged separately. Join the waitlist and the estate sends the full package with prices and details.',it:'Esattamente come pubblica la tenuta: il pacchetto di quattro giorni per 40–60 ospiti adulti è calcolato in base al numero finale di ospiti, e alloggio e colazioni sono conteggiati a parte. Iscrivetevi alla lista d\u2019attesa e la tenuta vi invierà il pacchetto completo con prezzi e dettagli.'}},
+ {q:{en:'What ceremonies are possible?',it:'Quali cerimonie sono possibili?'},
+  a:{en:'Symbolic ceremonies on the Roman terrace among the olive trees or in the back-up spaces; civil ceremonies in an ancient fortress in Passignano, 15 minutes away, overlooking the lake; Catholic ceremonies in a church in Cortona, 20 minutes away.',it:'Cerimonie simboliche sulla terrazza romana tra gli ulivi o negli spazi di riserva; cerimonie civili in un\u2019antica fortezza a Passignano, a 15 minuti, con vista sul lago; cerimonie cattoliche in una chiesa a Cortona, a 20 minuti.'}},
+ {q:{en:'How do guests get here?',it:'Come arrivano gli ospiti?'},
+  a:{en:'Perugia airport is about 30 minutes away, Florence about 1 hour 30, Rome Fiumicino about 3 hours; the nearest station is Terontola–Cortona. The estate works with a local transfer company — indicative private transfers run from €350 from Florence and €450 from Rome, for 1–8 guests.',it:'L\u2019aeroporto di Perugia è a circa 30 minuti, Firenze a circa 1 ora e 30, Roma Fiumicino a circa 3 ore; la stazione più vicina è Terontola–Cortona. La tenuta collabora con una compagnia locale di transfer: i transfer privati indicativi partono da €350 da Firenze e €450 da Roma, per 1–8 ospiti.'}},
+ {q:{en:'What are check-in and check-out for the apartments?',it:'Quali sono check-in e check-out per gli appartamenti?'},
+  a:{en:'Check-in is 2.00–7.30 pm and check-out is 09:30 am; you may enjoy the pool after check-out. Early arrivals can relax by the pool, and late arrivals are by request — after 9 pm a late check-in fee of €40 applies, as the estate publishes.',it:'Il check-in è dalle 14:00 alle 19:30 e il check-out alle 09:30; dopo il check-out potete restare in piscina. Chi arriva prima può rilassarsi a bordo piscina; gli arrivi tardi sono su richiesta e dopo le 21:00 è previsto un supplemento di €40, come pubblica la tenuta.'}},
+ {q:{en:'Can we visit before booking?',it:'Possiamo visitare la tenuta prima di prenotare?'},
+  a:{en:'Yes — viewing visits are possible with a scheduled appointment, and the estate answers within 48 hours. The address is Località Dogana 7, Tuoro sul Trasimeno, and the estate\u2019s assistance line is on WhatsApp and iMessage at +39 347 330 5609.',it:'Sì: le visite sono possibili su appuntamento e la tenuta risponde entro 48 ore. L\u2019indirizzo è Località Dogana 7, Tuoro sul Trasimeno, e la linea di assistenza della tenuta è su WhatsApp e iMessage al +39 347 330 5609.'}}
+];
+
+const DICT = { en: {
+ 'brand.sub':"Lucia's Estate · Lake Trasimeno",
+ 'nav.opening':'The Opening','nav.waitlist':'Waitlist','nav.calendar':'2028 Calendar','nav.weddings':'Weddings','nav.stay':'Stay','nav.forlucia':'For Lucia','nav.cta':'Join the waitlist',
+ 'hero.lbl':"Lucia's Estate · Lake Trasimeno · Umbria & Tuscany",
+ 'hero.h1a':'2028 opens','hero.h1b':'on 1 December.',
+ 'hero.sub':"La Dogana's 2027 wedding season is fully booked. When bookings for 2028 open, the couples on the priority list go first. This is the platform that runs that morning — a sequenced waitlist, date holds and every request in one place.",
+ 'cd.d':'Days','cd.h':'Hours','cd.m':'Minutes','cd.s':'Seconds','cd.cap':'Until bookings open · 1 December 2026',
+ 'hero.cta1':'Join the priority waitlist','hero.cta2':'See the 2028 calendar',
+ 'hs1b':'1 Dec 2026','hs1s':'Bookings open for 2028','hs2b':'Fully booked','hs2s':'The whole 2027 season','hs3s':'Bedrooms, exclusive use','hs4s':'Guests at every wedding',
+ 'why.lbl':'The problem','why.h2a':'One form stands between your couples','why.h2b':'and 2028.',
+ 'why.lede':'La Dogana hosts a limited number of weddings a year, and reservations can be made up to two years in advance. The 2027 season sold out completely. On 1 December, a year of 2028 dates opens at once — and today, the only thing receiving them is a web form and an inbox.',
+ 'lk1h':'A whole season, one morning','lk1p':'Every 2028 date opens on the same day. The couples who enquire first expect an answer first — a form cannot keep that order.',
+ 'lk2h':'A list with no sequence','lk2p':'The priority waiting list has no positions, no references and no date holds. Nobody can be told where they stand, and no date can be held while a couple decides.',
+ 'lk3h':'Every answer written by hand','lk3p':'Enquiries are answered one by one — the estate replies within two business days — while couples choosing between venues decide in hours.',
+ 'lk4h':'The apartments wait too','lk4p':'Eleven apartments and two houses, and no rates or availability published anywhere. Every stay, like every wedding, begins as an email and a wait.',
+ 'fix.lbl':'This platform','fix.h':'The opening, run properly',
+ 'fix1':'A priority waitlist with real sequence — every couple receives a position and a reference the moment they join',
+ 'fix2':'A 2028 wedding calendar with date-hold requests, held in order behind the waitlist',
+ 'fix3':'Wedding-party accommodation tied to each date — all 23 bedrooms requested in one structured message',
+ 'fix4':'Apartment stay requests with dates and party size, in the same flow',
+ 'fix5':"Every request composed straight to Lucia's WhatsApp — no inbox archaeology on opening morning",
+ 'fix6':"An owner's view of the whole opening: the list in order, the holds, the requests",
+ 'wl.lbl':'The centrepiece','wl.h2a':'The 2028 priority','wl.h2b':'waiting list',
+ 'wl.intro':'Join in four short steps. Your position and reference are issued immediately, and your place is offered in order when bookings open on 1 December 2026.',
+ 'wl.t1':'1 · Your date','wl.t2':'2 · Your celebration','wl.t3':'3 · Your details','wl.t4':'4 · Review & join',
+ 'wl.s1h':'When would you marry?','wl.s1sub':'2028 bookings open on 1 December 2026. Tell us the date or month you hope for — flexibility helps, and it is noted on your place in the queue.',
+ 'wl.month':'Preferred month, 2028','wl.month.err':'Please choose a month or tell us you are flexible.','wl.month.ph':'Choose a month…','wl.month.flex':'No preference — we are flexible',
+ 'wl.date':'Preferred date (optional)','wl.date.err':'That date is outside 2028.','wl.flex':'We are flexible — offer us any date that frees up',
+ 'wl.s2h':'Your celebration','wl.s2sub':'Every La Dogana wedding is a four-day experience with exclusive use of the estate, for 40 to 60 adult guests.',
+ 'wl.guests':'Adult guests','wl.guests.err':'Weddings at La Dogana host 40 to 60 adult guests.',
+ 'wl.ceremony':'Ceremony','cer.sym':'Symbolic, on the Roman terrace','cer.civ':'Civil, at the fortress in Passignano','cer.cat':'Catholic, in a church in Cortona','cer.und':'Not decided yet',
+ 'wl.stayq':'Guests staying on the estate?','stay.all':'Yes — as many as the 23 bedrooms hold','stay.some':'Some of our guests','stay.tbc':'To be decided',
+ 'btn.cont':'Continue','btn.back':'Back','btn.review':'Review & join',
+ 'wl.s3h':'Your details','wl.s3sub':'So the estate can reach you the moment your date is offered.',
+ 'wl.name1':'Your name','wl.name2':"Your partner's name",'wl.name.err':'Please add your name.','wl.email':'Email','wl.email.err':'Please add a valid email address.','wl.country':'Country of residence','wl.country.err':'Please add your country.','wl.notes':'Anything Lucia should know? (optional)',
+ 'wl.s4h':'Review & join','wl.s4sub':"Your request is composed as one structured message to Lucia's WhatsApp. Your position and reference are issued here, in order, before you send it.",
+ 'wl.send':'Send via WhatsApp','wl.join':'I have sent it — issue my place',
+ 'wl.conf.h':'You are on the list.','wl.conf.pos':'Priority position','wl.conf.ref':'Reference','wl.conf.p':"When bookings open on 1 December 2026, places are offered in position order. Lucia's team confirms every couple personally.",
+ 'sum.ref':'Your place · in real time','sum.h':'Your waitlist place','sum.next':'Next position issued','sum.month':'Preferred month','sum.date':'Preferred date','sum.guests':'Adult guests','sum.cer':'Ceremony','sum.opens':'Bookings open','sum.note':'Positions are issued in the order requests arrive. Joining the list holds your place in the queue — it is not a booking, and Lucia confirms every couple personally.',
+ 'rv.names':'Couple','rv.when':'Hoping for','rv.flex':'Flexible — any date','rv.guests':'Adult guests','rv.cer':'Ceremony','rv.stay':'Staying on estate','rv.email':'Email','rv.country':'Country','rv.notes':'Notes',
+ 'cal.lbl':'2028, at a glance','cal.h2a':'The 2028','cal.h2b':'wedding calendar','cal.intro':'Choose a date to request a hold. Every date is a request, never a promise — holds are queued behind the priority waitlist and Lucia confirms each one personally.',
+ 'cal.leg.sel':'Your selected date','cal.leg.held':'Hold requested in this session','cal.leg.note':'Weddings are four-day experiences with exclusive use for 3 nights.',
+ 'hld.h':'Request a date hold','hld.sub':'A hold asks the estate to keep your date while you decide. It is queued in waitlist order and confirmed personally — no payment is taken here.',
+ 'hld.date':'Selected date','hld.guests':'Adult guests (40–60)','hld.name':'Your names','hld.name.err':'Please add your names.','hld.email':'Email','hld.email.err':'Please add a valid email address.','hld.err.date':'Please choose a date on the 2028 calendar first.','hld.err.guests':'Weddings at La Dogana host 40 to 60 adult guests.',
+ 'hld.send':'Request this hold on WhatsApp','hld.done':'I have sent it','hld.conf.h':'Hold requested.','hld.conf.ref':'Reference','hld.conf.p':"Your date is marked on the calendar above. Lucia's team confirms every hold personally, in waitlist order.",
+ 'hld.sum.ref':'How holds work','hld.sum.h':'Held in order','hld.sum.1':'Priority list first','hld.sum.1b':'Always','hld.sum.2':'One wedding at a time','hld.sum.2b':'Exclusive use','hld.sum.3':'Confirmed by','hld.sum.note':"In production, a confirmed hold starts the estate's reservation fee under its published policies — the platform never invents an amount; Lucia sets it.",
+ 'wed.lbl':'The wedding itself','wed.h2a':'Four days,','wed.h2b':'the whole estate yours','wed.intro':'The 2028 package, exactly as the estate publishes it: a complete four-day experience with full wedding planning, exclusive use, and every meal from the welcome night to the final dinner.',
+ 'd1h':'Arrival & Welcome Night','d1p':'Guests settle into their apartments from 2 pm. In the evening, a buffet dinner under the string lights — homemade pasta, focaccia, pinsa and gelato, with wine, beer and aperitivo included.',
+ 'd2h':'The Wedding Day','d2p':'A symbolic ceremony on the Roman terrace among the olive trees, aperitivo by the pool, a seated dinner tailored to your guests, then cake cutting and three hours of open bar and dancing, with music until 2 am.',
+ 'd3h':'Pool Brunch & Last Dinner','d3p':"A relaxed poolside brunch above the lake, and a final dinner of bruschette with the estate's own organic olive oil, cured meats and cheeses, homemade lasagna and tiramisù.",
+ 'd4h':'Farewell & Check-out','d4p':"Breakfast, a last swim or a walk among the olive trees — then goodbyes, or the start of your guests' Italian holiday.",
+ 'inc.idx':"What's included · 2028",'inc.h':'The published package','inc.p':"Full wedding planning from contract signature to the end of the stay, with the estate's in-house planner: ceremony and reception coordination, décor direction, a menu tasting and a venue inspection.",
+ 'inc1':'Exclusive use of the entire property','inc1b':'4 days','inc2':'Private bridal house, with breakfast','inc2b':'3 nights','inc3':'Welcome night, wedding day, brunch & final dinner','inc3b':'Included','inc4':'Open bar after the cake','inc4b':'3 hours','inc5':'Security, cleaning and service taxes','inc5b':'Included','inc6':'2028 package price','inc6b':'By guest count',
+ 'inc.note':'As the estate publishes it: for 2028 the package is priced according to your final guest count, and accommodation and breakfasts are charged separately, with a minimum three-night exclusive-use stay for 40 adults.',
+ 'spc.idx':'Spaces & accommodation','spc.h':'23 bedrooms, one party','spc.p':'An 18th-century farmhouse complex above the lake: the Lake House, an independent cottage and the bridal house — plus a 26-metre pool among 300-year-old olive trees, the Roman ceremony terrace, the restaurant under its pergola, and the historic Mill Room as an indoor back-up.',
+ 'spc1':'Lake House apartments','spc.bed':'bedrooms','spc2':'Independent cottage','spc.bed2':'bedrooms','spc3':'Bridal house','spc3b':'Private, 3 nights','spc4':'Pool','spc5':'Olive trees on the estate',
+ 'pty.h':'Wedding-party accommodation','pty.sub':'Guests staying for a wedding? Request the bedrooms against your date in one message — the estate confirms who sleeps where, personally.',
+ 'pty.couple':"The couple's names",'pty.couple.err':"Please add the couple's names.",'pty.date':'Wedding date (2028)','pty.date.err':'Please choose a date in 2028.','pty.rooms':'Bedrooms needed','pty.guests':'Guests staying','pty.name':'Your name','pty.name.err':'Please add your name.','pty.email':'Email','pty.email.err':'Please add a valid email address.','pty.err.rooms':'The estate has 23 bedrooms in total.','pty.err.guests':'That is more guests than a La Dogana wedding hosts.',
+ 'pty.send':'Request rooms on WhatsApp','pty.done':'I have sent it','pty.conf.h':'Accommodation requested.','pty.conf.ref':'Reference','pty.conf.p':"Lucia's team confirms the rooms against your wedding date personally.",
+ 'pty.sum.ref':'Exclusive use','pty.sum.h':'The whole estate, one wedding','pty.sum.1':'Bedrooms in total','pty.sum.2':'Guests in the apartments','pty.sum.3':'Minimum stay','pty.sum.3b':'3 nights','pty.sum.note':'Extra single beds can be added in several living rooms — the estate confirms the exact layout for each wedding.',
+ 'apt.lbl':'Holiday apartments','apt.h2a':'Stay on the estate,','apt.h2b':'without the inbox wait','apt.intro':'Eleven apartments in the Lake House, the Coach House in the woods and the Woodcutter\u2019s House among the olives. The estate publishes no rates or availability — so this flow asks properly, with dates and party size, in one structured request.',
+ 'u.sleeps':'Sleeps','u.floor':'',
+ 'sty.h':'Request a stay','sty.sub':"Choose a home, your dates and your party. Your request goes to Lucia's WhatsApp as one structured message; the estate confirms availability and rates personally.",
+ 'sty.unit':'Apartment or house','sty.party':'Guests','sty.party.err':'{u} sleeps {n} — please reduce your party or choose a larger home.','sty.in':'Arrive','sty.in.err':'Please choose an arrival date.','sty.out':'Depart','sty.out.err':'Departure must be after arrival.','sty.name':'Your name','sty.name.err':'Please add your name.','sty.email':'Email','sty.email.err':'Please add a valid email address.','sty.notes':'Anything the team should know? (optional)',
+ 'sty.nights':'nights','sty.send':'Send the request on WhatsApp','sty.done':'I have sent it','sty.conf.h':'Request sent.','sty.conf.ref':'Reference','sty.conf.p':'Check-in is from 2 pm; the team confirms every stay personally. If you arrive after 9 pm, message the estate on WhatsApp with your ETA.',
+ 'sty.sum.ref':'Good to know','sty.sum.h':"From the estate's own pages",'sty.sum.1':'Check-in','sty.sum.2':'Check-out','sty.sum.3':'Air conditioning','sty.sum.3b':'Every apartment','sty.sum.4':'Pool','sty.sum.note':'Every apartment has a kitchenette, bed linen and towels included, and most have lake views. The restaurant is reserved for estate guests.',
+ 'exp.lbl':'Life at La Dogana','exp.h2a':'More than','exp.h2b':'weddings','exp.intro':"Retreats, cooking and the estate's own olive oil — everything below is published on La Dogana's own pages, and every enquiry can ride the same request flow.",
+ 'exp.idx':"From the estate's pages",'exp.h':'Days at the estate',
+ 'exp1':'Fresh pasta cooking class & private dinner, with Elisa','exp1b':'3–4 hours · min. 6 guests','exp2':'Yoga retreats in the restored ancient mill','exp2b':'7 days','exp3':'Wine retreats with small family wineries','exp3b':'7 days','exp4':'Hike retreats — Via Francigena & Val d\u2019Orcia','exp4b':'Guided','exp5':'Organic extra virgin olive oil from the estate','exp5b':'4,000 trees','exp6':"The estate bought by Lucia's great-grandmother",
+ 'exp.note':"In 1938 Maria Casale Sacchi — one of the first female chemists in Italy — bought La Dogana with the proceeds of her ammonia synthesis patent. Lucia is the fourth generation to care for it.",
+ 'faq.lbl':'Good questions','faq.h2a':'Before you','faq.h2b':'ask Lucia','faq.intro':"Every answer below comes from La Dogana's own published pages — nothing added, nothing guessed.",
+ 'dash.lbl':"The owner's view",'dash.h2a':'December 1, from','dash.h2b':"Lucia's side",'dash.intro':'Instead of one form inbox on the biggest morning of her year: the list in order, the holds marked, every request complete. Join the waitlist above and watch your own place appear here.',
+ 'dash.h':'The 2028 opening board','dash.tag':'Illustrative example','dash.tag.live':'Your place is on this board',
+ 'dash.c1':'Pos.','dash.c2':'Couple','dash.c3':'Hoping for','dash.c4':'Guests','dash.c5':'Reference',
+ 'dash.s1':'Couples on the priority list','dash.s2':'Date holds requested','dash.s3':'Opening day — offers go out in position order','dash.s4b':'One form','dash.s4':'What runs the opening today',
+ 'dash.base':'Showing the last {n} of {t} couples already listed (illustrative).','dash.live':'Your place, issued in this session, is highlighted.','dash.holds':'Date holds requested in this session: {n}.',
+ 'prop.lbl':'For Lucia','prop.h2a':'What production','prop.h2b':'looks like','prop.intro':'This concept, made real on your own domain — live before the list opens, not after. Built and launched with your team, in English and Italian.',
+ 'pr1h':'Live on your domain, before 1 December','pr1p':'The platform launches on agriturismodogana.it ahead of opening day, with your existing waitlist migrated into sequence — nobody who already wrote to you loses their place.',
+ 'pr2h':'Real date holds & deposit capture','pr2p':'Confirmed holds take the reservation fee under your own published policies, paid into your accounts. The platform handles the sequence, the references and the reminders.',
+ 'pr3h':'A live 2028 calendar','pr3p':'Dates open, held and confirmed at a glance — for you, and in a couple-facing view that never shows more than it should.',
+ 'pr4h':'Apartments, answered in order','pr4p':'Stay requests arrive complete — dates, party, unit — and can be confirmed with one reply, instead of two business days of back-and-forth.',
+ 'pr5h':'Routing your team already knows','pr5p':'Weddings to weddings@, stays to info@, retreats to retreats@ — and urgent requests to your WhatsApp, exactly as your pages publish today.',
+ 'pr6h':'Training & opening-week support','pr6p':'Your team of nine trained on the board before launch, and support through the whole opening week — the morning of 1 December included.',
+ 'ct.lbl':'Contacts','ct.h2a':'Reach','ct.h2b':'the estate','ct.intro':"As published on La Dogana's own pages. Viewing visits are by scheduled appointment only.",
+ 'ct.wa':'For assistance — the estate\u2019s published number. For urgent matters, phone calls only.','ct.em.h':'Email, by department','ct.em.apt':'Apartments','ct.em.ret':'Retreats','ct.ad.h':'The estate','ct.ad.ig':'Lucia on Instagram',
+ 'ft.1':'Concept proposal built by SiteSprint Studio. This is a concept demonstration, not the official website of Agriturismo La Dogana. No live availability is shown and no payment is taken anywhere on this page; every request is confirmed personally by the estate.',
+ 'ft.2':"Photography and facts: Agriturismo La Dogana (agriturismodogana.it) — the estate's own published pages, including its wedding, apartments and how-to-arrive pages. Figures marked illustrative are illustrative.",
+ 'mq':['2027 fully booked','2028 opens 1 December 2026','23 bedrooms · exclusive use','40–60 guests at every wedding','4,000 olive trees','Lake Trasimeno','Fourth generation','Est. 1938'],
+ 'months':['January','February','March','April','May','June','July','August','September','October','November','December'],
+ 'dow':['Mo','Tu','We','Th','Fr','Sa','Su'],
+ 'msg.wl':"Hello Lucia, we would like to join the 2028 priority waiting list at La Dogana.\n\nCouple: {names}\nHoping for: {when}\nAdult guests: {guests}\nCeremony: {cer}\nStaying on the estate: {stay}\nCountry: {country}\nEmail: {email}\n{notes}Priority position: {pos} · Reference: {ref}\n\nSent from the La Dogana 2028 opening platform (concept).",
+ 'msg.hld':"Hello Lucia, we would like to request a date hold at La Dogana for 2028.\n\nNames: {names}\nDate: {date}\nAdult guests: {guests}\nEmail: {email}\n\nReference: {ref}\n\nSent from the La Dogana 2028 opening platform (concept).",
+ 'msg.pty':"Hello Lucia, we would like to request wedding-party accommodation at La Dogana.\n\nCouple: {couple}\nWedding date: {date}\nBedrooms needed: {rooms} of 23\nGuests staying: {guests}\nFrom: {name} · {email}\n\nReference: {ref}\n\nSent from the La Dogana 2028 opening platform (concept).",
+ 'msg.sty':"Hello Lucia, we would like to request a stay at La Dogana.\n\nHome: {unit}\nArrive: {din} · Depart: {dout} ({nights} nights)\nGuests: {party}\nName: {name}\nEmail: {email}\n{notes}Reference: {ref}\n\nSent from the La Dogana stay platform (concept)."
+}, it: {
+ 'brand.sub':"L'Estate di Lucia · Lago Trasimeno",
+ 'nav.opening':"L'Apertura",'nav.waitlist':"Lista d'attesa",'nav.calendar':'Calendario 2028','nav.weddings':'Matrimoni','nav.stay':'Soggiorni','nav.forlucia':'Per Lucia','nav.cta':"Entra nella lista",
+ 'hero.lbl':"L'Estate di Lucia · Lago Trasimeno · Umbria e Toscana",
+ 'hero.h1a':'Il 2028 apre','hero.h1b':'il 1° dicembre.',
+ 'hero.sub':"La stagione dei matrimoni 2027 a La Dogana è al completo. Quando apriranno le prenotazioni per il 2028, le coppie nella lista prioritaria passeranno per prime. Questa è la piattaforma che gestisce quella mattina: lista in sequenza, date in opzione e ogni richiesta in un unico posto.",
+ 'cd.d':'Giorni','cd.h':'Ore','cd.m':'Minuti','cd.s':'Secondi','cd.cap':"All'apertura delle prenotazioni · 1° dicembre 2026",
+ 'hero.cta1':"Entra nella lista prioritaria",'hero.cta2':'Vedi il calendario 2028',
+ 'hs1b':'1° dic 2026','hs1s':'Aprono le prenotazioni 2028','hs2b':'Al completo','hs2s':"Tutta la stagione 2027",'hs3s':'Camere, uso esclusivo','hs4s':'Ospiti a ogni matrimonio',
+ 'why.lbl':'Il problema','why.h2a':'Un solo modulo tra le vostre coppie','why.h2b':'e il 2028.',
+ 'why.lede':"La Dogana ospita un numero limitato di matrimoni all'anno e le prenotazioni sono possibili fino a due anni in anticipo. La stagione 2027 è andata esaurita. Il 1° dicembre si apre in un colpo solo un anno di date 2028 — e oggi a riceverle ci sono solo un modulo web e una casella email.",
+ 'lk1h':'Un\u2019intera stagione, una sola mattina','lk1p':"Tutte le date 2028 aprono lo stesso giorno. Le coppie che scrivono per prime si aspettano una risposta per prime: un modulo non può mantenere quell'ordine.",
+ 'lk2h':'Una lista senza sequenza','lk2p':'La lista d\u2019attesa prioritaria non ha posizioni, né codici, né opzioni sulle date. Nessuno può sapere a che punto è, e nessuna data può essere tenuta ferma mentre una coppia decide.',
+ 'lk3h':'Ogni risposta scritta a mano','lk3p':'Alle richieste si risponde una a una — la tenuta risponde entro due giorni lavorativi — mentre le coppie che scelgono tra più location decidono in poche ore.',
+ 'lk4h':'Anche gli appartamenti aspettano','lk4p':'Undici appartamenti e due case, e nessuna tariffa né disponibilità pubblicata da nessuna parte. Ogni soggiorno, come ogni matrimonio, inizia da una email e da un\u2019attesa.',
+ 'fix.lbl':'Questa piattaforma','fix.h':"L'apertura, gestita come si deve",
+ 'fix1':'Una lista prioritaria con sequenza reale: ogni coppia riceve posizione e codice appena si iscrive',
+ 'fix2':'Un calendario matrimoni 2028 con richieste di opzione sulle date, in ordine dietro la lista',
+ 'fix3':'L\u2019alloggio degli ospiti legato a ogni data: tutte le 23 camere richieste in un unico messaggio strutturato',
+ 'fix4':'Richieste di soggiorno in appartamento con date e numero di ospiti, nello stesso flusso',
+ 'fix5':'Ogni richiesta composta e inviata dritta al WhatsApp di Lucia: niente ricerche nella inbox la mattina dell\u2019apertura',
+ 'fix6':'La vista della proprietaria su tutta l\u2019apertura: la lista in ordine, le opzioni, le richieste',
+ 'wl.lbl':'Il cuore del progetto','wl.h2a':'La lista d\u2019attesa','wl.h2b':'prioritaria 2028',
+ 'wl.intro':"Iscrivetevi in quattro brevi passi. Posizione e codice vengono assegnati subito, e il vostro posto viene offerto in ordine quando le prenotazioni aprono, il 1° dicembre 2026.",
+ 'wl.t1':'1 · La vostra data','wl.t2':'2 · La vostra festa','wl.t3':'3 · I vostri dati','wl.t4':'4 · Verifica e iscrizione',
+ 'wl.s1h':'Quando vorreste sposarvi?','wl.s1sub':'Le prenotazioni 2028 aprono il 1° dicembre 2026. Diteci la data o il mese che sperate: la flessibilità aiuta, e viene annotata sul vostro posto in coda.',
+ 'wl.month':'Mese preferito, 2028','wl.month.err':'Scegliete un mese o diteci che siete flessibili.','wl.month.ph':'Scegliete un mese…','wl.month.flex':'Nessuna preferenza: siamo flessibili',
+ 'wl.date':'Data preferita (facoltativa)','wl.date.err':'Quella data è fuori dal 2028.','wl.flex':'Siamo flessibili: proponeteci qualsiasi data si liberi',
+ 'wl.s2h':'La vostra festa','wl.s2sub':'Ogni matrimonio a La Dogana è un\u2019esperienza di quattro giorni in uso esclusivo della tenuta, per 40–60 ospiti adulti.',
+ 'wl.guests':'Ospiti adulti','wl.guests.err':'I matrimoni a La Dogana ospitano da 40 a 60 ospiti adulti.',
+ 'wl.ceremony':'Cerimonia','cer.sym':'Simbolica, sulla terrazza romana','cer.civ':'Civile, alla fortezza di Passignano','cer.cat':'Cattolica, in una chiesa a Cortona','cer.und':'Non ancora deciso',
+ 'wl.stayq':'Gli ospiti dormiranno in tenuta?','stay.all':'Sì, quanti ne tengono le 23 camere','stay.some':'Una parte dei nostri ospiti','stay.tbc':'Da decidere',
+ 'btn.cont':'Continua','btn.back':'Indietro','btn.review':'Verifica e iscriviti',
+ 'wl.s3h':'I vostri dati','wl.s3sub':'Perché la tenuta possa raggiungervi appena la vostra data viene offerta.',
+ 'wl.name1':'Il vostro nome','wl.name2':'Il nome del partner','wl.name.err':'Inserite il vostro nome.','wl.email':'Email','wl.email.err':'Inserite un indirizzo email valido.','wl.country':'Paese di residenza','wl.country.err':'Inserite il vostro paese.','wl.notes':'Qualcosa che Lucia dovrebbe sapere? (facoltativo)',
+ 'wl.s4h':'Verifica e iscrizione','wl.s4sub':'La vostra richiesta viene composta come un unico messaggio strutturato per il WhatsApp di Lucia. Posizione e codice vengono assegnati qui, in ordine, prima dell\u2019invio.',
+ 'wl.send':'Invia via WhatsApp','wl.join':'Ho inviato: assegna il mio posto',
+ 'wl.conf.h':'Siete nella lista.','wl.conf.pos':'Posizione prioritaria','wl.conf.ref':'Codice','wl.conf.p':'Quando le prenotazioni aprono, il 1° dicembre 2026, i posti vengono offerti in ordine di posizione. Il team di Lucia conferma ogni coppia personalmente.',
+ 'sum.ref':'Il vostro posto · in tempo reale','sum.h':"Il vostro posto in lista",'sum.next':'Prossima posizione assegnata','sum.month':'Mese preferito','sum.date':'Data preferita','sum.guests':'Ospiti adulti','sum.cer':'Cerimonia','sum.opens':'Aprono le prenotazioni','sum.note':"Le posizioni sono assegnate nell'ordine di arrivo delle richieste. L'iscrizione tiene fermo il vostro posto in coda: non è una prenotazione, e Lucia conferma ogni coppia personalmente.",
+ 'rv.names':'Coppia','rv.when':'Sperano in','rv.flex':'Flessibili: qualsiasi data','rv.guests':'Ospiti adulti','rv.cer':'Cerimonia','rv.stay':'Alloggio in tenuta','rv.email':'Email','rv.country':'Paese','rv.notes':'Note',
+ 'cal.lbl':'Il 2028 a colpo d\u2019occhio','cal.h2a':'Il calendario','cal.h2b':'matrimoni 2028','cal.intro':'Scegliete una data per richiederne l\u2019opzione. Ogni data è una richiesta, mai una promessa: le opzioni sono in coda dietro la lista prioritaria e Lucia conferma ciascuna personalmente.',
+ 'cal.leg.sel':'La vostra data scelta','cal.leg.held':'Opzione richiesta in questa sessione','cal.leg.note':'I matrimoni sono esperienze di quattro giorni in uso esclusivo per 3 notti.',
+ 'hld.h':"Richiedi un'opzione sulla data",'hld.sub':"Un'opzione chiede alla tenuta di tenervi la data mentre decidete. È in coda in ordine di lista e confermata personalmente: qui non si paga nulla.",
+ 'hld.date':'Data scelta','hld.guests':'Ospiti adulti (40–60)','hld.name':'I vostri nomi','hld.name.err':'Inserite i vostri nomi.','hld.email':'Email','hld.email.err':'Inserite un indirizzo email valido.','hld.err.date':'Prima scegliete una data sul calendario 2028.','hld.err.guests':'I matrimoni a La Dogana ospitano da 40 a 60 ospiti adulti.',
+ 'hld.send':"Richiedi l'opzione su WhatsApp",'hld.done':'Ho inviato','hld.conf.h':'Opzione richiesta.','hld.conf.ref':'Codice','hld.conf.p':'La vostra data è segnata sul calendario qui sopra. Il team di Lucia conferma ogni opzione personalmente, in ordine di lista.',
+ 'hld.sum.ref':'Come funzionano le opzioni','hld.sum.h':'Tenute in ordine','hld.sum.1':'Prima la lista prioritaria','hld.sum.1b':'Sempre','hld.sum.2':'Un matrimonio alla volta','hld.sum.2b':'Uso esclusivo','hld.sum.3':'Conferma di','hld.sum.note':'In produzione, un\u2019opzione confermata attiva la caparra prevista dalle politiche pubblicate della tenuta: la piattaforma non inventa mai un importo, lo stabilisce Lucia.',
+ 'wed.lbl':'Il matrimonio','wed.h2a':'Quattro giorni,','wed.h2b':'tutta la tenuta per voi','wed.intro':'Il pacchetto 2028, esattamente come lo pubblica la tenuta: un\u2019esperienza completa di quattro giorni con pianificazione completa, uso esclusivo e ogni pasto, dalla serata di benvenuto alla cena finale.',
+ 'd1h':'Arrivo e serata di benvenuto','d1p':'Gli ospiti si sistemano negli appartamenti dalle 14:00. La sera, cena a buffet sotto le lucine: pasta fatta in casa, focaccia, pinsa e gelato, con vino, birra e aperitivo inclusi.',
+ 'd2h':'Il giorno del matrimonio','d2p':'Cerimonia simbolica sulla terrazza romana tra gli ulivi, aperitivo a bordo piscina, cena servita su misura per i vostri ospiti, poi taglio della torta e tre ore di open bar e balli, con musica fino alle 2:00.',
+ 'd3h':'Brunch in piscina e ultima cena','d3p':"Un brunch rilassato a bordo piscina sopra il lago, e una cena finale di bruschette con l'olio biologico della tenuta, salumi e formaggi, lasagna fatta in casa e tiramisù.",
+ 'd4h':'Saluti e check-out','d4p':"Colazione, un ultimo bagno o una passeggiata tra gli ulivi: poi i saluti, o l'inizio della vacanza italiana dei vostri ospiti.",
+ 'inc.idx':'Cosa include · 2028','inc.h':'Il pacchetto pubblicato','inc.p':"Pianificazione completa dalla firma del contratto alla fine del soggiorno, con la wedding planner interna: coordinamento di cerimonia e ricevimento, direzione dell'allestimento, una degustazione del menu e una visita alla tenuta.",
+ 'inc1':'Uso esclusivo dell\u2019intera proprietà','inc1b':'4 giorni','inc2':'Casa della sposa privata, con colazione','inc2b':'3 notti','inc3':'Serata di benvenuto, giorno del matrimonio, brunch e cena finale','inc3b':'Inclusi','inc4':'Open bar dopo la torta','inc4b':'3 ore','inc5':'Sicurezza, pulizie e tasse di servizio','inc5b':'Inclusi','inc6':'Prezzo del pacchetto 2028','inc6b':'In base agli ospiti',
+ 'inc.note':'Come pubblica la tenuta: per il 2028 il pacchetto è calcolato in base al numero finale di ospiti, e alloggio e colazioni sono conteggiati a parte, con un soggiorno minimo di tre notti in uso esclusivo per 40 adulti.',
+ 'spc.idx':'Spazi e alloggio','spc.h':'23 camere, una sola festa','spc.p':'Un complesso di fattoria del XVIII secolo sopra il lago: la Lake House, una casetta indipendente e la casa della sposa, più una piscina di 26 metri tra ulivi di 300 anni, la terrazza romana delle cerimonie, il ristorante sotto il pergolato e l\u2019antico Mulino come piano B al coperto.',
+ 'spc1':'Appartamenti della Lake House','spc.bed':'camere','spc2':'Casetta indipendente','spc.bed2':'camere','spc3':'Casa della sposa','spc3b':'Privata, 3 notti','spc4':'Piscina','spc5':'Ulivi nella tenuta',
+ 'pty.h':'Alloggio per gli ospiti del matrimonio','pty.sub':'Gli ospiti restano per un matrimonio? Richiedete le camere per la vostra data in un unico messaggio: la tenuta conferma personalmente chi dorme dove.',
+ 'pty.couple':'I nomi degli sposi','pty.couple.err':'Inserite i nomi degli sposi.','pty.date':'Data del matrimonio (2028)','pty.date.err':'Scegliete una data nel 2028.','pty.rooms':'Camere necessarie','pty.guests':'Ospiti che restano','pty.name':'Il vostro nome','pty.name.err':'Inserite il vostro nome.','pty.email':'Email','pty.email.err':'Inserite un indirizzo email valido.','pty.err.rooms':'La tenuta ha 23 camere in tutto.','pty.err.guests':'È più degli ospiti che un matrimonio a La Dogana ospita.',
+ 'pty.send':'Richiedi le camere su WhatsApp','pty.done':'Ho inviato','pty.conf.h':'Alloggio richiesto.','pty.conf.ref':'Codice','pty.conf.p':'Il team di Lucia conferma le camere per la vostra data personalmente.',
+ 'pty.sum.ref':'Uso esclusivo','pty.sum.h':'Tutta la tenuta, un solo matrimonio','pty.sum.1':'Camere in totale','pty.sum.2':'Ospiti negli appartamenti','pty.sum.3':'Soggiorno minimo','pty.sum.3b':'3 notti','pty.sum.note':'In diversi soggiorni si possono aggiungere letti singoli: la tenuta conferma la disposizione esatta per ogni matrimonio.',
+ 'apt.lbl':'Appartamenti vacanza','apt.h2a':'Soggiornare in tenuta,','apt.h2b':'senza l\u2019attesa della inbox','apt.intro':'Undici appartamenti nella Lake House, la Coach House nel bosco e la Casa del Taglialegna tra gli ulivi. La tenuta non pubblica tariffe né disponibilità: per questo questo flusso chiede come si deve, con date e numero di ospiti, in un\u2019unica richiesta strutturata.',
+ 'u.sleeps':'Dorme','u.floor':'',
+ 'sty.h':'Richiedi un soggiorno','sty.sub':'Scegliete una casa, le date e il vostro gruppo. La richiesta arriva al WhatsApp di Lucia come un unico messaggio strutturato; la tenuta conferma disponibilità e tariffe personalmente.',
+ 'sty.unit':'Appartamento o casa','sty.party':'Ospiti','sty.party.err':'{u} dorme {n}: riducete il gruppo o scegliete una casa più grande.','sty.in':'Arrivo','sty.in.err':'Scegliete una data di arrivo.','sty.out':'Partenza','sty.out.err':'La partenza deve essere dopo l\u2019arrivo.','sty.name':'Il vostro nome','sty.name.err':'Inserite il vostro nome.','sty.email':'Email','sty.email.err':'Inserite un indirizzo email valido.','sty.notes':'Qualcosa che il team dovrebbe sapere? (facoltativo)',
+ 'sty.nights':'notti','sty.send':'Invia la richiesta su WhatsApp','sty.done':'Ho inviato','sty.conf.h':'Richiesta inviata.','sty.conf.ref':'Codice','sty.conf.p':'Il check-in è dalle 14:00; il team conferma ogni soggiorno personalmente. Se arrivate dopo le 21:00, scrivete alla tenuta su WhatsApp con il vostro orario di arrivo.',
+ 'sty.sum.ref':'Da sapere','sty.sum.h':'Dalle pagine della tenuta','sty.sum.1':'Check-in','sty.sum.2':'Check-out','sty.sum.3':'Aria condizionata','sty.sum.3b':'Ogni appartamento','sty.sum.4':'Piscina','sty.sum.note':'Ogni appartamento ha angolo cottura, biancheria da letto e asciugamani inclusi, e quasi tutti hanno vista lago. Il ristorante è riservato agli ospiti della tenuta.',
+ 'exp.lbl':'La vita a La Dogana','exp.h2a':'Non solo','exp.h2b':'matrimoni','exp.intro':'Ritiri, cucina e l\u2019olio della tenuta: tutto ciò che segue è pubblicato sulle pagine di La Dogana, e ogni richiesta può viaggiare nello stesso flusso.',
+ 'exp.idx':'Dalle pagine della tenuta','exp.h':'Giornate in tenuta',
+ 'exp1':'Corso di pasta fresca e cena privata, con Elisa','exp1b':'3–4 ore · min. 6 ospiti','exp2':"Ritiri di yoga nell'antico mulino restaurato",'exp2b':'7 giorni','exp3':'Ritiri del vino con piccole cantine di famiglia','exp3b':'7 giorni','exp4':'Ritiri di cammino: Via Francigena e Val d\u2019Orcia','exp4b':'Guidati','exp5':'Olio extravergine biologico della tenuta','exp5b':'4.000 alberi','exp6':'La tenuta comprata dalla bisnonna di Lucia',
+ 'exp.note':"Nel 1938 Maria Casale Sacchi, tra le prime donne chimiche d'Italia, comprò La Dogana con i proventi del suo brevetto sulla sintesi dell'ammoniaca. Lucia è la quarta generazione a prendersene cura.",
+ 'faq.lbl':'Buone domande','faq.h2a':'Prima di','faq.h2b':'chiedere a Lucia','faq.intro':'Ogni risposta qui sotto viene dalle pagine pubblicate di La Dogana: niente aggiunto, niente indovinato.',
+ 'dash.lbl':'La vista della proprietaria','dash.h2a':'Il 1° dicembre, dalla parte','dash.h2b':'di Lucia','dash.intro':'Invece di una sola inbox la mattina più importante del suo anno: la lista in ordine, le opzioni segnate, ogni richiesta completa. Iscrivetevi alla lista qui sopra e guardate il vostro posto apparire qui.',
+ 'dash.h':"Il quadro dell'apertura 2028",'dash.tag':'Esempio illustrativo','dash.tag.live':'Il vostro posto è su questo quadro',
+ 'dash.c1':'Pos.','dash.c2':'Coppia','dash.c3':'Sperano in','dash.c4':'Ospiti','dash.c5':'Codice',
+ 'dash.s1':'Coppie nella lista prioritaria','dash.s2':'Opzioni sulle date richieste','dash.s3':'Giorno di apertura: le offerte partono in ordine di posizione','dash.s4b':'Un solo modulo','dash.s4':"Ciò che gestisce l'apertura oggi",
+ 'dash.base':'Ultime {n} di {t} coppie già in lista (illustrativo).','dash.live':'Il vostro posto, assegnato in questa sessione, è evidenziato.','dash.holds':'Opzioni sulle date richieste in questa sessione: {n}.',
+ 'prop.lbl':'Per Lucia','prop.h2a':'La produzione,','prop.h2b':'in concreto','prop.intro':'Questo concept, realizzato sul vostro dominio: online prima che la lista apra, non dopo. Costruito e lanciato con il vostro team, in inglese e italiano.',
+ 'pr1h':"Online sul vostro dominio, prima del 1° dicembre",'pr1p':'La piattaforma va online su agriturismodogana.it prima del giorno di apertura, con la lista d\u2019attesa esistente migrata in sequenza: nessuno che vi ha già scritto perde il suo posto.',
+ 'pr2h':'Opzioni sulle date e caparra, reali','pr2p':'Le opzioni confermate attivano la caparra secondo le vostre politiche pubblicate, pagata sui vostri conti. La piattaforma gestisce sequenza, codici e promemoria.',
+ 'pr3h':'Un calendario 2028 vivo','pr3p':'Date aperte, in opzione e confermate a colpo d\u2019occhio: per voi, e in una vista per le coppie che non mostra mai più del dovuto.',
+ 'pr4h':'Appartamenti, risposte in ordine','pr4p':'Le richieste di soggiorno arrivano complete (date, gruppo, unità) e si confermano con una sola risposta, invece di due giorni lavorativi di scambi.',
+ 'pr5h':'Gli instradamenti che il team conosce già','pr5p':'Matrimoni a weddings@, soggiorni a info@, ritiri a retreats@, e le richieste urgenti al vostro WhatsApp, esattamente come pubblicano oggi le vostre pagine.',
+ 'pr6h':'Formazione e supporto nella settimana di apertura','pr6p':'Il vostro team di nove formato sul quadro prima del lancio, e supporto per tutta la settimana di apertura, mattina del 1° dicembre inclusa.',
+ 'ct.lbl':'Contatti','ct.h2a':'Raggiungere','ct.h2b':'la tenuta','ct.intro':'Come pubblicato sulle pagine di La Dogana. Le visite sono solo su appuntamento.',
+ 'ct.wa':'Per assistenza: il numero pubblicato della tenuta. Per le urgenze, solo telefonate.','ct.em.h':'Email, per reparto','ct.em.apt':'Appartamenti','ct.em.ret':'Ritiri','ct.ad.h':'La tenuta','ct.ad.ig':'Lucia su Instagram',
+ 'ft.1':'Concept di proposta realizzato da SiteSprint Studio. Questa è una dimostrazione, non il sito ufficiale dell\u2019Agriturismo La Dogana. Nessuna disponibilità reale è mostrata e nessun pagamento viene preso in questa pagina; ogni richiesta è confermata personalmente dalla tenuta.',
+ 'ft.2':"Fotografie e fatti: Agriturismo La Dogana (agriturismodogana.it), le pagine pubblicate della tenuta, incluse le pagine matrimoni, appartamenti e come arrivare. I dati indicati come illustrativi sono illustrativi.",
+ 'mq':['2027 al completo','Il 2028 apre il 1° dicembre 2026','23 camere · uso esclusivo','40–60 ospiti a ogni matrimonio','4.000 ulivi','Lago Trasimeno','Quarta generazione','Dal 1938'],
+ 'months':['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'],
+ 'dow':['lu','ma','me','gi','ve','sa','do'],
+ 'msg.wl':"Buongiorno Lucia, vorremmo iscriverci alla lista d'attesa prioritaria 2028 a La Dogana.\n\nCoppia: {names}\nSperiamo in: {when}\nOspiti adulti: {guests}\nCerimonia: {cer}\nAlloggio in tenuta: {stay}\nPaese: {country}\nEmail: {email}\n{notes}Posizione prioritaria: {pos} · Codice: {ref}\n\nInviato dalla piattaforma di apertura 2028 di La Dogana (concept).",
+ 'msg.hld':"Buongiorno Lucia, vorremmo richiedere un'opzione su una data a La Dogana per il 2028.\n\nNomi: {names}\nData: {date}\nOspiti adulti: {guests}\nEmail: {email}\n\nCodice: {ref}\n\nInviato dalla piattaforma di apertura 2028 di La Dogana (concept).",
+ 'msg.pty':"Buongiorno Lucia, vorremmo richiedere l'alloggio per gli ospiti di un matrimonio a La Dogana.\n\nSposi: {couple}\nData del matrimonio: {date}\nCamere necessarie: {rooms} di 23\nOspiti che restano: {guests}\nDa: {name} · {email}\n\nCodice: {ref}\n\nInviato dalla piattaforma di apertura 2028 di La Dogana (concept).",
+ 'msg.sty':"Buongiorno Lucia, vorremmo richiedere un soggiorno a La Dogana.\n\nCasa: {unit}\nArrivo: {din} · Partenza: {dout} ({nights} notti)\nOspiti: {party}\nNome: {name}\nEmail: {email}\n{notes}Codice: {ref}\n\nInviato dalla piattaforma soggiorni di La Dogana (concept)."
+}};
+</script>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const state = {
+  lang: 'en', step: 1,
+  waitlist: [], wlSeq: 0, pendingWl: null, wlJoined: false,
+  calDate: null, heldDates: new Set(), holds: [], holdSeq: 100, pendingHold: null,
+  parties: [], partySeq: 100, pendingParty: null,
+  stays: [], staySeq: 100, pendingStay: null
+};
+const SAMPLES = [
+  {pos:15, names:'Sofia & James', when:{en:'June 2028',it:'Giugno 2028'}, guests:52, ref:'LD28-0015'},
+  {pos:16, names:'Emma & Liam', when:{en:'September 2028',it:'Settembre 2028'}, guests:48, ref:'LD28-0016'},
+  {pos:17, names:'Chloé & Hugo', when:{en:'May 2028',it:'Maggio 2028'}, guests:56, ref:'LD28-0017'}
+];
+function t(k){ const d = DICT[state.lang]; return (d && d[k] !== undefined) ? d[k] : (DICT.en[k] !== undefined ? DICT.en[k] : k); }
+function fmt(tpl, map){ return tpl.replace(/\{(\w+)\}/g, (m,k) => map[k] !== undefined ? map[k] : m); }
+function emailOk(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v || ''); }
+function waLink(msg){ return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg); }
+function dateFmt(iso){ if(!iso) return '—'; const d = new Date(iso + 'T12:00:00'); return d.toLocaleDateString(state.lang === 'it' ? 'it-IT' : 'en-GB', {weekday:'short', day:'numeric', month:'long', year:'numeric'}); }
+function monthLabel(m){ return t('months')[m-1] + ' 2028'; }
+function pad2(n){ return String(n).padStart(2,'0'); }
+
+/* ---------- countdown ---------- */
+function countdownParts(now){
+  let diff = OPENING - now;
+  if (diff <= 0) return {d:0,h:0,m:0,s:0,past:true};
+  return { d: Math.floor(diff/86400000), h: Math.floor(diff/3600000)%24, m: Math.floor(diff/60000)%60, s: Math.floor(diff/1000)%60, past:false };
+}
+function tick(){ const p = countdownParts(Date.now()); $('cdD').textContent = p.d; $('cdH').textContent = pad2(p.h); $('cdM').textContent = pad2(p.m); $('cdS').textContent = pad2(p.s); }
+
+/* ---------- marquee ---------- */
+function renderMarquee(){
+  const items = t('mq'); const half = items.map(x => '<span>' + x + '</span><b>✦</b>').join('');
+  $('mqTrack').innerHTML = half + half;
+}
+
+/* ---------- waitlist wizard ---------- */
+function buildMonthSelect(){
+  const sel = $('wlMonth'); const cur = sel.value;
+  sel.innerHTML = '';
+  const ph = document.createElement('option'); ph.value=''; ph.textContent = t('wl.month.ph'); sel.appendChild(ph);
+  for (let m=1;m<=12;m++){ const o=document.createElement('option'); o.value=String(m); o.textContent = monthLabel(m); sel.appendChild(o); }
+  const fx = document.createElement('option'); fx.value='flex'; fx.textContent = t('wl.month.flex'); sel.appendChild(fx);
+  sel.value = cur || '';
+}
+function cerLabel(v){ return t({symbolic:'cer.sym',civil:'cer.civ',catholic:'cer.cat',undecided:'cer.und'}[v] || 'cer.und'); }
+function stayLabel(v){ return t({all:'stay.all',some:'stay.some',tbc:'stay.tbc'}[v] || 'stay.tbc'); }
+function wlWhen(){
+  const d = $('wlDate').value, m = $('wlMonth').value, flex = $('wlFlex').checked || m === 'flex';
+  let base = '';
+  if (d) base = dateFmt(d); else if (m && m !== 'flex') base = monthLabel(+m);
+  if (flex) base = base ? base + ' · ' + t('rv.flex') : t('rv.flex');
+  return base;
+}
+function wlNames(){ const a = $('wlName1').value.trim(), b = $('wlName2').value.trim(); return b ? a + ' & ' + b : a; }
+function markFld(id, bad){ const f = $(id); if (f) f.classList.toggle('bad', !!bad); return !bad; }
+function validateWlStep(step){
+  let okAll = true;
+  if (step === 1){
+    const m = $('wlMonth').value, flex = $('wlFlex').checked || m === 'flex';
+    okAll = markFld('fld-wlMonth', !(flex || m)) && okAll;
+    const d = $('wlDate').value;
+    if (d && !/^2028-/.test(d)){ $('wlDate').closest('.fld').classList.add('bad'); okAll = false; } else { $('wlDate').closest('.fld').classList.remove('bad'); }
+  }
+  if (step === 3){
+    okAll = markFld('fld-wlName1', !$('wlName1').value.trim()) && okAll;
+    okAll = markFld('fld-wlEmail', !emailOk($('wlEmail').value)) && okAll;
+    okAll = markFld('fld-wlCountry', !$('wlCountry').value.trim()) && okAll;
+  }
+  return okAll;
+}
+function updateWlSummary(){
+  $('sumPos').textContent = '#' + (WL_BASE + state.wlSeq + 1);
+  const m = $('wlMonth').value;
+  $('sumMonth').textContent = (m && m !== 'flex') ? monthLabel(+m) : (m === 'flex' || $('wlFlex').checked ? t('rv.flex') : '—');
+  $('sumDate').textContent = $('wlDate').value ? dateFmt($('wlDate').value) : '—';
+  $('sumGuests').textContent = $('wlGuests').value;
+  $('wlGuestsVal').textContent = $('wlGuests').value;
+  $('sumCer').textContent = cerLabel($('wlCeremony').value);
+}
+function ensurePendingWl(){
+  if (!state.pendingWl){
+    const pos = WL_BASE + state.wlSeq + 1;
+    state.pendingWl = { pos, ref: 'LD28-' + String(pos).padStart(4,'0') };
+  }
+  return state.pendingWl;
+}
+function wlMessage(p){
+  const notes = $('wlNotes').value.trim();
+  return fmt(t('msg.wl'), {
+    names: wlNames(), when: wlWhen() || '—', guests: $('wlGuests').value,
+    cer: cerLabel($('wlCeremony').value), stay: stayLabel($('wlStay').value),
+    country: $('wlCountry').value.trim(), email: $('wlEmail').value.trim(),
+    notes: notes ? ('Notes: ' + notes + '\n') : '', pos: p.pos, ref: p.ref
+  });
+}
+function buildWlReview(){
+  const p = ensurePendingWl();
+  const rows = [
+    [t('rv.names'), wlNames()], [t('rv.when'), wlWhen() || '—'], [t('rv.guests'), $('wlGuests').value],
+    [t('rv.cer'), cerLabel($('wlCeremony').value)], [t('rv.stay'), stayLabel($('wlStay').value)],
+    [t('rv.email'), $('wlEmail').value.trim()], [t('rv.country'), $('wlCountry').value.trim()],
+    [t('wl.conf.pos'), '#' + p.pos], [t('wl.conf.ref'), p.ref]
+  ];
+  if ($('wlNotes').value.trim()) rows.push([t('rv.notes'), $('wlNotes').value.trim()]);
+  $('wlReview').innerHTML = rows.map(r => '<div class="srow" style="border-color:var(--line)"><span style="color:var(--mut)">' + r[0] + '</span><b>' + r[1] + '</b></div>').join('');
+  $('wlWa').href = waLink(wlMessage(p));
+}
+function goWlStep(n){
+  state.step = n;
+  document.querySelectorAll('#wlForm fieldset').forEach(f => f.classList.toggle('on', +f.dataset.fs === n));
+  document.querySelectorAll('#wlTabs .step-tab').forEach(tab => { const k = +tab.dataset.tab; tab.classList.toggle('on', k === n); tab.classList.toggle('done', k < n); });
+  if (n === 4) buildWlReview();
+}
+function joinWaitlist(){
+  if (state.wlJoined) return state.waitlist[state.waitlist.length - 1] || null;
+  const p = ensurePendingWl();
+  const entry = { pos: p.pos, ref: p.ref, names: wlNames(), when: wlWhen(), guests: $('wlGuests').value, live: true };
+  state.waitlist.push(entry); state.wlSeq++; state.wlJoined = true;
+  $('wlPos').textContent = '#' + p.pos; $('wlRef').textContent = p.ref;
+  $('wlConfirm').classList.add('show');
+  updateWlSummary(); renderDashboard();
+  return entry;
+}
+
+/* ---------- calendar & holds ---------- */
+function renderCalendar(){
+  const wrap = $('calYear'); wrap.innerHTML = '';
+  const dow = t('dow');
+  for (let m = 1; m <= 12; m++){
+    const first = new Date(Date.UTC(2028, m-1, 1));
+    const offset = (first.getUTCDay() + 6) % 7;
+    const days = new Date(Date.UTC(2028, m, 0)).getUTCDate();
+    let cells = dow.map(d => '<span class="dow">' + d + '</span>').join('');
+    for (let i = 0; i < offset; i++) cells += '<span></span>';
+    for (let d = 1; d <= days; d++){
+      const iso = '2028-' + pad2(m) + '-' + pad2(d);
+      const cls = 'cal-day' + (state.calDate === iso ? ' sel' : '') + (state.heldDates.has(iso) ? ' held' : '');
+      cells += '<button type="button" class="' + cls + '" data-date="' + iso + '" aria-label="' + iso + '">' + d + '</button>';
+    }
+    const box = document.createElement('div'); box.className = 'cal-m';
+    box.innerHTML = '<h4>' + t('months')[m-1] + ' 2028</h4><div class="cal-grid">' + cells + '</div>';
+    wrap.appendChild(box);
+  }
+}
+function ensurePendingHold(){
+  if (!state.pendingHold){ state.holdSeq++; state.pendingHold = { ref: 'LDH-' + state.holdSeq }; }
+  return state.pendingHold;
+}
+function holdMessage(p){
+  return fmt(t('msg.hld'), { names: $('hldName').value.trim(), date: dateFmt(state.calDate), guests: $('hldGuests').value, email: $('hldEmail').value.trim(), ref: p.ref });
+}
+function updateHoldLink(){
+  const p = ensurePendingHold();
+  $('hldWa').href = state.calDate ? waLink(holdMessage(p)) : '#';
+  $('hldDateShow').value = state.calDate ? dateFmt(state.calDate) : '—';
+}
+function requestHold(){
+  let okAll = true;
+  if (!state.calDate){ $('hldErr').textContent = t('hld.err.date'); $('hldErr').style.display = 'block'; okAll = false; }
+  else {
+    const g = +$('hldGuests').value;
+    if (!(g >= 40 && g <= 60)){ $('hldErr').textContent = t('hld.err.guests'); $('hldErr').style.display = 'block'; okAll = false; }
+    else $('hldErr').style.display = 'none';
+  }
+  okAll = markFld('fld-hldName', !$('hldName').value.trim()) && okAll;
+  okAll = markFld('fld-hldEmail', !emailOk($('hldEmail').value)) && okAll;
+  if (!okAll) return null;
+  if (state.pendingHold && state.pendingHold.done) return state.holds[state.holds.length - 1];
+  const p = ensurePendingHold(); p.done = true;
+  const hold = { ref: p.ref, date: state.calDate, names: $('hldName').value.trim(), guests: $('hldGuests').value };
+  state.holds.push(hold); state.heldDates.add(state.calDate);
+  $('hldRef').textContent = p.ref; $('hldConfirm').classList.add('show');
+  state.pendingHold = null; renderCalendar(); updateHoldLink(); renderDashboard();
+  return hold;
+}
+
+/* ---------- wedding-party accommodation ---------- */
+function ensurePendingParty(){
+  if (!state.pendingParty){ state.partySeq++; state.pendingParty = { ref: 'LDP-' + state.partySeq }; }
+  return state.pendingParty;
+}
+function partyMessage(p){
+  return fmt(t('msg.pty'), { couple: $('pCouple').value.trim(), date: dateFmt($('pDate').value), rooms: $('pRooms').value, guests: $('pGuests').value, name: $('pName').value.trim(), email: $('pEmail').value.trim(), ref: p.ref });
+}
+function updatePartyLink(){ $('pWa').href = waLink(partyMessage(ensurePendingParty())); }
+function requestParty(){
+  let okAll = true;
+  okAll = markFld('fld-pCouple', !$('pCouple').value.trim()) && okAll;
+  const d = $('pDate').value;
+  if (!d || !/^2028-/.test(d)){ $('pDate').closest('.fld').classList.add('bad'); okAll = false; } else $('pDate').closest('.fld').classList.remove('bad');
+  okAll = markFld('fld-pName', !$('pName').value.trim()) && okAll;
+  okAll = markFld('fld-pEmail', !emailOk($('pEmail').value)) && okAll;
+  const rooms = +$('pRooms').value, guests = +$('pGuests').value;
+  if (!(rooms >= 1 && rooms <= 23)){ $('pErr').textContent = t('pty.err.rooms'); $('pErr').style.display='block'; okAll = false; }
+  else if (!(guests >= 1 && guests <= 80)){ $('pErr').textContent = t('pty.err.guests'); $('pErr').style.display='block'; okAll = false; }
+  else $('pErr').style.display = 'none';
+  if (!okAll) return null;
+  if (state.pendingParty && state.pendingParty.done) return state.parties[state.parties.length - 1];
+  const p = ensurePendingParty(); p.done = true;
+  const entry = { ref: p.ref, couple: $('pCouple').value.trim(), date: d, rooms, guests };
+  state.parties.push(entry);
+  $('pRef').textContent = p.ref; $('pConfirm').classList.add('show');
+  state.pendingParty = null; updatePartyLink();
+  return entry;
+}
+
+/* ---------- apartment stays ---------- */
+function unitById(id){ return UNITS.find(u => u.id === id) || UNITS[0]; }
+function renderUnits(){
+  $('unitGrid').innerHTML = UNITS.map(u =>
+    '<div class="unit"><h4>' + u.name[state.lang] + '</h4><p class="u-meta">' + u.size + ' · ' + u.floor[state.lang] + '</p><p>' + u.hl[state.lang] + '</p><p class="u-sleeps">' + t('u.sleeps') + ' ' + u.sleeps + '</p></div>'
+  ).join('');
+  const sel = $('stUnit'); const cur = sel.value;
+  sel.innerHTML = UNITS.map(u => '<option value="' + u.id + '">' + u.name[state.lang] + ' · ' + u.size + ' · ' + t('u.sleeps') + ' ' + u.sleeps + '</option>').join('');
+  sel.value = cur || UNITS[0].id;
+}
+function stayNights(){
+  const a = $('stIn').value, b = $('stOut').value;
+  if (!a || !b) return 0;
+  return Math.round((new Date(b + 'T12:00:00') - new Date(a + 'T12:00:00')) / 86400000);
+}
+function ensurePendingStay(){
+  if (!state.pendingStay){ state.staySeq++; state.pendingStay = { ref: 'LDS-' + state.staySeq }; }
+  return state.pendingStay;
+}
+function stayMessage(p){
+  const notes = $('stNotes').value.trim();
+  return fmt(t('msg.sty'), { unit: unitById($('stUnit').value).name[state.lang], din: dateFmt($('stIn').value), dout: dateFmt($('stOut').value), nights: stayNights(), party: $('stParty').value, name: $('stName').value.trim(), email: $('stEmail').value.trim(), notes: notes ? ('Notes: ' + notes + '\n') : '', ref: p.ref });
+}
+function validateStay(){
+  let okAll = true;
+  const u = unitById($('stUnit').value);
+  const party = +$('stParty').value;
+  if (party > u.sleeps){ $('stPartyErr').textContent = fmt(t('sty.party.err'), {u: u.name[state.lang], n: u.sleeps}); $('stPartyErr').style.display = 'block'; okAll = false; }
+  else $('stPartyErr').style.display = 'none';
+  okAll = markFld('fld-stIn', !$('stIn').value) && okAll;
+  okAll = markFld('fld-stOut', !($('stOut').value && stayNights() > 0)) && okAll;
+  okAll = markFld('fld-stName', !$('stName').value.trim()) && okAll;
+  okAll = markFld('fld-stEmail', !emailOk($('stEmail').value)) && okAll;
+  return okAll;
+}
+function updateStay(){
+  const p = ensurePendingStay();
+  const n = stayNights();
+  $('stReview').innerHTML = ($('stIn').value && n > 0)
+    ? '<div class="srow" style="border-color:var(--line)"><span style="color:var(--mut)">' + unitById($('stUnit').value).name[state.lang] + '</span><b>' + dateFmt($('stIn').value) + ' → ' + dateFmt($('stOut').value) + ' · ' + n + ' ' + t('sty.nights') + '</b></div>' : '';
+  $('stWa').href = waLink(stayMessage(p));
+}
+function requestStay(){
+  if (!validateStay()) return null;
+  if (state.pendingStay && state.pendingStay.done) return state.stays[state.stays.length - 1];
+  const p = ensurePendingStay(); p.done = true;
+  const entry = { ref: p.ref, unit: $('stUnit').value, din: $('stIn').value, dout: $('stOut').value, nights: stayNights(), party: $('stParty').value };
+  state.stays.push(entry);
+  $('stRef').textContent = p.ref; $('stConfirm').classList.add('show');
+  state.pendingStay = null; updateStay();
+  return entry;
+}
+
+/* ---------- FAQ ---------- */
+function renderFaq(){
+  $('faqList').innerHTML = FAQ.map((f, i) =>
+    '<div class="faq-item' + (i === 0 ? ' open' : '') + '"><button type="button" class="faq-q">' + f.q[state.lang] + '<span class="pm">' + (i === 0 ? '–' : '+') + '</span></button><div class="faq-a">' + f.a[state.lang] + '</div></div>'
+  ).join('');
+  document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item'); const open = item.classList.toggle('open');
+    btn.querySelector('.pm').textContent = open ? '–' : '+';
+  }));
+}
+
+/* ---------- dashboard ---------- */
+function renderDashboard(){
+  const rows = SAMPLES.map(s =>
+    '<tr><td class="pos">#' + s.pos + '</td><td>' + s.names + '</td><td>' + s.when[state.lang] + '</td><td>' + s.guests + '</td><td>' + s.ref + '</td></tr>'
+  ).concat(state.waitlist.map(e =>
+    '<tr class="live-row"><td class="pos">#' + e.pos + '</td><td>' + e.names + '</td><td>' + (e.when || '—') + '</td><td>' + e.guests + '</td><td>' + e.ref + '</td></tr>'
+  )).join('');
+  $('dashWlBody').innerHTML = rows;
+  $('dashStatList').textContent = WL_BASE + state.waitlist.length;
+  $('dashStatHolds').textContent = state.holds.length;
+  $('dashTag').textContent = state.waitlist.length ? t('dash.tag.live') : t('dash.tag');
+  $('dashHoldLine').textContent = fmt(t('dash.base'), {n: SAMPLES.length, t: WL_BASE}) + ' ' + (state.waitlist.length ? t('dash.live') + ' ' : '') + fmt(t('dash.holds'), {n: state.holds.length});
+}
+
+/* ---------- language ---------- */
+function applyI18n(){
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  document.documentElement.lang = state.lang;
+  $('langEN').classList.toggle('on', state.lang === 'en');
+  $('langIT').classList.toggle('on', state.lang === 'it');
+}
+function setLang(l){
+  state.lang = l;
+  applyI18n(); renderMarquee(); buildMonthSelect(); renderCalendar(); renderUnits(); renderFaq(); renderDashboard();
+  updateWlSummary(); if (state.step === 4) buildWlReview();
+  updateHoldLink(); updatePartyLink(); updateStay();
+}
+
+/* ---------- lightbox & reveal ---------- */
+function initLightbox(){
+  const lb = $('lightbox'), img = $('lbImg');
+  document.querySelectorAll('img.lb').forEach(im => im.addEventListener('click', () => { img.src = im.src; lb.classList.add('show'); }));
+  $('lbClose').addEventListener('click', () => lb.classList.remove('show'));
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('show'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('show'); });
+}
+function initReveal(){
+  if (!('IntersectionObserver' in window)) { document.querySelectorAll('.rv').forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .08});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+}
+
+/* ---------- wiring ---------- */
+function init(){
+  buildMonthSelect(); renderMarquee(); renderCalendar(); renderUnits(); renderFaq(); renderDashboard();
+  applyI18n(); updateWlSummary(); updateHoldLink(); updatePartyLink(); updateStay();
+  tick(); setInterval(tick, 1000);
+  $('langEN').addEventListener('click', () => setLang('en'));
+  $('langIT').addEventListener('click', () => setLang('it'));
+  document.querySelectorAll('#wlForm [data-next]').forEach(b => b.addEventListener('click', () => { if (validateWlStep(state.step)) goWlStep(state.step + 1); }));
+  document.querySelectorAll('#wlForm [data-back]').forEach(b => b.addEventListener('click', () => goWlStep(state.step - 1)));
+  ['wlMonth','wlDate','wlFlex','wlGuests','wlCeremony','wlStay','wlName1','wlName2','wlEmail','wlCountry','wlNotes'].forEach(id => {
+    $(id).addEventListener('input', () => { updateWlSummary(); if (state.step === 4) buildWlReview(); });
+    $(id).addEventListener('change', () => { updateWlSummary(); if (state.step === 4) buildWlReview(); });
+  });
+  $('wlJoin').addEventListener('click', joinWaitlist);
+  $('calYear').addEventListener('click', e => {
+    const btn = e.target.closest('[data-date]'); if (!btn) return;
+    state.calDate = btn.dataset.date; renderCalendar(); updateHoldLink();
+  });
+  ['hldGuests','hldName','hldEmail'].forEach(id => $(id).addEventListener('input', updateHoldLink));
+  $('hldDone').addEventListener('click', requestHold);
+  ['pCouple','pDate','pRooms','pGuests','pName','pEmail'].forEach(id => { $(id).addEventListener('input', updatePartyLink); $(id).addEventListener('change', updatePartyLink); });
+  $('pDone').addEventListener('click', requestParty);
+  ['stUnit','stParty','stIn','stOut','stName','stEmail','stNotes'].forEach(id => { $(id).addEventListener('input', updateStay); $(id).addEventListener('change', updateStay); });
+  $('stDone').addEventListener('click', requestStay);
+  initLightbox(); initReveal();
+}
+document.addEventListener('DOMContentLoaded', init);
+
+window.LADOGANA = { state, OPENING, WL_BASE, UNITS, FAQ, DICT, SAMPLES, countdownParts, joinWaitlist, requestHold, requestParty, requestStay, validateStay, validateWlStep, goWlStep, setLang, waLink, dateFmt };
+</script>
+</body>
+</html>
