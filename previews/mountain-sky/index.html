@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mountain Sky Guest Ranch — Direct Booking Concept | Paradise Valley, Montana</title>
+<meta name="description" content="A direct booking platform concept for Mountain Sky Guest Ranch: published 2027 package rates, live totals, the ranch's own deposit schedule, buyout planner and waitlist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#20241f; --pine:#33473c; --pine2:#223129; --moss:#5c7263;
+  --cream:#f7f2e7; --paper:#fffdf7; --tan:#c9a876; --tan2:#a9885a;
+  --rust:#b0512c; --line:#e3dac4; --shadow:0 18px 50px rgba(32,36,31,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px}
+h1,h2,h3,.osw{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-weight:600;line-height:1.12}
+img{display:block;max-width:100%}
+a{color:var(--rust)}
+.wrap{max-width:1220px;margin:0 auto;padding:0 22px}
+.eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-size:.78rem;color:var(--rust);font-weight:600}
+.btn{display:inline-block;background:var(--rust);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.92rem;padding:15px 30px;border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:.2s}
+.btn:hover{background:#96431f;transform:translateY(-1px)}
+.btn.ghost{background:transparent;border:2px solid var(--cream);color:var(--cream)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.dark{background:var(--pine)}
+.btn.dark:hover{background:var(--pine2)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+/* ---------- header ---------- */
+header{position:absolute;top:0;left:0;right:0;z-index:20;color:#fff}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.brand{font-family:'Oswald',sans-serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
+.brand small{display:block;font-size:.62rem;letter-spacing:.34em;color:var(--tan);font-family:'Nunito',sans-serif;font-weight:700}
+.topbar nav{display:flex;gap:26px;align-items:center}
+.topbar nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.9rem}
+.topbar .phone{font-family:'Oswald',sans-serif;letter-spacing:.08em;border:1.5px solid rgba(255,255,255,.6);padding:8px 16px;border-radius:3px}
+@media(max-width:820px){.topbar nav a:not(.phone){display:none}}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;background:#111 url('img/hero-family.jpg') center/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,20,16,.45) 0%,rgba(15,20,16,.05) 40%,rgba(15,20,16,.78) 100%)}
+.hero-in{position:relative;padding:150px 0 56px;width:100%}
+.hero h1{font-size:clamp(2.6rem,6.2vw,4.9rem);max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--tan)}
+.hero p.lede{max-width:56ch;font-size:1.16rem;margin:20px 0 28px;color:#f3eee1}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.22);margin-top:44px;border:1px solid rgba(255,255,255,.22)}
+.stats div{background:rgba(20,28,23,.72);padding:16px 18px;backdrop-filter:blur(3px)}
+.stats b{display:block;font-family:'Oswald',sans-serif;font-size:1.45rem;letter-spacing:.05em;color:#fff}
+.stats span{font-size:.82rem;color:#ddd5bf;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+@media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}}
+/* ---------- sections ---------- */
+section{padding:84px 0}
+.sec-head{max-width:720px;margin-bottom:42px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:10px 0 12px}
+.sec-head p{color:#4c554d}
+.problem{background:var(--pine2);color:var(--cream)}
+.problem .sec-head p{color:#cfd6c9}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+@media(max-width:900px){.problem-grid{grid-template-columns:1fr}}
+.pain{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-left:4px solid var(--rust);padding:22px 24px;margin-bottom:16px;border-radius:4px}
+.pain h3{color:var(--tan);font-size:1.02rem;margin-bottom:6px}
+.pain p{font-size:.96rem;color:#e6e0cd}
+.solve{display:flex;gap:14px;margin-bottom:18px}
+.solve .n{flex:0 0 40px;height:40px;border-radius:50%;background:var(--tan);color:var(--pine2);font-family:'Oswald',sans-serif;display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.solve h3{font-size:1.02rem;color:#fff}
+.solve p{font-size:.95rem;color:#cfd6c9}
+/* ---------- season cards ---------- */
+.seasons{background:var(--paper)}
+.season-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.season-card{grid-column:span 2;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(32,36,31,.05)}
+.season-card.wide{grid-column:span 3}
+@media(max-width:900px){.season-card,.season-card.wide{grid-column:span 6}}
+.season-card img{height:190px;width:100%;object-fit:cover}
+.season-body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.season-body h3{font-size:1.28rem}
+.season-body .dates{font-weight:800;color:var(--rust);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.season-body p{font-size:.94rem;color:#4c554d;flex:1}
+.rate-line{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding-top:10px;font-size:.92rem}
+.rate-line b{font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.tag{display:inline-block;background:var(--cream);border:1px solid var(--line);color:var(--pine);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;align-self:flex-start}
+/* ---------- lodging ---------- */
+.lodge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:1000px){.lodge-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.lodge-grid{grid-template-columns:1fr}}
+.lodge-card{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.lodge-card img{height:170px;width:100%;object-fit:cover;cursor:zoom-in}
+.lodge-card div{padding:18px 20px}
+.lodge-card h3{font-size:1.08rem;margin-bottom:6px}
+.lodge-card p{font-size:.88rem;color:#4c554d}
+/* ---------- experiences ---------- */
+.exp-sec{background:var(--pine2);color:var(--cream)}
+.exp-sec .sec-head p{color:#cfd6c9}
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:1000px){.exp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.exp-grid{grid-template-columns:1fr}}
+.exp-card{background:#2b3d33;border:1px solid rgba(255,255,255,.12);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.exp-card img{height:150px;width:100%;object-fit:cover;cursor:zoom-in}
+.exp-card div{padding:16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.exp-card h3{font-size:1rem;color:#fff}
+.exp-card p{font-size:.87rem;color:#cfd6c9;flex:1}
+.exp-add{align-self:flex-start;background:transparent;border:1.5px solid var(--tan);color:var(--tan);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;padding:8px 14px;border-radius:3px;cursor:pointer}
+.exp-add.added{background:var(--tan);color:var(--pine2)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <div class="brand">Mountain Sky<small>Guest Ranch · Emigrant, Montana</small></div>
+    <nav>
+      <a href="#seasons">Seasons</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#buyout">Buyouts</a>
+      <a href="#faq">FAQ</a>
+      <a class="phone" href="tel:18005483392">1-800-548-3392</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow" style="color:var(--tan)">Paradise Valley · Montana</div>
+    <h1>Book the ranch <em>directly.</em></h1>
+    <p class="lede">Mountain Sky has welcomed guests since 1929 — but until now, every stay began with an inquiry form and a phone tag. This is the booking platform the ranch has never had: real 2027 package rates, live totals, and the ranch's own deposit schedule, with the reservations team confirming every stay personally.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#book">Start a booking</a>
+      <a class="btn ghost" href="#buyout">Plan a ranch buyout</a>
+    </div>
+    <div class="stats">
+      <div><b>1929</b><span>Welcoming guests since</span></div>
+      <div><b>17,000</b><span>Acres of ranch to explore</span></div>
+      <div><b>40 min</b><span>From Yellowstone's North Entrance</span></div>
+      <div><b>1 hr 15</b><span>From Bozeman Airport</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="problem">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The problem</div>
+      <h2>Sold out — with nowhere for demand to go</h2>
+      <p>Everything on mountainsky.com is published: the seasons, the rates, the deposit rules. The one thing missing is any way to act on them.</p>
+    </div>
+    <div class="problem-grid">
+      <div>
+        <div class="pain"><h3>No booking, no availability, no totals</h3><p>The only call to action on the ranch's site is "Inquire Today!" A family that has already decided has to send a form into the dark and wait, with no price confirmed and no week held.</p></div>
+        <div class="pain"><h3>Buyouts sold out, demand uncaptured</h3><p>The ranch's own buyout page states its 2026 fall buyout dates are completely booked. Every group turned away today is a group lost — there is no waitlist anywhere on the site.</p></div>
+        <div class="pain"><h3>A deposit schedule nobody can act on</h3><p>The published terms are precise — 25% down, 25% more by February 1, balance at checkout — but a guest cannot start any of it online. Every reservation is assembled by hand, by phone and email.</p></div>
+      </div>
+      <div>
+        <div class="solve"><div class="n">1</div><div><h3>Live pricing from the published tables</h3><p>Pick a season, a cabin and your party. The total is computed from the ranch's own 2027 rate tables — cabin minimums and additional-person rates exactly as published.</p></div></div>
+        <div class="solve"><div class="n">2</div><div><h3>The deposit plan, up front</h3><p>The guest sees the ranch's own schedule before they send: what is due now, what is due February 1, and the balance at checkout.</p></div></div>
+        <div class="solve"><div class="n">3</div><div><h3>A waitlist that catches the overflow</h3><p>Full week or sold-out buyout window? One tap turns a turned-away guest into a waitlist request the ranch can actually work.</p></div></div>
+        <div class="solve"><div class="n">4</div><div><h3>The team still confirms personally</h3><p>Nothing is auto-booked. Every request lands with the reservations team complete — reference, breakdown, deposit plan — and they confirm it themselves.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seasons" id="seasons">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">2027 Seasons</div>
+      <h2>Five seasons, published rates</h2>
+      <p>Every rate below is taken from the ranch's own package pages. Rates include lodging, meals and on-ranch activities, as published. Rates are subject to change, as the ranch notes.</p>
+    </div>
+    <div class="season-grid">
+      <article class="season-card wide">
+        <img src="img/family.jpg" alt="Summer Family Season at Mountain Sky">
+        <div class="season-body">
+          <span class="tag">Families · One week · Sun–Sun</span>
+          <h3>Summer Family Season</h3>
+          <div class="dates">June 13 – August 22, 2027</div>
+          <p>Week-long packages with daily rides, guided hikes, yoga, golf, a full kids and teen program, meal rides and Yellowstone excursions.</p>
+          <div class="rate-line"><span>Studio, per week</span><b>from $15,350</b></div>
+          <button class="btn dark" data-book-pkg="family">Book this season</button>
+        </div>
+      </article>
+      <article class="season-card wide">
+        <img src="img/hero-ridge.jpg" alt="Riding the ridge at Mountain Sky">
+        <div class="season-body">
+          <span class="tag">Families · One week · Reduced rate</span>
+          <h3>Spring Roundup</h3>
+          <div class="dates">June 6 – 13, 2027</div>
+          <p>The same Family Season experience at a reduced package rate, in the first green week of the ranch year.</p>
+          <div class="rate-line"><span>Studio, per week</span><b>from $12,850</b></div>
+          <button class="btn dark" data-book-pkg="spring">Book this season</button>
+        </div>
+      </article>
+      <article class="season-card">
+        <img src="img/fall.jpg" alt="Fall Roundup at Mountain Sky">
+        <div class="season-body">
+          <span class="tag">Adults only · One week</span>
+          <h3>Fall Roundup</h3>
+          <div class="dates">August 22 – 29, 2027</div>
+          <p>Family-season programming without the little ones: rides, hikes, yoga, golf, fishing Big Creek and three meal rides.</p>
+          <div class="rate-line"><span>Studio, per week</span><b>from $5,400</b></div>
+          <button class="btn dark" data-book-pkg="fall">Book this season</button>
+        </div>
+      </article>
+      <article class="season-card">
+        <img src="img/adventures.jpg" alt="Wild West Adventures at Mountain Sky">
+        <div class="season-body">
+          <span class="tag">Adults 21+ · 5 nights · Tue–Sun</span>
+          <h3>Wild West Adventures</h3>
+          <div class="dates">May 25 – 30 · Aug 31 – Sep 5 · Sep 7 – 12 · Sep 21 – 26, 2027</div>
+          <p>High adventure or ultimate relaxation: wilderness riding and hiking, the private golf course, yoga and massage time.</p>
+          <div class="rate-line"><span>Studio, 5 nights</span><b>from $3,500</b></div>
+          <button class="btn dark" data-book-pkg="adventures">Book this season</button>
+        </div>
+      </article>
+      <article class="season-card">
+        <img src="img/exp-yoga.jpg" alt="Wild West Women at Mountain Sky">
+        <div class="season-body">
+          <span class="tag">Women 21+ · 5 nights · Tue–Sun</span>
+          <h3>Wild West Women</h3>
+          <div class="dates">May 4 – 9 · May 11 – 16 · May 18 – 23, 2027</div>
+          <p>A girls-only western getaway on a working cattle ranch, with daily trail rides, horsemanship sessions and a Yellowstone tour included.</p>
+          <div class="rate-line"><span>Studio, 5 nights</span><b>from $3,650</b></div>
+          <button class="btn dark" data-book-pkg="women">Book this season</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="lodging" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Lodging</div>
+      <h2>Four cabin areas, one ranch</h2>
+      <p>Many of the guest cabins date back to the ranch's beginnings in the 1920s, each carefully restored — one, two and three bedroom units, some with stone fireplaces, some beside a meandering stream. Bookings are by cabin size; the ranch assigns your cabin.</p>
+    </div>
+    <div class="lodge-grid">
+      <div class="lodge-card"><img src="img/area-rustic.jpg" alt="Rustic Area cabins" data-lightbox><div><h3>Rustic Area</h3><p>Pony · Granite · Cinnabar · Bannack · Alder · Bridger · Black Pine · Cable · Pioneer</p></div></div>
+      <div class="lodge-card"><img src="img/area-pool.jpg" alt="Pool Area cabins" data-lightbox><div><h3>Pool Area</h3><p>Silver Star · Ruby · Red Bluff · Montana City · Summit · Virginia City · Last Chance · Trapper City · Silver Gate</p></div></div>
+      <div class="lodge-card"><img src="img/area-trout.jpg" alt="Trout Pond Area cabins" data-lightbox><div><h3>Trout Pond Area</h3><p>Sterling · Rimini · Maiden · Marysville · Big Horn · Old Yogo · Independence · Jardine · Gilt Edge · Elkhorn</p></div></div>
+      <div class="lodge-card"><img src="img/area-lodge.jpg" alt="Lodge Area cabins" data-lightbox><div><h3>Lodge Area</h3><p>Sunrise · Nevada City · Sylvanite · Garnet — closest to the main lodge, dining room and saloon.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="exp-sec" id="experiences">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Experiences</div>
+      <h2>Days built the Montana way</h2>
+      <p>On-ranch activities are included in every package rate, as published. Add the ones your party cares about and they travel with your booking request, so the ranch can plan your week before you arrive.</p>
+    </div>
+    <div class="exp-grid" id="expGrid"></div>
+  </div>
+</section>
+
+<style>
+/* ---------- wizard ---------- */
+.book-sec{background:var(--cream)}
+.wiz-shell{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+@media(max-width:1000px){.wiz-shell{grid-template-columns:1fr}}
+.wiz{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:30px;box-shadow:var(--shadow)}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.step-tab{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;padding:9px 14px;border:1.5px solid var(--line);border-radius:30px;background:#fff;color:#6b7263}
+.step-tab.active{background:var(--pine);border-color:var(--pine);color:#fff}
+.step-tab.done{border-color:var(--tan);color:var(--tan2)}
+fieldset[data-fs]{border:none;display:none}
+fieldset[data-fs].current{display:block}
+fieldset[data-fs] legend{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:1.35rem;margin-bottom:6px}
+.fs-sub{color:#4c554d;font-size:.95rem;margin-bottom:20px}
+.pick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:640px){.pick-grid{grid-template-columns:1fr}}
+.pick{border:2px solid var(--line);border-radius:6px;padding:18px;cursor:pointer;background:#fff;transition:.15s}
+.pick:hover{border-color:var(--tan)}
+.pick.sel{border-color:var(--rust);background:#fdf6ec}
+.pick h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:1.02rem}
+.pick p{font-size:.88rem;color:#4c554d}
+.pick .pr{font-family:'Oswald',sans-serif;font-size:1.15rem;color:var(--pine);margin-top:8px}
+.pick input{position:absolute;opacity:0}
+select,input[type=text],input[type=email],input[type=tel],input[type=date],textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:4px;font-family:'Nunito',sans-serif;font-size:1rem;background:#fff;color:var(--ink)}
+label.fl{display:block;font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;margin:16px 0 6px;color:var(--pine)}
+.party-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px dashed var(--line)}
+.party-row .who b{display:block;font-size:1rem}
+.party-row .who span{font-size:.85rem;color:#4c554d}
+.stepper{display:flex;align-items:center;gap:12px}
+.stepper button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--pine);background:#fff;color:var(--pine);font-size:1.2rem;cursor:pointer;line-height:1}
+.stepper button:hover{background:var(--pine);color:#fff}
+.stepper .cnt{font-family:'Oswald',sans-serif;font-size:1.15rem;min-width:24px;text-align:center}
+.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(max-width:640px){.checks{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:5px;padding:12px 14px;background:#fff;cursor:pointer;font-size:.93rem}
+.check input{margin-top:4px;accent-color:var(--rust);width:17px;height:17px}
+.check small{display:block;color:#4c554d}
+.wiz-nav{display:flex;justify-content:space-between;margin-top:28px;gap:12px}
+.err{background:#fbeae3;border:1px solid var(--rust);color:#7c2d12;padding:12px 16px;border-radius:5px;font-size:.92rem;margin-top:16px;display:none}
+.summary{position:sticky;top:20px;background:var(--pine2);color:var(--cream);border-radius:8px;padding:26px;box-shadow:var(--shadow)}
+.summary h3{color:#fff;font-size:1.15rem;margin-bottom:14px}
+.sum-line{display:flex;justify-content:space-between;gap:14px;font-size:.92rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.sum-line span:first-child{color:#cfd6c9}
+.sum-total{display:flex;justify-content:space-between;font-family:'Oswald',sans-serif;font-size:1.3rem;padding:14px 0 4px;color:#fff}
+.sum-dep{font-size:.88rem;color:var(--tan);border-top:1px dashed rgba(255,255,255,.25);margin-top:10px;padding-top:10px}
+.sum-dep div{display:flex;justify-content:space-between;padding:3px 0}
+.sum-note{font-size:.8rem;color:#aebba9;margin-top:12px}
+.review-box{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px}
+.review-box h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.req-text{white-space:pre-wrap;background:var(--cream);border:1px dashed var(--tan2);border-radius:6px;padding:18px;font-size:.9rem;margin-top:16px;max-height:340px;overflow:auto}
+.confirm{display:none;background:#eef4ea;border:1.5px solid var(--moss);border-radius:8px;padding:28px;text-align:center}
+.confirm h3{color:var(--pine);font-size:1.5rem;margin-bottom:8px}
+.confirm .ref{font-family:'Oswald',sans-serif;font-size:1.6rem;letter-spacing:.14em;color:var(--rust)}
+/* ---------- planner / waitlist / dashboard ---------- */
+.split-sec{background:var(--paper)}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+@media(max-width:1000px){.split-grid{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:30px;box-shadow:0 4px 18px rgba(32,36,31,.05)}
+.panel h3{font-size:1.35rem;margin-bottom:6px}
+.panel .sub{color:#4c554d;font-size:.95rem;margin-bottom:10px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+.dash-sec{background:var(--pine2);color:var(--cream)}
+.dash{background:#2b3d33;border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:28px}
+.dash-tag{display:inline-block;background:var(--rust);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:14px}
+.dash-tag.live{background:var(--moss)}
+.dash table{width:100%;border-collapse:collapse;font-size:.93rem}
+.dash td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.12);vertical-align:top}
+.dash td:first-child{color:#cfd6c9;width:42%}
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+@media(max-width:820px){.pipe{grid-template-columns:repeat(2,1fr)}}
+.pipe div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:16px;text-align:center}
+.pipe b{display:block;font-family:'Oswald',sans-serif;font-size:1.7rem;color:var(--tan)}
+.pipe span{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#cfd6c9;font-weight:700}
+.replaces{margin-top:24px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 30px;font-size:.93rem;color:#e6e0cd}
+@media(max-width:640px){.replaces{grid-template-columns:1fr}}
+.replaces li{list-style:none;padding-left:22px;position:relative}
+.replaces li::before{content:'—';position:absolute;left:0;color:var(--rust)}
+/* ---------- proposal / faq / footer ---------- */
+.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.prop-grid{grid-template-columns:1fr}}
+.prop{background:#fff;border:1px solid var(--line);border-top:4px solid var(--tan);border-radius:6px;padding:22px}
+.prop h3{font-size:1.02rem;margin-bottom:6px}
+.prop p{font-size:.92rem;color:#4c554d}
+.guide{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.guide{grid-template-columns:1fr}}
+.guide .g{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px}
+.guide h3{font-size:1.05rem;margin-bottom:8px;color:var(--pine)}
+.guide p,.guide li{font-size:.92rem;color:#4c554d}
+.guide ul{margin-left:18px}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h3{font-size:1.05rem;text-transform:none;letter-spacing:.01em;margin-bottom:6px}
+.faq-item p{color:#4c554d;font-size:.96rem;max-width:78ch}
+footer{background:#141a16;color:#cfd6c9;padding:56px 0 40px;font-size:.92rem}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:30px}
+@media(max-width:820px){footer .cols{grid-template-columns:1fr}}
+footer h3{color:#fff;font-size:1.05rem;margin-bottom:10px}
+footer a{color:var(--tan)}
+.concept{border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:.83rem;color:#9aa78f}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,14,11,.92);display:none;align-items:center;justify-content:center;z-index:60;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:88vh;border-radius:6px}
+</style>
+
+<section class="book-sec" id="book">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Book direct</div>
+      <h2>Build your week, see the real total</h2>
+      <p>Six short steps. Pricing comes only from the ranch's published 2027 tables, the deposit plan is the ranch's own, and the reservations team confirms every booking personally — nothing is auto-booked.</p>
+    </div>
+    <div class="wiz-shell">
+      <div class="wiz">
+        <div class="step-tabs" id="stepTabs"></div>
+        <form id="bookForm" novalidate>
+          <fieldset data-fs="1">
+            <legend>1 · Season &amp; week</legend>
+            <p class="fs-sub">Choose a 2027 season, then the week or session that suits your party.</p>
+            <div class="pick-grid" id="pkgGrid"></div>
+            <label class="fl" for="weekSel">Week / session</label>
+            <select id="weekSel"></select>
+            <p class="fs-sub" id="pkgNote" style="margin-top:12px"></p>
+          </fieldset>
+          <fieldset data-fs="2">
+            <legend>2 · Cabin size</legend>
+            <p class="fs-sub">Each cabin rate is a minimum that covers a set number of guests, exactly as the ranch publishes it. Guests beyond the covered number are priced per person in the next step.</p>
+            <div class="pick-grid" id="cabinGrid"></div>
+          </fieldset>
+          <fieldset data-fs="3">
+            <legend>3 · Your party</legend>
+            <p class="fs-sub" id="partyNote"></p>
+            <div id="partyRows"></div>
+          </fieldset>
+          <fieldset data-fs="4">
+            <legend>4 · Experiences &amp; travel</legend>
+            <p class="fs-sub">Tell the ranch what your party is coming for — it travels with the request. On-ranch activities are included in your package rate, as published.</p>
+            <div class="checks" id="interestChecks"></div>
+            <label class="check" style="margin-top:12px"><input type="checkbox" id="shuttleChk"><span><b>Bozeman airport shuttle</b> — round-trip transportation from Bozeman, $375 per party in one shuttle, as published.<small>Optional. Charged as one line on your total.</small></span></label>
+            <label class="fl" for="notes">Anything the ranch should know? (optional)</label>
+            <textarea id="notes" rows="3" placeholder="Celebrations, dietary needs, riding experience…"></textarea>
+          </fieldset>
+          <fieldset data-fs="5">
+            <legend>5 · Your details</legend>
+            <p class="fs-sub">The same details the ranch's inquiry form asks for today — first name, last name, email and phone.</p>
+            <div class="frow">
+              <div><label class="fl" for="fName">First name</label><input type="text" id="fName" autocomplete="given-name"></div>
+              <div><label class="fl" for="lName">Last name</label><input type="text" id="lName" autocomplete="family-name"></div>
+            </div>
+            <div class="frow">
+              <div><label class="fl" for="email">Email</label><input type="email" id="email" autocomplete="email"></div>
+              <div><label class="fl" for="phone">Phone</label><input type="tel" id="phone" autocomplete="tel"></div>
+            </div>
+          </fieldset>
+          <fieldset data-fs="6">
+            <legend>6 · Review &amp; send</legend>
+            <p class="fs-sub">Your complete request, priced from the published tables. Sending composes the request for the reservations team — they confirm every booking personally, and your deposit plan below follows the ranch's published terms.</p>
+            <div class="review-box" id="reviewBox"></div>
+            <div class="req-text" id="reqText" aria-label="Composed booking request"></div>
+          </fieldset>
+          <div class="err" id="wizErr"></div>
+          <div class="wiz-nav">
+            <button type="button" class="btn dark" id="prevBtn">Back</button>
+            <button type="button" class="btn" id="nextBtn">Continue</button>
+          </div>
+        </form>
+        <div class="confirm" id="confirmBox">
+          <div class="eyebrow">Request composed</div>
+          <h3>The ranch has your week — almost</h3>
+          <p>Your booking request is complete, with this reference:</p>
+          <div class="ref" id="confirmRef"></div>
+          <p style="margin-top:10px">In production, this request posts straight into Mountain Sky's reservations flow and the team confirms your booking personally. In this concept, your request is shown in full above and received by the reservations dashboard below. Prefer to talk it through? Call the ranch on <a href="tel:18005483392">1-800-548-3392</a>.</p>
+        </div>
+      </div>
+      <aside class="summary" id="summary">
+        <h3>Your week at Mountain Sky</h3>
+        <div id="sumBody"></div>
+        <div class="sum-total"><span>Total</span><span id="sumTotal">$0</span></div>
+        <div class="sum-dep" id="sumDep"></div>
+        <p class="sum-note">Priced only from Mountain Sky's published 2027 package tables. Additional costs published by the ranch and not included above: 8% Montana Lodging Facility Use Tax on the lodging portion, a 9% service charge, and any extras you add during your stay. Deposits are nonrefundable, per the ranch's terms. The reservations team confirms every booking personally.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="split-sec" id="buyout">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Groups</div>
+      <h2>The whole ranch, or a place in line</h2>
+      <p>Custom buyouts run in spring and fall only, at up to 50 and up to 100 guests, for 3, 5 or 7 nights. Buyout pricing is quoted by the ranch — it is not published — so the planner builds a complete enquiry, and the waitlist catches the demand the ranch currently loses.</p>
+    </div>
+    <div class="split-grid">
+      <div class="panel" id="buyoutPanel">
+        <h3>Ranch buyout planner</h3>
+        <p class="sub">Weddings, corporate incentive trips and everything in between — the occasions the ranch itself names. Includes lodging, all meals and on-ranch activities, as published. <b>Rate on enquiry.</b></p>
+        <div class="frow">
+          <div><label class="fl" for="boOccasion">Occasion</label>
+            <select id="boOccasion"><option value="">Choose…</option><option>Wedding</option><option>Corporate incentive trip</option><option>Private celebration</option><option>Other gathering</option></select></div>
+          <div><label class="fl" for="boGuests">Guest level</label>
+            <select id="boGuests"><option value="">Choose…</option><option>Up to 50 guests</option><option>Up to 100 guests</option></select></div>
+        </div>
+        <div class="frow">
+          <div><label class="fl" for="boNights">Nights</label>
+            <select id="boNights"><option value="">Choose…</option><option value="3">3 nights</option><option value="5">5 nights</option><option value="7">7 nights</option></select></div>
+          <div><label class="fl" for="boSeason">Season</label>
+            <select id="boSeason"><option value="">Choose…</option><option>Spring</option><option>Fall</option></select></div>
+        </div>
+        <label class="fl" for="boWhen">Preferred timing</label>
+        <input type="text" id="boWhen" placeholder="e.g. late September 2027">
+        <div class="frow">
+          <div><label class="fl" for="boName">Your name</label><input type="text" id="boName"></div>
+          <div><label class="fl" for="boEmail">Email</label><input type="email" id="boEmail"></div>
+        </div>
+        <div class="err" id="boErr"></div>
+        <button type="button" class="btn dark" id="boSend" style="margin-top:18px">Compose buyout enquiry</button>
+        <div class="req-text" id="boText" style="display:none"></div>
+        <p class="sub" style="margin-top:12px">Buyout deposits, as published: 25% for reservations made before January 1, 50% after January 1. Deposits are nonrefundable.</p>
+      </div>
+      <div class="panel" id="waitlistPanel">
+        <h3>Join the waitlist</h3>
+        <p class="sub">The ranch's own page states its 2026 fall buyout dates are completely booked — and today there is no list to join. This is that list: one request, and the ranch works it when a window opens.</p>
+        <label class="fl" for="wlType">I am waiting for</label>
+        <select id="wlType"><option value="">Choose…</option><option>A package week that is full</option><option>A ranch buyout window</option><option>A specific cabin size</option></select>
+        <div class="frow">
+          <div><label class="fl" for="wlWhen">Preferred timing</label><input type="text" id="wlWhen" placeholder="e.g. any week in July 2027"></div>
+          <div><label class="fl" for="wlParty">Party size</label><input type="text" id="wlParty" placeholder="e.g. 6"></div>
+        </div>
+        <div class="frow">
+          <div><label class="fl" for="wlName">Your name</label><input type="text" id="wlName"></div>
+          <div><label class="fl" for="wlEmail">Email</label><input type="email" id="wlEmail"></div>
+        </div>
+        <label class="check" style="margin-top:14px"><input type="checkbox" id="wlFlex"><span><b>My dates are flexible</b><small>Contact me about any opening that fits my party.</small></span></label>
+        <div class="err" id="wlErr"></div>
+        <button type="button" class="btn dark" id="wlSend" style="margin-top:18px">Join the waitlist</button>
+        <div class="req-text" id="wlText" style="display:none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dash-sec" id="dashboard">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--tan)">For the reservations team</div>
+      <h2>What lands on your desk</h2>
+      <p style="color:#cfd6c9">This is the other half of the platform: every guest request arrives complete — who, which week, what party, the full priced breakdown and the deposit plan — under one reference.</p>
+    </div>
+    <div class="dash">
+      <span class="dash-tag" id="dashTag">Illustrative example</span>
+      <div id="dashBody"></div>
+      <div class="pipe" id="dashPipe"></div>
+      <p style="font-size:.8rem;color:#aebba9;margin-top:10px">Pipeline figures are illustrative, showing the shape of the board in production.</p>
+      <h3 style="color:#fff;font-size:1.05rem;margin-top:26px">Manual steps this replaces</h3>
+      <ul class="replaces">
+        <li>Reading an inquiry form with no party, cabin or price context</li>
+        <li>Rebuilding the rate from the package tables by hand for every reply</li>
+        <li>Explaining the 25 / 25 / balance deposit schedule in every email</li>
+        <li>Losing sold-out buyout and full-week demand with nowhere to record it</li>
+        <li>Chasing missing details — names, ages, shuttle, interests — one message at a time</li>
+        <li>Re-typing the same request into the ranch's own systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="proposal" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">For the Mountain Sky team</div>
+      <h2>What the production build includes</h2>
+      <p>This concept runs on your published facts. The production version puts it on your own domain, connected to the way the ranch already works.</p>
+    </div>
+    <div class="prop-grid">
+      <div class="prop"><h3>Your own domain</h3><p>The platform lives at mountainsky.com, under your brand, replacing the inquiry-only path with a real booking front door.</p></div>
+      <div class="prop"><h3>Real payments, your schedule</h3><p>Card collection on the ranch's published deposit terms: 25% at booking, the second 25% on February 1, and the balance at checkout — or 50% at booking after January 1.</p></div>
+      <div class="prop"><h3>Live availability</h3><p>Real cabin inventory behind every week and session, so a full week sells the waitlist instead of a dead end.</p></div>
+      <div class="prop"><h3>Buyout pipeline</h3><p>Structured buyout enquiries at the 50 and 100 guest levels, with the waitlist feeding the windows that sell out first.</p></div>
+      <div class="prop"><h3>Works with your systems</h3><p>Requests land where your team already manages them — no new habits to learn, no re-typing.</p></div>
+      <div class="prop"><h3>Training &amp; launch support</h3><p>Staff training on the reservations board, a tested launch, and support through the first booking season.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Plan your year</div>
+      <h2>The 2027 season at a glance</h2>
+      <p>Every date below is published on the ranch's package pages.</p>
+    </div>
+    <div class="guide">
+      <div class="g"><h3>Spring — May &amp; June</h3><ul>
+        <li><b>Wild West Women</b> — May 4–9, 11–16, 18–23 (5 nights, Tue–Sun)</li>
+        <li><b>Wild West Spring Adventure</b> — May 25–30 (5 nights)</li>
+        <li><b>Spring Roundup</b> — June 6–13 (family week, reduced rate)</li>
+        <li><b>Ranch buyouts</b> — spring windows, 3 / 5 / 7 nights</li></ul></div>
+      <div class="g"><h3>Summer — June to August</h3><ul>
+        <li><b>Summer Family Season</b> — weekly, Sunday to Sunday, June 13 – August 22</li>
+        <li><b>Fall Roundup</b> — August 22–29, adults only</li>
+        <li>Summer is dedicated to week-long family stays — no buyouts, as published</li></ul></div>
+      <div class="g"><h3>Fall — August to September</h3><ul>
+        <li><b>Wild West Fall Adventures</b> — Aug 31–Sep 5, Sep 7–12, Sep 21–26 (5 nights)</li>
+        <li><b>Ranch buyouts</b> — fall windows, 3 / 5 / 7 nights, up to 50 or 100 guests</li>
+        <li>The ranch states its 2026 fall buyout dates are completely booked — join the waitlist for 2027 windows</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Good to know</div>
+      <h2>Questions, answered the ranch's way</h2>
+      <p>Every answer comes from Mountain Sky's own published pages.</p>
+    </div>
+    <div class="faq-item"><h3>How do deposits work?</h3><p>New reservations require a 25% deposit at the time of booking and an additional 25% deposit due February 1st, 2027. If the reservation is made after January 1st, a 50% deposit is due at the time of booking. The remaining package price, along with any charges accrued during your stay, is due at checkout. All deposits are nonrefundable.</p></div>
+    <div class="faq-item"><h3>What is included in the package rates?</h3><p>Lodging, meals, and on-ranch activities — horseback riding, the kids program, golf, guided hiking, yoga, and fly fishing instruction — plus use of all ranch facilities and amenities: heated pool, hot tub, grotto, steam room, sauna, and tennis court. Wild West Women also includes a tour of Yellowstone National Park and airport transportation.</p></div>
+    <div class="faq-item"><h3>What costs extra?</h3><p>An 8% Montana Lodging Facility Sales and Use Tax on the lodging portion of your stay, and a 9% service charge (11% on buyouts). Depending on the package: airport transportation, massage services, bar and gift shop purchases, clay shooting, and off-ranch excursions such as Yellowstone National Park tours and whitewater rafting.</p></div>
+    <div class="faq-item"><h3>How long is a stay?</h3><p>Summer Family Season and Fall Roundup are one-week stays only, Sunday to Sunday (7 nights). Wild West Adventures and Wild West Women are 5-night stays, Tuesday to Sunday. Ranch buyouts run 3, 5 or 7 nights with a three-night minimum.</p></div>
+    <div class="faq-item"><h3>Can children ride?</h3><p>For safety, the ranch does not provide trail riding for children six years and under, though they can lead-line ride daily in the kids program. Babysitting is available for all ages outside of Kids Program hours, at $25–$35 per hour depending on time of day.</p></div>
+    <div class="faq-item"><h3>How do we get there?</h3><p>The ranch is in Paradise Valley, about 1 hour 15 minutes from Bozeman Airport and 40 minutes from the North Entrance to Yellowstone. Round-trip transportation from Bozeman is available for $375 per party in one shuttle.</p></div>
+    <div class="faq-item"><h3>Can we bring our dog?</h3><p>Pets are not permitted at the ranch.</p></div>
+    <div class="faq-item"><h3>What payment methods does the ranch accept?</h3><p>All major credit cards, personal checks, and wire transfers.</p></div>
+    <div class="faq-item"><h3>Can we bring our own drinks?</h3><p>Due to Montana liquor license laws, you are not permitted to BYOB inside the lodge, though you may keep personal alcohol in your cabin.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Mountain Sky Guest Ranch</h3>
+        <p>P.O. Box 1219, Emigrant, MT 59027<br>Reservations: <a href="tel:18005483392">1-800-548-3392</a><br>In Paradise Valley, minutes from Yellowstone National Park.</p>
+      </div>
+      <div>
+        <h3>Seasons</h3>
+        <p><a href="#seasons">Summer Family Season</a><br><a href="#seasons">Spring Roundup</a><br><a href="#seasons">Fall Roundup</a><br><a href="#seasons">Wild West Adventures</a><br><a href="#seasons">Wild West Women</a></p>
+      </div>
+      <div>
+        <h3>This platform</h3>
+        <p><a href="#book">Book direct</a><br><a href="#buyout">Buyout planner</a><br><a href="#buyout">Waitlist</a><br><a href="#dashboard">Reservations dashboard</a><br><a href="#proposal">Production proposal</a></p>
+      </div>
+    </div>
+    <div class="concept">
+      <p><b>Concept proposal built by SiteSprint Studio.</b> This is a design and systems concept, not Mountain Sky Guest Ranch's official website. All rates, dates, deposit terms and policies shown are Mountain Sky's own published 2027 figures, reproduced from mountainsky.com; rates are subject to change as the ranch notes. No live availability is shown and no payment is taken — the reservations team confirms every booking personally.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox"><img id="lbImg" src="" alt="Mountain Sky photograph enlarged"></div>
+
+<script>
+'use strict';
+/* ============ published data — every figure from mountainsky.com package pages ============ */
+function genWeeks(startISO, count){ const out=[]; let d=new Date(startISO+'T12:00:00'); for(let i=0;i<count;i++){ const s=new Date(d); const e=new Date(d); e.setDate(e.getDate()+7); out.push([iso(s),iso(e)]); d.setDate(d.getDate()+7);} return out; }
+function iso(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+const CABINS = {
+  studio:{label:'Studio', beds:'Studio cabin'},
+  one:{label:'1 Bedroom', beds:'One bedroom cabin'},
+  two:{label:'2 Bedroom', beds:'Two bedroom cabin'},
+  three:{label:'3 Bedroom', beds:'Three bedroom cabin'}
+};
+const PACKAGES = {
+  family:{ label:'Summer Family Season', year:2027, nights:7, adultsOnly:false,
+    note:'Week-long family packages, Sunday to Sunday. Rates include lodging, meals, on-ranch activities (horseback riding, kids program, golf, guided hiking, yoga, fly fishing instruction) and all ranch facilities.',
+    cabins:{studio:{rate:15350,covers:2},one:{rate:18800,covers:2},two:{rate:30700,covers:4},three:{rate:38400,covers:5}},
+    extra:{adult:6725,youth:5700,child:4375,infant:1000,nanny:2025},
+    weeks:genWeeks('2027-06-13',10) },
+  spring:{ label:'Spring Roundup', year:2027, nights:7, adultsOnly:false,
+    note:'The Family Season experience at a reduced package rate — one week, Sunday to Sunday, June 6–13, 2027.',
+    cabins:{studio:{rate:12850,covers:2},one:{rate:15450,covers:2},two:{rate:25700,covers:4},three:{rate:32100,covers:5}},
+    extra:{adult:5622,youth:4775,child:3650,infant:850,nanny:1675},
+    weeks:[['2027-06-06','2027-06-13']] },
+  fall:{ label:'Fall Roundup', year:2027, nights:7, adultsOnly:true,
+    note:'Adults-only week, Sunday to Sunday, August 22–29, 2027. Rates include lodging, meals and on-ranch activities including archery.',
+    cabins:{studio:{rate:5400,covers:1},one:{rate:6200,covers:1},two:{rate:10800,covers:2},three:{rate:16200,covers:3}},
+    extra:{adult:5400}, weeks:[['2027-08-22','2027-08-29']] },
+  adventures:{ label:'Wild West Adventures', year:2027, nights:5, adultsOnly:true,
+    note:'Adults-only (minimum age 21), 5-night stays, Tuesday to Sunday. Four sessions across spring and fall 2027.',
+    cabins:{studio:{rate:3500,covers:1},one:{rate:3950,covers:1},two:{rate:7000,covers:2},three:{rate:10500,covers:3}},
+    extra:{adult:3500},
+    weeks:[['2027-05-25','2027-05-30'],['2027-08-31','2027-09-05'],['2027-09-07','2027-09-12'],['2027-09-21','2027-09-26']] },
+  women:{ label:'Wild West Women', year:2027, nights:5, adultsOnly:true,
+    note:'Women 21+, 5-night stays, Tuesday to Sunday. Rates also include a tour of Yellowstone National Park and airport transportation.',
+    cabins:{studio:{rate:3650,covers:1},one:{rate:4250,covers:1},two:{rate:7300,covers:2},three:{rate:10950,covers:3}},
+    extra:{adult:3650},
+    weeks:[['2027-05-04','2027-05-09'],['2027-05-11','2027-05-16'],['2027-05-18','2027-05-23']] }
+};
+const PARTY_CATS = {
+  family:[ ['adult','Adults','Ages 13 & up'], ['youth','Youth','Ages 7–12'], ['child','Children','Ages 2–6'], ['infant','Infants','Under 2 — Kids Program not included'] ],
+  adults:[ ['adult','Adults','Ages 21 & up — adults-only season'] ]
+};
+const EXPERIENCES = [
+  ['Horseback riding','img/exp-riding.jpg','Daily trail rides across 17,000 acres and into the Gallatin National Forest — the heart of every Mountain Sky week.'],
+  ['Fly fishing','img/exp-fishing.jpg','Instruction and casting on the stocked trout pond, Big Creek, and the mighty Yellowstone River.'],
+  ['Yellowstone tours','img/exp-yellowstone.jpg','Guided excursions into Yellowstone National Park, 40 minutes from the ranch gate.'],
+  ['Rising Sun golf','img/exp-golf.jpg','The Johnny Miller-designed Rising Sun Golf Course, woven into the Paradise Valley hills.'],
+  ['Guided hiking','img/exp-hiking.jpg','Guided hikes through ranch country and the Absaroka and Gallatin ranges.'],
+  ['Kids program','img/exp-kids.jpg','A full-service kids and teen program: scavenger hunts, capture-the-flag, campfire cookouts and lead-line rides.'],
+  ['Wellness & yoga','img/exp-wellness.jpg','Yoga studio, cedar sauna, steam room, the grotto and the heated pool — plus massage services.'],
+  ['Clay shooting','img/exp-shooting.jpg','Sporting clays at the ranch range, one of the published off-package extras.'],
+  ['White water rafting','img/exp-rafting.jpg','Class II and III rapids along 8 miles of the world-famous Yellowstone River.'],
+  ['Challenge course','img/exp-course.jpg','The ranch challenge course — a group favourite for families and buyouts alike.'],
+  ['Fine dining & meal rides','img/exp-dining.jpg','Three remote-site meal rides each week, gourmet dinners, and live music in the saloon.'],
+  ['Saloon & dance nights','img/lodge.jpg','Western dance night with live, local musicians, and a nightcap at the full-service saloon bar.']
+];
+const SHUTTLE_PRICE = 375;
+
+/* ============ helpers ============ */
+const $ = id => document.getElementById(id);
+const fmt = n => '$' + (Math.round(n*100)/100).toLocaleString('en-US',{minimumFractionDigits:(Math.round(n*100)%100===0?0:2), maximumFractionDigits:2});
+const fmtD = isoStr => new Date(isoStr+'T12:00:00').toLocaleDateString('en-US',{month:'short', day:'numeric'});
+const weekLabel = w => fmtD(w[0]) + ' – ' + fmtD(w[1]) + ', 2027';
+function round2(n){ return Math.round(n*100)/100; }
+
+/* ============ pricing — published tables only ============ */
+function price(pkgKey, cabinKey, party){
+  const P = PACKAGES[pkgKey], C = P.cabins[cabinKey];
+  const lines = [{label: C ? (CABINS[cabinKey].label + ' cabin minimum (covers ' + C.covers + ')') : '', amount: C.rate}];
+  let coversLeft = C.covers;
+  const order = ['adult','youth','child','infant'];
+  for (const cat of order){
+    const count = party[cat] || 0;
+    const covered = Math.min(coversLeft, count);
+    coversLeft -= covered;
+    const extra = count - covered;
+    if (extra > 0 && P.extra[cat] != null){
+      lines.push({label: 'Additional ' + cat + (extra>1?'s':'') + ' × ' + extra + ' @ ' + fmt(P.extra[cat]), amount: extra * P.extra[cat]});
+    }
+  }
+  if ((party.nanny||0) > 0 && P.extra.nanny != null){
+    lines.push({label: 'Nanny × ' + party.nanny + ' @ ' + fmt(P.extra.nanny), amount: party.nanny * P.extra.nanny});
+  }
+  const total = lines.reduce((s,l)=>s+l.amount,0);
+  return {base:C.rate, lines, total};
+}
+function depositPlan(total, asOfISO){
+  const after = asOfISO > '2027-01-01';
+  if (after){ const now = round2(total*0.5); return {dueNow:now, second:0, secondDue:null, balance: round2(total-now), mode:'half'}; }
+  const now = round2(total*0.25), second = round2(total*0.25);
+  return {dueNow:now, second, secondDue:'2027-02-01', balance: round2(total-now-second), mode:'quarter'};
+}
+function partyCount(party){ return ['adult','youth','child','infant'].reduce((s,c)=>s+(party[c]||0),0); }
+function partyLabel(party, adultsOnly){
+  const parts = [];
+  if (party.adult) parts.push(party.adult + ' adult' + (party.adult>1?'s':''));
+  if (!adultsOnly){
+    if (party.youth) parts.push(party.youth + ' youth');
+    if (party.child) parts.push(party.child + ' child' + (party.child>1?'ren':''));
+    if (party.infant) parts.push(party.infant + ' infant' + (party.infant>1?'s':''));
+    if (party.nanny) parts.push(party.nanny + ' nanny');
+  }
+  return parts.join(', ') || 'No guests yet';
+}
+let refCounter = 0;
+function makeRef(prefix){
+  refCounter++;
+  const chars = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  let s = '';
+  const seed = Date.now() + refCounter * 7919;
+  for (let i=0;i<6;i++){ s += chars[Math.floor(Math.abs(Math.sin(seed+i*131)*10000)) % chars.length]; }
+  return prefix + s;
+}
+
+/* ============ state ============ */
+const state = { step:1, pkg:'family', cabin:'studio', week:0,
+  party:{adult:2,youth:0,child:0,infant:0,nanny:0}, shuttle:false,
+  interests:new Set(), ref:null, sentRequest:null };
+const STEP_NAMES = ['Season','Cabin','Party','Experiences','Details','Review'];
+
+/* ============ render: experiences ============ */
+function renderExperiences(){
+  $('expGrid').innerHTML = EXPERIENCES.map((e,i) =>
+    '<article class="exp-card"><img src="'+e[1]+'" alt="'+e[0]+' at Mountain Sky" data-lightbox><div><h3>'+e[0]+'</h3><p>'+e[2]+'</p><button type="button" class="exp-add" data-exp="'+i+'">Add to my stay</button></div></article>').join('');
+  $('interestChecks').innerHTML = EXPERIENCES.map((e,i) =>
+    '<label class="check"><input type="checkbox" data-interest="'+i+'"><span><b>'+e[0]+'</b></span></label>').join('');
+  document.querySelectorAll('[data-exp]').forEach(btn => btn.addEventListener('click', () => {
+    const i = +btn.dataset.exp;
+    const chk = document.querySelector('[data-interest="'+i+'"]');
+    chk.checked = !chk.checked;
+    chk.dispatchEvent(new window.Event('change'));
+  }));
+  document.querySelectorAll('[data-interest]').forEach(chk => chk.addEventListener('change', () => {
+    const i = +chk.dataset.interest;
+    if (chk.checked) state.interests.add(EXPERIENCES[i][0]); else state.interests.delete(EXPERIENCES[i][0]);
+    const btn = document.querySelector('[data-exp="'+i+'"]');
+    if (btn){ btn.classList.toggle('added', chk.checked); btn.textContent = chk.checked ? 'Added to my stay' : 'Add to my stay'; }
+  }));
+}
+
+/* ============ render: wizard steps ============ */
+function renderTabs(){
+  $('stepTabs').innerHTML = STEP_NAMES.map((n,i) =>
+    '<span class="step-tab'+(state.step===i+1?' active':state.step>i+1?' done':'')+'">'+(i+1)+' · '+n+'</span>').join('');
+}
+function renderPkgStep(){
+  $('pkgGrid').innerHTML = Object.keys(PACKAGES).map(k => {
+    const P = PACKAGES[k];
+    const firstCabin = P.cabins.studio;
+    return '<div class="pick'+(state.pkg===k?' sel':'')+'" data-pkg="'+k+'" role="button" tabindex="0"><h4>'+P.label+'</h4><p>'+(P.adultsOnly ? (P.nights+' nights · adults only') : (P.nights+' nights · families welcome'))+'</p><div class="pr">Studio from '+fmt(firstCabin.rate)+'</div></div>';
+  }).join('');
+  document.querySelectorAll('[data-pkg]').forEach(el => el.addEventListener('click', () => {
+    state.pkg = el.dataset.pkg; state.week = 0; renderPkgStep(); renderCabinStep(); renderPartyStep(); renderSummary();
+  }));
+  const P = PACKAGES[state.pkg];
+  $('weekSel').innerHTML = P.weeks.map((w,i) => '<option value="'+i+'"'+(state.week===i?' selected':'')+'>'+weekLabel(w)+' ('+P.nights+' nights)</option>').join('');
+  $('pkgNote').textContent = P.note;
+}
+function renderCabinStep(){
+  const P = PACKAGES[state.pkg];
+  $('cabinGrid').innerHTML = Object.keys(CABINS).map(k => {
+    const C = P.cabins[k];
+    return '<div class="pick'+(state.cabin===k?' sel':'')+'" data-cabin="'+k+'" role="button" tabindex="0"><h4>'+CABINS[k].label+'</h4><p>Covers up to '+C.covers+' guest'+(C.covers>1?'s':'')+' in the minimum rate</p><div class="pr">'+fmt(C.rate)+' / stay</div></div>';
+  }).join('');
+  document.querySelectorAll('[data-cabin]').forEach(el => el.addEventListener('click', () => {
+    state.cabin = el.dataset.cabin; renderCabinStep(); renderSummary();
+  }));
+}
+function renderPartyStep(){
+  const P = PACKAGES[state.pkg];
+  const cats = P.adultsOnly ? PARTY_CATS.adults : PARTY_CATS.family;
+  $('partyNote').textContent = P.adultsOnly
+    ? 'This is an adults-only season (21+). The cabin minimum covers the guests shown in step 2; each additional adult is ' + fmt(P.extra.adult) + ' per person, as published.'
+    : 'The cabin minimum covers the guests shown in step 2. Additional guests are priced per person from the published table — adults ' + fmt(P.extra.adult) + ', youth ' + fmt(P.extra.youth) + ', children ' + fmt(P.extra.child) + ', infants ' + fmt(P.extra.infant) + '.';
+  $('partyRows').innerHTML = cats.map(c =>
+    '<div class="party-row"><div class="who"><b>'+c[1]+'</b><span>'+c[2]+'</span></div><div class="stepper"><button type="button" data-dec="'+c[0]+'" aria-label="Fewer '+c[1]+'">−</button><span class="cnt" id="cnt-'+c[0]+'">'+(state.party[c[0]]||0)+'</span><button type="button" data-inc="'+c[0]+'" aria-label="More '+c[1]+'">+</button></div></div>').join('')
+    + (P.adultsOnly ? '' : '<div class="party-row"><div class="who"><b>Nanny</b><span>Rate includes accommodation, breakfast/lunch buffets &amp; Kids Program dinners</span></div><div class="stepper"><button type="button" data-dec="nanny" aria-label="Fewer nannies">−</button><span class="cnt" id="cnt-nanny">'+(state.party.nanny||0)+'</span><button type="button" data-inc="nanny" aria-label="More nannies">+</button></div></div>');
+  document.querySelectorAll('[data-inc]').forEach(b => b.addEventListener('click', () => { state.party[b.dataset.inc] = Math.min(12, (state.party[b.dataset.inc]||0)+1); syncParty(); }));
+  document.querySelectorAll('[data-dec]').forEach(b => b.addEventListener('click', () => { state.party[b.dataset.dec] = Math.max(0, (state.party[b.dataset.dec]||0)-1); syncParty(); }));
+}
+function syncParty(){
+  for (const c of ['adult','youth','child','infant','nanny']){ const el = $('cnt-'+c); if (el) el.textContent = state.party[c]||0; }
+  renderSummary();
+}
+function currentPrice(){ return price(state.pkg, state.cabin, state.party); }
+function grandTotal(){ return currentPrice().total + (state.shuttle ? SHUTTLE_PRICE : 0); }
+function renderSummary(){
+  const P = PACKAGES[state.pkg], pr = currentPrice();
+  const w = P.weeks[state.week];
+  let lines = '<div class="sum-line"><span>Season</span><b>'+P.label+'</b></div>'
+    + '<div class="sum-line"><span>Week</span><b>'+weekLabel(w)+'</b></div>'
+    + '<div class="sum-line"><span>Cabin</span><b>'+CABINS[state.cabin].label+'</b></div>'
+    + '<div class="sum-line"><span>Party</span><b>'+partyLabel(state.party, P.adultsOnly)+'</b></div>';
+  for (const l of pr.lines) lines += '<div class="sum-line"><span>'+l.label+'</span><b>'+fmt(l.amount)+'</b></div>';
+  if (state.shuttle) lines += '<div class="sum-line"><span>Bozeman round-trip shuttle (per party)</span><b>'+fmt(SHUTTLE_PRICE)+'</b></div>';
+  $('sumBody').innerHTML = lines;
+  const total = grandTotal();
+  $('sumTotal').textContent = fmt(total);
+  const dep = depositPlan(total, iso(new Date()));
+  $('sumDep').innerHTML = '<div><span>Deposit due now</span><b>'+fmt(dep.dueNow)+'</b></div>'
+    + (dep.second ? '<div><span>Second deposit · Feb 1, 2027</span><b>'+fmt(dep.second)+'</b></div>' : '')
+    + '<div><span>Balance at checkout</span><b>'+fmt(dep.balance)+'</b></div>';
+}
+</script>
+
+<script>
+'use strict';
+/* ============ wizard navigation & validation ============ */
+function showStep(n){
+  state.step = n;
+  document.querySelectorAll('fieldset[data-fs]').forEach(f => f.classList.toggle('current', +f.dataset.fs === n));
+  renderTabs();
+  $('prevBtn').style.visibility = n === 1 ? 'hidden' : 'visible';
+  $('nextBtn').textContent = n === 6 ? 'Send booking request' : 'Continue';
+  $('wizErr').style.display = 'none';
+  if (n === 6) renderReview();
+}
+function emailOk(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+function validateStep(n){
+  if (n === 1 && !state.pkg) return 'Please choose a season.';
+  if (n === 3){
+    if (partyCount(state.party) < 1) return 'Please add at least one guest to your party.';
+    const P = PACKAGES[state.pkg];
+    if (P.adultsOnly && (state.party.adult||0) < 1) return 'This is an adults-only season — please add at least one adult (21+).';
+    if (!P.adultsOnly && (state.party.adult||0) < 1) return 'Please include at least one adult in your party.';
+  }
+  if (n === 5){
+    if (!$('fName').value.trim() || !$('lName').value.trim()) return 'Please add your first and last name.';
+    if (!emailOk($('email').value.trim())) return 'Please add a valid email address.';
+    if ($('phone').value.replace(/\D/g,'').length < 7) return 'Please add a phone number the ranch can reach you on.';
+  }
+  return '';
+}
+function composeRequest(){
+  const P = PACKAGES[state.pkg], pr = currentPrice(), w = P.weeks[state.week];
+  const total = grandTotal(), dep = depositPlan(total, iso(new Date()));
+  const ref = state.ref || makeRef('MSK-');
+  const L = [];
+  L.push('MOUNTAIN SKY GUEST RANCH — BOOKING REQUEST ' + ref);
+  L.push('Guest: ' + $('fName').value.trim() + ' ' + $('lName').value.trim() + ' · ' + $('email').value.trim() + ' · ' + $('phone').value.trim());
+  L.push('Season: ' + P.label + ' 2027 · ' + weekLabel(w) + ' (' + P.nights + ' nights)');
+  L.push('Cabin: ' + CABINS[state.cabin].label + ' · Party: ' + partyLabel(state.party, P.adultsOnly));
+  if (state.interests.size) L.push('Experiences of interest: ' + [...state.interests].join(', '));
+  if (state.shuttle) L.push('Bozeman round-trip shuttle: yes ($375 per party)');
+  if ($('notes').value.trim()) L.push('Notes: ' + $('notes').value.trim());
+  L.push('— Priced from the published 2027 tables —');
+  for (const l of pr.lines) L.push(l.label + ': ' + fmt(l.amount));
+  if (state.shuttle) L.push('Bozeman round-trip shuttle (per party): ' + fmt(SHUTTLE_PRICE));
+  L.push('TOTAL: ' + fmt(total));
+  L.push('Deposit due now: ' + fmt(dep.dueNow) + (dep.second ? ' · Second deposit due Feb 1, 2027: ' + fmt(dep.second) : '') + ' · Balance at checkout: ' + fmt(dep.balance));
+  L.push('Additional per published terms: 8% Montana Lodging Facility Use Tax on the lodging portion and a 9% service charge. Deposits are nonrefundable.');
+  return { ref, text: L.join('\n'), total, dep, pr };
+}
+function renderReview(){
+  const P = PACKAGES[state.pkg], w = P.weeks[state.week];
+  const c = composeRequest();
+  state.ref = c.ref;
+  $('reviewBox').innerHTML = '<h4>' + P.label + ' — ' + weekLabel(w) + '</h4>'
+    + '<p><b>' + CABINS[state.cabin].label + ' cabin</b> · ' + partyLabel(state.party, P.adultsOnly) + '</p>'
+    + '<p style="margin-top:6px">Reference <b>' + c.ref + '</b> · Total <b>' + fmt(c.total) + '</b> · Deposit due now <b>' + fmt(c.dep.dueNow) + '</b></p>'
+    + '<p style="margin-top:6px;color:#4c554d">The reservations team confirms every booking personally. No payment is taken on this concept.</p>';
+  $('reqText').textContent = c.text;
+}
+function sendRequest(){
+  const err = validateStep(5);
+  if (err){ showErr(err); return; }
+  const c = composeRequest();
+  state.ref = c.ref; state.sentRequest = c;
+  $('confirmRef').textContent = c.ref;
+  $('confirmBox').style.display = 'block';
+  $('nextBtn').disabled = true; $('nextBtn').textContent = 'Request composed';
+  renderDashboard(c);
+  $('confirmBox').scrollIntoView({behavior:'smooth', block:'center'});
+}
+function showErr(msg){ const e = $('wizErr'); e.textContent = msg; e.style.display = 'block'; }
+$('nextBtn').addEventListener('click', () => {
+  if (state.step === 6){ sendRequest(); return; }
+  const err = validateStep(state.step);
+  if (err){ showErr(err); return; }
+  showStep(state.step + 1);
+});
+$('prevBtn').addEventListener('click', () => { if (state.step > 1) showStep(state.step - 1); });
+$('weekSel').addEventListener('change', e => { state.week = +e.target.value; renderSummary(); });
+$('shuttleChk').addEventListener('change', e => { state.shuttle = e.target.checked; renderSummary(); });
+
+/* ============ dashboard ============ */
+function dashTable(c, guestLine, seasonLine){
+  const rows = [
+    ['Reference', c.ref], ['Guest', guestLine], ['Season', seasonLine],
+    ['Cabin / party', c.cabinLine], ['Total (published tables)', fmt(c.total)],
+    ['Deposit due now', fmt(c.dep.dueNow)],
+    [c.dep.second ? 'Second deposit · Feb 1, 2027' : 'Deposit structure', c.dep.second ? fmt(c.dep.second) : '50% at booking (after Jan 1)'],
+    ['Balance at checkout', fmt(c.dep.balance)], ['Status', 'Awaiting personal confirmation by the reservations team']
+  ];
+  return '<table>' + rows.map(r => '<tr><td>'+r[0]+'</td><td><b>'+r[1]+'</b></td></tr>').join('') + '</table>';
+}
+function renderDashboard(c){
+  const P = PACKAGES[state.pkg], w = P.weeks[state.week];
+  $('dashTag').textContent = 'Live — composed in this session';
+  $('dashTag').classList.add('live');
+  $('dashBody').innerHTML = dashTable(
+    { ref:c.ref, total:c.total, dep:c.dep, cabinLine: CABINS[state.cabin].label + ' · ' + partyLabel(state.party, P.adultsOnly) },
+    $('fName').value.trim() + ' ' + $('lName').value.trim() + ' · ' + $('email').value.trim(),
+    P.label + ' 2027 · ' + weekLabel(w));
+}
+function renderSampleDashboard(){
+  const pr = price('family','two',{adult:2,youth:2,child:1,infant:0,nanny:0});
+  const dep = depositPlan(pr.total, '2026-11-17');
+  $('dashBody').innerHTML = dashTable(
+    { ref:'MSK-SAMPLE', total:pr.total, dep, cabinLine:'2 Bedroom · 2 adults, 2 youth, 1 child' },
+    'Sample family booking', 'Summer Family Season 2027 · Jul 11 – Jul 18, 2027');
+  $('dashPipe').innerHTML = [['3','New requests'],['2','Awaiting deposit'],['14','Confirmed for 2027'],['6','On the waitlist']]
+    .map(p => '<div><b>'+p[0]+'</b><span>'+p[1]+'</span></div>').join('');
+}
+
+/* ============ buyout planner ============ */
+function boCompose(){
+  const ref = makeRef('MSK-B-');
+  const L = [];
+  L.push('MOUNTAIN SKY GUEST RANCH — BUYOUT ENQUIRY ' + ref);
+  L.push('From: ' + $('boName').value.trim() + ' · ' + $('boEmail').value.trim());
+  L.push('Occasion: ' + $('boOccasion').value + ' · Guest level: ' + $('boGuests').value);
+  L.push('Stay: ' + $('boNights').value + ' nights · Season: ' + $('boSeason').value + ' · Preferred timing: ' + ($('boWhen').value.trim() || 'flexible'));
+  L.push('Includes, as published: lodging, all meals, and on-ranch activities including horseback riding, hiking, golf, yoga and fly-fishing instruction, plus all ranch facilities.');
+  L.push('Rate on enquiry — buyout pricing is quoted by the ranch and is not published.');
+  L.push('Buyout deposits, as published: 25% for reservations made before January 1, 50% after January 1. Deposits are nonrefundable. Additional: 8% Montana Lodging Facility Use Tax on the lodging portion and an 11% service charge.');
+  return { ref, text: L.join('\n') };
+}
+$('boSend').addEventListener('click', () => {
+  const e = $('boErr');
+  if (!$('boOccasion').value || !$('boGuests').value || !$('boNights').value || !$('boSeason').value){ e.textContent = 'Please choose the occasion, guest level, nights and season.'; e.style.display='block'; return; }
+  if (!$('boName').value.trim() || !emailOk($('boEmail').value.trim())){ e.textContent = 'Please add your name and a valid email.'; e.style.display='block'; return; }
+  e.style.display = 'none';
+  const c = boCompose();
+  const t = $('boText'); t.style.display = 'block'; t.textContent = c.text;
+  $('boSend').textContent = 'Enquiry composed — reference ' + c.ref;
+});
+
+/* ============ waitlist ============ */
+function wlCompose(){
+  const ref = makeRef('MSK-W-');
+  const L = [];
+  L.push('MOUNTAIN SKY GUEST RANCH — WAITLIST REQUEST ' + ref);
+  L.push('From: ' + $('wlName').value.trim() + ' · ' + $('wlEmail').value.trim());
+  L.push('Waiting for: ' + $('wlType').value);
+  L.push('Preferred timing: ' + ($('wlWhen').value.trim() || 'any') + ' · Party size: ' + ($('wlParty').value.trim() || 'not stated'));
+  L.push('Dates flexible: ' + ($('wlFlex').checked ? 'yes — contact me about any opening that fits' : 'no — preferred timing only'));
+  return { ref, text: L.join('\n') };
+}
+$('wlSend').addEventListener('click', () => {
+  const e = $('wlErr');
+  if (!$('wlType').value){ e.textContent = 'Please choose what you are waiting for.'; e.style.display='block'; return; }
+  if (!$('wlName').value.trim() || !emailOk($('wlEmail').value.trim())){ e.textContent = 'Please add your name and a valid email.'; e.style.display='block'; return; }
+  e.style.display = 'none';
+  const c = wlCompose();
+  const t = $('wlText'); t.style.display = 'block'; t.textContent = c.text;
+  $('wlSend').textContent = 'On the list — reference ' + c.ref;
+});
+
+/* ============ preselect, lightbox, init ============ */
+document.querySelectorAll('[data-book-pkg]').forEach(b => b.addEventListener('click', () => {
+  state.pkg = b.dataset.bookPkg; state.week = 0;
+  renderPkgStep(); renderCabinStep(); renderPartyStep(); renderSummary(); showStep(1);
+  document.getElementById('book').scrollIntoView({behavior:'smooth'});
+}));
+const lb = $('lightbox');
+document.addEventListener('click', e => {
+  const img = e.target.closest('[data-lightbox]');
+  if (img){ $('lbImg').src = img.src; lb.classList.add('open'); }
+  else if (e.target === lb) lb.classList.remove('open');
+});
+renderExperiences(); renderPkgStep(); renderCabinStep(); renderPartyStep(); renderSummary(); renderSampleDashboard(); showStep(1);
+
+window.MSKY = { PACKAGES, CABINS, EXPERIENCES, price, depositPlan, partyCount, partyLabel, composeRequest, boCompose, wlCompose, state, weekLabel, fmt, SHUTTLE_PRICE };
+</script>
+</body>
+</html>
