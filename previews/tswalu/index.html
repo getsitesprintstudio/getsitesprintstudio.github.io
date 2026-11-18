@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tswalu Kalahari Reserve — Reserve Direct | Concept Proposal</title>
+<meta name="description" content="A direct reservation platform concept for Tswalu Kalahari Reserve, South Africa's largest private reserve: The Motse, Loapi and Tarkuni, with published rates, live totals and a personal confirmation from the reservations team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#211609; --earth:#2c1e0e; --earth2:#3a2812;
+  --dune:#b0512c; --dune2:#cd7042; --gold:#c79a4b;
+  --sand:#e9dcbf; --sand2:#dfcda6; --cream:#f5edda; --paper:#faf5ea;
+  --mut:#6d5f49; --line:rgba(33,22,9,.16);
+  --serif:"Fraunces",Georgia,serif; --sans:"Archivo",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--dune);color:#fff}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(18px,4vw,54px)}
+.lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.lbl .n{color:var(--dune);font-weight:700}
+.rule{height:1px;background:var(--line);border:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02}
+h2{font-size:clamp(2.3rem,5.4vw,4.4rem);letter-spacing:-.015em}
+h2 em,h1 em{font-style:italic;font-weight:300;color:var(--dune2)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(26px,4vw,48px)}
+.sec-head p{max-width:430px;color:var(--mut);font-size:15px}
+section{padding:clamp(64px,9vw,120px) 0}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(33,22,9,.93);backdrop-filter:blur(8px);color:var(--cream);border-bottom:1px solid rgba(245,237,218,.14)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.brand{font-family:var(--serif);font-size:21px;letter-spacing:.14em;text-decoration:none;white-space:nowrap;text-transform:uppercase}
+.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.nav{display:flex;gap:26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.nav a{text-decoration:none;opacity:.85;position:relative;padding:4px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--dune2);transition:width .3s}
+.nav a:hover{opacity:1}.nav a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--dune);color:#fff;text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border:0;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateX(-101%);transition:transform .35s ease}
+.btn:hover::before{transform:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(33,22,9,.28)}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,237,218,.5)}
+.btn.ghost::before{background:var(--dune)}
+.btn.dark{background:var(--ink)}
+.btn.dark::before{background:var(--dune)}
+.top-cta{padding:10px 18px;font-size:11px}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--cream);background:var(--ink);padding:130px 0 0;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.06)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,22,9,.5) 0%,rgba(33,22,9,.08) 38%,rgba(33,22,9,.9) 90%)}
+.hero-in{position:relative;z-index:2;width:100%}
+.hero .lbl{color:var(--gold)}
+.hero h1{font-size:clamp(3rem,9.6vw,8.4rem);letter-spacing:-.02em;margin:14px 0 8px}
+.hero h1 .row2{display:block}
+.hero-sub{max-width:580px;font-size:clamp(15px,1.6vw,18px);color:rgba(245,237,218,.9)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 44px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(245,237,218,.28)}
+.hstat{padding:20px 18px 26px;border-left:1px solid rgba(245,237,218,.18)}
+.hstat:first-child{border-left:0;padding-left:0}
+.hstat b{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3.2vw,2.7rem);display:block;line-height:1.05}
+.hstat span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,237,218,.75);font-weight:600}
+/* marquee */
+.marquee{background:var(--ink);color:var(--cream);overflow:hidden;border-top:1px solid rgba(245,237,218,.14);padding:13px 0}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 52s linear infinite}
+.mq-track span{font-family:var(--serif);font-style:italic;font-size:17px;white-space:nowrap;padding-right:14px}
+.mq-track b{color:var(--dune2);font-weight:400;padding-right:14px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+/* problem / solution */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:start}
+.why h2{margin:12px 0 18px}
+.why p.lede{font-size:17px;color:#453723;max-width:560px}
+.leak{border-top:1px solid var(--line)}
+.leak div{display:flex;gap:18px;padding:18px 2px;border-bottom:1px solid var(--line);align-items:baseline}
+.leak b{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--dune);font-size:20px;min-width:34px}
+.leak h3{font-size:19px;font-family:var(--sans);font-weight:600;letter-spacing:0}
+.leak p{color:var(--mut);font-size:14px}
+.fixcard{background:var(--ink);color:var(--cream);padding:clamp(24px,3vw,40px);position:relative}
+.fixcard::before{content:"";position:absolute;top:0;left:0;width:56px;height:4px;background:var(--dune)}
+.fixcard h3{font-size:26px;margin:8px 0 12px}
+.fixcard ul{list-style:none}
+.fixcard li{padding:11px 0;border-bottom:1px solid rgba(245,237,218,.16);font-size:14.5px;display:flex;gap:12px}
+.fixcard li::before{content:"—";color:var(--dune2)}
+.fixcard li:last-child{border-bottom:0}
+/* camps */
+.camps{background:var(--paper)}
+.camp{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,56px);padding:clamp(34px,5vw,64px) 0;border-top:1px solid var(--line);align-items:start}
+.camp:first-of-type{border-top:0;padding-top:6px}
+.camp.flip .cgal{order:2}
+.cgal .main{overflow:hidden;aspect-ratio:16/10.5;background:var(--sand2)}
+.cgal .main img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;filter:contrast(1.04) saturate(1.05)}
+.camp:hover .cgal .main img{transform:scale(1.04)}
+.cgal .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.cgal .thumbs div{overflow:hidden;aspect-ratio:16/9;background:var(--sand2)}
+.cgal .thumbs img{width:100%;height:100%;object-fit:cover;filter:contrast(1.04) saturate(1.04)}
+.cbody .idx{font-family:var(--serif);font-style:italic;color:var(--dune);font-size:16px}
+.cbody h3{font-size:clamp(2rem,3.6vw,3.2rem);margin:6px 0 4px}
+.cbody .loc{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:14px}
+.cbody p{font-size:15px;color:#453723;max-width:520px}
+.cfacts{margin:18px 0;border-top:1px solid var(--line)}
+.cfacts div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.cfacts span{color:var(--mut)} .cfacts b{font-weight:600;text-align:right}
+.crate{margin:16px 0 20px;background:var(--cream);border-left:3px solid var(--dune);padding:13px 16px;font-size:14px}
+.crate b{font-family:var(--serif);font-size:19px;color:var(--dune);font-weight:600}
+.book-link{background:none;border:0;border-bottom:2px solid var(--dune);color:var(--ink);font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:4px 0;cursor:pointer;transition:color .25s,border-color .25s}
+.book-link:hover{color:var(--dune);border-color:var(--ink)}
+.tagchip{display:inline-block;background:var(--ink);color:var(--cream);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:6px 10px;transform:rotate(-2deg);margin-bottom:12px}
+.tagchip.red{background:var(--dune)}
+/* rates */
+.rates{background:var(--sand)}
+.rt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rt-card{background:var(--paper);border:1px solid var(--line);padding:clamp(22px,2.6vw,34px)}
+.rt-card h3{font-size:27px;margin-bottom:2px}
+.rt-card .sub{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:14px}
+.rt-card table{width:100%;border-collapse:collapse;font-size:14px}
+.rt-card td{padding:9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.rt-card td:last-child{text-align:right;font-family:var(--serif);font-size:17px;color:var(--dune);white-space:nowrap;padding-left:10px}
+.rt-card tr.grp td{border-bottom:0;padding-bottom:2px;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.rt-card .pol{font-size:13px;color:var(--mut);margin-top:12px}
+.rt-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+.rt-note{border-top:3px solid var(--dune);padding-top:12px;font-size:14px}
+.rt-note b{display:block;font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:4px}
+.rt-note p{color:#57492f}
+.srcnote{margin-top:26px;font-size:12.5px;color:var(--mut)}
+/* included */
+.incl{background:var(--paper)}
+.incl-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,5vw,72px);align-items:start}
+.incl-photo{overflow:hidden}
+.incl-photo img{width:100%;height:clamp(260px,34vw,460px);object-fit:cover;filter:contrast(1.04) saturate(1.05)}
+.incl-list{list-style:none;border-top:1px solid var(--line)}
+.incl-list li{padding:11px 2px;border-bottom:1px solid var(--line);font-size:15px;display:flex;gap:12px}
+.incl-list li::before{content:"—";color:var(--dune)}
+.excl{margin-top:22px;font-size:13.5px;color:var(--mut)}
+.excl b{color:var(--ink)}
+/* booking */
+.booking{background:var(--ink);color:var(--cream)}
+.booking .lbl{color:var(--gold)}
+.booking h2 em{color:var(--dune2)}
+.book-grid{display:grid;grid-template-columns:1.5fr .9fr;gap:clamp(24px,4vw,52px);align-items:start}
+.steps{display:flex;gap:0;margin-bottom:26px;flex-wrap:wrap}
+.step-tab{flex:1;min-width:110px;text-align:left;background:none;border:0;border-top:3px solid rgba(245,237,218,.22);color:rgba(245,237,218,.6);font:600 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:10px 8px 0 0;cursor:pointer}
+.step-tab.on{border-color:var(--dune2);color:var(--cream)}
+.step-tab.done{border-color:var(--gold);color:var(--gold)}
+fieldset{border:0;display:none}
+fieldset.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+legend{font-family:var(--serif);font-size:clamp(24px,3vw,34px);margin-bottom:6px}
+.fnote{color:rgba(245,237,218,.72);font-size:14px;margin-bottom:20px;max-width:540px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:flex;flex-direction:column;gap:7px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.fld input,.fld select,.fld textarea{background:rgba(245,237,218,.07);border:1px solid rgba(245,237,218,.3);color:var(--cream);padding:13px 14px;font:400 15px var(--sans);border-radius:0;width:100%}
+.fld select option{color:var(--ink)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid var(--dune2);outline-offset:1px}
+.fld .err{color:#ffb59d;font-size:12.5px;display:none}
+.fld.bad input,.fld.bad select,.fld.bad textarea{border-color:#e2724f}
+.fld.bad .err{display:block}
+.camp-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.camp-opt{border:1px solid rgba(245,237,218,.3);padding:16px;cursor:pointer;background:rgba(245,237,218,.04);transition:border-color .25s,background .25s;text-align:left;color:var(--cream);font-family:var(--sans)}
+.camp-opt b{font-family:var(--serif);font-weight:400;font-size:20px;display:block}
+.camp-opt span{font-size:12px;color:rgba(245,237,218,.65)}
+.camp-opt.on{border-color:var(--dune2);background:rgba(176,81,44,.16)}
+.camp-opt:focus-visible{outline:2px solid var(--dune2);outline-offset:2px}
+/* calendar */
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-nav button{background:none;border:1px solid rgba(245,237,218,.4);color:var(--cream);width:38px;height:38px;font-size:17px;cursor:pointer}
+.cal-nav button:disabled{opacity:.3;cursor:default}
+.cal-nav .cal-title{font-family:var(--serif);font-size:19px}
+.cal-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.cal h4{font-family:var(--serif);font-weight:400;font-size:18px;margin-bottom:8px;color:var(--gold)}
+.cal table{width:100%;border-collapse:collapse}
+.cal th{font-size:10px;letter-spacing:.12em;color:rgba(245,237,218,.5);font-weight:600;padding:5px 0;text-transform:uppercase}
+.cal td{padding:2px;text-align:center}
+.cal-day{width:100%;aspect-ratio:1;background:none;border:0;color:var(--cream);font:500 13.5px var(--sans);cursor:pointer;position:relative;padding:0}
+.cal-day:hover:not(:disabled){background:rgba(176,81,44,.35)}
+.cal-day:disabled{color:rgba(245,237,218,.25);cursor:default}
+.cal-day.fest::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.cal-day.inrange{background:rgba(176,81,44,.3)}
+.cal-day.endpoint{background:var(--dune);color:#fff;font-weight:700}
+.cal-legend{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:rgba(245,237,218,.65);margin-top:12px}
+.cal-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:6px}
+.date-readout{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px}
+.date-readout div{border:1px solid rgba(245,237,218,.3);padding:11px 16px;min-width:170px}
+.date-readout span{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.date-readout b{font-family:var(--serif);font-weight:400;font-size:18px}
+.minstay{display:none;margin-top:14px;border:1px solid rgba(199,154,75,.6);background:rgba(199,154,75,.12);padding:12px 15px;font-size:13.5px}
+.minstay.show{display:block}
+.rate-note{margin-top:18px;border:1px solid rgba(199,154,75,.55);background:rgba(199,154,75,.1);padding:14px 16px;font-size:14px;display:none}
+.rate-note.show{display:block}
+.rate-note b{color:var(--gold)}
+.wiz-nav{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn.back{background:transparent;border:1px solid rgba(245,237,218,.45);color:var(--cream)}
+.btn.back::before{background:var(--dune)}
+.summary{background:var(--cream);color:var(--ink);padding:clamp(22px,3vw,34px);position:sticky;top:86px}
+.summary::before{content:"";display:block;width:52px;height:4px;background:var(--dune);margin-bottom:16px}
+.summary h3{font-size:24px;margin-bottom:4px}
+.summary .s-loc{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:16px}
+.srow{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.srow span{color:var(--mut)} .srow b{font-weight:600;text-align:right}
+.srow.tot{border-bottom:0;padding-top:13px}
+.srow.tot b{font-family:var(--serif);font-size:23px;color:var(--dune);font-weight:600}
+.summary .s-lines{margin-top:12px;font-size:13px;background:var(--sand);padding:12px 14px;display:none}
+.summary .s-lines.show{display:block}
+.summary .s-lines div{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+.summary .s-note{margin-top:12px;font-size:12.5px;color:var(--mut)}
+.confirm{display:none;border:1px solid rgba(199,154,75,.6);background:rgba(199,154,75,.1);padding:22px;margin-top:8px}
+.confirm.show{display:block}
+.confirm h3{font-size:26px;margin-bottom:8px}
+.confirm p{font-size:14.5px;color:rgba(245,237,218,.85);max-width:540px}
+.confirm .ref{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:19px}
+/* contact */
+.onenum{background:var(--earth);color:var(--cream);text-align:center}
+.onenum h2{font-size:clamp(2.4rem,6vw,5rem)}
+.onenum .big-mail{font-family:var(--serif);font-size:clamp(1.4rem,4.4vw,3.2rem);color:var(--dune2);text-decoration:none;display:inline-block;margin:18px 0 4px;border-bottom:2px solid rgba(205,112,66,.4);transition:color .3s,border-color .3s;word-break:break-all}
+.onenum .big-mail:hover{color:var(--cream);border-color:var(--cream)}
+.onenum .big-tel{font-family:var(--serif);font-size:clamp(1.3rem,3.4vw,2.4rem);color:var(--cream);text-decoration:none;display:inline-block;margin-top:6px}
+.onenum p{color:rgba(245,237,218,.78);max-width:560px;margin:14px auto 0;font-size:15.5px}
+footer{background:var(--ink);color:rgba(245,237,218,.65);border-top:1px solid rgba(245,237,218,.14);padding:34px 0 40px;font-size:13px}
+.foot-in{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:baseline}
+footer .brand{color:var(--cream)}
+footer a{color:var(--dune2)}
+.concept{margin-top:14px;font-size:12.5px;color:rgba(245,237,218,.5);max-width:760px}
+@media(max-width:1020px){
+  .rt-grid,.rt-notes{grid-template-columns:1fr}
+  .camp,.camp.flip .cgal{grid-template-columns:1fr;order:0}
+  .incl-grid{grid-template-columns:1fr}
+  .cal-wrap{grid-template-columns:1fr}
+}
+@media(max-width:680px){.nav{display:none}.fgrid{grid-template-columns:1fr}.hero-stats{grid-template-columns:1fr 1fr}.hstat{padding-left:0;border-left:0}.top-cta{display:none}.step-tab{min-width:44%}.camp-pick{grid-template-columns:1fr}.book-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}}
+@media(min-width:681px) and (max-width:1020px){.book-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top">Tswalu<small>Kalahari Reserve · South Africa</small></a>
+    <nav class="nav">
+      <a href="#camps">Camps</a>
+      <a href="#rates">Rates</a>
+      <a href="#included">Included</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn top-cta" href="#book"><span>Reserve direct</span></a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding-top:0">
+  <img class="hero-img" src="img/hero.jpg" alt="The southern Kalahari at Tswalu, South Africa's largest private reserve">
+  <div class="wrap hero-in" style="padding-top:150px">
+    <p class="lbl">Tswalu Kalahari Reserve · Northern Cape, South Africa</p>
+    <h1>A new <em>beginning,</em><span class="row2">booked direct.</span></h1>
+    <p class="hero-sub">In Setswana, Tswalu means &lsquo;a new beginning&rsquo;. This is South Africa&rsquo;s largest private reserve &mdash; 1,200 square kilometres of southern Kalahari, three camps, and a reservations team that confirms every booking personally. This platform puts the published rates, the dates and the total in front of you, first.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#book"><span>Start a reservation</span></a>
+      <a class="btn ghost" href="#camps"><span>Explore the camps</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><b>1,200 km&sup2;</b><span>Largest private reserve in South Africa</span></div>
+      <div class="hstat"><b>3 camps</b><span>The Motse · Loapi · Tarkuni</span></div>
+      <div class="hstat"><b>20</b><span>Suites &amp; private homes, in total</span></div>
+      <div class="hstat"><b>Every booking</b><span>Private vehicle, guide &amp; tracker included</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mqTrack">
+    <span>The Motse</span><b>&middot;</b><span>Loapi &mdash; &lsquo;the space below the clouds&rsquo;</span><b>&middot;</b><span>Tarkuni, exclusively yours</span><b>&middot;</b><span>The Korannaberg mountains</span><b>&middot;</b><span>118,000 hectares of private wilderness</span><b>&middot;</b><span>Meerkats, pangolin &amp; red dunes</span><b>&middot;</b>
+  </div>
+</div>
+
+<!-- PROBLEM / SOLUTION -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="rv">
+        <p class="lbl"><span class="n">01</span> &mdash; Why direct</p>
+        <h2>One of a kind reserve.<br>A booking path from <em>another era.</em></h2>
+        <p class="lede">Tswalu publishes its rates and its three camps in detail &mdash; then asks every guest to begin with an email enquiry and wait. The desire is there, the inventory is there; the direct channel simply cannot take a reservation. Meanwhile, third-party platforms list and sell Tswalu stays to the guests who find them first.</p>
+        <div class="leak" style="margin-top:26px">
+          <div><b>a.</b><div><h3>Every booking is manual</h3><p>The reserve&rsquo;s own booking path is an enquiry form &mdash; &ldquo;complete the form below so that our reservations team can assist you with your safari planning&rdquo; &mdash; with no dates, no availability view and no total.</p></div></div>
+          <div><b>b.</b><div><h3>Published rates nobody can act on</h3><p>Rates run from ZAR 46,400 per adult per night at The Motse to ZAR 339,800 a night for Tarkuni, published in full &mdash; yet a guest cannot turn them into a booking without a chain of emails.</p></div></div>
+          <div><b>c.</b><div><h3>Intermediaries own the guest</h3><p>International booking platforms carry Tswalu&rsquo;s inventory and the guest relationship that comes with it, while the reserve&rsquo;s own site stays a brochure.</p></div></div>
+        </div>
+      </div>
+      <div class="fixcard rv">
+        <p class="lbl" style="color:var(--gold)">What this platform does</p>
+        <h3>The direct desk, rebuilt</h3>
+        <ul>
+          <li>All three camps in one showcase, with the reserve&rsquo;s own photography</li>
+          <li>Published rates applied automatically &mdash; per person sharing, family tiers and Tarkuni&rsquo;s guest tiers, exactly as printed</li>
+          <li>A date calendar that enforces the published minimum stays, including the festive-season three-night rule</li>
+          <li>A live total before anything is sent &mdash; no surprises, no email tennis</li>
+          <li>Tarkuni stays enquiry-led, as an exclusive-use homestead should</li>
+          <li>Every request lands with the reservations team under one reference, and the team confirms each booking personally &mdash; the white glove stays, the friction goes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPS -->
+<section class="camps" id="camps">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">02</span> &mdash; The camps</p>
+        <h2 style="margin-top:10px">Three camps.<br>One <em>reserve.</em></h2>
+      </div>
+      <p>The full Tswalu portfolio as published by the reserve &mdash; a safari camp on a waterhole, six tented private homes under the Korannaberg, and an exclusive-use homestead in a secluded valley. Choose a camp and the reservation flow opens with it selected.</p>
+    </div>
+
+    <article class="camp rv" id="camp-motse">
+      <div class="cgal">
+        <div class="main"><img src="img/motse-1.jpg" alt="The Motse safari camp at Tswalu"></div>
+        <div class="thumbs">
+          <div><img src="img/motse-pool.jpg" alt="Pool deck at The Motse" loading="lazy"></div>
+          <div><img src="img/motse-dining.jpg" alt="Dining at The Motse" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="cbody">
+        <p class="idx">Camp 01</p>
+        <h3>The Motse</h3>
+        <p class="loc">Main camp · Waterhole frontage</p>
+        <p>Designed for individual couples and families, The Motse accommodates a maximum of 18 adults in nine legae, or suites. Indigenous gardens are a haven for antelope and birds, and a waterhole in front of the main guest area attracts a variety of wildlife, especially in the dry season. Two swimming pools, a fire pit for sundowners, a mezzanine library and a walk-in wine cellar complete the main camp &mdash; along with the Tswalu Spa, gym, photographic studio and gallery.</p>
+        <div class="cfacts">
+          <div><span>Suites</span><b>9 legae &mdash; 6 for two guests, 3 family legae</b></div>
+          <div><span>Maximum guests</span><b>18 adults</b></div>
+          <div><span>Setting</span><b>Waterhole, gardens, two pools</b></div>
+        </div>
+        <div class="crate">From <b>ZAR 46,400</b> per adult, per night, sharing &middot; family legae from ZAR 107,400</div>
+        <button class="book-link" data-book="motse">Reserve The Motse &rarr;</button>
+      </div>
+    </article>
+
+    <article class="camp flip rv" id="camp-loapi">
+      <div class="cgal">
+        <div class="main"><img src="img/loapi-firepit.jpg" alt="Fire pit at dusk at Loapi tented camp"></div>
+        <div class="thumbs">
+          <div><img src="img/loapi-1.jpg" alt="A Loapi private safari home" loading="lazy"></div>
+          <div><img src="img/loapi-pool.jpg" alt="Plunge pool at a Loapi home" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="cbody">
+        <span class="tagchip">Tented camp</span>
+        <p class="idx">Camp 02</p>
+        <h3>Loapi</h3>
+        <p class="loc">&lsquo;The space below the clouds&rsquo; · Korannaberg backdrop</p>
+        <p>Pioneering and nomadic in spirit, Loapi is a collection of six individual safari homes on open savannah grassland, each at least 50 metres from the next. Four one-bedroom homes span over 300 square metres; two two-bedroom homes cover over 400. Every home has an interactive kitchen, private study, shaded deck with fire pit and plunge pool &mdash; and is run by a dedicated homathi (house manager) and chef, with a private vehicle, guide and tracker for every booking.</p>
+        <div class="cfacts">
+          <div><span>Homes</span><b>6 &mdash; 4 one-bedroom, 2 two-bedroom</b></div>
+          <div><span>Maximum guests</span><b>2 or 4 per home</b></div>
+          <div><span>Service</span><b>Dedicated homathi &amp; private chef per home</b></div>
+        </div>
+        <div class="crate">From <b>ZAR 55,800</b> per adult, per night, sharing &middot; two-bedroom homes from ZAR 128,800</div>
+        <button class="book-link" data-book="loapi">Reserve Loapi &rarr;</button>
+      </div>
+    </article>
+
+    <article class="camp rv" id="camp-tarkuni">
+      <div class="cgal">
+        <div class="main"><img src="img/tarkuni-1.jpg" alt="Tarkuni homestead in its secluded valley"></div>
+        <div class="thumbs">
+          <div><img src="img/tarkuni-pool.jpg" alt="Pool deck at Tarkuni" loading="lazy"></div>
+          <div><img src="img/tarkuni-dining.jpg" alt="Dining room at Tarkuni" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="cbody">
+        <span class="tagchip red">Exclusive use</span>
+        <p class="idx">Camp 03</p>
+        <h3>Tarkuni</h3>
+        <p class="loc">Private homestead · Secluded valley</p>
+        <p>Tucked into a secluded valley below the Korannaberg mountains, Tarkuni is Tswalu&rsquo;s exclusive-use private homestead &mdash; up to 10 guests across five spacious suites, all under one roof, recently refurbished. For the duration of your stay, the homestead is yours: a dedicated house manager and private chef, a private 4&times;4 vehicle, guide and tracker on hand, shaded verandas, a fire pit overlooking a waterhole, and a private boma for dinners under the stars.</p>
+        <div class="cfacts">
+          <div><span>Suites</span><b>5 en-suite bedrooms, one roof</b></div>
+          <div><span>Maximum guests</span><b>10, exclusively yours</b></div>
+          <div><span>Service</span><b>House manager &amp; private chef included</b></div>
+        </div>
+        <div class="crate">From <b>ZAR 190,200</b> per night, exclusive use (1&ndash;4 guests) &middot; enquiry-led</div>
+        <button class="book-link" data-book="tarkuni">Enquire for Tarkuni &rarr;</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- RATES -->
+<section class="rates" id="rates">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">03</span> &mdash; Published rates</p>
+        <h2 style="margin-top:10px">The rates, <em>as printed.</em></h2>
+      </div>
+      <p>Every figure below is a published Tswalu rate, per night, in South African Rands (ZAR) &mdash; the same figures the reservation flow applies automatically. Nothing is estimated and nothing is discounted here; the value of booking direct is certainty, not a markdown.</p>
+    </div>
+    <div class="rt-grid">
+      <div class="rt-card rv">
+        <h3>The Motse</h3>
+        <p class="sub">9 legae · per night</p>
+        <table>
+          <tr class="grp"><td colspan="2">Legae</td></tr>
+          <tr><td>Per adult, 2 people sharing</td><td>ZAR 46,400</td></tr>
+          <tr><td>Single occupancy</td><td>ZAR 57,700</td></tr>
+          <tr class="grp"><td colspan="2">Family legae</td></tr>
+          <tr><td>Up to 2 adults &amp; 2 children sharing</td><td>ZAR 107,400</td></tr>
+          <tr><td>3 adults sharing</td><td>ZAR 139,200</td></tr>
+        </table>
+        <p class="pol">Child policy: children 0&ndash;11 sharing with parents stay complimentary (max 2). A child 12&ndash;17 is ZAR 10,900 (max 1 in a legae). An additional child in a family legae is ZAR 10,900 (max 3 children sharing).</p>
+      </div>
+      <div class="rt-card rv">
+        <h3>Loapi</h3>
+        <p class="sub">6 private homes · per night</p>
+        <table>
+          <tr class="grp"><td colspan="2">One-bedroom home</td></tr>
+          <tr><td>Per adult, 2 people sharing</td><td>ZAR 55,800</td></tr>
+          <tr><td>Single occupancy</td><td>ZAR 69,100</td></tr>
+          <tr class="grp"><td colspan="2">Two-bedroom home</td></tr>
+          <tr><td>Up to 2 adults &amp; 2 children sharing</td><td>ZAR 128,800</td></tr>
+          <tr><td>3 adults sharing</td><td>ZAR 150,300</td></tr>
+          <tr><td>4 adults sharing</td><td>ZAR 200,300</td></tr>
+        </table>
+        <p class="pol">Child policy: children 0&ndash;11 sharing with adults in a one-bedroom home stay complimentary (max 2). A child 12&ndash;17 is ZAR 10,900 (max 1). An additional child in a two-bedroom home is ZAR 10,900 (max 3 children sharing).</p>
+      </div>
+      <div class="rt-card rv">
+        <h3>Tarkuni</h3>
+        <p class="sub">Exclusive use · per night</p>
+        <table>
+          <tr><td>1&ndash;4 guests</td><td>ZAR 190,200</td></tr>
+          <tr><td>5 guests</td><td>ZAR 236,000</td></tr>
+          <tr><td>6 guests</td><td>ZAR 267,600</td></tr>
+          <tr><td>7 guests</td><td>ZAR 299,200</td></tr>
+          <tr><td>8&ndash;10 guests</td><td>ZAR 339,800</td></tr>
+        </table>
+        <p class="pol">The whole homestead, all five suites, for one party only &mdash; with its house manager, private chef, vehicle, guide and tracker. Tarkuni reservations are handled as enquiries, personally, by the reservations team.</p>
+      </div>
+    </div>
+    <div class="rt-notes rv">
+      <div class="rt-note"><b>2 nights</b><p>Minimum stay at every camp, all year.</p></div>
+      <div class="rt-note"><b>3 nights</b><p>Minimum stay over the festive season, 20 December 2026 to 6 January 2027.</p></div>
+      <div class="rt-note"><b>Combining camps</b><p>A minimum of 2 nights per camp applies when combining The Motse and Loapi in one trip.</p></div>
+    </div>
+    <p class="srcnote">Rates as published on tswalu.com (Rates &amp; Exclusive Offers), verified November 2026. The reservation flow below applies these published figures; the reservations team confirms the final rate with every booking.</p>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section class="incl" id="included">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">04</span> &mdash; Every stay includes</p>
+        <h2 style="margin-top:10px">All in. <em>By design.</em></h2>
+      </div>
+      <p>A Tswalu rate is an all-inclusive rate. This is the published inclusion list &mdash; the same one the reservations team works from.</p>
+    </div>
+    <div class="incl-grid">
+      <div class="rv">
+        <ul class="incl-list">
+          <li>Access to 118,000 hectares (292,000 acres) of private wilderness</li>
+          <li>Private 4&times;4 vehicle with a dedicated guide and tracker per booking</li>
+          <li>Luxury accommodation at your chosen camp</li>
+          <li>All meals, snacks and drinks, including fine South African wines</li>
+          <li>A dining experience at Boscia Restaurant (minimum two-night stay; no under 12s)</li>
+          <li>Game drives, nature walks, rock engraving sites, animal tracking, birding and stargazing</li>
+          <li>Up-close meerkat encounter</li>
+          <li>Horse riding (intermediate and advanced levels)</li>
+          <li>Child-minding and the Tswalu Junior Ranger programme</li>
+          <li>Wifi and laundry</li>
+        </ul>
+        <p class="excl"><b>Not included:</b> travel to and from Tswalu, private photographic tuition, gift shop and gallery purchases, the Malori sleepout, spa treatments, Tswalu Foundation donations and gratuities &mdash; as published.</p>
+      </div>
+      <div class="incl-photo rv">
+        <img src="img/meerkats.webp" alt="Meerkats at Tswalu, part of every stay">
+        <img src="img/gamedrive.jpg" alt="A private game drive at Tswalu" loading="lazy" style="margin-top:10px">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="book">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="lbl"><span class="n">05</span> &mdash; Reserve direct</p>
+        <h2 style="margin-top:10px">Five steps.<br>One <em>request.</em></h2>
+      </div>
+      <p style="color:rgba(245,237,218,.75)">Choose a camp, pick dates on the calendar, add your party &mdash; the platform prices your stay from the published rates as you go. Your request is then composed for the reservations team, who confirm every booking personally. No payment is taken here.</p>
+    </div>
+
+    <div class="book-grid">
+      <div>
+        <div class="steps" role="tablist" aria-label="Reservation steps">
+          <button class="step-tab on" data-goto="1">1 · Camp</button>
+          <button class="step-tab" data-goto="2">2 · Dates</button>
+          <button class="step-tab" data-goto="3">3 · Guests</button>
+          <button class="step-tab" data-goto="4">4 · Your Details</button>
+          <button class="step-tab" data-goto="5">5 · Send</button>
+        </div>
+
+        <form id="bookForm" novalidate>
+          <!-- STEP 1 -->
+          <fieldset class="on" data-step="1">
+            <legend>Choose your camp</legend>
+            <p class="fnote">Three camps, one reserve. Tarkuni is reserved by enquiry only &mdash; the homestead is never sold by the night off a shelf.</p>
+            <div class="camp-pick" id="campPick">
+              <button type="button" class="camp-opt on" data-camp="motse"><b>The Motse</b><span>9 suites · from ZAR 46,400 pp/night</span></button>
+              <button type="button" class="camp-opt" data-camp="loapi"><b>Loapi</b><span>6 private homes · from ZAR 55,800 pp/night</span></button>
+              <button type="button" class="camp-opt" data-camp="tarkuni"><b>Tarkuni</b><span>Exclusive use · from ZAR 190,200/night</span></button>
+            </div>
+            <div class="fgrid">
+              <div class="fld full" id="fld-unit">
+                <label for="unit">Suite / home</label>
+                <select id="unit"></select>
+                <p class="err">Please choose a suite or home.</p>
+              </div>
+            </div>
+            <div class="rate-note" id="tarkuniNote"><b>Tarkuni is enquiry-led.</b> Choose your dates and party size and this platform composes a priced enquiry from the published guest tiers &mdash; the reservations team then confirms the homestead personally.</div>
+            <div class="wiz-nav">
+              <button type="button" class="btn" data-next="2"><span>Continue to dates</span></button>
+            </div>
+          </fieldset>
+
+          <!-- STEP 2 -->
+          <fieldset data-step="2">
+            <legend>Choose your dates</legend>
+            <p class="fnote">Tap your arrival day, then your departure day. Minimum stay: 2 nights &mdash; 3 nights over the festive season (20 December 2026 to 6 January 2027, marked with a gold dot). The calendar shows dates only; the reservations team confirms availability personally with every request.</p>
+            <div class="cal-nav">
+              <button type="button" id="calPrev" aria-label="Previous months">&larr;</button>
+              <span class="cal-title" id="calTitle">Select dates</span>
+              <button type="button" id="calNext" aria-label="Next months">&rarr;</button>
+            </div>
+            <div class="cal-wrap" id="calWrap"></div>
+            <div class="cal-legend"><span><i></i>Festive season &mdash; 3-night minimum</span><span>Selected nights are highlighted</span></div>
+            <div class="date-readout">
+              <div><span>Arrival</span><b id="roIn">&mdash;</b></div>
+              <div><span>Departure</span><b id="roOut">&mdash;</b></div>
+              <div><span>Nights</span><b id="roNights">&mdash;</b></div>
+            </div>
+            <div class="fld" id="fld-dates" style="margin-top:14px">
+              <p class="err" id="datesErr">Please select both your arrival and departure dates.</p>
+            </div>
+            <div class="minstay" id="minstayNote"></div>
+            <input type="hidden" id="inDate"><input type="hidden" id="outDate">
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-back="1"><span>Back</span></button>
+              <button type="button" class="btn" data-next="3"><span>Continue to guests</span></button>
+            </div>
+          </fieldset>
+
+          <!-- STEP 3 -->
+          <fieldset data-step="3">
+            <legend>Who is travelling?</legend>
+            <p class="fnote">Rates are applied exactly as published &mdash; per adult sharing, single occupancy, family tiers and the child policy. Watch the summary: it prices your party as you build it.</p>
+            <div class="fgrid">
+              <div class="fld" id="fld-adults">
+                <label for="adults">Adults (18+)</label>
+                <select id="adults"></select>
+                <p class="err">Please add at least one adult.</p>
+              </div>
+              <div class="fld" id="fld-teens">
+                <label for="teens">Children 12&ndash;17</label>
+                <select id="teens"></select>
+                <p class="err">That is more children 12&ndash;17 than this option allows sharing.</p>
+              </div>
+              <div class="fld" id="fld-young">
+                <label for="young">Children 0&ndash;11</label>
+                <select id="young"></select>
+                <p class="err">That is more children 0&ndash;11 than this option allows sharing.</p>
+              </div>
+              <div class="fld" id="fld-party">
+                <label>Party size</label>
+                <input id="partySize" readonly tabindex="-1" value="2 guests">
+                <p class="err" id="partyErr">That party is larger than this option accommodates.</p>
+              </div>
+            </div>
+            <div class="rate-note" id="childNote"></div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-back="2"><span>Back</span></button>
+              <button type="button" class="btn" data-next="4"><span>Continue to your details</span></button>
+            </div>
+          </fieldset>
+
+          <!-- STEP 4 -->
+          <fieldset data-step="4">
+            <legend>Your details</legend>
+            <p class="fnote">So the reservations team can reply personally. Nothing is sent until the final step, and no payment is taken on this platform.</p>
+            <div class="fgrid">
+              <div class="fld" id="fld-name">
+                <label for="gname">Full name</label>
+                <input id="gname" type="text" autocomplete="name" placeholder="Your full name">
+                <p class="err">Please tell us your name.</p>
+              </div>
+              <div class="fld" id="fld-email">
+                <label for="gemail">Email</label>
+                <input id="gemail" type="email" autocomplete="email" placeholder="you@example.com">
+                <p class="err">Please enter a valid email address.</p>
+              </div>
+              <div class="fld" id="fld-country">
+                <label for="gcountry">Country of residence</label>
+                <input id="gcountry" type="text" autocomplete="country-name" placeholder="Country">
+                <p class="err">Please tell us your country of residence.</p>
+              </div>
+              <div class="fld" id="fld-phone">
+                <label for="gphone">Phone (optional)</label>
+                <input id="gphone" type="tel" autocomplete="tel" placeholder="+…">
+                <p class="err"></p>
+              </div>
+              <div class="fld full" id="fld-notes">
+                <label for="gnotes">Anything the team should know? (optional)</label>
+                <textarea id="gnotes" rows="3" placeholder="Occasion, interests, dietary needs, arrival plans…"></textarea>
+                <p class="err"></p>
+              </div>
+            </div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-back="3"><span>Back</span></button>
+              <button type="button" class="btn" data-next="5"><span>Review your request</span></button>
+            </div>
+          </fieldset>
+
+          <!-- STEP 5 -->
+          <fieldset data-step="5">
+            <legend>Review &amp; send</legend>
+            <p class="fnote">Your full request, priced from the published rates. Send it to the reservations team and they will confirm your booking personally &mdash; availability, final rate and next steps &mdash; under your reference.</p>
+            <div id="reviewBox"></div>
+            <div class="wiz-nav">
+              <button type="button" class="btn back" data-back="4"><span>Back</span></button>
+              <a class="btn" id="mailtoBtn" href="#"><span>Email the reservations team</span></a>
+              <button type="button" class="btn dark" id="sentBtn"><span>I have sent it</span></button>
+            </div>
+            <div class="confirm" id="confirmBox">
+              <h3>Request noted.</h3>
+              <p>Your reference is <span class="ref" id="confirmRef">TSW-000000</span>. The Tswalu reservations team confirms every booking personally &mdash; expect a reply from reservations@tswalu.com. If email did not open for you, call the team on +27 11 274 2100 and quote your reference.</p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- SUMMARY -->
+      <aside class="summary" aria-live="polite">
+        <h3 id="sumCamp">The Motse</h3>
+        <p class="s-loc" id="sumUnit">Legae &mdash; suite for two</p>
+        <div class="srow"><span>Arrival</span><b id="sumIn">&mdash;</b></div>
+        <div class="srow"><span>Departure</span><b id="sumOut">&mdash;</b></div>
+        <div class="srow"><span>Nights</span><b id="sumNights">&mdash;</b></div>
+        <div class="srow"><span>Party</span><b id="sumParty">2 adults</b></div>
+        <div class="s-lines" id="sumLines"></div>
+        <div class="srow"><span id="sumPerNightLbl">Per night</span><b id="sumPerNight">&mdash;</b></div>
+        <div class="srow tot"><span>Total</span><b id="sumTotal">&mdash;</b></div>
+        <p class="s-note" id="sumNote">Priced from Tswalu&rsquo;s published rates. The reservations team confirms availability and the final rate personally &mdash; no payment is taken here.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="onenum" id="contact">
+  <div class="wrap">
+    <p class="lbl rv" style="color:var(--gold)">Reservations &amp; enquiries</p>
+    <h2 class="rv" style="margin-top:12px">One team.<br><em>Every booking.</em></h2>
+    <a class="big-mail rv" href="mailto:reservations@tswalu.com">reservations@tswalu.com</a>
+    <br>
+    <a class="big-tel rv" href="tel:+27112742100">+27 11 274 2100</a>
+    <p class="rv">Tswalu Kalahari Reserve, Farm Korannaberg 296, Van Zylsrus, Northern Cape 8467, South Africa. The reservations office is open 08:00&ndash;17:00 daily. Tswalu is a member of Oppenheimer Generations, representing the global interests of the Nicky and Jonathan Oppenheimer family.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a class="brand" href="#top">Tswalu<small>Kalahari Reserve</small></a>
+      <span>Rates as published on <a href="https://tswalu.com/our-camps/rates-and-exclusive-offers/" target="_blank" rel="noopener">tswalu.com</a> · Reservations: <a href="mailto:reservations@tswalu.com">reservations@tswalu.com</a> · +27 11 274 2100</span>
+    </div>
+    <p class="concept">Concept proposal built by SiteSprint Studio. This page is a design and booking-flow concept for Tswalu Kalahari Reserve: it is not the reserve&rsquo;s official website, it shows no live availability, and no payment is taken. Every booking is confirmed personally by the Tswalu reservations team.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+function $(id){ return document.getElementById(id); }
+function pad(n){ return (n<10?'0':'')+n; }
+function fmt(n){ return 'ZAR ' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' '); }
+var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var MON_S=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+/* ---- Published rates, tswalu.com "Rates & Exclusive Offers", verified Nov 2026 ---- */
+var CHILD_TEEN = 10900;
+var RATES = {
+  motse:{ name:'The Motse', loc:'Main camp · Waterhole frontage', units:{
+    legae:{ label:'Legae — suite for two', kind:'standard', share:46400, single:57700 },
+    family:{ label:'Family legae — two bedrooms', kind:'family', base:107400, threeAdult:139200 }
+  }},
+  loapi:{ name:'Loapi', loc:'Tented camp · Korannaberg backdrop', units:{
+    onebed:{ label:'One-bedroom home', kind:'standard', share:55800, single:69100 },
+    twobed:{ label:'Two-bedroom home', kind:'family', base:128800, threeAdult:150300, fourAdult:200300 }
+  }},
+  tarkuni:{ name:'Tarkuni', loc:'Exclusive-use homestead · Secluded valley', units:{
+    exclusive:{ label:'Exclusive-use homestead — all 5 suites', kind:'tarkuni',
+      tiers:[[4,190200],[5,236000],[6,267600],[7,299200],[10,339800]] }
+  }}
+};
+function capsFor(campKey, unitKey){
+  var u = RATES[campKey].units[unitKey];
+  if(u.kind==='standard') return { adults:2, teens:1, young:2, kids:null, total:99 };
+  if(u.kind==='family' && campKey==='motse') return { adults:3, teens:3, young:3, kids:3, total:4 };
+  if(u.kind==='family') return { adults:4, teens:3, young:3, kids:3, total:99 };
+  return { adults:10, teens:9, young:9, kids:null, total:10 };
+}
+function priceFor(campKey, unitKey, adults, teens, young){
+  var u = RATES[campKey].units[unitKey], lines = [], i, total, amt;
+  if(u.kind==='standard'){
+    if(adults===1) lines.push({label:'Single occupancy', amount:u.single});
+    else if(adults>1) lines.push({label:fmt(u.share)+' × '+adults+' adults sharing', amount:u.share*adults});
+    if(teens>0) lines.push({label:fmt(CHILD_TEEN)+' × '+teens+(teens>1?' children 12–17':' child 12–17'), amount:CHILD_TEEN*teens});
+    if(young>0) lines.push({label:'Children 0–11 sharing — complimentary', amount:0});
+  } else if(u.kind==='family'){
+    var base=u.base, bl='Up to 2 adults & 2 children sharing';
+    if(adults===3){ base=u.threeAdult; bl='3 adults sharing'; }
+    if(adults>=4 && u.fourAdult){ base=u.fourAdult; bl='4 adults sharing'; }
+    lines.push({label:bl, amount:base});
+    var kids=teens+young, extra=Math.max(0,kids-2);
+    if(extra>0) lines.push({label:fmt(CHILD_TEEN)+' × '+extra+(extra>1?' additional children':' additional child'), amount:CHILD_TEEN*extra});
+    else if(kids>0) lines.push({label:'Children sharing — included', amount:0});
+  } else {
+    total=adults+teens+young; amt=u.tiers[u.tiers.length-1][1];
+    for(i=0;i<u.tiers.length;i++){ if(total<=u.tiers[i][0]){ amt=u.tiers[i][1]; break; } }
+    lines.push({label:'Exclusive use — '+total+(total===1?' guest':' guests'), amount:amt});
+  }
+  var nightly=0; for(i=0;i<lines.length;i++) nightly+=lines[i].amount;
+  return { nightly:nightly, lines:lines };
+}
+
+/* ---- Dates ---- */
+var FEST_START='2026-12-20', FEST_END='2027-01-06';
+function dstr(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+function parseD(s){ var p=s.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
+function fmtDate(s){ if(!s) return '—'; var d=parseD(s); return DOW[d.getDay()]+', '+d.getDate()+' '+MON_S[d.getMonth()]+' '+d.getFullYear(); }
+function nightsBetween(a,b){ return Math.round((parseD(b)-parseD(a))/86400000); }
+function isFestive(s){ return s>=FEST_START && s<=FEST_END; }
+function overlapsFestive(a,b){ return a<=FEST_END && b>FEST_START; }
+function minStayFor(a,b){ return overlapsFestive(a,b) ? 3 : 2; }
+
+var today = new Date(); today.setHours(0,0,0,0);
+var state = { step:1, camp:'motse', ref:null, calOffset:0, checkin:null, checkout:null };
+
+/* ---- Camp & unit ---- */
+function populateUnits(){
+  var sel=$('unit'); sel.innerHTML='';
+  var units=RATES[state.camp].units;
+  Object.keys(units).forEach(function(k){
+    var o=document.createElement('option'); o.value=k; o.textContent=units[k].label; sel.appendChild(o);
+  });
+  $('tarkuniNote').classList.toggle('show', state.camp==='tarkuni');
+  buildGuestSelects();
+}
+function setCamp(camp){
+  state.camp=camp;
+  var opts=document.querySelectorAll('.camp-opt');
+  for(var i=0;i<opts.length;i++) opts[i].classList.toggle('on', opts[i].getAttribute('data-camp')===camp);
+  populateUnits(); updateSummary();
+}
+var campBtns=document.querySelectorAll('.camp-opt');
+for(var ci=0;ci<campBtns.length;ci++){
+  campBtns[ci].addEventListener('click', function(){ setCamp(this.getAttribute('data-camp')); });
+}
+$('unit').addEventListener('change', function(){ buildGuestSelects(); updateSummary(); });
+
+/* ---- Guests ---- */
+function fillSelect(sel, min, max, val){
+  sel.innerHTML='';
+  for(var i=min;i<=max;i++){ var o=document.createElement('option'); o.value=i; o.textContent=i; sel.appendChild(o); }
+  sel.value = Math.max(min, Math.min(max, val));
+}
+function buildGuestSelects(){
+  var caps=capsFor(state.camp, $('unit').value);
+  var a=parseInt($('adults').value||'2',10), t=parseInt($('teens').value||'0',10), y=parseInt($('young').value||'0',10);
+  fillSelect($('adults'), 0, caps.adults, isNaN(a)?2:a);
+  fillSelect($('teens'), 0, caps.teens, isNaN(t)?0:t);
+  fillSelect($('young'), 0, caps.young, isNaN(y)?0:y);
+  updateChildNote(caps);
+}
+function guestVals(){
+  return { adults:parseInt($('adults').value||'0',10), teens:parseInt($('teens').value||'0',10), young:parseInt($('young').value||'0',10) };
+}
+function partyText(g){
+  var parts=[];
+  if(g.adults>0) parts.push(g.adults+(g.adults===1?' adult':' adults'));
+  if(g.teens>0) parts.push(g.teens+(g.teens===1?' child 12–17':' children 12–17'));
+  if(g.young>0) parts.push(g.young+(g.young===1?' child 0–11':' children 0–11'));
+  return parts.length?parts.join(', '):'No guests yet';
+}
+function updateChildNote(caps){
+  var u=RATES[state.camp].units[$('unit').value], note=$('childNote'), txt='';
+  if(u.kind==='standard') txt='<b>Child policy, as published:</b> children 0–11 sharing stay complimentary (max 2); a child 12–17 is '+fmt(CHILD_TEEN)+' per night (max 1 sharing).';
+  else if(u.kind==='family') txt='<b>Child policy, as published:</b> the family rate includes up to 2 children sharing; each additional child is '+fmt(CHILD_TEEN)+' per night (max 3 children sharing).';
+  else txt='<b>Tarkuni</b> is priced per night by total guests, children included in the count — up to 10 guests under one roof.';
+  note.innerHTML=txt; note.classList.add('show');
+}
+['adults','teens','young'].forEach(function(id){
+  $(id).addEventListener('change', updateSummary);
+});
+
+/* ---- Calendar ---- */
+function renderCal(){
+  var wrap=$('calWrap'); wrap.innerHTML='';
+  var base=new Date(today.getFullYear(), today.getMonth()+state.calOffset, 1);
+  var title='';
+  for(var k=0;k<2;k++){
+    var m=new Date(base.getFullYear(), base.getMonth()+k, 1);
+    var y=m.getFullYear(), mo=m.getMonth();
+    if(k===0) title=MONTHS[mo]+' '+y; else title+=' — '+MONTHS[mo]+' '+y;
+    var div=document.createElement('div'); div.className='cal';
+    var html='<h4>'+MONTHS[mo]+' '+y+'</h4><table><tr><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th></tr>';
+    var first=new Date(y,mo,1), startPad=(first.getDay()+6)%7, days=new Date(y,mo+1,0).getDate();
+    var cell=0; html+='<tr>';
+    for(var p=0;p<startPad;p++){ html+='<td></td>'; cell++; }
+    for(var d=1;d<=days;d++){
+      if(cell%7===0 && d>1) html+='</tr><tr>';
+      var dt=new Date(y,mo,d), s=dstr(dt), cls='cal-day';
+      if(isFestive(s)) cls+=' fest';
+      if(state.checkin && state.checkout && s>state.checkin && s<state.checkout) cls+=' inrange';
+      if(s===state.checkin || s===state.checkout) cls+=' endpoint';
+      var dis = dt<today ? ' disabled' : '';
+      html+='<td><button type="button" class="'+cls+'" data-date="'+s+'"'+dis+'>'+d+'</button></td>';
+      cell++;
+    }
+    while(cell%7!==0){ html+='<td></td>'; cell++; }
+    html+='</tr></table>';
+    div.innerHTML=html; wrap.appendChild(div);
+  }
+  $('calTitle').textContent=title;
+  $('calPrev').disabled = state.calOffset<=0;
+  $('calNext').disabled = state.calOffset>=10;
+}
+$('calPrev').addEventListener('click', function(){ if(state.calOffset>0){ state.calOffset--; renderCal(); } });
+$('calNext').addEventListener('click', function(){ if(state.calOffset<10){ state.calOffset++; renderCal(); } });
+$('calWrap').addEventListener('click', function(e){
+  var b=e.target.closest ? e.target.closest('.cal-day') : null;
+  if(!b || b.disabled) return;
+  var s=b.getAttribute('data-date');
+  if(!state.checkin || (state.checkin && state.checkout)){ state.checkin=s; state.checkout=null; }
+  else if(s>state.checkin){ state.checkout=s; }
+  else if(s<state.checkin){ state.checkin=s; }
+  syncDates();
+});
+function syncDates(){
+  $('inDate').value=state.checkin||''; $('outDate').value=state.checkout||'';
+  renderCal(); updateSummary();
+  var n = (state.checkin && state.checkout) ? nightsBetween(state.checkin, state.checkout) : 0;
+  var note=$('minstayNote');
+  if(n>0 && n<minStayFor(state.checkin, state.checkout)){
+    note.textContent='This stay is '+n+(n===1?' night':' nights')+' — Tswalu\u2019s published minimum for these dates is '+minStayFor(state.checkin, state.checkout)+' nights'+(overlapsFestive(state.checkin,state.checkout)?' (festive season, 20 Dec 2026 – 6 Jan 2027)':'')+'. Please extend your stay.';
+    note.classList.add('show');
+  } else note.classList.remove('show');
+}
+
+/* ---- Summary ---- */
+function updateSummary(){
+  var camp=RATES[state.camp], unitKey=$('unit').value, u=camp.units[unitKey], g=guestVals();
+  var price=priceFor(state.camp, unitKey, g.adults, g.teens, g.young);
+  var n=(state.checkin && state.checkout)?nightsBetween(state.checkin, state.checkout):0;
+  $('sumCamp').textContent=camp.name;
+  $('sumUnit').textContent=u.label;
+  $('sumIn').textContent=fmtDate(state.checkin);
+  $('sumOut').textContent=fmtDate(state.checkout);
+  $('sumNights').textContent=n>0?n:'—';
+  $('roIn').textContent=fmtDate(state.checkin);
+  $('roOut').textContent=fmtDate(state.checkout);
+  $('roNights').textContent=n>0?n:'—';
+  $('sumParty').textContent=partyText(g);
+  $('partySize').value=(g.adults+g.teens+g.young)+' guests';
+  var lines=$('sumLines');
+  if(price.nightly>0){
+    lines.innerHTML=price.lines.map(function(l){ return '<div><span>'+l.label+'</span><b>'+fmt(l.amount)+'</b></div>'; }).join('');
+    lines.classList.add('show');
+    $('sumPerNight').textContent=fmt(price.nightly);
+  } else { lines.classList.remove('show'); lines.innerHTML=''; $('sumPerNight').textContent='—'; }
+  $('sumTotal').textContent=(price.nightly>0 && n>0)?fmt(price.nightly*n):'—';
+  $('sumNote').textContent = state.camp==='tarkuni'
+    ? 'Enquiry estimate from Tswalu\u2019s published guest tiers. Tarkuni is confirmed personally by the reservations team — no payment is taken here.'
+    : 'Priced from Tswalu\u2019s published rates. The reservations team confirms availability and the final rate personally — no payment is taken here.';
+}
+
+/* ---- Validation & wizard ---- */
+function markBad(id, bad){ var f=$(id); if(f) f.classList.toggle('bad', !!bad); }
+function validateStep(step){
+  var ok=true, g, caps;
+  if(step===2){
+    var has=!!(state.checkin && state.checkout);
+    var n=has?nightsBetween(state.checkin, state.checkout):0;
+    var good=has && n>=minStayFor(state.checkin, state.checkout);
+    markBad('fld-dates', !good);
+    if(!good) ok=false;
+  }
+  if(step===3){
+    g=guestVals(); caps=capsFor(state.camp, $('unit').value);
+    var badA=g.adults<1; markBad('fld-adults', badA); if(badA) ok=false;
+    var badT=g.teens>caps.teens; markBad('fld-teens', badT); if(badT) ok=false;
+    var badY=g.young>caps.young; markBad('fld-young', badY); if(badY) ok=false;
+    var badP=(caps.kids!==null && (g.teens+g.young)>caps.kids) || (g.adults+g.teens+g.young)>caps.total;
+    markBad('fld-party', badP); if(badP) ok=false;
+  }
+  if(step===4){
+    var badN=$('gname').value.trim().length<2; markBad('fld-name', badN); if(badN) ok=false;
+    var badE=!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test($('gemail').value.trim()); markBad('fld-email', badE); if(badE) ok=false;
+    var badC=$('gcountry').value.trim().length<2; markBad('fld-country', badC); if(badC) ok=false;
+  }
+  return ok;
+}
+function goTo(step){
+  state.step=step;
+  var fs=document.querySelectorAll('fieldset[data-step]');
+  for(var i=0;i<fs.length;i++) fs[i].classList.toggle('on', +fs[i].getAttribute('data-step')===step);
+  var tabs=document.querySelectorAll('.step-tab');
+  for(var j=0;j<tabs.length;j++){
+    var t=+tabs[j].getAttribute('data-goto');
+    tabs[j].classList.toggle('on', t===step);
+    tabs[j].classList.toggle('done', t<step);
+  }
+  if(step===5) buildReview();
+  updateSummary();
+}
+var nextBtns=document.querySelectorAll('[data-next]');
+for(var nb=0;nb<nextBtns.length;nb++) nextBtns[nb].addEventListener('click', function(){
+  if(validateStep(state.step)) goTo(+this.getAttribute('data-next'));
+});
+var backBtns=document.querySelectorAll('[data-back]');
+for(var bb=0;bb<backBtns.length;bb++) backBtns[bb].addEventListener('click', function(){ goTo(+this.getAttribute('data-back')); });
+var tabBtns=document.querySelectorAll('.step-tab');
+for(var tb=0;tb<tabBtns.length;tb++) tabBtns[tb].addEventListener('click', function(){
+  var t=+this.getAttribute('data-goto');
+  if(t<state.step) goTo(t);
+  else if(t===state.step+1 && validateStep(state.step)) goTo(t);
+});
+$('bookForm').addEventListener('submit', function(e){ e.preventDefault(); });
+
+/* ---- Review & send ---- */
+function genRef(){
+  var chars='ABCDEFGHJKMNPQRSTUVWXYZ23456789', r='';
+  for(var i=0;i<6;i++) r+=chars[Math.floor(Math.random()*chars.length)];
+  return 'TSW-'+r;
+}
+function buildReview(){
+  if(!state.ref) state.ref=genRef();
+  var camp=RATES[state.camp], unitKey=$('unit').value, u=camp.units[unitKey], g=guestVals();
+  var price=priceFor(state.camp, unitKey, g.adults, g.teens, g.young);
+  var n=nightsBetween(state.checkin, state.checkout), total=price.nightly*n;
+  var rows=[
+    ['Reference', state.ref],
+    ['Camp', camp.name+' — '+u.label],
+    ['Arrival', fmtDate(state.checkin)],
+    ['Departure', fmtDate(state.checkout)],
+    ['Nights', String(n)],
+    ['Party', partyText(g)],
+    ['Per night', fmt(price.nightly)],
+    ['Total (published rates)', fmt(total)],
+    ['Name', $('gname').value.trim()],
+    ['Email', $('gemail').value.trim()],
+    ['Country', $('gcountry').value.trim()]
+  ];
+  if($('gphone').value.trim()) rows.push(['Phone', $('gphone').value.trim()]);
+  if($('gnotes').value.trim()) rows.push(['Notes', $('gnotes').value.trim()]);
+  $('reviewBox').innerHTML='<div class="summary" style="position:static">'+
+    rows.map(function(r){ return '<div class="srow"><span>'+r[0]+'</span><b>'+r[1].replace(/</g,'&lt;')+'</b></div>'; }).join('')+
+    '<p class="s-note">'+(state.camp==='tarkuni'
+      ? 'Tarkuni is enquiry-led: this composes a priced enquiry. The reservations team confirms the homestead personally.'
+      : 'This is a reservation request, not a confirmed booking. The reservations team confirms every booking personally.')+'</p></div>';
+  var bodyLines=[
+    'TSWALU KALAHARI RESERVE — DIRECT RESERVATION REQUEST','',
+    'Reference: '+state.ref,
+    'Camp: '+camp.name+' — '+u.label,
+    'Arrival: '+fmtDate(state.checkin),
+    'Departure: '+fmtDate(state.checkout)+' ('+n+' nights)',
+    'Party: '+partyText(g),'',
+    'Nightly breakdown (published rates):'
+  ];
+  price.lines.forEach(function(l){ bodyLines.push('  · '+l.label+' — '+fmt(l.amount)); });
+  bodyLines.push('Total for '+n+' nights: '+fmt(total),'',
+    'Name: '+$('gname').value.trim(),
+    'Email: '+$('gemail').value.trim(),
+    'Country: '+$('gcountry').value.trim());
+  if($('gphone').value.trim()) bodyLines.push('Phone: '+$('gphone').value.trim());
+  if($('gnotes').value.trim()) bodyLines.push('Notes: '+$('gnotes').value.trim());
+  bodyLines.push('', 'Please confirm availability and the final rate. Thank you.');
+  var subject='Reservation request '+state.ref+' — '+camp.name+', '+fmtDate(state.checkin);
+  $('mailtoBtn').href='mailto:reservations@tswalu.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyLines.join('\n'));
+}
+$('sentBtn').addEventListener('click', function(){
+  if(!state.ref) state.ref=genRef();
+  $('confirmRef').textContent=state.ref;
+  $('confirmBox').classList.add('show');
+});
+
+/* ---- Camp cards ---- */
+var bookBtns=document.querySelectorAll('[data-book]');
+for(var bk=0;bk<bookBtns.length;bk++) bookBtns[bk].addEventListener('click', function(){
+  setCamp(this.getAttribute('data-book'));
+  goTo(1);
+  document.getElementById('book').scrollIntoView({behavior:'smooth'});
+});
+
+/* ---- Reveal & marquee ---- */
+var mq=$('mqTrack'); if(mq) mq.innerHTML+=mq.innerHTML;
+if(typeof IntersectionObserver === 'function'){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(elm){ io.observe(elm); });
+} else {
+  document.querySelectorAll('.rv').forEach(function(elm){ elm.classList.add('in'); });
+}
+
+/* init */
+populateUnits();
+renderCal();
+updateSummary();
+
+/* test hook */
+window.TSWALU={ RATES:RATES, priceFor:priceFor, capsFor:capsFor, minStayFor:minStayFor, state:state, goTo:goTo, validateStep:validateStep, setCamp:setCamp, syncDates:syncDates };
+})();
+</script>
+</body>
+</html>
