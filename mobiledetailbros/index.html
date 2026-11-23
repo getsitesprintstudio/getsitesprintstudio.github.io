@@ -169,6 +169,27 @@ nav .links a:hover:after{width:100%}
 .step b{font-family:'Montserrat';font-weight:900;font-size:30px;color:transparent;-webkit-text-stroke:1.2px var(--gold);display:block}
 .step h3{font-family:'Montserrat';font-weight:800;font-size:18px;margin:12px 0 8px;color:#fff}
 .step p{color:var(--mut);font-size:14.5px}
+#days{display:block}
+#wizChips{position:sticky;top:64px;z-index:6;background:rgba(10,10,12,.92);backdrop-filter:blur(8px);border-radius:14px;padding:8px 6px}
+.cal{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:16px;margin-top:6px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-head button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--panel2);color:var(--gold2);font-size:22px;cursor:pointer;line-height:1}
+.cal-head button:disabled{opacity:.3;cursor:default}
+#calTitle{font-family:'Montserrat';font-weight:800;font-size:17px;color:#fff}
+.cal-wd{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;color:var(--mut);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+#calGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cd{height:44px;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--txt);font-family:'Inter',sans-serif;font-size:15px;font-weight:600;cursor:pointer;padding:0}
+.cd:hover{border-color:var(--line2)}
+.cd.off{color:#3c3c44;cursor:default}
+.cd.off:hover{border-color:transparent}
+.cd.today{border-color:rgba(217,164,65,.55)}
+.cd.sel{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#161006;font-weight:800}
+.cd.empty{cursor:default}
+.cd.empty:hover{border-color:transparent}
+#dayLine{margin-top:12px;color:var(--gold2);font-weight:700;font-size:15px;min-height:20px}
+.bad{border-color:#e5484d !important}
+#formHint{display:none;color:#ff8589;font-weight:600;font-size:14.5px;margin:0 0 10px}
+.ticket-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
@@ -558,8 +579,9 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 </div>
 
 <div class="wstep" data-step="4">
-<h3>Pick your day &amp; time</h3><p class="hint">Any day in the next 30 days.</p>
-<div id="days"></div>
+<h3>Pick your day &amp; time</h3><p class="hint">Tap a day, then a time window. Booking up to 60 days out.</p>
+<div class="cal" id="days"><div class="cal-head"><button type="button" id="calPrev" aria-label="Previous month">‹</button><div id="calTitle"></div><button type="button" id="calNext" aria-label="Next month">›</button></div><div class="cal-wd"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div><div id="calGrid"></div></div>
+<div id="dayLine"></div>
 <div id="times"><button type="button" class="chip">Morning</button><button type="button" class="chip">Midday</button><button type="button" class="chip">Afternoon</button></div>
 </div>
 
@@ -569,7 +591,7 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 <input id="nm" type="text" placeholder="Your name" autocomplete="name">
 <input id="ph" type="tel" placeholder="Your phone number" autocomplete="tel">
 <input id="veh2" type="text" placeholder="Vehicle year, make &amp; model (e.g. 2021 BMW M4)">
-<a class="btn" id="sendBtn" href="sms:+15599755249" style="width:100%;font-size:16.5px;padding:17px">Text My Booking to Peter</a>
+<p id="formHint"></p><a class="btn" id="sendBtn" href="sms:+15599755249" style="width:100%;font-size:16.5px;padding:17px">Text My Booking to Peter</a><div class="ticket-btns"><button type="button" class="btn ghost" id="icsBtn">📅 Save the Day</button><button type="button" class="btn ghost" id="copyBtn">Copy My Booking</button></div><p class="fine" id="sentNote" style="display:none;color:var(--gold2);font-weight:700">✓ Ready — Messages is opening with everything filled in. Just press send there; your booking is confirmed when Peter replies.</p>
 <button type="button" class="btn ghost" id="resetBtn" style="width:100%;margin-top:10px">↺ Start over</button>
 <p class="fine">This opens a text with everything filled in — just press send. Your booking is confirmed only when Peter replies and approves it.</p>
 </div>
@@ -611,17 +633,45 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 <script>
 var S={veh:"",pkg:"",addons:[],day:"",time:""};
 var step=1, total=5, maxStep=1;
-var daysEl=document.getElementById('days');
 var now=new Date();
-for(var i=0;i<30;i++){
-  var d=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i);
-  var b=document.createElement('button'); b.type='button'; b.className='day';
-  b.innerHTML=d.toLocaleDateString('en-US',{weekday:'short'})+'<b>'+d.getDate()+'</b>'+d.toLocaleDateString('en-US',{month:'short'});
-  b.dataset.label=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
-  b.onclick=function(){ document.querySelectorAll('.day').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.day=this.dataset.label; upd(); maybeAdvance(); };
-  daysEl.appendChild(b);
+var calCur={y:now.getFullYear(), m:now.getMonth()};
+var calMin={y:calCur.y, m:calCur.m};
+var maxDate=new Date(now.getFullYear(),now.getMonth(),now.getDate()+60);
+var calMax={y:maxDate.getFullYear(), m:maxDate.getMonth()};
+var selDate=null;
+function renderCal(){
+  document.getElementById('calTitle').textContent=new Date(calCur.y,calCur.m,1).toLocaleDateString('en-US',{month:'long',year:'numeric'});
+  var grid=document.getElementById('calGrid'); grid.innerHTML='';
+  var first=new Date(calCur.y,calCur.m,1).getDay();
+  var dim=new Date(calCur.y,calCur.m+1,0).getDate();
+  var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  for(var e=0;e<first;e++){ var sp=document.createElement('span'); sp.className='cd empty'; grid.appendChild(sp); }
+  for(var dn=1;dn<=dim;dn++){
+    (function(dn){
+      var dt=new Date(calCur.y,calCur.m,dn);
+      var b=document.createElement('button'); b.type='button'; b.className='cd'; b.textContent=dn;
+      b.dataset.label=dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+      if(dt<today||dt>maxDate){ b.classList.add('off'); b.disabled=true; }
+      if(dt.getTime()===today.getTime()) b.classList.add('today');
+      if(selDate&&dt.getTime()===selDate.getTime()) b.classList.add('sel');
+      b.onclick=function(){
+        selDate=dt; S.day=b.dataset.label;
+        document.querySelectorAll('#calGrid .cd').forEach(function(x){x.classList.remove('sel')});
+        b.classList.add('sel');
+        var dl=document.getElementById('dayLine');
+        if(dl) dl.textContent='✓ You picked '+S.day+(S.time?' · '+S.time:' — now pick a time window');
+        upd(); maybeAdvance();
+      };
+      grid.appendChild(b);
+    })(dn);
+  }
+  document.getElementById('calPrev').disabled=(calCur.y===calMin.y&&calCur.m===calMin.m);
+  document.getElementById('calNext').disabled=(calCur.y===calMax.y&&calCur.m===calMax.m);
 }
-document.querySelectorAll('#times .chip').forEach(function(c){ c.onclick=function(){ document.querySelectorAll('#times .chip').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.time=this.textContent; upd(); maybeAdvance(); }; });
+document.getElementById('calPrev').onclick=function(){ calCur.m--; if(calCur.m<0){calCur.m=11;calCur.y--;} renderCal(); };
+document.getElementById('calNext').onclick=function(){ calCur.m++; if(calCur.m>11){calCur.m=0;calCur.y++;} renderCal(); };
+renderCal();
+document.querySelectorAll('#times .chip').forEach(function(c){ c.onclick=function(){ document.querySelectorAll('#times .chip').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.time=this.textContent; var dl=document.getElementById('dayLine'); if(dl&&S.day) dl.textContent='✓ You picked '+S.day+' · '+S.time; upd(); maybeAdvance(); }; });
 function maybeAdvance(){ if(step===4 && S.day && S.time){ setTimeout(function(){ go(5); }, 500); } }
 var VEH_HINTS={"Car":"Clean choice. Every package is built for it.","SUV / Truck":"Big rig energy — we bring everything it needs.","Motorcycle":"Bikes get the same white-glove treatment.","Other":"If it rolls, we can detail it."};
 document.querySelectorAll('[data-veh]').forEach(function(el){ el.onclick=function(){ document.querySelectorAll('[data-veh]').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.veh=this.dataset.veh; document.getElementById('vehHint').textContent=VEH_HINTS[S.veh]||""; upd(); setTimeout(function(){ go(step+1); }, 450); }; });
@@ -680,6 +730,7 @@ function go(n){
 document.getElementById('nextBtn').onclick=function(){ if(canGo()) go(step+1); };
 document.getElementById('backBtn').onclick=function(){ go(step-1); };
 var PKG_TIME={"Hand Car Wash — 1 hr":"About 1 hour","Platinum Detail — 3-4 hrs":"3–4 hours","Diamond Detail — 4-6 hrs":"4–6 hours"};
+function addonsTotal(){ var t=0,hf=false; document.querySelectorAll('.tgl.sel').forEach(function(x){ t+=+x.dataset.price; if(x.dataset.from==='1') hf=true; }); return {total:t, hasFrom:hf}; }
 function upd(){
   var lines=[];
   lines.push("Ride: "+(S.veh||"—"));
@@ -689,12 +740,13 @@ function upd(){
   lines.push("When: "+(S.day?S.day:"—")+(S.time?" · "+S.time:""));
   document.getElementById('sumText').textContent=lines.join("\n");
   var nm=document.getElementById('nm').value, ph=document.getElementById('ph').value, v2=document.getElementById('veh2').value;
-  var msg="Hi, I would like to book a detail."+
-    (S.veh?"\nRide: "+S.veh:"")+
+  var at=addonsTotal();
+  var msg="NEW BOOKING — Mobile Detail Bros"+
+    (nm?"\nName: "+nm:"")+(ph?"\nPhone: "+ph:"")+
+    (S.veh?"\nRide: "+S.veh:"")+(v2?"\nVehicle: "+v2:"")+
     "\nDetail: "+(S.pkg||"Not sure yet")+
-    (S.addons.length?"\nAdd-ons: "+S.addons.join(", "):"")+
-    (S.day?"\nDay: "+S.day:"")+(S.time?"\nTime: "+S.time:"")+
-    (v2?"\nVehicle: "+v2:"")+(nm?"\nName: "+nm:"")+(ph?"\nMy phone: "+ph:"");
+    (S.addons.length?"\nAdd-ons: "+S.addons.join(", ")+"\nAdd-ons total: "+(at.hasFrom?"from ":"")+"$"+at.total:"")+
+    (S.day?"\nWhen: "+S.day+(S.time?" · "+S.time:""):"");
   document.getElementById('sendBtn').href="sms:+15599755249?&body="+encodeURIComponent(msg);
   var nb=document.getElementById('nextBtn'); if(nb) nb.disabled=!canGo();
   renderChips();
@@ -883,6 +935,52 @@ document.querySelectorAll('#faq details').forEach(function(d){
       card.style.transform='perspective(900px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-3px)';
     });
     card.addEventListener('mouseleave', function(){ card.style.transform=''; });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var ph=document.getElementById('ph'), nm=document.getElementById('nm');
+  ph.addEventListener('input', function(){
+    var d=ph.value.replace(/\D/g,'').slice(0,10), o=d;
+    if(d.length>6) o='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    else if(d.length>3) o='('+d.slice(0,3)+') '+d.slice(3);
+    else if(d.length>0) o='('+d;
+    ph.value=o;
+  });
+  var send=document.getElementById('sendBtn'), hint=document.getElementById('formHint');
+  send.addEventListener('click', function(e){
+    var okN=nm.value.trim().length>0, okP=ph.value.replace(/\D/g,'').length>=10;
+    nm.classList.toggle('bad', !okN); ph.classList.toggle('bad', !okP);
+    if(!okN||!okP){ e.preventDefault(); hint.textContent=!okN?'Please add your name so Peter knows who is booking.':'Please add a full phone number so Peter can reply.'; hint.style.display='block'; (okN?ph:nm).focus(); return; }
+    hint.style.display='none';
+    document.getElementById('sentNote').style.display='block';
+    send.textContent='Opening Messages… press send ✓';
+  });
+  function icsDT(d){ function p(n){ return (n<10?'0':'')+n; } return d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+'T'+p(d.getHours())+'0000'; }
+  document.getElementById('icsBtn').onclick=function(){
+    if(!selDate){ alert('Pick a day first — tap the When chip above to jump to the calendar.'); return; }
+    var hrs={Morning:9,Midday:12,Afternoon:15}, h=hrs[S.time]||9, dur=2;
+    if(S.pkg.indexOf('Platinum')>-1) dur=4;
+    if(S.pkg.indexOf('Diamond')>-1) dur=5;
+    if(S.pkg.indexOf('Hand Car Wash')>-1) dur=1;
+    var st=new Date(selDate.getFullYear(),selDate.getMonth(),selDate.getDate(),h);
+    var en=new Date(selDate.getFullYear(),selDate.getMonth(),selDate.getDate(),h+dur);
+    var ics=['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT','DTSTART:'+icsDT(st),'DTEND:'+icsDT(en),'SUMMARY:Mobile Detail Bros — '+(S.pkg?S.pkg.split(' — ')[0]:'Detail'),'DESCRIPTION:Time window: '+(S.time||'Morning')+'. Exact arrival time is confirmed by Peter by text.','END:VEVENT','END:VCALENDAR'].join('\r\n');
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'})); a.download='my-detail.ics'; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+  };
+  document.getElementById('copyBtn').onclick=function(){
+    var t=document.getElementById('sumText').textContent, b=this;
+    function done(){ b.textContent='Copied ✓'; setTimeout(function(){ b.textContent='Copy My Booking'; }, 2000); }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done, done); } else { done(); }
+  };
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    selDate=null; renderCal();
+    var dl=document.getElementById('dayLine'); if(dl) dl.textContent='';
+    var sn=document.getElementById('sentNote'); if(sn) sn.style.display='none';
+    send.textContent='Text My Booking to Peter';
   });
 })();
 </script>
