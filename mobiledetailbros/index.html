@@ -190,6 +190,83 @@ nav .links a:hover:after{width:100%}
 .bad{border-color:#e5484d !important}
 #formHint{display:none;color:#ff8589;font-weight:600;font-size:14.5px;margin:0 0 10px}
 .ticket-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.board{border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,#101014,#0b0b0e);padding:26px 24px 30px;margin-top:26px}
+#bkStatus{position:sticky;top:64px;z-index:6;background:rgba(16,16,20,.95);border:1px solid var(--line);border-radius:14px;padding:12px 16px;backdrop-filter:blur(8px)}
+#bkStatus b{display:block;font-size:14.5px;color:#fff}
+#bkStatus span{display:block;color:var(--mut);font-size:13px;margin-top:2px}
+#bkStatus.ready{border-color:rgba(217,164,65,.65)}
+#bkStatus.ready span{color:var(--gold2);font-weight:700}
+.bsec{padding:24px 0 4px;border-top:1px solid var(--line);margin-top:24px}
+.bsec-t{font-family:'Montserrat';font-weight:800;font-size:16.5px;color:#fff;margin-bottom:14px}
+.bsec-t .opt{color:var(--mut);font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.07em;text-transform:uppercase}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+@media(max-width:640px){.seg{grid-template-columns:repeat(2,1fr)}}
+.seg button{min-height:54px;border-radius:14px;border:1px solid var(--line);background:var(--panel);color:var(--txt);font-family:'Inter',sans-serif;font-weight:700;font-size:15px;cursor:pointer}
+.seg button.sel{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#161006;border-color:transparent}
+#quickDays{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+@media(max-width:640px){#quickDays{grid-template-columns:repeat(4,1fr)}}
+.qday{display:flex;flex-direction:column;align-items:center;gap:1px;padding:10px 2px;border-radius:14px;border:1px solid var(--line);background:var(--panel);color:var(--mut);cursor:pointer;font-family:'Inter',sans-serif}
+.qday b{font-size:19px;color:#fff;font-family:'Montserrat';line-height:1.1}
+.qday span{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.qday.sel{background:linear-gradient(135deg,var(--gold2),var(--gold));border-color:transparent;color:#161006}
+.qday.sel b,.qday.sel span{color:#161006}
+#calWrap{margin-top:14px}
+#bkTimes{display:flex;gap:9px;flex-wrap:wrap}
+#bkTimes .chip{min-height:48px;font-size:15px;padding:12px 24px}
+/* ===== BLUE + WHITE RETHEME (Peter's order) ===== */
+:root{--bg:#f7faff;--bg2:#edf3fd;--panel:#ffffff;--panel2:#eef4fd;--line:#d9e5f6;--line2:#b7cff2;--txt:#0b2148;--mut:#54719c;--gold:#1463d8;--gold2:#3f8cff}
+nav{background:rgba(255,255,255,.92)}
+nav.scrolled{border-bottom-color:rgba(20,99,216,.4)}
+.logo{color:var(--txt)}
+#loader{background:var(--bg)}
+.l-logo span{color:var(--txt)}
+.l-bar{background:#dbe7fa}
+.frame{border-color:rgba(20,99,216,.2)}
+::selection{background:#1463d8;color:#fff}
+.btn{color:#fff}
+.board{background:linear-gradient(180deg,#ffffff,#f0f6ff)}
+#bkStatus{background:rgba(255,255,255,.96)}
+#bkStatus b{color:var(--txt)}
+.seg button{background:#fff}
+.qday{background:#fff}
+.qday b{color:var(--txt)}
+.cal{background:#fff}
+#calTitle{color:var(--txt)}
+.cd{color:var(--txt)}
+.cd.off{color:#b7c8e2}
+.cd.today{border-color:rgba(20,99,216,.55)}
+.chip{background:#fff;border-color:var(--line);color:var(--txt)}
+.pick{background:#fff}
+.pick .t{color:var(--txt)}
+.tgl{background:#fff;color:var(--txt)}
+.pkg{background:#fff}
+.pkg h3{color:var(--txt)}
+.addon{background:#fff}
+.step h3{color:var(--txt)}
+.step{background:#fff}
+.fact{background:#fff}
+.summary{background:#eaf2fe;border-color:#bcd4f8}
+.summary h4{color:var(--txt)}
+.summary p{color:var(--txt)}
+input,textarea,select{background:#fff !important;color:var(--txt) !important;border-color:var(--line) !important}
+.faq details{background:#fff}
+.faq summary{color:var(--txt)}
+.ghost-num{-webkit-text-stroke-color:#d3e2f9}
+.brands span{-webkit-text-stroke-color:#c6daf8}
+.tb-track span{-webkit-text-stroke-color:#c6daf8}
+.statement h2{-webkit-text-stroke-color:#bcd2f5}
+.names .track span{color:#d7e5fb}
+.sig-facts div{background:var(--panel2)}
+.car-info h3{color:var(--txt)}
+#addonBar{background:rgba(20,99,216,.1);color:var(--txt)}
+.progress div{background:#dbe7fa}
+.wchip{background:#fff;color:var(--mut)}
+footer{background:#0a1f44;color:#dbe7fa}
+footer .big{-webkit-text-stroke-color:rgba(255,255,255,.38)}
+footer p{color:#a9c3e8}
+footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.floatdock .fd-call{background:#fff;color:var(--txt);border-color:var(--line)}
+#sentNote{color:var(--gold) !important}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
@@ -339,7 +416,76 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 #lightbox img{max-height:92vh;max-width:96vw;border-radius:14px}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
 .reveal.in{opacity:1;transform:none}
+
+/* ===== BLUE + WHITE — final cascade ===== */
+:root{--bg:#f7faff;--bg2:#edf3fd;--panel:#ffffff;--panel2:#eef4fd;--line:#d9e5f6;--line2:#b7cff2;--txt:#0b2148;--mut:#54719c;--gold:#1463d8;--gold2:#3f8cff}
+nav{background:rgba(255,255,255,.92)}
+nav.scrolled{border-bottom-color:rgba(20,99,216,.4)}
+.logo{color:var(--txt)}
+#loader{background:var(--bg)}
+.l-logo span{color:var(--txt)}
+.l-bar{background:#dbe7fa}
+.frame{border-color:rgba(20,99,216,.2)}
+::selection{background:#1463d8;color:#fff}
+.btn{color:#fff}
+.floatdock .fd-book{color:#fff}
+.board{background:linear-gradient(180deg,#ffffff,#f0f6ff)}
+#bkStatus{background:rgba(255,255,255,.96)}
+#bkStatus b{color:var(--txt)}
+.seg button{background:#fff}
+.qday{background:#fff}
+.qday b{color:var(--txt)}
+.cal{background:#fff}
+#calTitle{color:var(--txt)}
+.cd{color:var(--txt)}
+.cd.off{color:#b7c8e2}
+.cd.today{border-color:rgba(20,99,216,.55)}
+.chip{background:#fff;border-color:var(--line);color:var(--txt)}
+.pick{background:#fff}
+.pick .t{color:var(--txt)}
+.tgl{background:#fff;color:var(--txt)}
+.pkg{background:#fff}
+.pkg h3{color:var(--txt)}
+.pkg li{color:var(--mut)}
+.addon{background:#fff}
+.step h3{color:var(--txt)}
+.step{background:#fff}
+.fact{background:#fff}
+.summary{background:#eaf2fe;border-color:#bcd4f8}
+.summary h4{color:var(--txt)}
+.summary p{color:var(--txt)}
+input,textarea,select{background:#fff !important;color:var(--txt) !important;border-color:var(--line) !important}
+.faq details{background:#fff}
+.faq summary{color:var(--txt)}
+.ghost-num{-webkit-text-stroke-color:#d3e2f9}
+.brands span{-webkit-text-stroke-color:#c6daf8}
+.tb-track span{-webkit-text-stroke-color:#c6daf8}
+.statement h2{-webkit-text-stroke-color:#bcd2f5}
+.names .track span{color:#d7e5fb}
+.sig-facts div{background:var(--panel2)}
+.car-info h3{color:var(--txt)}
+#addonBar{background:rgba(20,99,216,.1);color:var(--txt)}
+.progress div{background:#dbe7fa}
+.wchip{background:#fff;color:var(--mut)}
+footer{background:#0a1f44;color:#dbe7fa}
+footer .big{-webkit-text-stroke-color:rgba(255,255,255,.38)}
+footer p{color:#a9c3e8}
+footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.floatdock .fd-call{background:#fff;color:var(--txt);border-color:var(--line)}
+.hero h1{color:#fff}
+.hero h1 .out{-webkit-text-stroke-color:#fff;color:transparent}
+.hero h1 .serif{color:#8fc1ff}
+.hero .lede{color:#e8eefc}
+.hero .chip{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}
+.hero .cap b{color:#fff}
+.hero .cap span{color:#8fc1ff}
+#heroCapName{color:#fff}
+#heroCapNote{color:#8fc1ff}
+.hero .chips span{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.1)}
+.hero .chips span b{color:#8fc1ff}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.45)}
 </style>
+<meta name="theme-color" content="#0a1f44">
 </head>
 <body>
 <div id="loader"><div class="l-logo"><span>Mobile&nbsp;</span><span>Detail&nbsp;</span><span>Bros</span></div><div class="l-bar"><i id="lbar"></i></div><div class="l-count"><span id="lcount">0</span>%</div></div>
@@ -531,27 +677,22 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 </div>
 </div></section>
 
+
 <section id="book"><div class="bignum">04</div><div class="wrap">
 <div class="kicker">Book a Detail</div><h2>Build Your <span class="serif">Detail</span></h2>
-<p class="sub">Five quick taps. Your booking builds itself as you go — then one text sends it all to Peter.</p>
-<div class="wiz" id="wiz">
-<div class="wstep-tag" id="stepTag">Step 1 of 5</div>
-<div class="progress"><div></div><div></div><div></div><div></div><div></div></div>
-<div id="wizChips"></div>
+<p class="sub">Everything on one screen. Pick your ride, your detail, your day — then one text sends it all to Peter.</p>
+<div class="board" id="board">
+<div id="bkStatus"></div>
 
-<div class="wstep active" data-step="1">
-<h3>What are we detailing?</h3><p class="hint">Pick your ride.</p>
-<div class="pick-grid">
-<button type="button" class="pick" data-veh="Car"><div class="ic">🚗</div><div class="t">Car</div><div class="d">Sedan, coupe, hatch</div></button>
-<button type="button" class="pick" data-veh="SUV / Truck"><div class="ic">🛻</div><div class="t">SUV / Truck</div><div class="d">Bigger rigs welcome</div></button>
-<button type="button" class="pick" data-veh="Motorcycle"><div class="ic">🏍️</div><div class="t">Motorcycle</div><div class="d">Yes, we detail bikes</div></button>
-<button type="button" class="pick" data-veh="Other"><div class="ic">✦</div><div class="t">Other</div><div class="d">Tell us in the notes</div></button>
-</div>
-<div id="vehHint"></div>
-</div>
+<div class="bsec"><div class="bsec-t">Your ride</div>
+<div class="seg" id="bkVeh">
+<button type="button" data-veh="Car">🚗 Car</button>
+<button type="button" data-veh="SUV / Truck">🛻 SUV / Truck</button>
+<button type="button" data-veh="Motorcycle">🏍️ Motorcycle</button>
+<button type="button" data-veh="Other">✦ Other</button>
+</div></div>
 
-<div class="wstep" data-step="2">
-<h3>Pick your detail</h3><p class="hint">Not sure? Pick "Not sure yet" and Peter will recommend.</p>
+<div class="bsec"><div class="bsec-t">Your detail</div>
 <div class="pick-grid pk">
 <button type="button" class="pick" data-pkg="Hand Car Wash — 1 hr"><div class="ic">🧽</div><div class="t">Hand Car Wash</div><div class="d">About 1 hour</div></button>
 <button type="button" class="pick" data-pkg="Platinum Detail — 3-4 hrs"><div class="ic">✨</div><div class="t">Platinum Detail</div><div class="d">3–4 hours · 3-month ceramic protection</div></button>
@@ -560,15 +701,14 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 <div class="pick-grid" style="margin-top:12px">
 <button type="button" class="pick" data-pkg="Not sure yet"><div class="t">Not sure yet</div><div class="d">Peter will recommend the right one</div></button>
 </div>
-<button type="button" class="btn ghost" id="diceBtn">🎲 Can't decide? Roll for me</button>
+<button type="button" class="btn ghost" id="diceBtn" style="margin-top:14px">🎲 Can't decide? Roll for me</button>
 </div>
 
-<div class="wstep" data-step="3">
-<h3>Add the extras</h3><p class="hint">Tap any add-ons you want. Skip if you don't — you can always decide later.</p>
+<div class="bsec"><div class="bsec-t">Extras <span class="opt">optional — tap to add</span></div>
 <div class="toggles">
-<button type="button" class="tgl" data-name="Carpet & Seat Shampoo" data-price="185" data-from="1">Carpet &amp; Seat Shampoo · <span class="p">from $185</span></button>
-<button type="button" class="tgl" data-name="Leather Clean & Protect" data-price="85" data-from="1">Leather Clean &amp; Protect · <span class="p">from $85</span></button>
-<button type="button" class="tgl" data-name="Extreme Wheel Cleaning & Protection" data-price="299" data-from="0">Extreme Wheel Cleaning &amp; Protection · <span class="p">$299</span></button>
+<button type="button" class="tgl" data-name="Carpet &amp; Seat Shampoo" data-price="185" data-from="1">Carpet &amp; Seat Shampoo · <span class="p">from $185</span></button>
+<button type="button" class="tgl" data-name="Leather Clean &amp; Protect" data-price="85" data-from="1">Leather Clean &amp; Protect · <span class="p">from $85</span></button>
+<button type="button" class="tgl" data-name="Extreme Wheel Cleaning &amp; Protection" data-price="299" data-from="0">Extreme Wheel Cleaning &amp; Protection · <span class="p">$299</span></button>
 <button type="button" class="tgl" data-name="Permanent Tire Coating" data-price="200" data-from="0">Permanent Tire Coating · <span class="p">$200</span></button>
 <button type="button" class="tgl" data-name="Headlight Restoration" data-price="45" data-from="0">Headlight Restoration · <span class="p">$45</span></button>
 <button type="button" class="tgl" data-name="Headlight Restoration — Level II" data-price="145" data-from="0">Headlight Restoration — Level II · <span class="p">$145</span></button>
@@ -578,30 +718,33 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 <div id="addonBar"></div>
 </div>
 
-<div class="wstep" data-step="4">
-<h3>Pick your day &amp; time</h3><p class="hint">Tap a day, then a time window. Booking up to 60 days out.</p>
-<div class="cal" id="days"><div class="cal-head"><button type="button" id="calPrev" aria-label="Previous month">‹</button><div id="calTitle"></div><button type="button" id="calNext" aria-label="Next month">›</button></div><div class="cal-wd"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div><div id="calGrid"></div></div>
+<div class="bsec"><div class="bsec-t">Pick a day</div>
+<div id="quickDays"></div>
+<button type="button" class="btn ghost" id="moreDates" style="margin-top:12px">📅 More dates</button>
+<div id="calWrap" style="display:none">
+<div class="cal"><div class="cal-head"><button type="button" id="calPrev" aria-label="Previous month">‹</button><div id="calTitle"></div><button type="button" id="calNext" aria-label="Next month">›</button></div>
+<div class="cal-wd"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div><div id="calGrid"></div></div>
+</div>
 <div id="dayLine"></div>
-<div id="times"><button type="button" class="chip">Morning</button><button type="button" class="chip">Midday</button><button type="button" class="chip">Afternoon</button></div>
+<div class="bsec-t" style="margin-top:24px">Time of day</div>
+<div id="bkTimes"><button type="button" class="chip" data-time="Morning">Morning</button><button type="button" class="chip" data-time="Midday">Midday</button><button type="button" class="chip" data-time="Afternoon">Afternoon</button></div>
 </div>
 
-<div class="wstep" data-step="5">
-<h3>Almost done</h3><p class="hint">Check your booking, add your details, and send the text.</p>
+<div class="bsec"><div class="bsec-t">Your info</div>
 <div class="summary"><h4>🎟 Your Detail Ticket</h4><p id="sumText"></p></div>
 <input id="nm" type="text" placeholder="Your name" autocomplete="name">
 <input id="ph" type="tel" placeholder="Your phone number" autocomplete="tel">
 <input id="veh2" type="text" placeholder="Vehicle year, make &amp; model (e.g. 2021 BMW M4)">
-<p id="formHint"></p><a class="btn" id="sendBtn" href="sms:+15599755249" style="width:100%;font-size:16.5px;padding:17px">Text My Booking to Peter</a><div class="ticket-btns"><button type="button" class="btn ghost" id="icsBtn">📅 Save the Day</button><button type="button" class="btn ghost" id="copyBtn">Copy My Booking</button></div><p class="fine" id="sentNote" style="display:none;color:var(--gold2);font-weight:700">✓ Ready — Messages is opening with everything filled in. Just press send there; your booking is confirmed when Peter replies.</p>
+<p id="formHint"></p>
+<a class="btn" id="sendBtn" href="sms:+15599755249" style="width:100%;font-size:16.5px;padding:17px">Text My Booking to Peter</a>
+<div class="ticket-btns"><button type="button" class="btn ghost" id="icsBtn">📅 Save the Day</button><button type="button" class="btn ghost" id="copyBtn">Copy My Booking</button></div>
+<p class="fine" id="sentNote" style="display:none;color:var(--gold2);font-weight:700">✓ Ready — Messages is opening with everything filled in. Just press send there; your booking is confirmed when Peter replies.</p>
 <button type="button" class="btn ghost" id="resetBtn" style="width:100%;margin-top:10px">↺ Start over</button>
 <p class="fine">This opens a text with everything filled in — just press send. Your booking is confirmed only when Peter replies and approves it.</p>
 </div>
 
-<div class="wiz-nav">
-<button type="button" class="btn ghost" id="backBtn" style="visibility:hidden">← Back</button>
-<div class="sp"></div>
-<button type="button" class="btn" id="nextBtn">Continue →</button>
-</div>
 </div></div></section>
+
 
 <section id="faq"><div class="wrap">
 <div class="kicker">Questions</div><h2>Good To Know</h2>
@@ -630,165 +773,7 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 <div class="floatdock"><a class="fd-call" href="tel:+15599755249">Call / Text</a><a class="fd-book" href="#book">Book a Detail</a></div>
 <div id="lightbox"><figure><img alt="Full size photo"><button type="button" class="lb-nav" id="lbPrev" aria-label="Previous photo">‹</button><button type="button" class="lb-nav" id="lbNext" aria-label="Next photo">›</button><figcaption id="lbCap"></figcaption></figure></div>
 
-<script>
-var S={veh:"",pkg:"",addons:[],day:"",time:""};
-var step=1, total=5, maxStep=1;
-var now=new Date();
-var calCur={y:now.getFullYear(), m:now.getMonth()};
-var calMin={y:calCur.y, m:calCur.m};
-var maxDate=new Date(now.getFullYear(),now.getMonth(),now.getDate()+60);
-var calMax={y:maxDate.getFullYear(), m:maxDate.getMonth()};
-var selDate=null;
-function renderCal(){
-  document.getElementById('calTitle').textContent=new Date(calCur.y,calCur.m,1).toLocaleDateString('en-US',{month:'long',year:'numeric'});
-  var grid=document.getElementById('calGrid'); grid.innerHTML='';
-  var first=new Date(calCur.y,calCur.m,1).getDay();
-  var dim=new Date(calCur.y,calCur.m+1,0).getDate();
-  var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
-  for(var e=0;e<first;e++){ var sp=document.createElement('span'); sp.className='cd empty'; grid.appendChild(sp); }
-  for(var dn=1;dn<=dim;dn++){
-    (function(dn){
-      var dt=new Date(calCur.y,calCur.m,dn);
-      var b=document.createElement('button'); b.type='button'; b.className='cd'; b.textContent=dn;
-      b.dataset.label=dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
-      if(dt<today||dt>maxDate){ b.classList.add('off'); b.disabled=true; }
-      if(dt.getTime()===today.getTime()) b.classList.add('today');
-      if(selDate&&dt.getTime()===selDate.getTime()) b.classList.add('sel');
-      b.onclick=function(){
-        selDate=dt; S.day=b.dataset.label;
-        document.querySelectorAll('#calGrid .cd').forEach(function(x){x.classList.remove('sel')});
-        b.classList.add('sel');
-        var dl=document.getElementById('dayLine');
-        if(dl) dl.textContent='✓ You picked '+S.day+(S.time?' · '+S.time:' — now pick a time window');
-        upd(); maybeAdvance();
-      };
-      grid.appendChild(b);
-    })(dn);
-  }
-  document.getElementById('calPrev').disabled=(calCur.y===calMin.y&&calCur.m===calMin.m);
-  document.getElementById('calNext').disabled=(calCur.y===calMax.y&&calCur.m===calMax.m);
-}
-document.getElementById('calPrev').onclick=function(){ calCur.m--; if(calCur.m<0){calCur.m=11;calCur.y--;} renderCal(); };
-document.getElementById('calNext').onclick=function(){ calCur.m++; if(calCur.m>11){calCur.m=0;calCur.y++;} renderCal(); };
-renderCal();
-document.querySelectorAll('#times .chip').forEach(function(c){ c.onclick=function(){ document.querySelectorAll('#times .chip').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.time=this.textContent; var dl=document.getElementById('dayLine'); if(dl&&S.day) dl.textContent='✓ You picked '+S.day+' · '+S.time; upd(); maybeAdvance(); }; });
-function maybeAdvance(){ if(step===4 && S.day && S.time){ setTimeout(function(){ go(5); }, 500); } }
-var VEH_HINTS={"Car":"Clean choice. Every package is built for it.","SUV / Truck":"Big rig energy — we bring everything it needs.","Motorcycle":"Bikes get the same white-glove treatment.","Other":"If it rolls, we can detail it."};
-document.querySelectorAll('[data-veh]').forEach(function(el){ el.onclick=function(){ document.querySelectorAll('[data-veh]').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.veh=this.dataset.veh; document.getElementById('vehHint').textContent=VEH_HINTS[S.veh]||""; upd(); setTimeout(function(){ go(step+1); }, 450); }; });
-document.querySelectorAll('[data-pkg]').forEach(function(el){ el.onclick=function(){ document.querySelectorAll('[data-pkg]').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.pkg=this.dataset.pkg; upd(); if(step===2){ setTimeout(function(){ go(3); }, 450); } }; });
-document.querySelectorAll('.tgl').forEach(function(t){ t.onclick=function(){ this.classList.toggle('sel'); var n=this.dataset.name; if(this.classList.contains('sel')){ S.addons.push(n); } else { S.addons=S.addons.filter(function(a){return a!==n}); } upd(); addonBarUpd(); }; });
-function addonBarUpd(){
-  var bar=document.getElementById('addonBar'); if(!bar) return;
-  var total=0, hasFrom=false, count=0;
-  document.querySelectorAll('.tgl.sel').forEach(function(t){ total+=+t.dataset.price; if(t.dataset.from==='1') hasFrom=true; count++; });
-  if(count===0){ bar.classList.remove('show'); bar.innerHTML=''; return; }
-  bar.innerHTML = count+' add-on'+(count>1?'s':'')+' selected · <b>'+(hasFrom?'from ':'')+'$'+total+'</b> in add-ons';
-  bar.classList.add('show');
-}
-var dice=document.getElementById('diceBtn');
-if(dice){ dice.onclick=function(){
-  var picks=Array.prototype.slice.call(document.querySelectorAll('[data-pkg]')).filter(function(el){ return el.dataset.pkg!=='Not sure yet'; });
-  var n=0, iv=setInterval(function(){
-    picks.forEach(function(x){x.classList.remove('sel')});
-    picks[n%picks.length].classList.add('sel'); n++;
-    if(n>9){ clearInterval(iv); var win=picks[Math.floor(Math.random()*picks.length)]; picks.forEach(function(x){x.classList.remove('sel')}); win.classList.add('sel'); S.pkg=win.dataset.pkg; upd(); }
-  }, 90);
-}; }
-function burstConfetti(){
-  var wiz=document.getElementById('wiz'); if(!wiz) return;
-  var colors=['#d9a441','#f2c66d','#ffffff','#8a6a25'];
-  for(var i=0;i<44;i++){
-    var d=document.createElement('div'); d.className='confetti';
-    d.style.left=(8+Math.random()*84)+'%'; d.style.top='-16px';
-    d.style.background=colors[i%colors.length];
-    d.style.animation='confall '+(1.1+Math.random()*0.9)+'s ease-in '+(Math.random()*0.25)+'s forwards';
-    d.style.transform='rotate('+(Math.random()*360)+'deg)';
-    wiz.appendChild(d); setTimeout(function(el){ return function(){ el.remove(); }; }(d), 2600);
-  }
-}
-function canGo(){
-  if(step===1) return !!S.veh;
-  if(step===2) return !!S.pkg;
-  if(step===3) return true;
-  if(step===4) return !!S.day && !!S.time;
-  return false;
-}
-var firstGo=true;
-function go(n){
-  step=Math.max(1,Math.min(total,n));
-  if(step>maxStep) maxStep=step;
-  document.querySelectorAll('.wstep').forEach(function(w){ w.classList.toggle('active', +w.dataset.step===step); });
-  document.querySelectorAll('.progress div').forEach(function(p,i){ p.classList.toggle('done', i<step); });
-  document.getElementById('stepTag').textContent='Step '+step+' of '+total;
-  document.getElementById('backBtn').style.visibility = step===1 ? 'hidden' : 'visible';
-  var nb=document.getElementById('nextBtn');
-  nb.style.display = step===total ? 'none' : '';
-  nb.disabled = !canGo();
-  if(firstGo){ firstGo=false; } else { document.getElementById('wiz').scrollIntoView({behavior:'smooth', block:'start'}); }
-  if(step===total){ setTimeout(burstConfetti, 250); }
-}
-document.getElementById('nextBtn').onclick=function(){ if(canGo()) go(step+1); };
-document.getElementById('backBtn').onclick=function(){ go(step-1); };
-var PKG_TIME={"Hand Car Wash — 1 hr":"About 1 hour","Platinum Detail — 3-4 hrs":"3–4 hours","Diamond Detail — 4-6 hrs":"4–6 hours"};
-function addonsTotal(){ var t=0,hf=false; document.querySelectorAll('.tgl.sel').forEach(function(x){ t+=+x.dataset.price; if(x.dataset.from==='1') hf=true; }); return {total:t, hasFrom:hf}; }
-function upd(){
-  var lines=[];
-  lines.push("Ride: "+(S.veh||"—"));
-  lines.push("Detail: "+(S.pkg||"—"));
-  if(PKG_TIME[S.pkg]) lines.push("Time needed: "+PKG_TIME[S.pkg]);
-  lines.push("Add-ons: "+(S.addons.length?S.addons.join(", "):"None"));
-  lines.push("When: "+(S.day?S.day:"—")+(S.time?" · "+S.time:""));
-  document.getElementById('sumText').textContent=lines.join("\n");
-  var nm=document.getElementById('nm').value, ph=document.getElementById('ph').value, v2=document.getElementById('veh2').value;
-  var at=addonsTotal();
-  var msg="NEW BOOKING — Mobile Detail Bros"+
-    (nm?"\nName: "+nm:"")+(ph?"\nPhone: "+ph:"")+
-    (S.veh?"\nRide: "+S.veh:"")+(v2?"\nVehicle: "+v2:"")+
-    "\nDetail: "+(S.pkg||"Not sure yet")+
-    (S.addons.length?"\nAdd-ons: "+S.addons.join(", ")+"\nAdd-ons total: "+(at.hasFrom?"from ":"")+"$"+at.total:"")+
-    (S.day?"\nWhen: "+S.day+(S.time?" · "+S.time:""):"");
-  document.getElementById('sendBtn').href="sms:+15599755249?&body="+encodeURIComponent(msg);
-  var nb=document.getElementById('nextBtn'); if(nb) nb.disabled=!canGo();
-  renderChips();
-}
-function renderChips(){
-  var box=document.getElementById('wizChips'); if(!box) return;
-  var chips=[
-    {n:1, label:'Ride', val:S.veh},
-    {n:2, label:'Detail', val:S.pkg ? S.pkg.split(' — ')[0] : ''},
-    {n:3, label:'Add-ons', val:S.addons.length ? S.addons.length+' selected' : ''},
-    {n:4, label:'When', val:(S.day ? S.day.split(', ')[1]||S.day : '')+(S.time ? ' · '+S.time : '')},
-    {n:5, label:'Ticket', val:''}
-  ];
-  box.innerHTML='';
-  chips.forEach(function(c){
-    var b=document.createElement('button'); b.type='button';
-    b.className='wchip'+((c.val||c.n<=maxStep&&c.n!==5)?' set':'');
-    if(c.n===5 && step===5) b.className='wchip set';
-    b.innerHTML='<b>'+c.label+'</b>'+(c.val?' · '+c.val:'');
-    b.onclick=function(){ if(c.n<=maxStep) go(c.n); };
-    box.appendChild(b);
-  });
-}
-document.querySelectorAll('.progress div').forEach(function(p,i){ p.addEventListener('click', function(){ if(i+1<=maxStep) go(i+1); }); });
-var resetBtn=document.getElementById('resetBtn');
-if(resetBtn){ resetBtn.onclick=function(){
-  S={veh:"",pkg:"",addons:[],day:"",time:""};
-  document.querySelectorAll('.sel').forEach(function(x){ x.classList.remove('sel'); });
-  ['nm','ph','veh2'].forEach(function(id){ document.getElementById(id).value=''; });
-  var vh=document.getElementById('vehHint'); if(vh) vh.textContent='';
-  maxStep=1; upd(); addonBarUpd(); go(1);
-}; }
-['nm','ph','veh2'].forEach(function(id){ document.getElementById(id).addEventListener('input',upd); });
-document.querySelectorAll('.pkg .btn').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var name=this.closest('.pkg').querySelector('h3').textContent;
-    document.querySelectorAll('[data-pkg]').forEach(function(el){ if(el.dataset.pkg.indexOf(name.split(' ')[0])===0){ el.classList.add('sel'); S.pkg=el.dataset.pkg; } });
-    upd();
-  });
-});
-upd(); go(1);
-</script>
+
 <script>
 document.querySelectorAll('.cmp').forEach(function(c){
   var r=c.querySelector('input[type=range]');
@@ -983,5 +968,155 @@ document.querySelectorAll('#faq details').forEach(function(d){
     send.textContent='Text My Booking to Peter';
   });
 })();
+</script>
+
+<script>
+var S={veh:"",pkg:"",addons:[],day:"",time:""};
+var selDate=null;
+var nowD=new Date();
+var calCur={y:nowD.getFullYear(), m:nowD.getMonth()};
+var calMin={y:calCur.y, m:calCur.m};
+var maxDate=new Date(nowD.getFullYear(),nowD.getMonth(),nowD.getDate()+60);
+var calMax={y:maxDate.getFullYear(), m:maxDate.getMonth()};
+var PKG_TIME={"Hand Car Wash — 1 hr":"About 1 hour","Platinum Detail — 3-4 hrs":"3–4 hours","Diamond Detail — 4-6 hrs":"4–6 hours"};
+function addonsTotal(){ var t=0,hf=false; document.querySelectorAll('.tgl.sel').forEach(function(x){ t+=+x.dataset.price; if(x.dataset.from==='1') hf=true; }); return {total:t, hasFrom:hf}; }
+function fmtDay(d){ return d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}); }
+function setDay(d){
+  selDate=d; S.day=fmtDay(d); calCur={y:d.getFullYear(), m:d.getMonth()};
+  renderCal(); syncQuick();
+  var dl=document.getElementById('dayLine');
+  if(dl) dl.textContent='✓ You picked '+S.day+(S.time?' · '+S.time:' — now pick a time of day');
+  upd();
+}
+function renderCal(){
+  var t=document.getElementById('calTitle'); if(!t) return;
+  t.textContent=new Date(calCur.y,calCur.m,1).toLocaleDateString('en-US',{month:'long',year:'numeric'});
+  var grid=document.getElementById('calGrid'); grid.innerHTML='';
+  var first=new Date(calCur.y,calCur.m,1).getDay();
+  var dim=new Date(calCur.y,calCur.m+1,0).getDate();
+  var today=new Date(nowD.getFullYear(),nowD.getMonth(),nowD.getDate());
+  for(var e=0;e<first;e++){ var sp=document.createElement('span'); sp.className='cd empty'; grid.appendChild(sp); }
+  for(var dn=1;dn<=dim;dn++){
+    (function(dn){
+      var dt=new Date(calCur.y,calCur.m,dn);
+      var b=document.createElement('button'); b.type='button'; b.className='cd'; b.textContent=dn;
+      if(dt<today||dt>maxDate){ b.classList.add('off'); b.disabled=true; }
+      if(dt.getTime()===today.getTime()) b.classList.add('today');
+      if(selDate&&dt.getTime()===selDate.getTime()) b.classList.add('sel');
+      b.onclick=function(){ setDay(dt); };
+      grid.appendChild(b);
+    })(dn);
+  }
+  document.getElementById('calPrev').disabled=(calCur.y===calMin.y&&calCur.m===calMin.m);
+  document.getElementById('calNext').disabled=(calCur.y===calMax.y&&calCur.m===calMax.m);
+}
+document.getElementById('calPrev').onclick=function(){ calCur.m--; if(calCur.m<0){calCur.m=11;calCur.y--;} renderCal(); };
+document.getElementById('calNext').onclick=function(){ calCur.m++; if(calCur.m>11){calCur.m=0;calCur.y++;} renderCal(); };
+var qd=document.getElementById('quickDays');
+for(var qi=0;qi<7;qi++){
+  (function(qi){
+    var d=new Date(nowD.getFullYear(),nowD.getMonth(),nowD.getDate()+qi);
+    var b=document.createElement('button'); b.type='button'; b.className='qday'; b.dataset.key=d.toDateString();
+    b.innerHTML='<span>'+(qi===0?'Today':d.toLocaleDateString('en-US',{weekday:'short'}))+'</span><b>'+d.getDate()+'</b><span>'+d.toLocaleDateString('en-US',{month:'short'})+'</span>';
+    b.onclick=function(){ setDay(d); };
+    qd.appendChild(b);
+  })(qi);
+}
+function syncQuick(){ document.querySelectorAll('.qday').forEach(function(b){ b.classList.toggle('sel', !!selDate && b.dataset.key===selDate.toDateString()); }); }
+document.getElementById('moreDates').onclick=function(){
+  var w=document.getElementById('calWrap');
+  var open=w.style.display!=='none';
+  w.style.display=open?'none':'block';
+  this.textContent=open?'📅 More dates':'Hide calendar';
+  if(!open) renderCal();
+};
+document.querySelectorAll('#bkVeh [data-veh]').forEach(function(el){ el.onclick=function(){ document.querySelectorAll('#bkVeh [data-veh]').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.veh=this.dataset.veh; upd(); }; });
+document.querySelectorAll('#board [data-pkg]').forEach(function(el){ el.onclick=function(){ document.querySelectorAll('#board [data-pkg]').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.pkg=this.dataset.pkg; upd(); }; });
+document.querySelectorAll('.tgl').forEach(function(t){ t.onclick=function(){ this.classList.toggle('sel'); var n=this.dataset.name; if(this.classList.contains('sel')){ S.addons.push(n); } else { S.addons=S.addons.filter(function(a){return a!==n}); } upd(); addonBarUpd(); }; });
+function addonBarUpd(){
+  var bar=document.getElementById('addonBar'); if(!bar) return;
+  var at=addonsTotal(), count=S.addons.length;
+  if(count===0){ bar.classList.remove('show'); bar.innerHTML=''; return; }
+  bar.innerHTML=count+' add-on'+(count>1?'s':'')+' selected · <b>'+(at.hasFrom?'from ':'')+'$'+at.total+'</b> in add-ons';
+  bar.classList.add('show');
+}
+var dice=document.getElementById('diceBtn');
+if(dice){ dice.onclick=function(){
+  var picks=Array.prototype.slice.call(document.querySelectorAll('#board [data-pkg]')).filter(function(el){ return el.dataset.pkg!=='Not sure yet'; });
+  var n=0, iv=setInterval(function(){
+    picks.forEach(function(x){x.classList.remove('sel')});
+    picks[n%picks.length].classList.add('sel'); n++;
+    if(n>9){ clearInterval(iv); var win=picks[Math.floor(Math.random()*picks.length)]; picks.forEach(function(x){x.classList.remove('sel')}); win.classList.add('sel'); S.pkg=win.dataset.pkg; upd(); }
+  }, 90);
+}; }
+document.querySelectorAll('#bkTimes .chip').forEach(function(c){ c.onclick=function(){ document.querySelectorAll('#bkTimes .chip').forEach(function(x){x.classList.remove('sel')}); this.classList.add('sel'); S.time=this.dataset.time; var dl=document.getElementById('dayLine'); if(dl&&S.day) dl.textContent='✓ You picked '+S.day+' · '+S.time; upd(); }; });
+function burstConfetti(){
+  var board=document.getElementById('board'); if(!board) return;
+  var colors=['#1463d8','#3f8cff','#ffffff','#0a1f44'];
+  for(var i=0;i<44;i++){
+    var d=document.createElement('div'); d.className='confetti';
+    d.style.left=(8+Math.random()*84)+'%'; d.style.top='-16px';
+    d.style.background=colors[i%colors.length];
+    d.style.animation='confall '+(1.1+Math.random()*0.9)+'s ease-in '+(Math.random()*0.25)+'s forwards';
+    d.style.transform='rotate('+(Math.random()*360)+'deg)';
+    board.appendChild(d); setTimeout(function(el){ return function(){ el.remove(); }; }(d), 2600);
+  }
+}
+function upd(){
+  var lines=[];
+  lines.push("Ride: "+(S.veh||"—"));
+  lines.push("Detail: "+(S.pkg||"—"));
+  if(PKG_TIME[S.pkg]) lines.push("Time needed: "+PKG_TIME[S.pkg]);
+  lines.push("Add-ons: "+(S.addons.length?S.addons.join(", "):"None"));
+  lines.push("When: "+(S.day?S.day:"—")+(S.time?" · "+S.time:""));
+  document.getElementById('sumText').textContent=lines.join("\n");
+  var nm=document.getElementById('nm').value, ph=document.getElementById('ph').value, v2=document.getElementById('veh2').value;
+  var at=addonsTotal();
+  var msg="NEW BOOKING — Mobile Detail Bros"+
+    (nm?"\nName: "+nm:"")+(ph?"\nPhone: "+ph:"")+
+    (S.veh?"\nRide: "+S.veh:"")+(v2?"\nVehicle: "+v2:"")+
+    "\nDetail: "+(S.pkg||"Not sure yet")+
+    (S.addons.length?"\nAdd-ons: "+S.addons.join(", ")+"\nAdd-ons total: "+(at.hasFrom?"from ":"")+"$"+at.total:"")+
+    (S.day?"\nWhen: "+S.day+(S.time?" · "+S.time:""):"");
+  document.getElementById('sendBtn').href="sms:+15599755249?&body="+encodeURIComponent(msg);
+  var missing=[];
+  if(!S.veh) missing.push('your ride');
+  if(!S.pkg) missing.push('a detail');
+  if(!S.day) missing.push('a day');
+  if(!S.time) missing.push('a time');
+  var bits=[];
+  bits.push((S.veh?'✓ ':'○ ')+(S.veh||'Ride'));
+  bits.push((S.pkg?'✓ ':'○ ')+(S.pkg?S.pkg.split(' — ')[0]:'Detail'));
+  bits.push((S.day?'✓ ':'○ ')+(S.day?S.day.split(', ')[1]:'Day'));
+  bits.push((S.time?'✓ ':'○ ')+(S.time||'Time'));
+  if(S.addons.length) bits.push('Extras '+(at.hasFrom?'from ':'')+'$'+at.total);
+  var st=document.getElementById('bkStatus');
+  st.innerHTML='<b>'+bits.join(' · ')+'</b><span>'+(missing.length?('Still need: '+missing.join(', ')):'Ready — just add your name & phone below')+'</span>';
+  st.classList.toggle('ready', !missing.length);
+}
+['nm','ph','veh2'].forEach(function(id){ document.getElementById(id).addEventListener('input', upd); });
+document.querySelectorAll('.pkg .btn').forEach(function(btn){ btn.addEventListener('click', function(){
+  var card=btn.closest('.pkg'); var name=card?card.querySelector('h3').textContent:'';
+  var map={'Hand Car Wash':'Hand Car Wash — 1 hr','Platinum Detail':'Platinum Detail — 3-4 hrs','Diamond Detail':'Diamond Detail — 4-6 hrs'};
+  var label=null;
+  Object.keys(map).forEach(function(k){ if(name.indexOf(k)>-1) label=map[k]; });
+  if(!label) return;
+  document.querySelectorAll('#board [data-pkg]').forEach(function(x){ x.classList.toggle('sel', x.dataset.pkg===label); });
+  S.pkg=label; upd();
+}); });
+document.getElementById('sendBtn').addEventListener('click', function(){
+  var nm=document.getElementById('nm').value.trim();
+  var ph=document.getElementById('ph').value.replace(/\D/g,'');
+  if(nm && ph.length>=10){ setTimeout(burstConfetti, 150); }
+});
+document.getElementById('resetBtn').addEventListener('click', function(){
+  S={veh:"",pkg:"",addons:[],day:"",time:""}; selDate=null;
+  document.querySelectorAll('#board .sel').forEach(function(x){ x.classList.remove('sel'); });
+  ['nm','ph','veh2'].forEach(function(id){ document.getElementById(id).value=''; });
+  var dl=document.getElementById('dayLine'); if(dl) dl.textContent='';
+  renderCal(); syncQuick(); addonBarUpd(); upd();
+});
+renderCal();
+upd();
 </script>
 </body></html>
