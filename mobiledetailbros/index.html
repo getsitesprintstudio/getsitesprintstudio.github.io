@@ -145,6 +145,30 @@ nav .links a:hover:after{width:100%}
 .cta-sec h2{font-size:clamp(38px,7vw,72px)}
 .cta-sec p{color:var(--mut);font-size:17.5px;max-width:520px;margin:12px auto 30px}
 .cta-sec .cta-row{justify-content:center}
+#progress{position:fixed;top:0;left:0;height:2px;width:100%;background:linear-gradient(90deg,var(--gold2),var(--gold));transform-origin:0 50%;transform:scaleX(0);z-index:90}
+.slide.active img{animation:kb 7s ease forwards}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero h1 .ghost,.hero h1 .serif,.hero .sub,.hero .cta-row,.hero .chips{opacity:0;animation:riseIn .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero h1 .ghost{animation-delay:.15s}
+.hero h1 .serif{animation-delay:.45s}
+.hero .sub{animation-delay:.7s}
+.hero .cta-row{animation-delay:.9s}
+.hero .chips{animation-delay:1.05s}
+@keyframes riseIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.car-media img,.gallery img{filter:saturate(.92) contrast(1.05)}
+.car:hover .car-media img,.gallery figure:hover img{filter:none}
+.gallery figure img{transition:filter .4s}
+.pkg{position:relative;overflow:hidden}
+.pkg:after{content:"";position:absolute;top:0;left:-80%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(240,199,106,.14),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none}
+.pkg:hover:after{left:130%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+@media(max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.process-grid{grid-template-columns:1fr}}
+.step{border:1px solid var(--line);border-radius:20px;padding:26px 22px;background:var(--panel)}
+.step b{font-family:'Montserrat';font-weight:900;font-size:30px;color:transparent;-webkit-text-stroke:1.2px var(--gold);display:block}
+.step h3{font-family:'Montserrat';font-weight:800;font-size:18px;margin:12px 0 8px;color:#fff}
+.step p{color:var(--mut);font-size:14.5px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
@@ -298,7 +322,7 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 </head>
 <body>
 <div id="loader"><div class="l-logo"><span>Mobile&nbsp;</span><span>Detail&nbsp;</span><span>Bros</span></div><div class="l-bar"><i id="lbar"></i></div><div class="l-count"><span id="lcount">0</span>%</div></div>
-<div id="cursor"></div><div class="grain"></div><div class="frame"></div>
+<div id="cursor"></div><div class="grain"></div><div class="frame"></div><div id="progress"></div>
 <nav><div class="wrap">
 <a class="logo" href="#top">Mobile Detail <span>Bros</span></a>
 <div class="links"><a href="#lineup">The Lineup</a><a href="#packages">Packages</a><a href="#results">Results</a><a href="#faq">Questions</a></div>
@@ -475,6 +499,16 @@ footer p{color:var(--mut);margin-top:22px;font-size:14px}
 </div></section>
 
 <div class="textband"><div class="tb-track" id="tbTrack"><span class="phrase">Mobile Detail Bros <i>★</i> We Come To You <i>★</i> </span><span class="phrase">Mobile Detail Bros <i>★</i> We Come To You <i>★</i> </span><span class="phrase">Mobile Detail Bros <i>★</i> We Come To You <i>★</i> </span><span class="phrase">Mobile Detail Bros <i>★</i> We Come To You <i>★</i> </span></div></div>
+
+<section id="process"><div class="wrap">
+<div class="sec-head reveal"><div class="kicker">How It Works</div><h2>The <span class="serif">Process</span></h2></div>
+<div class="process-grid">
+<div class="step reveal"><b>01</b><h3>Book in a minute</h3><p>Build your detail online — ride, package, add-ons, day and time — and send it with one text.</p></div>
+<div class="step reveal"><b>02</b><h3>We come to you</h3><p>Home or work, we bring everything. You hand over the keys, we handle the rest.</p></div>
+<div class="step reveal"><b>03</b><h3>The detail</h3><p>One to six hours depending on your package — hand wash to full clay and protection.</p></div>
+<div class="step reveal"><b>04</b><h3>Your Detail Ticket</h3><p>Everything you picked is on your ticket before you send it. Nothing you did not choose, ever.</p></div>
+</div>
+</div></section>
 
 <section id="book"><div class="bignum">04</div><div class="wrap">
 <div class="kicker">Book a Detail</div><h2>Build Your <span class="serif">Detail</span></h2>
@@ -750,8 +784,10 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 (function(){
   var nav=document.querySelector('nav'), bimg=document.getElementById('bannerImg'), banner=document.querySelector('.banner');
   var tb=document.getElementById('tbTrack'), phrase=tb ? tb.querySelector('.phrase') : null;
+  var prog=document.getElementById('progress');
   function onScroll(){
     nav.classList.toggle('scrolled', window.scrollY>40);
+    if(prog){ var h=document.documentElement; var max=h.scrollHeight-innerHeight; prog.style.transform='scaleX('+(max>0?window.scrollY/max:0)+')'; }
     if(tb && phrase){ var w=phrase.offsetWidth; if(w>0){ tb.style.transform='translateX('+(-(window.scrollY*0.45) % w)+'px)'; } }
     if(bimg && banner){
       var r=banner.getBoundingClientRect();
@@ -764,6 +800,17 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
   addEventListener('scroll', function(){ requestAnimationFrame(onScroll); }, {passive:true});
   onScroll();
 })();
+// Magnetic buttons (desktop)
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('mousemove', function(e){
+      var r=b.getBoundingClientRect();
+      var x=(e.clientX-r.left-r.width/2)/r.width, y=(e.clientY-r.top-r.height/2)/r.height;
+      b.style.transform='translate('+(x*7)+'px,'+(y*5)+'px)';
+    });
+    b.addEventListener('mouseleave', function(){ b.style.transform=''; });
+  });
+}
 // Preloader
 (function(){
   var c=0, el=document.getElementById('lcount'), bar=document.getElementById('lbar'), L=document.getElementById('loader');
