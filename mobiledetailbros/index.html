@@ -512,7 +512,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 .lcard h3{font-size:18.5px;font-weight:900;color:var(--txt);margin-bottom:9px}
 .lcard p{color:var(--mut);font-size:14.5px;line-height:1.55}
 
-/* Board group separation + weekly maintenance (v19) */
+/* Board group separation + monthly maintenance (v22) */
 .grp-label{font-size:11.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:2px 0 10px}
 .grp-divider{display:flex;align-items:center;gap:14px;margin:24px 0 6px}
 .grp-divider::before,.grp-divider::after{content:"";flex:1;border-top:2px solid var(--line)}
@@ -870,9 +870,9 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 
 
 
-<section id="weekly"><div class="wrap">
-<div class="kicker">Maintenance Plans</div><h2>Weekly <span class="serif">Maintenance</span></h2>
-<p class="sub">Keep it clean week after week without thinking about it. Pick your vehicle and how many maintenance details you want each week — the weekly price updates as you tap. Pause or cancel anytime.</p>
+<section id="monthly"><div class="wrap">
+<div class="kicker">Maintenance Plans</div><h2>Monthly <span class="serif">Maintenance</span></h2>
+<p class="sub">Keep it clean month after month without thinking about it. Pick your vehicle and how many maintenance details you want each month — the monthly price updates as you tap. Pause or cancel anytime.</p>
 <div class="maint-card">
 <div class="qblock"><div class="q-t">Your vehicle</div>
 <div class="qopts">
@@ -880,14 +880,14 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <button type="button" class="mchip msize" data-size="SUV">SUV — $150 per visit</button>
 <button type="button" class="mchip msize" data-size="Full-Size Truck">Full-Size Truck — $175 per visit</button>
 </div></div>
-<div class="qblock"><div class="q-t">Details per week</div>
+<div class="qblock"><div class="q-t">Details per month</div>
 <div class="qopts">
-<button type="button" class="mchip mfrq sel" data-f="1">1× a week</button>
-<button type="button" class="mchip mfrq" data-f="2">2× a week</button>
-<button type="button" class="mchip mfrq" data-f="3">3× a week</button>
+<button type="button" class="mchip mfrq sel" data-f="1">1× a month</button>
+<button type="button" class="mchip mfrq" data-f="2">2× a month</button>
+<button type="button" class="mchip mfrq" data-f="4">4× a month</button>
 </div></div>
-<div class="maint-total"><div><div class="mt-per" id="mtPer">$125 per visit · Car</div><div class="mt-mo" id="mtWk">$125<span>/week</span></div></div>
-<button type="button" class="btn" id="mtBook">Start My Weekly Plan</button></div>
+<div class="maint-total"><div><div class="mt-per" id="mtPer">$125 per visit · Car</div><div class="mt-mo" id="mtMo">$125<span>/month</span></div></div>
+<button type="button" class="btn" id="mtBook">Start My Monthly Plan</button></div>
 <p class="fine" style="margin-top:14px">Every maintenance visit: hand wash &amp; dry, wheels &amp; tires cleaned and dressed, windows in &amp; out, full interior vacuum, dash &amp; console wipe-down, door jambs, and a spray sealant top-up. Peter confirms your start date when he replies to your booking.</p>
 </div>
 </div></section>
@@ -1367,14 +1367,14 @@ document.getElementById('sendBtn').addEventListener('click', function(){
 </script>
 
 <script>
-// Weekly maintenance plans (v19) — prices set by Peter
+// Monthly maintenance plans (v22) — prices set by Peter
 var MAINT_PRICE={"Car":125,"SUV":150,"Full-Size Truck":175};
 var MAINT_VEH={"Car":"Car","SUV":"SUV / Truck","Full-Size Truck":"SUV / Truck"};
 var MSEL={size:"Car",freq:1};
 function maintUpd(){
   var pv=MAINT_PRICE[MSEL.size];
   document.getElementById('mtPer').textContent="$"+pv+" per visit · "+MSEL.size;
-  document.getElementById('mtWk').innerHTML="$"+(pv*MSEL.freq)+"<span>/week</span>";
+  document.getElementById('mtMo').innerHTML="$"+(pv*MSEL.freq)+"<span>/month</span>";
 }
 document.querySelectorAll('.msize').forEach(function(ch){ ch.addEventListener('click', function(){
   document.querySelectorAll('.msize').forEach(function(x){ x.classList.remove('sel'); });
@@ -1390,18 +1390,18 @@ document.getElementById('mtBook').addEventListener('click', function(){
   document.querySelectorAll('#board [data-pkg]').forEach(function(x){ x.classList.remove('sel'); });
   document.querySelectorAll('.tgl.sel').forEach(function(t){ t.classList.remove('sel'); });
   S.addons=[]; if(typeof addonBarUpd==='function') addonBarUpd();
-  S.pkg="Weekly Maintenance — "+MSEL.size+" — "+MSEL.freq+"×/week";
+  S.pkg="Monthly Maintenance — "+MSEL.size+" — "+MSEL.freq+"×/month";
   upd();
   document.getElementById('book').scrollIntoView({behavior:'smooth'});
 });
 var _updM=upd;
 upd=function(){
   _updM();
-  if(S.pkg&&S.pkg.indexOf('Weekly Maintenance')===0){
+  if(S.pkg&&S.pkg.indexOf('Monthly Maintenance')===0){
     var parts=S.pkg.split(' — ');
-    var size=parts[1]||'', fm=(parts[2]||'').match(/(\d+)×\/week/);
+    var size=parts[1]||'', fm=(parts[2]||'').match(/(\d+)×\/month/);
     var f=fm?+fm[1]:1, pv=MAINT_PRICE[size];
-    var line=pv?("Plan: $"+(pv*f)+"/week ("+f+" visit"+(f>1?"s":"")+" × $"+pv+")"):("Plan: "+f+"×/week — Peter confirms your rate");
+    var line=pv?("Plan: $"+(pv*f)+"/month ("+f+" visit"+(f>1?"s":"")+" × $"+pv+")"):("Plan: "+f+"×/month — Peter confirms your rate");
     var st=document.getElementById('sumText'); if(st&&st.textContent.indexOf('Plan:')<0) st.textContent+="\n"+line;
     if(window._bkMsg&&window._bkMsg.indexOf('Plan:')<0) window._bkMsg+="\n"+line;
   }
