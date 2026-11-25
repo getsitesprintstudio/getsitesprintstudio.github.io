@@ -553,31 +553,9 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 .pkg:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(11,33,72,.14)}
 .maint-card{box-shadow:0 24px 60px rgba(20,99,216,.14)}
 
-/* Live schedule (v23) */
-.sched-card{background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:22px;margin-top:34px}
-.sched-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.sched-month{font-family:'Montserrat';font-weight:900;font-size:20px;color:var(--txt);text-transform:uppercase;letter-spacing:.03em}
-.sched-nav{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--txt);font-size:22px;cursor:pointer;line-height:1}
-.sched-nav:disabled{opacity:.3;cursor:default}
-.sched-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
-.sched-dow span{text-align:center;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
-.sched-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
-.sched-day{min-height:74px;border:1px solid var(--line);border-radius:12px;padding:6px;background:var(--bg)}
-.sched-day .dn{font-family:'Montserrat';font-weight:800;font-size:14px;color:var(--txt)}
-.sched-day.past{opacity:.38}
-.sched-day.today{border-color:var(--gold);border-width:2px}
-.sched-day.blank{background:transparent;border:none}
-.slot-taken{display:block;margin-top:4px;font-size:10.5px;font-weight:800;letter-spacing:.02em;border-radius:7px;padding:3px 5px;line-height:1.25}
-.slot-taken.detail{background:#fdecec;color:#b3261e}
-.slot-taken.maint{background:rgba(20,99,216,.13);color:var(--gold)}
-.sched-legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-.sched-legend .lg{font-size:12px;font-weight:800;border-radius:999px;padding:6px 12px}
-.sched-legend .lg.detail{background:#fdecec;color:#b3261e}
-.sched-legend .lg.maint{background:rgba(20,99,216,.13);color:var(--gold)}
-.sched-legend .lg.open{background:var(--bg);color:var(--mut);border:1px solid var(--line)}
+/* Double-booking guard (v23, public calendar removed v26) */
 #bkTimes .chip.taken{background:#fdecec;color:#b3261e;border-color:#f3c2c0;text-decoration:line-through;cursor:not-allowed;opacity:.85}
 .qday .qfull{color:#e5484d;font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:.05em}
-@media(max-width:640px){.sched-day{min-height:62px;padding:4px}.slot-taken{font-size:9px;padding:2px 3px}}
 
 /* Regular detail prices (v24) */
 .pkg-prices{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
@@ -864,17 +842,6 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 </div></section>
 
 
-
-<section id="schedule"><div class="wrap">
-<div class="kicker">Live Schedule</div><h2>See What Is <span class="serif">Taken</span></h2>
-<p class="sub">This is Peter's real schedule. A spot marked Taken is already booked — a detail or a monthly maintenance customer — so nobody gets double-booked. Pick any open day and time on the booking board below.</p>
-<div class="sched-card">
-<div class="sched-head"><button type="button" class="sched-nav" id="schedPrev">‹</button><div class="sched-month" id="schedMonth"></div><button type="button" class="sched-nav" id="schedNext">›</button></div>
-<div class="sched-dow"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
-<div class="sched-grid" id="schedGrid"></div>
-<div class="sched-legend"><span class="lg detail">Taken · Detail</span><span class="lg maint">Taken · Monthly Maintenance</span><span class="lg open">Everything else is open</span></div>
-</div>
-</div></section>
 <section id="book"><div class="bignum">04</div><div class="wrap">
 <div class="kicker">Book a Detail</div><h2>Build Your <span class="serif">Detail</span></h2>
 <p class="sub">Everything on one screen. Pick your ride, your detail, your day — then one text sends it all to Peter.</p>
@@ -1565,7 +1532,7 @@ document.querySelectorAll('.pkg .btn').forEach(function(b){ b.addEventListener('
 </script>
 
 <script>
-// Live schedule + double-booking guard (v23)
+// Taken-spots data + double-booking guard (v23; public calendar removed v26)
 var TAKEN=[];
 var MAINT_SPOTS=[];
 var SCHED_TIMES=['Morning','Midday','Afternoon'];
@@ -1576,31 +1543,6 @@ function takenFor(d){
   MAINT_SPOTS.forEach(function(x){ if(x.dow===d.getDay()) out.push({t:x.t,k:'Maintenance'}); });
   return out;
 }
-var schedCur={y:nowD.getFullYear(), m:nowD.getMonth()};
-var schedMin={y:schedCur.y, m:schedCur.m};
-var schedMaxD=new Date(schedCur.y, schedCur.m+2, 1);
-var schedMax={y:schedMaxD.getFullYear(), m:schedMaxD.getMonth()};
-function renderSched(){
-  var grid=document.getElementById('schedGrid'); if(!grid) return;
-  var first=new Date(schedCur.y, schedCur.m, 1);
-  document.getElementById('schedMonth').textContent=first.toLocaleDateString('en-US',{month:'long', year:'numeric'});
-  document.getElementById('schedPrev').disabled=(schedCur.y===schedMin.y&&schedCur.m===schedMin.m);
-  document.getElementById('schedNext').disabled=(schedCur.y===schedMax.y&&schedCur.m===schedMax.m);
-  var days=new Date(schedCur.y, schedCur.m+1, 0).getDate(), off=first.getDay(), html='';
-  var todayIso=isoOf(nowD);
-  for(var i=0;i<off;i++) html+='<div class="sched-day blank"></div>';
-  for(var dn=1;dn<=days;dn++){
-    var d=new Date(schedCur.y, schedCur.m, dn), iso=isoOf(d);
-    var cls='sched-day'+(iso<todayIso?' past':'')+(iso===todayIso?' today':'');
-    html+='<div class="'+cls+'"><span class="dn">'+dn+'</span>';
-    takenFor(d).forEach(function(x){ html+='<span class="slot-taken '+(x.k==='Maintenance'?'maint':'detail')+'">'+x.t+' · '+(x.k==='Maintenance'?'Maintenance':'Detail')+'</span>'; });
-    html+='</div>';
-  }
-  grid.innerHTML=html;
-}
-document.getElementById('schedPrev').addEventListener('click', function(){ var d=new Date(schedCur.y, schedCur.m-1, 1); schedCur={y:d.getFullYear(), m:d.getMonth()}; renderSched(); });
-document.getElementById('schedNext').addEventListener('click', function(){ var d=new Date(schedCur.y, schedCur.m+1, 1); schedCur={y:d.getFullYear(), m:d.getMonth()}; renderSched(); });
-renderSched();
 // Board guard: taken day+time slots cannot be picked
 function markTaken(d){
   var taken=takenFor(d), cleared=false;
@@ -1663,7 +1605,7 @@ function ownerRender(){
   var el=document.getElementById('ownerList'), rows='';
   TAKEN.forEach(function(x){ rows+='<div class="owner-row"><span>'+x.d+'</span><span>'+x.t+'</span><b>'+(x.k||'Detail')+'</b></div>'; });
   MAINT_SPOTS.forEach(function(x){ var dn=['Sundays','Mondays','Tuesdays','Wednesdays','Thursdays','Fridays','Saturdays'][x.dow]; rows+='<div class="owner-row"><span>Every '+dn+'</span><span>'+x.t+'</span><b>Maintenance</b></div>'; });
-  el.innerHTML=rows||'<p class="fine">No spots are marked taken yet. When a booking is confirmed, Muse marks it here and on the public schedule.</p>';
+  el.innerHTML=rows||'<p class="fine">No spots are marked taken yet. When a booking is confirmed, it gets marked here and blocked on the booking board.</p>';
 }
 async function ownerTry(){
   var v=document.getElementById('ownerPw').value;
