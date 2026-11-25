@@ -610,42 +610,6 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="fact reveal"><b>01</b><span>Signature coating</span></div>
 </div></div>
 
-
-<section id="guide"><div class="wrap">
-<div class="kicker">Not Sure What You Need?</div><h2>Find Your <span class="serif">Detail</span></h2>
-<p class="sub">Answer three quick questions and get a straight recommendation — the same one Peter would give you in person.</p>
-<div class="quiz">
-<div class="qblock"><div class="q-t">1 · How does your paint look?</div>
-<div class="qopts">
-<button type="button" class="qchip" data-q="0" data-v="0">Pretty good — mostly just dirty</button>
-<button type="button" class="qchip" data-q="0" data-v="1">Dull, with light swirls in the sun</button>
-<button type="button" class="qchip" data-q="0" data-v="2">Visible scratches &amp; heavy swirls</button>
-<button type="button" class="qchip" data-q="0" data-v="3">Rough — I want it near perfect</button>
-</div></div>
-<div class="qblock"><div class="q-t">2 · What matters most to you?</div>
-<div class="qopts">
-<button type="button" class="qchip" data-q="1" data-v="0">A clean car, in and out</button>
-<button type="button" class="qchip" data-q="1" data-v="1">Shine &amp; protection for months</button>
-<button type="button" class="qchip" data-q="1" data-v="2">Maximum gloss, protected for years</button>
-<button type="button" class="qchip" data-q="1" data-v="3">A full transformation</button>
-</div></div>
-<div class="qblock"><div class="q-t">3 · How is the inside?</div>
-<div class="qopts">
-<button type="button" class="qchip" data-q="2" data-v="0">Light dust &amp; crumbs</button>
-<button type="button" class="qchip" data-q="2" data-v="1">It needs a real deep clean</button>
-<button type="button" class="qchip" data-q="2" data-v="2">Part of the transformation</button>
-</div></div>
-<div id="quizResult" style="display:none">
-<div class="q-rec-t">Your match</div>
-<div class="q-rec-name" id="qrName"></div>
-<p class="q-rec-why" id="qrWhy"></p>
-<p class="q-rec-meta" id="qrMeta"></p>
-<a class="btn" href="#book" id="qrBook">Book This Detail</a>
-<button type="button" class="btn ghost" id="qrRetake">↺ Start over</button>
-</div>
-<p class="fine" id="quizHint">Answer all three and your match appears here.</p>
-</div>
-</div></section>
 <section id="packages"><div class="bignum">02</div><div class="wrap">
 <div class="kicker">Detail Packages</div><h2>Pick Your <span class="serif">Detail</span></h2>
 <p class="sub">Three levels, one standard: done right, at your place, on your schedule.</p>
@@ -1378,50 +1342,6 @@ setInterval(function(){ if(S.pkg!==_lastPkg){ _lastPkg=S.pkg; applyInc(); upd();
 </script>
 
 <script>
-// Package chooser quiz + form booking submit (v15)
-var QZ=[null,null,null];
-var QREC={
-"Maintenance Detail":{name:"Maintenance Detail",why:"Your paint is in good shape and you mainly want it clean, in and out. No need to pay for correction you do not need.",meta:"Hand wash, quick wax, windows in & out, interior vacuum & wipe-down."},
-"Platinum Detail":{name:"Platinum Detail",why:"Your paint is decent and you want real shine plus protection that lasts months, with a proper interior scrub.",meta:"Full detail plus 3-month hybrid ceramic paint protection."},
-"Diamond Detail":{name:"Diamond Detail",why:"You want the full treatment — decontamination, clay bar and 6-month protection — without machine polishing. The right call when the paint is good but tired.",meta:"The most complete detail we offer, no correction."},
-"Makeover 1 — One-Stage Correction":{name:"Makeover 1",why:"Light swirls and dullness are a one-stage fix — about 70–80% of defects gone — and you get the 10-year coating and everything else with it.",meta:"From $2,199 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."},
-"Makeover 2 — Two-Stage Correction":{name:"Makeover 2",why:"Visible scratches and heavy swirls need a cutting stage first, then a refining stage. That is exactly what this package is built for.",meta:"From $2,599 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."},
-"Makeover 3 — Three-Stage Correction":{name:"Makeover 3",why:"You want the paint chased as close to perfect as it gets. Three stages, the 10-year coating, and every service we offer in one visit.",meta:"From $2,999 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."}};
-function qRecommend(){
-  var a=QZ[0], b=QZ[1], c=QZ[2];
-  if(a===null||b===null||c===null) return null;
-  if(a===3||(a===2&&b===3)) return "Makeover 3 — Three-Stage Correction";
-  if(a===2) return "Makeover 2 — Two-Stage Correction";
-  if(a===1){ if(b===0&&c<2) return "Diamond Detail"; return "Makeover 1 — One-Stage Correction"; }
-  if(b===3||c===2||b===2) return "Diamond Detail";
-  if(b===1||c===1) return "Platinum Detail";
-  return "Maintenance Detail";
-}
-function qShow(){
-  var label=qRecommend(), res=document.getElementById('quizResult'), hint=document.getElementById('quizHint');
-  if(!label){ res.style.display='none'; hint.style.display='block'; return; }
-  var r=QREC[label];
-  document.getElementById('qrName').textContent=r.name;
-  document.getElementById('qrWhy').textContent=r.why;
-  document.getElementById('qrMeta').textContent=r.meta;
-  document.getElementById('qrBook').dataset.pkg=label;
-  res.style.display='block'; hint.style.display='none';
-}
-document.querySelectorAll('.qchip').forEach(function(ch){ ch.addEventListener('click', function(){
-  var q=+ch.dataset.q;
-  document.querySelectorAll('.qchip[data-q="'+q+'"]').forEach(function(x){ x.classList.remove('sel'); });
-  ch.classList.add('sel'); QZ[q]=+ch.dataset.v; qShow();
-}); });
-document.getElementById('qrBook').addEventListener('click', function(){
-  var label=this.dataset.pkg; if(!label) return;
-  document.querySelectorAll('#board [data-pkg]').forEach(function(x){ x.classList.toggle('sel', x.dataset.pkg===label); });
-  S.pkg=label; if(typeof applyInc==='function') applyInc(); upd();
-});
-document.getElementById('qrRetake').addEventListener('click', function(){
-  QZ=[null,null,null];
-  document.querySelectorAll('.qchip').forEach(function(x){ x.classList.remove('sel'); });
-  qShow();
-});
 // Booking submit: posts to the studio inbox (no phone number on this site)
 document.getElementById('sendBtn').addEventListener('click', function(){
   var nm=document.getElementById('nm').value.trim();
