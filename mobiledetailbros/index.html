@@ -819,9 +819,9 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 
 <div class="bsec"><div class="bsec-t">Your detail</div>
 <div class="pick-grid pk">
-<button type="button" class="pick" data-pkg="Hand Car Wash — 1 hr"><div class="ic">🧽</div><div class="t">Hand Car Wash</div><div class="d">Hand wash, wax &amp; interior tidy</div></button>
-<button type="button" class="pick" data-pkg="Platinum Detail — 3-4 hrs"><div class="ic">✨</div><div class="t">Platinum Detail</div><div class="d">3-month ceramic protection</div></button>
-<button type="button" class="pick" data-pkg="Diamond Detail — 4-6 hrs"><div class="ic">💎</div><div class="t">Diamond Detail</div><div class="d">The full treatment</div></button>
+<button type="button" class="pick" data-pkg="Hand Car Wash"><div class="ic">🧽</div><div class="t">Hand Car Wash</div><div class="d">Hand wash, wax &amp; interior tidy</div></button>
+<button type="button" class="pick" data-pkg="Platinum Detail"><div class="ic">✨</div><div class="t">Platinum Detail</div><div class="d">3-month ceramic protection</div></button>
+<button type="button" class="pick" data-pkg="Diamond Detail"><div class="ic">💎</div><div class="t">Diamond Detail</div><div class="d">The full treatment</div></button>
 </div>
 
 <div class="pick-grid pk" style="margin-top:12px">
@@ -1109,7 +1109,7 @@ var calCur={y:nowD.getFullYear(), m:nowD.getMonth()};
 var calMin={y:calCur.y, m:calCur.m};
 var maxDate=new Date(nowD.getFullYear(),nowD.getMonth(),nowD.getDate()+60);
 var calMax={y:maxDate.getFullYear(), m:maxDate.getMonth()};
-var PKG_TIME={"Hand Car Wash — 1 hr":"About 1 hour","Platinum Detail — 3-4 hrs":"3–4 hours","Diamond Detail — 4-6 hrs":"4–6 hours"};
+var PKG_TIME={"Hand Car Wash":"About 1 hour","Platinum Detail":"3–4 hours","Diamond Detail":"4–6 hours"};
 function addonsTotal(){ var t=0,hf=false; document.querySelectorAll('.tgl.sel').forEach(function(x){ t+=+x.dataset.price; if(x.dataset.from==='1') hf=true; }); return {total:t, hasFrom:hf}; }
 function fmtDay(d){ return d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}); }
 function setDay(d){
@@ -1227,7 +1227,7 @@ function upd(){
 ['nm','ph','veh2'].forEach(function(id){ document.getElementById(id).addEventListener('input', upd); });
 document.querySelectorAll('.pkg .btn').forEach(function(btn){ btn.addEventListener('click', function(){
   var card=btn.closest('.pkg'); var name=card?card.querySelector('h3').textContent:'';
-  var map={'Hand Car Wash':'Hand Car Wash — 1 hr','Platinum Detail':'Platinum Detail — 3-4 hrs','Diamond Detail':'Diamond Detail — 4-6 hrs'};
+  var map={'Hand Car Wash':'Hand Car Wash','Platinum Detail':'Platinum Detail','Diamond Detail':'Diamond Detail'};
   var label=null;
   Object.keys(map).forEach(function(k){ if(name.indexOf(k)>-1) label=map[k]; });
   if(!label) return;
@@ -1331,9 +1331,9 @@ setInterval(function(){ if(S.pkg!==_lastPkg){ _lastPkg=S.pkg; applyInc(); upd();
 // Package chooser quiz + form booking submit (v15)
 var QZ=[null,null,null];
 var QREC={
-"Hand Car Wash — 1 hr":{name:"Hand Car Wash",why:"Your paint is in good shape and you mainly want it clean, in and out. No need to pay for correction you do not need.",meta:"Hand wash, quick wax, windows in & out, interior vacuum & wipe-down."},
-"Platinum Detail — 3-4 hrs":{name:"Platinum Detail",why:"Your paint is decent and you want real shine plus protection that lasts months, with a proper interior scrub.",meta:"Full detail plus 3-month hybrid ceramic paint protection."},
-"Diamond Detail — 4-6 hrs":{name:"Diamond Detail",why:"You want the full treatment — decontamination, clay bar and 6-month protection — without machine polishing. The right call when the paint is good but tired.",meta:"The most complete detail we offer, no correction."},
+"Hand Car Wash":{name:"Hand Car Wash",why:"Your paint is in good shape and you mainly want it clean, in and out. No need to pay for correction you do not need.",meta:"Hand wash, quick wax, windows in & out, interior vacuum & wipe-down."},
+"Platinum Detail":{name:"Platinum Detail",why:"Your paint is decent and you want real shine plus protection that lasts months, with a proper interior scrub.",meta:"Full detail plus 3-month hybrid ceramic paint protection."},
+"Diamond Detail":{name:"Diamond Detail",why:"You want the full treatment — decontamination, clay bar and 6-month protection — without machine polishing. The right call when the paint is good but tired.",meta:"The most complete detail we offer, no correction."},
 "Remake Over 1 — One-Stage Correction":{name:"Remake Over 1",why:"Light swirls and dullness are a one-stage fix — about 70–80% of defects gone — and you get the 10-year coating and everything else with it.",meta:"From $2,199 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."},
 "Remake Over 2 — Two-Stage Correction":{name:"Remake Over 2",why:"Visible scratches and heavy swirls need a cutting stage first, then a refining stage. That is exactly what this package is built for.",meta:"From $2,599 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."},
 "Remake Over 3 — Three-Stage Correction":{name:"Remake Over 3",why:"You want the paint chased as close to perfect as it gets. Three stages, the 10-year coating, and every service we offer in one visit.",meta:"From $2,999 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."}};
@@ -1342,10 +1342,10 @@ function qRecommend(){
   if(a===null||b===null||c===null) return null;
   if(a===3||(a===2&&b===3)) return "Remake Over 3 — Three-Stage Correction";
   if(a===2) return "Remake Over 2 — Two-Stage Correction";
-  if(a===1){ if(b===0&&c<2) return "Diamond Detail — 4-6 hrs"; return "Remake Over 1 — One-Stage Correction"; }
-  if(b===3||c===2||b===2) return "Diamond Detail — 4-6 hrs";
-  if(b===1||c===1) return "Platinum Detail — 3-4 hrs";
-  return "Hand Car Wash — 1 hr";
+  if(a===1){ if(b===0&&c<2) return "Diamond Detail"; return "Remake Over 1 — One-Stage Correction"; }
+  if(b===3||c===2||b===2) return "Diamond Detail";
+  if(b===1||c===1) return "Platinum Detail";
+  return "Hand Car Wash";
 }
 function qShow(){
   var label=qRecommend(), res=document.getElementById('quizResult'), hint=document.getElementById('quizHint');
