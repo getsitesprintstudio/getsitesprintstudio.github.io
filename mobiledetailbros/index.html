@@ -485,13 +485,32 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 .hero .chips span b{color:#8fc1ff}
 .hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.45)}
 
-/* Makeover packages (v14) */
-#remakes .pkg .sizes{margin:16px 0 2px;border-top:1px dashed var(--line);padding-top:12px}
-#remakes .sizerow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:5px 0;font-size:14px;color:var(--mut)}
-#remakes .sizerow b{font-family:'Montserrat';font-weight:800;color:var(--gold);font-size:16.5px;white-space:nowrap}
-#remakes .pkg .expect{color:var(--mut);font-size:14px;line-height:1.55;margin-top:12px;border-left:3px solid var(--gold);padding-left:12px}
+/* Restore & Protect package (v29) */
+.restore-card{max-width:880px;margin:34px auto 0;text-align:left}
+.restore-card h3{font-size:24px}
+.rst-lede{color:var(--mut);font-size:15px;line-height:1.6;margin-top:6px}
+.stage-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.stage-btn{border:1.5px solid var(--line);background:var(--bg);border-radius:14px;padding:13px 12px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:2px}
+.stage-btn b{font-family:'Montserrat';font-size:15px;color:var(--txt);text-transform:uppercase}
+.stage-btn span{font-size:12.5px;color:var(--mut);font-weight:600;line-height:1.4}
+.stage-btn.sel{border-color:var(--gold);background:rgba(20,99,216,.08);box-shadow:0 0 0 1px var(--gold)}
+.restore-card .sizes{margin:16px 0 2px;border-top:1px dashed var(--line);padding-top:12px}
+.restore-card .sizerow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:5px 0;font-size:14px;color:var(--mut)}
+.restore-card .sizerow b{font-family:'Montserrat';font-weight:800;color:var(--gold);font-size:16.5px;white-space:nowrap}
+.restore-card .expect{color:var(--mut);font-size:14px;line-height:1.55;margin-top:14px;border-left:3px solid var(--gold);padding-left:12px}
+.rst-inc{font-family:'Montserrat';font-weight:900;text-transform:uppercase;font-size:14px;letter-spacing:.04em;margin-top:22px;color:var(--txt)}
+.rst-groups{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+.rst-group h4{font-family:'Montserrat';font-size:13.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--gold);margin-bottom:6px}
+.rst-group ul{list-style:none}
+.rst-group li{font-size:14px;color:var(--mut);line-height:1.5;padding:3px 0 3px 18px;position:relative}
+.rst-group li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
+.stage-label{font-family:'Montserrat';font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--txt);margin-bottom:8px}
+.stage-chips{display:flex;gap:8px;flex-wrap:wrap}
+.schip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--txt)}
+.schip.sel{border-color:var(--gold);background:rgba(20,99,216,.1);color:var(--gold)}
 .tgl.inc{opacity:.55;border-style:dashed}
-.tgl.inc::after{content:"Included in your Makeover ✓";display:block;font-size:11.5px;font-weight:800;color:var(--gold);letter-spacing:.04em;margin-top:2px}
+.tgl.inc::after{content:"Included in your Restore & Protect ✓";display:block;font-size:11.5px;font-weight:800;color:var(--gold);letter-spacing:.04em;margin-top:2px}
+@media(max-width:760px){.stage-pick{grid-template-columns:1fr}.rst-groups{grid-template-columns:1fr}}
 
 /* Guide: quiz + education (v15) */
 .quiz{background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:26px;margin-top:34px}
@@ -585,7 +604,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 .owner-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-top:8px;font-size:14px;font-weight:600}
 .owner-row b{color:var(--gold)}
 
-/* Makeover flagship strip (v28) */
+/* Restore flagship strip (v28) */
 .flag-strip{background:linear-gradient(135deg,#0b2148,#123a7a);padding:20px 0}
 .flag-in{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .flag-txt{display:flex;flex-direction:column;gap:3px;max-width:640px}
@@ -639,8 +658,8 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 
 
 <div class="flag-strip"><div class="wrap flag-in">
-<div class="flag-txt"><b>The Makeovers</b><span>Our biggest job: full paint correction + a 10-year ceramic coating, with wheels, tires, trim, interior and glass all included. One job, everything done.</span></div>
-<a class="btn" href="#remakes">See The Makeovers — From $2,199</a>
+<div class="flag-txt"><b>Full Vehicle Restore &amp; Protect</b><span>Our biggest job: your choice of one, two or three-stage paint correction + a 10-year ceramic coating — wheels, tires, trim, glass, engine bay and full interior all included.</span></div>
+<a class="btn" href="#restore">See The Package — From $2,199</a>
 </div></div>
 <section id="lineup"><div class="bignum">01</div><div class="wrap">
 <div class="kicker">The Lineup</div><h2>Cars We Have <span class="serif">Detailed</span></h2>
@@ -689,7 +708,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 
 <div class="facts"><div class="wrap">
 <div class="fact reveal"><b>16</b><span>Cars in the lineup</span></div>
-<div class="fact reveal"><b>05</b><span>Detail packages</span></div>
+<div class="fact reveal"><b>03</b><span>Detail packages</span></div>
 <div class="fact reveal"><b>08</b><span>Add-on services</span></div>
 <div class="fact reveal"><b>01</b><span>Signature coating</span></div>
 </div></div>
@@ -734,56 +753,51 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="promo-prices"><span>Car <b>from $125</b>/mo</span><span>SUV <b>from $150</b>/mo</span><span>Full-Size Truck <b>from $175</b>/mo</span></div>
 <a class="btn" href="#monthly" style="font-size:16.5px;padding:16px 30px">Build My Monthly Plan</a>
 </div></div></section>
-<section id="remakes"><div class="wrap">
-<div class="kicker">Detail &amp; Rejuvenation</div><h2>The <span class="serif">Makeovers</span></h2>
-<p class="sub">Full paint correction, a 10-year ceramic coating, and everything else in one visit — wheels, tires, trim, glass, and a full interior detail. Priced by vehicle size.</p>
-<div class="pkgs">
-<div class="pkg reveal"><h3>Makeover 1</h3><ul><li>One-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
-<li>10-year ceramic coating — the deepest gloss and protection we offer</li>
-<li>Extreme wheel cleaning &amp; protection — wheels removed, ceramic coated</li>
-<li>Permanent tire coating — lasts the life of the tire, no sling</li>
-<li>Black trim restoration</li>
-<li>Full interior detail — every surface cleaned &amp; protected</li>
-<li>Glass polish + ceramic coating on the windows</li>
-<li>Full wash &amp; chemical decontamination before polishing</li></ul>
-<p class="expect">What to expect: light swirls, fine scratches and dullness polished away — about 70–80% of defects gone. Deeper scratches soften, but stay visible.</p>
+<section id="restore"><div class="wrap">
+<div class="kicker">Detail &amp; Rejuvenation</div><h2>Full Vehicle <span class="serif">Restore &amp; Protect</span></h2>
+<p class="sub">One package that does everything — paint, wheels, tires, trim, glass, engine bay, and the full interior, restored and then protected with ceramic. The only choice you make is how deep the paint correction goes.</p>
+<div class="restore-card pkg reveal">
+<h3>Full Vehicle Restore &amp; Protect</h3>
+<p class="rst-lede">Pick your correction stage. Deeper stages chase deeper defects — the rest of the package is identical, and it includes everything below.</p>
+<div class="stage-pick" id="cardStages">
+<button type="button" class="stage-btn sel" data-stage="1"><b>One-Stage</b><span>About 2 days · 70–80% of defects</span></button>
+<button type="button" class="stage-btn" data-stage="2"><b>Two-Stage</b><span>2–3 days · 85–90% of defects</span></button>
+<button type="button" class="stage-btn" data-stage="3"><b>Three-Stage</b><span>About 3 days · 95%+ correction</span></button>
+</div>
+<p class="expect" id="cardExpect"></p>
 <div class="sizes">
-<div class="sizerow"><span>Car / Coupe</span><b>$2,199</b></div>
-<div class="sizerow"><span>Mid-Size SUV &amp; Truck</span><b>$2,499</b></div>
-<div class="sizerow"><span>Large SUV &amp; Truck (3-row)</span><b>$2,899</b></div>
+<div class="sizerow"><span>Car / Coupe</span><b id="rCar"></b></div>
+<div class="sizerow"><span>Mid-Size SUV &amp; Truck</span><b id="rMid"></b></div>
+<div class="sizerow"><span>Large SUV &amp; Truck (3-row)</span><b id="rLarge"></b></div>
 </div>
-<a class="btn" href="#book">Book This Detail</a></div>
-<div class="pkg reveal"><h3>Makeover 2</h3><ul><li>Two-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
-<li>10-year ceramic coating — the deepest gloss and protection we offer</li>
-<li>Extreme wheel cleaning &amp; protection — wheels removed, ceramic coated</li>
-<li>Permanent tire coating — lasts the life of the tire, no sling</li>
-<li>Black trim restoration</li>
-<li>Full interior detail — every surface cleaned &amp; protected</li>
-<li>Glass polish + ceramic coating on the windows</li>
-<li>Full wash &amp; chemical decontamination before polishing</li></ul>
-<p class="expect">What to expect: a cutting stage first removes deeper clear-coat scratches and heavy swirls, then a refining stage restores the gloss — about 85–90% of defects gone.</p>
-<div class="sizes">
-<div class="sizerow"><span>Car / Coupe</span><b>$2,599</b></div>
-<div class="sizerow"><span>Mid-Size SUV &amp; Truck</span><b>$2,999</b></div>
-<div class="sizerow"><span>Large SUV &amp; Truck (3-row)</span><b>$3,399</b></div>
+<p class="rst-inc">Everything included in the package:</p>
+<div class="rst-groups">
+<div class="rst-group"><h4>Wash &amp; Decontamination</h4><ul><li>Foam pre-soak and a full hand wash</li>
+<li>Wheels, tires and wheel wells deep cleaned</li>
+<li>Door jambs and fuel door degreased and cleaned</li>
+<li>Iron and fallout decontamination</li>
+<li>Clay bar treatment on the paint and glass</li></ul></div>
+<div class="rst-group"><h4>Engine Bay</h4><ul><li>Full engine bay detail — degreased, brushed and carefully rinsed</li>
+<li>Engine plastics, covers and hoses dressed and protected</li></ul></div>
+<div class="rst-group"><h4>Paint Correction</h4><ul><li>Paint inspected under correction lighting</li>
+<li>Your chosen stage of machine polishing — one, two or three stages</li>
+<li>Panel wipe between stages, so every pass is checked on bare paint</li></ul></div>
+<div class="rst-group"><h4>Ceramic Protection</h4><ul><li>10-year ceramic coating on the paint</li>
+<li>Ceramic coating on all exterior plastic trim</li>
+<li>Black trim restored, then ceramic coated</li>
+<li>Glass polished and ceramic coated</li>
+<li>Wheels removed, deep cleaned and ceramic coated — faces and barrels</li>
+<li>Permanent tire coating — lasts the life of the tire, zero sling</li></ul></div>
+<div class="rst-group"><h4>Interior</h4><ul><li>Full vacuum, including the trunk</li>
+<li>Carpet and seat shampoo with hot-water extraction</li>
+<li>Leather cleaned and protected</li>
+<li>Dash, console, door panels and every interior surface cleaned and dressed</li>
+<li>Vents, buttons and crevices steam detailed</li>
+<li>Headliner spot cleaned</li>
+<li>Interior glass cleaned streak-free</li></ul></div>
+<div class="rst-group"><h4>Final Touches</h4><ul><li>Final panel wipe and a full inspection under the light before it leaves</li></ul></div>
 </div>
-<a class="btn" href="#book">Book This Detail</a></div>
-<div class="pkg hot reveal"><div class="badge">Deepest Correction</div><h3>Makeover 3</h3><ul><li>Three-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
-<li>10-year ceramic coating — the deepest gloss and protection we offer</li>
-<li>Extreme wheel cleaning &amp; protection — wheels removed, ceramic coated</li>
-<li>Permanent tire coating — lasts the life of the tire, no sling</li>
-<li>Black trim restoration</li>
-<li>Full interior detail — every surface cleaned &amp; protected</li>
-<li>Glass polish + ceramic coating on the windows</li>
-<li>Full wash &amp; chemical decontamination before polishing</li></ul>
-<p class="expect">What to expect: the deepest defects polishing can reach, chased stage by stage — 95%+ correction, near-perfect paint. The honest limit: a scratch cut through the clear coat into the paint cannot be polished out — that needs repaint.</p>
-<div class="sizes">
-<div class="sizerow"><span>Car / Coupe</span><b>$2,999</b></div>
-<div class="sizerow"><span>Mid-Size SUV &amp; Truck</span><b>$3,499</b></div>
-<div class="sizerow"><span>Large SUV &amp; Truck (3-row)</span><b>$3,999</b></div>
-</div>
-<a class="btn" href="#book">Book This Detail</a></div>
-</div>
+<a class="btn" href="#book">Book This Package</a></div>
 <p class="fine" style="margin-top:16px">How deep is the scratch? Surface swirls and fine marks polish out in one stage. Deeper clear-coat scratches need two or three. Quick test: if you can catch a fingernail in the scratch, it has likely cut through the clear coat — Peter will tell you straight whether polishing can fix it. Peter confirms your exact size price when he replies to your booking.</p>
 </div></section>
 
@@ -799,7 +813,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="cer-step"><div class="cer-n">5</div><div><h3>The Coating</h3><p>Only now does the coating come out. It goes on by hand, panel by panel, no rushing — each section gets leveled and checked under the light before moving on.</p></div></div>
 <div class="cer-step"><div class="cer-n">6</div><div><h3>Curing &amp; Aftercare</h3><p>The coating needs time to harden up. Before you leave, you will know exactly when it is safe to drive, when rain is fine, and when you can wash it again — simple stuff, and we will walk you through it.</p></div></div>
 </div>
-<div class="cer-why"><h3>So Why Does It Cost What It Costs?</h3><p>Honest answer: you are not paying for a bottle of coating. You are paying for a full day or more of prep, machine polishing, and careful hand work — the coating itself is just the last step. Done right, you get years of protection and a car that stays glossy with simple washes. Done cheap, you get coating spread over dirty, swirled paint — and it shows. Every Makeover above includes this full process and a 10-year coating.</p></div>
+<div class="cer-why"><h3>So Why Does It Cost What It Costs?</h3><p>Honest answer: you are not paying for a bottle of coating. You are paying for a full day or more of prep, machine polishing, and careful hand work — the coating itself is just the last step. Done right, you get years of protection and a car that stays glossy with simple washes. Done cheap, you get coating spread over dirty, swirled paint — and it shows. The Full Vehicle Restore &amp; Protect package above includes this full process and a 10-year coating.</p></div>
 </div></section>
 <section id="learn"><div class="wrap">
 <div class="kicker">Detailing 101</div><h2>Know Your <span class="serif">Detail</span></h2>
@@ -807,7 +821,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="learn-grid">
 <div class="lcard reveal"><h3>Detail vs. Correction</h3><p>A detail cleans and protects your car. Paint correction is different — it is machine polishing that permanently removes swirls, scratches and oxidation from the clear coat. It is the only way to actually remove defects. Waxes and fillers just hide them for a few weeks.</p></div>
 <div class="lcard reveal"><h3>What the Stages Mean</h3><p>Every scratch sits at a depth, and the stage you need depends on how deep yours go. Light swirls and fine scratches live on the surface of the clear coat — one stage removes about 70–80% of defects. Deeper scratches need a cutting stage to level them, then a refining stage to restore the gloss — that is two stages, about 85–90%. Three stages chase the deepest defects polishing can reach, 95%+. The fingernail test tells the truth: drag a nail across the scratch — if it catches, it has likely cut through the clear coat into the paint, and no amount of polishing brings it back. That needs repaint, and a good detailer tells you before you pay.</p></div>
-<div class="lcard reveal"><h3>Ceramic Coating vs. Wax</h3><p>Wax lasts weeks. A sealant lasts months. A ceramic coating chemically bonds to the paint and lasts for years — the Makeovers use a 10-year coating. It adds deep gloss, blocks UV and chemical damage, and makes washing far easier because dirt struggles to stick.</p></div>
+<div class="lcard reveal"><h3>Ceramic Coating vs. Wax</h3><p>Wax lasts weeks. A sealant lasts months. A ceramic coating chemically bonds to the paint and lasts for years — the Restore &amp; Protect package uses a 10-year coating. It adds deep gloss, blocks UV and chemical damage, and makes washing far easier because dirt struggles to stick.</p></div>
 <div class="lcard reveal"><h3>What a Coating Can't Do</h3><p>The honest part: a coating is not armor. It will not stop rock chips or deep scratches — that takes paint protection film. What it does stop is wash swirls, bird-dropping etching, sun fading, and grime bonding into your paint. Think of it as a hard, sacrificial skin over the paint.</p></div>
 <div class="lcard reveal"><h3>Why the Wheels Come Off</h3><p>With a wheel on the car, only the face can be cleaned. Off the car, the barrel, the caliper and the wheel well get fully cleaned, and the whole wheel gets ceramic coated — brake dust stops sticking and future washes take minutes. Same idea with tire coating: dressings sling off and fade in weeks, while a permanent coating bonds and lasts the life of the tire.</p></div>
 <div class="lcard reveal"><h3>Aftercare That Matters</h3><p>Keep a fresh coating dry while it cures, then wash by hand with pH-neutral soap — automatic brush washes are the fastest way to swirl coated paint. A maintenance wash every few weeks keeps the coating performing for its full life. And skip the wax: the coating replaces it.</p></div>
@@ -912,11 +926,17 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <button type="button" class="pick" data-pkg="Diamond Detail"><div class="ic">💎</div><div class="t">Diamond Detail</div><div class="d">The full treatment</div><div class="pr">Car $349 · SUV $399 · Truck $449</div></button>
 </div>
 
-<div class="grp-divider"><span>Paint Correction — The Makeovers</span></div>
+<div class="grp-divider"><span>Paint Correction — Restore &amp; Protect</span></div>
 <div class="pick-grid pk" style="margin-top:12px">
-<button type="button" class="pick" data-pkg="Makeover 1 — One-Stage Correction"><div class="ic">🔧</div><div class="t">Makeover 1</div><div class="d">One-stage correction · 10-year ceramic · everything included · from $2,199</div></button>
-<button type="button" class="pick" data-pkg="Makeover 2 — Two-Stage Correction"><div class="ic">🔨</div><div class="t">Makeover 2</div><div class="d">Two-stage correction · 10-year ceramic · everything included · from $2,599</div></button>
-<button type="button" class="pick" data-pkg="Makeover 3 — Three-Stage Correction"><div class="ic">🏆</div><div class="t">Makeover 3</div><div class="d">Three-stage correction · 10-year ceramic · everything included · from $2,999</div></button>
+<button type="button" class="pick" data-pkg="Full Vehicle Restore & Protect"><div class="ic">🏆</div><div class="t">Full Vehicle Restore &amp; Protect</div><div class="d">Paint correction (you pick the stage) · 10-year ceramic everywhere · engine bay + full interior included · from $2,199</div></button>
+</div>
+<div id="stageRow" style="display:none;margin-top:12px">
+<div class="stage-label">Your correction stage:</div>
+<div class="stage-chips">
+<button type="button" class="schip sel" data-stage="1">One-Stage</button>
+<button type="button" class="schip" data-stage="2">Two-Stage</button>
+<button type="button" class="schip" data-stage="3">Three-Stage</button>
+</div>
 </div>
 <div class="pick-grid" style="margin-top:12px">
 <button type="button" class="pick" data-pkg="Not sure yet"><div class="t">Not sure yet</div><div class="d">Peter will recommend the right one</div></button>
@@ -1373,25 +1393,26 @@ upd();
 </script>
 
 <script>
-// Makeover packages: size pricing + included add-ons (v14)
-PKG_TIME["Makeover 1 — One-Stage Correction"]="About 2 days";
-PKG_TIME["Makeover 2 — Two-Stage Correction"]="2–3 days";
-PKG_TIME["Makeover 3 — Three-Stage Correction"]="About 3 days";
-var MAKEOVER_PRICES={
-"Makeover 1 — One-Stage Correction":{"Car":2199,"SUV / Truck":2499},
-"Makeover 2 — Two-Stage Correction":{"Car":2599,"SUV / Truck":2999},
-"Makeover 3 — Three-Stage Correction":{"Car":2999,"SUV / Truck":3499}};
-var MAKEOVER_INC=["Extreme Wheel Cleaning & Protection","Permanent Tire Coating","Black Trim Restoration","Glass Polish"];
-function isMakeover(){ return S.pkg.indexOf("Makeover")===0; }
-function pkgPrice(){ var r=MAKEOVER_PRICES[S.pkg]; if(!r) return 0; return r[S.veh]||0; }
+// Restore & Protect: stage pricing + included add-ons (v29)
+var RESTORE_PRICES={1:{"Car":2199,"SUV / Truck":2499},2:{"Car":2599,"SUV / Truck":2999},3:{"Car":2999,"SUV / Truck":3499}};
+var STAGE_WORD={1:"One-Stage",2:"Two-Stage",3:"Three-Stage"};
+var RESTORE_INC=["Extreme Wheel Cleaning & Protection","Permanent Tire Coating","Black Trim Restoration","Glass Polish"];
+function stage(){ return (S.stage===2||S.stage===3)?S.stage:1; }
+function isRestore(){ return S.pkg==="Full Vehicle Restore & Protect"; }
+function pkgPrice(){ if(!isRestore()) return 0; var r=RESTORE_PRICES[stage()]; return r?(r[S.veh]||0):0; }
 function money(n){ return "$"+n.toLocaleString("en-US"); }
+function syncStageUI(){
+  document.querySelectorAll('.schip').forEach(function(c){ c.classList.toggle('sel', +c.dataset.stage===stage()); });
+  var row=document.getElementById('stageRow'); if(row) row.style.display=isRestore()?'block':'none';
+}
 function upd(){
   var lines=[];
   lines.push("Ride: "+(S.veh||"—"));
   lines.push("Detail: "+(S.pkg||"—"));
+  if(isRestore()) lines.push("Correction stage: "+STAGE_WORD[stage()]);
   var pp=pkgPrice();
   if(pp) lines.push("Package price: "+money(pp));
-  else if(isMakeover()) lines.push("Package price: by vehicle size — Peter confirms");
+  else if(isRestore()) lines.push("Package price: by vehicle size — Peter confirms");
   lines.push("Add-ons: "+(S.addons.length?S.addons.join(", "):"None"));
   lines.push("When: "+(S.day?S.day:"—")+(S.time?" · "+S.time:""));
   document.getElementById('sumText').textContent=lines.join("\n");
@@ -1401,9 +1422,11 @@ function upd(){
     (nm?"\nName: "+nm:"")+(ph?"\nPhone: "+ph:"")+
     (S.veh?"\nRide: "+S.veh:"")+(v2?"\nVehicle: "+v2:"")+
     "\nDetail: "+(S.pkg||"Not sure yet")+
-    (pp?"\nPackage price: "+money(pp):(isMakeover()?"\nPackage price: by size — confirm exact (Large tier may apply)":""))+
+    (isRestore()?"\nCorrection stage: "+STAGE_WORD[stage()]:"")+
+    (pp?"\nPackage price: "+money(pp):(isRestore()?"\nPackage price: by size — confirm exact (Large tier may apply)":""))+
     (S.addons.length?"\nAdd-ons: "+S.addons.join(", ")+"\nAdd-ons total: "+(at.hasFrom?"from ":"")+"$"+at.total:"")+
     (S.day?"\nWhen: "+S.day+(S.time?" · "+S.time:""):"");
+  window._bkMsg=msg;
   window._bkMsg=msg;
   var missing=[];
   if(!S.veh) missing.push('your ride');
@@ -1413,6 +1436,7 @@ function upd(){
   var bits=[];
   bits.push((S.veh?'✓ ':'○ ')+(S.veh||'Ride'));
   bits.push((S.pkg?'✓ ':'○ ')+(S.pkg?S.pkg.split(' — ')[0]:'Detail'));
+  if(isRestore()) bits.push('Stage '+stage());
   if(pp) bits.push('Package '+money(pp));
   bits.push((S.day?'✓ ':'○ ')+(S.day?S.day.split(', ')[1]:'Day'));
   bits.push((S.time?'✓ ':'○ ')+(S.time||'Time'));
@@ -1420,10 +1444,11 @@ function upd(){
   var st=document.getElementById('bkStatus');
   st.innerHTML='<b>'+bits.join(' · ')+'</b><span>'+(missing.length?('Still need: '+missing.join(', ')):'Ready — just add your name & phone below')+'</span>';
   st.classList.toggle('ready', !missing.length);
+  syncStageUI();
 }
 function applyInc(){
   document.querySelectorAll('.tgl').forEach(function(t){
-    var inc=isMakeover()&&MAKEOVER_INC.indexOf(t.dataset.name)>-1;
+    var inc=isRestore()&&RESTORE_INC.indexOf(t.dataset.name)>-1;
     t.classList.toggle('inc', inc);
     if(inc&&t.classList.contains('sel')){
       t.classList.remove('sel');
@@ -1434,16 +1459,32 @@ function applyInc(){
 }
 document.querySelectorAll('#board [data-pkg]').forEach(function(el){ el.addEventListener('click', function(){ setTimeout(function(){ applyInc(); upd(); }, 0); }); });
 document.querySelectorAll('#bkVeh [data-veh]').forEach(function(el){ el.addEventListener('click', function(){ setTimeout(function(){ upd(); }, 0); }); });
+document.querySelectorAll('.schip').forEach(function(c){ c.addEventListener('click', function(){ S.stage=+c.dataset.stage; syncStageUI(); upd(); }); });
 document.querySelectorAll('.tgl').forEach(function(t){ t.addEventListener('click', function(){
   if(t.classList.contains('inc')){ t.classList.remove('sel'); S.addons=S.addons.filter(function(a){ return a!==t.dataset.name; }); }
   setTimeout(function(){ applyInc(); upd(); }, 0);
 }); });
+// Package card: stage picker drives the card prices; Book carries the stage to the board
+var RST_PRICES={1:[2199,2499,2899],2:[2599,2999,3399],3:[2999,3499,3999]};
+var RST_EXPECT={1:"What to expect: light swirls, fine scratches and dullness polished away — about 70–80% of defects gone. Deeper scratches soften, but stay visible.",
+2:"What to expect: a cutting stage first removes deeper clear-coat scratches and heavy swirls, then a refining stage restores the gloss — about 85–90% of defects gone.",
+3:"What to expect: the deepest defects polishing can reach, chased stage by stage — 95%+ correction, near-perfect paint. The honest limit: a scratch cut through the clear coat into the paint cannot be polished out — that needs repaint."};
+var cardStage=1;
+function cardShow(){
+  document.querySelectorAll('#cardStages .stage-btn').forEach(function(b){ b.classList.toggle('sel', +b.dataset.stage===cardStage); });
+  var p=RST_PRICES[cardStage];
+  document.getElementById('rCar').textContent="$"+p[0].toLocaleString("en-US");
+  document.getElementById('rMid').textContent="$"+p[1].toLocaleString("en-US");
+  document.getElementById('rLarge').textContent="$"+p[2].toLocaleString("en-US");
+  document.getElementById('cardExpect').textContent=RST_EXPECT[cardStage];
+}
+document.querySelectorAll('#cardStages .stage-btn').forEach(function(b){ b.addEventListener('click', function(){ cardStage=+b.dataset.stage; cardShow(); }); });
+cardShow();
 document.querySelectorAll('.pkg .btn').forEach(function(btn){ btn.addEventListener('click', function(){
   var card=btn.closest('.pkg'); var name=card?card.querySelector('h3').textContent:'';
-  var map={'Makeover 1':'Makeover 1 — One-Stage Correction','Makeover 2':'Makeover 2 — Two-Stage Correction','Makeover 3':'Makeover 3 — Three-Stage Correction'};
-  var label=map[name]; if(!label) return;
-  document.querySelectorAll('#board [data-pkg]').forEach(function(x){ x.classList.toggle('sel', x.dataset.pkg===label); });
-  S.pkg=label; applyInc(); upd();
+  if(name!=="Full Vehicle Restore & Protect") return;
+  document.querySelectorAll('#board [data-pkg]').forEach(function(x){ x.classList.toggle('sel', x.dataset.pkg==="Full Vehicle Restore & Protect"); });
+  S.pkg="Full Vehicle Restore & Protect"; S.stage=cardStage; applyInc(); upd();
 }); });
 var _lastPkg=S.pkg;
 setInterval(function(){ if(S.pkg!==_lastPkg){ _lastPkg=S.pkg; applyInc(); upd(); } }, 500);
