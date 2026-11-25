@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:ital,wght@0,800;0,900;1,900&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoWash","name":"Mobile Detail Bros","url":"https://getsitesprintstudio.github.io/mobiledetailbros/","telephone":"+1-559-975-5249","founder":{"@type":"Person","name":"Peter Martinez"},"sameAs":["https://www.instagram.com/mobiledetailbros.us/","https://linktr.ee/mobiledetailbros"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoWash","name":"Mobile Detail Bros","url":"https://getsitesprintstudio.github.io/mobiledetailbros/","founder":{"@type":"Person","name":"Peter Martinez"},"sameAs":["https://www.instagram.com/mobiledetailbros.us/","https://linktr.ee/mobiledetailbros"]}</script>
 <style>
 :root{--bg:#060607;--bg2:#0c0c0e;--panel:#121215;--line:#222228;--txt:#f6f3ec;--mut:#a49f93;--gold:#d9a441;--gold2:#f2c66d;--rad:22px}
 .serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;text-transform:none;letter-spacing:0}
@@ -491,6 +491,25 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 #remakes .sizerow b{font-family:'Montserrat';font-weight:800;color:var(--gold);font-size:16.5px;white-space:nowrap}
 .tgl.inc{opacity:.55;border-style:dashed}
 .tgl.inc::after{content:"Included in your Remake Over ✓";display:block;font-size:11.5px;font-weight:800;color:var(--gold);letter-spacing:.04em;margin-top:2px}
+
+/* Guide: quiz + education (v15) */
+.quiz{background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:26px;margin-top:34px}
+.qblock{margin-bottom:22px}
+.q-t{font-family:'Montserrat';font-weight:800;font-size:15px;color:var(--txt);margin-bottom:10px}
+.qopts{display:flex;flex-wrap:wrap;gap:9px}
+.qchip{border:1.5px solid var(--line);background:var(--bg);color:var(--txt);border-radius:999px;padding:10px 16px;font-size:14px;font-weight:600;cursor:pointer;transition:border-color .15s,background .15s}
+.qchip.sel{border-color:var(--gold);background:rgba(20,99,216,.1);color:var(--gold)}
+#quizResult{border-top:1px dashed var(--line);padding-top:20px;margin-top:4px}
+.q-rec-t{font-size:11.5px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.q-rec-name{font-family:'Montserrat';font-weight:900;font-size:26px;color:var(--txt);margin:4px 0 6px}
+.q-rec-why{color:var(--mut);font-size:15px;max-width:560px}
+.q-rec-meta{color:var(--txt);font-weight:700;font-size:14.5px;margin:8px 0 16px}
+#quizResult .btn{margin-right:10px}
+.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:38px}
+@media(max-width:900px){.learn-grid{grid-template-columns:1fr}}
+.lcard{background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:26px 24px}
+.lcard h3{font-size:18.5px;font-weight:900;color:var(--txt);margin-bottom:9px}
+.lcard p{color:var(--mut);font-size:14.5px;line-height:1.55}
 </style>
 <meta name="theme-color" content="#0a1f44">
 </head>
@@ -516,7 +535,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <h1>Mobile<br><span class="out">Detail</span> <span class="serif">Bros.</span></h1>
 <p class="lede">Show-car results in your own driveway. Build your detail below in under a minute, send one text, and we handle the rest.</p>
 <div class="badge-rot"><svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ">WE COME TO YOU • MOBILE DETAIL BROS • </textPath></text><text x="60" y="68" text-anchor="middle" class="c">★</text></svg></div>
-<div class="cta-row"><a class="btn" href="#book">Build My Detail</a><a class="btn ghost" href="tel:+15599755249">Call / Text — (559) 975-5249</a></div>
+<div class="cta-row"><a class="btn" href="#book">Build My Detail</a></div>
 <div class="chips"><span><b>◆</b> Reliable</span><span><b>◆</b> Friendly</span><span><b>◆</b> Professional</span><span><b>◆</b> Experienced</span></div>
 </div><div class="scrolldown">SCROLL ▼</div></header>
 <div class="marquee"><div class="track">
@@ -568,11 +587,47 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="fact reveal"><b>01</b><span>Signature coating</span></div>
 </div></div>
 
+
+<section id="guide"><div class="wrap">
+<div class="kicker">Not Sure What You Need?</div><h2>Find Your <span class="serif">Detail</span></h2>
+<p class="sub">Answer three quick questions and get a straight recommendation — the same one Peter would give you in person.</p>
+<div class="quiz">
+<div class="qblock"><div class="q-t">1 · How does your paint look?</div>
+<div class="qopts">
+<button type="button" class="qchip" data-q="0" data-v="0">Pretty good — mostly just dirty</button>
+<button type="button" class="qchip" data-q="0" data-v="1">Dull, with light swirls in the sun</button>
+<button type="button" class="qchip" data-q="0" data-v="2">Visible scratches &amp; heavy swirls</button>
+<button type="button" class="qchip" data-q="0" data-v="3">Rough — I want it near perfect</button>
+</div></div>
+<div class="qblock"><div class="q-t">2 · What matters most to you?</div>
+<div class="qopts">
+<button type="button" class="qchip" data-q="1" data-v="0">A clean car, in and out</button>
+<button type="button" class="qchip" data-q="1" data-v="1">Shine &amp; protection for months</button>
+<button type="button" class="qchip" data-q="1" data-v="2">Maximum gloss, protected for years</button>
+<button type="button" class="qchip" data-q="1" data-v="3">A full transformation</button>
+</div></div>
+<div class="qblock"><div class="q-t">3 · How is the inside?</div>
+<div class="qopts">
+<button type="button" class="qchip" data-q="2" data-v="0">Light dust &amp; crumbs</button>
+<button type="button" class="qchip" data-q="2" data-v="1">It needs a real deep clean</button>
+<button type="button" class="qchip" data-q="2" data-v="2">Part of the transformation</button>
+</div></div>
+<div id="quizResult" style="display:none">
+<div class="q-rec-t">Your match</div>
+<div class="q-rec-name" id="qrName"></div>
+<p class="q-rec-why" id="qrWhy"></p>
+<p class="q-rec-meta" id="qrMeta"></p>
+<a class="btn" href="#book" id="qrBook">Book This Detail</a>
+<button type="button" class="btn ghost" id="qrRetake">↺ Start over</button>
+</div>
+<p class="fine" id="quizHint">Answer all three and your match appears here.</p>
+</div>
+</div></section>
 <section id="packages"><div class="bignum">02</div><div class="wrap">
 <div class="kicker">Detail Packages</div><h2>Pick Your <span class="serif">Detail</span></h2>
 <p class="sub">Three levels, one standard: done right, at your place, on your schedule.</p>
 <div class="pkgs">
-<div class="pkg reveal"><h3>Hand Car Wash</h3><div class="time">1 Hour Detail</div><ul><li>Hand wash with spot-free rinse</li>
+<div class="pkg reveal"><h3>Hand Car Wash</h3><ul><li>Hand wash with spot-free rinse</li>
 <li>Dried with soft microfiber towels</li>
 <li>Windows cleaned inside &amp; out</li>
 <li>Quick wax applied</li>
@@ -580,7 +635,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <li>Dashboard, door panels &amp; cup holders wiped down</li>
 <li>Brake dust removed from wheels</li>
 <li>Hi-gloss tire dressing</li></ul><a class="btn" href="#book">Book This Detail</a></div>
-<div class="pkg reveal"><h3>Platinum Detail</h3><div class="time">3–4 Hour Detail</div><ul><li>Thorough exterior hand wash</li>
+<div class="pkg reveal"><h3>Platinum Detail</h3><ul><li>Thorough exterior hand wash</li>
 <li>Bug detail — chemical removal of bug remains</li>
 <li>Road tar, sap &amp; bird dropping removal</li>
 <li>Door jamb and protection detail</li>
@@ -593,7 +648,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <li>Buttons and grooves brush-cleaned and vacuumed</li>
 <li>Makeup removal</li>
 <li>Hi-gloss tire dressing</li></ul><a class="btn" href="#book">Book This Detail</a></div>
-<div class="pkg hot reveal"><div class="badge">Most Complete</div><h3>Diamond Detail</h3><div class="time">4–6 Hour Detail</div><ul><li>Complete exterior chemical decontamination wash</li>
+<div class="pkg hot reveal"><div class="badge">Most Complete</div><h3>Diamond Detail</h3><ul><li>Complete exterior chemical decontamination wash</li>
 <li>Synthetic clay bar treatment — removes roughness, overspray &amp; contaminants</li>
 <li>Bug detail — chemical removal of bug remains</li>
 <li>Road tar, sap &amp; bird dropping removal</li>
@@ -614,7 +669,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="kicker">Detail &amp; Rejuvenation</div><h2>The <span class="serif">Remake Overs</span></h2>
 <p class="sub">Full paint correction, a 10-year ceramic coating, and everything else in one visit — wheels, tires, trim, glass, and a full interior detail. Priced by vehicle size.</p>
 <div class="pkgs">
-<div class="pkg reveal"><h3>Remake Over 1</h3><div class="time">About 2 Days</div><ul><li>One-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
+<div class="pkg reveal"><h3>Remake Over 1</h3><ul><li>One-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
 <li>10-year ceramic coating — the deepest gloss and protection we offer</li>
 <li>Extreme wheel cleaning &amp; protection — wheels removed, ceramic coated</li>
 <li>Permanent tire coating — lasts the life of the tire, no sling</li>
@@ -628,7 +683,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="sizerow"><span>Large SUV &amp; Truck (3-row)</span><b>$2,899</b></div>
 </div>
 <a class="btn" href="#book">Book This Detail</a></div>
-<div class="pkg reveal"><h3>Remake Over 2</h3><div class="time">2–3 Days</div><ul><li>Two-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
+<div class="pkg reveal"><h3>Remake Over 2</h3><ul><li>Two-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
 <li>10-year ceramic coating — the deepest gloss and protection we offer</li>
 <li>Extreme wheel cleaning &amp; protection — wheels removed, ceramic coated</li>
 <li>Permanent tire coating — lasts the life of the tire, no sling</li>
@@ -642,7 +697,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="sizerow"><span>Large SUV &amp; Truck (3-row)</span><b>$3,399</b></div>
 </div>
 <a class="btn" href="#book">Book This Detail</a></div>
-<div class="pkg hot reveal"><div class="badge">Deepest Correction</div><h3>Remake Over 3</h3><div class="time">About 3 Days</div><ul><li>Three-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
+<div class="pkg hot reveal"><div class="badge">Deepest Correction</div><h3>Remake Over 3</h3><ul><li>Three-stage paint correction — machine polishing that removes swirls, scratches &amp; oxidation</li>
 <li>10-year ceramic coating — the deepest gloss and protection we offer</li>
 <li>Extreme wheel cleaning &amp; protection — wheels removed, ceramic coated</li>
 <li>Permanent tire coating — lasts the life of the tire, no sling</li>
@@ -658,6 +713,19 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <a class="btn" href="#book">Book This Detail</a></div>
 </div>
 <p class="fine" style="margin-top:16px">One-stage removes light swirls and defects (about 70–80% correction). Two-stage cuts deeper. Three-stage chases near-perfect paint. Peter confirms your exact size price when he replies to your booking.</p>
+</div></section>
+
+<section id="learn"><div class="wrap">
+<div class="kicker">Detailing 101</div><h2>Know Your <span class="serif">Detail</span></h2>
+<p class="sub">The important stuff, in plain words — so you know exactly what you are paying for.</p>
+<div class="learn-grid">
+<div class="lcard reveal"><h3>Detail vs. Correction</h3><p>A detail cleans and protects your car. Paint correction is different — it is machine polishing that permanently removes swirls, scratches and oxidation from the clear coat. It is the only way to actually remove defects. Waxes and fillers just hide them for a few weeks.</p></div>
+<div class="lcard reveal"><h3>What the Stages Mean</h3><p>Each stage is a full polishing pass with a different pad and polish. One stage removes about 70–80% of defects — light swirls and dullness. Two stages cut deeper first, then refine the finish. Three stages chase near-perfect paint. The worse the paint, the more stages it needs.</p></div>
+<div class="lcard reveal"><h3>Ceramic Coating vs. Wax</h3><p>Wax lasts weeks. A sealant lasts months. A ceramic coating chemically bonds to the paint and lasts for years — the Remake Overs use a 10-year coating. It adds deep gloss, blocks UV and chemical damage, and makes washing far easier because dirt struggles to stick.</p></div>
+<div class="lcard reveal"><h3>What a Coating Can't Do</h3><p>The honest part: a coating is not armor. It will not stop rock chips or deep scratches — that takes paint protection film. What it does stop is wash swirls, bird-dropping etching, sun fading, and grime bonding into your paint. Think of it as a hard, sacrificial skin over the paint.</p></div>
+<div class="lcard reveal"><h3>Why the Wheels Come Off</h3><p>With a wheel on the car, only the face can be cleaned. Off the car, the barrel, the caliper and the wheel well get fully cleaned, and the whole wheel gets ceramic coated — brake dust stops sticking and future washes take minutes. Same idea with tire coating: dressings sling off and fade in weeks, while a permanent coating bonds and lasts the life of the tire.</p></div>
+<div class="lcard reveal"><h3>Aftercare That Matters</h3><p>Keep a fresh coating dry while it cures, then wash by hand with pH-neutral soap — automatic brush washes are the fastest way to swirl coated paint. A maintenance wash every few weeks keeps the coating performing for its full life. And skip the wax: the coating replaces it.</p></div>
+</div>
 </div></section>
 <section id="addons"><div class="wrap">
 <div class="kicker">Add-On Services</div><h2>Take It Further</h2>
@@ -751,9 +819,9 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 
 <div class="bsec"><div class="bsec-t">Your detail</div>
 <div class="pick-grid pk">
-<button type="button" class="pick" data-pkg="Hand Car Wash — 1 hr"><div class="ic">🧽</div><div class="t">Hand Car Wash</div><div class="d">About 1 hour</div></button>
-<button type="button" class="pick" data-pkg="Platinum Detail — 3-4 hrs"><div class="ic">✨</div><div class="t">Platinum Detail</div><div class="d">3–4 hours · 3-month ceramic protection</div></button>
-<button type="button" class="pick" data-pkg="Diamond Detail — 4-6 hrs"><div class="ic">💎</div><div class="t">Diamond Detail</div><div class="d">4–6 hours · the full treatment</div></button>
+<button type="button" class="pick" data-pkg="Hand Car Wash — 1 hr"><div class="ic">🧽</div><div class="t">Hand Car Wash</div><div class="d">Hand wash, wax &amp; interior tidy</div></button>
+<button type="button" class="pick" data-pkg="Platinum Detail — 3-4 hrs"><div class="ic">✨</div><div class="t">Platinum Detail</div><div class="d">3-month ceramic protection</div></button>
+<button type="button" class="pick" data-pkg="Diamond Detail — 4-6 hrs"><div class="ic">💎</div><div class="t">Diamond Detail</div><div class="d">The full treatment</div></button>
 </div>
 
 <div class="pick-grid pk" style="margin-top:12px">
@@ -799,11 +867,11 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <input id="ph" type="tel" placeholder="Your phone number" autocomplete="tel">
 <input id="veh2" type="text" placeholder="Vehicle year, make &amp; model (e.g. 2021 BMW M4)">
 <p id="formHint"></p>
-<a class="btn" id="sendBtn" href="sms:+15599755249" style="width:100%;font-size:16.5px;padding:17px">Text My Booking to Peter</a>
+<button type="button" class="btn" id="sendBtn" style="width:100%;font-size:16.5px;padding:17px">Book My Detail</button>
 <div class="ticket-btns"><button type="button" class="btn ghost" id="icsBtn">📅 Save the Day</button><button type="button" class="btn ghost" id="copyBtn">Copy My Booking</button></div>
-<p class="fine" id="sentNote" style="display:none;color:var(--gold2);font-weight:700">✓ Ready — Messages is opening with everything filled in. Just press send there; your booking is confirmed when Peter replies.</p>
+<p class="fine" id="sentNote" style="display:none;color:var(--gold2);font-weight:700">✓ Booking sent — Peter will reply to confirm your day.</p>
 <button type="button" class="btn ghost" id="resetBtn" style="width:100%;margin-top:10px">↺ Start over</button>
-<p class="fine">This opens a text with everything filled in — just press send. Your booking is confirmed only when Peter replies and approves it.</p>
+<p class="fine">Tap Book My Detail and your request goes straight to Peter. Your booking is confirmed only when Peter replies and approves it.</p>
 </div>
 
 </div></div></section>
@@ -812,16 +880,16 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <section id="faq"><div class="wrap">
 <div class="kicker">Questions</div><h2>Good To Know</h2>
 <details><summary>Do you come to me?</summary><p>Yes. Mobile Detail Bros is fully mobile — we detail your vehicle at your home or workplace. You pick the day and time that works for you.</p></details>
-<details><summary>How do I book?</summary><p>Use the booking builder on this page. Pick your ride, your detail, a day and a time, then tap the button — it opens a text with everything filled in. Just press send. Your booking is confirmed when Peter replies and approves it.</p></details>
-<details><summary>How long does a detail take?</summary><p>Hand Car Wash takes about 1 hour. Platinum Detail takes 3-4 hours. Diamond Detail takes 4-6 hours.</p></details>
+<details><summary>How do I book?</summary><p>Use the booking builder on this page. Pick your ride, your detail, a day and a time, then tap Book My Detail. Your booking is confirmed when Peter replies and approves it.</p></details>
+
 <details><summary>What is Permanent Tire Coating?</summary><p>It lasts the life of the tire, is dry to the touch, and does not sling onto your paint like regular tire dressing. One application — $200.</p></details>
 <details><summary>What does headlight restoration fix?</summary><p>Cloudy, yellowed headlights are polished back to clear and sealed for protection. Standard restoration is $45; Level II is $145.</p></details>
 </div></section>
 
 <section class="cta-sec"><div class="wrap">
 <div class="kicker">Book Your Detail</div><h2>Ready When <span class="serif">You Are.</span></h2>
-<p>Build your detail in under a minute. One text, and your car is on the schedule.</p>
-<div class="cta-row"><a class="btn" href="#book">Build My Detail</a><a class="btn ghost" href="tel:+15599755249">Call / Text — (559) 975-5249</a></div>
+<p>Build your detail in under a minute. One booking request, and your car is on the schedule.</p>
+<div class="cta-row"><a class="btn" href="#book">Build My Detail</a></div>
 </div></section>
 
 <footer><div class="wrap">
@@ -831,9 +899,9 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <a class="btn ghost" href="https://goo.gl/maps/R3Roq7u4iAe2pqEC8" target="_blank" rel="noopener">Google Reviews</a>
 <button class="btn ghost" id="shareBtn" type="button">Share This Page</button>
 </div>
-<p>Mobile Detail Bros — Peter Martinez — (559) 975-5249<br>Mobile detailing. We come to you.</p>
+<p>Mobile Detail Bros — Peter Martinez<br>Mobile detailing. We come to you.</p>
 </div></footer>
-<div class="floatdock"><a class="fd-call" href="tel:+15599755249">Call / Text</a><a class="fd-book" href="#book">Book a Detail</a></div>
+<div class="floatdock"><a class="fd-book" href="#book">Book a Detail</a></div>
 <div id="lightbox"><figure><img alt="Full size photo"><button type="button" class="lb-nav" id="lbPrev" aria-label="Previous photo">‹</button><button type="button" class="lb-nav" id="lbNext" aria-label="Next photo">›</button><figcaption id="lbCap"></figcaption></figure></div>
 
 
@@ -1004,7 +1072,7 @@ document.querySelectorAll('#faq details').forEach(function(d){
     if(!okN||!okP){ e.preventDefault(); hint.textContent=!okN?'Please add your name so Peter knows who is booking.':'Please add a full phone number so Peter can reply.'; hint.style.display='block'; (okN?ph:nm).focus(); return; }
     hint.style.display='none';
     document.getElementById('sentNote').style.display='block';
-    send.textContent='Opening Messages… press send ✓';
+    send.textContent='Sending…';
   });
   function icsDT(d){ function p(n){ return (n<10?'0':'')+n; } return d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+'T'+p(d.getHours())+'0000'; }
   document.getElementById('icsBtn').onclick=function(){
@@ -1028,7 +1096,7 @@ document.querySelectorAll('#faq details').forEach(function(d){
     selDate=null; renderCal();
     var dl=document.getElementById('dayLine'); if(dl) dl.textContent='';
     var sn=document.getElementById('sentNote'); if(sn) sn.style.display='none';
-    send.textContent='Text My Booking to Peter';
+    send.textContent='Book My Detail';
   });
 })();
 </script>
@@ -1129,7 +1197,6 @@ function upd(){
   var lines=[];
   lines.push("Ride: "+(S.veh||"—"));
   lines.push("Detail: "+(S.pkg||"—"));
-  if(PKG_TIME[S.pkg]) lines.push("Time needed: "+PKG_TIME[S.pkg]);
   lines.push("Add-ons: "+(S.addons.length?S.addons.join(", "):"None"));
   lines.push("When: "+(S.day?S.day:"—")+(S.time?" · "+S.time:""));
   document.getElementById('sumText').textContent=lines.join("\n");
@@ -1141,7 +1208,7 @@ function upd(){
     "\nDetail: "+(S.pkg||"Not sure yet")+
     (S.addons.length?"\nAdd-ons: "+S.addons.join(", ")+"\nAdd-ons total: "+(at.hasFrom?"from ":"")+"$"+at.total:"")+
     (S.day?"\nWhen: "+S.day+(S.time?" · "+S.time:""):"");
-  document.getElementById('sendBtn').href="sms:+15599755249?&body="+encodeURIComponent(msg);
+  window._bkMsg=msg;
   var missing=[];
   if(!S.veh) missing.push('your ride');
   if(!S.pkg) missing.push('a detail');
@@ -1200,7 +1267,6 @@ function upd(){
   var lines=[];
   lines.push("Ride: "+(S.veh||"—"));
   lines.push("Detail: "+(S.pkg||"—"));
-  if(PKG_TIME[S.pkg]) lines.push("Time needed: "+PKG_TIME[S.pkg]);
   var pp=pkgPrice();
   if(pp) lines.push("Package price: "+money(pp));
   else if(isRemake()) lines.push("Package price: by vehicle size — Peter confirms");
@@ -1216,7 +1282,7 @@ function upd(){
     (pp?"\nPackage price: "+money(pp):(isRemake()?"\nPackage price: by size — confirm exact (Large tier may apply)":""))+
     (S.addons.length?"\nAdd-ons: "+S.addons.join(", ")+"\nAdd-ons total: "+(at.hasFrom?"from ":"")+"$"+at.total:"")+
     (S.day?"\nWhen: "+S.day+(S.time?" · "+S.time:""):"");
-  document.getElementById('sendBtn').href="sms:+15599755249?&body="+encodeURIComponent(msg);
+  window._bkMsg=msg;
   var missing=[];
   if(!S.veh) missing.push('your ride');
   if(!S.pkg) missing.push('a detail');
@@ -1259,5 +1325,74 @@ document.querySelectorAll('.pkg .btn').forEach(function(btn){ btn.addEventListen
 }); });
 var _lastPkg=S.pkg;
 setInterval(function(){ if(S.pkg!==_lastPkg){ _lastPkg=S.pkg; applyInc(); upd(); } }, 500);
+</script>
+
+<script>
+// Package chooser quiz + form booking submit (v15)
+var QZ=[null,null,null];
+var QREC={
+"Hand Car Wash — 1 hr":{name:"Hand Car Wash",why:"Your paint is in good shape and you mainly want it clean, in and out. No need to pay for correction you do not need.",meta:"Hand wash, quick wax, windows in & out, interior vacuum & wipe-down."},
+"Platinum Detail — 3-4 hrs":{name:"Platinum Detail",why:"Your paint is decent and you want real shine plus protection that lasts months, with a proper interior scrub.",meta:"Full detail plus 3-month hybrid ceramic paint protection."},
+"Diamond Detail — 4-6 hrs":{name:"Diamond Detail",why:"You want the full treatment — decontamination, clay bar and 6-month protection — without machine polishing. The right call when the paint is good but tired.",meta:"The most complete detail we offer, no correction."},
+"Remake Over 1 — One-Stage Correction":{name:"Remake Over 1",why:"Light swirls and dullness are a one-stage fix — about 70–80% of defects gone — and you get the 10-year coating and everything else with it.",meta:"From $2,199 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."},
+"Remake Over 2 — Two-Stage Correction":{name:"Remake Over 2",why:"Visible scratches and heavy swirls need a cutting stage first, then a refining stage. That is exactly what this package is built for.",meta:"From $2,599 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."},
+"Remake Over 3 — Three-Stage Correction":{name:"Remake Over 3",why:"You want the paint chased as close to perfect as it gets. Three stages, the 10-year coating, and every service we offer in one visit.",meta:"From $2,999 by vehicle size · 10-year ceramic · wheels, tires, trim, glass & full interior included."}};
+function qRecommend(){
+  var a=QZ[0], b=QZ[1], c=QZ[2];
+  if(a===null||b===null||c===null) return null;
+  if(a===3||(a===2&&b===3)) return "Remake Over 3 — Three-Stage Correction";
+  if(a===2) return "Remake Over 2 — Two-Stage Correction";
+  if(a===1){ if(b===0&&c<2) return "Diamond Detail — 4-6 hrs"; return "Remake Over 1 — One-Stage Correction"; }
+  if(b===3||c===2||b===2) return "Diamond Detail — 4-6 hrs";
+  if(b===1||c===1) return "Platinum Detail — 3-4 hrs";
+  return "Hand Car Wash — 1 hr";
+}
+function qShow(){
+  var label=qRecommend(), res=document.getElementById('quizResult'), hint=document.getElementById('quizHint');
+  if(!label){ res.style.display='none'; hint.style.display='block'; return; }
+  var r=QREC[label];
+  document.getElementById('qrName').textContent=r.name;
+  document.getElementById('qrWhy').textContent=r.why;
+  document.getElementById('qrMeta').textContent=r.meta;
+  document.getElementById('qrBook').dataset.pkg=label;
+  res.style.display='block'; hint.style.display='none';
+}
+document.querySelectorAll('.qchip').forEach(function(ch){ ch.addEventListener('click', function(){
+  var q=+ch.dataset.q;
+  document.querySelectorAll('.qchip[data-q="'+q+'"]').forEach(function(x){ x.classList.remove('sel'); });
+  ch.classList.add('sel'); QZ[q]=+ch.dataset.v; qShow();
+}); });
+document.getElementById('qrBook').addEventListener('click', function(){
+  var label=this.dataset.pkg; if(!label) return;
+  document.querySelectorAll('#board [data-pkg]').forEach(function(x){ x.classList.toggle('sel', x.dataset.pkg===label); });
+  S.pkg=label; if(typeof applyInc==='function') applyInc(); upd();
+});
+document.getElementById('qrRetake').addEventListener('click', function(){
+  QZ=[null,null,null];
+  document.querySelectorAll('.qchip').forEach(function(x){ x.classList.remove('sel'); });
+  qShow();
+});
+// Booking submit: posts to the studio inbox (no phone number on this site)
+document.getElementById('sendBtn').addEventListener('click', function(){
+  var nm=document.getElementById('nm').value.trim();
+  var ph=document.getElementById('ph').value.replace(/\D/g,'');
+  if(!nm||ph.length<10) return;
+  var btn=this; btn.disabled=true; btn.textContent='Sending…';
+  var fd=new FormData();
+  fd.append('access_key','d47bc170-db48-45dc-b666-17d5d49061ac');
+  fd.append('subject','New Mobile Detail Bros Booking');
+  fd.append('from_name','Mobile Detail Bros Website');
+  fd.append('message', window._bkMsg||document.getElementById('sumText').textContent);
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:fd}).then(function(r){ return r.json(); }).then(function(j){
+    if(j&&j.success){ btn.textContent='✓ Booking Sent'; document.getElementById('sentNote').style.display='block'; }
+    else{ throw new Error('send failed'); }
+  }).catch(function(){
+    btn.disabled=false; btn.textContent='Book My Detail';
+    document.getElementById('sentNote').style.display='none';
+    var hint=document.getElementById('formHint');
+    hint.textContent='Something went wrong sending that — please try again.';
+    hint.style.display='block';
+  });
+});
 </script>
 </body></html>
