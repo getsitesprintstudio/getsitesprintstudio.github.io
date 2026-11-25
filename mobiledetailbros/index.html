@@ -584,6 +584,23 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 .pkg-prices span{border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:700;font-size:13.5px;color:var(--txt);background:var(--bg)}
 .pkg-prices b{color:var(--gold)}
 .pick .pr{font-size:12.5px;font-weight:800;color:var(--gold);letter-spacing:.02em}
+
+/* Maintenance detail copy (v25) */
+.pkg-more{color:var(--mut);font-size:14.5px;line-height:1.6;margin-top:14px}
+.pkg-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.5;color:var(--txt);border-left:3px solid var(--gold);padding-left:14px;margin-top:16px}
+.pkg-quote span{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;font-size:13px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+.maint-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:17.5px;line-height:1.5;color:var(--txt);text-align:center;margin-top:18px}
+.maint-quote span{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;font-size:13px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+
+/* Owner login (v25) */
+#ownerModal{position:fixed;inset:0;z-index:300;background:rgba(6,10,20,.72);display:flex;align-items:center;justify-content:center;padding:18px}
+#ownerModal .owner-card{background:#fff;border-radius:var(--rad);padding:26px;max-width:440px;width:100%;max-height:86vh;overflow:auto}
+#ownerModal h3{font-family:'Montserrat';text-transform:uppercase;margin-bottom:8px}
+#ownerModal h4{font-family:'Montserrat';text-transform:uppercase;margin:18px 0 8px}
+#ownerModal input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;font-size:16px;margin-top:12px}
+.owner-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.owner-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-top:8px;font-size:14px;font-weight:600}
+.owner-row b{color:var(--gold)}
 </style>
 <meta name="theme-color" content="#0a1f44">
 </head>
@@ -676,7 +693,9 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <li>Dashboard, door panels &amp; cup holders wiped down</li>
 <li>Brake dust removed from wheels</li>
 <li>Hi-gloss tire dressing</li></ul>
-<div class="pkg-prices"><span>Car <b>$125</b></span><span>SUV <b>$150</b></span><span>Truck <b>$175</b></span></div><a class="btn" href="#book">Book This Detail</a></div>
+<div class="pkg-prices"><span>Car <b>$125</b></span><span>SUV <b>$150</b></span><span>Truck <b>$175</b></span></div>
+<p class="pkg-more">The full upkeep visit, done properly: a hand wash with a spot-free rinse so nothing dries on the paint, wheels and tires cleaned and dressed, every window inside and out, a full interior vacuum, dash, console and door jambs wiped down, and a spray sealant top-up that keeps the shine and protection alive between big details. It is the same visit monthly plan members get — book it once, or let the plan handle it for you.</p>
+<p class="pkg-quote">&ldquo;If I am the one looking after your car, there&rsquo;s nobody else that wants your car looking better than me.&rdquo; <span>— Peter</span></p><a class="btn" href="#book">Book This Detail</a></div>
 <div class="pkg hot reveal"><div class="badge">Most Complete</div><h3>Diamond Detail</h3><ul><li>Complete exterior chemical decontamination wash</li>
 <li>Synthetic clay bar treatment — removes roughness, overspray &amp; contaminants</li>
 <li>Bug detail — chemical removal of bug remains</li>
@@ -962,6 +981,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <button type="button" class="mchip mday" data-dow="0">Sundays</button>
 </div></div>
 <div class="maint-summary" id="mtSummary"></div>
+<p class="maint-quote">&ldquo;If I am the one looking after your car, there&rsquo;s nobody else that wants your car looking better than me.&rdquo; <span>— Peter</span></p>
 <div class="maint-total"><div><div class="mt-per" id="mtPer">$125 per visit · Car</div><div class="mt-mo" id="mtMo">$125<span>/month</span></div></div>
 <button type="button" class="btn" id="mtBook">Start My Monthly Plan</button></div>
 <p class="fine" style="margin-top:14px">Every maintenance visit: hand wash &amp; dry, wheels &amp; tires cleaned and dressed, windows in &amp; out, full interior vacuum, dash &amp; console wipe-down, door jambs, and a spray sealant top-up. Peter confirms your start date when he replies to your booking.</p>
@@ -988,6 +1008,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <a class="btn ghost" href="https://www.instagram.com/mobiledetailbros.us/" target="_blank" rel="noopener">Instagram — @mobiledetailbros.us</a>
 <a class="btn ghost" href="https://goo.gl/maps/R3Roq7u4iAe2pqEC8" target="_blank" rel="noopener">Google Reviews</a>
 <button class="btn ghost" id="shareBtn" type="button">Share This Page</button>
+<button class="btn ghost" id="ownerBtn" type="button">Owner Login</button>
 </div>
 <p>Mobile Detail Bros — Peter Martinez<br>Mobile detailing. We come to you.</p>
 </div></footer>
@@ -1619,5 +1640,43 @@ upd=function(){
     if(window._bkMsg&&window._bkMsg.indexOf('Detail price:')<0) window._bkMsg+="\n"+line;
   }
 };
+</script>
+
+<div id="ownerModal" style="display:none"><div class="owner-card">
+<h3>Owner Login</h3>
+<p class="fine">This view is for Peter only. Customer names and numbers are never stored on this public website — your full calendar with every customer's details is in your private Owner Calendar.</p>
+<input id="ownerPw" type="password" placeholder="Password" autocomplete="current-password">
+<p class="fine" id="ownerErr" style="display:none;color:#b3261e">That password did not match.</p>
+<div class="owner-actions"><button type="button" class="btn" id="ownerGo">Log In</button><button type="button" class="btn ghost" id="ownerCancel">Cancel</button></div>
+<div id="ownerPanel" style="display:none">
+<h4>Booked spots on your schedule</h4>
+<div id="ownerList"></div>
+<button type="button" class="btn ghost" id="ownerOut" style="margin-top:14px">Log Out</button>
+</div>
+</div></div>
+
+<script>
+// Owner login (v25) — reveals the taken-spots list only; no customer
+// personal info exists on this public page by design.
+var OWNER_HASH="3a7ad76416f9cbf60cb115178254e0ab07ee6caa4a1f15fbbfc504b996a00f44";
+function ownerRender(){
+  var el=document.getElementById('ownerList'), rows='';
+  TAKEN.forEach(function(x){ rows+='<div class="owner-row"><span>'+x.d+'</span><span>'+x.t+'</span><b>'+(x.k||'Detail')+'</b></div>'; });
+  MAINT_SPOTS.forEach(function(x){ var dn=['Sundays','Mondays','Tuesdays','Wednesdays','Thursdays','Fridays','Saturdays'][x.dow]; rows+='<div class="owner-row"><span>Every '+dn+'</span><span>'+x.t+'</span><b>Maintenance</b></div>'; });
+  el.innerHTML=rows||'<p class="fine">No spots are marked taken yet. When a booking is confirmed, Muse marks it here and on the public schedule.</p>';
+}
+async function ownerTry(){
+  var v=document.getElementById('ownerPw').value;
+  var buf=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(v));
+  var hex=Array.from(new Uint8Array(buf)).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+  if(hex===OWNER_HASH){ document.getElementById('ownerErr').style.display='none'; ownerRender(); document.getElementById('ownerPanel').style.display='block'; }
+  else { document.getElementById('ownerErr').style.display='block'; }
+}
+document.getElementById('ownerBtn').addEventListener('click', function(){ document.getElementById('ownerModal').style.display='flex'; });
+document.getElementById('ownerCancel').addEventListener('click', function(){ document.getElementById('ownerModal').style.display='none'; });
+document.getElementById('ownerGo').addEventListener('click', ownerTry);
+document.getElementById('ownerPw').addEventListener('keydown', function(e){ if(e.key==='Enter') ownerTry(); });
+document.getElementById('ownerOut').addEventListener('click', function(){ document.getElementById('ownerPanel').style.display='none'; document.getElementById('ownerPw').value=''; document.getElementById('ownerModal').style.display='none'; });
+document.getElementById('ownerModal').addEventListener('click', function(e){ if(e.target===this) this.style.display='none'; });
 </script>
 </body></html>
