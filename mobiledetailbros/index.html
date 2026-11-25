@@ -584,6 +584,24 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 .owner-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
 .owner-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-top:8px;font-size:14px;font-weight:600}
 .owner-row b{color:var(--gold)}
+
+/* Makeover flagship strip (v28) */
+.flag-strip{background:linear-gradient(135deg,#0b2148,#123a7a);padding:20px 0}
+.flag-in{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.flag-txt{display:flex;flex-direction:column;gap:3px;max-width:640px}
+.flag-txt b{font-family:'Montserrat';font-weight:900;text-transform:uppercase;color:#fff;font-size:19px;letter-spacing:.02em}
+.flag-txt span{color:#c9d8f2;font-size:14.5px;line-height:1.55;font-weight:600}
+.flag-strip .btn{background:#fff;color:#0b2148}
+/* Ceramic coating process (v28) */
+.cer-steps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.cer-step{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:20px}
+.cer-n{font-family:'Montserrat';font-weight:900;font-size:22px;color:#fff;background:linear-gradient(135deg,var(--gold2),var(--gold));width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+.cer-step h3{font-family:'Montserrat';text-transform:uppercase;font-size:16px;margin-bottom:5px}
+.cer-step p{color:var(--mut);font-size:14.5px;line-height:1.6}
+.cer-why{background:linear-gradient(135deg,#0b2148,#123a7a);border-radius:var(--rad);padding:28px;margin-top:16px;color:#fff}
+.cer-why h3{font-family:'Montserrat';text-transform:uppercase;font-size:19px;margin-bottom:8px}
+.cer-why p{color:#c9d8f2;font-size:15.5px;line-height:1.65}
+@media(max-width:760px){.cer-steps{grid-template-columns:1fr}}
 </style>
 <meta name="theme-color" content="#0a1f44">
 </head>
@@ -619,6 +637,11 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <span>Paint Protection <i>◆</i></span><span>Ceramic Coating <i>◆</i></span><span>Permanent Tire Coating <i>◆</i></span><span>Interior Detailing <i>◆</i></span><span>Headlight Restoration <i>◆</i></span><span>We Come To You <i>◆</i></span>
 </div></div>
 
+
+<div class="flag-strip"><div class="wrap flag-in">
+<div class="flag-txt"><b>The Makeovers</b><span>Our biggest job: full paint correction + a 10-year ceramic coating, with wheels, tires, trim, interior and glass all included. One job, everything done.</span></div>
+<a class="btn" href="#remakes">See The Makeovers — From $2,199</a>
+</div></div>
 <section id="lineup"><div class="bignum">01</div><div class="wrap">
 <div class="kicker">The Lineup</div><h2>Cars We Have <span class="serif">Detailed</span></h2>
 <p class="sub">Straight from our Instagram — real customers, real results. Swipe through.</p>
@@ -684,8 +707,7 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <li>Brake dust removed from wheels</li>
 <li>Hi-gloss tire dressing</li></ul>
 <div class="pkg-prices"><span>Car <b>$125</b></span><span>SUV <b>$150</b></span><span>Truck <b>$175</b></span></div>
-<p class="pkg-more">The full upkeep visit, done properly: a hand wash with a spot-free rinse so nothing dries on the paint, wheels and tires cleaned and dressed, every window inside and out, a full interior vacuum, dash, console and door jambs wiped down, and a spray sealant top-up that keeps the shine and protection alive between big details. It is the same visit monthly plan members get — book it once, or let the plan handle it for you.</p>
-<p class="pkg-quote">&ldquo;If I am the one looking after your car, there&rsquo;s nobody else that wants your car looking better than me.&rdquo; <span>— Peter</span></p><a class="btn" href="#book">Book This Detail</a></div>
+<p class="pkg-more">The full upkeep visit, done properly: a hand wash with a spot-free rinse so nothing dries on the paint, wheels and tires cleaned and dressed, every window inside and out, a full interior vacuum, dash, console and door jambs wiped down, and a spray sealant top-up that keeps the shine and protection alive between big details. It is the same visit monthly plan members get — book it once, or let the plan handle it for you.</p><a class="btn" href="#book">Book This Detail</a></div>
 <div class="pkg hot reveal"><div class="badge">Most Complete</div><h3>Diamond Detail</h3><ul><li>Complete exterior chemical decontamination wash</li>
 <li>Synthetic clay bar treatment — removes roughness, overspray &amp; contaminants</li>
 <li>Bug detail — chemical removal of bug remains</li>
@@ -765,6 +787,20 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <p class="fine" style="margin-top:16px">How deep is the scratch? Surface swirls and fine marks polish out in one stage. Deeper clear-coat scratches need two or three. Quick test: if you can catch a fingernail in the scratch, it has likely cut through the clear coat — Peter will tell you straight whether polishing can fix it. Peter confirms your exact size price when he replies to your booking.</p>
 </div></section>
 
+
+<section id="ceramic"><div class="wrap">
+<div class="kicker">Ceramic Coating</div><h2>The Coating Is <span class="serif">The Easy Part</span></h2>
+<p class="sub">Most of the work — and most of the price — is everything that happens before the coating ever touches your paint. Here is the whole process, start to finish. No mystery, no shortcuts.</p>
+<div class="cer-steps">
+<div class="cer-step"><div class="cer-n">1</div><div><h3>The Wash</h3><p>It starts with a full hand wash and deep clean — paint, wheels, tires, and door jambs. The paint has to be truly clean, not just shiny.</p></div></div>
+<div class="cer-step"><div class="cer-n">2</div><div><h3>Decontamination</h3><p>An iron remover melts the tiny metal particles stuck in your paint, then a clay treatment pulls out whatever is left. Run your hand over the paint before and after — it is the difference between sandpaper and glass.</p></div></div>
+<div class="cer-step"><div class="cer-n">3</div><div><h3>Paint Correction</h3><p>This is the big one. Machine polishing removes swirls, light scratches, and dull, tired paint. It takes hours, and it has to: a coating locks in whatever is underneath it. Polish it right and you lock in a deep shine. Skip it, and you lock in the swirls for years.</p></div></div>
+<div class="cer-step"><div class="cer-n">4</div><div><h3>The Panel Wipe</h3><p>Every panel gets wiped down with a prep spray that strips off oils and polish residue. Coating only bonds to perfectly bare paint — this quiet little step is a big reason it lasts as long as it does.</p></div></div>
+<div class="cer-step"><div class="cer-n">5</div><div><h3>The Coating</h3><p>Only now does the coating come out. It goes on by hand, panel by panel, no rushing — each section gets leveled and checked under the light before moving on.</p></div></div>
+<div class="cer-step"><div class="cer-n">6</div><div><h3>Curing &amp; Aftercare</h3><p>The coating needs time to harden up. Before you leave, you will know exactly when it is safe to drive, when rain is fine, and when you can wash it again — simple stuff, and we will walk you through it.</p></div></div>
+</div>
+<div class="cer-why"><h3>So Why Does It Cost What It Costs?</h3><p>Honest answer: you are not paying for a bottle of coating. You are paying for a full day or more of prep, machine polishing, and careful hand work — the coating itself is just the last step. Done right, you get years of protection and a car that stays glossy with simple washes. Done cheap, you get coating spread over dirty, swirled paint — and it shows. Every Makeover above includes this full process and a 10-year coating.</p></div>
+</div></section>
 <section id="learn"><div class="wrap">
 <div class="kicker">Detailing 101</div><h2>Know Your <span class="serif">Detail</span></h2>
 <p class="sub">The important stuff, in plain words — so you know exactly what you are paying for.</p>
@@ -958,7 +994,6 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <button type="button" class="mchip mday" data-dow="0">Sundays</button>
 </div></div>
 <div class="maint-summary" id="mtSummary"></div>
-<p class="maint-quote">&ldquo;If I am the one looking after your car, there&rsquo;s nobody else that wants your car looking better than me.&rdquo; <span>— Peter</span></p>
 <div class="maint-total"><div><div class="mt-per" id="mtPer">$125 per visit · Car</div><div class="mt-mo" id="mtMo">$125<span>/month</span></div></div>
 <button type="button" class="btn" id="mtBook">Start My Monthly Plan</button></div>
 <p class="fine" style="margin-top:14px">Every maintenance visit: hand wash &amp; dry, wheels &amp; tires cleaned and dressed, windows in &amp; out, full interior vacuum, dash &amp; console wipe-down, door jambs, and a spray sealant top-up. Peter confirms your start date when he replies to your booking.</p>
