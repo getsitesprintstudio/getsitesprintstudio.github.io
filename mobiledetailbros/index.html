@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mobile Detail Bros — Mobile Car Detailing | Book a Detail</title>
-<meta name="description" content="Mobile Detail Bros — mobile car detailing. We come to you. Hand car wash, Platinum and Diamond details, ceramic protection, permanent tire coating. Book by text.">
+<meta name="description" content="Mobile Detail Bros — mobile car detailing. We come to you. Maintenance and Diamond details, ceramic protection, permanent tire coating. Book online.">
 <meta property="og:title" content="Mobile Detail Bros — Mobile Car Detailing">
 <meta property="og:description" content="We come to you. Build your detail in under a minute and text to book.">
 <meta property="og:type" content="website">
@@ -578,6 +578,12 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 #bkTimes .chip.taken{background:#fdecec;color:#b3261e;border-color:#f3c2c0;text-decoration:line-through;cursor:not-allowed;opacity:.85}
 .qday .qfull{color:#e5484d;font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:.05em}
 @media(max-width:640px){.sched-day{min-height:62px;padding:4px}.slot-taken{font-size:9px;padding:2px 3px}}
+
+/* Regular detail prices (v24) */
+.pkg-prices{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+.pkg-prices span{border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:700;font-size:13.5px;color:var(--txt);background:var(--bg)}
+.pkg-prices b{color:var(--gold)}
+.pick .pr{font-size:12.5px;font-weight:800;color:var(--gold);letter-spacing:.02em}
 </style>
 <meta name="theme-color" content="#0a1f44">
 </head>
@@ -653,14 +659,14 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 
 <div class="facts"><div class="wrap">
 <div class="fact reveal"><b>16</b><span>Cars in the lineup</span></div>
-<div class="fact reveal"><b>06</b><span>Detail packages</span></div>
+<div class="fact reveal"><b>05</b><span>Detail packages</span></div>
 <div class="fact reveal"><b>08</b><span>Add-on services</span></div>
 <div class="fact reveal"><b>01</b><span>Signature coating</span></div>
 </div></div>
 
 <section id="packages"><div class="bignum">02</div><div class="wrap">
 <div class="kicker">Detail Packages</div><h2>Pick Your <span class="serif">Detail</span></h2>
-<p class="sub">Three levels, one standard: done right, at your place, on your schedule.</p>
+<p class="sub">Two levels, one standard: done right, at your place, on your schedule.</p>
 <div class="pkgs">
 <div class="pkg reveal"><h3>Maintenance Detail</h3><ul><li>Hand wash with spot-free rinse</li>
 <li>Dried with soft microfiber towels</li>
@@ -669,20 +675,8 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <li>Interior vacuum</li>
 <li>Dashboard, door panels &amp; cup holders wiped down</li>
 <li>Brake dust removed from wheels</li>
-<li>Hi-gloss tire dressing</li></ul><a class="btn" href="#book">Book This Detail</a></div>
-<div class="pkg reveal"><h3>Platinum Detail</h3><ul><li>Thorough exterior hand wash</li>
-<li>Bug detail — chemical removal of bug remains</li>
-<li>Road tar, sap &amp; bird dropping removal</li>
-<li>Door jamb and protection detail</li>
-<li>Wheel, tire &amp; wheel well detail</li>
-<li>Spot-free rinse, dried with soft microfiber towels</li>
-<li>3-month hybrid ceramic paint protection</li>
-<li>Windows cleaned inside &amp; out</li>
-<li>Thorough interior vacuum</li>
-<li>Dashboard, door panels &amp; cup holders scrubbed and protected</li>
-<li>Buttons and grooves brush-cleaned and vacuumed</li>
-<li>Makeup removal</li>
-<li>Hi-gloss tire dressing</li></ul><a class="btn" href="#book">Book This Detail</a></div>
+<li>Hi-gloss tire dressing</li></ul>
+<div class="pkg-prices"><span>Car <b>$125</b></span><span>SUV <b>$150</b></span><span>Truck <b>$175</b></span></div><a class="btn" href="#book">Book This Detail</a></div>
 <div class="pkg hot reveal"><div class="badge">Most Complete</div><h3>Diamond Detail</h3><ul><li>Complete exterior chemical decontamination wash</li>
 <li>Synthetic clay bar treatment — removes roughness, overspray &amp; contaminants</li>
 <li>Bug detail — chemical removal of bug remains</li>
@@ -696,7 +690,8 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <li>Thorough dashboard, door panel &amp; cup holder scrub down and protection</li>
 <li>Buttons and grooves brush-cleaned and vacuumed</li>
 <li>Makeup removal</li>
-<li>Wheel, tire &amp; wheel well dressing and protection</li></ul><a class="btn" href="#book">Book This Detail</a></div>
+<li>Wheel, tire &amp; wheel well dressing and protection</li></ul>
+<div class="pkg-prices"><span>Car <b>$349</b></span><span>SUV <b>$399</b></span><span>Truck <b>$449</b></span></div><a class="btn" href="#book">Book This Detail</a></div>
 </div></div></section>
 
 
@@ -880,9 +875,9 @@ footer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
 <div class="bsec"><div class="bsec-t">Your detail</div>
 <div class="grp-label">Regular Details — clean, shine &amp; protect</div>
 <div class="pick-grid pk">
-<button type="button" class="pick" data-pkg="Maintenance Detail"><div class="ic">🧽</div><div class="t">Maintenance Detail</div><div class="d">Hand wash, wax &amp; interior tidy</div></button>
-<button type="button" class="pick" data-pkg="Platinum Detail"><div class="ic">✨</div><div class="t">Platinum Detail</div><div class="d">3-month ceramic protection</div></button>
-<button type="button" class="pick" data-pkg="Diamond Detail"><div class="ic">💎</div><div class="t">Diamond Detail</div><div class="d">The full treatment</div></button>
+<button type="button" class="pick" data-pkg="Maintenance Detail"><div class="ic">🧽</div><div class="t">Maintenance Detail</div><div class="d">Hand wash, wax &amp; interior tidy</div><div class="pr">Car $125 · SUV $150 · Truck $175</div></button>
+
+<button type="button" class="pick" data-pkg="Diamond Detail"><div class="ic">💎</div><div class="t">Diamond Detail</div><div class="d">The full treatment</div><div class="pr">Car $349 · SUV $399 · Truck $449</div></button>
 </div>
 
 <div class="grp-divider"><span>Paint Correction — The Makeovers</span></div>
@@ -1173,7 +1168,6 @@ document.querySelectorAll('#faq details').forEach(function(d){
   document.getElementById('icsBtn').onclick=function(){
     if(!selDate){ alert('Pick a day first — tap the When chip above to jump to the calendar.'); return; }
     var hrs={Morning:9,Midday:12,Afternoon:15}, h=hrs[S.time]||9, dur=2;
-    if(S.pkg.indexOf('Platinum')>-1) dur=4;
     if(S.pkg.indexOf('Diamond')>-1) dur=5;
     if(S.pkg.indexOf('Maintenance Detail')>-1) dur=1;
     var st=new Date(selDate.getFullYear(),selDate.getMonth(),selDate.getDate(),h);
@@ -1204,7 +1198,7 @@ var calCur={y:nowD.getFullYear(), m:nowD.getMonth()};
 var calMin={y:calCur.y, m:calCur.m};
 var maxDate=new Date(nowD.getFullYear(),nowD.getMonth(),nowD.getDate()+60);
 var calMax={y:maxDate.getFullYear(), m:maxDate.getMonth()};
-var PKG_TIME={"Maintenance Detail":"About 1 hour","Platinum Detail":"3–4 hours","Diamond Detail":"4–6 hours"};
+var PKG_TIME={"Maintenance Detail":"About 1 hour","Diamond Detail":"4–6 hours"};
 function addonsTotal(){ var t=0,hf=false; document.querySelectorAll('.tgl.sel').forEach(function(x){ t+=+x.dataset.price; if(x.dataset.from==='1') hf=true; }); return {total:t, hasFrom:hf}; }
 function fmtDay(d){ return d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}); }
 function setDay(d){
@@ -1322,7 +1316,7 @@ function upd(){
 ['nm','ph','veh2'].forEach(function(id){ document.getElementById(id).addEventListener('input', upd); });
 document.querySelectorAll('.pkg .btn').forEach(function(btn){ btn.addEventListener('click', function(){
   var card=btn.closest('.pkg'); var name=card?card.querySelector('h3').textContent:'';
-  var map={'Maintenance Detail':'Maintenance Detail','Platinum Detail':'Platinum Detail','Diamond Detail':'Diamond Detail'};
+  var map={'Maintenance Detail':'Maintenance Detail','Diamond Detail':'Diamond Detail'};
   var label=null;
   Object.keys(map).forEach(function(k){ if(name.indexOf(k)>-1) label=map[k]; });
   if(!label) return;
@@ -1608,5 +1602,22 @@ document.querySelectorAll('.qday').forEach(function(b){
     var s=document.createElement('span'); s.className='qfull'; s.textContent='Full'; b.appendChild(s);
   }
 });
+</script>
+
+<script>
+// Regular detail prices on the ticket + booking message (v24)
+var PKG_PRICE={"Maintenance Detail":{car:125,suv:150},"Diamond Detail":{car:349,suv:399}};
+var _updP=upd;
+upd=function(){
+  _updP();
+  var pp=PKG_PRICE[S.pkg];
+  if(pp){
+    var price=(S.veh==='Car')?pp.car:pp.suv;
+    var line="Detail price: $"+price+(S.veh==='Car'?" (Car)":" (SUV / Truck)");
+    var st=document.getElementById('sumText');
+    if(st&&st.textContent.indexOf('Detail price:')<0) st.textContent+="\n"+line;
+    if(window._bkMsg&&window._bkMsg.indexOf('Detail price:')<0) window._bkMsg+="\n"+line;
+  }
+};
 </script>
 </body></html>
